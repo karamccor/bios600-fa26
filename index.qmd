@@ -2,6 +2,10 @@
 title: "BIOS 600 Fall 2026"
 ---
 
-This is a Quarto website.
+# Schedule
 
-To learn more about Quarto websites visit <https://quarto.org/docs/websites>.
+## Week 1
+
+[Lecture 0: Welcome to BIOS 600!](slides/lec-0-welcome.html)
+
+[Lab 1: Introducing the Toolkit](labs/lab-1.html)

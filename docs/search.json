@@ -4,14 +4,28 @@
     "href": "slides/lec-0-welcome.html#download-or-print-notes-to-pdf",
     "title": "Lec 0: Welcome! + Course overview",
     "section": "Download or print notes to PDF",
-    "text": "Download or print notes to PDF\nIf you’d like to export this presentation to a PDF, do the following:\n\nToggle into Print View using the E key.\nOpen the in-browser print dialog (CTRL/CMD+P)\nChange the Destination to Save as PDF.\nChange the Layout to Landscape.\nChange the Margins to None.\nEnable the Background graphics option.\nClick Save.\n\nThis feature has been confirmed to work in Google Chrome and Firefox. ## Welcome! Meet Prof. McCormack\n\nTeaching Assistant Professor, Department of Biostatistics, Joined August 2023\nPhD in Biostatistics from Duke University, 2023\nOriginally from Austin, TX\nInterests: gardening, yoga, cats, and all kinds of art!\nOffice Hours:\n\nWednesdays 10:30am-11am via zoom (link in Canvas modules)\nThursdays 9:30-10:30 AM in MCG 3106F and by appointment."
+    "text": "Download or print notes to PDF\nIf you’d like to export this presentation to a PDF, do the following:\n\nToggle into Print View using the E key.\nOpen the in-browser print dialog (CTRL/CMD+P)\nChange the Destination to Save as PDF.\nChange the Layout to Landscape.\nChange the Margins to None.\nEnable the Background graphics option.\nClick Save.\n\nThis feature has been confirmed to work in Google Chrome and Firefox."
+  },
+  {
+    "objectID": "slides/lec-0-welcome.html#welcome-meet-prof.-mccormack",
+    "href": "slides/lec-0-welcome.html#welcome-meet-prof.-mccormack",
+    "title": "Lec 0: Welcome! + Course overview",
+    "section": "Welcome! Meet Prof. McCormack",
+    "text": "Welcome! Meet Prof. McCormack\n\nTeaching Assistant Professor, Department of Biostatistics, Joined August 2023\nPhD in Biostatistics from Duke University, 2023\nOriginally from Austin, TX\nInterests: gardening, yoga, cats, and all kinds of art!"
+  },
+  {
+    "objectID": "slides/lec-0-welcome.html#my-office-hours",
+    "href": "slides/lec-0-welcome.html#my-office-hours",
+    "title": "Lec 0: Welcome! + Course overview",
+    "section": "My Office Hours",
+    "text": "My Office Hours\n\nWednesdays 10:30am-11am via zoom (link in Canvas modules)\nThursdays 9:30-10:30 AM in MCG 3106F\nAnd by appointment."
   },
   {
     "objectID": "slides/lec-0-welcome.html#meet-the-tas",
     "href": "slides/lec-0-welcome.html#meet-the-tas",
     "title": "Lec 0: Welcome! + Course overview",
-    "section": "Meet the TA’s",
-    "text": "Meet the TA’s\n\nTeya Davis, Yiran Song, Jeffrey Asubonteng\nPhD students, Biostatistics department\nWill lead lab sessions, Tuesdays 3:30-4:50, MHRC 0001 (this room!)\nAdditional TA office hours TBD, will be announced via Canvas"
+    "section": "Meet the TAs",
+    "text": "Meet the TAs\n\nTeya Davis, Yiran Song, Jeffrey Asubonteng\nPhD students, Biostatistics department\nWill lead lab sessions, Tuesdays 3:30-4:50, MHRC 0001 (this room!)\nAdditional TA office hours TBD, will be announced via Canvas"
   },
   {
     "objectID": "slides/lec-0-welcome.html#check-out-ed-discussion",
@@ -25,7 +39,7 @@
     "href": "slides/lec-0-welcome.html#meet-each-other",
     "title": "Lec 0: Welcome! + Course overview",
     "section": "Meet each other",
-    "text": "Meet each other\nIn groups of 4, share\n\nWhere you’re from\nYour year/program\nWhat you hope to get out of this course\nFind 2 things that everyone in your group has in common, that isn’t necessarily common to the rest of the class.\nPerson who’s first name comes first in the alphabet, write one of those things up on the board!"
+    "text": "Meet each other\nIn groups of 4, share\n\nWhere you’re from\nYour year/program\nWhat you hope to get out of this course\nFind 2 things that everyone in your group has in common, that isn’t necessarily common to the rest of the class."
   },
   {
     "objectID": "slides/lec-0-welcome.html#course-overview-canvas",
@@ -39,7 +53,7 @@
     "href": "slides/lec-0-welcome.html#course-toolkit",
     "title": "Lec 0: Welcome! + Course overview",
     "section": "Course toolkit",
-    "text": "Course toolkit\n\nRStudio\n\nNote: Later today in the first lab, TAs will help you download RStudio.\n\nAssignment submission and feedback: Gradescope\nDiscussion forum: Ed Discussion"
+    "text": "Course toolkit\n\nRStudio\n\nNote: Later today in the first lab, TAs will help you download RStudio.\n\nAssignment submission and feedback: Gradescope\n\nJoin with course code: G64322\n\nDiscussion forum: Ed Discussion"
   },
   {
     "objectID": "slides/lec-0-welcome.html#what-have-i-gotten-myself-into",
@@ -60,42 +74,42 @@
     "href": "slides/lec-0-welcome.html#activities-participate-practice-perform",
     "title": "Lec 0: Welcome! + Course overview",
     "section": "Activities: Participate, Practice, Perform",
-    "text": "Activities: Participate, Practice, Perform\n\nParticipate: Attend and actively participate in lectures and labs, office hours\nPractice: Practice applying statistical concepts and computing with lab exercises (individual)\n\nReview course topics with occasional participation exercises, typically a few questions administered via Canvas. Annotated notes will be uploaded after class.\n\nPerform: Put together what you’ve learned to analyze real-world data\n\nHomework assignments (individual)\nThree in-class exams.\nA final project (group or individual)"
+    "text": "Activities: Participate, Practice, Perform\n\nParticipate: Attend and actively participate in lectures and labs, office hours\nPractice: Practice applying statistical concepts and computing with lab exercises (individual)\n\nReview course topics with occasional participation exercises, typically a few questions administered via Canvas. Annotated notes will be uploaded after class.\n\nPerform: Put together what you’ve learned to analyze real-world data\n\nHomework assignments (individual)\nThree in-class exams.\nA final project"
   },
   {
     "objectID": "slides/lec-0-welcome.html#cadence",
     "href": "slides/lec-0-welcome.html#cadence",
     "title": "Lec 0: Welcome! + Course overview",
     "section": "Cadence",
-    "text": "Cadence\n\nLecture: Tuesday/Thursday 8am-9:15am. Mostly lecture, sometimes a participation activity (could be a quick survey, or an activity to apply your knowledge). Lectures will not be recorded, but annotated slides will be posted after each lecture.\nLabs: Tutorial video and assignment will (typically) be posted Monday around noon. Start and make large progress on Tuesday in lab section, finish up by Sunday 11:59pm of that week\nHWs: Posted approx every 1-2 weeks, typically will have approximately 1 week to complete.\nExams: 3 in-class exams, more info as semester progresses.\nProject: Later in the semester. Most of work done outside of class."
+    "text": "Cadence\n\nLecture: Tuesday/Thursday 8am-9:15am. Mostly lecture, sometimes a participation activity (could be a quick survey, or an activity to apply your knowledge). Lectures will not be recorded, but annotated slides will be posted after each lecture.\nLabs: Tutorial video and assignment will (typically) be posted Monday around noon. Start and make large progress on Tuesday in lab section, finish up by Friday 11:59pm of that week\nHWs: Posted approx every 1-2 weeks, typically will have approximately 1 week to complete.\nExams: 3 in-class exams, more info as semester progresses.\nProject: Later in the semester. Most of work done outside of class."
   },
   {
     "objectID": "slides/lec-0-welcome.html#what-to-expect-in-lab",
     "href": "slides/lec-0-welcome.html#what-to-expect-in-lab",
     "title": "Lec 0: Welcome! + Course overview",
     "section": "What to expect in lab",
-    "text": "What to expect in lab\n\nLab session will be Tuesdays from 3:30-4:50, MHRC 0001, led by TA\nInstructions and tutorial video will be posted on Canvas on Monday by noon.\nI know some of you have a conflict w/ lab time. That’s okay - attendance is not required. Watch the video and work on the lab, attend other scheduled office hours if you need help. Still turn in the assignment by Sunday at 11:59pm of that week."
+    "text": "What to expect in lab\n\nLab session will be Tuesdays from 3:30-4:50, MHRC 0001, led by TA\nInstructions and tutorial video will be posted on Canvas on Monday by noon.\nI know some of you have a conflict w/ lab time. That’s okay - attendance is not required. Watch the video and work on the lab, attend other scheduled office hours if you need help. Still turn in the assignment by Friday at 11:59pm of that week."
   },
   {
     "objectID": "slides/lec-0-welcome.html#tips",
     "href": "slides/lec-0-welcome.html#tips",
     "title": "Lec 0: Welcome! + Course overview",
     "section": "Tips",
-    "text": "Tips\n\nYou do not have to finish the lab during the lab session, they will always be due the following Sunday at 11:59 pm.\nOne work strategy is to get through portions that you think will be most challenging (which initially might be the coding component) during lab when a TA can help you on the spot and leave the narrative writing until later.\nUse the time wisely to really learn the material and produce a quality report."
+    "text": "Tips\n\nYou do not have to finish the lab during the lab session, they will always be due the following Friday at 11:59 pm.\nOne work strategy is to get through portions that you think will be most challenging (which initially might be the coding component) during lab when a TA can help you on the spot and leave the narrative writing until later.\nUse the time wisely to really learn the material and produce a quality report."
   },
   {
     "objectID": "slides/lec-0-welcome.html#grading",
     "href": "slides/lec-0-welcome.html#grading",
     "title": "Lec 0: Welcome! + Course overview",
     "section": "Grading",
-    "text": "Grading\n\n\n\nCategory\nPercentage\n\n\n\n\nHomework\n20%\n\n\nLabs\n20%\n\n\nExams\n40%\n\n\nProject\n15%\n\n\nParticipation\n5%\n\n\n\nSee the course syllabus (.pdf available on Canvas) for how the final letter grade will be determined."
+    "text": "Grading\n\n\n\nCategory\nPercentage\n\n\n\n\nHomework\n25%\n\n\nLabs\n20%\n\n\nExams\n40%\n\n\nProject\n10%\n\n\nParticipation\n5%\n\n\n\nSee the course syllabus (available on Canvas) for how the final letter grade will be determined."
   },
   {
     "objectID": "slides/lec-0-welcome.html#textbooks",
     "href": "slides/lec-0-welcome.html#textbooks",
     "title": "Lec 0: Welcome! + Course overview",
     "section": "Textbooks",
-    "text": "Textbooks\nRecommended: (free online) - OpenIntro Statistics, Diez, Barr, Çetinkaya-Rundel, CreateSpace, 4th Ed. (2019)\n-   [R for Data Science](https://r4ds.had.co.nz/), Wickham and Grolemund, O’Reilly Media, 1st Ed. (2017)\nOptional: - Principles of Biostatistics, Pagano and Gavreau, CRC Press, 2nd Ed. (2018)"
+    "text": "Textbooks\nRecommended: (free online)\n\nOpenIntro Statistics, Diez, Barr, Çetinkaya-Rundel, CreateSpace, 4th Ed. (2019)\nR for Data Science, Wickham and Grolemund, O’Reilly Media, 1st Ed. (2017)\n\nOptional:\n\nPrinciples of Biostatistics, Pagano and Gavreau, CRC Press, 2nd Ed. (2018)"
   },
   {
     "objectID": "slides/lec-0-welcome.html#support",
@@ -109,7 +123,7 @@
     "href": "slides/lec-0-welcome.html#announcements",
     "title": "Lec 0: Welcome! + Course overview",
     "section": "Announcements",
-    "text": "Announcements\n\nPosted on Canvas (Announcements tool) and sent via email, be sure to check both regularly\nI’ll assume that you’ve read an announcement by the next “business” day"
+    "text": "Announcements\n\nPosted on Ed Discussion/Canvas (Announcements tool) and sent via email, be sure to check both regularly\nI’ll assume that you’ve read an announcement by the next “business” day"
   },
   {
     "objectID": "slides/lec-0-welcome.html#diversity-inclusion",
@@ -130,7 +144,7 @@
     "href": "slides/lec-0-welcome.html#course-policies-late-work",
     "title": "Lec 0: Welcome! + Course overview",
     "section": "Course policies: Late work",
-    "text": "Course policies: Late work\n\nHW & Labs: Deadlines are there to help you stay on track. However, I know that life happens! You have a 24-hour grace period to turn in any HW/Lab without penalty. No HW/Labs will be accepted after the 24-hour grace period, except in extenuating circumstances.\nLowest HW and Lab will be dropped.\nNo late work will be accepted for exams and the project."
+    "text": "Course policies: Late work\n\nHW & Labs: Deadlines are there to help you stay on track. However, I know that life happens.\n\nMay be turned in up to 24 hours late for 5% penalty.\nMay be turned in 24-48 hours late for 10% penalty.\nNo HW/Labs will be accepted after 48 hours past due date, except in extenuating circumstances.\n\nLowest HW and Lab will be dropped.\nNo late work will be accepted for the project."
   },
   {
     "objectID": "slides/lec-0-welcome.html#collaboration-policy",
@@ -151,21 +165,28 @@
     "href": "slides/lec-0-welcome.html#ai-for-code",
     "title": "Lec 0: Welcome! + Course overview",
     "section": "AI for code",
-    "text": "AI for code\n\nAI tools for code: You may make use of the technology for coding examples on assignments; if you do so, you must explicitly cite where you obtained the code, and share the AI prompt(s) you used.\nAny recycled code that is discovered and is not explicitly cited will be treated as plagiarism."
+    "text": "AI for code\n\n✅AI tools for code: You may make use of the technology for coding examples on assignments; if you do so, you must explicitly cite where you obtained the code, and share the AI prompt(s) you used.\n❌AI tools for narrative: Unless instructed otherwise, AI is not permitted for writing narrative on assignments. In general, you may use AI as a resource as you complete assignments but not to answer the exercises for you."
   },
   {
-    "objectID": "slides/lec-0-welcome.html#no-ai-for-narrative",
-    "href": "slides/lec-0-welcome.html#no-ai-for-narrative",
+    "objectID": "slides/lec-0-welcome.html#bottom-line",
+    "href": "slides/lec-0-welcome.html#bottom-line",
     "title": "Lec 0: Welcome! + Course overview",
-    "section": "No AI for narrative",
-    "text": "No AI for narrative\n\nNo AI tools for narrative: Unless instructed otherwise, AI is not permitted for writing narrative on assignments. In general, you may use AI as a resource as you complete assignments but not to answer the exercises for you. You are ultimately responsible for the work you turn in; it should reflect your understanding of the course content."
+    "section": "Bottom line",
+    "text": "Bottom line\nYou are ultimately responsible for the work you turn in; it should reflect your understanding of the course content."
   },
   {
     "objectID": "slides/lec-0-welcome.html#sharing-reusing-code-policy",
     "href": "slides/lec-0-welcome.html#sharing-reusing-code-policy",
     "title": "Lec 0: Welcome! + Course overview",
     "section": "Sharing / reusing code policy",
-    "text": "Sharing / reusing code policy\n\nUnless explicitly stated otherwise, this course’s policy is that you may make use of any online resources (e.g. RStudio Community, StackOverflow, ChatGPT, etc.) but you must explicitly cite where you obtained any code you directly use or use as inspiration in your solution(s).\nI know that you will have access to the internet and AI in the real world. However, you are required to understand (& be able to explain) every line of code you’re turning in.\nAny recycled code that is discovered and is not explicitly cited will be treated as plagiarism, regardless of source.\n\n\n\n\n\n\n\nMost importantly…\n\n\nAsk if you’re not sure if something violates a policy!"
+    "text": "Sharing / reusing code policy\n\nUnless explicitly stated otherwise, this course’s policy is that you may make use of any online resources (e.g. RStudio Community, StackOverflow, ChatGPT, etc.) but you must explicitly cite where you obtained any code you directly use or use as inspiration in your solution(s).\nI know that you will have access to the internet and AI in the real world. However, you are required to understand (& be able to explain) every line of code you’re turning in.\nAny recycled code that is discovered and is not explicitly cited will be treated as plagiarism, regardless of source."
+  },
+  {
+    "objectID": "slides/lec-0-welcome.html#most-importantly",
+    "href": "slides/lec-0-welcome.html#most-importantly",
+    "title": "Lec 0: Welcome! + Course overview",
+    "section": "Most importantly…",
+    "text": "Most importantly…\nAsk if you’re not sure if something violates a policy!"
   },
   {
     "objectID": "slides/lec-0-welcome.html#three-tips-for-success",
@@ -193,14 +214,14 @@
     "href": "slides/lec-0-welcome.html#this-weeks-tasks",
     "title": "Lec 0: Welcome! + Course overview",
     "section": "This week’s tasks",
-    "text": "This week’s tasks\n\nRead the syllabus! (a .pdf version is available on Canvas)\nFirst lab today! See you at 3:30pm in this room.\nKeep an eye out for a Getting to Know You Survey via Canvas, I’ll send out an announcement.\n\nI’m excited to begin this statistical journey with everyone!"
+    "text": "This week’s tasks\n\nRead the syllabus! (available on Canvas)\nFirst lab today! 3:30pm in this room.\nShort lab walk-through video will be posted this afternoon on Canvas.\nKeep an eye out for a Getting to Know You Survey via Canvas, I’ll send out an announcement.\n\nI’m looking forward to beginning this statistical journey with everyone!"
   },
   {
     "objectID": "slides/lec-0-welcome.html#notecard",
     "href": "slides/lec-0-welcome.html#notecard",
     "title": "Lec 0: Welcome! + Course overview",
     "section": "Notecard",
-    "text": "Notecard\n\nWrite your name\nWhat are you excited to learn in this course?"
+    "text": "Notecard\n\nWrite your name\nWhat are you excited to learn in this course?\n\nTurn this in for attendance today."
   },
   {
     "objectID": "labs/lab-01.html",
@@ -208,13 +229,6 @@
     "title": "Lab 01",
     "section": "",
     "text": "This assignment is due Friday, August 22, 2025 at 11:59PM.\n\nExercise 1\nWrite your answer to Exercise 1 here.\n\n\nExercise 2\nWrite your answer to Exercise 2 here.\n\n\nExercise 3\nWrite your answer to Exercise 3 here.\n\n\nExercise 4\n\n# Use this R chunk to add your two numbers for exercise 4.\n\nRemember to Render your lab into an .html file and then save it as a .pdf in a web browser.\nImportant: You must turn in a .pdf file corresponding to the Quarto template to Gradescope in order to receive credit for the labs and homework assignments."
-  },
-  {
-    "objectID": "about.html",
-    "href": "about.html",
-    "title": "About",
-    "section": "",
-    "text": "About this site"
   },
   {
     "objectID": "index.html",
@@ -231,11 +245,25 @@
     "text": "Lecture 0: Welcome to BIOS 600!\nLab 1: Introducing the Toolkit"
   },
   {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "About this site"
+  },
+  {
+    "objectID": "labs/lab-01-template.html",
+    "href": "labs/lab-01-template.html",
+    "title": "Lab 01",
+    "section": "",
+    "text": "This assignment is due Friday, August 21, 2025 at 11:59PM.\n\nExercise 1\nWrite your answer to Exercise 1 here.\n\n\nExercise 2\nWrite your answer to Exercise 2 here.\n\n\nExercise 3\nWrite your answer to Exercise 3 here.\n\n\nExercise 4\n\n# Use this R chunk to add your two numbers for exercise 4.\n\nRemember to Render your lab into an .html file and then save it as a .pdf in a web browser.\nImportant: You must turn in a .pdf file corresponding to the Quarto template to Gradescope in order to receive credit for the labs and homework assignments."
+  },
+  {
     "objectID": "labs/lab-1.html",
     "href": "labs/lab-1.html",
     "title": "Lab 01",
     "section": "",
-    "text": "Due Friday, Aug 22 at 11:59pm."
+    "text": "Due Friday, Aug 21 at 11:59pm."
   },
   {
     "objectID": "labs/lab-1.html#meet-the-tas",
@@ -298,7 +326,7 @@
     "href": "labs/lab-1.html#quarto-and-reproducible-research",
     "title": "Lab 01",
     "section": "Quarto and reproducible research",
-    "text": "Quarto and reproducible research\nQuarto is a system that may be used to create easy-to-write, attractive reports, presentations, or webpages that also serve as reproducible records of the data analysis. These reports have the desirable property of being able to not only display written narratives and figures, but also include any R code and the outputs from these code snippets.\nOne of the biggest strengths of Quarto is that everything is in one place, and that other users should be able to reproduce your results exactly, if they have your Quarto document and datasets - the analysis is run from the beginning each time you render the document. As well, formatting is easy! Luckily, RStudio already comes with Quarto support, so there is nothing additional to install. (Again, you need &gt;= version 2022.07 to run Quarto within RStudio!)\nEvery homework assignment and lab in this class will be written in Quarto, with a template provided for you to use for the first few assignments. This lab’s template can be downloaded by typing in the following code in the Console:\n\ndownload.file(\"https://karamccor.github.io/b6002/labs/lab-01-template.qmd\",\n              destfile=\"lab-01.qmd\")\n\nYou should now see the new file lab-01.qmd under the Files tab in the bottom-right hand side of your RStudio window. Click on lab-01.qmd in this window in order to open it up – it is the template for use in this lab!\nFirst, put your name in the space at the top where it says “YOUR NAME GOES HERE”.\nFill in answers in the spaces provided: text narrative should be typed directly in the document and any included R code should be typed inside “chunks,” or sections defined by three backticks (the little mark on the same key as the tilde). See the template for more instructions, or ask your TA.\nAn important thing to note is that the workspace of the Quarto document is separate from the console – this means that you must load any packages inside of R chunks if you want to use functions contained in them. In the template for this lab, this has been done already, but in the future you may have to do it yourself.\nIn order to turn this template into a shareable document, Render the quarto template into an HTML document by pressing the Render button at the top of the document (it is a large blue arrow facing the right). You should see the template rendered as an .html file! To turn it in, print to PDF from your browser. (I recommend Google Chrome.)"
+    "text": "Quarto and reproducible research\nQuarto is a system that may be used to create easy-to-write, attractive reports, presentations, or webpages that also serve as reproducible records of the data analysis. These reports have the desirable property of being able to not only display written narratives and figures, but also include any R code and the outputs from these code snippets.\nOne of the biggest strengths of Quarto is that everything is in one place, and that other users should be able to reproduce your results exactly, if they have your Quarto document and datasets - the analysis is run from the beginning each time you render the document. As well, formatting is easy! Luckily, RStudio already comes with Quarto support, so there is nothing additional to install. (Again, you need &gt;= version 2022.07 to run Quarto within RStudio!)\nEvery homework assignment and lab in this class will be written in Quarto, with a template provided for you to use for the first few assignments. This lab’s template can be downloaded from Canvas &gt; Modules &gt; Week 1.\nDownload lab-01-template.qmd.\nOpen lab-01-template.qmd in RStudio.\nFirst, put your name in the space at the top where it says “YOUR NAME GOES HERE”.\nClick File &gt; Save As to save (and rename) the file as lab-01.qmd within your bios600 folder.\nYour template is now ready to use in this lab!\nFill in answers in the spaces provided: text narrative should be typed directly in the document and any included R code should be typed inside “chunks,” or sections defined by three backticks (the little mark on the same key as the tilde). See the template for more instructions, or ask your TA.\nAn important thing to note is that the workspace of the Quarto document is separate from the console – this means that you must load any packages inside of R chunks if you want to use functions contained in them. In the template for this lab, this has been done already, but in the future you may have to do it yourself.\nIn order to turn this template into a shareable document, Render the quarto template into an HTML document by pressing the Render button at the top of the document (it is a large blue arrow facing the right). You should see the template rendered as an .html file! To turn it in, print to PDF from your browser. (I recommend Google Chrome.)"
   },
   {
     "objectID": "labs/lab-1.html#at-the-end-heres-how-youll-turn-this-in",
