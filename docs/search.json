@@ -369,5 +369,12 @@
     "title": "Lab 01",
     "section": "From .html to .pdf",
     "text": "From .html to .pdf\nImportant: You must turn in a .pdf file corresponding to the Quarto template to Gradescope in order to receive credit for the assignment."
+  },
+  {
+    "objectID": "labs/lab-1.html#submission",
+    "href": "labs/lab-1.html#submission",
+    "title": "Lab 01",
+    "section": "Submission",
+    "text": "Submission\nTo submit your assignment:\n\nAccess Gradescope through the menu on the BIOS 600 Canvas site.\nClick on the assignment, and you’ll be prompted to submit it.\nMark the pages associated with each exercise. All of the pages of your lab should be associated with at least one question (i.e., should be “checked”)."
   }
 ]
