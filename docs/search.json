@@ -74,14 +74,14 @@
     "href": "slides/lec-0-welcome.html#activities-participate-practice-perform",
     "title": "Lec 0: Welcome! + Course overview",
     "section": "Activities: Participate, Practice, Perform",
-    "text": "Activities: Participate, Practice, Perform\n\nParticipate: Attend and actively participate in lectures and labs, office hours\nPractice: Practice applying statistical concepts and computing with lab exercises (individual)\n\nReview course topics with occasional participation exercises, typically a few questions administered via Canvas. Annotated notes will be uploaded after class.\n\nPerform: Put together what you’ve learned to analyze real-world data\n\nHomework assignments (individual)\nThree in-class exams.\nA final project"
+    "text": "Activities: Participate, Practice, Perform\n\nParticipate: Attend and actively participate in lectures and labs, office hours\nPractice: Practice applying statistical concepts and computing with lab exercises (individual)\n\nReview course topics with occasional participation exercises, typically a few questions administered via Canvas.\n\nPerform: Put together what you’ve learned to analyze real-world data\n\nHomework assignments (individual)\nThree in-class exams.\nA final project"
   },
   {
     "objectID": "slides/lec-0-welcome.html#cadence",
     "href": "slides/lec-0-welcome.html#cadence",
     "title": "Lec 0: Welcome! + Course overview",
     "section": "Cadence",
-    "text": "Cadence\n\nLecture: Tuesday/Thursday 8am-9:15am. Mostly lecture, sometimes a participation activity (could be a quick survey, or an activity to apply your knowledge). Lectures will not be recorded, but annotated slides will be posted after each lecture.\nLabs: Tutorial video and assignment will (typically) be posted Monday around noon. Start and make large progress on Tuesday in lab section, finish up by Friday 11:59pm of that week\nHWs: Posted approx every 1-2 weeks, typically will have approximately 1 week to complete.\nExams: 3 in-class exams, more info as semester progresses.\nProject: Later in the semester. Most of work done outside of class."
+    "text": "Cadence\n\nLecture: Tuesday/Thursday 8am-9:15am. Mostly lecture, sometimes a participation activity (could be a quick survey, or an activity to apply your knowledge). Lectures will not be recorded.\nLabs: Tutorial video and assignment will (typically) be posted Monday around noon. Start and make large progress on Tuesday in lab section, finish up by Friday 11:59pm of that week\nHWs: Posted approx every 1-2 weeks, typically will have approximately 1 week to complete.\nExams: 3 in-class exams, more info as semester progresses.\nProject: Later in the semester. Most of work done outside of class."
   },
   {
     "objectID": "slides/lec-0-welcome.html#what-to-expect-in-lab",
@@ -158,7 +158,7 @@
     "href": "slides/lec-0-welcome.html#ai-policy",
     "title": "Lec 0: Welcome! + Course overview",
     "section": "AI policy",
-    "text": "AI policy\n\nUse of artificial intelligence (AI): You should treat AI tools, such as ChatGPT, the same as other online resources.\nThere are two guiding principles that govern how you can use AI in this course:2\n\nCognitive dimension: Working with AI should not reduce your ability to think clearly. We will practice using AI to facilitate—rather than hinder—learning.\nEthical dimension: Students using AI should be transparent about their use and make sure it aligns with academic integrity."
+    "text": "AI policy\n\nUse of artificial intelligence (AI): You should treat AI tools, such as ChatGPT, the same as other online resources.\nThere are two guiding principles that govern how you can use AI in this course:\n\nCognitive dimension: Working with AI should not reduce your ability to think clearly. We will practice using AI to facilitate—rather than hinder—learning.\nEthical dimension: Students using AI should be transparent about their use and make sure it aligns with academic integrity."
   },
   {
     "objectID": "slides/lec-0-welcome.html#ai-for-code",
