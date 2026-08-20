@@ -396,7 +396,7 @@
     "href": "slides/lec-1-whats-stat-inf.html#announcements",
     "title": "Lec 1: What is statistical inference?",
     "section": "Announcements",
-    "text": "Announcements\n\nLab 1 due tomorrow at 11:59pm in Gradescope.\nWhen turning in assignments, be sure to assign each question to the corresponding page in your PDF document.\nReach out to the TAs if you need help installing R/RStudio!\nFill out the Getting to Know You Survey (linked on Canvas homepage) by tomorrow at 11:59pm."
+    "text": "Announcements\n\nLab 1 due tomorrow at 11:59pm in Gradescope.\nWhen turning in assignments, be sure to assign each question to the corresponding page in your PDF document.\nI will be available for an extra Office Hour session tomorrow, Friday 8/21, from 10am-10:30am via zoom (link in Modules &gt; Zoom Link for Office Hours). Reach out to the teaching team if you need help installing R/RStudio!\nFill out the Getting to Know You Survey (linked on Canvas homepage) by tomorrow at 11:59pm."
   },
   {
     "objectID": "slides/lec-1-whats-stat-inf.html#what-is-statistical-inference-in-a-biostatistics-context",
@@ -452,7 +452,7 @@
     "href": "slides/lec-1-whats-stat-inf.html#example-1",
     "title": "Lec 1: What is statistical inference?",
     "section": "Example",
-    "text": "Example\nIn groups of 3, discuss the following:\n\nIs this study an observational or experimental study? Why?\n\n\n\n\n−+\n01:00"
+    "text": "Example\nIn groups of 3, discuss the following:\n\nIs this study an observational or experimental study? Why?\n\n\n\n\n−+\n02:00"
   },
   {
     "objectID": "slides/lec-1-whats-stat-inf.html#what-can-go-wrong",
@@ -641,6 +641,13 @@
     "href": "slides/lec-1-whats-stat-inf.html#outline",
     "title": "Lec 1: What is statistical inference?",
     "section": "Outline",
-    "text": "Outline\n\nWhat is (bio)statistical inference?\nIdentifying the population of interest\nSampling types and biases\nReproducibility crisis: falsifying data\nBiostatistics for public good!"
+    "text": "Outline\n\nQuick review from lab 1\nWhat is (bio)statistical inference?\nIdentifying the population of interest\nSampling types and biases\nReproducibility crisis: falsifying data\nBiostatistics for public good!"
+  },
+  {
+    "objectID": "slides/lec-1-whats-stat-inf.html#review-from-lab",
+    "href": "slides/lec-1-whats-stat-inf.html#review-from-lab",
+    "title": "Lec 1: What is statistical inference?",
+    "section": "Review from lab",
+    "text": "Review from lab\n\nWhat does getwd() do?\nWhat does this code do?\n\n\ncdc &lt;- read.csv(\"https://karamccor.github.io/b6002/labs/data/cdc_cleaned.csv\")\n\n\nWhat is the difference between R and RStudio?\n\n\n\n\n−+\n04:00"
   }
 ]
