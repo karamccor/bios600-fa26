@@ -235,14 +235,14 @@
     "href": "index.html",
     "title": "BIOS 600 Fall 2026",
     "section": "",
-    "text": "Lecture 0: Welcome to BIOS 600!\nLab 1: Introducing the Toolkit"
+    "text": "Lecture 0: Welcome to BIOS 600!\nLab 1: Introducing the Toolkit\nLecture 1: What is statistical inference?"
   },
   {
     "objectID": "index.html#week-1",
     "href": "index.html#week-1",
     "title": "BIOS 600 Fall 2026",
     "section": "",
-    "text": "Lecture 0: Welcome to BIOS 600!\nLab 1: Introducing the Toolkit"
+    "text": "Lecture 0: Welcome to BIOS 600!\nLab 1: Introducing the Toolkit\nLecture 1: What is statistical inference?"
   },
   {
     "objectID": "about.html",
@@ -376,5 +376,271 @@
     "title": "Lab 01",
     "section": "Submission",
     "text": "Submission\nTo submit your assignment:\n\nAccess Gradescope through the menu on the BIOS 600 Canvas site.\nClick on the assignment, and you’ll be prompted to submit it.\nMark the pages associated with each exercise. All of the pages of your lab should be associated with at least one question (i.e., should be “checked”)."
+  },
+  {
+    "objectID": "slides/lec-1-whats-stat-inf.html#as-you-walk-in",
+    "href": "slides/lec-1-whats-stat-inf.html#as-you-walk-in",
+    "title": "Lec 1: What is statistical inference?",
+    "section": "As you walk in…",
+    "text": "As you walk in…\nToday, we’ll “collect” some data from the class and record on the whiteboard!\nHow many hours of sleep did you get last night? If you feel comfortable sharing, please draw a dot above the number corresponding to the number of hours of sleep you got. (Round to the nearest hour)\nDraw each dot about 1 inch above the previous dot. Make dots about the same size. We’ll come back to this later in class."
+  },
+  {
+    "objectID": "slides/lec-1-whats-stat-inf.html#reading",
+    "href": "slides/lec-1-whats-stat-inf.html#reading",
+    "title": "Lec 1: What is statistical inference?",
+    "section": "Reading",
+    "text": "Reading\nNo reading for today."
+  },
+  {
+    "objectID": "slides/lec-1-whats-stat-inf.html#announcements",
+    "href": "slides/lec-1-whats-stat-inf.html#announcements",
+    "title": "Lec 1: What is statistical inference?",
+    "section": "Announcements",
+    "text": "Announcements\n\nLab 1 due tomorrow at 11:59pm in Gradescope.\nWhen turning in assignments, be sure to assign each question to the corresponding page in your PDF document.\nReach out to the TAs if you need help installing R/RStudio!\nFill out the Getting to Know You Survey (linked on Canvas homepage) by tomorrow at 11:59pm."
+  },
+  {
+    "objectID": "slides/lec-1-whats-stat-inf.html#what-is-statistical-inference-in-a-biostatistics-context",
+    "href": "slides/lec-1-whats-stat-inf.html#what-is-statistical-inference-in-a-biostatistics-context",
+    "title": "Lec 1: What is statistical inference?",
+    "section": "What is statistical inference (in a biostatistics context)?",
+    "text": "What is statistical inference (in a biostatistics context)?\nA process that converts data into useful information, whereby practitioners\n\nform a question of interest\ncollect and summarize data\nand interpret the results"
+  },
+  {
+    "objectID": "slides/lec-1-whats-stat-inf.html#identifying-the-population-and-question-of-interest",
+    "href": "slides/lec-1-whats-stat-inf.html#identifying-the-population-and-question-of-interest",
+    "title": "Lec 1: What is statistical inference?",
+    "section": "Identifying the population and question of interest",
+    "text": "Identifying the population and question of interest\nThe population is the group we’d like to learn something about:\n\nWhat is the prevalence of diabetes among U.S. adults, and has it changed over time?\nIs there a relationship between tumor type and five-year mortality in breast cancer patients?\nDoes the average amount of caffeine vary by vendor in 12 oz cups of coffee at UNC coffee shops?"
+  },
+  {
+    "objectID": "slides/lec-1-whats-stat-inf.html#sampling-from-the-population",
+    "href": "slides/lec-1-whats-stat-inf.html#sampling-from-the-population",
+    "title": "Lec 1: What is statistical inference?",
+    "section": "Sampling from the population",
+    "text": "Sampling from the population\nIf we had data from every unit in the population, we could just calculate what we wanted and be done!\nUnfortunately, we (usually) have to settle with a sample from the population.\n\nIdeally, the sample is representative, allowing us to use probability and statistical inference to make conclusions that are generalizable to the broader population of interest."
+  },
+  {
+    "objectID": "slides/lec-1-whats-stat-inf.html#our-sleep-data",
+    "href": "slides/lec-1-whats-stat-inf.html#our-sleep-data",
+    "title": "Lec 1: What is statistical inference?",
+    "section": "Our Sleep Data",
+    "text": "Our Sleep Data\nBased on our collective histogram, get in groups of 4 and discuss the following:\n\nWhat is our population?\nWhat is our sample?\nWhat does our sample show? Do we think it’s representative of our population? Why or why not?\nWhat limitations might we have? (How could we improve?)"
+  },
+  {
+    "objectID": "slides/lec-1-whats-stat-inf.html#sampling-methods",
+    "href": "slides/lec-1-whats-stat-inf.html#sampling-methods",
+    "title": "Lec 1: What is statistical inference?",
+    "section": "Sampling methods",
+    "text": "Sampling methods\nProbability sampling (e.g., simple random sampling, stratified, cluster, or multi-stage sampling)\n\nAll units have a known chance of being selected\nMore likely to be generalizable\nCan be more expensive and time-consuming"
+  },
+  {
+    "objectID": "slides/lec-1-whats-stat-inf.html#study-design",
+    "href": "slides/lec-1-whats-stat-inf.html#study-design",
+    "title": "Lec 1: What is statistical inference?",
+    "section": "Study design",
+    "text": "Study design\nExperimental studies (e.g. randomized control trials (RCTs))\n\nResearchers directly control exposures or treatment groups.\nAbility to make causal statements\nLess real-world applicability and generalizability\n\nObservational studies (e.g. surveys)\n\nResearchers do not assign exposures or treatments\nReal-world setting with lower burden on participants\nInability to prove causality"
+  },
+  {
+    "objectID": "slides/lec-1-whats-stat-inf.html#example",
+    "href": "slides/lec-1-whats-stat-inf.html#example",
+    "title": "Lec 1: What is statistical inference?",
+    "section": "Example",
+    "text": "Example\n\nStudy: The effect of a new diet on weight loss in adults\nObjective: To determine whether a new low-carbohydrate diet leads to significant weight loss compared to a standard diet in adults.\nStudy Design:\n\nParticipants: 100 adults aged 25-45 with a BMI between 25 and 30\nRandomization: Participants are randomly assigned to one of two groups:\n\nGroup A: 50 participants following the new low-carb diet\nGroup B: 50 participants following a standard diet.\n\nIntervention: Group A follows the new diet for 12 weeks, while Group B follows their usual diet (standard diet)\nOutcome measurement: Weight of participants is measured before the study begins and after 12 weeks."
+  },
+  {
+    "objectID": "slides/lec-1-whats-stat-inf.html#example-1",
+    "href": "slides/lec-1-whats-stat-inf.html#example-1",
+    "title": "Lec 1: What is statistical inference?",
+    "section": "Example",
+    "text": "Example\nIn groups of 3, discuss the following:\n\nIs this study an observational or experimental study? Why?\n\n\n\n\n−+\n01:00"
+  },
+  {
+    "objectID": "slides/lec-1-whats-stat-inf.html#what-can-go-wrong",
+    "href": "slides/lec-1-whats-stat-inf.html#what-can-go-wrong",
+    "title": "Lec 1: What is statistical inference?",
+    "section": "What can go wrong?",
+    "text": "What can go wrong?\n\nDepending on the study design and sampling methods, different types of bias occur (again, we don’t have the full population, only a sample).\nExamples include:\n\nSelection bias: sample does not accurately reflect target population\nReporting bias: tendency to under-report all information available\nMany more: non-response bias, attrition bias, confounding, detection bias, lack of blinding, straight-up falsified data (this happens), …\n\n\n and more!"
+  },
+  {
+    "objectID": "slides/lec-1-whats-stat-inf.html#a-few-years-ago",
+    "href": "slides/lec-1-whats-stat-inf.html#a-few-years-ago",
+    "title": "Lec 1: What is statistical inference?",
+    "section": "A few years ago…",
+    "text": "A few years ago…\n\nlink to article"
+  },
+  {
+    "objectID": "slides/lec-1-whats-stat-inf.html#however",
+    "href": "slides/lec-1-whats-stat-inf.html#however",
+    "title": "Lec 1: What is statistical inference?",
+    "section": "However…",
+    "text": "However…\n\nWhat do some other people have to say about this study…?"
+  },
+  {
+    "objectID": "slides/lec-1-whats-stat-inf.html#three-main-issues-brought-up-in-blog",
+    "href": "slides/lec-1-whats-stat-inf.html#three-main-issues-brought-up-in-blog",
+    "title": "Lec 1: What is statistical inference?",
+    "section": "Three main issues brought up in blog",
+    "text": "Three main issues brought up in blog\n\nSampling bias\n\n\nRecruited through Facebook ads, may have attracted people more concerned about COVID-19 or those who thought they were already exposed \\(\\rightarrow\\) overestimation of seroprevalence\n\nSymptomatic/exposed individuals may have signed up to get tested, especially when testing was limited.\nParticipants may have recruited others in their network\n\nWithout a truly random sample, findings are less generalizable and reproducible"
+  },
+  {
+    "objectID": "slides/lec-1-whats-stat-inf.html#the-issues-continued",
+    "href": "slides/lec-1-whats-stat-inf.html#the-issues-continued",
+    "title": "Lec 1: What is statistical inference?",
+    "section": "The issues, continued",
+    "text": "The issues, continued\n\nStatistical adjustments: High false positive (FP) rate could drive results\n\n\nStudy had high FP rate (2 FP out of 401 known negative samples, about 0.5%), but w/ a wide confidence interval! (FP Rate could be above 1.2%)\nReported only 50 positives out of ~3300 participants, so such a high FP rate could account for a significant portion - if not all - of the positive results. (\\(\\frac{2}{401}\\cdot 3300 = 17\\)) Yikes!\nCould be more! (re-calibrate assay on different set of 401 known negative samples, may get 0/401 FP or even 6/401)."
+  },
+  {
+    "objectID": "slides/lec-1-whats-stat-inf.html#the-issues-continued-1",
+    "href": "slides/lec-1-whats-stat-inf.html#the-issues-continued-1",
+    "title": "Lec 1: What is statistical inference?",
+    "section": "The issues, continued",
+    "text": "The issues, continued\n\nTransparency\n\n\nStudy does not make its raw data, code, and full methodology publicly available\nWithout access to these, other researchers cannot replicate the study or verify its findings, undermining the reproducibility of the research\nTransparency essential for the scientific process (particularly in high-stakes studies!)"
+  },
+  {
+    "objectID": "slides/lec-1-whats-stat-inf.html#reproducibility-and-replicability",
+    "href": "slides/lec-1-whats-stat-inf.html#reproducibility-and-replicability",
+    "title": "Lec 1: What is statistical inference?",
+    "section": "Reproducibility and replicability",
+    "text": "Reproducibility and replicability\n\nReproducibility: being able to take original data and code to reproduce all numerical findings.\nReplicability: being able to independently repeat an entire study without use of the original data (generally with the same methods)"
+  },
+  {
+    "objectID": "slides/lec-1-whats-stat-inf.html#the-current-replication-crisis",
+    "href": "slides/lec-1-whats-stat-inf.html#the-current-replication-crisis",
+    "title": "Lec 1: What is statistical inference?",
+    "section": "The current replication crisis",
+    "text": "The current replication crisis\n\n\n\n\n\n\n\n\nmisconduct, including image manipulation\n\n\n\n\n\n\n\n\nsubmitting falsified data to secure federal research grants\n\n\nFraudulent data can lead to unreliable research findings, waste resources, and erode trust in scientific integrity!"
+  },
+  {
+    "objectID": "slides/lec-1-whats-stat-inf.html#what-is-biostatistics-good-for",
+    "href": "slides/lec-1-whats-stat-inf.html#what-is-biostatistics-good-for",
+    "title": "Lec 1: What is statistical inference?",
+    "section": "What is biostatistics good for?",
+    "text": "What is biostatistics good for?\n\nTurning data into insight\nEvaluating interventions\nPromoting health equity\nForecasting & prevention\nImproving patient care"
+  },
+  {
+    "objectID": "slides/lec-1-whats-stat-inf.html#what-is-biostatistics-good-for-1",
+    "href": "slides/lec-1-whats-stat-inf.html#what-is-biostatistics-good-for-1",
+    "title": "Lec 1: What is statistical inference?",
+    "section": "What is biostatistics good for?",
+    "text": "What is biostatistics good for?\n\nWhen we appropriately apply statistical inference methods, they can do a lot of good!"
+  },
+  {
+    "objectID": "slides/lec-1-whats-stat-inf.html#what-is-biostatistics-good-for-2",
+    "href": "slides/lec-1-whats-stat-inf.html#what-is-biostatistics-good-for-2",
+    "title": "Lec 1: What is statistical inference?",
+    "section": "What is biostatistics good for?",
+    "text": "What is biostatistics good for?"
+  },
+  {
+    "objectID": "slides/lec-1-whats-stat-inf.html#what-is-biostatistics-good-for-3",
+    "href": "slides/lec-1-whats-stat-inf.html#what-is-biostatistics-good-for-3",
+    "title": "Lec 1: What is statistical inference?",
+    "section": "What is biostatistics good for?",
+    "text": "What is biostatistics good for?"
+  },
+  {
+    "objectID": "slides/lec-1-whats-stat-inf.html#activity-biostatistics-for-public-good",
+    "href": "slides/lec-1-whats-stat-inf.html#activity-biostatistics-for-public-good",
+    "title": "Lec 1: What is statistical inference?",
+    "section": "Activity: Biostatistics for public good!",
+    "text": "Activity: Biostatistics for public good!\nStep 1: Explore Google Scholar\n\nSearch for a research paper where biostatistics is used to improve public health (e.g., studies on vaccines, health disparities, chronic disease prevention, environmental exposures, health policy).\n\nStep 2: Share & Discuss\n\nForm groups of 3. Each person shares the paper they found. As a group, discuss:\nWhat is the paper studying? How are biostatistics being applied? Why is this meaningful or impactful for public health?\n\n\n\n\n−+\n05:00"
+  },
+  {
+    "objectID": "slides/lec-1-whats-stat-inf.html#participation",
+    "href": "slides/lec-1-whats-stat-inf.html#participation",
+    "title": "Lec 1: What is statistical inference?",
+    "section": "Participation",
+    "text": "Participation\nStep 3: Reflect & Submit\n\nTake a screenshot of the abstract/front page of your chosen paper\nWrite a short reflection (3–4 sentences):\n\nWhat do you find interesting/important about the paper you chose?\nHow does it show the value of biostatistics?\n\n\nSubmit the screenshot + reflection on Canvas\nDue this Friday at 11:59pm"
+  },
+  {
+    "objectID": "slides/lec-1-whats-stat-inf.html#in-this-course-we-will",
+    "href": "slides/lec-1-whats-stat-inf.html#in-this-course-we-will",
+    "title": "Lec 1: What is statistical inference?",
+    "section": "In this course, we will…",
+    "text": "In this course, we will…\n\nApply descriptive techniques commonly used to summarize public health data.\nLearn methods to analyze real-world data to answer research questions in a biomedical setting.\nUse Quarto within RStudio to write reproducible reports.\n\nReading in data, cleaning data, visualization, analysis, interpretation\n\nCommunicate results from statistical analyses to a general audience."
+  },
+  {
+    "objectID": "slides/lec-1-whats-stat-inf.html#recap",
+    "href": "slides/lec-1-whats-stat-inf.html#recap",
+    "title": "Lec 1: What is statistical inference?",
+    "section": "Recap",
+    "text": "Recap\n\nWhat is (bio)statistical inference?\nIdentifying the population of interest\nSampling types and biases\nReproducibility crisis: falsifying data\nBiostatistics for public good!"
+  },
+  {
+    "objectID": "slides/lec-1-whats-stat-inf.html#next-class",
+    "href": "slides/lec-1-whats-stat-inf.html#next-class",
+    "title": "Lec 1: What is statistical inference?",
+    "section": "Next class",
+    "text": "Next class\n\nProbability Basics"
+  },
+  {
+    "objectID": "slides/lec-1-whats-stat-inf.html#download-or-print-notes-to-pdf",
+    "href": "slides/lec-1-whats-stat-inf.html#download-or-print-notes-to-pdf",
+    "title": "Lec 1: What is statistical inference?",
+    "section": "Download or print notes to PDF",
+    "text": "Download or print notes to PDF\nIf you’d like to export this presentation to a PDF, do the following:\n\nToggle into Print View using the E key.\nOpen the in-browser print dialog (CTRL/CMD+P)\nChange the Destination to Save as PDF.\nChange the Layout to Landscape.\nChange the Margins to None.\nEnable the Background graphics option.\nClick Save.\n\nThis feature has been confirmed to work in Google Chrome and Firefox."
+  },
+  {
+    "objectID": "slides/lec-1-whats-stat-inf.html#example-sleep-data",
+    "href": "slides/lec-1-whats-stat-inf.html#example-sleep-data",
+    "title": "Lec 1: What is statistical inference?",
+    "section": "Example: Sleep Data",
+    "text": "Example: Sleep Data\nResearchers wanted to know the average number of hours UNC undergraduates sleep per night, so they surveyed 200 students who were in the campus gym at 6am. The sample averaged 5.1 hours of sleep per night.\nGet in groups of 3 and discuss the following:\n\nWhat is our population?\nWhat is our sample?\nWhat does our sample show? Do we think it’s representative of our population? Why or why not?\nWhat limitations might we have? (How could we improve?)\n\nReporter: Person who’s first name is first alphabetically, be prepared to share out\n\n\n\n−+\n04:00"
+  },
+  {
+    "objectID": "slides/lec-1-whats-stat-inf.html#sampling-methods-1",
+    "href": "slides/lec-1-whats-stat-inf.html#sampling-methods-1",
+    "title": "Lec 1: What is statistical inference?",
+    "section": "Sampling methods",
+    "text": "Sampling methods\nNon-probability sampling (e.g. quota, convenience, or snowball sampling)\n\nSome units unable to be selected, with no way of knowing size or effect of sampling errors\nLess generalizable to population of interest\nMore convenient and less costly"
+  },
+  {
+    "objectID": "slides/lec-1-whats-stat-inf.html#best-practices",
+    "href": "slides/lec-1-whats-stat-inf.html#best-practices",
+    "title": "Lec 1: What is statistical inference?",
+    "section": "Best practices",
+    "text": "Best practices\nFrom the American Statistical Association:\n\nEnd-to-end scripting of research\nFrom the moment you “read in” your raw data, document the code you used for data cleaning, visualization, and analysis\nUse of version control and documentation (we will not use this in our class)\nPublication of code along with data"
+  },
+  {
+    "objectID": "slides/lec-1-whats-stat-inf.html#what-is-statistical-inference",
+    "href": "slides/lec-1-whats-stat-inf.html#what-is-statistical-inference",
+    "title": "Lec 1: What is statistical inference?",
+    "section": "What is statistical inference?",
+    "text": "What is statistical inference?\nA process that converts data into useful information, whereby practitioners\n\nform a question of interest\ncollect and summarize data\nand interpret the results"
+  },
+  {
+    "objectID": "slides/lec-1-whats-stat-inf.html#article-continued",
+    "href": "slides/lec-1-whats-stat-inf.html#article-continued",
+    "title": "Lec 1: What is statistical inference?",
+    "section": "Article (continued)",
+    "text": "Article (continued)\n\nseroprevalence = level of pathogen in a population\nFrom Conclusion: “The estimated prevalence of SARS-CoV-2 antibodies in Santa Clara County implies that COVID-19 was likely more widespread than indicated by the number of cases in late March, 2020”."
+  },
+  {
+    "objectID": "slides/lec-1-whats-stat-inf.html#your-turn",
+    "href": "slides/lec-1-whats-stat-inf.html#your-turn",
+    "title": "Lec 1: What is statistical inference?",
+    "section": "Your turn",
+    "text": "Your turn\nConsider the following 2 examples.\nFor each example: Is this a demonstration of reproducibility or replicability?"
+  },
+  {
+    "objectID": "slides/lec-1-whats-stat-inf.html#example-1-1",
+    "href": "slides/lec-1-whats-stat-inf.html#example-1-1",
+    "title": "Lec 1: What is statistical inference?",
+    "section": "Example 1",
+    "text": "Example 1\nA researcher publishes a study finding that a new blood pressure drug lowers systolic BP by an average of 8 mmHg (p = 0.03), based on data from 500 patients. They post the raw dataset and their R script on a public repository.\nYou download the dataset and run their exact script. It re-runs the same t-test on the same data and outputs the same 8 mmHg difference and the same p = 0.03."
+  },
+  {
+    "objectID": "slides/lec-1-whats-stat-inf.html#example-2",
+    "href": "slides/lec-1-whats-stat-inf.html#example-2",
+    "title": "Lec 1: What is statistical inference?",
+    "section": "Example 2",
+    "text": "Example 2\nA different research group, in a different city, is skeptical of that drug’s effect. They don’t touch the original dataset at all. Instead, they design their own trial — similar patient population, same dosage protocol, same outcome measure (systolic BP) — recruit 500 new patients, collect fresh data, and run the analysis.\nThey find the drug lowers systolic BP by 7.5 mmHg (p = 0.04) in their independent sample."
+  },
+  {
+    "objectID": "slides/lec-1-whats-stat-inf.html#outline",
+    "href": "slides/lec-1-whats-stat-inf.html#outline",
+    "title": "Lec 1: What is statistical inference?",
+    "section": "Outline",
+    "text": "Outline\n\nWhat is (bio)statistical inference?\nIdentifying the population of interest\nSampling types and biases\nReproducibility crisis: falsifying data\nBiostatistics for public good!"
   }
 ]
