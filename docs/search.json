@@ -417,7 +417,7 @@
     "href": "labs/lab-2-data-viz.html#learning-goals",
     "title": "Lab 02: Basic Data Visualization",
     "section": "Learning goals",
-    "text": "Learning goals\nBy the end of this lab you will…\n\nBe familiar with several Quarto code chunk options\nBe able to describe the difference between library() and install.packages()\nProduce several visualizations based on the CDC dataset using ggplot."
+    "text": "Learning goals\nBy the end of this lab you will…\n\nBe familiar with several Quarto code chunk options\nBe able to describe the difference between library() and install.packages()\nProduce several visualizations based on the CDC dataset using ggplot, utilizing aesthetics, geometries, and labels."
   },
   {
     "objectID": "labs/lab-2-data-viz.html#getting-started",
@@ -599,7 +599,7 @@
     "href": "labs/lab-02-template.html",
     "title": "Lab 02: Basic Data Visualization",
     "section": "",
-    "text": "library(tidyverse)\n\n# Load in the dataset in the R chunk here! Note that you MUST load in the dataset\n# in the chunk in order for other R chunks to recognize the dataset, even if\n# you've loaded it in the Console.\ncdc &lt;- read.csv(\"https://karamccor.github.io/b6002/labs/data/cdc_cleaned.csv\")\n\n\nExercise 1\nWrite your narrative to Exercise 1 here.\n\n\nExercise 2\n\n# Use this R chunk to create your visualization for Exercise 2.\n\nWrite your narrative to Exercise 2 here.\n\n\nExercise 3\n\n# Use this R chunk to create your visualization for Exercise 3.\n\nWrite your narrative to Exercise 3 here.\n\n\nExercise 4\n\n# Use this R chunk to create your visualization for Exercise 4.\n\nWrite your narrative to Exercise 4 here.\n\n\nExercise 5\n\n# Use this R chunk to create your visualization for Exercise 5.\n\nWrite your narrative to Exercise 5 here.\n\n\nExercise 6\n\n# Use this R chunk to create your visualization for Exercise 6.\n\nWrite your narrative to Exercise 6 here.\nSubmission: Remember to render your lab into an .html file and then save it as a .pdf in a web browser. You must turn in a .pdf file corresponding to the Quarto template to Gradescope in order to receive credit for the labs and homework assignments. You must assign each problem to a page in your PDF. Assign the Formatting portion to your page 1."
+    "text": "library(tidyverse)\n\n# Load in the dataset in the R chunk here! Note that you MUST load in the dataset\n# in the chunk in order for other R chunks to recognize the dataset, even if\n# you've loaded it in the Console.\ncdc &lt;- read.csv(\"https://karamccor.github.io/b6002/labs/data/cdc_cleaned.csv\")\n\n\nExercise 1\nWrite your narrative to Exercise 1 here.\n\n\nExercise 2\n\n# Use this R chunk to create your visualization for Exercise 2.\n\nWrite your narrative to Exercise 2 here.\n\n\nExercise 3\n\n# Use this R chunk to create your visualization for Exercise 3.\n\nWrite your narrative to Exercise 3 here.\n\n\nExercise 4\n\n# Use this R chunk to create your visualization for Exercise 4.\n\nWrite your narrative to Exercise 4 here.\n\n\nExercise 5\n\n# Use this R chunk to create your visualization for Exercise 5.\n\nWrite your narrative to Exercise 5 here.\n\n\nExercise 6\n\n# Use this R chunk to create your visualization for Exercise 6.\n\nWrite your narrative to Exercise 6 here.\n\n\nAI Attestation\n[Write your AI attestation here.]\nSubmission: Remember to render your lab into an .html file and then save it as a .pdf in a web browser. You must turn in a .pdf file corresponding to the Quarto template to Gradescope in order to receive credit for the labs and homework assignments. You must assign each problem to a page in your PDF. Assign the Formatting portion to your page 1."
   },
   {
     "objectID": "labs/lab-1.html",
@@ -1258,5 +1258,12 @@
     "title": "Lecture 2: The nature of data",
     "section": "Next up",
     "text": "Next up\n\nLab today at 3:30pm\nThursday’s Class: Probability basics"
+  },
+  {
+    "objectID": "labs/lab-2-data-viz.html#ai-attestation",
+    "href": "labs/lab-2-data-viz.html#ai-attestation",
+    "title": "Lab 02: Basic Data Visualization",
+    "section": "AI Attestation",
+    "text": "AI Attestation\nIf you used AI for this assignment, list your prompts below. Cite any other online resources you used. If you did not use AI for this assignment, you may simply state “I did not use AI for this assignment.”"
   }
 ]
