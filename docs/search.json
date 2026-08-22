@@ -1,0 +1,1262 @@
+[
+  {
+    "objectID": "slides/lec-3-prob-basics.html#reading",
+    "href": "slides/lec-3-prob-basics.html#reading",
+    "title": "Lecture 3: Basics of probability",
+    "section": "Reading",
+    "text": "Reading\n\nOpenIntro Statistics: Section 3.1.1-3.1.6"
+  },
+  {
+    "objectID": "slides/lec-3-prob-basics.html#announcements",
+    "href": "slides/lec-3-prob-basics.html#announcements",
+    "title": "Lecture 3: Basics of probability",
+    "section": "Announcements",
+    "text": "Announcements\n\nLab 2 Due Friday August 29, at 11:59pm\nHW 1 Due Tuesday, Sept 2 at 11:59pm\nLabor day this weekend - do something fun and relaxing!"
+  },
+  {
+    "objectID": "slides/lec-3-prob-basics.html#rstudio-demo",
+    "href": "slides/lec-3-prob-basics.html#rstudio-demo",
+    "title": "Lecture 3: Basics of probability",
+    "section": "RStudio Demo",
+    "text": "RStudio Demo\n\nStarting a new Quarto document\nNew header\nNew chunk, running a chunk\nSetting message and warning to false when reading in data or loading a package.\ninstall.packages() vs. library(): Baking analogy!\nRunning code in Console vs. in your quarto document\nQuestions?"
+  },
+  {
+    "objectID": "slides/lec-3-prob-basics.html#whats-the-use-of-probability",
+    "href": "slides/lec-3-prob-basics.html#whats-the-use-of-probability",
+    "title": "Lecture 3: Basics of probability",
+    "section": "What’s the use of probability?",
+    "text": "What’s the use of probability?\n\nLast time: how to visualize data, how descriptive statistics are used to describe data\nGoal: Make inferences about a population based on a sample\n\nInference: making conclusions about a population based on a sample of data drawn from that population\n\nTo do this, we need a solid foundation of probability theory"
+  },
+  {
+    "objectID": "slides/lec-3-prob-basics.html#probabilities-come-up-all-the-time",
+    "href": "slides/lec-3-prob-basics.html#probabilities-come-up-all-the-time",
+    "title": "Lecture 3: Basics of probability",
+    "section": "Probabilities come up all the time",
+    "text": "Probabilities come up all the time\n\nThere is a moderate chance of drought in North Carolina during the next year\nThe surgery has a 50-50 probability of success\nThe ten-year survival probability of invasive breast cancer among US women is 83%.\n\nHow do we come up with these probabilities?\nBefore we answer that question, a little bit of history…"
+  },
+  {
+    "objectID": "slides/lec-3-prob-basics.html#probabilities",
+    "href": "slides/lec-3-prob-basics.html#probabilities",
+    "title": "Lecture 3: Basics of probability",
+    "section": "Probabilities",
+    "text": "Probabilities\n\nFrequentist (classical) and Bayesian schools of thought\nHistorical analogy: Imagine a medieval coin maker who wants to prove that his coin is fair. He flips the coin thousands of times. If it lands on heads about half the time, he concludes it’s a fair coin.\nThis approach reflects long-run frequencies—the probability is defined by the frequency of an event (heads) occurring in many repeated trials."
+  },
+  {
+    "objectID": "slides/lec-3-prob-basics.html#historical-analogy-continued",
+    "href": "slides/lec-3-prob-basics.html#historical-analogy-continued",
+    "title": "Lecture 3: Basics of probability",
+    "section": "Historical analogy (continued)",
+    "text": "Historical analogy (continued)\n\nNow, consider a knight deciding whether to trust the coin maker’s fairness. Even after seeing just a few flips, the knight forms a degree of belief about the coin’s fairness, adjusting this belief with more evidence.\nThis reflects the Bayesian interpretation—probability as a measure of belief or certainty about an event, updated as new information becomes available."
+  },
+  {
+    "objectID": "slides/lec-3-prob-basics.html#which-approach-is-more-useful",
+    "href": "slides/lec-3-prob-basics.html#which-approach-is-more-useful",
+    "title": "Lecture 3: Basics of probability",
+    "section": "Which approach is more useful?",
+    "text": "Which approach is more useful?\n\nEach one is useful, just depends on context\nFrequentist: Most helpful when you have large sample sizes and repeated trials. Typically used in settings where you rely on long-run frequencies, such as in hypothesis testing and confidence intervals (more on these later).\nBayesian: More useful when prior information or expert opinion is available, or when working with smaller sample sizes. Often applied in settings where you need to update probabilities as new data becomes available."
+  },
+  {
+    "objectID": "slides/lec-3-prob-basics.html#example-clinical-trial",
+    "href": "slides/lec-3-prob-basics.html#example-clinical-trial",
+    "title": "Lecture 3: Basics of probability",
+    "section": "Example: clinical trial",
+    "text": "Example: clinical trial\nSetting: Consider a clinical trial for a new drug.\n\nIn large-scale randomized controlled trials (RCTs) to test a new drug’s efficacy, a frequentist approach is often more suitable.\nThis is because you rely on the law of large numbers (more on this in a few lectures!), where results become more reliable with repeated trials.\nFrequentist methods like hypothesis testing and confidence intervals help establish the drug’s effectiveness based purely on the data without incorporating prior beliefs."
+  },
+  {
+    "objectID": "slides/lec-3-prob-basics.html#example-diagnostic-testing",
+    "href": "slides/lec-3-prob-basics.html#example-diagnostic-testing",
+    "title": "Lecture 3: Basics of probability",
+    "section": "Example: diagnostic testing",
+    "text": "Example: diagnostic testing\nSetting: Diagnostic testing with prior information\n\nWhen evaluating a rare disease using diagnostic tests, a Bayesian approach might be more useful.\nIf prior knowledge or expert opinion suggests a very low prevalence of the disease, this information can be incorporated into the analysis.\nAs new test results come in, the Bayesian method allows you to update the probability of a patient having the disease, leading to more nuanced decision-making, especially with small sample sizes or uncertain data."
+  },
+  {
+    "objectID": "slides/lec-3-prob-basics.html#probability-spaces",
+    "href": "slides/lec-3-prob-basics.html#probability-spaces",
+    "title": "Lecture 3: Basics of probability",
+    "section": "Probability spaces",
+    "text": "Probability spaces\nMathematical objects that model random experiments, real-world processes involving states that occur randomly\nA probability space consists of three components:\n\nA sample space, the set of all possible outcomes\nSubsets of the sample space, called events, which comprise any number of possible outcomes (including none of them!)\nA function that assigns probabilities to events\n\nAn event occurs if the outcome of the random experiment is contained in that event."
+  },
+  {
+    "objectID": "slides/lec-3-prob-basics.html#sample-spaces",
+    "href": "slides/lec-3-prob-basics.html#sample-spaces",
+    "title": "Lecture 3: Basics of probability",
+    "section": "Sample spaces",
+    "text": "Sample spaces\nSample spaces depend on the random experiment in question\n\nTossing a single fair coin\nTossing two fair coins\nSum of rolling two fair six-sided dice\nSurvival (years) after cancer diagnosis\n\n\n\n\n\n\n\nExercise\n\n\n\nWhat are the sample spaces for each of the experiments above?"
+  },
+  {
+    "objectID": "slides/lec-3-prob-basics.html#events",
+    "href": "slides/lec-3-prob-basics.html#events",
+    "title": "Lecture 3: Basics of probability",
+    "section": "Events",
+    "text": "Events\nEvents: Subsets of the sample space that comprise possible outcomes. Essentially, these are all the ‘plausibly reasonable’ events we’re interested in calculating probabilities for*:\n\nTossing a single fair coin\n\nA head\n\nTossing two fair coins\n\nAt least one head\n\nSum of rolling two fair six-sided dice\n\nAn odd number\n\nSurvival (years) after cancer diagnosis*\n\nMore than 1 year\n\n\n*Note: there is some complicated math involved in calculating this. Don’t worry about it for now!"
+  },
+  {
+    "objectID": "slides/lec-3-prob-basics.html#probabilities-1",
+    "href": "slides/lec-3-prob-basics.html#probabilities-1",
+    "title": "Lecture 3: Basics of probability",
+    "section": "Probabilities",
+    "text": "Probabilities\nA number describing the likelihood of each event’s occurrence. This maps events to a number between 0 and 1, inclusive:\n\nTossing a single fair coin\n\nA head \\(\\rightarrow\\) 0.5\n\nTossing two fair coins\n\nAt least one head \\(\\rightarrow\\) 0.75\n\nSum of rolling two fair six-sided dice\n\nAn odd number \\(\\rightarrow\\) 0.5\n\nSurvival (years) after cancer diagnosis\n\ngreater than one year \\(\\rightarrow\\) …difficult"
+  },
+  {
+    "objectID": "slides/lec-3-prob-basics.html#how-did-we-come-up-with-those-answers",
+    "href": "slides/lec-3-prob-basics.html#how-did-we-come-up-with-those-answers",
+    "title": "Lecture 3: Basics of probability",
+    "section": "How did we come up with those answers?",
+    "text": "How did we come up with those answers?\n\nFor the first three, you would probably intuit your way through using a discrete probability distribution (more on this in a few lectures)\nFor the last one, by making some assumptions on the survival process, we can use similar probability tools to arrive at an answer. (But it’s still complicated!)"
+  },
+  {
+    "objectID": "slides/lec-3-prob-basics.html#events-as-subsets",
+    "href": "slides/lec-3-prob-basics.html#events-as-subsets",
+    "title": "Lecture 3: Basics of probability",
+    "section": "Events as (sub)sets",
+    "text": "Events as (sub)sets\nRemember, events are subsets of the entire sample space. Let’s take for now the example of tossing a single fair coin and recording the outcome.\nThere are only two elements in the outcome space:\n\n\\(A\\): getting a head\n\\(B\\): getting a tail\n\nWe can define the simple events of just \\(A\\) or \\(B\\) occurring, but are there “other” events we can define?"
+  },
+  {
+    "objectID": "slides/lec-3-prob-basics.html#set-operations",
+    "href": "slides/lec-3-prob-basics.html#set-operations",
+    "title": "Lecture 3: Basics of probability",
+    "section": "Set operations",
+    "text": "Set operations\nSets can be related to each other in different ways. For two sets (or events) \\(A\\) and \\(B\\), the most common relationships are:\n\nIntersection (\\(A \\cap B\\)): \\(A\\) and \\(B\\) both occur\nUnion (\\(A \\cup B\\)): \\(A\\) or \\(B\\) occur (including when both occur)\nComplement (\\(A^C\\)): \\(A\\) does not occur\nDifference (\\(A \\backslash B\\)): \\(A\\) occurs, but \\(B\\) does not occur; equivalent to (\\(A \\cap B^C\\)) (why?)\n\nTwo sets \\(A\\) and \\(B\\) are said to be disjoint if \\(A \\cap B = \\emptyset\\)"
+  },
+  {
+    "objectID": "slides/lec-3-prob-basics.html#those-other-events",
+    "href": "slides/lec-3-prob-basics.html#those-other-events",
+    "title": "Lecture 3: Basics of probability",
+    "section": "Those “other” events",
+    "text": "Those “other” events\nWhat are the intersection, union, complement, and difference of events \\(A\\) (getting a head) and \\(B\\) (a tail) as applied to our coin-toss example? Are the two events \\(A\\) and \\(B\\) disjoint?\nWhat are the probabilities assigned to those events:\n\n\\(P(A \\cap B)=\\)?\n\\(P(A \\cup B)=\\)?\n…etc."
+  },
+  {
+    "objectID": "slides/lec-3-prob-basics.html#how-do-probabilities-work",
+    "href": "slides/lec-3-prob-basics.html#how-do-probabilities-work",
+    "title": "Lecture 3: Basics of probability",
+    "section": "How do probabilities “work”?",
+    "text": "How do probabilities “work”?\nKomolgorov axioms\n\nThe probability of any event in the sample space is a non-negative real number (could be zero!)\nThe probability of the entire sample space is 1\nIf \\(A\\) and \\(B\\) are disjoint events (mutually exclusive), then the probability of \\(A\\) or \\(B\\) occurring is the sum of the individual probabilities that they occur"
+  },
+  {
+    "objectID": "slides/lec-3-prob-basics.html#how-to-probabilities-work",
+    "href": "slides/lec-3-prob-basics.html#how-to-probabilities-work",
+    "title": "Lecture 3: Basics of probability",
+    "section": "How to probabilities “work”?",
+    "text": "How to probabilities “work”?\nFor two events \\(A\\) and \\(B\\) with probabilities \\(P(A)\\) and \\(P(B)\\) of occurring, the Kolmogorov axioms give us two important rules:\n\nComplement Rule: \\(P(A^C) = 1- P(A)\\)\nInclusion-Exclusion: \\(P(A \\cup B) = P(A) + P(B) - P(A \\cap B)\\)\n\n\n\n\n\n\n\nQuestion\n\n\nHow do we extend inclusion-exclusion to more than two events?"
+  },
+  {
+    "objectID": "slides/lec-3-prob-basics.html#demorgans-laws",
+    "href": "slides/lec-3-prob-basics.html#demorgans-laws",
+    "title": "Lecture 3: Basics of probability",
+    "section": "DeMorgan’s laws",
+    "text": "DeMorgan’s laws\n\n\nComplement of union: \\((A\\cup B)^C = A^C \\cap B^C\\)\nComplement of intersection: \\((A\\cap B)^C = A^C \\cup B^C\\)\n\n\n\n\n\n\n\nQuestions\n\n\nHow do we interpret these in plain English?\nHow do we extend DeMorgan’s laws to more than two events?"
+  },
+  {
+    "objectID": "slides/lec-3-prob-basics.html#gunter-et-al.-study-2017",
+    "href": "slides/lec-3-prob-basics.html#gunter-et-al.-study-2017",
+    "title": "Lecture 3: Basics of probability",
+    "section": "Gunter et al. study (2017)",
+    "text": "Gunter et al. study (2017)\n\n\n\n\nCoffee drinking\nDied? Yes\nDied? No\nTotal\n\n\n\n\nNone\n1039\n5438\n6477\n\n\nMed-Low\n4440\n29712\n29809\n\n\nHigh\n3601\n24934\n28535\n\n\nTotal\n9080\n60084\n64821\n\n\n\nWhat was the probability that a randomly selected person in the trial..\n\n… did not drink coffee?\n… died during the study or did not drink coffee?\n…did not die during the study and was a high coffee drinker?"
+  },
+  {
+    "objectID": "slides/lec-3-prob-basics.html#recap",
+    "href": "slides/lec-3-prob-basics.html#recap",
+    "title": "Lecture 3: Basics of probability",
+    "section": "Recap",
+    "text": "Recap\n\nProbabilities come up all the time!\nBayesian vs. frequentist approaches\nProbability spaces, sample spaces, events\nSet operations\nHow do probabilities work? (Set operations, DeMorgan’s Laws)"
+  },
+  {
+    "objectID": "slides/lec-3-prob-basics.html#participation",
+    "href": "slides/lec-3-prob-basics.html#participation",
+    "title": "Lecture 3: Basics of probability",
+    "section": "Participation",
+    "text": "Participation\n\nName +\n\nHow was class today? OR\nArtistic rendition of how class was today / something you learned today"
+  },
+  {
+    "objectID": "slides/lec-1-whats-stat-inf.html#download-or-print-notes-to-pdf",
+    "href": "slides/lec-1-whats-stat-inf.html#download-or-print-notes-to-pdf",
+    "title": "Lec 1: What is statistical inference?",
+    "section": "Download or print notes to PDF",
+    "text": "Download or print notes to PDF\nIf you’d like to export this presentation to a PDF, do the following:\n\nToggle into Print View using the E key.\nOpen the in-browser print dialog (CTRL/CMD+P)\nChange the Destination to Save as PDF.\nChange the Layout to Landscape.\nChange the Margins to None.\nEnable the Background graphics option.\nClick Save.\n\nThis feature has been confirmed to work in Google Chrome and Firefox."
+  },
+  {
+    "objectID": "slides/lec-1-whats-stat-inf.html#announcements",
+    "href": "slides/lec-1-whats-stat-inf.html#announcements",
+    "title": "Lec 1: What is statistical inference?",
+    "section": "Announcements",
+    "text": "Announcements\n\nLab 1 due tomorrow at 11:59pm in Gradescope.\nWhen turning in assignments, be sure to assign each question to the corresponding page in your PDF document.\nI will be available for an extra Office Hour session tomorrow, Friday 8/21, from 10am-10:30am via zoom (link in Modules &gt; Zoom Link for Office Hours). Reach out to the teaching team if you need help installing R/RStudio!\nFill out the Getting to Know You Survey (linked on Canvas homepage) by tomorrow at 11:59pm."
+  },
+  {
+    "objectID": "slides/lec-1-whats-stat-inf.html#outline",
+    "href": "slides/lec-1-whats-stat-inf.html#outline",
+    "title": "Lec 1: What is statistical inference?",
+    "section": "Outline",
+    "text": "Outline\n\nQuick review from lab 1\nWhat is (bio)statistical inference?\nIdentifying the population of interest\nSampling types and biases\nReproducibility crisis: falsifying data\nBiostatistics for public good!"
+  },
+  {
+    "objectID": "slides/lec-1-whats-stat-inf.html#review-from-lab",
+    "href": "slides/lec-1-whats-stat-inf.html#review-from-lab",
+    "title": "Lec 1: What is statistical inference?",
+    "section": "Review from lab",
+    "text": "Review from lab\n\nWhat does getwd() do?\nWhat does this code do?\n\n\ncdc &lt;- read.csv(\"https://karamccor.github.io/b6002/labs/data/cdc_cleaned.csv\")\n\n\nWhat is the difference between R and RStudio?\n\n\n\n\n−+\n04:00"
+  },
+  {
+    "objectID": "slides/lec-1-whats-stat-inf.html#what-is-statistical-inference",
+    "href": "slides/lec-1-whats-stat-inf.html#what-is-statistical-inference",
+    "title": "Lec 1: What is statistical inference?",
+    "section": "What is statistical inference?",
+    "text": "What is statistical inference?\nA process that converts data into useful information, whereby practitioners\n\nform a question of interest\ncollect and summarize data\nand interpret the results"
+  },
+  {
+    "objectID": "slides/lec-1-whats-stat-inf.html#identifying-the-population-and-question-of-interest",
+    "href": "slides/lec-1-whats-stat-inf.html#identifying-the-population-and-question-of-interest",
+    "title": "Lec 1: What is statistical inference?",
+    "section": "Identifying the population and question of interest",
+    "text": "Identifying the population and question of interest\nThe population is the group we’d like to learn something about:\n\nWhat is the prevalence of diabetes among U.S. adults, and has it changed over time?\nIs there a relationship between tumor type and five-year mortality in breast cancer patients?\nDoes the average amount of caffeine vary by vendor in 12 oz cups of coffee at UNC coffee shops?"
+  },
+  {
+    "objectID": "slides/lec-1-whats-stat-inf.html#sampling-from-the-population",
+    "href": "slides/lec-1-whats-stat-inf.html#sampling-from-the-population",
+    "title": "Lec 1: What is statistical inference?",
+    "section": "Sampling from the population",
+    "text": "Sampling from the population\nIf we had data from every unit in the population, we could just calculate what we wanted and be done!\nUnfortunately, we (usually) have to settle with a sample from the population.\n\nIdeally, the sample is representative, allowing us to use probability and statistical inference to make conclusions that are generalizable to the broader population of interest."
+  },
+  {
+    "objectID": "slides/lec-1-whats-stat-inf.html#example-sleep-data",
+    "href": "slides/lec-1-whats-stat-inf.html#example-sleep-data",
+    "title": "Lec 1: What is statistical inference?",
+    "section": "Example: Sleep Data",
+    "text": "Example: Sleep Data\nResearchers wanted to know the average number of hours UNC undergraduates sleep per night, so they surveyed 200 students who were in the campus gym at 6am. The sample averaged 5.1 hours of sleep per night.\nGet in groups of 3 and discuss the following:\n\nWhat is our population?\nWhat is our sample?\nWhat does our sample show? Do we think it’s representative of our population? Why or why not?\nWhat limitations might we have? (How could we improve?)\n\nReporter: Person who’s first name is first alphabetically, be prepared to share out\n\n\n\n−+\n04:00"
+  },
+  {
+    "objectID": "slides/lec-1-whats-stat-inf.html#sampling-methods",
+    "href": "slides/lec-1-whats-stat-inf.html#sampling-methods",
+    "title": "Lec 1: What is statistical inference?",
+    "section": "Sampling methods",
+    "text": "Sampling methods\n\nProbability sampling (e.g., simple random sampling, stratified, cluster, or multi-stage sampling)\n\nAll units have a known chance of being selected\nMore likely to be generalizable\nCan be more expensive and time-consuming"
+  },
+  {
+    "objectID": "slides/lec-1-whats-stat-inf.html#sampling-methods-1",
+    "href": "slides/lec-1-whats-stat-inf.html#sampling-methods-1",
+    "title": "Lec 1: What is statistical inference?",
+    "section": "Sampling methods",
+    "text": "Sampling methods\nNon-probability sampling (e.g. quota, convenience, or snowball sampling)\n\nSome units unable to be selected, with no way of knowing size or effect of sampling errors\nLess generalizable to population of interest\nMore convenient and less costly"
+  },
+  {
+    "objectID": "slides/lec-1-whats-stat-inf.html#study-design",
+    "href": "slides/lec-1-whats-stat-inf.html#study-design",
+    "title": "Lec 1: What is statistical inference?",
+    "section": "Study design",
+    "text": "Study design\nExperimental studies (e.g. randomized control trials (RCTs))\n\nResearchers directly control exposures or treatment groups.\nAbility to make causal statements\nLess real-world applicability and generalizability\n\nObservational studies (e.g. surveys)\n\nResearchers do not assign exposures or treatments\nReal-world setting with lower burden on participants\nInability to prove causality"
+  },
+  {
+    "objectID": "slides/lec-1-whats-stat-inf.html#example",
+    "href": "slides/lec-1-whats-stat-inf.html#example",
+    "title": "Lec 1: What is statistical inference?",
+    "section": "Example",
+    "text": "Example\n\nStudy: The effect of a new diet on weight loss in adults\nObjective: To determine whether a new low-carbohydrate diet leads to significant weight loss compared to a standard diet in adults.\nStudy Design:\n\nParticipants: 100 adults aged 25-45 with a BMI between 25 and 30\nRandomization: Participants are randomly assigned to one of two groups:\n\nGroup A: 50 participants following the new low-carb diet\nGroup B: 50 participants following a standard diet.\n\nIntervention: Group A follows the new diet for 12 weeks, while Group B follows their usual diet (standard diet)\nOutcome measurement: Weight of participants is measured before the study begins and after 12 weeks."
+  },
+  {
+    "objectID": "slides/lec-1-whats-stat-inf.html#example-1",
+    "href": "slides/lec-1-whats-stat-inf.html#example-1",
+    "title": "Lec 1: What is statistical inference?",
+    "section": "Example",
+    "text": "Example\nIn groups of 3, discuss the following:\n\nIs this study an observational or experimental study? Why?\n\n\n\n\n−+\n02:00"
+  },
+  {
+    "objectID": "slides/lec-1-whats-stat-inf.html#what-can-go-wrong",
+    "href": "slides/lec-1-whats-stat-inf.html#what-can-go-wrong",
+    "title": "Lec 1: What is statistical inference?",
+    "section": "What can go wrong?",
+    "text": "What can go wrong?\n\nDepending on the study design and sampling methods, different types of bias occur (again, we don’t have the full population, only a sample).\nExamples include:\n\nSelection bias: sample does not accurately reflect target population\nReporting bias: tendency to under-report all information available\nMany more: non-response bias, attrition bias, confounding, detection bias, lack of blinding, straight-up falsified data (this happens), …\n\n\n and more!"
+  },
+  {
+    "objectID": "slides/lec-1-whats-stat-inf.html#a-few-years-ago",
+    "href": "slides/lec-1-whats-stat-inf.html#a-few-years-ago",
+    "title": "Lec 1: What is statistical inference?",
+    "section": "A few years ago…",
+    "text": "A few years ago…\n\nlink to article"
+  },
+  {
+    "objectID": "slides/lec-1-whats-stat-inf.html#article-continued",
+    "href": "slides/lec-1-whats-stat-inf.html#article-continued",
+    "title": "Lec 1: What is statistical inference?",
+    "section": "Article (continued)",
+    "text": "Article (continued)\n\nseroprevalence = level of pathogen in a population\nFrom Conclusion: “The estimated prevalence of SARS-CoV-2 antibodies in Santa Clara County implies that COVID-19 was likely more widespread than indicated by the number of cases in late March, 2020”."
+  },
+  {
+    "objectID": "slides/lec-1-whats-stat-inf.html#however",
+    "href": "slides/lec-1-whats-stat-inf.html#however",
+    "title": "Lec 1: What is statistical inference?",
+    "section": "However…",
+    "text": "However…\n\nWhat do some other people have to say about this study…?"
+  },
+  {
+    "objectID": "slides/lec-1-whats-stat-inf.html#three-main-issues-brought-up-in-blog",
+    "href": "slides/lec-1-whats-stat-inf.html#three-main-issues-brought-up-in-blog",
+    "title": "Lec 1: What is statistical inference?",
+    "section": "Three main issues brought up in blog",
+    "text": "Three main issues brought up in blog\n\nSampling bias\n\n\nRecruited through Facebook ads, may have attracted people more concerned about COVID-19 or those who thought they were already exposed \\(\\rightarrow\\) overestimation of seroprevalence\n\nSymptomatic/exposed individuals may have signed up to get tested, especially when testing was limited.\nParticipants may have recruited others in their network\n\nWithout a truly random sample, findings are less generalizable and reproducible"
+  },
+  {
+    "objectID": "slides/lec-1-whats-stat-inf.html#the-issues-continued",
+    "href": "slides/lec-1-whats-stat-inf.html#the-issues-continued",
+    "title": "Lec 1: What is statistical inference?",
+    "section": "The issues, continued",
+    "text": "The issues, continued\n\nStatistical adjustments: High false positive (FP) rate could drive results\n\n\nStudy had high FP rate (2 FP out of 401 known negative samples, about 0.5%), but w/ a wide confidence interval! (FP Rate could be above 1.2%)\nReported only 50 positives out of ~3300 participants, so such a high FP rate could account for a significant portion - if not all - of the positive results. (\\(\\frac{2}{401}\\cdot 3300 = 17\\)) Yikes!\nCould be more! (re-calibrate assay on different set of 401 known negative samples, may get 0/401 FP or even 6/401)."
+  },
+  {
+    "objectID": "slides/lec-1-whats-stat-inf.html#the-issues-continued-1",
+    "href": "slides/lec-1-whats-stat-inf.html#the-issues-continued-1",
+    "title": "Lec 1: What is statistical inference?",
+    "section": "The issues, continued",
+    "text": "The issues, continued\n\nTransparency\n\n\nStudy does not make its raw data, code, and full methodology publicly available\nWithout access to these, other researchers cannot replicate the study or verify its findings, undermining the reproducibility of the research\nTransparency essential for the scientific process (particularly in high-stakes studies!)"
+  },
+  {
+    "objectID": "slides/lec-1-whats-stat-inf.html#reproducibility-and-replicability",
+    "href": "slides/lec-1-whats-stat-inf.html#reproducibility-and-replicability",
+    "title": "Lec 1: What is statistical inference?",
+    "section": "Reproducibility and replicability",
+    "text": "Reproducibility and replicability\n\nReproducibility: being able to take original data and code to reproduce all numerical findings.\nReplicability: being able to independently repeat an entire study without use of the original data (generally with the same methods)"
+  },
+  {
+    "objectID": "slides/lec-1-whats-stat-inf.html#your-turn",
+    "href": "slides/lec-1-whats-stat-inf.html#your-turn",
+    "title": "Lec 1: What is statistical inference?",
+    "section": "Your turn",
+    "text": "Your turn\nConsider the following 2 examples.\nFor each example: Is this a demonstration of reproducibility or replicability?"
+  },
+  {
+    "objectID": "slides/lec-1-whats-stat-inf.html#example-1-1",
+    "href": "slides/lec-1-whats-stat-inf.html#example-1-1",
+    "title": "Lec 1: What is statistical inference?",
+    "section": "Example 1",
+    "text": "Example 1\nA researcher publishes a study finding that a new blood pressure drug lowers systolic BP by an average of 8 mmHg (p = 0.03), based on data from 500 patients. They post the raw dataset and their R script on a public repository.\nYou download the dataset and run their exact script. It re-runs the same t-test on the same data and outputs the same 8 mmHg difference and the same p = 0.03."
+  },
+  {
+    "objectID": "slides/lec-1-whats-stat-inf.html#example-2",
+    "href": "slides/lec-1-whats-stat-inf.html#example-2",
+    "title": "Lec 1: What is statistical inference?",
+    "section": "Example 2",
+    "text": "Example 2\nA different research group, in a different city, is skeptical of that drug’s effect. They don’t touch the original dataset at all. Instead, they design their own trial — similar patient population, same dosage protocol, same outcome measure (systolic BP) — recruit 500 new patients, collect fresh data, and run the analysis.\nThey find the drug lowers systolic BP by 7.5 mmHg (p = 0.04) in their independent sample."
+  },
+  {
+    "objectID": "slides/lec-1-whats-stat-inf.html#best-practices",
+    "href": "slides/lec-1-whats-stat-inf.html#best-practices",
+    "title": "Lec 1: What is statistical inference?",
+    "section": "Best practices",
+    "text": "Best practices\nFrom the American Statistical Association:\n\nEnd-to-end scripting of research\nFrom the moment you “read in” your raw data, document the code you used for data cleaning, visualization, and analysis\nUse of version control and documentation (we will not use this in our class)\nPublication of code along with data"
+  },
+  {
+    "objectID": "slides/lec-1-whats-stat-inf.html#the-current-replication-crisis",
+    "href": "slides/lec-1-whats-stat-inf.html#the-current-replication-crisis",
+    "title": "Lec 1: What is statistical inference?",
+    "section": "The current replication crisis",
+    "text": "The current replication crisis\n\n\n\n\n\n\n\n\nmisconduct, including image manipulation\n\n\n\n\n\n\n\n\nsubmitting falsified data to secure federal research grants\n\n\nFraudulent data can lead to unreliable research findings, waste resources, and erode trust in scientific integrity!"
+  },
+  {
+    "objectID": "slides/lec-1-whats-stat-inf.html#what-is-biostatistics-good-for",
+    "href": "slides/lec-1-whats-stat-inf.html#what-is-biostatistics-good-for",
+    "title": "Lec 1: What is statistical inference?",
+    "section": "What is biostatistics good for?",
+    "text": "What is biostatistics good for?\n\nTurning data into insight\nEvaluating interventions\nPromoting health equity\nForecasting & prevention\nImproving patient care"
+  },
+  {
+    "objectID": "slides/lec-1-whats-stat-inf.html#what-is-biostatistics-good-for-1",
+    "href": "slides/lec-1-whats-stat-inf.html#what-is-biostatistics-good-for-1",
+    "title": "Lec 1: What is statistical inference?",
+    "section": "What is biostatistics good for?",
+    "text": "What is biostatistics good for?\n\nWhen we appropriately apply statistical inference methods, they can do a lot of good!"
+  },
+  {
+    "objectID": "slides/lec-1-whats-stat-inf.html#what-is-biostatistics-good-for-2",
+    "href": "slides/lec-1-whats-stat-inf.html#what-is-biostatistics-good-for-2",
+    "title": "Lec 1: What is statistical inference?",
+    "section": "What is biostatistics good for?",
+    "text": "What is biostatistics good for?"
+  },
+  {
+    "objectID": "slides/lec-1-whats-stat-inf.html#what-is-biostatistics-good-for-3",
+    "href": "slides/lec-1-whats-stat-inf.html#what-is-biostatistics-good-for-3",
+    "title": "Lec 1: What is statistical inference?",
+    "section": "What is biostatistics good for?",
+    "text": "What is biostatistics good for?"
+  },
+  {
+    "objectID": "slides/lec-1-whats-stat-inf.html#in-this-course-we-will",
+    "href": "slides/lec-1-whats-stat-inf.html#in-this-course-we-will",
+    "title": "Lec 1: What is statistical inference?",
+    "section": "In this course, we will…",
+    "text": "In this course, we will…\n\nApply descriptive techniques commonly used to summarize public health data.\nLearn methods to analyze real-world data to answer research questions in a biomedical setting.\nUse Quarto within RStudio to write reproducible reports.\n\nReading in data, cleaning data, visualization, analysis, interpretation\n\nCommunicate results from statistical analyses to a general audience."
+  },
+  {
+    "objectID": "slides/lec-1-whats-stat-inf.html#recap",
+    "href": "slides/lec-1-whats-stat-inf.html#recap",
+    "title": "Lec 1: What is statistical inference?",
+    "section": "Recap",
+    "text": "Recap\n\nWhat is (bio)statistical inference?\nIdentifying the population of interest\nSampling types and biases\nReproducibility crisis: falsifying data\nBiostatistics for public good!"
+  },
+  {
+    "objectID": "slides/lec-1-whats-stat-inf.html#next-class",
+    "href": "slides/lec-1-whats-stat-inf.html#next-class",
+    "title": "Lec 1: What is statistical inference?",
+    "section": "Next class",
+    "text": "Next class\n\nThe nature of data"
+  },
+  {
+    "objectID": "labs/lab-2-data-viz.html",
+    "href": "labs/lab-2-data-viz.html",
+    "title": "Lab 02: Basic Data Visualization",
+    "section": "",
+    "text": "Important\n\n\n\nThis lab is due on Friday, Aug 28 at 11:59pm. To be considered on time, the following must be done by the due date:\n\nFinal .pdf file submitted on Gradescope\n\nBe sure to assign questions to pages when you turn in your assignment on Gradescope. A .5 point deduction will be made any time the question is not assigned to a page within your PDF."
+  },
+  {
+    "objectID": "labs/lab-2-data-viz.html#introduction",
+    "href": "labs/lab-2-data-viz.html#introduction",
+    "title": "Lab 02: Basic Data Visualization",
+    "section": "Introduction",
+    "text": "Introduction\nIn this lab, you will download the tidyverse, which is an important and powerful suite of R packages that we’ll use throughout the semester. You will practice producing data visualizations with one of those packages, ggplot."
+  },
+  {
+    "objectID": "labs/lab-2-data-viz.html#learning-goals",
+    "href": "labs/lab-2-data-viz.html#learning-goals",
+    "title": "Lab 02: Basic Data Visualization",
+    "section": "Learning goals",
+    "text": "Learning goals\nBy the end of this lab you will…\n\nBe familiar with several Quarto code chunk options\nBe able to describe the difference between library() and install.packages()\nProduce several visualizations based on the CDC dataset using ggplot."
+  },
+  {
+    "objectID": "labs/lab-2-data-viz.html#getting-started",
+    "href": "labs/lab-2-data-viz.html#getting-started",
+    "title": "Lab 02: Basic Data Visualization",
+    "section": "Getting started",
+    "text": "Getting started\n\nIn Canvas, you’ll find the template for this assignment (“Lab 02 Template”). Download the file and open it.\nSave it in your class project folder as “lab-02.qmd”.\nOpen the document. Replace “Your Name Here” with your name in the YAML (the header of the document). Also, replace “Today’s Date Here” with today’s date. Filling in your name and date will count towards your “Formatting” score from here on out."
+  },
+  {
+    "objectID": "labs/lab-2-data-viz.html#note-the-r-chunks",
+    "href": "labs/lab-2-data-viz.html#note-the-r-chunks",
+    "title": "Lab 02: Basic Data Visualization",
+    "section": "Note the R chunks",
+    "text": "Note the R chunks\nIn opening the lab template, note the R chunks. The beauty of .qmd documents is that we can directly run code in them, and the outputs will appear in your final document. To do that, we create an R chunk, which you will see in your template as gray areas where you can write R code. The R code in chunks will be evaluated and displayed in the final rendered document.\n\nNote that the rendering environment from R chunks and the Console are separate. This means that if you load a dataset in the Console, it will not be available in R chunks unless you also load it into R chunks.\nSimilarly, if you load in a dataset in the R chunk and render the document, the dataset will be in the R chunk environment, but will not exist in the Console. Thus, if you wish to load in a dataset and use it for displaying results in your final rendered document, the dataset must be loaded into an R chunk regardless of whether you have already loaded it into the Console."
+  },
+  {
+    "objectID": "labs/lab-2-data-viz.html#the-tidyverse",
+    "href": "labs/lab-2-data-viz.html#the-tidyverse",
+    "title": "Lab 02: Basic Data Visualization",
+    "section": "The tidyverse",
+    "text": "The tidyverse\nAs mentioned previously, one of the biggest strengths of R is its large userbase who have contributed user-written functions to R via packages. R packages are “add-ons” to the basic functions available in R (think of them as apps on a phone).\n\nThe tidyverse is a collection of packages designed around a common grammar and data structure.\nSome packages in the tidyverse that we will be using throughout this semester will be ggplot2, used for creating graphics and figures, and dplyr and tidyr, used for data manipulation and wrangling."
+  },
+  {
+    "objectID": "labs/lab-2-data-viz.html#loading-the-cdc-dataset",
+    "href": "labs/lab-2-data-viz.html#loading-the-cdc-dataset",
+    "title": "Lab 02: Basic Data Visualization",
+    "section": "Loading the CDC dataset",
+    "text": "Loading the CDC dataset\nOnce again, let’s load the cdc dataset. Enter the following command into the console for now (you can directly copy/paste it, but make sure everything is exactly as below):\n\ncdc &lt;- read.csv(\"https://karamccor.github.io/b6002/labs/data/cdc_cleaned.csv\")\n\nFirst, install the tidyverse package by running the following code in your R Studio console:\n\ninstall.packages(\"tidyverse\")\n\nAfter installing the tidyverse package, you never have to install it again on your device – all that is needed to use functions from the tidyverse is to load the package once per R session using the following code:\n\n(This code is already written for you in an R chunk in your template. To run the chunk, click the green arrow at the upper right corner of the chunk. The data will also be loaded in at the same time.)\n\n\nlibrary(tidyverse)\n\nWarning: package 'ggplot2' was built under R version 4.4.3\n\n\n── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──\n✔ dplyr     1.1.4     ✔ readr     2.1.5\n✔ forcats   1.0.0     ✔ stringr   1.5.1\n✔ ggplot2   4.0.2     ✔ tibble    3.2.1\n✔ lubridate 1.9.3     ✔ tidyr     1.3.1\n✔ purrr     1.0.2     \n── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──\n✖ dplyr::filter() masks stats::filter()\n✖ dplyr::lag()    masks stats::lag()\nℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors\n\n\nNotice that by default, R automatically prints extra information about the package that was just loaded. You’ll want to hide this information in your assignments to make them neater. In the next section, we’ll find out how to do so."
+  },
+  {
+    "objectID": "labs/lab-2-data-viz.html#code-chunk-options",
+    "href": "labs/lab-2-data-viz.html#code-chunk-options",
+    "title": "Lab 02: Basic Data Visualization",
+    "section": "Code Chunk Options",
+    "text": "Code Chunk Options\nWhen you write code in Quarto, you put it inside code chunks. These chunks can have options that control how the code runs and what shows up in the final document.\nSome of the most useful options are:\nlabel – a short name you give each chunk. Helps organize your document and makes it easier to debug if there’s an error.\n\nEvery chunk in your assignment should have a unique, descriptive label (e.g. setup, load-data, summary-stats, plot1).\n\nwarning – controls whether R warnings are shown in the output. - By default, R will print warnings (e.g., “package is built under a different R version”). To keep your document neat, set warning = FALSE if you don’t want those to print.\nmessage – controls whether messages are shown. For example, when you load tidyverse, R prints a lot of startup messages. You don’t need those in your assignment, so set message = FALSE.\n\n\n\n\n\n\nNoteFormatting\n\n\n\nOn this assignment and all HW/Labs going forward, there will be a “Formatting” portion of the grading rubric. To earn full points, you should ensure there are no messages, warnings, or lengthy code output printed in your document. To do this, be sure to set message = false and warning = false in your code chunks where you load packages/data. This is a good practice to prepare you to work with collaborators in the future!\n\n\nIn your Quarto template, find the chunk that loads in the CDC dataset. Which options are used in this chunk?"
+  },
+  {
+    "objectID": "labs/lab-2-data-viz.html#so-whats-the-difference-between-library-and-install.packages",
+    "href": "labs/lab-2-data-viz.html#so-whats-the-difference-between-library-and-install.packages",
+    "title": "Lab 02: Basic Data Visualization",
+    "section": "So, what’s the difference between library and install.packages?",
+    "text": "So, what’s the difference between library and install.packages?\nA baking analogy: Imagine you want to bake a cake. You need to get the necessary kitchen gadgets in order to bake the cake. install.packages() is like going to the store and buying a KitchenAid mixer. library is like taking the KitchenAid mixer out of the pantry to actually bake the cake. When you want to bake another cake in 2 weeks, all you need to do is take the KitchenAid out of the pantry (you don’t need to buy another one). Similarly, you only need to run install.packages() once per machine, per package. Then, every time you use a package, simply “activate” it using library()."
+  },
+  {
+    "objectID": "labs/lab-2-data-viz.html#a-quick-note-before-we-get-started",
+    "href": "labs/lab-2-data-viz.html#a-quick-note-before-we-get-started",
+    "title": "Lab 02: Basic Data Visualization",
+    "section": "A quick note before we get started",
+    "text": "A quick note before we get started\nRemember that the console and the Quarto document have different workspaces. If you load the tidyverse package in your console, it won’t be loaded into the workspace for the Quarto document. In the lab template, code for loading the tidyverse has already been provided. However, note that you must have the package installed first.\nAlso, it’s good practice to render often after making small changes to your document. This way, you can ensure you fix any coding issues as they arise."
+  },
+  {
+    "objectID": "labs/lab-2-data-viz.html#basic-data-manipulation",
+    "href": "labs/lab-2-data-viz.html#basic-data-manipulation",
+    "title": "Lab 02: Basic Data Visualization",
+    "section": "Basic data manipulation",
+    "text": "Basic data manipulation\nFirst, let’s take a glimpse of the dataset by running the following code in the console:\n\nglimpse(cdc)\n\nRows: 50\nColumns: 17\n$ X                   &lt;int&gt; 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15,…\n$ State               &lt;chr&gt; \"Alabama\", \"Alaska\", \"Arizona\", \"Arkansas\", \"Calif…\n$ Region              &lt;chr&gt; \"South\", \"West\", \"West\", \"South\", \"West\", \"West\", …\n$ HDI                 &lt;chr&gt; \"Bottom ten\", \"Middle\", \"Middle\", \"Bottom ten\", \"M…\n$ InfantMortalityRate &lt;dbl&gt; 8.7, 6.7, 6.1, 7.5, 4.3, 4.8, 4.8, 6.7, 6.1, 7.5, …\n$ CVDeathRate         &lt;dbl&gt; 229.7, 154.1, 138.8, 223.2, 145.6, 128.4, 147.8, 1…\n$ DrugDeathRate       &lt;dbl&gt; 15.7, 16.0, 19.0, 13.8, 11.3, 15.4, 22.1, 22.0, 16…\n$ MotorDeathRate      &lt;dbl&gt; 17.5, 8.8, 13.1, 17.8, 8.1, 10.0, 7.4, 13.3, 14.5,…\n$ CancerDeathRate     &lt;dbl&gt; 175.6, 159.8, 141.3, 185.4, 142.8, 134.4, 146.2, 1…\n$ Obesity             &lt;dbl&gt; 35.7, 31.4, 29.0, 35.7, 25.0, 22.3, 26.0, 30.7, 27…\n$ Smoking             &lt;dbl&gt; 21.5, 19.0, 14.7, 23.6, 11.0, 15.6, 13.4, 17.7, 15…\n$ Exercise            &lt;dbl&gt; 45.4, 55.3, 51.9, 41.2, 56.3, 60.4, 50.9, 49.7, 50…\n$ Seatbelt            &lt;dbl&gt; 95.7, 88.4, 87.2, 74.4, 97.1, 82.4, 85.1, 91.9, 88…\n$ FluVaccination      &lt;dbl&gt; 43.9, 39.1, 41.8, 46.2, 48.0, 49.9, 52.7, 51.2, 43…\n$ ChildVaccination    &lt;dbl&gt; 70.6, 66.3, 72.3, 66.6, 75.0, 75.4, 80.6, 79.3, 66…\n$ Under18             &lt;dbl&gt; 22.8, 25.3, 24.1, 23.8, 23.6, 23.3, 21.6, 21.8, 20…\n$ Over65              &lt;dbl&gt; 15.3, 9.4, 15.9, 15.7, 12.9, 12.7, 15.5, 16.4, 19.…\n\n\nEach row is an observation and each column is a variable. How many rows and columns does the cdc dataset have? What does each row (observation) represent?"
+  },
+  {
+    "objectID": "labs/lab-2-data-viz.html#data-visualization",
+    "href": "labs/lab-2-data-viz.html#data-visualization",
+    "title": "Lab 02: Basic Data Visualization",
+    "section": "Data visualization",
+    "text": "Data visualization\nToday we will be making some basic visualizations using the ggplot package in the tidyverse.\nIn this section we’ll work through a visualization example using the cdc dataset. The variables in this dataset are as follows:\n\nState, the name of the state\nRegion, the US Census region that each state belongs to\nHDI, the Human Development Index of each state in 2017, categorized into whether they are among the top ten, the bottom ten, or the middle\nInfantMortalityRate: infant mortality rate per 100,000\nCVDeathRate: death rate per 100,000 due to cardiovasulcar causes\nDrugDeathRate: death rate per 100,000 due to drug-related causes (ODs, etc.)\nMotorDeathRate: death rate per 100,000 due to motor vehicle-related causes\nCancerDeathRate: death rate per 100,000 due to cancer\nObesity: % of adults who are obese\nSmoking: % of adults who smoked at least one cigarette in the past month\nExercise: % of adults who participated in at least 2.5 hours of aerobic activity per week\nSeatbelt: % of adults to regularly wear their seat belt\nFluVaccination: % of adults who received a flu vaccine\nChildVaccination: % of children who aged 19-35 months who have received the DTaP, polio, MMR, Hib, hepatitis B, varicella and PCV vaccines\nUnder18: % of residents under age 18\nOver65: % of residents over age 65\n\nLet’s begin with a very simple plot. Run the following code in the console:\n\nggplot(data = cdc, mapping = aes(x = Exercise, y = Obesity)) + \n  geom_point()\n\nWe just created our first plot in R! Let’s break down what each of these components is.\n\nggplot() is the function that tells R to make a plot.\nWe are plotting data from the cdc dataset, with Exercise on the x-axis and Obesity on the y-axis.\nAdding (+) the geom_point() in a new layer (separated on a new line for clarity) tells R specifically to create a scatterplot.\n\nNote that you can almost “read” this code in English:\n“First create a ggplot using the”cdc” dataset. We will map the “Exercise” variable to the x-axis aesthetic, and map the “Obesity” variable to the y-axis aesthetic. Next, we will use the “point” geometry to create a scatterplot using these variable mappings.”\nDoes there appear to be a relationship between the percentage of adults in a state who participate in at least 2.5 hours of aerobic exercise a week and the percentage of adults in that state who are obese? If so, what is this relationship?\nNow run the following code:\n\nggplot(data = cdc, mapping = aes(x = Exercise, y = Obesity, color = HDI, shape = HDI)) + \n  geom_point()\n\nAgain, how does this code differ from the previous plot, and what changes in the plot itself correspond to the additional code?"
+  },
+  {
+    "objectID": "labs/lab-2-data-viz.html#exercise-1",
+    "href": "labs/lab-2-data-viz.html#exercise-1",
+    "title": "Lab 02: Basic Data Visualization",
+    "section": "Exercise 1",
+    "text": "Exercise 1\nHow does the HDI of a state relate to the percentage of residents in each state who get 2.5 hours of aerobic activity and who are obese?"
+  },
+  {
+    "objectID": "labs/lab-2-data-viz.html#example-graphs",
+    "href": "labs/lab-2-data-viz.html#example-graphs",
+    "title": "Lab 02: Basic Data Visualization",
+    "section": "Example graphs",
+    "text": "Example graphs\nThis section contains the code used to produce the basic graphs in the course slides. Take a moment to examine the similarities and differences between the code examples provided. What is your guess for what each line of code does, given the graphs? What is the aesthetic mapping for each plot? What geometries are being plotted?\n\nggplot(data = cdc, mapping = aes(x = Region)) + \n  geom_bar(fill = \"steelblue\") + \n  labs(title = \"Number of US States by Census Region\", \n       x = \"Region\", y = \"Count\")\n\n\n\n\n\n\n\n\n\nggplot(data = cdc, aes(x = HDI, y = Obesity)) + geom_boxplot()+ \n  labs(title = \"Adult Obesity (%) by State HDI\", \n       x = \"HDI\", y = \"Adult Obesity (%)\")\n\n\n\n\n\n\n\n\n\nggplot(data = cdc, aes(x = Obesity)) +\n  geom_histogram(color = \"darkblue\", fill = \"lightblue\", binwidth = 2)+ \n  labs(title = \"Distribution of Adult Obesity (%) by State\", \n       x = \"Adult Obesity (%)\", y = \"Count\")\n\n\n\n\n\n\n\n\n\nggplot(data = cdc[1:4,], aes(x = State, y = Obesity, group = 1)) +\n  geom_line() + \n  geom_point() + \n  labs(title = \"Obesity by State\", \n       x = \"State\", y = \"Adult Obesity (%)\")\n\n\n\n\n\n\n\n\n\nggplot(data = cdc, mapping = aes(x = Exercise, y = Obesity, color = HDI)) + \n  geom_point() +\n  labs(title = \"Aerobic Activity vs. Obesity by State HDI\", \n       x = \"Adequate aerobic activity (%)\", y = \"Obesity (%)\")\n\n\n\n\n\n\n\n\n\nggplot(cdc, aes(x = Exercise, y = Obesity,\n                size = Smoking, color = Region)) +\n  geom_point(alpha = 0.7) +\n  labs(\n    title = \"State-level Tradeoffs: Obesity, Exercise, and Smoking\",\n    x = \"Percent Exercising\",\n    y = \"Percent Obese\",\n    size = \"Smoking %\",\n    color = \"Region\"\n  ) +\n  theme_minimal()"
+  },
+  {
+    "objectID": "labs/lab-2-data-viz.html#your-turn",
+    "href": "labs/lab-2-data-viz.html#your-turn",
+    "title": "Lab 02: Basic Data Visualization",
+    "section": "Your turn!",
+    "text": "Your turn!\nIn each of the following plots, make sure you have informative plot titles and axis labels."
+  },
+  {
+    "objectID": "labs/lab-2-data-viz.html#exercise-2",
+    "href": "labs/lab-2-data-viz.html#exercise-2",
+    "title": "Lab 02: Basic Data Visualization",
+    "section": "Exercise 2",
+    "text": "Exercise 2\nModify the code used for the bar graph that counts the number of US States by Census Region such that the bars are colored pink. Which region has the most states? Which has the least?"
+  },
+  {
+    "objectID": "labs/lab-2-data-viz.html#exercise-3",
+    "href": "labs/lab-2-data-viz.html#exercise-3",
+    "title": "Lab 02: Basic Data Visualization",
+    "section": "Exercise 3",
+    "text": "Exercise 3\nCreate a visualization that explores the distribution of adults who smoke among different levels of the Human Development Index. (Hint: what type of visualization might be appropriate? Try modifying some of the code you see above, changing some of the variable names. Remember to also change any titles as needed. Provide an informative plot title, x-axis label, and y-axis label).\n\n\nDescribe the distributions among each level of HDI - are they symmetric or skewed? Any outliers?\n\n\nHow does smoking relate to Human Development Index in this dataset? Describe the pattern you see."
+  },
+  {
+    "objectID": "labs/lab-2-data-viz.html#exercise-4",
+    "href": "labs/lab-2-data-viz.html#exercise-4",
+    "title": "Lab 02: Basic Data Visualization",
+    "section": "Exercise 4",
+    "text": "Exercise 4\nCreate a visualization that explores the relationship between flu vaccination rate (x-axis) and childhood vaccination rate (y-axis). What relationship(s) do you see? Make sure you have an informative title, x-axis label, and y-axis label."
+  },
+  {
+    "objectID": "labs/lab-2-data-viz.html#exercise-5",
+    "href": "labs/lab-2-data-viz.html#exercise-5",
+    "title": "Lab 02: Basic Data Visualization",
+    "section": "Exercise 5",
+    "text": "Exercise 5\nCreate a visualization that explores the relationship between death rate per 100,000 due to cardiovascular causes (x-axis) and the percentage of obese residents in a state (y-axis). Color-code your plot based on HDI category. (Hint: Have we done a similar visualization earlier in this lab assignment? Modify the earlier code. You’ll need to add a title, x-axis label, and y-axis label). What relationship(s) do you see?"
+  },
+  {
+    "objectID": "labs/lab-2-data-viz.html#exercise-6",
+    "href": "labs/lab-2-data-viz.html#exercise-6",
+    "title": "Lab 02: Basic Data Visualization",
+    "section": "Exercise 6",
+    "text": "Exercise 6\nCreate boxplots to visualize the infant mortality rate (y-axis) by region (x-axis). Include an informative title, x-axis label, and y-axis label. Comment on the relationship(s) you see."
+  },
+  {
+    "objectID": "labs/lab-2-data-viz.html#submission",
+    "href": "labs/lab-2-data-viz.html#submission",
+    "title": "Lab 02: Basic Data Visualization",
+    "section": "Submission",
+    "text": "Submission\nAs you’ve seen previously, we can Render the template into an .html file that can be opened by any web browser. To export it as a .pdf, open the file in your web browser and then print to or save as a .pdf document. Your TAs will show you how if you need help! (There is a way to directly knit to a .pdf file, but it’s quite a bit more involved.)\nYou will submit the PDF documents for labs and homework to Gradescope as part of your final submission.\nTo submit your assignment:\n\nAccess Gradescope through the menu on the BIOS 600 Canvas site.\nClick on the assignment, and you’ll be prompted to submit it.\nMark the pages associated with each exercise. All of the pages of your lab should be associated with at least one question (i.e., should be “checked”).\nSelect the first page of your .PDF submission to be associated with the “Formatting” section."
+  },
+  {
+    "objectID": "labs/lab-2-data-viz.html#grading",
+    "href": "labs/lab-2-data-viz.html#grading",
+    "title": "Lab 02: Basic Data Visualization",
+    "section": "Grading",
+    "text": "Grading\n\n\n\nComponent\nPoints\n\n\n\n\nEx 1\n2\n\n\nEx 2\n3\n\n\nEx 3\n4\n\n\nEx 4\n4\n\n\nEx 5\n4\n\n\nEx 6\n4\n\n\nFormatting\n3\n\n\nTotal\n24\n\n\n\nThe “Formatting” grade is to assess the document format. This includes having a neatly organized document (no excessive output, warnings/messages when loading packages and/or data) with readable code and your name and the date updated in the YAML."
+  },
+  {
+    "objectID": "labs/lab-01-template.html",
+    "href": "labs/lab-01-template.html",
+    "title": "Lab 01",
+    "section": "",
+    "text": "This assignment is due Friday, August 21, 2025 at 11:59PM.\n\nExercise 1\nWrite your answer to Exercise 1 here.\n\n\nExercise 2\nWrite your answer to Exercise 2 here.\n\n\nExercise 3\nWrite your answer to Exercise 3 here.\n\n\nExercise 4\n\n# Use this R chunk to add your two numbers for exercise 4.\n\nRemember to Render your lab into an .html file and then save it as a .pdf in a web browser.\nImportant: You must turn in a .pdf file corresponding to the Quarto template to Gradescope in order to receive credit for the labs and homework assignments."
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "About this site"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "BIOS 600 Fall 2026",
+    "section": "",
+    "text": "Lecture 0: Welcome to BIOS 600!\nLab 1: Introducing the Toolkit\nLecture 1: What is statistical inference?\n\n\n\nLab 2: Basic Data Visualization\nLecture 2: The nature of data\nLecture 3: Probability basics"
+  },
+  {
+    "objectID": "index.html#week-1",
+    "href": "index.html#week-1",
+    "title": "BIOS 600 Fall 2026",
+    "section": "",
+    "text": "Lecture 0: Welcome to BIOS 600!\nLab 1: Introducing the Toolkit\nLecture 1: What is statistical inference?"
+  },
+  {
+    "objectID": "index.html#week-2",
+    "href": "index.html#week-2",
+    "title": "BIOS 600 Fall 2026",
+    "section": "",
+    "text": "Lab 2: Basic Data Visualization\nLecture 2: The nature of data\nLecture 3: Probability basics"
+  },
+  {
+    "objectID": "labs/lab-01.html",
+    "href": "labs/lab-01.html",
+    "title": "Lab 01",
+    "section": "",
+    "text": "This assignment is due Friday, August 22, 2025 at 11:59PM.\n\nExercise 1\nWrite your answer to Exercise 1 here.\n\n\nExercise 2\nWrite your answer to Exercise 2 here.\n\n\nExercise 3\nWrite your answer to Exercise 3 here.\n\n\nExercise 4\n\n# Use this R chunk to add your two numbers for exercise 4.\n\nRemember to Render your lab into an .html file and then save it as a .pdf in a web browser.\nImportant: You must turn in a .pdf file corresponding to the Quarto template to Gradescope in order to receive credit for the labs and homework assignments."
+  },
+  {
+    "objectID": "labs/lab-02-template.html",
+    "href": "labs/lab-02-template.html",
+    "title": "Lab 02: Basic Data Visualization",
+    "section": "",
+    "text": "library(tidyverse)\n\n# Load in the dataset in the R chunk here! Note that you MUST load in the dataset\n# in the chunk in order for other R chunks to recognize the dataset, even if\n# you've loaded it in the Console.\ncdc &lt;- read.csv(\"https://karamccor.github.io/b6002/labs/data/cdc_cleaned.csv\")\n\n\nExercise 1\nWrite your narrative to Exercise 1 here.\n\n\nExercise 2\n\n# Use this R chunk to create your visualization for Exercise 2.\n\nWrite your narrative to Exercise 2 here.\n\n\nExercise 3\n\n# Use this R chunk to create your visualization for Exercise 3.\n\nWrite your narrative to Exercise 3 here.\n\n\nExercise 4\n\n# Use this R chunk to create your visualization for Exercise 4.\n\nWrite your narrative to Exercise 4 here.\n\n\nExercise 5\n\n# Use this R chunk to create your visualization for Exercise 5.\n\nWrite your narrative to Exercise 5 here.\n\n\nExercise 6\n\n# Use this R chunk to create your visualization for Exercise 6.\n\nWrite your narrative to Exercise 6 here.\nSubmission: Remember to render your lab into an .html file and then save it as a .pdf in a web browser. You must turn in a .pdf file corresponding to the Quarto template to Gradescope in order to receive credit for the labs and homework assignments. You must assign each problem to a page in your PDF. Assign the Formatting portion to your page 1."
+  },
+  {
+    "objectID": "labs/lab-1.html",
+    "href": "labs/lab-1.html",
+    "title": "Lab 01",
+    "section": "",
+    "text": "Due Friday, Aug 21 at 11:59pm."
+  },
+  {
+    "objectID": "labs/lab-1.html#meet-the-tas",
+    "href": "labs/lab-1.html#meet-the-tas",
+    "title": "Lab 01",
+    "section": "Meet the TAs",
+    "text": "Meet the TAs\n\n\nYiran Song, PhD student\nTeya Davis, PhD student\nJeffrey Asubonteng, PhD student"
+  },
+  {
+    "objectID": "labs/lab-1.html#what-to-expect-in-lab",
+    "href": "labs/lab-1.html#what-to-expect-in-lab",
+    "title": "Lab 01",
+    "section": "What to expect in lab",
+    "text": "What to expect in lab\n\nIntroduction to the lab assignment (~ 5 - 10 minutes)\nWork on the lab assignment (feel free to collaborate, but labs will be turned in individually. Ensure you understand everything you’re turning in!)\nLab instructions will always be posted on the Canvas homepage (under “Labs” column)"
+  },
+  {
+    "objectID": "labs/lab-1.html#tips",
+    "href": "labs/lab-1.html#tips",
+    "title": "Lab 01",
+    "section": "Tips",
+    "text": "Tips\n\nYou do not have to finish the lab in class, they will always be due the following Friday at 11:59 pm.\nOne work strategy is to get through portions that you think will be most challenging (which initially might be the coding component) during lab when a TA can help you on the spot and leave the narrative writing until later."
+  },
+  {
+    "objectID": "labs/lab-1.html#a-quick-note",
+    "href": "labs/lab-1.html#a-quick-note",
+    "title": "Lab 01",
+    "section": "A quick note",
+    "text": "A quick note\n\nToday’s lab introduces the computing tools we will be using this semester.\nWe will begin by installing R and RStudio, and familiarizing ourselves with its basic functionality.\nWe will also introduce Quarto as a tool to create high-quality reproducible reports - don’t worry, a fillable template is provided.\n\nThis is an individual lab. Your TAs will guide you through the first portion of the lab (until the “On your own” section).\n\nAlso note that the process of installing R/RStudio on individual computers sometimes takes troubleshooting. If you get stuck, don’t worry - TAs are here to help! We will also have an office hour later in the week to provide assistance with installation."
+  },
+  {
+    "objectID": "labs/lab-1.html#installing-r",
+    "href": "labs/lab-1.html#installing-r",
+    "title": "Lab 01",
+    "section": "Installing R",
+    "text": "Installing R\n\nWhat is R?\nR is a statistical programming language used for computation, data analysis, and graphics generation. It is widely used by statisticians, data scientists, and applied researchers in many fields.\n\n\nBenefits of R\n\nflexible and freely available to the public, who have in turn written many user-contributed packages which provide additional functionality.\nRStudio is a convenient interface for R that adds convenient features, such as exporting output in nice formats.\nIn this class, we’ll be doing all of our computation in RStudio.\n\nLet’s begin by installing R and RStudio. R is like the “engine” and RStudio is like the “dashboard”, so we need both.\nFirst, we need to install R, which can be downloaded here (see screenshot below).\n\nNext, install RStudio Desktop, which can be downloaded here (see screenshot below)."
+  },
+  {
+    "objectID": "labs/lab-1.html#first-steps-in-rstudio",
+    "href": "labs/lab-1.html#first-steps-in-rstudio",
+    "title": "Lab 01",
+    "section": "First Steps in RStudio",
+    "text": "First Steps in RStudio\n\nEnsure you have an updated version\nFor this course, we’ll be using Quarto to type up HW/Labs. Quarto is a (relatively new) publishing system which may be accessed through RStudio. Some of you may already have R/RStudio installed on your computer. To ensure you have a version of RStudio which can run Quarto, follow these instructions:\n\nFor Windows: Go to Help &gt; About RStudio.\nFor Mac: Go to RStudio &gt; About RStudio.\nThe dialogue box will display the RStudio version. You should have version 2022.07 or later.\n\n\n\nWhat if I have an earlier version of RStudio?\nYou’ll need to update. To update RStudio, first check if an update is available by going to Help &gt; Check for Updates within RStudio (there should be one available). If an update is found (it should be), you’ll be directed to the RStudio website to download the latest version. After downloading, run the installer and follow the prompts to install the new version."
+  },
+  {
+    "objectID": "labs/lab-1.html#exploring-rstudio",
+    "href": "labs/lab-1.html#exploring-rstudio",
+    "title": "Lab 01",
+    "section": "Exploring RStudio",
+    "text": "Exploring RStudio\nWith R and RStudio installed, we’ll begin by exploring RStudio: the interface, reading in data, and basic commands. Upon opening RStudio, you should see something similar to the window below:\n\nThe console is the panel on the left side, and is where users can type commands and see immediate output. Let’s try it out! Type the following code into the console:\n\n3 + 5\n\nYou should get output that looks like\n\n\n[1] 8\n\n\n(For now, ignore the [1]). By typing in 3+5, we got the expected answer, 8. We can see that R can be used as a calculator directly in the console. Try some other commands that use R as a calculator. For instance, 3*25, exp(2), or (10+5^2)/sqrt(40). Of course, R is not simply a calculator; other commands may also be entered here.\nTo illustrate, let’s load a dataset. Enter the following command into the console (you can directly copy/paste it, but make sure everything is exactly as below):\n\ncdc &lt;- read.csv(\"https://karamccor.github.io/b6002/labs/data/cdc_cleaned.csv\")\n\nWe’ve just loaded a dataset named cdc. These data come primarily from the Sortable Risk Factors and Health Indicators dataset from the CDC, which comprises demographic and health indices compiled from various federal sources. This dataset is now part of our environment, which is displayed on the top half and right side of the RStudio window.\n\nThe environment contains all objects in the current working space. These objects could be variables, lists of variables, or even entire datasets.\nIn the same location as the environment tab, the history tab displays all commands used during the current session (don’t worry about the connections tab for now).\nFinally, the bottom half of the right-hand panel shows information regarding files on your hard drive, installed packages, output such as plots, and help files or other documents.\n\nComing back to the dataset we loaded in, we can see that it is named cdc. We can take a look at this dataset in a spreadsheet-like window by clicking on cdc in the Environment tab to the right, or by running the following code in the console:\n\nView(cdc)\n\nNote that other objects may be added to the environment, either from external data sources from the internet as in today’s example, datasets downloaded to your computer, or even as created as manipulations of existing datasets."
+  },
+  {
+    "objectID": "labs/lab-1.html#setting-up-a-project-in-rstudio",
+    "href": "labs/lab-1.html#setting-up-a-project-in-rstudio",
+    "title": "Lab 01",
+    "section": "Setting up a project in RStudio",
+    "text": "Setting up a project in RStudio\nIn this class, you’ll use RStudio Projects to stay organized. A project keeps all of your work (scripts, data, and results) together in one place. This is good practice for reproducible research.\n1. What is a working directory?\n\nThe working directory is the folder where R looks for files and saves results.\nThink of it as R’s “current location” on your computer.\nIf you try to load a dataset, R will look in your working directory first.\n\nCheck your current working directory by running the following in your Console:\n\ngetwd()\n\n2. Creating a project\nWe’ll create a new project for this course so everything stays in one place. In RStudio, go to the top menu. Click on File → New Project → New Directory → New Project. Name your project something sensible & concise, like: bios600. Choose where on your computer you want this folder saved (e.g., “Documents” or “Desktop”).\nNow RStudio will automatically set your project folder as the working directory whenever you open it.\n3. Creating a “data” folder\nInside your new project folder, we’re going to create a folder called data.This is where you’ll put all datasets for the course. You can make the folder by doing the following: In your computer’s file explorer (right click → New Folder → name it data). Alternatively, click the little folder with a green plus on your lower right pane within RStudio to create the folder."
+  },
+  {
+    "objectID": "labs/lab-1.html#quarto-and-reproducible-research",
+    "href": "labs/lab-1.html#quarto-and-reproducible-research",
+    "title": "Lab 01",
+    "section": "Quarto and reproducible research",
+    "text": "Quarto and reproducible research\nQuarto is a system that may be used to create easy-to-write, attractive reports, presentations, or webpages that also serve as reproducible records of the data analysis. These reports have the desirable property of being able to not only display written narratives and figures, but also include any R code and the outputs from these code snippets.\nOne of the biggest strengths of Quarto is that everything is in one place, and that other users should be able to reproduce your results exactly, if they have your Quarto document and datasets - the analysis is run from the beginning each time you render the document. As well, formatting is easy! Luckily, RStudio already comes with Quarto support, so there is nothing additional to install. (Again, you need &gt;= version 2022.07 to run Quarto within RStudio!)\nEvery homework assignment and lab in this class will be written in Quarto, with a template provided for you to use for the first few assignments. This lab’s template can be downloaded from Canvas &gt; Modules &gt; Lab 1.\nClick on the Lab 1 Assignment in canvas and download lab-01-template.qmd.\nOpen lab-01-template.qmd in RStudio.\nFirst, put your name in the space at the top where it says “YOUR NAME GOES HERE”.\nClick File &gt; Save As to save (and rename) the file as lab-01.qmd within your bios600 folder.\nYour template is now ready to use in this lab!\nFill in answers in the spaces provided: text narrative should be typed directly in the document and any included R code should be typed inside “chunks,” or sections defined by three backticks (the little mark on the same key as the tilde). See the template for more instructions, or ask your TA.\nAn important thing to note is that the workspace of the Quarto document is separate from the console – this means that you must load any packages inside of R chunks if you want to use functions contained in them. In the template for this lab, this has been done already, but in the future you may have to do it yourself.\nIn order to turn this template into a shareable document, Render the quarto template into an HTML document by pressing the Render button at the top of the document (it is a large blue arrow facing the right). You should see the template rendered as an .html file! To turn it in, print to PDF from your browser. (I recommend Google Chrome.)"
+  },
+  {
+    "objectID": "labs/lab-1.html#at-the-end-heres-how-youll-turn-this-in",
+    "href": "labs/lab-1.html#at-the-end-heres-how-youll-turn-this-in",
+    "title": "Lab 01",
+    "section": "At the end, here’s how you’ll turn this in:",
+    "text": "At the end, here’s how you’ll turn this in:\n\n“Render” the .qmd file to an html file, by clicking on the blue right arrow button at the top of this window. (Demo)\nOpen the .html document in any browser, and print to pdf. You’ll turn in the .pdf file to Gradescope under Lab 1 Assignments."
+  },
+  {
+    "objectID": "labs/lab-1.html#exercise-1",
+    "href": "labs/lab-1.html#exercise-1",
+    "title": "Lab 01",
+    "section": "Exercise 1",
+    "text": "Exercise 1\nR has various useful datasets built-in. One of these datasets is the mtcars dataset, extracted from the 1974 Motor Trend US magazine. One way we can ask for help in R, and to find out information about the data, is by typing the ? in the console. Type ?mtcars in the Console to view the help page for the mtcars dataset.\nList three variables from this dataset, along with their units."
+  },
+  {
+    "objectID": "labs/lab-1.html#exercise-2",
+    "href": "labs/lab-1.html#exercise-2",
+    "title": "Lab 01",
+    "section": "Exercise 2",
+    "text": "Exercise 2\nIn the space provided, explain what you think ### in front of text (not code) does."
+  },
+  {
+    "objectID": "labs/lab-1.html#exercise-3",
+    "href": "labs/lab-1.html#exercise-3",
+    "title": "Lab 01",
+    "section": "Exercise 3",
+    "text": "Exercise 3\nWrite a quick one paragraph intro about yourself. Be creative!"
+  },
+  {
+    "objectID": "labs/lab-1.html#exercise-4",
+    "href": "labs/lab-1.html#exercise-4",
+    "title": "Lab 01",
+    "section": "Exercise 4",
+    "text": "Exercise 4\nIn the R chunk, pick your two favorite numbers and add them together using R’s built-in calculator function. The answer should be knit directly in the document."
+  },
+  {
+    "objectID": "labs/lab-1.html#from-.html-to-.pdf",
+    "href": "labs/lab-1.html#from-.html-to-.pdf",
+    "title": "Lab 01",
+    "section": "From .html to .pdf",
+    "text": "From .html to .pdf\nImportant: You must turn in a .pdf file corresponding to the Quarto template to Gradescope in order to receive credit for the assignment."
+  },
+  {
+    "objectID": "labs/lab-1.html#submission",
+    "href": "labs/lab-1.html#submission",
+    "title": "Lab 01",
+    "section": "Submission",
+    "text": "Submission\nTo submit your assignment:\n\nAccess Gradescope through the menu on the BIOS 600 Canvas site.\nClick on the assignment, and you’ll be prompted to submit it.\nMark the pages associated with each exercise. All of the pages of your lab should be associated with at least one question (i.e., should be “checked”)."
+  },
+  {
+    "objectID": "slides/lec-0-welcome.html#download-or-print-notes-to-pdf",
+    "href": "slides/lec-0-welcome.html#download-or-print-notes-to-pdf",
+    "title": "Lec 0: Welcome! + Course overview",
+    "section": "Download or print notes to PDF",
+    "text": "Download or print notes to PDF\nIf you’d like to export this presentation to a PDF, do the following:\n\nToggle into Print View using the E key.\nOpen the in-browser print dialog (CTRL/CMD+P)\nChange the Destination to Save as PDF.\nChange the Layout to Landscape.\nChange the Margins to None.\nEnable the Background graphics option.\nClick Save.\n\nThis feature has been confirmed to work in Google Chrome and Firefox."
+  },
+  {
+    "objectID": "slides/lec-0-welcome.html#welcome-meet-prof.-mccormack",
+    "href": "slides/lec-0-welcome.html#welcome-meet-prof.-mccormack",
+    "title": "Lec 0: Welcome! + Course overview",
+    "section": "Welcome! Meet Prof. McCormack",
+    "text": "Welcome! Meet Prof. McCormack\n\nTeaching Assistant Professor, Department of Biostatistics, Joined August 2023\nPhD in Biostatistics from Duke University, 2023\nOriginally from Austin, TX\nInterests: gardening, yoga, cats, and all kinds of art!"
+  },
+  {
+    "objectID": "slides/lec-0-welcome.html#my-office-hours",
+    "href": "slides/lec-0-welcome.html#my-office-hours",
+    "title": "Lec 0: Welcome! + Course overview",
+    "section": "My Office Hours",
+    "text": "My Office Hours\n\nWednesdays 10:30am-11am via zoom (link in Canvas modules)\nThursdays 9:30-10:30 AM in MCG 3106F\nAnd by appointment."
+  },
+  {
+    "objectID": "slides/lec-0-welcome.html#meet-the-tas",
+    "href": "slides/lec-0-welcome.html#meet-the-tas",
+    "title": "Lec 0: Welcome! + Course overview",
+    "section": "Meet the TAs",
+    "text": "Meet the TAs\n\nTeya Davis, Yiran Song, Jeffrey Asubonteng\nPhD students, Biostatistics department\nWill lead lab sessions, Tuesdays 3:30-4:50, MHRC 0001 (this room!)\nAdditional TA office hours TBD, will be announced via Canvas"
+  },
+  {
+    "objectID": "slides/lec-0-welcome.html#check-out-ed-discussion",
+    "href": "slides/lec-0-welcome.html#check-out-ed-discussion",
+    "title": "Lec 0: Welcome! + Course overview",
+    "section": "Check out Ed Discussion",
+    "text": "Check out Ed Discussion\n\nThis semester, you can ask questions about the class in our discussion forum, Ed Discussion\nThe link to join is also posted on our home page in Canvas.\nTake a moment to introduce yourself in the forum! Name, Year + Program, and a fun fact about yourself."
+  },
+  {
+    "objectID": "slides/lec-0-welcome.html#meet-each-other",
+    "href": "slides/lec-0-welcome.html#meet-each-other",
+    "title": "Lec 0: Welcome! + Course overview",
+    "section": "Meet each other",
+    "text": "Meet each other\nIn groups of 4, share\n\nWhere you’re from\nYour year/program\nWhat you hope to get out of this course\nFind 2 things that everyone in your group has in common, that isn’t necessarily common to the rest of the class."
+  },
+  {
+    "objectID": "slides/lec-0-welcome.html#course-overview-canvas",
+    "href": "slides/lec-0-welcome.html#course-overview-canvas",
+    "title": "Lec 0: Welcome! + Course overview",
+    "section": "Course overview: Canvas",
+    "text": "Course overview: Canvas\n\nAll course materials by day: syllabus, discussion forum link, class slides, lab materials, assignments\nLet’s take a tour!"
+  },
+  {
+    "objectID": "slides/lec-0-welcome.html#course-toolkit",
+    "href": "slides/lec-0-welcome.html#course-toolkit",
+    "title": "Lec 0: Welcome! + Course overview",
+    "section": "Course toolkit",
+    "text": "Course toolkit\n\nRStudio\n\nNote: Later today in the first lab, TAs will help you download RStudio.\n\nAssignment submission and feedback: Gradescope\n\nJoin with course code: G64322\n\nDiscussion forum: Ed Discussion"
+  },
+  {
+    "objectID": "slides/lec-0-welcome.html#what-have-i-gotten-myself-into",
+    "href": "slides/lec-0-welcome.html#what-have-i-gotten-myself-into",
+    "title": "Lec 0: Welcome! + Course overview",
+    "section": "What have I gotten myself into?",
+    "text": "What have I gotten myself into?\n\nBIOS 600 is an introduction to “principles of statistical inference” in biostatistics that:\n\nprovides a tour of basic statistical methods commonly encountered in public health and biomedical research,\nemphasizes understanding of methods, using them to arrive at data-driven decisions, and effective communication of such results.\nUtilizes modern software such as RStudio to reproducibly examine and manipulate data to make sound scientific conclusions"
+  },
+  {
+    "objectID": "slides/lec-0-welcome.html#my-goals-in-the-course",
+    "href": "slides/lec-0-welcome.html#my-goals-in-the-course",
+    "title": "Lec 0: Welcome! + Course overview",
+    "section": "My goals in the course",
+    "text": "My goals in the course\n\nIntroduce you to basic biostatistics toolkit so that you can apply it to your own projects in the future, if you choose!\nBuild community!"
+  },
+  {
+    "objectID": "slides/lec-0-welcome.html#activities-participate-practice-perform",
+    "href": "slides/lec-0-welcome.html#activities-participate-practice-perform",
+    "title": "Lec 0: Welcome! + Course overview",
+    "section": "Activities: Participate, Practice, Perform",
+    "text": "Activities: Participate, Practice, Perform\n\nParticipate: Attend and actively participate in lectures and labs, office hours\nPractice: Practice applying statistical concepts and computing with lab exercises (individual)\n\nReview course topics with occasional participation exercises, typically a few questions administered via Canvas.\n\nPerform: Put together what you’ve learned to analyze real-world data\n\nHomework assignments (individual)\nThree in-class exams.\nA final project"
+  },
+  {
+    "objectID": "slides/lec-0-welcome.html#cadence",
+    "href": "slides/lec-0-welcome.html#cadence",
+    "title": "Lec 0: Welcome! + Course overview",
+    "section": "Cadence",
+    "text": "Cadence\n\nLecture: Tuesday/Thursday 8am-9:15am. Mostly lecture, sometimes a participation activity (could be a quick survey, or an activity to apply your knowledge). Lectures will not be recorded.\nLabs: Tutorial video and assignment will (typically) be posted Monday around noon. Start and make large progress on Tuesday in lab section, finish up by Friday 11:59pm of that week\nHWs: Posted approx every 1-2 weeks, typically will have approximately 1 week to complete.\nExams: 3 in-class exams, more info as semester progresses.\nProject: Later in the semester. Most of work done outside of class."
+  },
+  {
+    "objectID": "slides/lec-0-welcome.html#what-to-expect-in-lab",
+    "href": "slides/lec-0-welcome.html#what-to-expect-in-lab",
+    "title": "Lec 0: Welcome! + Course overview",
+    "section": "What to expect in lab",
+    "text": "What to expect in lab\n\nLab session will be Tuesdays from 3:30-4:50, MHRC 0001, led by TA\nInstructions and tutorial video will be posted on Canvas on Monday by noon.\nI know some of you have a conflict w/ lab time. That’s okay - attendance is not required. Watch the video and work on the lab, attend other scheduled office hours if you need help. Still turn in the assignment by Friday at 11:59pm of that week."
+  },
+  {
+    "objectID": "slides/lec-0-welcome.html#tips",
+    "href": "slides/lec-0-welcome.html#tips",
+    "title": "Lec 0: Welcome! + Course overview",
+    "section": "Tips",
+    "text": "Tips\n\nYou do not have to finish the lab during the lab session, they will always be due the following Friday at 11:59 pm.\nOne work strategy is to get through portions that you think will be most challenging (which initially might be the coding component) during lab when a TA can help you on the spot and leave the narrative writing until later.\nUse the time wisely to really learn the material and produce a quality report."
+  },
+  {
+    "objectID": "slides/lec-0-welcome.html#grading",
+    "href": "slides/lec-0-welcome.html#grading",
+    "title": "Lec 0: Welcome! + Course overview",
+    "section": "Grading",
+    "text": "Grading\n\n\n\nCategory\nPercentage\n\n\n\n\nHomework\n25%\n\n\nLabs\n20%\n\n\nExams\n40%\n\n\nProject\n10%\n\n\nParticipation\n5%\n\n\n\nSee the course syllabus (available on Canvas) for how the final letter grade will be determined."
+  },
+  {
+    "objectID": "slides/lec-0-welcome.html#textbooks",
+    "href": "slides/lec-0-welcome.html#textbooks",
+    "title": "Lec 0: Welcome! + Course overview",
+    "section": "Textbooks",
+    "text": "Textbooks\nRecommended: (free online)\n\nOpenIntro Statistics, Diez, Barr, Çetinkaya-Rundel, CreateSpace, 4th Ed. (2019)\nR for Data Science, Wickham and Grolemund, O’Reilly Media, 1st Ed. (2017)\n\nOptional:\n\nPrinciples of Biostatistics, Pagano and Gavreau, CRC Press, 2nd Ed. (2018)"
+  },
+  {
+    "objectID": "slides/lec-0-welcome.html#support",
+    "href": "slides/lec-0-welcome.html#support",
+    "title": "Lec 0: Welcome! + Course overview",
+    "section": "Support",
+    "text": "Support\n\nAttend office hours\nAsk and answer questions on the discussion forum, Ed Discussion\nReserve email for questions on personal matters and/or grades\nAdditional support resources in the syllabus"
+  },
+  {
+    "objectID": "slides/lec-0-welcome.html#announcements",
+    "href": "slides/lec-0-welcome.html#announcements",
+    "title": "Lec 0: Welcome! + Course overview",
+    "section": "Announcements",
+    "text": "Announcements\n\nPosted on Ed Discussion/Canvas (Announcements tool) and sent via email, be sure to check both regularly\nI’ll assume that you’ve read an announcement by the next “business” day"
+  },
+  {
+    "objectID": "slides/lec-0-welcome.html#diversity-inclusion",
+    "href": "slides/lec-0-welcome.html#diversity-inclusion",
+    "title": "Lec 0: Welcome! + Course overview",
+    "section": "Diversity + inclusion",
+    "text": "Diversity + inclusion\nIt is my intent that students from all diverse backgrounds and perspectives be well-served by this course, that students’ learning needs be addressed both in and out of class, and that the diversity that the students bring to this class be viewed as a resource, strength and benefit.\n\nIf you have a name that differs from those that appear in your official UNC records, please let me know!\nPlease let me know your preferred pronouns. You’ll also be able to note this in the Getting to know you survey.\nIf you feel like your performance in the class is being impacted by your experiences outside of class, please don’t hesitate to come and talk with me. I want to be a resource for you.\nIf you prefer to speak with someone outside of the course, your advisers and deans are excellent resources."
+  },
+  {
+    "objectID": "slides/lec-0-welcome.html#diversity-inclusion-1",
+    "href": "slides/lec-0-welcome.html#diversity-inclusion-1",
+    "title": "Lec 0: Welcome! + Course overview",
+    "section": "Diversity + Inclusion",
+    "text": "Diversity + Inclusion\nI (like many people) am still in the process of learning about diverse perspectives and identities. If something was said in class (by anyone) that made you feel uncomfortable, please talk to me about it."
+  },
+  {
+    "objectID": "slides/lec-0-welcome.html#course-policies-late-work",
+    "href": "slides/lec-0-welcome.html#course-policies-late-work",
+    "title": "Lec 0: Welcome! + Course overview",
+    "section": "Course policies: Late work",
+    "text": "Course policies: Late work\n\nHW & Labs: Deadlines are there to help you stay on track. However, I know that life happens.\n\nMay be turned in up to 24 hours late for 5% penalty.\nMay be turned in 24-48 hours late for 10% penalty.\nNo HW/Labs will be accepted after 48 hours past due date, except in extenuating circumstances.\n\nLowest HW and Lab will be dropped.\nNo late work will be accepted for the project."
+  },
+  {
+    "objectID": "slides/lec-0-welcome.html#collaboration-policy",
+    "href": "slides/lec-0-welcome.html#collaboration-policy",
+    "title": "Lec 0: Welcome! + Course overview",
+    "section": "Collaboration policy",
+    "text": "Collaboration policy\n\nOnly work that is clearly assigned as team work should be completed collaboratively.\nHomeworks must be completed individually. You may not directly share answers / code with others, however you are welcome to discuss the problems in general and ask for advice."
+  },
+  {
+    "objectID": "slides/lec-0-welcome.html#ai-policy",
+    "href": "slides/lec-0-welcome.html#ai-policy",
+    "title": "Lec 0: Welcome! + Course overview",
+    "section": "AI policy",
+    "text": "AI policy\n\nUse of artificial intelligence (AI): You should treat AI tools, such as ChatGPT, the same as other online resources.\nThere are two guiding principles that govern how you can use AI in this course:\n\nCognitive dimension: Working with AI should not reduce your ability to think clearly. We will practice using AI to facilitate—rather than hinder—learning.\nEthical dimension: Students using AI should be transparent about their use and make sure it aligns with academic integrity."
+  },
+  {
+    "objectID": "slides/lec-0-welcome.html#ai-for-code",
+    "href": "slides/lec-0-welcome.html#ai-for-code",
+    "title": "Lec 0: Welcome! + Course overview",
+    "section": "AI for code",
+    "text": "AI for code\n\n✅AI tools for code: You may make use of the technology for coding examples on assignments; if you do so, you must explicitly cite where you obtained the code, and share the AI prompt(s) you used.\n❌AI tools for narrative: Unless instructed otherwise, AI is not permitted for writing narrative on assignments. In general, you may use AI as a resource as you complete assignments but not to answer the exercises for you."
+  },
+  {
+    "objectID": "slides/lec-0-welcome.html#bottom-line",
+    "href": "slides/lec-0-welcome.html#bottom-line",
+    "title": "Lec 0: Welcome! + Course overview",
+    "section": "Bottom line",
+    "text": "Bottom line\nYou are ultimately responsible for the work you turn in; it should reflect your understanding of the course content."
+  },
+  {
+    "objectID": "slides/lec-0-welcome.html#sharing-reusing-code-policy",
+    "href": "slides/lec-0-welcome.html#sharing-reusing-code-policy",
+    "title": "Lec 0: Welcome! + Course overview",
+    "section": "Sharing / reusing code policy",
+    "text": "Sharing / reusing code policy\n\nUnless explicitly stated otherwise, this course’s policy is that you may make use of any online resources (e.g. RStudio Community, StackOverflow, ChatGPT, etc.) but you must explicitly cite where you obtained any code you directly use or use as inspiration in your solution(s).\nI know that you will have access to the internet and AI in the real world. However, you are required to understand (& be able to explain) every line of code you’re turning in.\nAny recycled code that is discovered and is not explicitly cited will be treated as plagiarism, regardless of source."
+  },
+  {
+    "objectID": "slides/lec-0-welcome.html#most-importantly",
+    "href": "slides/lec-0-welcome.html#most-importantly",
+    "title": "Lec 0: Welcome! + Course overview",
+    "section": "Most importantly…",
+    "text": "Most importantly…\nAsk if you’re not sure if something violates a policy!"
+  },
+  {
+    "objectID": "slides/lec-0-welcome.html#three-tips-for-success",
+    "href": "slides/lec-0-welcome.html#three-tips-for-success",
+    "title": "Lec 0: Welcome! + Course overview",
+    "section": "Three tips for success",
+    "text": "Three tips for success\nI am here to help you succeed! :-)\n\nAsk questions.\nDo the homework and labs.\nBe proactive, even with the small questions!"
+  },
+  {
+    "objectID": "slides/lec-0-welcome.html#cultivating-a-supportive-learning-environment",
+    "href": "slides/lec-0-welcome.html#cultivating-a-supportive-learning-environment",
+    "title": "Lec 0: Welcome! + Course overview",
+    "section": "Cultivating a supportive learning environment",
+    "text": "Cultivating a supportive learning environment\nI want to make sure that you learn everything you were hoping to learn from this class. If this requires flexibility, please don’t hesitate to ask.\n\nYou never owe me personal information about your health (mental or physical) but you’re always welcome to talk to me. If I can’t help, I likely know someone who can.\nI want you to learn lots of things from this class, but I primarily want you to stay healthy, balanced, and grounded."
+  },
+  {
+    "objectID": "slides/lec-0-welcome.html#questions",
+    "href": "slides/lec-0-welcome.html#questions",
+    "title": "Lec 0: Welcome! + Course overview",
+    "section": "Questions",
+    "text": "Questions\nWhat questions do you have?"
+  },
+  {
+    "objectID": "slides/lec-0-welcome.html#this-weeks-tasks",
+    "href": "slides/lec-0-welcome.html#this-weeks-tasks",
+    "title": "Lec 0: Welcome! + Course overview",
+    "section": "This week’s tasks",
+    "text": "This week’s tasks\n\nRead the syllabus! (available on Canvas)\nFirst lab today! 3:30pm in this room.\nShort lab walk-through video will be posted this afternoon on Canvas.\nKeep an eye out for a Getting to Know You Survey via Canvas, I’ll send out an announcement.\n\nI’m looking forward to beginning this statistical journey with everyone!"
+  },
+  {
+    "objectID": "slides/lec-0-welcome.html#notecard",
+    "href": "slides/lec-0-welcome.html#notecard",
+    "title": "Lec 0: Welcome! + Course overview",
+    "section": "Notecard",
+    "text": "Notecard\n\nWrite your name\nWhat are you excited to learn in this course?\n\nTurn this in for attendance today."
+  },
+  {
+    "objectID": "slides/lec-2-nature-data.html#reading",
+    "href": "slides/lec-2-nature-data.html#reading",
+    "title": "Lecture 2: The nature of data",
+    "section": "Reading",
+    "text": "Reading\n\nOpenIntro Statistics: Sections 2.1, 2.2"
+  },
+  {
+    "objectID": "slides/lec-2-nature-data.html#announcements",
+    "href": "slides/lec-2-nature-data.html#announcements",
+    "title": "Lecture 2: The nature of data",
+    "section": "Announcements",
+    "text": "Announcements\n\nLab today at 3:30pm. Lab 2 due this Friday at 11:59pm."
+  },
+  {
+    "objectID": "slides/lec-2-nature-data.html#interests",
+    "href": "slides/lec-2-nature-data.html#interests",
+    "title": "Lecture 2: The nature of data",
+    "section": "Interests",
+    "text": "Interests\n\npharmaceutical sciences, clinical research, genetics, epidemiology, nutrition & metabolic diseases, immunology, public health policy, neuro Oncology, occupational health, industrial toxicology (+ intersection with environmental justice), disaster resilience networks + mutual aid, real-world applications, community health research, medicaid policy, dental research, biomedical engineering, cancer therapy, air + water quality, food systems, Adverse Childhood Experiences, reproductive disorders, biomechanics, & more!"
+  },
+  {
+    "objectID": "slides/lec-2-nature-data.html#hopes",
+    "href": "slides/lec-2-nature-data.html#hopes",
+    "title": "Lecture 2: The nature of data",
+    "section": "Hopes",
+    "text": "Hopes\n\nGetting more comfortable coding in R, how can biostatistics inform understanding of health data, learning correct statistical test to use for data, understand meaning behind research results & how we get to those results, review statistics which I haven’t seen since AP Stats, making R workflow more structured + reproducible, how to analyze + interpret data accurately, & more"
+  },
+  {
+    "objectID": "slides/lec-2-nature-data.html#r-supportive-learning",
+    "href": "slides/lec-2-nature-data.html#r-supportive-learning",
+    "title": "Lecture 2: The nature of data",
+    "section": "R + supportive learning",
+    "text": "R + supportive learning\n\nR experience: Mostly never used R before! Many beginners, a few with more experience\nWhat supports learning: step-by-step examples + independent practice, hands-on coding, visuals, group work + discussion, steady pace + clear instructions\nMany shared being nervous about coding and learning statistics in general. That’s okay - we are here to support you!\nRemember you can post a question at any time on Ed Discussion. You can even post anonymously. The teaching team is here to help."
+  },
+  {
+    "objectID": "slides/lec-2-nature-data.html#review-from-last-time",
+    "href": "slides/lec-2-nature-data.html#review-from-last-time",
+    "title": "Lecture 2: The nature of data",
+    "section": "Review from last time",
+    "text": "Review from last time\n\n\n\n\n\n\nPopulations and samples\n\n\nConsider the following research questions:\n\nWhat is the average mercury content in swordfish in the Atlantic Ocean?\nOver the last five years, what is the average time to complete a degree for UNC undergrads?\nDoes a new drug reduce the number of deaths in patients with severe heart disease?\n\nIn small groups, identify the target population and what represents an individual case for each of the questions above."
+  },
+  {
+    "objectID": "slides/lec-2-nature-data.html#exploratory-data-analysis-eda",
+    "href": "slides/lec-2-nature-data.html#exploratory-data-analysis-eda",
+    "title": "Lecture 2: The nature of data",
+    "section": "Exploratory data analysis (EDA)",
+    "text": "Exploratory data analysis (EDA)\n\nInitial data analysis approach that summarizes main characteristics of dataset\nOften visual or in the form of basic summary statistics"
+  },
+  {
+    "objectID": "slides/lec-2-nature-data.html#data-visualization",
+    "href": "slides/lec-2-nature-data.html#data-visualization",
+    "title": "Lecture 2: The nature of data",
+    "section": "Data visualization",
+    "text": "Data visualization\n\nThe creation and study of the visual representation of data\nMany tools available (R is popular; many systems within R for data visualization)\nCreating visualizations helps us see patterns and identify potential data quality issues\nWe will focus on ggplot2, a component of the tidyverse\n\n\n\n\n“The simple graph has brought more information to the data analyst’s mind than any other device.” - John Tukey"
+  },
+  {
+    "objectID": "slides/lec-2-nature-data.html#ggplot2-in-tidyverse",
+    "href": "slides/lec-2-nature-data.html#ggplot2-in-tidyverse",
+    "title": "Lecture 2: The nature of data",
+    "section": "ggplot2 in tidyverse",
+    "text": "ggplot2 in tidyverse\n\n\n\nThe tidyverse is a group of R packages designed for data science\nAll tidyverse packages share an underlying design philosophy\nData visualization package in the tidyverse\nInspired by The Grammar of Graphics (Wilkinson)"
+  },
+  {
+    "objectID": "slides/lec-2-nature-data.html#what-is-a-grammar-of-graphics",
+    "href": "slides/lec-2-nature-data.html#what-is-a-grammar-of-graphics",
+    "title": "Lecture 2: The nature of data",
+    "section": "What is a Grammar of Graphics?",
+    "text": "What is a Grammar of Graphics?\n\nA system allowing for concise description of graphical components"
+  },
+  {
+    "objectID": "slides/lec-2-nature-data.html#what-is-a-grammar-of-graphics-1",
+    "href": "slides/lec-2-nature-data.html#what-is-a-grammar-of-graphics-1",
+    "title": "Lecture 2: The nature of data",
+    "section": "What is a Grammar of Graphics?",
+    "text": "What is a Grammar of Graphics?\nA statistical graphic is\n\ndata (which may be statistically summarized or transformed)\nmapped to aesthetic attributes (color, size, xy-position, etc.)\nusing geometries (points, lines, bars, etc.)\nmapped onto a specific coordinate and/or facet system"
+  },
+  {
+    "objectID": "slides/lec-2-nature-data.html#categorical-data",
+    "href": "slides/lec-2-nature-data.html#categorical-data",
+    "title": "Lecture 2: The nature of data",
+    "section": "Categorical data",
+    "text": "Categorical data\n\n\nNominal data\n\nNamed categories without numeric meaning\nEx: Only two categories: binary or dichotomous\nEx: breast cancer status, blood type, health insurance provider type, etc.\n\n\nOrdinal data\n\nOrdered categories, but differences between values not easily measured\nRelative comparisons made about differences between levels\nStage of colon cancer, Likert scale, frequency of smoking (often, sometimes, rarely, never), etc."
+  },
+  {
+    "objectID": "slides/lec-2-nature-data.html#numerical-data",
+    "href": "slides/lec-2-nature-data.html#numerical-data",
+    "title": "Lecture 2: The nature of data",
+    "section": "Numerical data",
+    "text": "Numerical data\n\n\nCount or rank data\n\nDiscrete counts. Or ranks.\nNumber of alcoholic drinks consumed in the past week, numerical rank of cancers by mortality, etc.\n\n\nContinuous data\n\nMeasurable quantities where difference between possible values can be arbitrarily small\nData may lie within a range or be unbounded\nBirth weight, BMI, ppm ozone, etc."
+  },
+  {
+    "objectID": "slides/lec-2-nature-data.html#identifying-data-types",
+    "href": "slides/lec-2-nature-data.html#identifying-data-types",
+    "title": "Lecture 2: The nature of data",
+    "section": "Identifying data types",
+    "text": "Identifying data types"
+  },
+  {
+    "objectID": "slides/lec-2-nature-data.html#identifying-data-types-1",
+    "href": "slides/lec-2-nature-data.html#identifying-data-types-1",
+    "title": "Lecture 2: The nature of data",
+    "section": "Identifying data types",
+    "text": "Identifying data types\n\n\n\n\n\n\nIn small groups, discuss the following:\n\n\nAccording to the table on the previous slide, what kind of data types are the following variables?\n\nAge\nFemale\nEducation\nHemoglobin A1c\nCurrent smoking\n\n\n\n\nUse the convention “Numerical; continuous” or “Categorical; Ordinal”, etc.\n\n\n\n−+\n04:00"
+  },
+  {
+    "objectID": "slides/lec-2-nature-data.html#complications",
+    "href": "slides/lec-2-nature-data.html#complications",
+    "title": "Lecture 2: The nature of data",
+    "section": "Complications",
+    "text": "Complications\nIn designing a study, what variable should we use for smoking exposure?\n\nBinary variable yes/no?\nOrdinal current/former/never smoker?\nDiscrete number of cigarettes smoked in past week?\nContinuous measurement of lifetime pack-years?\n\nIn the real world, decisions are made based on sample size, statistical power, likelihood of measurement error, or simply convenience (this happens a lot!)"
+  },
+  {
+    "objectID": "slides/lec-2-nature-data.html#visualizing-cdc-data",
+    "href": "slides/lec-2-nature-data.html#visualizing-cdc-data",
+    "title": "Lecture 2: The nature of data",
+    "section": "Visualizing CDC data",
+    "text": "Visualizing CDC data\nLet’s take a look at some basic visualizations using state-level data collected by the Center for Disease Control (CDC). We’ll examine the following variables:\n\nState (categorical; nominal)\nHuman Development Index (HDI) (categorical; ordinal)\n\na composite index that measures a country’s average achievements in health, knowledge, and standard of living\n\nRegion (categorical; nominal)\nAdult obesity % (numerical; continuous)\nAdequate aerobic activity % (numerical; continuous)"
+  },
+  {
+    "objectID": "slides/lec-2-nature-data.html#bar-charts",
+    "href": "slides/lec-2-nature-data.html#bar-charts",
+    "title": "Lecture 2: The nature of data",
+    "section": "Bar charts",
+    "text": "Bar charts\n\n\n\n\n\n\n\n\n\n\n\n\n\nSummarizes numerical variable by categories\nVisually depict frequency distributions for nominal or ordinal data\nBars represent either frequency or relative frequency by category\nSeparation between bars (non-continuous data)\nMay contain error bars to indicate estimate variability"
+  },
+  {
+    "objectID": "slides/lec-2-nature-data.html#box-plots",
+    "href": "slides/lec-2-nature-data.html#box-plots",
+    "title": "Lecture 2: The nature of data",
+    "section": "Box plots",
+    "text": "Box plots\n\n\n\n\n\n\n\n\n\n\n\n\n\nSummarizes numerical variable\nFive-number summary: sample minimum, 25th percentile, median, 75th percentile, sample maximum\nOutliers\nSpread and skew\n(More on all these later!)"
+  },
+  {
+    "objectID": "slides/lec-2-nature-data.html#histograms",
+    "href": "slides/lec-2-nature-data.html#histograms",
+    "title": "Lecture 2: The nature of data",
+    "section": "Histograms",
+    "text": "Histograms\n\n\n\n\n\n\n\n\n\n\n\n\n\nSummarizes numerical variable\nFrequency distribution for discrete or continuous numerical data\nOutliers\nEach bar is proportional to the frequency of the categories"
+  },
+  {
+    "objectID": "slides/lec-2-nature-data.html#line-plots",
+    "href": "slides/lec-2-nature-data.html#line-plots",
+    "title": "Lecture 2: The nature of data",
+    "section": "Line plots",
+    "text": "Line plots\n\n\n\n\n\n\n\n\n\n\n\n\n\nSummarizes numerical variable (most often used across time)\nEach value on x-axis corresponds to only one measurement on y-axis (and vice versa)\nOften used to depict change over time and connected with line.\n\n\n\n\n\n\n\n\nQuestion\n\n\nIs this plot useful?"
+  },
+  {
+    "objectID": "slides/lec-2-nature-data.html#scatterplots",
+    "href": "slides/lec-2-nature-data.html#scatterplots",
+    "title": "Lecture 2: The nature of data",
+    "section": "Scatterplots",
+    "text": "Scatterplots\n\n\n\n\n\n\n\n\n\n\n\n\n\nShows relationship between multiple continuous measurements\nYou can add color, shape, transparency, etc to further differentiate by category"
+  },
+  {
+    "objectID": "slides/lec-2-nature-data.html#some-best-practices",
+    "href": "slides/lec-2-nature-data.html#some-best-practices",
+    "title": "Lecture 2: The nature of data",
+    "section": "Some best practices",
+    "text": "Some best practices\n\nKeep it simple\nSummarize and highlight\nTell a story with the plot (use “active titles”)\nIf possible, replace text with visuals"
+  },
+  {
+    "objectID": "slides/lec-2-nature-data.html#reminder-the-population-vs.-a-sample",
+    "href": "slides/lec-2-nature-data.html#reminder-the-population-vs.-a-sample",
+    "title": "Lecture 2: The nature of data",
+    "section": "Reminder: the population vs. a sample",
+    "text": "Reminder: the population vs. a sample\n\n\nPopulation and research question: Is the PCV13 vaccine effective against community acquired pneumonia in adults aged 65 or older?\nSample: 84,496 adults 65 years of age or older recruited in a trial between September 2008 and January 2010 and 101 sites throughout the Netherlands."
+  },
+  {
+    "objectID": "slides/lec-2-nature-data.html#parameters-and-statistics",
+    "href": "slides/lec-2-nature-data.html#parameters-and-statistics",
+    "title": "Lecture 2: The nature of data",
+    "section": "Parameters and statistics",
+    "text": "Parameters and statistics\nParameters\n\nAttribute of the population of interest\nNot computable directly (unless entire population is perfectly measured)\nWritten in Greek letters (e.g. \\(\\mu\\) is often used for population mean)\n\nStatistics\n\nAttribute of a sample\nFunction of the observed values at hand\nConfusingly, both the function and the values\nWritten in Roman letters (e.g. \\(\\bar {X}\\) is often used for sample mean)"
+  },
+  {
+    "objectID": "slides/lec-2-nature-data.html#example",
+    "href": "slides/lec-2-nature-data.html#example",
+    "title": "Lecture 2: The nature of data",
+    "section": "Example",
+    "text": "Example\n\n\n\nPopulation parameter of interest: vaccine efficacy among all adults aged 65 or older\nSample statistic collected: proportion of vaccinated adults in the trial who became ill with community-acquired pneumonia"
+  },
+  {
+    "objectID": "slides/lec-2-nature-data.html#mean",
+    "href": "slides/lec-2-nature-data.html#mean",
+    "title": "Lecture 2: The nature of data",
+    "section": "Mean",
+    "text": "Mean\n\nSample mean: the arithmetic average of values in the sample:\n\n\\[\\bar{x} = \\frac{1}{n}(x_1 + \\ldots + x_n) = \\frac{1}{n} \\sum_{i=1}^n x_i\\]\n\nPopulation mean \\(\\mu\\) is calculated the same way, but would involve sum over every observation in the population (rarely possible!)\nThe sample mean is a point estimate of the population mean\nNot the exact population mean (unless lucky), but for a representative sample, it’s a pretty good guess\nAs the sample size gets larger, on average \\(\\bar{x}\\) gets closer and closer to \\(\\mu\\)"
+  },
+  {
+    "objectID": "slides/lec-2-nature-data.html#median",
+    "href": "slides/lec-2-nature-data.html#median",
+    "title": "Lecture 2: The nature of data",
+    "section": "Median",
+    "text": "Median\n\nSample median: the \\(50^{th}\\) percentile\nMiddle number of observations after being ranked in numerical order\nFor odd number observations, it is the exact middle value; otherwise, it is the arithmetic average of the middle two.\nExample: What is the median of \\(\\{3, 4, 5, 5, 7, 8, 9, 9\\}\\) ?\nMore robust to extreme values or outliers when compared to the mean."
+  },
+  {
+    "objectID": "slides/lec-2-nature-data.html#mode",
+    "href": "slides/lec-2-nature-data.html#mode",
+    "title": "Lecture 2: The nature of data",
+    "section": "Mode",
+    "text": "Mode\n\nSample mode: the most frequent value in the dataset\nThere does not only have to be one mode (we can have bimodal or trimodal or other multimodal distributions)\nExample: What is the mode of \\(\\{1, 2, 3, 4, 4, 5, 5, 5, 7, 9\\}\\)?"
+  },
+  {
+    "objectID": "slides/lec-2-nature-data.html#are-point-estimates-of-location-enough",
+    "href": "slides/lec-2-nature-data.html#are-point-estimates-of-location-enough",
+    "title": "Lecture 2: The nature of data",
+    "section": "Are point estimates of location enough?",
+    "text": "Are point estimates of location enough?"
+  },
+  {
+    "objectID": "slides/lec-2-nature-data.html#skewness",
+    "href": "slides/lec-2-nature-data.html#skewness",
+    "title": "Lecture 2: The nature of data",
+    "section": "Skewness",
+    "text": "Skewness\n\n\n\n\n\n\n\n\n\n\nSkewed distributions are not symmetric\nThey can be right or left skewed depending on which side the “tail” is on."
+  },
+  {
+    "objectID": "slides/lec-2-nature-data.html#minimum-maximum-and-range",
+    "href": "slides/lec-2-nature-data.html#minimum-maximum-and-range",
+    "title": "Lecture 2: The nature of data",
+    "section": "Minimum, maximum, and range",
+    "text": "Minimum, maximum, and range\n\nSample minimum and maximum: the smallest and largest observations in the dataset\nSample range: the difference between the sample maximum and the sample minimum"
+  },
+  {
+    "objectID": "slides/lec-2-nature-data.html#quantiles",
+    "href": "slides/lec-2-nature-data.html#quantiles",
+    "title": "Lecture 2: The nature of data",
+    "section": "Quantiles",
+    "text": "Quantiles\n\nCutpoints dividing the data into equal-sized groups (tertiles, quartiles, quintiles, percentiles, etc.)\nFirst quartile (Q1) and third quartile (Q3) cut off the bottom and top 25%, respectively\nInterquartile range (IQR): Q3-Q1; shows the width of the middle 50% of the data\nThe sample minimum, Q1, Q2 (median), Q3, and maximum are sometimes called the five number summary"
+  },
+  {
+    "objectID": "slides/lec-2-nature-data.html#outliers",
+    "href": "slides/lec-2-nature-data.html#outliers",
+    "title": "Lecture 2: The nature of data",
+    "section": "Outliers",
+    "text": "Outliers\n\nObservations numerically distant from others (definitions vary)\nStatistical methods robust to outliers (e.g. the median) can be used if outliers are problematic\nFor example: the mean of 1, 2, 3, 4, 5, 10 is 4.1667, while the median of the same set of numbers is 3.5.\nShould be noted and handled carefully! (e.g. maternal ages of 11 vs 111 in a dataset)"
+  },
+  {
+    "objectID": "slides/lec-2-nature-data.html#standard-deviation",
+    "href": "slides/lec-2-nature-data.html#standard-deviation",
+    "title": "Lecture 2: The nature of data",
+    "section": "Standard deviation",
+    "text": "Standard deviation\n\nSample standard deviation: most common measure of spread, based on deviations around the mean\n\n\\[s = \\sqrt{\\frac{1}{n-1} \\sum_{i=1}^n (x_i - \\bar{x})^2}\\]\n\nPopulation SD \\(\\sigma\\) is calculated the same way, but requires sum over everyone in the population (with \\(\\bar{x}\\) replaced by \\(\\mu\\))"
+  },
+  {
+    "objectID": "slides/lec-2-nature-data.html#standard-deviation-continued",
+    "href": "slides/lec-2-nature-data.html#standard-deviation-continued",
+    "title": "Lecture 2: The nature of data",
+    "section": "Standard deviation (continued)",
+    "text": "Standard deviation (continued)\n\nSame units as original dataset for easier interpretation\nOften used to express confidence (e.g. a margin of error for a poll being around \\(\\pm\\) 2 SD of the mean)\nSquared deviations weight larger deviations more heavily,\n\nand so also positive and negative deviations do not cancel out"
+  },
+  {
+    "objectID": "slides/lec-2-nature-data.html#variance",
+    "href": "slides/lec-2-nature-data.html#variance",
+    "title": "Lecture 2: The nature of data",
+    "section": "Variance",
+    "text": "Variance\n\nSample variance: approximately the average squared deviation from the mean\n\n\\[s^2 = \\frac{1}{n-1} \\sum_{i=1}^n(x_i - \\bar{x})^2\\]\n\nEstimate of the population variance \\(\\sigma^2\\)\nDivision by \\(n-1\\) instead of \\(n\\) is an adjustment to avoid bias in small samples\n\nDon’t worry about that right now, more details in a subsequent statistics class if interested"
+  },
+  {
+    "objectID": "slides/lec-2-nature-data.html#how-big-are-most-values",
+    "href": "slides/lec-2-nature-data.html#how-big-are-most-values",
+    "title": "Lecture 2: The nature of data",
+    "section": "How big are most values?",
+    "text": "How big are most values?\n\nFor a distribution of any shape, most of the data are within “average \\(\\pm\\) \\(k\\) SDs”\n\n\n\n\nChebyshev’s inequality\n\n\n\nChebyshev’s inequality tells us the proportion of values in the range “average \\(\\pm\\) \\(k\\) SDs” is at least \\(1-\\frac{1}{k^2}\\)"
+  },
+  {
+    "objectID": "slides/lec-2-nature-data.html#chevychevs-bounds",
+    "href": "slides/lec-2-nature-data.html#chevychevs-bounds",
+    "title": "Lecture 2: The nature of data",
+    "section": "Chevychev’s bounds",
+    "text": "Chevychev’s bounds\n\n\n\nRange\nProportion\n\n\n\n\nAverage \\(\\pm\\) 2 SDs\nat least \\(1-\\frac{1}{4}\\) = 75%\n\n\nAverage \\(\\pm\\) 3 SDs\nat least \\(1-\\frac{1}{9}\\) = 89%\n\n\nAverage \\(\\pm\\) 4 SDs\nat least \\(1-\\frac{1}{16}\\) = 94%\n\n\nAverage \\(\\pm\\) 5 SDs\nat least \\(1-\\frac{1}{25}\\) = 96%\n\n\n\n\nIf we know the exact distribution (coming soon), we can often calculate better bounds\nHowever, these bounds hold for any distribution (that has a well-defined mean and variance)"
+  },
+  {
+    "objectID": "slides/lec-2-nature-data.html#why-is-chebyshevs-inequality-useful",
+    "href": "slides/lec-2-nature-data.html#why-is-chebyshevs-inequality-useful",
+    "title": "Lecture 2: The nature of data",
+    "section": "Why is Chebyshev’s inequality useful?",
+    "text": "Why is Chebyshev’s inequality useful?\n\nYou may have heard of the “68-95-99.7” rule. (68% of your data are within 1 SD, 95% are within 2 SD, 99.7% are within 3 SD).\nHowever, this only works for bell-shaped (normal distribution) data.\nChebyshev holds for all distributions - no matter how skewed or irregular!"
+  },
+  {
+    "objectID": "slides/lec-2-nature-data.html#why-not-always-use-means-and-sds",
+    "href": "slides/lec-2-nature-data.html#why-not-always-use-means-and-sds",
+    "title": "Lecture 2: The nature of data",
+    "section": "Why not always use means and SDs?",
+    "text": "Why not always use means and SDs?\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nThese two distributions have the same mean and standard deviation, but are clearly very different!\n\nExploratory data analysis can help us visually see differences in two datasets that basic statistics (e.g. mean and sd) might not reveal"
+  },
+  {
+    "objectID": "slides/lec-2-nature-data.html#group-discussion",
+    "href": "slides/lec-2-nature-data.html#group-discussion",
+    "title": "Lecture 2: The nature of data",
+    "section": "Group discussion",
+    "text": "Group discussion\n\nGo to this paper: https://pmc.ncbi.nlm.nih.gov/articles/PMC8851219/pdf/sur.2020.429.pdf (Also linked on Canvas)\n\nExploratory data analysis of 2017 Nationwide Inpatient Sample (NIS) from the Healthcare Cost and Utilization Project (HCUP).\n\nBased on the table (pg. 593), what are the mean and median of the Total charges for emergency general surgery (EGS)? What might this mean about outliers?\nBased on the histogram (pg. 595), does the data follow a normal distribution? How do you know?\n\nWhat do the histogram and boxplot reveal that summary statistics alone might miss?\nWhich measure of center and spread are more appropriate here and why?"
+  },
+  {
+    "objectID": "slides/lec-2-nature-data.html#recap",
+    "href": "slides/lec-2-nature-data.html#recap",
+    "title": "Lecture 2: The nature of data",
+    "section": "Recap",
+    "text": "Recap\n\nExploratory data analysis: initial data analysis that summarizes key aspects of data\nTypes of data: categorical, numerical\nExamples of plots: bar charts, box plots, histograms, etc.\nPopulation vs. sample\nNumerical summary statistics: mean, median, mode\nQuantiles, outliers, standard deviation vs. variance, Chebyshev’s inequality"
+  },
+  {
+    "objectID": "slides/lec-2-nature-data.html#sneak-peek-for-lab-today",
+    "href": "slides/lec-2-nature-data.html#sneak-peek-for-lab-today",
+    "title": "Lecture 2: The nature of data",
+    "section": "Sneak peek for lab today",
+    "text": "Sneak peek for lab today\n\nFor lab today, you’ll need to install the tidyverse package. Do so with the following in your Console:\n\n\ninstall.packages(\"tidyverse\")"
+  },
+  {
+    "objectID": "slides/lec-2-nature-data.html#next-up",
+    "href": "slides/lec-2-nature-data.html#next-up",
+    "title": "Lecture 2: The nature of data",
+    "section": "Next up",
+    "text": "Next up\n\nLab today at 3:30pm\nThursday’s Class: Probability basics"
+  }
+]
