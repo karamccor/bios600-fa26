@@ -539,6 +539,13 @@
     "text": "Exercise 6\nCreate boxplots to visualize the infant mortality rate (y-axis) by region (x-axis). Include an informative title, x-axis label, and y-axis label. Comment on the relationship(s) you see."
   },
   {
+    "objectID": "labs/lab-2-data-viz.html#ai-attestation",
+    "href": "labs/lab-2-data-viz.html#ai-attestation",
+    "title": "Lab 02: Basic Data Visualization",
+    "section": "AI Attestation",
+    "text": "AI Attestation\nIf you used AI for this assignment, list your prompts below. Cite any other online resources you used. If you did not use AI for this assignment, you may simply state “I did not use AI for this assignment.”"
+  },
+  {
     "objectID": "labs/lab-2-data-viz.html#submission",
     "href": "labs/lab-2-data-viz.html#submission",
     "title": "Lab 02: Basic Data Visualization",
@@ -551,20 +558,6 @@
     "title": "Lab 02: Basic Data Visualization",
     "section": "Grading",
     "text": "Grading\n\n\n\nComponent\nPoints\n\n\n\n\nEx 1\n2\n\n\nEx 2\n3\n\n\nEx 3\n4\n\n\nEx 4\n4\n\n\nEx 5\n4\n\n\nEx 6\n4\n\n\nFormatting\n3\n\n\nTotal\n24\n\n\n\nThe “Formatting” grade is to assess the document format. This includes having a neatly organized document (no excessive output, warnings/messages when loading packages and/or data) with readable code and your name and the date updated in the YAML."
-  },
-  {
-    "objectID": "labs/lab-01-template.html",
-    "href": "labs/lab-01-template.html",
-    "title": "Lab 01",
-    "section": "",
-    "text": "This assignment is due Friday, August 21, 2025 at 11:59PM.\n\nExercise 1\nWrite your answer to Exercise 1 here.\n\n\nExercise 2\nWrite your answer to Exercise 2 here.\n\n\nExercise 3\nWrite your answer to Exercise 3 here.\n\n\nExercise 4\n\n# Use this R chunk to add your two numbers for exercise 4.\n\nRemember to Render your lab into an .html file and then save it as a .pdf in a web browser.\nImportant: You must turn in a .pdf file corresponding to the Quarto template to Gradescope in order to receive credit for the labs and homework assignments."
-  },
-  {
-    "objectID": "about.html",
-    "href": "about.html",
-    "title": "About",
-    "section": "",
-    "text": "About this site"
   },
   {
     "objectID": "index.html",
@@ -588,11 +581,18 @@
     "text": "Lab 2: Basic Data Visualization\nLecture 2: The nature of data\nLecture 3: Probability basics"
   },
   {
-    "objectID": "labs/lab-01.html",
-    "href": "labs/lab-01.html",
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "About this site"
+  },
+  {
+    "objectID": "labs/lab-01-template.html",
+    "href": "labs/lab-01-template.html",
     "title": "Lab 01",
     "section": "",
-    "text": "This assignment is due Friday, August 22, 2025 at 11:59PM.\n\nExercise 1\nWrite your answer to Exercise 1 here.\n\n\nExercise 2\nWrite your answer to Exercise 2 here.\n\n\nExercise 3\nWrite your answer to Exercise 3 here.\n\n\nExercise 4\n\n# Use this R chunk to add your two numbers for exercise 4.\n\nRemember to Render your lab into an .html file and then save it as a .pdf in a web browser.\nImportant: You must turn in a .pdf file corresponding to the Quarto template to Gradescope in order to receive credit for the labs and homework assignments."
+    "text": "This assignment is due Friday, August 21, 2025 at 11:59PM.\n\nExercise 1\nWrite your answer to Exercise 1 here.\n\n\nExercise 2\nWrite your answer to Exercise 2 here.\n\n\nExercise 3\nWrite your answer to Exercise 3 here.\n\n\nExercise 4\n\n# Use this R chunk to add your two numbers for exercise 4.\n\nRemember to Render your lab into an .html file and then save it as a .pdf in a web browser.\nImportant: You must turn in a .pdf file corresponding to the Quarto template to Gradescope in order to receive credit for the labs and homework assignments."
   },
   {
     "objectID": "labs/lab-02-template.html",
@@ -956,7 +956,7 @@
     "href": "slides/lec-2-nature-data.html#announcements",
     "title": "Lecture 2: The nature of data",
     "section": "Announcements",
-    "text": "Announcements\n\nLab today at 3:30pm. Lab 2 due this Friday at 11:59pm."
+    "text": "Announcements\n\nLab 2 today at 3:30pm. Lab 2 due this Friday at 11:59pm.\nHW 1 will be released later today. HW 1 due Tuesday 9/1 at 11:59pm."
   },
   {
     "objectID": "slides/lec-2-nature-data.html#interests",
@@ -966,6 +966,13 @@
     "text": "Interests\n\nWide range of academic interests\nPublic health, epidemiology, health policy, biology, machine learning, climate change, nutrition, exercise science, pre-med, pre-dental, food access, rural health, & many more!"
   },
   {
+    "objectID": "slides/lec-2-nature-data.html#experience-with-r",
+    "href": "slides/lec-2-nature-data.html#experience-with-r",
+    "title": "Lecture 2: The nature of data",
+    "section": "Experience with R",
+    "text": "Experience with R\nScale 1-5: 1 = minimal/no experience, 5 = solid experience\n\n51% have never used R before or have minimal experience\n27% rated themselves (2) on the scale\n~21% rated themselves 3 or 4, basic proficiency"
+  },
+  {
     "objectID": "slides/lec-2-nature-data.html#hopes",
     "href": "slides/lec-2-nature-data.html#hopes",
     "title": "Lecture 2: The nature of data",
@@ -973,11 +980,18 @@
     "text": "Hopes\n\nGetting more comfortable coding in R, data visualization/analysis\nLearning foundational skills in statistics and coding\nLearn more about how biostatistics can be applied towards public health\nPracticing communicating statistical results to a general audience"
   },
   {
-    "objectID": "slides/lec-2-nature-data.html#r-supportive-learning",
-    "href": "slides/lec-2-nature-data.html#r-supportive-learning",
+    "objectID": "slides/lec-2-nature-data.html#supplemental-resources",
+    "href": "slides/lec-2-nature-data.html#supplemental-resources",
     "title": "Lecture 2: The nature of data",
-    "section": "R + supportive learning",
-    "text": "R + supportive learning\n\nR experience: Mostly never used R before! Many beginners, a few with more experience\nWhat supports learning: step-by-step examples + independent practice, hands-on coding, visuals, group work + discussion, steady pace + clear instructions\nMany shared being nervous about coding and learning statistics in general. That’s okay - we are here to support you!\nRemember you can post a question at any time on Ed Discussion. You can even post anonymously. The teaching team is here to help."
+    "section": "Supplemental resources",
+    "text": "Supplemental resources\n\nReading sections for each lecture are in the syllabus!\nFor audio/visual learners: https://openintro.org/book/os/ &gt; Videos has short video lectures about each section in the book.\nLater today, I’ll post some online interactive R tutorials in this week’s Module."
+  },
+  {
+    "objectID": "slides/lec-2-nature-data.html#outline",
+    "href": "slides/lec-2-nature-data.html#outline",
+    "title": "Lecture 2: The nature of data",
+    "section": "Outline",
+    "text": "Outline\n\nReview from last time\nVisualizing data, using ggplot2\nTypes of data, types of plots\nBest practices for data visualization\nNumerical summary statistics, measures of uncertainty"
   },
   {
     "objectID": "slides/lec-2-nature-data.html#review-from-last-time",
@@ -1106,11 +1120,11 @@
     "text": "Some best practices\n\nKeep it simple\nSummarize and highlight\nTell a story with the plot (use “active titles”)\nIf possible, replace text with visuals. Think: Is there a succinct, effective way to visually represent the data/trend, instead of writing text about it?"
   },
   {
-    "objectID": "slides/lec-2-nature-data.html#reminder-the-population-vs.-a-sample",
-    "href": "slides/lec-2-nature-data.html#reminder-the-population-vs.-a-sample",
+    "objectID": "slides/lec-2-nature-data.html#example-pneumonia",
+    "href": "slides/lec-2-nature-data.html#example-pneumonia",
     "title": "Lecture 2: The nature of data",
-    "section": "Reminder: the population vs. a sample",
-    "text": "Reminder: the population vs. a sample\n\n\nPopulation and research question: Is the PCV13 vaccine effective against community acquired pneumonia in adults aged 65 or older?\nSample: 84,496 adults 65 years of age or older recruited in a trial between September 2008 and January 2010 and 101 sites throughout the Netherlands."
+    "section": "Example: Pneumonia",
+    "text": "Example: Pneumonia\n\n\nPopulation and research question: Is the PCV13 vaccine effective against community acquired pneumonia in adults aged 65 or older?\nSample: 84,496 adults 65 years of age or older recruited in a trial between September 2008 and January 2010 and 101 sites throughout the Netherlands."
   },
   {
     "objectID": "slides/lec-2-nature-data.html#parameters-and-statistics",
@@ -1118,6 +1132,13 @@
     "title": "Lecture 2: The nature of data",
     "section": "Parameters and statistics",
     "text": "Parameters and statistics\nParameters\n\nAttribute of the population of interest\nNot computable directly (unless entire population is perfectly measured)\nWritten in Greek letters (e.g. \\(\\mu\\) is often used for population mean)"
+  },
+  {
+    "objectID": "slides/lec-2-nature-data.html#parameters-and-statistics-continued",
+    "href": "slides/lec-2-nature-data.html#parameters-and-statistics-continued",
+    "title": "Lecture 2: The nature of data",
+    "section": "Parameters and statistics (continued)",
+    "text": "Parameters and statistics (continued)\nStatistics\n\nAttribute of a sample\nFunction of the observed values at hand\nConfusingly, both the function and the values\n\n“The sample mean” is a statistic, as a concept\nAlso, suppose the average age (i.e. sample mean) of students in this class is 22.5 years. The number “22.5 years” is a statistic.\n\nWritten in Roman letters (e.g. \\(\\bar {X}\\) is often used for sample mean)"
   },
   {
     "objectID": "slides/lec-2-nature-data.html#example",
@@ -1176,11 +1197,46 @@
     "text": "Quantiles\n\nCutpoints dividing the data into equal-sized groups (tertiles, quartiles, quintiles, percentiles, etc.)\nFirst quartile (Q1) and third quartile (Q3) cut off the bottom and top 25%, respectively\nInterquartile range (IQR): Q3-Q1; shows the width of the middle 50% of the data\nThe sample minimum, Q1, Q2 (median), Q3, and maximum are sometimes called the five number summary\nBy default, whiskers in a boxplot extend 1.5 \\(\\times\\) IQR. Points outside of this range may be considered “unusually” large/small"
   },
   {
+    "objectID": "slides/lec-2-nature-data.html#robust-statistics",
+    "href": "slides/lec-2-nature-data.html#robust-statistics",
+    "title": "Lecture 2: The nature of data",
+    "section": "Robust statistics",
+    "text": "Robust statistics\n\nThe median and IQR are called robust statistics because extreme observations have little effect on their values: moving the most extreme value generally has little effect on these statistics."
+  },
+  {
+    "objectID": "slides/lec-2-nature-data.html#practice",
+    "href": "slides/lec-2-nature-data.html#practice",
+    "title": "Lecture 2: The nature of data",
+    "section": "Practice",
+    "text": "Practice\nWhat percent of data fall between Q1 and the median? What percent is between the median and Q3?\n\n\n\n−+\n01:00"
+  },
+  {
     "objectID": "slides/lec-2-nature-data.html#outliers",
     "href": "slides/lec-2-nature-data.html#outliers",
     "title": "Lecture 2: The nature of data",
     "section": "Outliers",
     "text": "Outliers\n\nObservations numerically distant from others (definitions vary)\nStatistical methods robust to outliers (e.g. the median) can be used if outliers are problematic\nFor example: the mean of 1, 2, 3, 4, 5, 10 is 4.1667, while the median of the same set of numbers is 3.5.\nShould be noted and handled carefully! (e.g. maternal ages of 11 vs 111 in a dataset)"
+  },
+  {
+    "objectID": "slides/lec-2-nature-data.html#outliers-1",
+    "href": "slides/lec-2-nature-data.html#outliers-1",
+    "title": "Lecture 2: The nature of data",
+    "section": "Outliers",
+    "text": "Outliers\nAn outlier is an observation that appears extreme relative to the rest of the data.\nExamining data for outliers serves many useful purposes, including:\n\nIdentifying strong skew in the distribution\nIdentifying possible data collection or data entry errors\nProviding insight into interesting properties of the data"
+  },
+  {
+    "objectID": "slides/lec-2-nature-data.html#participation-practice-with-median-and-iqr",
+    "href": "slides/lec-2-nature-data.html#participation-practice-with-median-and-iqr",
+    "title": "Lecture 2: The nature of data",
+    "section": "Participation: Practice with Median and IQR",
+    "text": "Participation: Practice with Median and IQR\nDaily air quality is measured by the air quality index (AQI) reported by the Environmental Protection Agency. This index reports the pollution level and what associated health effects might be a concern. The index is calculated for five major air pollutants regulated by the Clean Air Act and takes values from 0 to 300, where a higher value indicates lower air quality. AQI was reported for a sample of 91 days in 2011 in Durham, NC. The relative frequency histogram below shows the distribution of the AQI values on these days."
+  },
+  {
+    "objectID": "slides/lec-2-nature-data.html#participation-practice-with-median-and-iqr-1",
+    "href": "slides/lec-2-nature-data.html#participation-practice-with-median-and-iqr-1",
+    "title": "Lecture 2: The nature of data",
+    "section": "Participation: Practice with Median and IQR",
+    "text": "Participation: Practice with Median and IQR\n\nFill in your answers on today’s participation assignment on Canvas.\n\n\n\n−+\n06:00"
   },
   {
     "objectID": "slides/lec-2-nature-data.html#standard-deviation",
@@ -1204,6 +1260,13 @@
     "text": "Variance\n\nSample variance: approximately the average squared deviation from the mean\n\n\\[s^2 = \\frac{1}{n-1} \\sum_{i=1}^n(x_i - \\bar{x})^2\\]\n\nEstimate of the population variance \\(\\sigma^2\\)\nDivision by \\(n-1\\) instead of \\(n\\) is an adjustment to avoid bias in small samples\n\nDon’t worry about that right now, more details in a subsequent statistics class if interested"
   },
   {
+    "objectID": "slides/lec-2-nature-data.html#spread-of-values",
+    "href": "slides/lec-2-nature-data.html#spread-of-values",
+    "title": "Lecture 2: The nature of data",
+    "section": "Spread of values",
+    "text": "Spread of values\n\nYou may have heard of the “68-95-99.7” rule. (68% of your data are within 1 SD, 95% are within 2 SD, 99.7% are within 3 SD).\nHowever, this only works for bell-shaped (normal distribution) data.\nWe have a property that holds for all distributions called the Chebyshev inequality.\nChebyshev holds for all distributions - no matter how skewed or irregular!"
+  },
+  {
     "objectID": "slides/lec-2-nature-data.html#how-big-are-most-values",
     "href": "slides/lec-2-nature-data.html#how-big-are-most-values",
     "title": "Lecture 2: The nature of data",
@@ -1218,116 +1281,11 @@
     "text": "Chevychev’s bounds\n\n\n\nRange\nProportion\n\n\n\n\nAverage \\(\\pm\\) 2 SDs\nat least \\(1-\\frac{1}{4}\\) = 75%\n\n\nAverage \\(\\pm\\) 3 SDs\nat least \\(1-\\frac{1}{9}\\) = 89%\n\n\nAverage \\(\\pm\\) 4 SDs\nat least \\(1-\\frac{1}{16}\\) = 94%\n\n\nAverage \\(\\pm\\) 5 SDs\nat least \\(1-\\frac{1}{25}\\) = 96%\n\n\n\n\nIf we know the exact distribution (coming soon), we can often calculate better bounds\nHowever, these bounds hold for any distribution (that has a well-defined mean and variance)"
   },
   {
-    "objectID": "slides/lec-2-nature-data.html#why-is-chebyshevs-inequality-useful",
-    "href": "slides/lec-2-nature-data.html#why-is-chebyshevs-inequality-useful",
-    "title": "Lecture 2: The nature of data",
-    "section": "Why is Chebyshev’s inequality useful?",
-    "text": "Why is Chebyshev’s inequality useful?\n\nYou may have heard of the “68-95-99.7” rule. (68% of your data are within 1 SD, 95% are within 2 SD, 99.7% are within 3 SD).\nHowever, this only works for bell-shaped (normal distribution) data.\nChebyshev holds for all distributions - no matter how skewed or irregular!"
-  },
-  {
     "objectID": "slides/lec-2-nature-data.html#why-not-always-use-means-and-sds",
     "href": "slides/lec-2-nature-data.html#why-not-always-use-means-and-sds",
     "title": "Lecture 2: The nature of data",
     "section": "Why not always use means and SDs?",
     "text": "Why not always use means and SDs?\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nThese two distributions have the same mean and standard deviation, but are clearly very different!\n\nExploratory data analysis can help us visually see differences in two datasets that basic statistics (e.g. mean and sd) might not reveal"
-  },
-  {
-    "objectID": "slides/lec-2-nature-data.html#group-discussion",
-    "href": "slides/lec-2-nature-data.html#group-discussion",
-    "title": "Lecture 2: The nature of data",
-    "section": "Group discussion",
-    "text": "Group discussion\n\nGo to this paper: https://pmc.ncbi.nlm.nih.gov/articles/PMC8851219/pdf/sur.2020.429.pdf (Also linked on Canvas)\n\nExploratory data analysis of 2017 Nationwide Inpatient Sample (NIS) from the Healthcare Cost and Utilization Project (HCUP).\n\nBased on the table (pg. 593), what are the mean and median of the Total charges for emergency general surgery (EGS)? What might this mean about outliers?\n\nWhich measure of center and spread are more appropriate here and why?\n\n\n\n\n\n−+\n05:00"
-  },
-  {
-    "objectID": "slides/lec-2-nature-data.html#recap",
-    "href": "slides/lec-2-nature-data.html#recap",
-    "title": "Lecture 2: The nature of data",
-    "section": "Recap",
-    "text": "Recap\n\nExploratory data analysis: initial data analysis that summarizes key aspects of data\nTypes of data: categorical, numerical\nExamples of plots: bar charts, box plots, histograms, etc.\nNumerical summary statistics: mean, median, mode\nQuantiles, outliers, standard deviation vs. variance, Chebyshev’s inequality"
-  },
-  {
-    "objectID": "slides/lec-2-nature-data.html#sneak-peek-for-lab-today",
-    "href": "slides/lec-2-nature-data.html#sneak-peek-for-lab-today",
-    "title": "Lecture 2: The nature of data",
-    "section": "Sneak peek for lab today",
-    "text": "Sneak peek for lab today\n\nFor lab today, you’ll need to install the tidyverse package. Do so with the following in your Console:\n\n\ninstall.packages(\"tidyverse\")"
-  },
-  {
-    "objectID": "slides/lec-2-nature-data.html#next-up",
-    "href": "slides/lec-2-nature-data.html#next-up",
-    "title": "Lecture 2: The nature of data",
-    "section": "Next up",
-    "text": "Next up\n\nLab today at 3:30pm\nThursday’s Class: Probability basics"
-  },
-  {
-    "objectID": "labs/lab-2-data-viz.html#ai-attestation",
-    "href": "labs/lab-2-data-viz.html#ai-attestation",
-    "title": "Lab 02: Basic Data Visualization",
-    "section": "AI Attestation",
-    "text": "AI Attestation\nIf you used AI for this assignment, list your prompts below. Cite any other online resources you used. If you did not use AI for this assignment, you may simply state “I did not use AI for this assignment.”"
-  },
-  {
-    "objectID": "slides/lec-2-nature-data.html#experience-with-r",
-    "href": "slides/lec-2-nature-data.html#experience-with-r",
-    "title": "Lecture 2: The nature of data",
-    "section": "Experience with R",
-    "text": "Experience with R\nScale 1-5: 1 = minimal/no experience, 5 = solid experience\n\n51% have never used R before or have minimal experience\n27% rated themselves (2) on the scale\n~21% rated themselves 3 or 4, basic proficiency"
-  },
-  {
-    "objectID": "slides/lec-2-nature-data.html#outline",
-    "href": "slides/lec-2-nature-data.html#outline",
-    "title": "Lecture 2: The nature of data",
-    "section": "Outline",
-    "text": "Outline\n\nReview from last time\nVisualizing data, using ggplot2\nTypes of data, types of plots\nBest practices for data visualization\nNumerical summary statistics, measures of uncertainty"
-  },
-  {
-    "objectID": "slides/lec-2-nature-data.html#parameters-and-statistics-continued",
-    "href": "slides/lec-2-nature-data.html#parameters-and-statistics-continued",
-    "title": "Lecture 2: The nature of data",
-    "section": "Parameters and statistics (continued)",
-    "text": "Parameters and statistics (continued)\nStatistics\n\nAttribute of a sample\nFunction of the observed values at hand\nConfusingly, both the function and the values\n\n“The sample mean” is a statistic, as a concept\nAlso, suppose the average age (i.e. sample mean) of students in this class is 22.5 years. The number “22.5 years” is a statistic.\n\nWritten in Roman letters (e.g. \\(\\bar {X}\\) is often used for sample mean)"
-  },
-  {
-    "objectID": "slides/lec-2-nature-data.html#exit-ticket",
-    "href": "slides/lec-2-nature-data.html#exit-ticket",
-    "title": "Lecture 2: The nature of data",
-    "section": "Exit ticket",
-    "text": "Exit ticket\nMake sure you are part of our Ed Discussion forum before you leave class today. This is where I will post class announcements."
-  },
-  {
-    "objectID": "slides/lec-2-nature-data.html#spread-of-values",
-    "href": "slides/lec-2-nature-data.html#spread-of-values",
-    "title": "Lecture 2: The nature of data",
-    "section": "Spread of values",
-    "text": "Spread of values\n\nYou may have heard of the “68-95-99.7” rule. (68% of your data are within 1 SD, 95% are within 2 SD, 99.7% are within 3 SD).\nHowever, this only works for bell-shaped (normal distribution) data.\nWe have a property that holds for all distributions called the Chebyshev inequality.\nChebyshev holds for all distributions - no matter how skewed or irregular!"
-  },
-  {
-    "objectID": "slides/lec-2-nature-data.html#prepare-for-lab-today",
-    "href": "slides/lec-2-nature-data.html#prepare-for-lab-today",
-    "title": "Lecture 2: The nature of data",
-    "section": "Prepare for lab today",
-    "text": "Prepare for lab today\n\nFor lab today, you’ll need to install the tidyverse package. Do so with the following in your Console:\n\n\ninstall.packages(\"tidyverse\")"
-  },
-  {
-    "objectID": "slides/lec-2-nature-data.html#robust-statistics",
-    "href": "slides/lec-2-nature-data.html#robust-statistics",
-    "title": "Lecture 2: The nature of data",
-    "section": "Robust statistics",
-    "text": "Robust statistics\n\nThe median and IQR are called robust statistics because extreme observations have little effect on their values: moving the most extreme value generally has little effect on these statistics."
-  },
-  {
-    "objectID": "slides/lec-2-nature-data.html#practice",
-    "href": "slides/lec-2-nature-data.html#practice",
-    "title": "Lecture 2: The nature of data",
-    "section": "Practice",
-    "text": "Practice\nWhat percent of data fall between Q1 and the median? What percent is between the median and Q3?\n\n\n\n−+\n01:00"
-  },
-  {
-    "objectID": "slides/lec-2-nature-data.html#outliers-1",
-    "href": "slides/lec-2-nature-data.html#outliers-1",
-    "title": "Lecture 2: The nature of data",
-    "section": "Outliers",
-    "text": "Outliers\nAn outlier is an observation that appears extreme relative to the rest of the data.\nExamining data for outliers serves many useful purposes, including:\n\nIdentifying strong skew in the distribution\nIdentifying possible data collection or data entry errors\nProviding insight into interesting properties of the data"
   },
   {
     "objectID": "slides/lec-2-nature-data.html#sneak-peek-data-transformations",
@@ -1337,6 +1295,13 @@
     "text": "Sneak Peek: Data Transformations\nWhen data are strongly skewed, we sometimes transform them so that they are easier to model.\nThe county dataset has data for 3142 counties in the United States."
   },
   {
+    "objectID": "slides/lec-2-nature-data.html#sneak-peek-data-transformations-1",
+    "href": "slides/lec-2-nature-data.html#sneak-peek-data-transformations-1",
+    "title": "Lecture 2: The nature of data",
+    "section": "Sneak Peek: Data Transformations",
+    "text": "Sneak Peek: Data Transformations\n\nWhat isn’t useful about this plot?"
+  },
+  {
     "objectID": "slides/lec-2-nature-data.html#log-transformed-data",
     "href": "slides/lec-2-nature-data.html#log-transformed-data",
     "title": "Lecture 2: The nature of data",
@@ -1344,24 +1309,31 @@
     "text": "Log-transformed data\n\nFor this plot, a 4 on the x-axis corresponds to the power of 10, e.g. a “4” on the x-axis corresponds to \\(10^4 = 10,000\\)."
   },
   {
-    "objectID": "slides/lec-2-nature-data.html#participation-practice-with-median-and-iqr",
-    "href": "slides/lec-2-nature-data.html#participation-practice-with-median-and-iqr",
+    "objectID": "slides/lec-2-nature-data.html#recap",
+    "href": "slides/lec-2-nature-data.html#recap",
     "title": "Lecture 2: The nature of data",
-    "section": "Participation: Practice with Median and IQR",
-    "text": "Participation: Practice with Median and IQR\nDaily air quality is measured by the air quality index (AQI) reported by the Environmental Protection Agency. This index reports the pollution level and what associated health effects might be a concern. The index is calculated for five major air pollutants regulated by the Clean Air Act and takes values from 0 to 300, where a higher value indicates lower air quality. AQI was reported for a sample of 91 days in 2011 in Durham, NC. The relative frequency histogram below shows the distribution of the AQI values on these days."
+    "section": "Recap",
+    "text": "Recap\n\nExploratory data analysis: initial data analysis that summarizes key aspects of data\nTypes of data: categorical, numerical\nExamples of plots: bar charts, box plots, histograms, etc.\nNumerical summary statistics: mean, median, mode\nQuantiles, outliers, standard deviation vs. variance, Chebyshev’s inequality"
   },
   {
-    "objectID": "slides/lec-2-nature-data.html#participation-practice-with-median-and-iqr-1",
-    "href": "slides/lec-2-nature-data.html#participation-practice-with-median-and-iqr-1",
+    "objectID": "slides/lec-2-nature-data.html#prepare-for-lab-today",
+    "href": "slides/lec-2-nature-data.html#prepare-for-lab-today",
     "title": "Lecture 2: The nature of data",
-    "section": "Participation: Practice with Median and IQR",
-    "text": "Participation: Practice with Median and IQR\n\nFill in your answers on today’s participation assignment on Canvas.\n\n\n\n−+\n06:00"
+    "section": "Prepare for lab today",
+    "text": "Prepare for lab today\n\nFor lab today, you’ll need to install the tidyverse package. Do so with the following in your Console:\n\n\ninstall.packages(\"tidyverse\")"
   },
   {
-    "objectID": "slides/lec-2-nature-data.html#sneak-peek-data-transformations-1",
-    "href": "slides/lec-2-nature-data.html#sneak-peek-data-transformations-1",
+    "objectID": "slides/lec-2-nature-data.html#next-up",
+    "href": "slides/lec-2-nature-data.html#next-up",
     "title": "Lecture 2: The nature of data",
-    "section": "Sneak Peek: Data Transformations",
-    "text": "Sneak Peek: Data Transformations\n\nWhat isn’t useful about this plot?"
+    "section": "Next up",
+    "text": "Next up\n\nLab today at 3:30pm\nThursday’s Class: Probability basics"
+  },
+  {
+    "objectID": "slides/lec-2-nature-data.html#exit-ticket",
+    "href": "slides/lec-2-nature-data.html#exit-ticket",
+    "title": "Lecture 2: The nature of data",
+    "section": "Exit ticket",
+    "text": "Exit ticket\nMake sure you are part of our Ed Discussion forum before you leave class today. This is where I will post class announcements."
   }
 ]
