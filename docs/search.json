@@ -11,14 +11,28 @@
     "href": "slides/lec-3-prob-basics.html#announcements",
     "title": "Lecture 3: Basics of probability",
     "section": "Announcements",
-    "text": "Announcements\n\nLab 2 Due Friday August 29, at 11:59pm\nHW 1 Due Tuesday, Sept 2 at 11:59pm\nLabor day this weekend - do something fun and relaxing!"
+    "text": "Announcements\n\nLab 2 Due Friday August 29, at 11:59pm\nHW 1 Due Tuesday, Sept 2 at 11:59pm\nBe sure you are in our class’ Ed Discussion forum! This is where announcements will be sent."
   },
   {
-    "objectID": "slides/lec-3-prob-basics.html#rstudio-demo",
-    "href": "slides/lec-3-prob-basics.html#rstudio-demo",
+    "objectID": "slides/lec-3-prob-basics.html#outline",
+    "href": "slides/lec-3-prob-basics.html#outline",
     "title": "Lecture 3: Basics of probability",
-    "section": "RStudio Demo",
-    "text": "RStudio Demo\n\nStarting a new Quarto document\nNew header\nNew chunk, running a chunk\nSetting message and warning to false when reading in data or loading a package.\ninstall.packages() vs. library(): Baking analogy!\nRunning code in Console vs. in your quarto document\nQuestions?"
+    "section": "Outline",
+    "text": "Outline\n\nReview from Lab 2\nFinish statistics topics from last time\nProbability basics: Probability spaces, sample spaces, events\nSet operations\nHow do probabilities work? (Set operations, DeMorgan’s Laws)"
+  },
+  {
+    "objectID": "slides/lec-3-prob-basics.html#review-from-lab-2",
+    "href": "slides/lec-3-prob-basics.html#review-from-lab-2",
+    "title": "Lecture 3: Basics of probability",
+    "section": "Review from Lab 2",
+    "text": "Review from Lab 2\n\nWhat is the benefit of setting message and warning to false when reading in data or loading a package in your Quarto document?\nWhat is the difference between install.packages() vs. library()?\n\n\n\n\n−+\n02:00"
+  },
+  {
+    "objectID": "slides/lec-3-prob-basics.html#review-from-lab-2-continued",
+    "href": "slides/lec-3-prob-basics.html#review-from-lab-2-continued",
+    "title": "Lecture 3: Basics of probability",
+    "section": "Review from Lab 2 (continued)",
+    "text": "Review from Lab 2 (continued)\n\nWhat kind of plot will be created by running the following code?\n\n\nhistogram\n\n\nscatterplot\n\n\nbarplot\n\n\n\n\nggplot(data = cdc, mapping = aes(x = Region)) + \n  geom_bar(fill = \"steelblue\")"
   },
   {
     "objectID": "slides/lec-3-prob-basics.html#whats-the-use-of-probability",
@@ -95,7 +109,7 @@
     "href": "slides/lec-3-prob-basics.html#probabilities-1",
     "title": "Lecture 3: Basics of probability",
     "section": "Probabilities",
-    "text": "Probabilities\nA number describing the likelihood of each event’s occurrence. This maps events to a number between 0 and 1, inclusive:\n\nTossing a single fair coin\n\nA head \\(\\rightarrow\\) 0.5\n\nTossing two fair coins\n\nAt least one head \\(\\rightarrow\\) 0.75\n\nSum of rolling two fair six-sided dice\n\nAn odd number \\(\\rightarrow\\) 0.5\n\nSurvival (years) after cancer diagnosis\n\ngreater than one year \\(\\rightarrow\\) …difficult"
+    "text": "Probabilities\nA number describing the likelihood of each event’s occurrence. This maps events to a number between 0 and 1, inclusive:\n\nTossing a single fair coin\n\nP(A head) \\(\\rightarrow\\) 0.5\n\nTossing two fair coins\n\nP(At least one head) \\(\\rightarrow\\) 0.75\n\nSum of rolling two fair six-sided dice\n\nP(An odd number) \\(\\rightarrow\\) 0.5\n\nSurvival (years) after cancer diagnosis\n\nP(greater than one year) \\(\\rightarrow\\) …difficult"
   },
   {
     "objectID": "slides/lec-3-prob-basics.html#how-did-we-come-up-with-those-answers",
@@ -117,6 +131,20 @@
     "title": "Lecture 3: Basics of probability",
     "section": "Set operations",
     "text": "Set operations\nSets can be related to each other in different ways. For two sets (or events) \\(A\\) and \\(B\\), the most common relationships are:\n\nIntersection (\\(A \\cap B\\)): \\(A\\) and \\(B\\) both occur\nUnion (\\(A \\cup B\\)): \\(A\\) or \\(B\\) occur (including when both occur)\nComplement (\\(A^C\\)): \\(A\\) does not occur\nDifference (\\(A \\backslash B\\)): \\(A\\) occurs, but \\(B\\) does not occur; equivalent to (\\(A \\cap B^C\\)) (why?)\n\nTwo sets \\(A\\) and \\(B\\) are said to be disjoint if \\(A \\cap B = \\emptyset\\)"
+  },
+  {
+    "objectID": "slides/lec-3-prob-basics.html#probability-distribution",
+    "href": "slides/lec-3-prob-basics.html#probability-distribution",
+    "title": "Lecture 3: Basics of probability",
+    "section": "Probability distribution",
+    "text": "Probability distribution\nA probability distribution is a table of all disjoint outcomes and their associated probabilities."
+  },
+  {
+    "objectID": "slides/lec-3-prob-basics.html#practice",
+    "href": "slides/lec-3-prob-basics.html#practice",
+    "title": "Lecture 3: Basics of probability",
+    "section": "Practice",
+    "text": "Practice\nLet \\(A\\) represent the event where we roll two dice and their total is less than 12.\n\nWhat does the event \\(A^C\\) represent?\nDetermine \\(P(A^C)\\)."
   },
   {
     "objectID": "slides/lec-3-prob-basics.html#those-other-events",
@@ -144,7 +172,7 @@
     "href": "slides/lec-3-prob-basics.html#demorgans-laws",
     "title": "Lecture 3: Basics of probability",
     "section": "DeMorgan’s laws",
-    "text": "DeMorgan’s laws\n\n\nComplement of union: \\((A\\cup B)^C = A^C \\cap B^C\\)\nComplement of intersection: \\((A\\cap B)^C = A^C \\cup B^C\\)\n\n\n\n\n\n\n\nQuestions\n\n\nHow do we interpret these in plain English?\nHow do we extend DeMorgan’s laws to more than two events?"
+    "text": "DeMorgan’s laws\n\n\nComplement of union: \\((A\\cup B)^C = A^C \\cap B^C\\)\nComplement of intersection: \\((A\\cap B)^C = A^C \\cup B^C\\)\n\n\n\n\n\n\n\nQuestions\n\n\nHow do we interpret these in plain English?"
   },
   {
     "objectID": "slides/lec-3-prob-basics.html#gunter-et-al.-study-2017",
@@ -161,11 +189,11 @@
     "text": "Recap\n\nProbabilities come up all the time!\nBayesian vs. frequentist approaches\nProbability spaces, sample spaces, events\nSet operations\nHow do probabilities work? (Set operations, DeMorgan’s Laws)"
   },
   {
-    "objectID": "slides/lec-3-prob-basics.html#participation",
-    "href": "slides/lec-3-prob-basics.html#participation",
+    "objectID": "slides/lec-3-prob-basics.html#participation-notecard",
+    "href": "slides/lec-3-prob-basics.html#participation-notecard",
     "title": "Lecture 3: Basics of probability",
-    "section": "Participation",
-    "text": "Participation\n\nName +\n\nHow was class today? OR\nArtistic rendition of how class was today / something you learned today"
+    "section": "Participation: notecard",
+    "text": "Participation: notecard\n\nName +\n\nHow was class today?"
   },
   {
     "objectID": "slides/lec-1-whats-stat-inf.html#download-or-print-notes-to-pdf",
@@ -564,7 +592,7 @@
     "href": "index.html",
     "title": "BIOS 600 Fall 2026",
     "section": "",
-    "text": "Lecture 0: Welcome to BIOS 600!\nLab 1: Introducing the Toolkit\nLecture 1: What is statistical inference?\n\n\n\nLab 2: Basic Data Visualization\nLecture 2: The nature of data\nLecture 3: Probability basics"
+    "text": "Lecture 0: Welcome to BIOS 600!\nLab 1: Introducing the Toolkit\nLecture 1: What is statistical inference?\n\n\n\nLab 2: Basic Data Visualization\nLecture 2: The nature of data\nLecture 3: Probability basics\nHW 1"
   },
   {
     "objectID": "index.html#week-1",
@@ -578,7 +606,7 @@
     "href": "index.html#week-2",
     "title": "BIOS 600 Fall 2026",
     "section": "",
-    "text": "Lab 2: Basic Data Visualization\nLecture 2: The nature of data\nLecture 3: Probability basics"
+    "text": "Lab 2: Basic Data Visualization\nLecture 2: The nature of data\nLecture 3: Probability basics\nHW 1"
   },
   {
     "objectID": "about.html",
@@ -586,6 +614,111 @@
     "title": "About",
     "section": "",
     "text": "About this site"
+  },
+  {
+    "objectID": "hw/hw-01.html",
+    "href": "hw/hw-01.html",
+    "title": "HW 01",
+    "section": "",
+    "text": "Important\n\n\n\nThis homework is due on Tuesday, September 1 at 11:59pm. To be considered on time, the following must be done by the due date:\n\nFinal .pdf file submitted on Gradescope\n\nBe sure to assign questions to pages when you turn in your assignment on Gradescope. A .5 point deduction will be made any time the question is not assigned to a page within your PDF."
+  },
+  {
+    "objectID": "hw/hw-01.html#starting-a-new-quarto-file",
+    "href": "hw/hw-01.html#starting-a-new-quarto-file",
+    "title": "HW 01",
+    "section": "Starting a new Quarto file",
+    "text": "Starting a new Quarto file\nFor this assignment (and all future assignments) you will begin a new Quarto file. To do this, open RStudio and make sure you are inside your course project folder with File &gt; Open Project &gt; …. To create a new Quarto file, go to the top menu and click File &gt; New File &gt; Quarto Document. A pop-up will appear asking for a title, author, and format. You may leave these as the default options for now. Click OK and a new file will open.\nIn the document, Quarto automatically adds some starter text and code chunks. You may delete everything below the YAML header (everything under the second set of ---). You should be left with just a YAML section at the very top, which looks something like this:\n\n---\ntitle: \"Document Title\"\nauthor: \"Your Name\"\ndate: \"2025-08-26\"\nformat: html\n---\n\nNow, Edit the YAML header. Change\n\ntitle -&gt; the assignment name (e.g. HW 1)\nauthor -&gt; your name\ndate -&gt; today’s date\n\nNow, save your file. Go to File &gt; Save as, and name it something clear like hw1.qmd. Keep it in your project folder. You’re ready to begin!"
+  },
+  {
+    "objectID": "hw/hw-01.html#dementia-and-eating-behaviors",
+    "href": "hw/hw-01.html#dementia-and-eating-behaviors",
+    "title": "HW 01",
+    "section": "Dementia and eating behaviors",
+    "text": "Dementia and eating behaviors\nUse the following study to answer Exercises 1-4.\nAhmed et al. (JAMA Neurology, 2016) conducted a study examining disturbances in eating behaviors among patients with dementia. Patients without dementia, with Alzheimer disease (AD), with semantic dementia, and with behavioral-variant frontal temporal dementia (bvFTD) were offered a breakfast buffet and left alone for 30 minutes to eat. After completion, the total caloric intake of each patient was measured. Boxplots summarizing the distributions of calories consumed across the patient types are displayed below."
+  },
+  {
+    "objectID": "hw/hw-01.html#exercise-1",
+    "href": "hw/hw-01.html#exercise-1",
+    "title": "HW 01",
+    "section": "Exercise 1",
+    "text": "Exercise 1\n\nWas this an observational study or an experimental study? Explain.\nDo you expect the distribution of caloric intake among bvFTD patients to be left-skewed, right-skewed, or symmetric? Why?\nDescribe what it means for this specific study to be reproducible and replicable."
+  },
+  {
+    "objectID": "hw/hw-01.html#exercise-2",
+    "href": "hw/hw-01.html#exercise-2",
+    "title": "HW 01",
+    "section": "Exercise 2",
+    "text": "Exercise 2\nWhat type of data are the following variables in the study? Be specific, e.g., “categorical ordinal” or “numeric discrete”, etc.\n\nType of dementia (AD/SD/bvFTD/None)\nTotal caloric intake\n% of calories from sugar\nDisease duration\nFrontal Rating Scale (mild/moderate/severe)"
+  },
+  {
+    "objectID": "hw/hw-01.html#exercise-3",
+    "href": "hw/hw-01.html#exercise-3",
+    "title": "HW 01",
+    "section": "Exercise 3",
+    "text": "Exercise 3\n\nDescribe an appropriate visualization that summarizes the % of calories from sugar at the breakfast buffet to the Frontal Rating Scale of the study participants.\nDescribe an appropriate visualization that summarizes the total caloric intake at the breakfast buffet, disease duration in years, and type of dementia among these study participants."
+  },
+  {
+    "objectID": "hw/hw-01.html#exercise-4",
+    "href": "hw/hw-01.html#exercise-4",
+    "title": "HW 01",
+    "section": "Exercise 4",
+    "text": "Exercise 4\n\nThe authors state that they uncovered “elevated total caloric intake…in patients with bvFTD, supporting its diagnostic value for this disease….” Is this is a reasonable statement to make from the data visualization? Explain why or why not.\nSuppose the authors wanted to “tell a story” with the title to their visualization. Suggest a more effective title than the one presented."
+  },
+  {
+    "objectID": "hw/hw-01.html#covid-19-vaccine-dataset",
+    "href": "hw/hw-01.html#covid-19-vaccine-dataset",
+    "title": "HW 01",
+    "section": "Covid-19 vaccine dataset",
+    "text": "Covid-19 vaccine dataset\nUse the following paper/table to answer Exercise 5.\nZhu et al. (The Lancet, 2020) conducted the first randomized trial of a recombinant adenovirus COVID-19 vaccine in healthy adults, with the aim of determining an appropriate dose for a larger efficacy study. They had three treatment arms: placebo, low dose (5 × 1010 virus particles), and high dose (1 × 1011 virus particles). The following table depicts the baseline characteristics of their study population:"
+  },
+  {
+    "objectID": "hw/hw-01.html#exercise-5",
+    "href": "hw/hw-01.html#exercise-5",
+    "title": "HW 01",
+    "section": "Exercise 5",
+    "text": "Exercise 5\nCalculate the following probabilities. It’s ok to express answers as unsimplified fractions). If the probabilities cannot be determined, please state so and what additional information is needed to calculate the quantity of interest. Provide a 1 sentence explanation about how you calculated each value based on the table.\nWhat is the probability that a randomly selected patient in the trial …\n\n… was assigned to placebo?\n… was assigned to placebo or was male?\n… was assigned to placebo and was male?\n… was not assigned to high dose vaccine and had no underlying diseases?\n… was female or had underlying diseases?\n… was female or was not assigned to either vaccine dose?\n… was aged 18 - 44, given that they were assigned to high dose vaccine?\n… was not assigned placebo, given that they were aged 45-54?"
+  },
+  {
+    "objectID": "hw/hw-01.html#socioeconomic-factors-and-visual-impairment",
+    "href": "hw/hw-01.html#socioeconomic-factors-and-visual-impairment",
+    "title": "HW 01",
+    "section": "Socioeconomic factors and visual impairment",
+    "text": "Socioeconomic factors and visual impairment\nUse the following paper and figure to answer Exercises 6 and 7.\nWang et al. (JAMA Opthamology, 2017) examined the association of socioeconomic factors with prevalence of visual impairment and blindness. The following scatterplot depicts the relationship between Human Development Index (HDI) and the age-standardized prevalence of moderate to severe visual impairment (MSVI). The countries highlighted in orange are the 5 countries with the largest number of blind people."
+  },
+  {
+    "objectID": "hw/hw-01.html#exercise-6",
+    "href": "hw/hw-01.html#exercise-6",
+    "title": "HW 01",
+    "section": "Exercise 6",
+    "text": "Exercise 6\n\nIn general, are higher or lower HDIs associated with higher prevalence of MSVI?\nAmong China, India, Pakistan, Nigeria, and Indonesia, which has the lowest HDI?"
+  },
+  {
+    "objectID": "hw/hw-01.html#exercise-7",
+    "href": "hw/hw-01.html#exercise-7",
+    "title": "HW 01",
+    "section": "Exercise 7",
+    "text": "Exercise 7\n\nDoes India have higher or lower prevalence of MSVI than might be expected given its HDI?\nIn their conclusion, the authors state “Burden of visual impairment and socioeconomic indicators were closely associated and may help to identify countries requiring greater attention to these issues.” Do you think this is a reasonable statement to make from the scatterplot? Why or why not?"
+  },
+  {
+    "objectID": "hw/hw-01.html#ai-attestation",
+    "href": "hw/hw-01.html#ai-attestation",
+    "title": "HW 01",
+    "section": "AI Attestation",
+    "text": "AI Attestation\nIf you used AI for this assignment, list your prompts below. Cite any other online resources you used. If you did not use AI for this assignment, you may simply state “I did not use AI for this assignment.”"
+  },
+  {
+    "objectID": "hw/hw-01.html#submission",
+    "href": "hw/hw-01.html#submission",
+    "title": "HW 01",
+    "section": "Submission",
+    "text": "Submission\nAs you’ve seen previously, we can Render into an .html file that can be opened by any web browser. To export it as a .pdf, open the file in your web browser and then print to or save as a .pdf document. Contact your TAs in Ed Discussion if you need help!\nYou will submit the PDF documents for labs and homework to Gradescope as part of your final submission.\nTo submit your assignment:\n\nAccess Gradescope through the menu on the BIOS 600 Canvas site.\nClick on the assignment, and you’ll be prompted to submit it.\nMark the pages associated with each exercise. All of the pages of your lab should be associated with at least one question (i.e., should be “checked”).\nSelect the first page of your .PDF submission to be associated with the “Formatting” section."
+  },
+  {
+    "objectID": "hw/hw-01.html#grading",
+    "href": "hw/hw-01.html#grading",
+    "title": "HW 01",
+    "section": "Grading",
+    "text": "Grading\n\n\n\nComponent\nPoints\n\n\n\n\nEx 1\n3\n\n\nEx 2\n3\n\n\nEx 3\n2\n\n\nEx 4\n2\n\n\nEx 5\n4\n\n\nEx 6\n2\n\n\nEx 7\n2\n\n\nFormatting\n3\n\n\n\nThe “Formatting” grade is to assess the document format. This includes having a neatly organized document (no excessive output, warnings/messages when loading packages and/or data) with readable code and your name and the date updated in the YAML."
   },
   {
     "objectID": "labs/lab-01-template.html",

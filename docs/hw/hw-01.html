@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>BIOS 600 Fall 2026</title>
+<title>HW 01 – BIOS 600 Fall 2026</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,27 +20,62 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<script src="site_libs/quarto-html/quarto.js" type="module"></script>
-<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="site_libs/quarto-html/axe/axe-check.js" type="module"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-ed96de9b727972fe78a7b5d16c58bf87.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-e31584831b205ffbb2d98406f31c2a5b.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-ed96de9b727972fe78a7b5d16c58bf87.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-e31584831b205ffbb2d98406f31c2a5b.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -70,7 +105,7 @@ ul.task-list li input[type="checkbox"] {
 }</script>
 
 
-<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="../styles.css">
 </head>
 
 <body class="nav-fixed quarto-light">
@@ -80,7 +115,7 @@ ul.task-list li input[type="checkbox"] {
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="./index.html">
+    <a class="navbar-brand" href="../index.html">
     <span class="navbar-title">BIOS 600 Fall 2026</span>
     </a>
   </div>
@@ -91,11 +126,11 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link active" href="./index.html" aria-current="page"> 
+    <a class="nav-link" href="../index.html"> 
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./about.html"> 
+    <a class="nav-link" href="../about.html"> 
 <span class="menu-text">About</span></a>
   </li>  
 </ul>
@@ -114,11 +149,20 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#schedule" id="toc-schedule" class="nav-link active" data-scroll-target="#schedule">Schedule</a>
-  <ul class="collapse">
-  <li><a href="#week-1" id="toc-week-1" class="nav-link" data-scroll-target="#week-1">Week 1</a></li>
-  <li><a href="#week-2" id="toc-week-2" class="nav-link" data-scroll-target="#week-2">Week 2</a></li>
-  </ul></li>
+  <li><a href="#starting-a-new-quarto-file" id="toc-starting-a-new-quarto-file" class="nav-link active" data-scroll-target="#starting-a-new-quarto-file">Starting a new Quarto file</a></li>
+  <li><a href="#dementia-and-eating-behaviors" id="toc-dementia-and-eating-behaviors" class="nav-link" data-scroll-target="#dementia-and-eating-behaviors">Dementia and eating behaviors</a></li>
+  <li><a href="#exercise-1" id="toc-exercise-1" class="nav-link" data-scroll-target="#exercise-1">Exercise 1</a></li>
+  <li><a href="#exercise-2" id="toc-exercise-2" class="nav-link" data-scroll-target="#exercise-2">Exercise 2</a></li>
+  <li><a href="#exercise-3" id="toc-exercise-3" class="nav-link" data-scroll-target="#exercise-3">Exercise 3</a></li>
+  <li><a href="#exercise-4" id="toc-exercise-4" class="nav-link" data-scroll-target="#exercise-4">Exercise 4</a></li>
+  <li><a href="#covid-19-vaccine-dataset" id="toc-covid-19-vaccine-dataset" class="nav-link" data-scroll-target="#covid-19-vaccine-dataset">Covid-19 vaccine dataset</a></li>
+  <li><a href="#exercise-5" id="toc-exercise-5" class="nav-link" data-scroll-target="#exercise-5">Exercise 5</a></li>
+  <li><a href="#socioeconomic-factors-and-visual-impairment" id="toc-socioeconomic-factors-and-visual-impairment" class="nav-link" data-scroll-target="#socioeconomic-factors-and-visual-impairment">Socioeconomic factors and visual impairment</a></li>
+  <li><a href="#exercise-6" id="toc-exercise-6" class="nav-link" data-scroll-target="#exercise-6">Exercise 6</a></li>
+  <li><a href="#exercise-7" id="toc-exercise-7" class="nav-link" data-scroll-target="#exercise-7">Exercise 7</a></li>
+  <li><a href="#ai-attestation" id="toc-ai-attestation" class="nav-link" data-scroll-target="#ai-attestation">AI Attestation</a></li>
+  <li><a href="#submission" id="toc-submission" class="nav-link" data-scroll-target="#submission">Submission</a></li>
+  <li><a href="#grading" id="toc-grading" class="nav-link" data-scroll-target="#grading">Grading</a></li>
   </ul>
 </nav>
     </div>
@@ -127,7 +171,8 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">BIOS 600 Fall 2026</h1>
+<h1 class="title">HW 01</h1>
+<p class="subtitle lead">Lectures 01-03</p>
 </div>
 
 
@@ -144,23 +189,186 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="schedule" class="level1">
-<h1>Schedule</h1>
-<section id="week-1" class="level2">
-<h2 class="anchored" data-anchor-id="week-1">Week 1</h2>
-<p><a href="slides/lec-0-welcome.html">Lecture 0: Welcome to BIOS 600!</a></p>
-<p><a href="labs/lab-1.html">Lab 1: Introducing the Toolkit</a></p>
-<p><a href="slides/lec-1-whats-stat-inf.html">Lecture 1: What is statistical inference?</a></p>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Important
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>This homework is due on Tuesday, September 1 at 11:59pm. To be considered on time, the following must be done by the due date:</p>
+<ul>
+<li>Final <code>.pdf</code> file submitted on Gradescope</li>
+</ul>
+<p>Be sure to <strong>assign questions to pages</strong> when you turn in your assignment on Gradescope. A .5 point deduction will be made any time the question is not assigned to a page within your PDF.</p>
+</div>
+</div>
+<section id="starting-a-new-quarto-file" class="level2">
+<h2 class="anchored" data-anchor-id="starting-a-new-quarto-file">Starting a new Quarto file</h2>
+<p>For this assignment (and all future assignments) you will begin a new Quarto file. To do this, open RStudio and make sure you are inside your course project folder with File &gt; Open Project &gt; …. To create a new Quarto file, go to the top menu and click File &gt; New File &gt; Quarto Document. A pop-up will appear asking for a title, author, and format. You may leave these as the default options for now. Click OK and a new file will open.</p>
+<p>In the document, Quarto automatically adds some starter text and code chunks. You may delete everything below the YAML header (everything under the second set of <code>---</code>). You should be left with just a YAML section at the very top, which looks something like this:</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="sc">---</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>title<span class="sc">:</span> <span class="st">"Document Title"</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>author<span class="sc">:</span> <span class="st">"Your Name"</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>date<span class="sc">:</span> <span class="st">"2025-08-26"</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>format<span class="sc">:</span> html</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="sc">---</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<p>Now, Edit the YAML header. Change</p>
+<ul>
+<li><p>title -&gt; the assignment name (e.g.&nbsp;<code>HW 1</code>)</p></li>
+<li><p>author -&gt; your name</p></li>
+<li><p>date -&gt; today’s date</p></li>
+</ul>
+<p>Now, save your file. Go to File &gt; Save as, and name it something clear like <code>hw1.qmd</code>. Keep it in your project folder. You’re ready to begin!</p>
 </section>
-<section id="week-2" class="level2">
-<h2 class="anchored" data-anchor-id="week-2">Week 2</h2>
-<p><a href="labs/lab-2-data-viz.html">Lab 2: Basic Data Visualization</a></p>
-<p><a href="slides/lec-2-nature-data.html">Lecture 2: The nature of data</a></p>
-<p><a href="slides/lec-3-prob-basics.html">Lecture 3: Probability basics</a></p>
-<p><a href="hw/hw-1.html">HW 1</a></p>
+<section id="dementia-and-eating-behaviors" class="level2">
+<h2 class="anchored" data-anchor-id="dementia-and-eating-behaviors">Dementia and eating behaviors</h2>
+<p>Use the following study to answer Exercises 1-4.</p>
+<p>Ahmed et al.&nbsp;(<em>JAMA Neurology</em>, 2016) conducted a study examining disturbances in eating behaviors among patients with dementia. Patients without dementia, with Alzheimer disease (AD), with semantic dementia, and with behavioral-variant frontal temporal dementia (bvFTD) were offered a breakfast buffet and left alone for 30 minutes to eat. After completion, the total caloric intake of each patient was measured. Boxplots summarizing the distributions of calories consumed across the patient types are displayed below.</p>
+<p><img src="images/hw-1/calorie.png" class="img-fluid"></p>
+</section>
+<section id="exercise-1" class="level2">
+<h2 class="anchored" data-anchor-id="exercise-1">Exercise 1</h2>
+<ol type="a">
+<li><p>Was this an observational study or an experimental study? Explain.</p></li>
+<li><p>Do you expect the distribution of caloric intake among bvFTD patients to be left-skewed, right-skewed, or symmetric? Why?</p></li>
+<li><p>Describe what it means for <strong>this specific study</strong> to be reproducible and replicable.</p></li>
+</ol>
+</section>
+<section id="exercise-2" class="level2">
+<h2 class="anchored" data-anchor-id="exercise-2">Exercise 2</h2>
+<p>What type of data are the following variables in the study? Be specific, e.g., “categorical ordinal” or “numeric discrete”, etc.</p>
+<ul>
+<li>Type of dementia (AD/SD/bvFTD/None)</li>
+<li>Total caloric intake</li>
+<li>% of calories from sugar</li>
+<li>Disease duration</li>
+<li>Frontal Rating Scale (mild/moderate/severe)</li>
+</ul>
+</section>
+<section id="exercise-3" class="level2">
+<h2 class="anchored" data-anchor-id="exercise-3">Exercise 3</h2>
+<ol type="a">
+<li><p>Describe an appropriate visualization that summarizes the % of calories from sugar at the breakfast buffet to the Frontal Rating Scale of the study participants.</p></li>
+<li><p>Describe an appropriate visualization that summarizes the total caloric intake at the breakfast buffet, disease duration in years, and type of dementia among these study participants.</p></li>
+</ol>
+</section>
+<section id="exercise-4" class="level2">
+<h2 class="anchored" data-anchor-id="exercise-4">Exercise 4</h2>
+<ol type="a">
+<li><p>The authors state that they uncovered “<em>elevated total caloric intake…in patients with bvFTD, supporting its diagnostic value for this disease….</em>” Is this is a reasonable statement to make from the data visualization? Explain why or why not.</p></li>
+<li><p>Suppose the authors wanted to “tell a story” with the title to their visualization. Suggest a more effective title than the one presented.</p></li>
+</ol>
+</section>
+<section id="covid-19-vaccine-dataset" class="level2">
+<h2 class="anchored" data-anchor-id="covid-19-vaccine-dataset">Covid-19 vaccine dataset</h2>
+<p>Use the following paper/table to answer Exercise 5.</p>
+<p>Zhu et al.&nbsp;(<em>The Lancet</em>, 2020) conducted the first randomized trial of a recombinant adenovirus COVID-19 vaccine in healthy adults, with the aim of determining an appropriate dose for a larger efficacy study. They had three treatment arms: placebo, low dose (5 × 1010 virus particles), and high dose (1 × 1011 virus particles). The following table depicts the baseline characteristics of their study population:</p>
+<p><img src="images/hw-1/tab1.png" class="img-fluid"></p>
+</section>
+<section id="exercise-5" class="level2">
+<h2 class="anchored" data-anchor-id="exercise-5">Exercise 5</h2>
+<p>Calculate the following probabilities. It’s ok to express answers as unsimplified fractions). If the probabilities cannot be determined, please state so and what additional information is needed to calculate the quantity of interest. Provide a 1 sentence explanation about how you calculated each value based on the table.</p>
+<p>What is the probability that a randomly selected patient in the trial …</p>
+<ol type="a">
+<li><p>… was assigned to placebo?</p></li>
+<li><p>… was assigned to placebo or was male?</p></li>
+<li><p>… was assigned to placebo and was male?</p></li>
+<li><p>… was not assigned to high dose vaccine and had no underlying diseases?</p></li>
+<li><p>… was female or had underlying diseases?</p></li>
+<li><p>… was female or was not assigned to either vaccine dose?</p></li>
+<li><p>… was aged 18 - 44, given that they were assigned to high dose vaccine?</p></li>
+<li><p>… was not assigned placebo, given that they were aged 45-54?</p></li>
+</ol>
+</section>
+<section id="socioeconomic-factors-and-visual-impairment" class="level2">
+<h2 class="anchored" data-anchor-id="socioeconomic-factors-and-visual-impairment">Socioeconomic factors and visual impairment</h2>
+<p>Use the following paper and figure to answer Exercises 6 and 7.</p>
+<p>Wang et al.&nbsp;(<em>JAMA Opthamology</em>, 2017) examined the association of socioeconomic factors with prevalence of visual impairment and blindness. The following scatterplot depicts the relationship between Human Development Index (HDI) and the age-standardized prevalence of moderate to severe visual impairment (MSVI). The countries highlighted in orange are the 5 countries with the largest number of blind people.</p>
+<p><img src="images/hw-1/hdi.png" class="img-fluid"></p>
+</section>
+<section id="exercise-6" class="level2">
+<h2 class="anchored" data-anchor-id="exercise-6">Exercise 6</h2>
+<ol type="a">
+<li><p>In general, are higher or lower HDIs associated with higher prevalence of MSVI?</p></li>
+<li><p>Among China, India, Pakistan, Nigeria, and Indonesia, which has the lowest HDI?</p></li>
+</ol>
+</section>
+<section id="exercise-7" class="level2">
+<h2 class="anchored" data-anchor-id="exercise-7">Exercise 7</h2>
+<ol type="a">
+<li><p>Does India have higher or lower prevalence of MSVI than might be expected given its HDI?</p></li>
+<li><p>In their conclusion, the authors state “Burden of visual impairment and socioeconomic indicators were closely associated and may help to identify countries requiring greater attention to these issues.” Do you think this is a reasonable statement to make from the scatterplot? Why or why not?</p></li>
+</ol>
+</section>
+<section id="ai-attestation" class="level2">
+<h2 class="anchored" data-anchor-id="ai-attestation">AI Attestation</h2>
+<p>If you used AI for this assignment, list your prompts below. Cite any other online resources you used. If you did not use AI for this assignment, you may simply state “I did not use AI for this assignment.”</p>
+</section>
+<section id="submission" class="level2">
+<h2 class="anchored" data-anchor-id="submission">Submission</h2>
+<p>As you’ve seen previously, we can <strong>Render</strong> into an .html file that can be opened by any web browser. To export it as a .pdf, open the file in your web browser and then print to or save as a .pdf document. Contact your TAs in Ed Discussion if you need help!</p>
+<p>You will submit the PDF documents for labs and homework to Gradescope as part of your final submission.</p>
+<p>To submit your assignment:</p>
+<ul>
+<li><p>Access Gradescope through the menu on the BIOS 600 Canvas site.</p></li>
+<li><p>Click on the assignment, and you’ll be prompted to submit it.</p></li>
+<li><p>Mark the pages associated with each exercise. All of the pages of your lab should be associated with at least one question (i.e., should be “checked”).</p></li>
+<li><p>Select the first page of your .PDF submission to be associated with the “Formatting” section.</p></li>
+</ul>
+</section>
+<section id="grading" class="level2">
+<h2 class="anchored" data-anchor-id="grading">Grading</h2>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Component</th>
+<th>Points</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Ex 1</td>
+<td>3</td>
+</tr>
+<tr class="even">
+<td>Ex 2</td>
+<td>3</td>
+</tr>
+<tr class="odd">
+<td>Ex 3</td>
+<td>2</td>
+</tr>
+<tr class="even">
+<td>Ex 4</td>
+<td>2</td>
+</tr>
+<tr class="odd">
+<td>Ex 5</td>
+<td>4</td>
+</tr>
+<tr class="even">
+<td>Ex 6</td>
+<td>2</td>
+</tr>
+<tr class="odd">
+<td>Ex 7</td>
+<td>2</td>
+</tr>
+<tr class="even">
+<td>Formatting</td>
+<td>3</td>
+</tr>
+</tbody>
+</table>
+<p>The “Formatting” grade is to assess the document format. This includes having a neatly organized document (no excessive output, warnings/messages when loading packages and/or data) with readable code and your name and the date updated in the YAML.</p>
 
 
-</section>
 </section>
 
 </main> <!-- /main -->
