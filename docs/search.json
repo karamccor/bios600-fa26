@@ -11,14 +11,14 @@
     "href": "slides/lec-3-prob-basics.html#announcements",
     "title": "Lecture 3: Basics of probability",
     "section": "Announcements",
-    "text": "Announcements\n\nLab 2 Due Friday August 29, at 11:59pm\nHW 1 Due Tuesday, Sept 2 at 11:59pm\nBe sure you are in our class’ Ed Discussion forum! This is where announcements will be sent."
+    "text": "Announcements\n\nLab 2 Due Friday August 28, at 11:59pm\nHW 1 Due Tuesday, Sept 1 at 11:59pm\nBe sure you are in our class’ Ed Discussion forum! This is where announcements will be sent."
   },
   {
     "objectID": "slides/lec-3-prob-basics.html#outline",
     "href": "slides/lec-3-prob-basics.html#outline",
     "title": "Lecture 3: Basics of probability",
     "section": "Outline",
-    "text": "Outline\n\nReview from Lab 2\nFinish statistics topics from last time\nProbability basics: Probability spaces, sample spaces, events\nSet operations\nHow do probabilities work? (Set operations, DeMorgan’s Laws)"
+    "text": "Outline\n\nFinish statistics topics from last time\nProbability basics: Probability spaces, sample spaces, events\nSet operations\nHow do probabilities work? (Set operations, DeMorgan’s Laws)\nReview from Lab 2 (time permitting)"
   },
   {
     "objectID": "slides/lec-3-prob-basics.html#review-from-lab-2",
@@ -88,7 +88,7 @@
     "href": "slides/lec-3-prob-basics.html#probability-spaces",
     "title": "Lecture 3: Basics of probability",
     "section": "Probability spaces",
-    "text": "Probability spaces\nMathematical objects that model random experiments, real-world processes involving states that occur randomly\nA probability space consists of three components:\n\nA sample space, the set of all possible outcomes\nSubsets of the sample space, called events, which comprise any number of possible outcomes (including none of them!)\nA function that assigns probabilities to events\n\nAn event occurs if the outcome of the random experiment is contained in that event."
+    "text": "Probability spaces\nMathematical objects that model random experiments, real-world processes involving states that occur randomly."
   },
   {
     "objectID": "slides/lec-3-prob-basics.html#sample-spaces",
@@ -102,14 +102,14 @@
     "href": "slides/lec-3-prob-basics.html#events",
     "title": "Lecture 3: Basics of probability",
     "section": "Events",
-    "text": "Events\nEvents: Subsets of the sample space that comprise possible outcomes. Essentially, these are all the ‘plausibly reasonable’ events we’re interested in calculating probabilities for*:\n\nTossing a single fair coin\n\nA head\n\nTossing two fair coins\n\nAt least one head\n\nSum of rolling two fair six-sided dice\n\nAn odd number\n\nSurvival (years) after cancer diagnosis*\n\nMore than 1 year\n\n\n*Note: there is some complicated math involved in calculating this. Don’t worry about it for now!"
+    "text": "Events\nDefinition: Subsets of the sample space that comprise possible outcomes.\n\nEssentially, these are all the ‘plausibly reasonable’ events we’re interested in calculating probabilities for."
   },
   {
     "objectID": "slides/lec-3-prob-basics.html#probabilities-1",
     "href": "slides/lec-3-prob-basics.html#probabilities-1",
     "title": "Lecture 3: Basics of probability",
     "section": "Probabilities",
-    "text": "Probabilities\nA number describing the likelihood of each event’s occurrence. This maps events to a number between 0 and 1, inclusive:\n\nTossing a single fair coin\n\nP(A head) \\(\\rightarrow\\) 0.5\n\nTossing two fair coins\n\nP(At least one head) \\(\\rightarrow\\) 0.75\n\nSum of rolling two fair six-sided dice\n\nP(An odd number) \\(\\rightarrow\\) 0.5\n\nSurvival (years) after cancer diagnosis\n\nP(greater than one year) \\(\\rightarrow\\) …difficult"
+    "text": "Probabilities\nDefinition: A number describing the likelihood of each event’s occurrence.\n\nThis maps events to a number between 0 and 1, inclusive."
   },
   {
     "objectID": "slides/lec-3-prob-basics.html#how-did-we-come-up-with-those-answers",
@@ -123,7 +123,7 @@
     "href": "slides/lec-3-prob-basics.html#events-as-subsets",
     "title": "Lecture 3: Basics of probability",
     "section": "Events as (sub)sets",
-    "text": "Events as (sub)sets\nRemember, events are subsets of the entire sample space. Let’s take for now the example of tossing a single fair coin and recording the outcome.\nThere are only two elements in the outcome space:\n\n\\(A\\): getting a head\n\\(B\\): getting a tail\n\nWe can define the simple events of just \\(A\\) or \\(B\\) occurring, but are there “other” events we can define?"
+    "text": "Events as (sub)sets\nRemember, events are subsets of the entire sample space. Let’s take for now the example of tossing a single fair coin and recording the outcome.\nThere are only two elements in the outcome space:\n\n\\(A\\): getting a head\n\\(B\\): getting a tail\n\nAnother way to write this: \\(S = \\{A, B\\}\\), where \\(S\\) is the sample space."
   },
   {
     "objectID": "slides/lec-3-prob-basics.html#set-operations",
@@ -137,14 +137,14 @@
     "href": "slides/lec-3-prob-basics.html#probability-distribution",
     "title": "Lecture 3: Basics of probability",
     "section": "Probability distribution",
-    "text": "Probability distribution\nA probability distribution is a table of all disjoint outcomes and their associated probabilities."
+    "text": "Probability distribution\nA probability distribution is a table of all disjoint outcomes and their associated probabilities.\nExample: Consider an experiment of rolling two dice and taking the sum.\nThe following is the probability distribution of all the possible events in our experiment."
   },
   {
     "objectID": "slides/lec-3-prob-basics.html#practice",
     "href": "slides/lec-3-prob-basics.html#practice",
     "title": "Lecture 3: Basics of probability",
     "section": "Practice",
-    "text": "Practice\nLet \\(A\\) represent the event where we roll two dice and their total is less than 12.\n\nWhat does the event \\(A^C\\) represent?\nDetermine \\(P(A^C)\\)."
+    "text": "Practice\n\nLet \\(A\\) represent the event where we roll two dice and their total is less than 12.\n\nWhat is the sample space of our experiment?\nWhat does the event \\(A^C\\) represent?\nDetermine \\(P(A^C)\\)."
   },
   {
     "objectID": "slides/lec-3-prob-basics.html#those-other-events",
@@ -165,14 +165,14 @@
     "href": "slides/lec-3-prob-basics.html#how-to-probabilities-work",
     "title": "Lecture 3: Basics of probability",
     "section": "How to probabilities “work”?",
-    "text": "How to probabilities “work”?\nFor two events \\(A\\) and \\(B\\) with probabilities \\(P(A)\\) and \\(P(B)\\) of occurring, the Kolmogorov axioms give us two important rules:\n\nComplement Rule: \\(P(A^C) = 1- P(A)\\)\nInclusion-Exclusion: \\(P(A \\cup B) = P(A) + P(B) - P(A \\cap B)\\)\n\n\n\n\n\n\n\nQuestion\n\n\nHow do we extend inclusion-exclusion to more than two events?"
+    "text": "How to probabilities “work”?\nFor two events \\(A\\) and \\(B\\) with probabilities \\(P(A)\\) and \\(P(B)\\) of occurring, the Kolmogorov axioms give us two important rules:\n\nComplement Rule: \\(P(A^C) = 1- P(A)\\)\nInclusion-Exclusion: \\(P(A \\cup B) = P(A) + P(B) - P(A \\cap B)\\)"
   },
   {
     "objectID": "slides/lec-3-prob-basics.html#demorgans-laws",
     "href": "slides/lec-3-prob-basics.html#demorgans-laws",
     "title": "Lecture 3: Basics of probability",
     "section": "DeMorgan’s laws",
-    "text": "DeMorgan’s laws\n\n\nComplement of union: \\((A\\cup B)^C = A^C \\cap B^C\\)\nComplement of intersection: \\((A\\cap B)^C = A^C \\cup B^C\\)\n\n\n\n\n\n\n\nQuestions\n\n\nHow do we interpret these in plain English?"
+    "text": "DeMorgan’s laws\n\n\nComplement of union: \\((A\\cup B)^C = A^C \\cap B^C\\)\nComplement of intersection: \\((A\\cap B)^C = A^C \\cup B^C\\)"
   },
   {
     "objectID": "slides/lec-3-prob-basics.html#gunter-et-al.-study-2017",
@@ -193,7 +193,7 @@
     "href": "slides/lec-3-prob-basics.html#participation-notecard",
     "title": "Lecture 3: Basics of probability",
     "section": "Participation: notecard",
-    "text": "Participation: notecard\n\nName +\n\nHow was class today?"
+    "text": "Participation: notecard\n\nName +\n\nHow is lab going?"
   },
   {
     "objectID": "slides/lec-1-whats-stat-inf.html#download-or-print-notes-to-pdf",
@@ -1468,5 +1468,54 @@
     "title": "Lecture 2: The nature of data",
     "section": "Exit ticket",
     "text": "Exit ticket\nMake sure you are part of our Ed Discussion forum before you leave class today. This is where I will post class announcements."
+  },
+  {
+    "objectID": "labs/lab-03-template.html",
+    "href": "labs/lab-03-template.html",
+    "title": "Lab 03: Wrangling data with tidyverse",
+    "section": "",
+    "text": "library(tidyverse)\n\nncbikecrash &lt;- read_csv(\"https://karamccor.github.io/b6002/labs/data/bikecrash.csv\")\n\n\nExercise 1\n\n(a)\n\n# run this code\nncbikecrash |&gt; \n  filter(development == \"Residential\") |&gt;\n  filter(driver_age_group == \"0-19\")\n\n[type response here]\n\n\n(b)\n\n# edit code below: replace blank with Residential, then run code\n\nncbikecrash |&gt; \n  filter(development == \"______\") |&gt;\n  count(driver_age_group)\n\n\n\n\nExercise 2\n\n# edit code: replace blank with driver estimated speed variable\nncbikecrash |&gt; \n  count(____________) |&gt;\n  arrange(n)\n\n\n\nExercise 3\n\n# type code here\n\n\n\nExercise 4\n\n# type code here\n\n\n\nExercise 5\n\n# type code here\n\n\n# type code here\n\n\n\nExercise 6\n\n# type code here\n\n\n\nExercise 7\n\n# type code here\n\n[write response here]\n\nggplot(ncbikecrash, mapping = aes(x = rural_urban, \n                                  y = driver_age, \n                                  fill = weather)) +\n  geom_boxplot()\n\n\n\n\n\n\n\n\n[write response here]\nSubmission: Remember to render your lab into an .html file and then save it as a .pdf in a web browser. You must turn in a .pdf file corresponding to the Quarto template to Gradescope in order to receive credit for the labs and homework assignments. You must assign each problem to a page in your PDF. Assign the Formatting portion to your page 1. Ensure all code is visible by indenting after commas as needed."
+  },
+  {
+    "objectID": "slides/lec-3-prob-basics.html#probability-spaces-1",
+    "href": "slides/lec-3-prob-basics.html#probability-spaces-1",
+    "title": "Lecture 3: Basics of probability",
+    "section": "Probability spaces",
+    "text": "Probability spaces\nA probability space consists of three components:\n\nA sample space, the set of all possible outcomes\nSubsets of the sample space, called events, which comprise any number of possible outcomes (including none of them!)\nA function that assigns probabilities to events\n\nAn event occurs if the outcome of the random experiment is contained in that event."
+  },
+  {
+    "objectID": "slides/lec-3-prob-basics.html#events-1",
+    "href": "slides/lec-3-prob-basics.html#events-1",
+    "title": "Lecture 3: Basics of probability",
+    "section": "Events",
+    "text": "Events\nEvents: Subsets of the sample space that comprise possible outcomes. Essentially, these are all the ‘plausibly reasonable’ events we’re interested in calculating probabilities for*:\n\nTossing a single fair coin\n\nA head\n\nTossing two fair coins\n\nAt least one head\n\nSum of rolling two fair six-sided dice\n\nAn odd number\n\nSurvival (years) after cancer diagnosis*\n\nMore than 1 year\n\n\n*Note: there is some complicated math involved in calculating this. Don’t worry about it for now!"
+  },
+  {
+    "objectID": "slides/lec-3-prob-basics.html#some-examples-of-events",
+    "href": "slides/lec-3-prob-basics.html#some-examples-of-events",
+    "title": "Lecture 3: Basics of probability",
+    "section": "Some examples of events",
+    "text": "Some examples of events\n\n\n\nExperiment\nExample of Event\n\n\n\n\nTossing a single fair coin\nA head\n\n\nTossing two fair coins\nAt least one head\n\n\nSum of rolling two fair six-sided dice\nAn odd number\n\n\nSurvival (years) after cancer diagnosis*\nMore than 1 year\n\n\n\n\n*Note: there is some complicated math involved in calculating this. Don’t worry about it for now!"
+  },
+  {
+    "objectID": "slides/lec-3-prob-basics.html#examples-of-probabilities",
+    "href": "slides/lec-3-prob-basics.html#examples-of-probabilities",
+    "title": "Lecture 3: Basics of probability",
+    "section": "Examples of probabilities",
+    "text": "Examples of probabilities\n\n\n\n\n\n\n\n\nExperiment\nExample of Event\nProbability of Event\n\n\n\n\nTossing a single fair coin\nA head\n0.5\n\n\nTossing two fair coins\nAt least one head\n0.75\n\n\nSum of rolling two fair six-sided dice\nAn odd number\n0.5\n\n\nSurvival (years) after cancer diagnosis*\nMore than 1 year\n… difficult"
+  },
+  {
+    "objectID": "slides/lec-3-prob-basics.html#some-examples-of-events-1",
+    "href": "slides/lec-3-prob-basics.html#some-examples-of-events-1",
+    "title": "Lecture 3: Basics of probability",
+    "section": "Some examples of events",
+    "text": "Some examples of events\n\n\n\n\n\n\n\n\nExperiment\nExample of Event\nProbability of Event\n\n\n\n\nTossing a single fair coin\nA head\n0.5\n\n\nTossing two fair coins\nAt least one head\n0.75\n\n\nSum of rolling two fair six-sided dice\nAn odd number\n0.5\n\n\nSurvival (years) after cancer diagnosis*\nMore than 1 year\n… difficult"
+  },
+  {
+    "objectID": "slides/lec-3-prob-basics.html#what-about-other-events",
+    "href": "slides/lec-3-prob-basics.html#what-about-other-events",
+    "title": "Lecture 3: Basics of probability",
+    "section": "What about other events?",
+    "text": "What about other events?\nWe can define the simple events of just \\(A\\) or \\(B\\) occurring, but are there “other” events we can define?\nYes! We can define them using “set operations”."
   }
 ]

@@ -27,72 +27,6 @@
       margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
       vertical-align: middle;
     }
-    /* CSS for syntax highlighting */
-    html { -webkit-text-size-adjust: 100%; }
-    pre > code.sourceCode { white-space: pre; position: relative; }
-    pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
-    pre > code.sourceCode > span:empty { height: 1.2em; }
-    .sourceCode { overflow: visible; }
-    code.sourceCode > span { color: inherit; text-decoration: inherit; }
-    div.sourceCode { margin: 1em 0; }
-    pre.sourceCode { margin: 0; }
-    @media screen {
-    div.sourceCode { overflow: auto; }
-    }
-    @media print {
-    pre > code.sourceCode { white-space: pre-wrap; }
-    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
-    }
-    pre.numberSource code
-      { counter-reset: source-line 0; }
-    pre.numberSource code > span
-      { position: relative; left: -4em; counter-increment: source-line; }
-    pre.numberSource code > span > a:first-child::before
-      { content: counter(source-line);
-        position: relative; left: -1em; text-align: right; vertical-align: baseline;
-        border: none; display: inline-block;
-        -webkit-touch-callout: none; -webkit-user-select: none;
-        -khtml-user-select: none; -moz-user-select: none;
-        -ms-user-select: none; user-select: none;
-        padding: 0 4px; width: 4em;
-        color: #aaaaaa;
-      }
-    pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
-    div.sourceCode
-      { color: #003b4f; background-color: #f1f3f5; }
-    @media screen {
-    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
-    }
-    code span { color: #003b4f; } /* Normal */
-    code span.al { color: #ad0000; } /* Alert */
-    code span.an { color: #5e5e5e; } /* Annotation */
-    code span.at { color: #657422; } /* Attribute */
-    code span.bn { color: #ad0000; } /* BaseN */
-    code span.bu { } /* BuiltIn */
-    code span.cf { color: #003b4f; font-weight: bold; } /* ControlFlow */
-    code span.ch { color: #20794d; } /* Char */
-    code span.cn { color: #8f5902; } /* Constant */
-    code span.co { color: #5e5e5e; } /* Comment */
-    code span.cv { color: #5e5e5e; font-style: italic; } /* CommentVar */
-    code span.do { color: #5e5e5e; font-style: italic; } /* Documentation */
-    code span.dt { color: #ad0000; } /* DataType */
-    code span.dv { color: #ad0000; } /* DecVal */
-    code span.er { color: #ad0000; } /* Error */
-    code span.ex { } /* Extension */
-    code span.fl { color: #ad0000; } /* Float */
-    code span.fu { color: #4758ab; } /* Function */
-    code span.im { color: #00769e; } /* Import */
-    code span.in { color: #5e5e5e; } /* Information */
-    code span.kw { color: #003b4f; font-weight: bold; } /* Keyword */
-    code span.op { color: #5e5e5e; } /* Operator */
-    code span.ot { color: #003b4f; } /* Other */
-    code span.pp { color: #ad0000; } /* Preprocessor */
-    code span.sc { color: #5e5e5e; } /* SpecialChar */
-    code span.ss { color: #20794d; } /* SpecialString */
-    code span.st { color: #20794d; } /* String */
-    code span.va { color: #111111; } /* Variable */
-    code span.vs { color: #20794d; } /* VerbatimString */
-    code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   </style>
   <link rel="stylesheet" href="../site_libs/revealjs/dist/theme/quarto-534cd8e3a96973385dffff3f4709048d.css">
   <link href="../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
@@ -186,10 +120,6 @@
       margin-right: 0; 
     }
   </style>
-  <link href="../site_libs/countdown-0.4.0/countdown.css" rel="stylesheet">
-
-  <script src="../site_libs/countdown-0.4.0/countdown.js"></script>
-
 </head>
 <body class="quarto-light">
   <div class="reveal">
@@ -212,62 +142,21 @@
 <section id="announcements" class="slide level2">
 <h2>Announcements</h2>
 <ul>
-<li><p>Lab 2 Due Friday August 29, at 11:59pm</p></li>
-<li><p>HW 1 Due Tuesday, Sept 2 at 11:59pm</p></li>
+<li><p>Lab 2 Due Friday August 28, at 11:59pm</p></li>
+<li><p>HW 1 Due Tuesday, Sept 1 at 11:59pm</p></li>
 <li><p>Be sure you are in our class’ Ed Discussion forum! This is where announcements will be sent.</p></li>
 </ul>
 </section>
 <section id="outline" class="slide level2">
 <h2>Outline</h2>
 <ul>
-<li>Review from Lab 2</li>
 <li>Finish statistics topics from last time</li>
 <li>Probability basics: Probability spaces, sample spaces, events</li>
 <li>Set operations</li>
 <li>How do probabilities work? (Set operations, DeMorgan’s Laws)</li>
+<li>Review from Lab 2 (time permitting)</li>
 </ul>
 </section>
-<section id="review-from-lab-2" class="slide level2">
-<h2>Review from Lab 2</h2>
-<ul>
-<li><p>What is the benefit of setting <code>message</code> and <code>warning</code> to <code>false</code> when reading in data or loading a package in your Quarto document?</p></li>
-<li><p>What is the difference between <code>install.packages()</code> vs.&nbsp;<code>library()</code>?</p></li>
-</ul>
-<div class="cell">
-<div class="cell-output-display">
-<div class="countdown" id="timer_c5bd33cd" data-update-every="1" tabindex="0" style="right:0;bottom:0;">
-<div class="countdown-controls"><button class="countdown-bump-down">−</button><button class="countdown-bump-up">+</button></div>
-<code class="countdown-time"><span class="countdown-digits minutes">02</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
-</div>
-</div>
-</div>
-</section>
-<section id="review-from-lab-2-continued" class="slide level2">
-<h2>Review from Lab 2 (continued)</h2>
-<ul>
-<li><p>What kind of plot will be created by running the following code?</p>
-<ul>
-<li><ol type="a">
-<li>histogram</li>
-</ol></li>
-<li><ol start="2" type="a">
-<li>scatterplot</li>
-</ol></li>
-<li><ol start="3" type="a">
-<li>barplot</li>
-</ol></li>
-</ul></li>
-</ul>
-<div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a></a><span class="fu">ggplot</span>(<span class="at">data =</span> cdc, <span class="at">mapping =</span> <span class="fu">aes</span>(<span class="at">x =</span> Region)) <span class="sc">+</span> </span>
-<span id="cb1-2"><a></a>  <span class="fu">geom_bar</span>(<span class="at">fill =</span> <span class="st">"steelblue"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</div>
-</section>
-<section id="topics-from-last-class" class="title-slide slide level1 center">
-<h1>Topics from last class</h1>
-
-</section>
-
 <section>
 <section id="probability-basics" class="title-slide slide level1 center">
 <h1>Probability basics</h1>
@@ -335,9 +224,12 @@
 <li><p>As new test results come in, the Bayesian method allows you to update the probability of a patient having the disease, leading to more nuanced decision-making, especially with small sample sizes or uncertain data.</p></li>
 </ul>
 </section>
-<section id="probability-spaces" class="slide level2 smaller">
+<section id="probability-spaces" class="slide level2">
 <h2>Probability spaces</h2>
-<p>Mathematical objects that model <strong>random experiments</strong>, real-world processes involving states that occur <strong>randomly</strong></p>
+<p>Mathematical objects that model <strong>random experiments</strong>, real-world processes involving states that occur <strong>randomly</strong>.</p>
+</section>
+<section id="probability-spaces-1" class="slide level2">
+<h2>Probability spaces</h2>
 <p>A <strong>probability space</strong> consists of three components:</p>
 <ol type="1">
 <li><p>A <strong>sample space</strong>, the set of all possible outcomes</p></li>
@@ -371,50 +263,90 @@
 </div>
 </div>
 </section>
-<section id="events" class="slide level2 smaller">
+<section id="events" class="slide level2">
 <h2>Events</h2>
-<p><strong>Events</strong>: Subsets of the sample space that comprise possible outcomes. Essentially, these are all the ‘plausibly reasonable’ events we’re interested in calculating probabilities for*:</p>
+<p><strong>Definition</strong>: Subsets of the sample space that comprise possible outcomes.</p>
 <ul>
-<li>Tossing a single fair coin
-<ul>
-<li>A head</li>
-</ul></li>
-<li>Tossing two fair coins
-<ul>
-<li>At least one head</li>
-</ul></li>
-<li>Sum of rolling two fair six-sided dice
-<ul>
-<li>An odd number</li>
-</ul></li>
-<li>Survival (years) after cancer diagnosis*
-<ul>
-<li>More than 1 year</li>
-</ul></li>
+<li>Essentially, these are all the ‘plausibly reasonable’ events we’re interested in calculating probabilities for.</li>
 </ul>
-<p>*Note: there is some complicated math involved in calculating this. Don’t worry about it for now!</p>
 </section>
-<section id="probabilities-1" class="slide level2 smaller">
-<h2>Probabilities</h2>
-<p>A number describing the likelihood of each event’s occurrence. This maps events to a number between 0 and 1, inclusive:</p>
+<section id="some-examples-of-events" class="slide level2">
+<h2>Some examples of events</h2>
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th>Experiment</th>
+<th>Example of Event</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Tossing a single fair coin</td>
+<td>A head</td>
+</tr>
+<tr class="even">
+<td>Tossing two fair coins</td>
+<td>At least one head</td>
+</tr>
+<tr class="odd">
+<td>Sum of rolling two fair six-sided dice</td>
+<td>An odd number</td>
+</tr>
+<tr class="even">
+<td>Survival (years) after cancer diagnosis*</td>
+<td>More than 1 year</td>
+</tr>
+</tbody>
+</table>
 <ul>
-<li><p>Tossing a single fair coin</p>
-<ul>
-<li>P(A head) <span class="math inline">\(\rightarrow\)</span> 0.5</li>
-</ul></li>
-<li><p>Tossing two fair coins</p>
-<ul>
-<li>P(At least one head) <span class="math inline">\(\rightarrow\)</span> 0.75</li>
-</ul></li>
-<li><p>Sum of rolling two fair six-sided dice</p>
-<ul>
-<li>P(An odd number) <span class="math inline">\(\rightarrow\)</span> 0.5</li>
-</ul></li>
-<li><p>Survival (years) after cancer diagnosis</p>
-<ul>
-<li>P(greater than one year) <span class="math inline">\(\rightarrow\)</span> …difficult</li>
-</ul></li>
+<li>*Note: there is some complicated math involved in calculating this. Don’t worry about it for now!</li>
 </ul>
+</section>
+<section id="probabilities-1" class="slide level2">
+<h2>Probabilities</h2>
+<p><strong>Definition</strong>: A number describing the likelihood of each event’s occurrence.</p>
+<ul>
+<li>This maps events to a number between 0 and 1, inclusive.</li>
+</ul>
+</section>
+<section id="examples-of-probabilities" class="slide level2">
+<h2>Examples of probabilities</h2>
+<table class="caption-top" style="width:100%;">
+<colgroup>
+<col style="width: 41%">
+<col style="width: 32%">
+<col style="width: 25%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Experiment</th>
+<th>Example of Event</th>
+<th>Probability of Event</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Tossing a single fair coin</td>
+<td>A head</td>
+<td>0.5</td>
+</tr>
+<tr class="even">
+<td>Tossing two fair coins</td>
+<td>At least one head</td>
+<td>0.75</td>
+</tr>
+<tr class="odd">
+<td>Sum of rolling two fair six-sided dice</td>
+<td>An odd number</td>
+<td>0.5</td>
+</tr>
+<tr class="even">
+<td>Survival (years) after cancer diagnosis*</td>
+<td>More than 1 year</td>
+<td>… difficult</td>
+</tr>
+</tbody>
+</table>
 </section>
 <section id="how-did-we-come-up-with-those-answers" class="slide level2">
 <h2>How did we come up with those answers?</h2>
@@ -431,9 +363,14 @@
 <li><span class="math inline">\(A\)</span>: getting a head</li>
 <li><span class="math inline">\(B\)</span>: getting a tail</li>
 </ul>
-<p>We can define the simple events of just <span class="math inline">\(A\)</span> or <span class="math inline">\(B\)</span> occurring, but are there “other” events we can define?</p>
+<p>Another way to write this: <span class="math inline">\(S = \{A, B\}\)</span>, where <span class="math inline">\(S\)</span> is the sample space.</p>
 </section>
-<section id="set-operations" class="slide level2 smaller">
+<section id="what-about-other-events" class="slide level2">
+<h2>What about other events?</h2>
+<p>We can define the simple events of just <span class="math inline">\(A\)</span> or <span class="math inline">\(B\)</span> occurring, but are there “other” events we can define?</p>
+<p>Yes! We can define them using “set operations”.</p>
+</section>
+<section id="set-operations" class="slide level2">
 <h2>Set operations</h2>
 <p>Sets can be related to each other in different ways. For two sets (or events) <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span>, the most common relationships are:</p>
 <ul>
@@ -447,11 +384,16 @@
 <section id="probability-distribution" class="slide level2">
 <h2>Probability distribution</h2>
 <p>A <strong>probability distribution</strong> is a table of all disjoint outcomes and their associated probabilities.</p>
-</section>
+<p><strong>Example</strong>: Consider an experiment of rolling two dice and taking the sum.</p>
+<p>The following is the probability distribution of all the possible events in our experiment.</p>
+
+<img data-src="images/lec-3/dice-sum.png" class="r-stretch"></section>
 <section id="practice" class="slide level2">
 <h2>Practice</h2>
-<p>Let <span class="math inline">\(A\)</span> represent the event where we roll two dice and their total is less than 12.</p>
+
+<img data-src="images/lec-3/dice-sum.png" class="r-stretch"><p>Let <span class="math inline">\(A\)</span> represent the event where we roll two dice and their total is less than 12.</p>
 <ol type="a">
+<li><p>What is the sample space of our experiment?</p></li>
 <li><p>What does the event <span class="math inline">\(A^C\)</span> represent?</p></li>
 <li><p>Determine <span class="math inline">\(P(A^C)\)</span>.</p></li>
 </ol>
@@ -482,40 +424,14 @@
 <li><strong>Complement Rule</strong>: <span class="math inline">\(P(A^C) = 1- P(A)\)</span></li>
 <li><strong>Inclusion-Exclusion</strong>: <span class="math inline">\(P(A \cup B) = P(A) + P(B) - P(A \cap B)\)</span></li>
 </ul>
-<div class="callout callout-tip callout-titled callout-style-default">
-<div class="callout-body">
-<div class="callout-title">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<p><strong>Question</strong></p>
-</div>
-<div class="callout-content">
-<p>How do we extend inclusion-exclusion to more than two events?</p>
-</div>
-</div>
-</div>
 </section>
 <section id="demorgans-laws" class="slide level2">
 <h2>DeMorgan’s laws</h2>
 
 <img data-src="images/lec-3/demorgan.jpg" width="100" class="r-stretch"><ul>
-<li><strong>Complement of union</strong>: <span class="math inline">\((A\cup B)^C = A^C \cap B^C\)</span></li>
-<li><strong>Complement of intersection</strong>: <span class="math inline">\((A\cap B)^C = A^C \cup B^C\)</span></li>
+<li><p><strong>Complement of union</strong>: <span class="math inline">\((A\cup B)^C = A^C \cap B^C\)</span></p></li>
+<li><p><strong>Complement of intersection</strong>: <span class="math inline">\((A\cap B)^C = A^C \cup B^C\)</span></p></li>
 </ul>
-<div class="callout callout-tip callout-titled callout-style-default">
-<div class="callout-body">
-<div class="callout-title">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<p><strong>Questions</strong></p>
-</div>
-<div class="callout-content">
-<p>How do we interpret these in plain English?</p>
-</div>
-</div>
-</div>
 </section>
 <section id="gunter-et-al.-study-2017" class="slide level2 smaller">
 <h2>Gunter et al.&nbsp;study (2017)</h2>
@@ -578,7 +494,7 @@
 <ul>
 <li><p>Name +</p>
 <ul>
-<li>How was class today?</li>
+<li>How is lab going?</li>
 </ul></li>
 </ul>
 
