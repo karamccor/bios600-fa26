@@ -18,7 +18,7 @@
     "href": "slides/lec-3-prob-basics.html#outline",
     "title": "Lecture 3: Basics of probability",
     "section": "Outline",
-    "text": "Outline\n\nFinish statistics topics from last time\nProbability basics: Probability spaces, sample spaces, events\nSet operations\nHow do probabilities work? (Set operations, DeMorgan’s Laws)\nReview from Lab 2 (time permitting)"
+    "text": "Outline\n\nTopics from last time\nProbability basics: Probability spaces, sample spaces, events\nSet operations\nHow do probabilities work? (Set operations, DeMorgan’s Laws)"
   },
   {
     "objectID": "slides/lec-3-prob-basics.html#review-from-lab-2",
@@ -1517,5 +1517,75 @@
     "title": "Lecture 3: Basics of probability",
     "section": "What about other events?",
     "text": "What about other events?\nWe can define the simple events of just \\(A\\) or \\(B\\) occurring, but are there “other” events we can define?\nYes! We can define them using “set operations”."
+  },
+  {
+    "objectID": "slides/lec-3-prob-basics.html#standard-deviation",
+    "href": "slides/lec-3-prob-basics.html#standard-deviation",
+    "title": "Lecture 3: Basics of probability",
+    "section": "Standard deviation",
+    "text": "Standard deviation\n\nSample standard deviation: most common measure of spread, based on deviations around the mean\n\n\\[s = \\sqrt{\\frac{1}{n-1} \\sum_{i=1}^n (x_i - \\bar{x})^2}\\]\n\nPopulation SD \\(\\sigma\\) is calculated the same way, but requires sum over everyone in the population (with \\(\\bar{x}\\) replaced by \\(\\mu\\))"
+  },
+  {
+    "objectID": "slides/lec-3-prob-basics.html#standard-deviation-continued",
+    "href": "slides/lec-3-prob-basics.html#standard-deviation-continued",
+    "title": "Lecture 3: Basics of probability",
+    "section": "Standard deviation (continued)",
+    "text": "Standard deviation (continued)\n\nSame units as original dataset for easier interpretation\nOften used to express confidence (e.g. a margin of error for a poll being around \\(\\pm\\) 2 SD of the mean)\nSquared deviations weight larger deviations more heavily,\n\nand so also positive and negative deviations do not cancel out"
+  },
+  {
+    "objectID": "slides/lec-3-prob-basics.html#variance",
+    "href": "slides/lec-3-prob-basics.html#variance",
+    "title": "Lecture 3: Basics of probability",
+    "section": "Variance",
+    "text": "Variance\n\nSample variance: approximately the average squared deviation from the mean\n\n\\[s^2 = \\frac{1}{n-1} \\sum_{i=1}^n(x_i - \\bar{x})^2\\]\n\nEstimate of the population variance \\(\\sigma^2\\)\nDivision by \\(n-1\\) instead of \\(n\\) is an adjustment to avoid bias in small samples\n\nDon’t worry about that right now, more details in a subsequent statistics class if interested"
+  },
+  {
+    "objectID": "slides/lec-3-prob-basics.html#spread-of-values",
+    "href": "slides/lec-3-prob-basics.html#spread-of-values",
+    "title": "Lecture 3: Basics of probability",
+    "section": "Spread of values",
+    "text": "Spread of values\n\nYou may have heard of the “68-95-99.7” rule. (68% of your data are within 1 SD, 95% are within 2 SD, 99.7% are within 3 SD).\nHowever, this only works for bell-shaped (normal distribution) data.\nWe have a property that holds for all distributions called the Chebyshev inequality.\nChebyshev holds for all distributions - no matter how skewed or irregular!"
+  },
+  {
+    "objectID": "slides/lec-3-prob-basics.html#how-big-are-most-values",
+    "href": "slides/lec-3-prob-basics.html#how-big-are-most-values",
+    "title": "Lecture 3: Basics of probability",
+    "section": "How big are most values?",
+    "text": "How big are most values?\n\nFor a distribution of any shape, most of the data are within “average \\(\\pm\\) \\(k\\) SDs”\n\n\n\n\nChebyshev’s inequality\n\n\n\nChebyshev’s inequality tells us the proportion of values in the range “average \\(\\pm\\) \\(k\\) SDs” is at least \\(1-\\frac{1}{k^2}\\)"
+  },
+  {
+    "objectID": "slides/lec-3-prob-basics.html#chevychevs-bounds",
+    "href": "slides/lec-3-prob-basics.html#chevychevs-bounds",
+    "title": "Lecture 3: Basics of probability",
+    "section": "Chevychev’s bounds",
+    "text": "Chevychev’s bounds\n\n\n\nRange\nProportion\n\n\n\n\nAverage \\(\\pm\\) 2 SDs\nat least \\(1-\\frac{1}{4}\\) = 75%\n\n\nAverage \\(\\pm\\) 3 SDs\nat least \\(1-\\frac{1}{9}\\) = 89%\n\n\nAverage \\(\\pm\\) 4 SDs\nat least \\(1-\\frac{1}{16}\\) = 94%\n\n\nAverage \\(\\pm\\) 5 SDs\nat least \\(1-\\frac{1}{25}\\) = 96%\n\n\n\n\nIf we know the exact distribution (coming soon), we can often calculate better bounds\nHowever, these bounds hold for any distribution (that has a well-defined mean and variance)"
+  },
+  {
+    "objectID": "slides/lec-3-prob-basics.html#why-not-always-use-means-and-sds",
+    "href": "slides/lec-3-prob-basics.html#why-not-always-use-means-and-sds",
+    "title": "Lecture 3: Basics of probability",
+    "section": "Why not always use means and SDs?",
+    "text": "Why not always use means and SDs?\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nThese two distributions have the same mean and standard deviation, but are clearly very different!\n\nExploratory data analysis can help us visually see differences in two datasets that basic statistics (e.g. mean and sd) might not reveal"
+  },
+  {
+    "objectID": "slides/lec-3-prob-basics.html#sneak-peek-data-transformations",
+    "href": "slides/lec-3-prob-basics.html#sneak-peek-data-transformations",
+    "title": "Lecture 3: Basics of probability",
+    "section": "Sneak Peek: Data Transformations",
+    "text": "Sneak Peek: Data Transformations\nWhen data are strongly skewed, we sometimes transform them so that they are easier to model.\nThe county dataset from the openintro R package has data for 3142 counties in the United States."
+  },
+  {
+    "objectID": "slides/lec-3-prob-basics.html#sneak-peek-data-transformations-1",
+    "href": "slides/lec-3-prob-basics.html#sneak-peek-data-transformations-1",
+    "title": "Lecture 3: Basics of probability",
+    "section": "Sneak Peek: Data Transformations",
+    "text": "Sneak Peek: Data Transformations\n\nWhat isn’t useful about this plot?"
+  },
+  {
+    "objectID": "slides/lec-3-prob-basics.html#log-transformed-data",
+    "href": "slides/lec-3-prob-basics.html#log-transformed-data",
+    "title": "Lecture 3: Basics of probability",
+    "section": "Log-transformed data",
+    "text": "Log-transformed data\n\nFor this plot, a 4 on the x-axis corresponds to the power of 10, e.g. a “4” on the x-axis corresponds to \\(10^4 = 10,000\\)."
   }
 ]
