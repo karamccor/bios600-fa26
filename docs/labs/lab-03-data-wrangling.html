@@ -597,21 +597,8 @@ Important
 </div>
 <p><strong>Note</strong>: Do not display the output of all observations satisfying these criteria. Run the code yourself to find out the answer, but your template will have <code>#| eval: false</code> as a code option which <strong>suppresses this lengthy output</strong>.</p>
 <ol start="2" type="a">
-<li>Now, edit the provided code so that the dataset is filtered to “Residential” development areas, the same as part (a). Then, run the code to create a table displaying the number of bike crashes in <strong>each age group</strong> for residential areas.</li>
+<li>Now, copy and paste the code below into your code chunk within your quarto template. Edit the provided code so that the dataset is filtered to “Residential” development areas, the same as part (a). Then, run the code to create a table displaying the number of bike crashes in <strong>each age group</strong> for residential areas.</li>
 </ol>
-<div class="callout callout-style-default callout-important callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Important
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>In your R chunk, change <code>#| eval: false</code> to <code>#| eval: true</code>.</p>
-</div>
-</div>
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb39"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb39-1"><a href="#cb39-1" aria-hidden="true" tabindex="-1"></a><span class="co"># edit code below: replace blank with Residential</span></span>
 <span id="cb39-2"><a href="#cb39-2" aria-hidden="true" tabindex="-1"></a>ncbikecrash <span class="sc">|&gt;</span> </span>
@@ -621,20 +608,7 @@ Important
 </section>
 <section id="exercise-2" class="level2">
 <h2 class="anchored" data-anchor-id="exercise-2">Exercise 2</h2>
-<p>Edit the code below to create a table which orders the most commonly occurring estimated speed from lowest to highest. (i.e., the least commonly occuring speed will appear first in the table.) To do this, replace the blank with the <code>driver_est_speed</code> variable, then run the code. <strong>Note:</strong> It’s okay for <code>NA</code> values to be present in your table.</p>
-<div class="callout callout-style-default callout-important callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Important
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>In your R chunk, change <code>#| eval: false</code> to <code>#| eval: true</code>.</p>
-</div>
-</div>
+<p>Copy and paste the code below into your code chunk within your quarto template. Edit the code to create a table which orders the most commonly occurring estimated speed from lowest to highest. (i.e., the least commonly occuring speed will appear first in the table.) To do this, replace the blank with the <code>driver_est_speed</code> variable, then run the code. <strong>Note:</strong> It’s okay for <code>NA</code> values to be present in your table.</p>
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb40"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb40-1"><a href="#cb40-1" aria-hidden="true" tabindex="-1"></a><span class="co"># edit code: replace blank with driver estimated speed variable</span></span>
 <span id="cb40-2"><a href="#cb40-2" aria-hidden="true" tabindex="-1"></a>ncbikecrash <span class="sc">|&gt;</span> </span>
@@ -674,7 +648,7 @@ Important
 </section>
 <section id="b" class="level3">
 <h3 class="anchored" data-anchor-id="b">(b)</h3>
-<p>Run the following code to create grouped box plots. Add an informative title and informative axis labels. What do you notice about <code>Snow, Sleet, Hail, Freezing Rain/Drizzle</code> driver ages in Rural vs.&nbsp;Urban areas?</p>
+<p>Run the following code to create grouped box plots. (The code should already be in your Quarto template.) Add an informative title and informative axis labels. What do you notice about <code>Snow, Sleet, Hail, Freezing Rain/Drizzle</code> driver ages in Rural vs.&nbsp;Urban areas?</p>
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb41"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb41-1"><a href="#cb41-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(ncbikecrash, </span>
 <span id="cb41-2"><a href="#cb41-2" aria-hidden="true" tabindex="-1"></a>       <span class="at">mapping =</span> <span class="fu">aes</span>(<span class="at">x =</span> rural_urban, </span>
