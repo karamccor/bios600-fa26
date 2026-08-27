@@ -21,18 +21,74 @@
     "text": "Outline\n\nTopics from last time\nProbability basics: Probability spaces, sample spaces, events\nSet operations\nHow do probabilities work? (Set operations, DeMorgan’s Laws)"
   },
   {
-    "objectID": "slides/lec-3-prob-basics.html#review-from-lab-2",
-    "href": "slides/lec-3-prob-basics.html#review-from-lab-2",
+    "objectID": "slides/lec-3-prob-basics.html#standard-deviation",
+    "href": "slides/lec-3-prob-basics.html#standard-deviation",
     "title": "Lecture 3: Basics of probability",
-    "section": "Review from Lab 2",
-    "text": "Review from Lab 2\n\nWhat is the benefit of setting message and warning to false when reading in data or loading a package in your Quarto document?\nWhat is the difference between install.packages() vs. library()?\n\n\n\n\n−+\n02:00"
+    "section": "Standard deviation",
+    "text": "Standard deviation\n\nSample standard deviation: most common measure of spread, based on deviations around the mean\n\n\\[s = \\sqrt{\\frac{1}{n-1} \\sum_{i=1}^n (x_i - \\bar{x})^2}\\]\n\nPopulation SD \\(\\sigma\\) is calculated the same way, but requires sum over everyone in the population (with \\(\\bar{x}\\) replaced by \\(\\mu\\))"
   },
   {
-    "objectID": "slides/lec-3-prob-basics.html#review-from-lab-2-continued",
-    "href": "slides/lec-3-prob-basics.html#review-from-lab-2-continued",
+    "objectID": "slides/lec-3-prob-basics.html#standard-deviation-continued",
+    "href": "slides/lec-3-prob-basics.html#standard-deviation-continued",
     "title": "Lecture 3: Basics of probability",
-    "section": "Review from Lab 2 (continued)",
-    "text": "Review from Lab 2 (continued)\n\nWhat kind of plot will be created by running the following code?\n\n\nhistogram\n\n\nscatterplot\n\n\nbarplot\n\n\n\n\nggplot(data = cdc, mapping = aes(x = Region)) + \n  geom_bar(fill = \"steelblue\")"
+    "section": "Standard deviation (continued)",
+    "text": "Standard deviation (continued)\n\nSame units as original dataset for easier interpretation\nOften used to express confidence (e.g. a margin of error for a poll being around \\(\\pm\\) 2 SD of the mean)\nSquared deviations weight larger deviations more heavily,\n\nand so also positive and negative deviations do not cancel out"
+  },
+  {
+    "objectID": "slides/lec-3-prob-basics.html#variance",
+    "href": "slides/lec-3-prob-basics.html#variance",
+    "title": "Lecture 3: Basics of probability",
+    "section": "Variance",
+    "text": "Variance\n\nSample variance: approximately the average squared deviation from the mean\n\n\\[s^2 = \\frac{1}{n-1} \\sum_{i=1}^n(x_i - \\bar{x})^2\\]\n\nEstimate of the population variance \\(\\sigma^2\\)\nDivision by \\(n-1\\) instead of \\(n\\) is an adjustment to avoid bias in small samples\n\nDon’t worry about that right now, more details in a subsequent statistics class if interested"
+  },
+  {
+    "objectID": "slides/lec-3-prob-basics.html#spread-of-values",
+    "href": "slides/lec-3-prob-basics.html#spread-of-values",
+    "title": "Lecture 3: Basics of probability",
+    "section": "Spread of values",
+    "text": "Spread of values\n\nYou may have heard of the “68-95-99.7” rule. (68% of your data are within 1 SD, 95% are within 2 SD, 99.7% are within 3 SD).\nHowever, this only works for bell-shaped (normal distribution) data.\nWe have a property that holds for all distributions called the Chebyshev inequality.\nChebyshev holds for all distributions - no matter how skewed or irregular!"
+  },
+  {
+    "objectID": "slides/lec-3-prob-basics.html#how-big-are-most-values",
+    "href": "slides/lec-3-prob-basics.html#how-big-are-most-values",
+    "title": "Lecture 3: Basics of probability",
+    "section": "How big are most values?",
+    "text": "How big are most values?\n\nFor a distribution of any shape, most of the data are within “average \\(\\pm\\) \\(k\\) SDs”\n\n\n\n\nChebyshev’s inequality\n\n\n\nChebyshev’s inequality tells us the proportion of values in the range “average \\(\\pm\\) \\(k\\) SDs” is at least \\(1-\\frac{1}{k^2}\\)"
+  },
+  {
+    "objectID": "slides/lec-3-prob-basics.html#chevychevs-bounds",
+    "href": "slides/lec-3-prob-basics.html#chevychevs-bounds",
+    "title": "Lecture 3: Basics of probability",
+    "section": "Chevychev’s bounds",
+    "text": "Chevychev’s bounds\n\n\n\nRange\nProportion\n\n\n\n\nAverage \\(\\pm\\) 2 SDs\nat least \\(1-\\frac{1}{4}\\) = 75%\n\n\nAverage \\(\\pm\\) 3 SDs\nat least \\(1-\\frac{1}{9}\\) = 89%\n\n\nAverage \\(\\pm\\) 4 SDs\nat least \\(1-\\frac{1}{16}\\) = 94%\n\n\nAverage \\(\\pm\\) 5 SDs\nat least \\(1-\\frac{1}{25}\\) = 96%\n\n\n\n\nIf we know the exact distribution (coming soon), we can often calculate better bounds\nHowever, these bounds hold for any distribution (that has a well-defined mean and variance)"
+  },
+  {
+    "objectID": "slides/lec-3-prob-basics.html#why-not-always-use-means-and-sds",
+    "href": "slides/lec-3-prob-basics.html#why-not-always-use-means-and-sds",
+    "title": "Lecture 3: Basics of probability",
+    "section": "Why not always use means and SDs?",
+    "text": "Why not always use means and SDs?\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nThese two distributions have the same mean and standard deviation, but are clearly very different!\n\nExploratory data analysis can help us visually see differences in two datasets that basic statistics (e.g. mean and sd) might not reveal"
+  },
+  {
+    "objectID": "slides/lec-3-prob-basics.html#sneak-peek-data-transformations",
+    "href": "slides/lec-3-prob-basics.html#sneak-peek-data-transformations",
+    "title": "Lecture 3: Basics of probability",
+    "section": "Sneak Peek: Data Transformations",
+    "text": "Sneak Peek: Data Transformations\nWhen data are strongly skewed, we sometimes transform them so that they are easier to model.\nThe county dataset from the openintro R package has data for 3142 counties in the United States."
+  },
+  {
+    "objectID": "slides/lec-3-prob-basics.html#sneak-peek-data-transformations-1",
+    "href": "slides/lec-3-prob-basics.html#sneak-peek-data-transformations-1",
+    "title": "Lecture 3: Basics of probability",
+    "section": "Sneak Peek: Data Transformations",
+    "text": "Sneak Peek: Data Transformations\n\nWhat isn’t useful about this plot?"
+  },
+  {
+    "objectID": "slides/lec-3-prob-basics.html#log-transformed-data",
+    "href": "slides/lec-3-prob-basics.html#log-transformed-data",
+    "title": "Lecture 3: Basics of probability",
+    "section": "Log-transformed data",
+    "text": "Log-transformed data\n\nFor this plot, a 4 on the x-axis corresponds to the power of 10, e.g. a “4” on the x-axis corresponds to \\(10^4 = 10,000\\)."
   },
   {
     "objectID": "slides/lec-3-prob-basics.html#whats-the-use-of-probability",
@@ -91,6 +147,13 @@
     "text": "Probability spaces\nMathematical objects that model random experiments, real-world processes involving states that occur randomly."
   },
   {
+    "objectID": "slides/lec-3-prob-basics.html#probability-spaces-1",
+    "href": "slides/lec-3-prob-basics.html#probability-spaces-1",
+    "title": "Lecture 3: Basics of probability",
+    "section": "Probability spaces",
+    "text": "Probability spaces\nA probability space consists of three components:\n\nA sample space, the set of all possible outcomes\nSubsets of the sample space, called events, which comprise any number of possible outcomes (including none of them!)\nA function that assigns probabilities to events\n\nAn event occurs if the outcome of the random experiment is contained in that event."
+  },
+  {
     "objectID": "slides/lec-3-prob-basics.html#sample-spaces",
     "href": "slides/lec-3-prob-basics.html#sample-spaces",
     "title": "Lecture 3: Basics of probability",
@@ -105,11 +168,25 @@
     "text": "Events\nDefinition: Subsets of the sample space that comprise possible outcomes.\n\nEssentially, these are all the ‘plausibly reasonable’ events we’re interested in calculating probabilities for."
   },
   {
+    "objectID": "slides/lec-3-prob-basics.html#some-examples-of-events",
+    "href": "slides/lec-3-prob-basics.html#some-examples-of-events",
+    "title": "Lecture 3: Basics of probability",
+    "section": "Some examples of events",
+    "text": "Some examples of events\n\n\n\nExperiment\nExample of Event\n\n\n\n\nTossing a single fair coin\nA head\n\n\nTossing two fair coins\nAt least one head\n\n\nSum of rolling two fair six-sided dice\nAn odd number\n\n\nSurvival (years) after cancer diagnosis*\nMore than 1 year\n\n\n\n\n*Note: there is some complicated math involved in calculating this. Don’t worry about it for now!"
+  },
+  {
     "objectID": "slides/lec-3-prob-basics.html#probabilities-1",
     "href": "slides/lec-3-prob-basics.html#probabilities-1",
     "title": "Lecture 3: Basics of probability",
     "section": "Probabilities",
     "text": "Probabilities\nDefinition: A number describing the likelihood of each event’s occurrence.\n\nThis maps events to a number between 0 and 1, inclusive."
+  },
+  {
+    "objectID": "slides/lec-3-prob-basics.html#examples-of-probabilities",
+    "href": "slides/lec-3-prob-basics.html#examples-of-probabilities",
+    "title": "Lecture 3: Basics of probability",
+    "section": "Examples of probabilities",
+    "text": "Examples of probabilities\n\n\n\n\n\n\n\n\nExperiment\nExample of Event\nProbability of Event\n\n\n\n\nTossing a single fair coin\nA head\n0.5\n\n\nTossing two fair coins\nAt least one head\n0.75\n\n\nSum of rolling two fair six-sided dice\nAn odd number\n0.5\n\n\nSurvival (years) after cancer diagnosis*\nMore than 1 year\n… difficult"
   },
   {
     "objectID": "slides/lec-3-prob-basics.html#how-did-we-come-up-with-those-answers",
@@ -124,6 +201,13 @@
     "title": "Lecture 3: Basics of probability",
     "section": "Events as (sub)sets",
     "text": "Events as (sub)sets\nRemember, events are subsets of the entire sample space. Let’s take for now the example of tossing a single fair coin and recording the outcome.\nThere are only two elements in the outcome space:\n\n\\(A\\): getting a head\n\\(B\\): getting a tail\n\nAnother way to write this: \\(S = \\{A, B\\}\\), where \\(S\\) is the sample space."
+  },
+  {
+    "objectID": "slides/lec-3-prob-basics.html#what-about-other-events",
+    "href": "slides/lec-3-prob-basics.html#what-about-other-events",
+    "title": "Lecture 3: Basics of probability",
+    "section": "What about other events?",
+    "text": "What about other events?\nWe can define the simple events of just \\(A\\) or \\(B\\) occurring, but are there “other” events we can define?\nYes! We can define them using “set operations”."
   },
   {
     "objectID": "slides/lec-3-prob-basics.html#set-operations",
@@ -187,13 +271,6 @@
     "title": "Lecture 3: Basics of probability",
     "section": "Recap",
     "text": "Recap\n\nProbabilities come up all the time!\nBayesian vs. frequentist approaches\nProbability spaces, sample spaces, events\nSet operations\nHow do probabilities work? (Set operations, DeMorgan’s Laws)"
-  },
-  {
-    "objectID": "slides/lec-3-prob-basics.html#participation-notecard",
-    "href": "slides/lec-3-prob-basics.html#participation-notecard",
-    "title": "Lecture 3: Basics of probability",
-    "section": "Participation: notecard",
-    "text": "Participation: notecard\n\nName +\n\nHow is lab going?"
   },
   {
     "objectID": "slides/lec-1-whats-stat-inf.html#download-or-print-notes-to-pdf",
@@ -588,32 +665,18 @@
     "text": "Grading\n\n\n\nComponent\nPoints\n\n\n\n\nEx 1\n2\n\n\nEx 2\n3\n\n\nEx 3\n4\n\n\nEx 4\n4\n\n\nEx 5\n4\n\n\nEx 6\n4\n\n\nFormatting\n3\n\n\nTotal\n24\n\n\n\nThe “Formatting” grade is to assess the document format. This includes having a neatly organized document (no excessive output, warnings/messages when loading packages and/or data) with readable code and your name and the date updated in the YAML."
   },
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "BIOS 600 Fall 2026",
+    "objectID": "labs/lab-02-template.html",
+    "href": "labs/lab-02-template.html",
+    "title": "Lab 02: Basic Data Visualization",
     "section": "",
-    "text": "Lecture 0: Welcome to BIOS 600!\nLab 1: Introducing the Toolkit\nLecture 1: What is statistical inference?\n\n\n\nLab 2: Basic Data Visualization\nLecture 2: The nature of data\nLecture 3: Probability basics\nHW 1"
+    "text": "library(tidyverse)\n\n# Load in the dataset in the R chunk here! Note that you MUST load in the dataset\n# in the chunk in order for other R chunks to recognize the dataset, even if\n# you've loaded it in the Console.\ncdc &lt;- read.csv(\"https://karamccor.github.io/b6002/labs/data/cdc_cleaned.csv\")\n\n\nExercise 1\nWrite your narrative to Exercise 1 here.\n\n\nExercise 2\n\n# Use this R chunk to create your visualization for Exercise 2.\n\nWrite your narrative to Exercise 2 here.\n\n\nExercise 3\n\n# Use this R chunk to create your visualization for Exercise 3.\n\nWrite your narrative to Exercise 3 here.\n\n\nExercise 4\n\n# Use this R chunk to create your visualization for Exercise 4.\n\nWrite your narrative to Exercise 4 here.\n\n\nExercise 5\n\n# Use this R chunk to create your visualization for Exercise 5.\n\nWrite your narrative to Exercise 5 here.\n\n\nExercise 6\n\n# Use this R chunk to create your visualization for Exercise 6.\n\nWrite your narrative to Exercise 6 here.\n\n\nAI Attestation\n[Write your AI attestation here.]\nSubmission: Remember to render your lab into an .html file and then save it as a .pdf in a web browser. You must turn in a .pdf file corresponding to the Quarto template to Gradescope in order to receive credit for the labs and homework assignments. You must assign each problem to a page in your PDF. Assign the Formatting portion to your page 1."
   },
   {
-    "objectID": "index.html#week-1",
-    "href": "index.html#week-1",
-    "title": "BIOS 600 Fall 2026",
+    "objectID": "labs/lab-01-template.html",
+    "href": "labs/lab-01-template.html",
+    "title": "Lab 01",
     "section": "",
-    "text": "Lecture 0: Welcome to BIOS 600!\nLab 1: Introducing the Toolkit\nLecture 1: What is statistical inference?"
-  },
-  {
-    "objectID": "index.html#week-2",
-    "href": "index.html#week-2",
-    "title": "BIOS 600 Fall 2026",
-    "section": "",
-    "text": "Lab 2: Basic Data Visualization\nLecture 2: The nature of data\nLecture 3: Probability basics\nHW 1"
-  },
-  {
-    "objectID": "about.html",
-    "href": "about.html",
-    "title": "About",
-    "section": "",
-    "text": "About this site"
+    "text": "This assignment is due Friday, August 21, 2025 at 11:59PM.\n\nExercise 1\nWrite your answer to Exercise 1 here.\n\n\nExercise 2\nWrite your answer to Exercise 2 here.\n\n\nExercise 3\nWrite your answer to Exercise 3 here.\n\n\nExercise 4\n\n# Use this R chunk to add your two numbers for exercise 4.\n\nRemember to Render your lab into an .html file and then save it as a .pdf in a web browser.\nImportant: You must turn in a .pdf file corresponding to the Quarto template to Gradescope in order to receive credit for the labs and homework assignments."
   },
   {
     "objectID": "hw/hw-01.html",
@@ -721,18 +784,46 @@
     "text": "Grading\n\n\n\nComponent\nPoints\n\n\n\n\nEx 1\n3\n\n\nEx 2\n3\n\n\nEx 3\n2\n\n\nEx 4\n2\n\n\nEx 5\n4\n\n\nEx 6\n2\n\n\nEx 7\n2\n\n\nFormatting\n3\n\n\n\nThe “Formatting” grade is to assess the document format. This includes having a neatly organized document (no excessive output, warnings/messages when loading packages and/or data) with readable code and your name and the date updated in the YAML."
   },
   {
-    "objectID": "labs/lab-01-template.html",
-    "href": "labs/lab-01-template.html",
-    "title": "Lab 01",
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
     "section": "",
-    "text": "This assignment is due Friday, August 21, 2025 at 11:59PM.\n\nExercise 1\nWrite your answer to Exercise 1 here.\n\n\nExercise 2\nWrite your answer to Exercise 2 here.\n\n\nExercise 3\nWrite your answer to Exercise 3 here.\n\n\nExercise 4\n\n# Use this R chunk to add your two numbers for exercise 4.\n\nRemember to Render your lab into an .html file and then save it as a .pdf in a web browser.\nImportant: You must turn in a .pdf file corresponding to the Quarto template to Gradescope in order to receive credit for the labs and homework assignments."
+    "text": "About this site"
   },
   {
-    "objectID": "labs/lab-02-template.html",
-    "href": "labs/lab-02-template.html",
-    "title": "Lab 02: Basic Data Visualization",
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "BIOS 600 Fall 2026",
     "section": "",
-    "text": "library(tidyverse)\n\n# Load in the dataset in the R chunk here! Note that you MUST load in the dataset\n# in the chunk in order for other R chunks to recognize the dataset, even if\n# you've loaded it in the Console.\ncdc &lt;- read.csv(\"https://karamccor.github.io/b6002/labs/data/cdc_cleaned.csv\")\n\n\nExercise 1\nWrite your narrative to Exercise 1 here.\n\n\nExercise 2\n\n# Use this R chunk to create your visualization for Exercise 2.\n\nWrite your narrative to Exercise 2 here.\n\n\nExercise 3\n\n# Use this R chunk to create your visualization for Exercise 3.\n\nWrite your narrative to Exercise 3 here.\n\n\nExercise 4\n\n# Use this R chunk to create your visualization for Exercise 4.\n\nWrite your narrative to Exercise 4 here.\n\n\nExercise 5\n\n# Use this R chunk to create your visualization for Exercise 5.\n\nWrite your narrative to Exercise 5 here.\n\n\nExercise 6\n\n# Use this R chunk to create your visualization for Exercise 6.\n\nWrite your narrative to Exercise 6 here.\n\n\nAI Attestation\n[Write your AI attestation here.]\nSubmission: Remember to render your lab into an .html file and then save it as a .pdf in a web browser. You must turn in a .pdf file corresponding to the Quarto template to Gradescope in order to receive credit for the labs and homework assignments. You must assign each problem to a page in your PDF. Assign the Formatting portion to your page 1."
+    "text": "Lecture 0: Welcome to BIOS 600!\nLab 1: Introducing the Toolkit\nLecture 1: What is statistical inference?\n\n\n\nLab 2: Basic Data Visualization\nLecture 2: The nature of data\nLecture 3: Probability basics\nHW 1\n\n\n\nLab 3: Data Wrangling"
+  },
+  {
+    "objectID": "index.html#week-1",
+    "href": "index.html#week-1",
+    "title": "BIOS 600 Fall 2026",
+    "section": "",
+    "text": "Lecture 0: Welcome to BIOS 600!\nLab 1: Introducing the Toolkit\nLecture 1: What is statistical inference?"
+  },
+  {
+    "objectID": "index.html#week-2",
+    "href": "index.html#week-2",
+    "title": "BIOS 600 Fall 2026",
+    "section": "",
+    "text": "Lab 2: Basic Data Visualization\nLecture 2: The nature of data\nLecture 3: Probability basics\nHW 1"
+  },
+  {
+    "objectID": "index.html#week-3",
+    "href": "index.html#week-3",
+    "title": "BIOS 600 Fall 2026",
+    "section": "",
+    "text": "Lab 3: Data Wrangling"
+  },
+  {
+    "objectID": "labs/lab-03-template.html",
+    "href": "labs/lab-03-template.html",
+    "title": "Lab 03: Wrangling data with tidyverse",
+    "section": "",
+    "text": "library(tidyverse)\n\nncbikecrash &lt;- read_csv(\"https://karamccor.github.io/b6002/labs/data/bikecrash.csv\")\n\n\nExercise 1\n\n(a)\n\n# run this code\nncbikecrash |&gt; \n  filter(development == \"Residential\") |&gt;\n  filter(driver_age_group == \"0-19\")\n\n[type response here]\n\n\n(b)\n\n# edit code below: replace blank with Residential, then run code\n\nncbikecrash |&gt; \n  filter(development == \"______\") |&gt;\n  count(driver_age_group)\n\n\n\n\nExercise 2\n\n# edit code: replace blank with driver estimated speed variable\nncbikecrash |&gt; \n  count(____________) |&gt;\n  arrange(n)\n\n\n\nExercise 3\n\n# type code here\n\n\n\nExercise 4\n\n# type code here\n\n\n\nExercise 5\n\n# type code here\n\n\n# type code here\n\n\n\nExercise 6\n\n# type code here\n\n\n\nExercise 7\n\n# type code here\n\n[write response here]\n\nggplot(ncbikecrash, mapping = aes(x = rural_urban, \n                                  y = driver_age, \n                                  fill = weather)) +\n  geom_boxplot()\n\n\n\n\n\n\n\n\n[write response here]\nSubmission: Remember to render your lab into an .html file and then save it as a .pdf in a web browser. You must turn in a .pdf file corresponding to the Quarto template to Gradescope in order to receive credit for the labs and homework assignments. You must assign each problem to a page in your PDF. Assign the Formatting portion to your page 1. Ensure all code is visible by indenting after commas as needed."
   },
   {
     "objectID": "labs/lab-1.html",
@@ -1468,124 +1559,5 @@
     "title": "Lecture 2: The nature of data",
     "section": "Exit ticket",
     "text": "Exit ticket\nMake sure you are part of our Ed Discussion forum before you leave class today. This is where I will post class announcements."
-  },
-  {
-    "objectID": "labs/lab-03-template.html",
-    "href": "labs/lab-03-template.html",
-    "title": "Lab 03: Wrangling data with tidyverse",
-    "section": "",
-    "text": "library(tidyverse)\n\nncbikecrash &lt;- read_csv(\"https://karamccor.github.io/b6002/labs/data/bikecrash.csv\")\n\n\nExercise 1\n\n(a)\n\n# run this code\nncbikecrash |&gt; \n  filter(development == \"Residential\") |&gt;\n  filter(driver_age_group == \"0-19\")\n\n[type response here]\n\n\n(b)\n\n# edit code below: replace blank with Residential, then run code\n\nncbikecrash |&gt; \n  filter(development == \"______\") |&gt;\n  count(driver_age_group)\n\n\n\n\nExercise 2\n\n# edit code: replace blank with driver estimated speed variable\nncbikecrash |&gt; \n  count(____________) |&gt;\n  arrange(n)\n\n\n\nExercise 3\n\n# type code here\n\n\n\nExercise 4\n\n# type code here\n\n\n\nExercise 5\n\n# type code here\n\n\n# type code here\n\n\n\nExercise 6\n\n# type code here\n\n\n\nExercise 7\n\n# type code here\n\n[write response here]\n\nggplot(ncbikecrash, mapping = aes(x = rural_urban, \n                                  y = driver_age, \n                                  fill = weather)) +\n  geom_boxplot()\n\n\n\n\n\n\n\n\n[write response here]\nSubmission: Remember to render your lab into an .html file and then save it as a .pdf in a web browser. You must turn in a .pdf file corresponding to the Quarto template to Gradescope in order to receive credit for the labs and homework assignments. You must assign each problem to a page in your PDF. Assign the Formatting portion to your page 1. Ensure all code is visible by indenting after commas as needed."
-  },
-  {
-    "objectID": "slides/lec-3-prob-basics.html#probability-spaces-1",
-    "href": "slides/lec-3-prob-basics.html#probability-spaces-1",
-    "title": "Lecture 3: Basics of probability",
-    "section": "Probability spaces",
-    "text": "Probability spaces\nA probability space consists of three components:\n\nA sample space, the set of all possible outcomes\nSubsets of the sample space, called events, which comprise any number of possible outcomes (including none of them!)\nA function that assigns probabilities to events\n\nAn event occurs if the outcome of the random experiment is contained in that event."
-  },
-  {
-    "objectID": "slides/lec-3-prob-basics.html#events-1",
-    "href": "slides/lec-3-prob-basics.html#events-1",
-    "title": "Lecture 3: Basics of probability",
-    "section": "Events",
-    "text": "Events\nEvents: Subsets of the sample space that comprise possible outcomes. Essentially, these are all the ‘plausibly reasonable’ events we’re interested in calculating probabilities for*:\n\nTossing a single fair coin\n\nA head\n\nTossing two fair coins\n\nAt least one head\n\nSum of rolling two fair six-sided dice\n\nAn odd number\n\nSurvival (years) after cancer diagnosis*\n\nMore than 1 year\n\n\n*Note: there is some complicated math involved in calculating this. Don’t worry about it for now!"
-  },
-  {
-    "objectID": "slides/lec-3-prob-basics.html#some-examples-of-events",
-    "href": "slides/lec-3-prob-basics.html#some-examples-of-events",
-    "title": "Lecture 3: Basics of probability",
-    "section": "Some examples of events",
-    "text": "Some examples of events\n\n\n\nExperiment\nExample of Event\n\n\n\n\nTossing a single fair coin\nA head\n\n\nTossing two fair coins\nAt least one head\n\n\nSum of rolling two fair six-sided dice\nAn odd number\n\n\nSurvival (years) after cancer diagnosis*\nMore than 1 year\n\n\n\n\n*Note: there is some complicated math involved in calculating this. Don’t worry about it for now!"
-  },
-  {
-    "objectID": "slides/lec-3-prob-basics.html#examples-of-probabilities",
-    "href": "slides/lec-3-prob-basics.html#examples-of-probabilities",
-    "title": "Lecture 3: Basics of probability",
-    "section": "Examples of probabilities",
-    "text": "Examples of probabilities\n\n\n\n\n\n\n\n\nExperiment\nExample of Event\nProbability of Event\n\n\n\n\nTossing a single fair coin\nA head\n0.5\n\n\nTossing two fair coins\nAt least one head\n0.75\n\n\nSum of rolling two fair six-sided dice\nAn odd number\n0.5\n\n\nSurvival (years) after cancer diagnosis*\nMore than 1 year\n… difficult"
-  },
-  {
-    "objectID": "slides/lec-3-prob-basics.html#some-examples-of-events-1",
-    "href": "slides/lec-3-prob-basics.html#some-examples-of-events-1",
-    "title": "Lecture 3: Basics of probability",
-    "section": "Some examples of events",
-    "text": "Some examples of events\n\n\n\n\n\n\n\n\nExperiment\nExample of Event\nProbability of Event\n\n\n\n\nTossing a single fair coin\nA head\n0.5\n\n\nTossing two fair coins\nAt least one head\n0.75\n\n\nSum of rolling two fair six-sided dice\nAn odd number\n0.5\n\n\nSurvival (years) after cancer diagnosis*\nMore than 1 year\n… difficult"
-  },
-  {
-    "objectID": "slides/lec-3-prob-basics.html#what-about-other-events",
-    "href": "slides/lec-3-prob-basics.html#what-about-other-events",
-    "title": "Lecture 3: Basics of probability",
-    "section": "What about other events?",
-    "text": "What about other events?\nWe can define the simple events of just \\(A\\) or \\(B\\) occurring, but are there “other” events we can define?\nYes! We can define them using “set operations”."
-  },
-  {
-    "objectID": "slides/lec-3-prob-basics.html#standard-deviation",
-    "href": "slides/lec-3-prob-basics.html#standard-deviation",
-    "title": "Lecture 3: Basics of probability",
-    "section": "Standard deviation",
-    "text": "Standard deviation\n\nSample standard deviation: most common measure of spread, based on deviations around the mean\n\n\\[s = \\sqrt{\\frac{1}{n-1} \\sum_{i=1}^n (x_i - \\bar{x})^2}\\]\n\nPopulation SD \\(\\sigma\\) is calculated the same way, but requires sum over everyone in the population (with \\(\\bar{x}\\) replaced by \\(\\mu\\))"
-  },
-  {
-    "objectID": "slides/lec-3-prob-basics.html#standard-deviation-continued",
-    "href": "slides/lec-3-prob-basics.html#standard-deviation-continued",
-    "title": "Lecture 3: Basics of probability",
-    "section": "Standard deviation (continued)",
-    "text": "Standard deviation (continued)\n\nSame units as original dataset for easier interpretation\nOften used to express confidence (e.g. a margin of error for a poll being around \\(\\pm\\) 2 SD of the mean)\nSquared deviations weight larger deviations more heavily,\n\nand so also positive and negative deviations do not cancel out"
-  },
-  {
-    "objectID": "slides/lec-3-prob-basics.html#variance",
-    "href": "slides/lec-3-prob-basics.html#variance",
-    "title": "Lecture 3: Basics of probability",
-    "section": "Variance",
-    "text": "Variance\n\nSample variance: approximately the average squared deviation from the mean\n\n\\[s^2 = \\frac{1}{n-1} \\sum_{i=1}^n(x_i - \\bar{x})^2\\]\n\nEstimate of the population variance \\(\\sigma^2\\)\nDivision by \\(n-1\\) instead of \\(n\\) is an adjustment to avoid bias in small samples\n\nDon’t worry about that right now, more details in a subsequent statistics class if interested"
-  },
-  {
-    "objectID": "slides/lec-3-prob-basics.html#spread-of-values",
-    "href": "slides/lec-3-prob-basics.html#spread-of-values",
-    "title": "Lecture 3: Basics of probability",
-    "section": "Spread of values",
-    "text": "Spread of values\n\nYou may have heard of the “68-95-99.7” rule. (68% of your data are within 1 SD, 95% are within 2 SD, 99.7% are within 3 SD).\nHowever, this only works for bell-shaped (normal distribution) data.\nWe have a property that holds for all distributions called the Chebyshev inequality.\nChebyshev holds for all distributions - no matter how skewed or irregular!"
-  },
-  {
-    "objectID": "slides/lec-3-prob-basics.html#how-big-are-most-values",
-    "href": "slides/lec-3-prob-basics.html#how-big-are-most-values",
-    "title": "Lecture 3: Basics of probability",
-    "section": "How big are most values?",
-    "text": "How big are most values?\n\nFor a distribution of any shape, most of the data are within “average \\(\\pm\\) \\(k\\) SDs”\n\n\n\n\nChebyshev’s inequality\n\n\n\nChebyshev’s inequality tells us the proportion of values in the range “average \\(\\pm\\) \\(k\\) SDs” is at least \\(1-\\frac{1}{k^2}\\)"
-  },
-  {
-    "objectID": "slides/lec-3-prob-basics.html#chevychevs-bounds",
-    "href": "slides/lec-3-prob-basics.html#chevychevs-bounds",
-    "title": "Lecture 3: Basics of probability",
-    "section": "Chevychev’s bounds",
-    "text": "Chevychev’s bounds\n\n\n\nRange\nProportion\n\n\n\n\nAverage \\(\\pm\\) 2 SDs\nat least \\(1-\\frac{1}{4}\\) = 75%\n\n\nAverage \\(\\pm\\) 3 SDs\nat least \\(1-\\frac{1}{9}\\) = 89%\n\n\nAverage \\(\\pm\\) 4 SDs\nat least \\(1-\\frac{1}{16}\\) = 94%\n\n\nAverage \\(\\pm\\) 5 SDs\nat least \\(1-\\frac{1}{25}\\) = 96%\n\n\n\n\nIf we know the exact distribution (coming soon), we can often calculate better bounds\nHowever, these bounds hold for any distribution (that has a well-defined mean and variance)"
-  },
-  {
-    "objectID": "slides/lec-3-prob-basics.html#why-not-always-use-means-and-sds",
-    "href": "slides/lec-3-prob-basics.html#why-not-always-use-means-and-sds",
-    "title": "Lecture 3: Basics of probability",
-    "section": "Why not always use means and SDs?",
-    "text": "Why not always use means and SDs?\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nThese two distributions have the same mean and standard deviation, but are clearly very different!\n\nExploratory data analysis can help us visually see differences in two datasets that basic statistics (e.g. mean and sd) might not reveal"
-  },
-  {
-    "objectID": "slides/lec-3-prob-basics.html#sneak-peek-data-transformations",
-    "href": "slides/lec-3-prob-basics.html#sneak-peek-data-transformations",
-    "title": "Lecture 3: Basics of probability",
-    "section": "Sneak Peek: Data Transformations",
-    "text": "Sneak Peek: Data Transformations\nWhen data are strongly skewed, we sometimes transform them so that they are easier to model.\nThe county dataset from the openintro R package has data for 3142 counties in the United States."
-  },
-  {
-    "objectID": "slides/lec-3-prob-basics.html#sneak-peek-data-transformations-1",
-    "href": "slides/lec-3-prob-basics.html#sneak-peek-data-transformations-1",
-    "title": "Lecture 3: Basics of probability",
-    "section": "Sneak Peek: Data Transformations",
-    "text": "Sneak Peek: Data Transformations\n\nWhat isn’t useful about this plot?"
-  },
-  {
-    "objectID": "slides/lec-3-prob-basics.html#log-transformed-data",
-    "href": "slides/lec-3-prob-basics.html#log-transformed-data",
-    "title": "Lecture 3: Basics of probability",
-    "section": "Log-transformed data",
-    "text": "Log-transformed data\n\nFor this plot, a 4 on the x-axis corresponds to the power of 10, e.g. a “4” on the x-axis corresponds to \\(10^4 = 10,000\\)."
   }
 ]
