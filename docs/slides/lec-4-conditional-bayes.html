@@ -9,7 +9,7 @@
 <link href="../site_libs/quarto-html/quarto-syntax-highlighting-ed96de9b727972fe78a7b5d16c58bf87.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
   <meta name="generator" content="quarto-1.8.27">
 
-  <title>BIOS 600 Fall 2026 – Lecture 3: Basics of probability</title>
+  <title>BIOS 600 Fall 2026 – Lecture 4: Conditional Probability and Bayes’ Rule</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -27,6 +27,72 @@
       margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
       vertical-align: middle;
     }
+    /* CSS for syntax highlighting */
+    html { -webkit-text-size-adjust: 100%; }
+    pre > code.sourceCode { white-space: pre; position: relative; }
+    pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+    pre > code.sourceCode > span:empty { height: 1.2em; }
+    .sourceCode { overflow: visible; }
+    code.sourceCode > span { color: inherit; text-decoration: inherit; }
+    div.sourceCode { margin: 1em 0; }
+    pre.sourceCode { margin: 0; }
+    @media screen {
+    div.sourceCode { overflow: auto; }
+    }
+    @media print {
+    pre > code.sourceCode { white-space: pre-wrap; }
+    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+    }
+    pre.numberSource code
+      { counter-reset: source-line 0; }
+    pre.numberSource code > span
+      { position: relative; left: -4em; counter-increment: source-line; }
+    pre.numberSource code > span > a:first-child::before
+      { content: counter(source-line);
+        position: relative; left: -1em; text-align: right; vertical-align: baseline;
+        border: none; display: inline-block;
+        -webkit-touch-callout: none; -webkit-user-select: none;
+        -khtml-user-select: none; -moz-user-select: none;
+        -ms-user-select: none; user-select: none;
+        padding: 0 4px; width: 4em;
+        color: #aaaaaa;
+      }
+    pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+    div.sourceCode
+      { color: #003b4f; background-color: #f1f3f5; }
+    @media screen {
+    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+    }
+    code span { color: #003b4f; } /* Normal */
+    code span.al { color: #ad0000; } /* Alert */
+    code span.an { color: #5e5e5e; } /* Annotation */
+    code span.at { color: #657422; } /* Attribute */
+    code span.bn { color: #ad0000; } /* BaseN */
+    code span.bu { } /* BuiltIn */
+    code span.cf { color: #003b4f; font-weight: bold; } /* ControlFlow */
+    code span.ch { color: #20794d; } /* Char */
+    code span.cn { color: #8f5902; } /* Constant */
+    code span.co { color: #5e5e5e; } /* Comment */
+    code span.cv { color: #5e5e5e; font-style: italic; } /* CommentVar */
+    code span.do { color: #5e5e5e; font-style: italic; } /* Documentation */
+    code span.dt { color: #ad0000; } /* DataType */
+    code span.dv { color: #ad0000; } /* DecVal */
+    code span.er { color: #ad0000; } /* Error */
+    code span.ex { } /* Extension */
+    code span.fl { color: #ad0000; } /* Float */
+    code span.fu { color: #4758ab; } /* Function */
+    code span.im { color: #00769e; } /* Import */
+    code span.in { color: #5e5e5e; } /* Information */
+    code span.kw { color: #003b4f; font-weight: bold; } /* Keyword */
+    code span.op { color: #5e5e5e; } /* Operator */
+    code span.ot { color: #003b4f; } /* Other */
+    code span.pp { color: #ad0000; } /* Preprocessor */
+    code span.sc { color: #5e5e5e; } /* SpecialChar */
+    code span.ss { color: #20794d; } /* SpecialString */
+    code span.st { color: #20794d; } /* String */
+    code span.va { color: #111111; } /* Variable */
+    code span.vs { color: #20794d; } /* VerbatimString */
+    code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   </style>
   <link rel="stylesheet" href="../site_libs/revealjs/dist/theme/quarto-534cd8e3a96973385dffff3f4709048d.css">
   <link href="../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
@@ -126,444 +192,58 @@
     <div class="slides">
 
 <section id="title-slide" class="quarto-title-block center">
-  <h1 class="title">Lecture 3: Basics of probability</h1>
+  <h1 class="title">Lecture 4: Conditional Probability and Bayes’ Rule</h1>
   <p class="subtitle">BIOS 600 - Fall 2026</p>
 
 <div class="quarto-title-authors">
 </div>
 
 </section>
-<section id="reading" class="slide level2">
-<h2>Reading</h2>
-<ul>
-<li><a href="https://www.openintro.org/go/?id=os4_for_screen_readers&amp;referrer=/book/os/index.php">OpenIntro Statistics</a>: Section 3.1.1-3.1.6</li>
-</ul>
-</section>
 <section id="announcements" class="slide level2">
 <h2>Announcements</h2>
 <ul>
-<li><p>Lab 2 Due Friday August 28, at 11:59pm</p></li>
-<li><p>HW 1 Due Tuesday, Sept 1 at 11:59pm</p></li>
-<li><p>Be sure you are in our class’ Ed Discussion forum! This is where announcements will be sent.</p></li>
-</ul>
-</section>
-<section id="outline" class="slide level2">
-<h2>Outline</h2>
+<li><p>HW 1 Due Tonight at 11:59pm</p></li>
+<li><p>Lab 3 session Today at 3:30pm, due Friday at 11:59pm</p>
 <ul>
-<li>Topics from last time</li>
-<li>Probability basics: Probability spaces, sample spaces, events</li>
-<li>Set operations</li>
-<li>How do probabilities work? (Set operations, DeMorgan’s Laws)</li>
-</ul>
-</section>
-<section>
-<section id="topics-from-last-time" class="title-slide slide level1 center">
-<h1>Topics from last time</h1>
-
-</section>
-<section id="standard-deviation" class="slide level2">
-<h2>Standard deviation</h2>
-<ul>
-<li><strong>Sample standard deviation</strong>: most common measure of spread, based on deviations around the mean</li>
-</ul>
-<p><span class="math display">\[s = \sqrt{\frac{1}{n-1} \sum_{i=1}^n (x_i - \bar{x})^2}\]</span></p>
-<ul>
-<li>Population SD <span class="math inline">\(\sigma\)</span> is calculated the same way, but requires sum over everyone in the population (with <span class="math inline">\(\bar{x}\)</span> replaced by <span class="math inline">\(\mu\)</span>)</li>
-</ul>
-</section>
-<section id="standard-deviation-continued" class="slide level2">
-<h2>Standard deviation (continued)</h2>
-<ul>
-<li><p>Same units as original dataset for easier interpretation</p></li>
-<li><p>Often used to express confidence (e.g.&nbsp;a <strong>margin of error</strong> for a poll being around <span class="math inline">\(\pm\)</span> 2 SD of the mean)</p></li>
-<li><p>Squared deviations weight larger deviations more heavily,</p></li>
-</ul>
-<p>and so also positive and negative deviations do not cancel out</p>
-</section>
-<section id="variance" class="slide level2 smaller">
-<h2>Variance</h2>
-<ul>
-<li><strong>Sample variance</strong>: approximately the average squared deviation from the mean</li>
-</ul>
-<p><span class="math display">\[s^2 = \frac{1}{n-1} \sum_{i=1}^n(x_i - \bar{x})^2\]</span></p>
-<ul>
-<li>Estimate of the population variance <span class="math inline">\(\sigma^2\)</span></li>
-<li>Division by <span class="math inline">\(n-1\)</span> instead of <span class="math inline">\(n\)</span> is an adjustment to avoid bias in small samples
-<ul>
-<li>Don’t worry about that right now, more details in a subsequent statistics class if interested</li>
+<li>Encouraged to read over lab assignment tutorial ahead of time.</li>
 </ul></li>
+<li><p>Some of you asked about the exam. Will send out information about exam structure, types of questions, content, etc. at the end of this week.</p></li>
+<li><p>Reminder: I have office hours Thursdays 9:45-10:45am (MCG 3106F) and by appointment. TAs have office hours Mondays 2-3pm (MCG 2303) &amp; by appointment. Reach out if you need any support!</p></li>
 </ul>
 </section>
-<section id="spread-of-values" class="slide level2">
-<h2>Spread of values</h2>
+<section id="ensure-your-code-is-visible-in-your-pdf-document" class="slide level2">
+<h2>Ensure your code is visible in your PDF document!</h2>
 <ul>
-<li><p>You may have heard of the “68-95-99.7” rule. (68% of your data are within 1 SD, 95% are within 2 SD, 99.7% are within 3 SD).</p></li>
-<li><p>However, this only works for bell-shaped (normal distribution) data.</p></li>
-<li><p>We have a property that holds for all distributions called the Chebyshev inequality.</p></li>
-<li><p>Chebyshev holds for all distributions - no matter how skewed or irregular!</p></li>
+<li><p>For all assignments</p></li>
+<li><p>Go from this:</p></li>
 </ul>
-</section>
-<section id="how-big-are-most-values" class="slide level2">
-<h2>How big are most values?</h2>
-<ul>
-<li>For a distribution of any shape, most of the data are within “average <span class="math inline">\(\pm\)</span> <span class="math inline">\(k\)</span> SDs”</li>
-</ul>
-<div class="callout callout-note no-icon callout-titled callout-style-simple">
-<div class="callout-body">
-<div class="callout-title">
-<p><strong>Chebyshev’s inequality</strong></p>
-</div>
-<div class="callout-content">
-<ul>
-<li><strong>Chebyshev’s inequality</strong> tells us the proportion of values in the range “average <span class="math inline">\(\pm\)</span> <span class="math inline">\(k\)</span> SDs” is at least <span class="math inline">\(1-\frac{1}{k^2}\)</span></li>
-</ul>
-</div>
-</div>
-</div>
-</section>
-<section id="chevychevs-bounds" class="slide level2">
-<h2>Chevychev’s bounds</h2>
-<table class="caption-top">
-<thead>
-<tr class="header">
-<th style="text-align: center;">Range</th>
-<th style="text-align: center;">Proportion</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: center;">Average <span class="math inline">\(\pm\)</span> 2 SDs</td>
-<td style="text-align: center;">at least <span class="math inline">\(1-\frac{1}{4}\)</span> = 75%</td>
-</tr>
-<tr class="even">
-<td style="text-align: center;">Average <span class="math inline">\(\pm\)</span> 3 SDs</td>
-<td style="text-align: center;">at least <span class="math inline">\(1-\frac{1}{9}\)</span> = 89%</td>
-</tr>
-<tr class="odd">
-<td style="text-align: center;">Average <span class="math inline">\(\pm\)</span> 4 SDs</td>
-<td style="text-align: center;">at least <span class="math inline">\(1-\frac{1}{16}\)</span> = 94%</td>
-</tr>
-<tr class="even">
-<td style="text-align: center;">Average <span class="math inline">\(\pm\)</span> 5 SDs</td>
-<td style="text-align: center;">at least <span class="math inline">\(1-\frac{1}{25}\)</span> = 96%</td>
-</tr>
-</tbody>
-</table>
-<ul>
-<li><p>If we know the exact distribution (coming soon), we can often calculate better bounds</p></li>
-<li><p>However, these bounds hold for <em>any</em> distribution (that has a well-defined mean and variance)</p></li>
-</ul>
-</section>
-<section id="why-not-always-use-means-and-sds" class="slide level2 small">
-<h2>Why not always use means and SDs?</h2>
-<div class="columns">
-<div class="column" style="width:50%;">
 <div class="cell">
-<div class="cell-output-display">
-<div>
-<figure>
-<p><img data-src="lec-3-prob-basics_files/figure-revealjs/unnamed-chunk-2-1.png" width="960"></p>
-</figure>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a></a><span class="fu">ggplot</span>(<span class="at">data =</span> cdc, <span class="fu">aes</span>(<span class="at">x =</span> Region, <span class="at">y =</span> InfantMortalityRate)) <span class="sc">+</span> </span>
+<span id="cb1-2"><a></a>  <span class="fu">geom_boxplot</span>() <span class="sc">+</span> <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">"Infant Mortality Rate (%) by Region"</span>, <span class="at">xlab =</span> <span class="st">"Region"</span>, <span class="at">ylab =</span> <span class="st">"Infant Mortality Rate (%)"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
-</div>
-</div>
-</div><div class="column" style="width:50%;">
+<p>to this:</p>
 <div class="cell">
-<div class="cell-output-display">
-<div>
-<figure>
-<p><img data-src="lec-3-prob-basics_files/figure-revealjs/unnamed-chunk-3-1.png" width="960"></p>
-</figure>
-</div>
-</div>
-</div>
-</div></div>
-<p>These two distributions have the same mean and standard deviation, but are clearly very different!</p>
-<ul>
-<li>Exploratory data analysis can help us visually see differences in two datasets that basic statistics (e.g.&nbsp;mean and sd) might not reveal</li>
-</ul>
-</section>
-<section id="sneak-peek-data-transformations" class="slide level2">
-<h2>Sneak Peek: Data Transformations</h2>
-<p>When data are strongly skewed, we sometimes transform them so that they are easier to model.</p>
-<p>The <code>county</code> dataset from the <code>openintro</code> R package has data for 3142 counties in the United States.</p>
-</section>
-<section id="sneak-peek-data-transformations-1" class="slide level2">
-<h2>Sneak Peek: Data Transformations</h2>
-
-<img data-src="lec-3-prob-basics_files/figure-revealjs/unnamed-chunk-4-1.png" width="960" class="r-stretch"><p>What isn’t useful about this plot?</p>
-</section>
-<section id="log-transformed-data" class="slide level2">
-<h2>Log-transformed data</h2>
-
-<img data-src="lec-3-prob-basics_files/figure-revealjs/unnamed-chunk-5-1.png" width="960" class="r-stretch"><p>For this plot, a 4 on the x-axis corresponds to the power of 10, e.g.&nbsp;a “4” on the x-axis corresponds to <span class="math inline">\(10^4 = 10,000\)</span>.</p>
-</section></section>
-<section>
-<section id="probability-basics" class="title-slide slide level1 center">
-<h1>Probability basics</h1>
-
-</section>
-<section id="whats-the-use-of-probability" class="slide level2">
-<h2>What’s the use of probability?</h2>
-<ul>
-<li>Last time: how to <strong>visualize</strong> data, how descriptive statistics are used to <strong>describe</strong> data</li>
-<li>Goal: Make <strong>inferences</strong> about a population based on a sample
-<ul>
-<li>Inference: making conclusions about a population based on a sample of data drawn from that population</li>
-</ul></li>
-<li>To do this, we need a solid foundation of probability theory</li>
-</ul>
-</section>
-<section id="probabilities-come-up-all-the-time" class="slide level2">
-<h2>Probabilities come up all the time</h2>
-<ul>
-<li>There is a moderate chance of drought in North Carolina during the next year</li>
-<li>The surgery has a 50-50 probability of success</li>
-<li>The ten-year survival probability of invasive breast cancer among US women is 83%.</li>
-</ul>
-<p>How do we come up with these probabilities?</p>
-<p>Before we answer that question, a little bit of history…</p>
-</section>
-<section id="probabilities" class="slide level2">
-<h2>Probabilities</h2>
-<ul>
-<li><p><strong>Frequentist</strong> (classical) and <strong>Bayesian</strong> schools of thought</p></li>
-<li><p>Historical analogy: Imagine a medieval coin maker who wants to prove that his coin is fair. He flips the coin thousands of times. If it lands on heads about half the time, he concludes it’s a fair coin.</p></li>
-<li><p>This approach reflects <strong>long-run frequencies</strong>—the probability is defined by the frequency of an event (heads) occurring in many repeated trials.</p></li>
-</ul>
-</section>
-<section id="historical-analogy-continued" class="slide level2">
-<h2>Historical analogy (continued)</h2>
-<ul>
-<li><p>Now, consider a knight deciding whether to trust the coin maker’s fairness. Even after seeing just a few flips, the knight forms a <strong>degree of belief</strong> about the coin’s fairness, adjusting this belief with more evidence.</p></li>
-<li><p>This reflects the <strong>Bayesian interpretation</strong>—probability as a measure of <strong>belief</strong> or certainty about an event, <em>updated</em> as new information becomes available.</p></li>
-</ul>
-</section>
-<section id="which-approach-is-more-useful" class="slide level2">
-<h2>Which approach is more useful?</h2>
-<ul>
-<li><p>Each one is useful, just depends on context</p></li>
-<li><p><strong>Frequentist</strong>: Most helpful when you have <strong>large sample sizes</strong> and <strong>repeated trials</strong>. Typically used in settings where you rely on long-run frequencies, such as in hypothesis testing and confidence intervals (more on these later).</p></li>
-<li><p><strong>Bayesian</strong>: More useful when <strong>prior information</strong> or <strong>expert opinion</strong> is available, or when working with smaller sample sizes. Often applied in settings where you need to update probabilities as new data becomes available.</p></li>
-</ul>
-</section>
-<section id="example-clinical-trial" class="slide level2">
-<h2>Example: clinical trial</h2>
-<p>Setting: Consider a clinical trial for a new drug.</p>
-<ul>
-<li><p>In large-scale randomized controlled trials (RCTs) to test a new drug’s efficacy, a <strong>frequentist</strong> approach is often more suitable.</p></li>
-<li><p>This is because you rely on the law of large numbers (more on this in a few lectures!), where results become more reliable with repeated trials.</p></li>
-<li><p>Frequentist methods like hypothesis testing and confidence intervals help establish the drug’s effectiveness based purely on the data without incorporating prior beliefs.</p></li>
-</ul>
-</section>
-<section id="example-diagnostic-testing" class="slide level2">
-<h2>Example: diagnostic testing</h2>
-<p>Setting: Diagnostic testing with prior information</p>
-<ul>
-<li><p>When evaluating a rare disease using diagnostic tests, a <strong>Bayesian</strong> approach might be more useful.</p></li>
-<li><p>If prior knowledge or expert opinion suggests a very low prevalence of the disease, this information can be incorporated into the analysis.</p></li>
-<li><p>As new test results come in, the Bayesian method allows you to <strong>update the probability</strong> of a patient having the disease, leading to more nuanced decision-making, especially with small sample sizes or uncertain data.</p></li>
-</ul>
-</section>
-<section id="probability-spaces" class="slide level2">
-<h2>Probability spaces</h2>
-<p>Mathematical objects that model <strong>random experiments</strong>, real-world processes involving states that occur <strong>randomly</strong>.</p>
-</section>
-<section id="probability-spaces-1" class="slide level2">
-<h2>Probability spaces</h2>
-<p>A <strong>probability space</strong> consists of three components:</p>
-<ol type="1">
-<li><p>A <strong>sample space</strong>, the set of all possible outcomes</p></li>
-<li><p>Subsets of the sample space, called <strong>events</strong>, which comprise any number of possible outcomes (including none of them!)</p></li>
-<li><p>A function that assigns <strong>probabilities</strong> to events</p></li>
-</ol>
-<p>An event <strong>occurs</strong> if the outcome of the random experiment is contained in that event.</p>
-</section>
-<section id="sample-spaces" class="slide level2">
-<h2>Sample spaces</h2>
-<p>Sample spaces depend on the random experiment in question</p>
-<ul>
-<li><p>Tossing a single fair coin</p></li>
-<li><p>Tossing two fair coins</p></li>
-<li><p>Sum of rolling two fair six-sided dice</p></li>
-<li><p>Survival (years) after cancer diagnosis</p></li>
-</ul>
-<div class="callout callout-tip callout-titled callout-style-default">
-<div class="callout-body">
-<div class="callout-title">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<p><strong>Exercise</strong></p>
-</div>
-<div class="callout-content">
-<ul>
-<li>What are the sample spaces for each of the experiments above?</li>
-</ul>
-</div>
-</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a></a><span class="fu">ggplot</span>(<span class="at">data =</span> cdc, <span class="fu">aes</span>(<span class="at">x =</span> Region, </span>
+<span id="cb2-2"><a></a>                       <span class="at">y =</span> InfantMortalityRate)) <span class="sc">+</span> </span>
+<span id="cb2-3"><a></a>  <span class="fu">geom_boxplot</span>() <span class="sc">+</span></span>
+<span id="cb2-4"><a></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">"Infant Mortality Rate (%) by Region"</span>, </span>
+<span id="cb2-5"><a></a>       <span class="at">xlab =</span> <span class="st">"Region"</span>, </span>
+<span id="cb2-6"><a></a>       <span class="at">ylab =</span> <span class="st">"Infant Mortality Rate (%)"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </section>
-<section id="events" class="slide level2">
-<h2>Events</h2>
-<p><strong>Definition</strong>: Subsets of the sample space that comprise possible outcomes.</p>
+<section id="reading" class="slide level2">
+<h2>Reading</h2>
 <ul>
-<li>Essentially, these are all the ‘plausibly reasonable’ events we’re interested in calculating probabilities for.</li>
+<li>Pagano and Gavreau: Sections 6.2, 6.3</li>
+<li><a href="https://www.openintro.org/go/?id=os4_for_screen_readers&amp;referrer=/book/os/index.php">OpenIntro Statistics</a>: Section 3.2</li>
 </ul>
 </section>
-<section id="some-examples-of-events" class="slide level2">
-<h2>Some examples of events</h2>
-<table class="caption-top">
-<thead>
-<tr class="header">
-<th>Experiment</th>
-<th>Example of Event</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Tossing a single fair coin</td>
-<td>A head</td>
-</tr>
-<tr class="even">
-<td>Tossing two fair coins</td>
-<td>At least one head</td>
-</tr>
-<tr class="odd">
-<td>Sum of rolling two fair six-sided dice</td>
-<td>An odd number</td>
-</tr>
-<tr class="even">
-<td>Survival (years) after cancer diagnosis*</td>
-<td>More than 1 year</td>
-</tr>
-</tbody>
-</table>
+<section id="overview" class="slide level2">
+<h2>Overview</h2>
 <ul>
-<li>*Note: there is some complicated math involved in calculating this. Don’t worry about it for now!</li>
-</ul>
-</section>
-<section id="probabilities-1" class="slide level2">
-<h2>Probabilities</h2>
-<p><strong>Definition</strong>: A number describing the likelihood of each event’s occurrence.</p>
-<ul>
-<li>This maps events to a number between 0 and 1, inclusive.</li>
-</ul>
-</section>
-<section id="examples-of-probabilities" class="slide level2">
-<h2>Examples of probabilities</h2>
-<table class="caption-top" style="width:100%;">
-<colgroup>
-<col style="width: 41%">
-<col style="width: 32%">
-<col style="width: 25%">
-</colgroup>
-<thead>
-<tr class="header">
-<th>Experiment</th>
-<th>Example of Event</th>
-<th>Probability of Event</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Tossing a single fair coin</td>
-<td>A head</td>
-<td>0.5</td>
-</tr>
-<tr class="even">
-<td>Tossing two fair coins</td>
-<td>At least one head</td>
-<td>0.75</td>
-</tr>
-<tr class="odd">
-<td>Sum of rolling two fair six-sided dice</td>
-<td>An odd number</td>
-<td>0.5</td>
-</tr>
-<tr class="even">
-<td>Survival (years) after cancer diagnosis*</td>
-<td>More than 1 year</td>
-<td>… difficult</td>
-</tr>
-</tbody>
-</table>
-</section>
-<section id="how-did-we-come-up-with-those-answers" class="slide level2">
-<h2>How did we come up with those answers?</h2>
-<ul>
-<li><p>For the first three, you would probably intuit your way through using a <strong>discrete probability distribution</strong> (more on this in a few lectures)</p></li>
-<li><p>For the last one, by making some assumptions on the survival process, we can use similar probability tools to arrive at an answer. (But it’s still complicated!)</p></li>
-</ul>
-</section>
-<section id="events-as-subsets" class="slide level2">
-<h2>Events as (sub)sets</h2>
-<p>Remember, events are subsets of the entire sample space. Let’s take for now the example of tossing a single fair coin and recording the outcome.</p>
-<p>There are only two elements in the outcome space:</p>
-<ul>
-<li><span class="math inline">\(A\)</span>: getting a head</li>
-<li><span class="math inline">\(B\)</span>: getting a tail</li>
-</ul>
-<p>Another way to write this: <span class="math inline">\(S = \{A, B\}\)</span>, where <span class="math inline">\(S\)</span> is the sample space.</p>
-</section>
-<section id="what-about-other-events" class="slide level2">
-<h2>What about other events?</h2>
-<p>We can define the simple events of just <span class="math inline">\(A\)</span> or <span class="math inline">\(B\)</span> occurring, but are there “other” events we can define?</p>
-<p>Yes! We can define them using “set operations”.</p>
-</section>
-<section id="set-operations" class="slide level2">
-<h2>Set operations</h2>
-<p>Sets can be related to each other in different ways. For two sets (or events) <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span>, the most common relationships are:</p>
-<ul>
-<li><strong>Intersection</strong> (<span class="math inline">\(A \cap B\)</span>): <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span> both occur</li>
-<li><strong>Union</strong> (<span class="math inline">\(A \cup B\)</span>): <span class="math inline">\(A\)</span> or <span class="math inline">\(B\)</span> occur (including when both occur)</li>
-<li><strong>Complement</strong> (<span class="math inline">\(A^C\)</span>): <span class="math inline">\(A\)</span> does not occur</li>
-<li><strong>Difference</strong> (<span class="math inline">\(A \backslash B\)</span>): <span class="math inline">\(A\)</span> occurs, but <span class="math inline">\(B\)</span> does not occur; equivalent to (<span class="math inline">\(A \cap B^C\)</span>) (why?)</li>
-</ul>
-<p>Two sets <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span> are said to be <strong>disjoint</strong> if <span class="math inline">\(A \cap B = \emptyset\)</span></p>
-</section>
-<section id="probability-distribution" class="slide level2">
-<h2>Probability distribution</h2>
-<p>A <strong>probability distribution</strong> is a table of all disjoint outcomes and their associated probabilities.</p>
-<p><strong>Example</strong>: Consider an experiment of rolling two dice and taking the sum.</p>
-<p>The following is the probability distribution of all the possible events in our experiment.</p>
-
-<img data-src="images/lec-3/dice-sum.png" class="r-stretch"></section>
-<section id="practice" class="slide level2">
-<h2>Practice</h2>
-
-<img data-src="images/lec-3/dice-sum.png" class="r-stretch"><p>Let <span class="math inline">\(A\)</span> represent the event where we roll two dice and their total is less than 12.</p>
-<ol type="a">
-<li><p>What is the sample space of our experiment?</p></li>
-<li><p>What does the event <span class="math inline">\(A^C\)</span> represent?</p></li>
-<li><p>Determine <span class="math inline">\(P(A^C)\)</span>.</p></li>
-</ol>
-</section>
-<section id="those-other-events" class="slide level2">
-<h2>Those “other” events</h2>
-<p>What are the intersection, union, complement, and difference of events <span class="math inline">\(A\)</span> (getting a head) and <span class="math inline">\(B\)</span> (a tail) as applied to our coin-toss example? Are the two events <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span> disjoint?</p>
-<p>What are the probabilities assigned to those events:</p>
-<ul>
-<li><span class="math inline">\(P(A \cap B)=\)</span>?</li>
-<li><span class="math inline">\(P(A \cup B)=\)</span>?</li>
-<li>…etc.</li>
-</ul>
-</section>
-<section id="how-do-probabilities-work" class="slide level2">
-<h2>How do probabilities “work”?</h2>
-<p>Komolgorov axioms</p>
-<ol type="1">
-<li><p>The probability of any event in the sample space is a non-negative real number (could be zero!)</p></li>
-<li><p>The probability of the entire sample space is 1</p></li>
-<li><p>If <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span> are <strong>disjoint</strong> events (<strong>mutually exclusive</strong>), then the probability of <span class="math inline">\(A\)</span> or <span class="math inline">\(B\)</span> occurring is the sum of the individual probabilities that they occur</p></li>
-</ol>
-</section>
-<section id="how-to-probabilities-work" class="slide level2">
-<h2>How to probabilities “work”?</h2>
-<p>For two events <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span> with probabilities <span class="math inline">\(P(A)\)</span> and <span class="math inline">\(P(B)\)</span> of occurring, the Kolmogorov axioms give us two important rules:</p>
-<ul>
-<li><strong>Complement Rule</strong>: <span class="math inline">\(P(A^C) = 1- P(A)\)</span></li>
-<li><strong>Inclusion-Exclusion</strong>: <span class="math inline">\(P(A \cup B) = P(A) + P(B) - P(A \cap B)\)</span></li>
+<li>DeMorgan’s Laws</li>
+<li>Introduction to conditional probability</li>
+<li>Bayes’ Rule</li>
 </ul>
 </section>
 <section id="demorgans-laws" class="slide level2">
@@ -574,10 +254,90 @@
 <li><p><strong>Complement of intersection</strong>: <span class="math inline">\((A\cap B)^C = A^C \cup B^C\)</span></p></li>
 </ul>
 </section>
-<section id="gunter-et-al.-study-2017" class="slide level2 smaller">
-<h2>Gunter et al.&nbsp;study (2017)</h2>
-
-<img data-src="images/lec-3/coffee.png" width="300" class="r-stretch"><table class="caption-top">
+<section id="conditional-probability" class="slide level2">
+<h2>Conditional probability</h2>
+<ul>
+<li><strong>Conditional probability</strong> is he probability an event will occur when another event has already occurred. The <strong>conditional probability</strong> of event <span class="math inline">\(A\)</span> given event <span class="math inline">\(B\)</span> is</li>
+</ul>
+<p><span class="math display">\[
+P(A|B) = \frac{P(A\cap B)}{P(B)}
+\]</span></p>
+<ul>
+<li>How can we represent this visually? (Drawing)</li>
+</ul>
+</section>
+<section id="examples" class="slide level2">
+<h2>Examples</h2>
+<p>Examples come up all the time in the real world:</p>
+<ul>
+<li>Given that a mammogram comes back positive, what is the probability that a woman has breast cancer?</li>
+<li>Given that a 68-year old man has suffered four previous heart attacks, what is the probability he dies in the next five years?</li>
+<li>Given that a patient has a mutation in the CFTR gene, what is the probability their offspring will have cystic fibrosis?</li>
+</ul>
+</section>
+<section id="independence-and-the-multiplicative-rule" class="slide level2 smaller">
+<h2>Independence and the multiplicative rule</h2>
+<p>We can rewrite the definition of conditional probability:</p>
+<p><span class="math display">\[
+P(A|B) = \frac{P(A\cap B)}{P(B)} \implies  \underbrace{P(A\cap B) = P(A | B) \times P(B)}_{\text{Multiplicative Rule}}
+\]</span></p>
+<div class="callout callout-tip callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Question</strong></p>
+</div>
+<div class="callout-content">
+<p>What does the multiplicative rule mean in plain English?</p>
+</div>
+</div>
+</div>
+<ul>
+<li>The probability that A and B <strong>both happen</strong> is the probability that B happened, multiplied by the probability of A happened (given B already happened).</li>
+</ul>
+</section>
+<section id="the-multiplicative-rule" class="slide level2">
+<h2>The multiplicative rule</h2>
+<p>Events <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span> are said to be <strong>independent</strong> when</p>
+<div class="callout callout-caution no-icon callout-style-simple">
+<div class="callout-body">
+<div class="callout-content">
+<p><span class="math display">\[
+P(A \cap B) = P(A) \times P(B)
+\]</span></p>
+</div>
+</div>
+</div>
+<p>or equivalently, <span class="math inline">\(P(A|B) = P(A)\)</span> or <span class="math inline">\(P(B|A) = P(B)\)</span></p>
+<ul>
+<li>In other words, if A and B are independent, then the probability of both happening is simply the probability of A happening times the probability of B happening. (Since B happening has nothing to do with A later happening, or vice-versa).</li>
+</ul>
+</section>
+<section id="example" class="slide level2">
+<h2>Example</h2>
+<ul>
+<li><p>Experiment: Toss a fair 6-sided dice two times. We assume the two tosses are <strong>independent</strong> from each other.</p></li>
+<li><p>Let <span class="math inline">\(A\)</span> = getting a 1 on the first toss. Let <span class="math inline">\(B\)</span> = getting a 1 on the second toss.</p></li>
+<li><p>What is <span class="math inline">\(P(A)\)</span>?</p></li>
+<li><p>What is <span class="math inline">\(P(B)\)</span>?</p></li>
+<li><p>What is the <span class="math inline">\(P(A \cap B)\)</span>?</p></li>
+<li><p>What is <span class="math inline">\(P(A | B)\)</span> ?</p></li>
+<li><p>What is <span class="math inline">\(P(B | A)\)</span> ?</p></li>
+</ul>
+</section>
+<section id="recall-disjoint-events" class="slide level2">
+<h2>Recall: disjoint events</h2>
+<ul>
+<li><p>Definition: Two outcomes are <strong>disjoint</strong> or <strong>mutually exclusive</strong> if they cannot both happen.</p></li>
+<li><p>For example: If we roll a die, the outcomes 1 and 2 are disjoint since they cannot both occur.</p></li>
+<li><p>On the other hand, the outcomes 1 and “rolling an odd number” are not disjoint since both occur if the outcome of the roll is a 1.</p></li>
+</ul>
+</section>
+<section id="conditional-probabilities-and-independence" class="slide level2 smaller">
+<h2>Conditional probabilities and independence</h2>
+<table class="caption-top">
 <thead>
 <tr class="header">
 <th>Coffee drinking</th>
@@ -606,32 +366,268 @@
 <td style="text-align: center;">28535</td>
 </tr>
 <tr class="even">
-<td>Total</td>
+<td><strong>Total</strong></td>
 <td style="text-align: center;">9080</td>
 <td style="text-align: center;">60084</td>
 <td style="text-align: center;">64821</td>
 </tr>
 </tbody>
 </table>
-<p>What was the probability that a randomly selected person in the trial..</p>
+<p>What was the probability a randomly selected person in the study…</p>
 <ul>
-<li><p>… did not drink coffee?</p></li>
-<li><p>… died during the study or did not drink coffee?</p></li>
-<li><p>…did not die during the study and was a high coffee drinker?</p></li>
+<li>…died?</li>
+<li>…died, given they were a non-coffee drinker?</li>
+</ul>
+<div class="callout callout-caution callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Question</strong></p>
+</div>
+<div class="callout-content">
+<p>In this study, were dying and coffee drinking independent events?</p>
+</div>
+</div>
+</div>
+</section>
+<section id="the-law-of-total-probability" class="slide level2">
+<h2>The law of total probability</h2>
+<ul>
+<li>Suppose we partition <span class="math inline">\(B\)</span> into mutually disjoint events <span class="math inline">\(B_1, B_2, \ldots B_k\)</span> that comprise the entire sample space.</li>
+<li>Then the <strong>law of total probability</strong> states that the probability of event <span class="math inline">\(A\)</span> is</li>
+</ul>
+<p><span class="math display">\[
+P(A) = P(A \cap B_1) + P(A \cap B_2) + \cdots + P(A \cap B_k)
+\]</span></p>
+<ul>
+<li>[Drawing]</li>
+</ul>
+</section>
+<section id="rewriting" class="slide level2">
+<h2>Rewriting…</h2>
+<ul>
+<li>We can rewrite these probabilities using the multiplicative rule as follows:</li>
+</ul>
+<p><span class="math display">\[
+\begin{aligned}
+P(A) &amp;= P(A \cap B_1) + P(A \cap B_2) + \cdots + P(A \cap B_k) \\
+     &amp;= P(A|B_1) P(B_1) + P(A|B_2)P(B_2) + \cdots + P(A | B_k)P(B_k)
+\end{aligned}
+\]</span></p>
+<ul>
+<li>Why rewrite? Sometimes <span class="math inline">\(P(A|B_1)\)</span>, <span class="math inline">\(P(B_1)\)</span> are easier to find than <span class="math inline">\(P(A \cap B_1)\)</span>, etc. We’ll find out WHY (i.e.&nbsp;what these probabilities represent) in our next lecture.</li>
+</ul>
+</section>
+<section id="the-law-of-total-probability-in-action" class="slide level2 smaller">
+<h2>The law of total probability in action</h2>
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th>Coffee drinking</th>
+<th style="text-align: center;">Died? Yes</th>
+<th style="text-align: center;">Died? No</th>
+<th style="text-align: center;">Total</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>None</td>
+<td style="text-align: center;">1039</td>
+<td style="text-align: center;">5438</td>
+<td style="text-align: center;">6477</td>
+</tr>
+<tr class="even">
+<td>Med-Low</td>
+<td style="text-align: center;">4440</td>
+<td style="text-align: center;">29712</td>
+<td style="text-align: center;">29809</td>
+</tr>
+<tr class="odd">
+<td>High</td>
+<td style="text-align: center;">3601</td>
+<td style="text-align: center;">24934</td>
+<td style="text-align: center;">28535</td>
+</tr>
+<tr class="even">
+<td><strong>Total</strong></td>
+<td style="text-align: center;">9080</td>
+<td style="text-align: center;">60084</td>
+<td style="text-align: center;">64821</td>
+</tr>
+</tbody>
+</table>
+<p>What was the probability a randomly selected person died? Let’s find this using the law of total probability.</p>
+</section>
+<section id="the-law-of-total-probability-in-action-1" class="slide level2">
+<h2>The law of total probability in action</h2>
+<ul>
+<li><p>In an introductory statistics course, 50% of students were undergrads, 40% were master’s students, and 10% were PhD students.</p></li>
+<li><p>80% of the undergrads didn’t give enough sleep, 40% of the master’s students didn’t get enough sleep, and 10% of the PhD students didn’t get enough sleep.</p></li>
+<li><p>What is the probability that a randomly selected student in this class didn’t get enough sleep? Are sufficient sleep status and year independent?</p></li>
+</ul>
+<p><strong>Let’s solve this using the Law of Total Probability…</strong></p>
+</section>
+<section id="solution" class="slide level2">
+<h2>Solution</h2>
+</section>
+<section id="order-matters" class="slide level2">
+<h2>Order matters!</h2>
+<p>What is the probability that a random person…</p>
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th>Coffee drinking</th>
+<th style="text-align: center;">Died? Yes</th>
+<th style="text-align: center;">Died? No</th>
+<th style="text-align: center;">Total</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>None</td>
+<td style="text-align: center;">1039</td>
+<td style="text-align: center;">5438</td>
+<td style="text-align: center;">6477</td>
+</tr>
+<tr class="even">
+<td>Med-Low</td>
+<td style="text-align: center;">4440</td>
+<td style="text-align: center;">29712</td>
+<td style="text-align: center;">29809</td>
+</tr>
+<tr class="odd">
+<td>High</td>
+<td style="text-align: center;">3601</td>
+<td style="text-align: center;">24934</td>
+<td style="text-align: center;">28535</td>
+</tr>
+<tr class="even">
+<td><strong>Total</strong></td>
+<td style="text-align: center;">9080</td>
+<td style="text-align: center;">60084</td>
+<td style="text-align: center;">64821</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><p>…was a high coffee drinker, given that they died?</p></li>
+<li><p>…died, given that they were a high coffee drinker?</p></li>
+</ul>
+<p>Are these two probabilities the same?</p>
+</section>
+<section id="bayes-rule" class="slide level2">
+<h2>Bayes’ rule</h2>
+<ul>
+<li><p>We can use <strong>Bayes’ rule</strong> to “reverse” the order of conditioning.</p></li>
+<li><p>By definition:</p></li>
+</ul>
+<p><span class="math display">\[P(A | B) = \frac{P(A \cap B)}{P(B)} = \frac{P(B | A) P(A)}{P(B)}\]</span></p>
+</section>
+<section id="bayes-rule-1" class="slide level2">
+<h2>Bayes’ rule</h2>
+<ul>
+<li>Using the definition of conditional probability, the law of total probability, and the multiplicative rule, we have</li>
+</ul>
+<p><span class="math display">\[\begin{align}
+P(A | B) = \frac{P(A \cap B)}{P(B)} &amp;= \frac{P(B | A) P(A)}{P(B)} \\
+&amp;= \frac{P(B | A) P(A) }{P(B | A) P(A) + P(B | A^C) P(A^C)}
+\end{align}\]</span></p>
+</section>
+<section id="what-if-a-is-partitioned-into-mutually-disjoint-events" class="slide level2">
+<h2>What if <span class="math inline">\(A\)</span> is partitioned into mutually disjoint events?</h2>
+<p>If instead <span class="math inline">\(A\)</span> is partitioned into <span class="math inline">\(k\)</span> mutually disjoint events that together comprise the entire sample space, Bayes’ rule gives:</p>
+<p><span class="math display">\[\begin{align}
+P(A | B) &amp;= \frac{P(B | A) P(A)}{P(B)} \\
+&amp;= \frac{P(B | A) P(A) }{P(B | A_1) P(A_1) + P(B | A_2) P(A_2) + \cdots P(B | A^k) P(A^k)}
+\end{align}\]</span></p>
+</section>
+<section id="bayes-rule-example" class="slide level2 smaller">
+<h2>Bayes’ rule Example</h2>
+<p>What is the probability that a random person in the coffee study…</p>
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th>Coffee drinking</th>
+<th style="text-align: center;">Died? Yes</th>
+<th style="text-align: center;">Died? No</th>
+<th style="text-align: center;">Total</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>None</td>
+<td style="text-align: center;">1039</td>
+<td style="text-align: center;">5438</td>
+<td style="text-align: center;">6477</td>
+</tr>
+<tr class="even">
+<td>Med-Low</td>
+<td style="text-align: center;">4440</td>
+<td style="text-align: center;">29712</td>
+<td style="text-align: center;">29809</td>
+</tr>
+<tr class="odd">
+<td>High</td>
+<td style="text-align: center;">3601</td>
+<td style="text-align: center;">24934</td>
+<td style="text-align: center;">28535</td>
+</tr>
+<tr class="even">
+<td><strong>Total</strong></td>
+<td style="text-align: center;">9080</td>
+<td style="text-align: center;">60084</td>
+<td style="text-align: center;">64821</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>…was a high coffee drinker, given that he died?</li>
+<li>…died, given that he was a high coffee drinker?</li>
+</ul>
+<p>Let’s verify our results using Bayes’ rule.</p>
+</section>
+<section id="why-do-we-need-bayes-rule" class="slide level2">
+<h2>Why do we need Bayes’ rule?</h2>
+<ul>
+<li><p>If we have the row and column totals, we can directly calculate these conditional probabilities from a table.</p></li>
+<li><p>So, why would we even need Bayes’ rule?</p></li>
+<li><p>There are many cases where you would not have row/column totals.</p></li>
+</ul>
+</section>
+<section id="example-medical-diagnosis-with-missing-data" class="slide level2">
+<h2>Example: Medical diagnosis with missing data</h2>
+<ul>
+<li><p>Imagine a scenario where a rare disease is being studied.</p></li>
+<li><p>You may have detailed information about patients who tested positive for the disease (including their symptoms and demographics), but you might lack comprehensive data on the entire population’s symptom distribution or total number of people tested.</p></li>
+<li><p>In this case, you wouldn’t have the full row or column totals, making it necessary to use Bayes’ Theorem to infer probabilities based on the available conditional probabilities and the prevalence of the disease.</p></li>
+<li><p>This is common in situations where data is incomplete, either due to privacy concerns, lack of resources, or when dealing with emerging diseases.</p></li>
 </ul>
 </section>
 <section id="recap" class="slide level2">
 <h2>Recap</h2>
 <ul>
-<li>Probabilities come up all the time!</li>
-<li>Bayesian vs.&nbsp;frequentist approaches</li>
-<li>Probability spaces, sample spaces, events</li>
-<li>Set operations</li>
-<li>How do probabilities work? (Set operations, DeMorgan’s Laws)</li>
+<li><p>Conditional probability, the multiplicative rule, and Bayes’ theorem</p></li>
+<li><p>Disjoint vs.&nbsp;independent events</p></li>
+<li><p>Law of total probability</p></li>
+<li><p>Why is Bayes’ rule helpful?</p></li>
+</ul>
+</section>
+<section id="next-class" class="slide level2">
+<h2>Next class</h2>
+<ul>
+<li>Lecture 5: Medical diagnostics</li>
+</ul>
+</section>
+<section id="participation" class="slide level2">
+<h2>Participation</h2>
+<ul>
+<li>Name + How was class (sentence or artistic rendition)</li>
 </ul>
 
 
-</section></section>
+</section>
     </div>
   <div class="quarto-auto-generated-content" style="display: none;">
 <p><img src="images/logo600-beamer.png" class="slide-logo"></p>
