@@ -9,7 +9,7 @@
 <link href="../site_libs/quarto-html/quarto-syntax-highlighting-ed96de9b727972fe78a7b5d16c58bf87.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
   <meta name="generator" content="quarto-1.8.27">
 
-  <title>BIOS 600 Fall 2026 – Lecture 4: Conditional Probability</title>
+  <title>BIOS 600 Fall 2026 – Lecture 5: Diagnostic Testing</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -27,72 +27,6 @@
       margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
       vertical-align: middle;
     }
-    /* CSS for syntax highlighting */
-    html { -webkit-text-size-adjust: 100%; }
-    pre > code.sourceCode { white-space: pre; position: relative; }
-    pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
-    pre > code.sourceCode > span:empty { height: 1.2em; }
-    .sourceCode { overflow: visible; }
-    code.sourceCode > span { color: inherit; text-decoration: inherit; }
-    div.sourceCode { margin: 1em 0; }
-    pre.sourceCode { margin: 0; }
-    @media screen {
-    div.sourceCode { overflow: auto; }
-    }
-    @media print {
-    pre > code.sourceCode { white-space: pre-wrap; }
-    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
-    }
-    pre.numberSource code
-      { counter-reset: source-line 0; }
-    pre.numberSource code > span
-      { position: relative; left: -4em; counter-increment: source-line; }
-    pre.numberSource code > span > a:first-child::before
-      { content: counter(source-line);
-        position: relative; left: -1em; text-align: right; vertical-align: baseline;
-        border: none; display: inline-block;
-        -webkit-touch-callout: none; -webkit-user-select: none;
-        -khtml-user-select: none; -moz-user-select: none;
-        -ms-user-select: none; user-select: none;
-        padding: 0 4px; width: 4em;
-        color: #aaaaaa;
-      }
-    pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
-    div.sourceCode
-      { color: #003b4f; background-color: #f1f3f5; }
-    @media screen {
-    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
-    }
-    code span { color: #003b4f; } /* Normal */
-    code span.al { color: #ad0000; } /* Alert */
-    code span.an { color: #5e5e5e; } /* Annotation */
-    code span.at { color: #657422; } /* Attribute */
-    code span.bn { color: #ad0000; } /* BaseN */
-    code span.bu { } /* BuiltIn */
-    code span.cf { color: #003b4f; font-weight: bold; } /* ControlFlow */
-    code span.ch { color: #20794d; } /* Char */
-    code span.cn { color: #8f5902; } /* Constant */
-    code span.co { color: #5e5e5e; } /* Comment */
-    code span.cv { color: #5e5e5e; font-style: italic; } /* CommentVar */
-    code span.do { color: #5e5e5e; font-style: italic; } /* Documentation */
-    code span.dt { color: #ad0000; } /* DataType */
-    code span.dv { color: #ad0000; } /* DecVal */
-    code span.er { color: #ad0000; } /* Error */
-    code span.ex { } /* Extension */
-    code span.fl { color: #ad0000; } /* Float */
-    code span.fu { color: #4758ab; } /* Function */
-    code span.im { color: #00769e; } /* Import */
-    code span.in { color: #5e5e5e; } /* Information */
-    code span.kw { color: #003b4f; font-weight: bold; } /* Keyword */
-    code span.op { color: #5e5e5e; } /* Operator */
-    code span.ot { color: #003b4f; } /* Other */
-    code span.pp { color: #ad0000; } /* Preprocessor */
-    code span.sc { color: #5e5e5e; } /* SpecialChar */
-    code span.ss { color: #20794d; } /* SpecialString */
-    code span.st { color: #20794d; } /* String */
-    code span.va { color: #111111; } /* Variable */
-    code span.vs { color: #20794d; } /* VerbatimString */
-    code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   </style>
   <link rel="stylesheet" href="../site_libs/revealjs/dist/theme/quarto-534cd8e3a96973385dffff3f4709048d.css">
   <link href="../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
@@ -186,160 +120,89 @@
       margin-right: 0; 
     }
   </style>
-  <link href="../site_libs/countdown-0.4.0/countdown.css" rel="stylesheet">
-
-  <script src="../site_libs/countdown-0.4.0/countdown.js"></script>
-
 </head>
 <body class="quarto-light">
   <div class="reveal">
     <div class="slides">
 
 <section id="title-slide" class="quarto-title-block center">
-  <h1 class="title">Lecture 4: Conditional Probability</h1>
+  <h1 class="title">Lecture 5: Diagnostic Testing</h1>
   <p class="subtitle">BIOS 600 - Fall 2026</p>
 
 <div class="quarto-title-authors">
 </div>
 
 </section>
-<section id="welcome" class="slide level2">
-<h2>Welcome!</h2>
-<p>Take 1 piece of paper per 2 people.</p>
-</section>
 <section id="announcements" class="slide level2">
 <h2>Announcements</h2>
 <ul>
-<li><p>HW 1 Due tonight at 11:59pm</p></li>
-<li><p>Lab 3 session Today at 3:30pm, due Friday at 11:59pm</p>
+<li>Free Tutoring available! Open sessions and individual sessions.</li>
+</ul>
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th>Tutor</th>
+<th>Open Session Time</th>
+<th>Location/Loom</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Molly Hoch</td>
+<td>Mondays, 10am-12pm</td>
+<td>Rosenau 231 (<em>10/13: 2005 MHRC</em>)</td>
+</tr>
+<tr class="even">
+<td>Wenqing Zhu</td>
+<td>Tues &amp; Thurs, 10-11:30am</td>
+<td><a href="https://zoom.us/j/6873416836">https://zoom.us/j/6873416836</a></td>
+</tr>
+<tr class="odd">
+<td>Jose Lopez</td>
+<td>Wednesdays, 10am-12pm</td>
+<td><a href="https://zoom.us/j/6873416836">https://zoom.us/j/6873416836</a></td>
+</tr>
+</tbody>
+</table>
 <ul>
-<li>Get started early!</li>
-</ul></li>
+<li>Email bios600tutor@unc.edu to set up an individual appointment.</li>
 </ul>
 </section>
-<section id="ensure-your-code-is-visible-in-your-pdf-document" class="slide level2">
-<h2>Ensure your code is visible in your PDF document!</h2>
+<section id="announcements-1" class="slide level2">
+<h2>Announcements</h2>
 <ul>
-<li><p>For all assignments</p></li>
-<li><p>Go from this:</p></li>
+<li><p>Lab 3 Due Friday at 11:59pm</p></li>
+<li><p>HW 2 will be assigned after class, due Sept 11 at 11:59pm.</p></li>
 </ul>
-<div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a></a><span class="fu">ggplot</span>(<span class="at">data =</span> cdc, <span class="fu">aes</span>(<span class="at">x =</span> Region, <span class="at">y =</span> InfantMortalityRate)) <span class="sc">+</span> </span>
-<span id="cb1-2"><a></a>  <span class="fu">geom_boxplot</span>() <span class="sc">+</span> <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">"Infant Mortality Rate (%) by Region"</span>, <span class="at">xlab =</span> <span class="st">"Region"</span>, <span class="at">ylab =</span> <span class="st">"Infant Mortality Rate (%)"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</div>
-<p>to this:</p>
-<div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a></a><span class="fu">ggplot</span>(<span class="at">data =</span> cdc, <span class="fu">aes</span>(<span class="at">x =</span> Region, </span>
-<span id="cb2-2"><a></a>                       <span class="at">y =</span> InfantMortalityRate)) <span class="sc">+</span> </span>
-<span id="cb2-3"><a></a>  <span class="fu">geom_boxplot</span>() <span class="sc">+</span></span>
-<span id="cb2-4"><a></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">"Infant Mortality Rate (%) by Region"</span>, </span>
-<span id="cb2-5"><a></a>       <span class="at">xlab =</span> <span class="st">"Region"</span>, </span>
-<span id="cb2-6"><a></a>       <span class="at">ylab =</span> <span class="st">"Infant Mortality Rate (%)"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</div>
 </section>
 <section id="reading" class="slide level2">
 <h2>Reading</h2>
 <ul>
-<li>Pagano and Gavreau: Sections 6.2</li>
-<li><a href="https://www.openintro.org/go/?id=os4_for_screen_readers&amp;referrer=/book/os/index.php">OpenIntro Statistics</a>: Section 3.2</li>
+<li><p>Pagano and Gavreau: Section 6.4</p></li>
+<li><p><a href="https://www.openintro.org/go/?id=os4_for_screen_readers&amp;referrer=/book/os/index.php">OpenIntro Statistics</a>: No corresponding section</p></li>
 </ul>
 </section>
 <section id="overview" class="slide level2">
 <h2>Overview</h2>
 <ul>
-<li>Example &amp; visual illustration of probability</li>
-<li>DeMorgan’s Laws</li>
-<li>Conditional probability</li>
-<li>Independence and disjoint events</li>
+<li><p>How conditional probabilities relate to sensitivity, specificity, &amp; more!</p></li>
+<li><p>Example with Bayes’ theorem</p></li>
+<li><p>ROC Curves</p></li>
 </ul>
 </section>
-<section id="example" class="slide level2">
-<h2>Example</h2>
-<p>Consider the experiment of rolling one fair six-sided die.</p>
-<p>Let’s define the following events:</p>
+<section id="conditional-probabilities" class="slide level2">
+<h2>Conditional probabilities</h2>
+<p>Suppose we care about the probability that someone has HIV, denoted by <span class="math inline">\(P(HIV+)\)</span>.</p>
 <ul>
-<li><p><span class="math inline">\(A\)</span>: roll a 3</p></li>
-<li><p><span class="math inline">\(B\)</span>: roll an odd number</p></li>
+<li>What if they have a positive HIV test?</li>
 </ul>
-<p>Let’s draw out our experiment visually.</p>
-</section>
-<section id="practice" class="slide level2">
-<h2>Practice</h2>
-<p>Using your illustration, determine the following:</p>
-<ol type="a">
-<li><p>What is the sample space of the experiment?</p></li>
-<li><p>What is P(<span class="math inline">\(A\)</span>)?</p></li>
-<li><p>What is P(<span class="math inline">\(B\)</span>)?</p></li>
-<li><p>What is the probability of <span class="math inline">\(A\)</span> happening, given we know we’ve rolled an odd number?</p></li>
-</ol>
-</section>
-<section id="practice-1" class="slide level2">
-<h2>Practice</h2>
-<ol start="5" type="a">
-<li><p>What is P(<span class="math inline">\(A^C\)</span>) ?</p></li>
-<li><p>List out the events in <span class="math inline">\(A \cup B\)</span>. What is P<span class="math inline">\((A \cup B)\)</span>?</p></li>
-<li><p>List out the events in <span class="math inline">\(A \cap B\)</span>. What is P<span class="math inline">\((A \cap B)\)</span>?</p></li>
-<li><p>Are the events <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span> disjoint?</p></li>
-</ol>
-<div class="cell">
-<div class="cell-output-display">
-<div class="countdown" id="timer_6ee5ec10" data-update-every="1" tabindex="0" style="right:0;bottom:0;">
-<div class="countdown-controls"><button class="countdown-bump-down">−</button><button class="countdown-bump-up">+</button></div>
-<code class="countdown-time"><span class="countdown-digits minutes">04</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
-</div>
-</div>
-</div>
-</section>
-<section id="demorgans-laws" class="slide level2">
-<h2>DeMorgan’s laws</h2>
-
-<img data-src="images/lec-3/demorgan.jpg" width="100" class="r-stretch"><ul>
-<li><p><strong>Complement of union</strong>: <span class="math inline">\((A\cup B)^C = A^C \cap B^C\)</span></p></li>
-<li><p><strong>Complement of intersection</strong>: <span class="math inline">\((A\cap B)^C = A^C \cup B^C\)</span></p></li>
-</ul>
-</section>
-<section id="practice-2" class="slide level2">
-<h2>Practice</h2>
-<p>Verify the <strong>Complement of union</strong> law with our dice example. (Draw it out!)</p>
-</section>
-<section>
-<section id="conditional-probability" class="title-slide slide level1 center">
-<h1>Conditional probability</h1>
-
-</section>
-<section id="conditional-probability-1" class="slide level2">
-<h2>Conditional probability</h2>
+<p><span class="math inline">\(P(HIV + | Test +)\)</span></p>
 <ul>
-<li><strong>Conditional probability</strong> is the probability an event will occur when another event has already occurred.</li>
+<li>What if they have a negative HIV test?</li>
 </ul>
-</section>
-<section id="examples" class="slide level2">
-<h2>Examples</h2>
-<p>Examples come up all the time in the real world:</p>
-<ul>
-<li><p>Given that a mammogram comes back positive, what is the probability that a woman has breast cancer?</p></li>
-<li><p>Given that a 68-year old man has suffered four previous heart attacks, what is the probability he dies in the next five years?</p></li>
-<li><p>Given that a patient has a mutation in the CFTR gene, what is the probability their offspring will have cystic fibrosis?</p></li>
-</ul>
-</section>
-<section id="conditional-probability-2" class="slide level2">
-<h2>Conditional probability</h2>
-<p><strong>Definition</strong>: The <strong>conditional probability</strong> of event <span class="math inline">\(A\)</span> given event <span class="math inline">\(B\)</span> is</p>
-<p><span class="math display">\[
-P(A|B) = \frac{P(A\cap B)}{P(B)}
-\]</span></p>
-<ul>
-<li><p>How can we represent this visually? (Drawing)</p></li>
-<li><p>Takeaway: If we know <span class="math inline">\(B\)</span> has already happened, our sample space effectively shrinks to only events that are contained within <span class="math inline">\(B\)</span>.</p></li>
-</ul>
-</section>
-<section id="the-multiplicative-rule" class="slide level2">
-<h2>The Multiplicative rule</h2>
-<p>We can rewrite the definition of conditional probability:</p>
-<p><span class="math display">\[
-P(A|B) = \frac{P(A\cap B)}{P(B)} \implies  \underbrace{P(A\cap B) = P(A | B) \times P(B)}_{\text{Multiplicative Rule}}
-\]</span></p>
-<div class="callout callout-tip callout-titled callout-style-default">
+<p><span class="math inline">\(P(HIV + | Test -)\)</span></p>
+<p>Knowing the result of the HIV test changes our estimate of their HIV proability.</p>
+<div class="callout callout-tip callout-titled callout-style-simple">
 <div class="callout-body">
 <div class="callout-title">
 <div class="callout-icon-container">
@@ -348,95 +211,154 @@ P(A|B) = \frac{P(A\cap B)}{P(B)} \implies  \underbrace{P(A\cap B) = P(A | B) \ti
 <p><strong>Question</strong></p>
 </div>
 <div class="callout-content">
-<p>What does the multiplicative rule mean in plain English?</p>
+<p>Which of the three probabilities would we expect to be the highest? The lowest?</p>
 </div>
 </div>
 </div>
+</section>
+<section id="medical-diagnostics" class="slide level2">
+<h2>Medical diagnostics</h2>
+<p>Suppose we’re interested in the performance of a diagnostic test. Let <span class="math inline">\(A\)</span> be the event that someone has a condition of interest, and let <span class="math inline">\(B\)</span> be the event that a test for that condition is positive.</p>
 <ul>
-<li>The probability that A and B <strong>both happen</strong> is the probability that B happened, multiplied by the probability of A happened (given B already happened).</li>
+<li><p><strong>Prevalence</strong>: <span class="math inline">\(P(A)\)</span></p></li>
+<li><p><strong>Sensitivity</strong>: <span class="math inline">\(P(B|A)\)</span>, or the true positive rate</p>
+<ul>
+<li>probability that the test is positive given the condition is present</li>
+</ul></li>
+<li><p><strong>Specificity</strong>: <span class="math inline">\(P(B^C | A^C)\)</span>, or 1 minus the false positive rate</p>
+<ul>
+<li>Probability that the test is negative given the condition is <strong>not</strong> present</li>
+</ul></li>
 </ul>
 </section>
-<section id="independence" class="slide level2">
-<h2>Independence</h2>
-<p>Events <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span> are said to be <strong>independent</strong> when</p>
-<div class="callout callout-caution no-icon callout-style-simple">
+<section id="medical-diagnostics-continued" class="slide level2">
+<h2>Medical diagnostics (continued)</h2>
+<ul>
+<li><p><strong>Positive Predictive Value (PPV)</strong>: <span class="math inline">\(P(A|B)\)</span></p>
+<ul>
+<li></li>
+</ul></li>
+<li><p><strong>Negative Predictive Value (NPV)</strong>: <span class="math inline">\(P(A^C | B^C)\)</span></p>
+<ul>
+<li></li>
+</ul></li>
+</ul>
+<div class="callout callout-tip callout-style-simple">
 <div class="callout-body">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
 <div class="callout-content">
+<p>Write out the last two probabilities (PPV and NPV) in words.</p>
+</div>
+</div>
+</div>
+</section>
+<section id="popularization-of-medical-diagnostics" class="slide level2">
+<h2>Popularization of medical diagnostics</h2>
+<p>During COVID-19, diagnostic testing has become mainstream.</p>
+
+<img data-src="images/lec-5/covid.jpg" width="300" class="r-stretch"><ul>
+<li><p>Testing for COVID-19 is not perfect. It may come back positive in some people who are not infected with SARS-CoV-2 and negative in some people who are.</p></li>
+<li><p>Diagnostic tests are developed with both sensitivity and specificity in mind.</p></li>
+</ul>
+</section>
+<section id="sensitivity-and-specificity" class="slide level2">
+<h2>Sensitivity and specificity</h2>
+<ul>
+<li><p>The greater the sensitivity, the <strong>less likely it will miss real cases</strong>.</p>
+<ul>
+<li>Recall: sensitivity is the probability of a positive test, given the condition is present.</li>
+</ul></li>
+<li><p>The greater the specificity, the more likely uninfected individuals will be <strong>correctly deemed negative</strong>.</p>
+<ul>
+<li>Recall: Specificity is the probability of a negative test, given the condition is not present.</li>
+</ul></li>
+</ul>
+</section>
+<section id="a-tests-performance-can-be-surprisingly-counterintuitive" class="slide level2 smaller">
+<h2>A test’s performance can be surprisingly counterintuitive</h2>
+<ul>
+<li><p>Consider a scenario with COVID-19 testing in an asymptomatic or mild population with 1 in 51 people infected.</p></li>
+<li><p>Assume the test is always positive in individuals with the disease (i.e., 100% sensitivity) but falsely positive 10% of the time (i.e., 90% specificity).</p></li>
+<li><p>As shown in the figure (next slide), the chance that someone with a positive test result is actually infected is under 20% (1 in 6)</p></li>
+</ul>
+</section>
+<section id="illustration" class="slide level2">
+<h2>Illustration</h2>
+
+<img data-src="images/lec-5/pos_test.jpg" class="r-stretch"></section>
+<section id="takeaway" class="slide level2">
+<h2>Takeaway</h2>
+<ul>
+<li><p>What’s the takeaway here?</p></li>
+<li><p>Even if a test never misses true cases (perfect sensitivity), a modest false positive rate can mess up the results, <strong>especially</strong> when the disease is rare.</p>
+<ul>
+<li>Consequence: Most people who test positive may not actually be infected.</li>
+</ul></li>
+<li><p>This demonstrates why specificity and disease prevalence are important as well in diagnostic testing.</p></li>
+</ul>
+</section>
+<section id="rapid-self-administered-hiv-tests" class="slide level2">
+<h2>Rapid self-administered HIV tests</h2>
+<p>From the FDA package insert for the OraQuick ADVANCE Rapid HIV-1/2 Antibody test,</p>
+<ul>
+<li><p>Sensitivity, <span class="math inline">\(P(Test+|HIV+)\)</span>: 99.3%</p></li>
+<li><p>Specificity, <span class="math inline">\(P(Test - | HIV -)\)</span>: 99.8%</p></li>
+</ul>
+<p>From CDC statistics for 2016, 14.3/100,000 Americans aged <span class="math inline">\(\geq\)</span> 13 are HIV+.</p>
+<p>Suppose a randomly selected American aged <span class="math inline">\(\geq\)</span> 13 has a positive test on this test. What do you think is the probability they are HIV+?</p>
+</section>
+<section id="steps-to-solve-using-bayes-rule" class="slide level2">
+<h2>Steps to solve using Bayes’ Rule</h2>
+<ol type="1">
+<li><p>Define two events of interest as <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span>.</p></li>
+<li><p>Write the quantity of interest in terms of Bayes’ Rule.</p></li>
+<li><p>Expand denominator in terms of law of total probability.</p></li>
+<li><p>Identify quantities of interest.</p></li>
+<li><p>Plug in quantities from step 4 and solve.</p></li>
+</ol>
+</section>
+<section id="bayes-rule" class="slide level2 smaller">
+<h2>Bayes’ rule</h2>
+<p>Recall Bayes’ rule below. Also recall that we can expand our denominator using Law of Total Probability.</p>
 <p><span class="math display">\[
-P(A \cap B) = P(A) \times P(B)
+\begin{aligned}
+P(A | B) = \frac{P(A \cap B)}{P(B)} &amp;= \frac{P(B | A) P(A)}{P(B)} \\
+&amp;= \frac{P(B | A) P(A) }{P(B | A) P(A) + P(B | A^C) P(A^C)}
+\end{aligned}
 \]</span></p>
-</div>
-</div>
-</div>
-<p>or equivalently, <span class="math inline">\(P(A|B) = P(A)\)</span> or <span class="math inline">\(P(B|A) = P(B)\)</span></p>
+</section>
+<section id="lets-solve" class="slide level2">
+<h2>Let’s solve!</h2>
+<p><strong>Step 1</strong>: Define events as <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span>.</p>
+<p>Let <span class="math inline">\(A\)</span> be the event of being HIV+ and <span class="math inline">\(B\)</span> be testing positive.</p>
+<p><strong>Step 2</strong>: Write out the quantity of interest using Bayes’ Rule.</p>
+<p><span class="math display">\[P(HIV + | Test +) = \frac{P(Test + | HIV +)P(HIV +)}{P(HIV +)}\]</span></p>
+</section>
+<section id="lets-solve-continued" class="slide level2">
+<h2>Let’s Solve! (continued)</h2>
+<p><strong>Step 3</strong>: Expand the denominator using Law of Total Probability. <span class="math display">\[
+=\frac{P(Test + | HIV +)P(HIV +)}{P(Test + | HIV +) P(HIV +) + P(Test + | HIV - ) P(HIV -)}
+\]</span></p>
+<p><strong>Step 4</strong>: Identify quantities of interest.</p>
 <ul>
-<li>In other words, if A and B are independent, then the probability of both happening is simply the probability of A happening times the probability of B happening. (Since B happening has nothing to do with A later happening, or vice-versa).</li>
+<li><p><span class="math inline">\(P(Test + | HIV +)\)</span> = True positive rate = sensitivity = .993</p></li>
+<li><p><span class="math inline">\(P(HIV +)\)</span> = prevalence = .000143</p></li>
+<li><p><span class="math inline">\(P(Test + | HIV - )\)</span> = False positive rate = 1 - specificity = 1-.998</p></li>
+<li><p><span class="math inline">\(P(HIV - )\)</span> = 1 - prevalence = 1-.000143</p></li>
 </ul>
 </section>
-<section id="example-1" class="slide level2">
-<h2>Example</h2>
-<ul>
-<li><p>Experiment: Toss a fair 6-sided dice two times. We assume the two tosses are <strong>independent</strong> from each other.</p></li>
-<li><p>Let <span class="math inline">\(A\)</span> = getting a 1 on the first toss. Let <span class="math inline">\(B\)</span> = getting a 1 on the second toss.</p></li>
-<li><p>What is <span class="math inline">\(P(A)\)</span>?</p></li>
-<li><p>What is <span class="math inline">\(P(B)\)</span>?</p></li>
-<li><p>What is the <span class="math inline">\(P(A \cap B)\)</span>?</p></li>
-<li><p>What is <span class="math inline">\(P(A | B)\)</span> ?</p></li>
-<li><p>What is <span class="math inline">\(P(B | A)\)</span> ?</p></li>
-</ul>
+<section id="lets-solve-continued-1" class="slide level2">
+<h2>Let’s solve! (continued)</h2>
+<p><strong>Step 5:</strong> Plug in quantities from step 4 and solve.</p>
+<p><span class="math display">\[P(HIV + | Test +)\]</span></p>
+<p><span class="math display">\[=\frac{(.993)(.000143)}{(.993)(.000143) + (1-.998)(1-.000143)}\]</span></p>
+<p><span class="math display">\[ = 0.066 = 6.6\%\]</span> Is this result surprising? Why?</p>
 </section>
-<section id="recall-disjoint-events" class="slide level2">
-<h2>Recall: disjoint events</h2>
-<ul>
-<li><p>Definition: Two outcomes are <strong>disjoint</strong> or <strong>mutually exclusive</strong> if they cannot both happen.</p></li>
-<li><p>For example: If we roll a die, the outcomes 1 and 2 are disjoint since they cannot both occur.</p></li>
-<li><p>On the other hand, the outcomes 1 and “rolling an odd number” are not disjoint since both occur if the outcome of the roll is a 1.</p></li>
-</ul>
-</section>
-<section id="conditional-probabilities-and-independence" class="slide level2 smaller">
-<h2>Conditional probabilities and independence</h2>
-<table class="caption-top">
-<thead>
-<tr class="header">
-<th>Coffee drinking</th>
-<th style="text-align: center;">Died? Yes</th>
-<th style="text-align: center;">Died? No</th>
-<th style="text-align: center;">Total</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>None</td>
-<td style="text-align: center;">1039</td>
-<td style="text-align: center;">5438</td>
-<td style="text-align: center;">6477</td>
-</tr>
-<tr class="even">
-<td>Med-Low</td>
-<td style="text-align: center;">4440</td>
-<td style="text-align: center;">29712</td>
-<td style="text-align: center;">29809</td>
-</tr>
-<tr class="odd">
-<td>High</td>
-<td style="text-align: center;">3601</td>
-<td style="text-align: center;">24934</td>
-<td style="text-align: center;">28535</td>
-</tr>
-<tr class="even">
-<td><strong>Total</strong></td>
-<td style="text-align: center;">9080</td>
-<td style="text-align: center;">60084</td>
-<td style="text-align: center;">64821</td>
-</tr>
-</tbody>
-</table>
-<p>What was the probability a randomly selected person in the study…</p>
-<ul>
-<li>…died?</li>
-<li>…died, given they were a non-coffee drinker?</li>
-</ul>
-<div class="callout callout-caution callout-titled callout-style-default">
+<section id="pause-review" class="slide level2">
+<h2>Pause &amp; review</h2>
+<div class="callout callout-tip callout-titled callout-style-simple">
 <div class="callout-body">
 <div class="callout-title">
 <div class="callout-icon-container">
@@ -445,112 +367,130 @@ P(A \cap B) = P(A) \times P(B)
 <p><strong>Question</strong></p>
 </div>
 <div class="callout-content">
-<p>In this study, were dying and coffee drinking independent events?</p>
-</div>
-</div>
-</div>
-</section>
-<section id="order-matters" class="slide level2">
-<h2>Order matters!</h2>
-<p>What is the probability that a random person…</p>
-<table class="caption-top">
-<thead>
-<tr class="header">
-<th>Coffee drinking</th>
-<th style="text-align: center;">Died? Yes</th>
-<th style="text-align: center;">Died? No</th>
-<th style="text-align: center;">Total</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>None</td>
-<td style="text-align: center;">1039</td>
-<td style="text-align: center;">5438</td>
-<td style="text-align: center;">6477</td>
-</tr>
-<tr class="even">
-<td>Med-Low</td>
-<td style="text-align: center;">4440</td>
-<td style="text-align: center;">29712</td>
-<td style="text-align: center;">29809</td>
-</tr>
-<tr class="odd">
-<td>High</td>
-<td style="text-align: center;">3601</td>
-<td style="text-align: center;">24934</td>
-<td style="text-align: center;">28535</td>
-</tr>
-<tr class="even">
-<td><strong>Total</strong></td>
-<td style="text-align: center;">9080</td>
-<td style="text-align: center;">60084</td>
-<td style="text-align: center;">64821</td>
-</tr>
-</tbody>
-</table>
 <ul>
-<li><p>…was a high coffee drinker, given that they died?</p></li>
-<li><p>…died, given that they were a high coffee drinker?</p></li>
+<li>In pairs, review the steps of solving this example. Take turns explaining each of the steps to your partner. (Person 1 explains step 1, person 2 explains step 2, etc.)</li>
 </ul>
-<p>Are these two probabilities the same?</p>
+</div>
+</div>
+</div>
 </section>
-<section id="example-smallpox" class="slide level2">
-<h2>Example: Smallpox</h2>
-<p>The <code>smallpox</code> data set provides a sample of 6,224 individuals from the year 1721 who were exposed to smallpox in Boston.</p>
-<p>Doctors at the time believed that inoculation, which involves exposing a person to the disease in a controlled form, could reduce the likelihood of death.</p>
+<section id="interpretation-of-result-oraquick-test" class="slide level2">
+<h2>Interpretation of Result: Oraquick test</h2>
+<ul>
+<li><p>This calculation is surprising. We would hope that the PPV would be higher.</p></li>
+<li><p>What is going on?</p></li>
+<li><p>Before we answer that: what if a randomly selected adult in Botswana tested positive (HIV prevalence <span class="math inline">\(\approx\)</span> 25%)?</p></li>
+<li><p>To calculate this, we can use our same setup as above, but just swap out a new value for prevalence, <span class="math inline">\(P(HIV +)\)</span>.</p></li>
+</ul>
 </section>
-<section id="example-smallpox-1" class="slide level2">
-<h2>Example: Smallpox</h2>
-<p>Each case represents one person with two variables: <code>inoculated</code> and <code>result</code>. The variable <code>inoculated</code> takes two levels: <code>yes</code> or <code>no</code>, indicating whether the person was inoculated or not. The variable <code>result</code> has outcomes <code>lived</code> or <code>died</code>.</p>
+<section id="ppv-for-botswana" class="slide level2">
+<h2>PPV for Botswana</h2>
+<p><span class="math display">\[P(HIV + | Test +)\]</span></p>
+<p><span class="math display">\[=\frac{(.993)(.25)}{(.993)(.25) + (1-.998)(1-.25)}\]</span></p>
+<p><span class="math display">\[ = .99 = 99\%\]</span></p>
+</section>
+<section id="whats-going-on-here" class="slide level2">
+<h2>What’s going on here?</h2>
+<ul>
+<li><p>The PPV is only 6.6% for US while it’s 99% in Botswana.</p></li>
+<li><p>US has low prevalence of HIV while Botswana has relatively higher prevalence.</p></li>
+<li><p>There will likely be a <strong>higher number of false positives relative to true positives in the place with low prevalence</strong>, causing the positive predictive value (PPV) to drop.</p>
+<ul>
+<li>This is simply due to the nature of the test, i.e.&nbsp;having some nonzero false positive rate, in our case .002.</li>
+</ul></li>
+<li><p>This is something to look out for! Specificity (i.e.&nbsp;FPR) is important to consider.</p></li>
+</ul>
+</section>
+<section id="pause-and-reflect" class="slide level2">
+<h2>Pause and reflect</h2>
+<ul>
+<li>In small groups, reflect on this example and the following takeaway:</li>
+</ul>
+<div class="callout callout-tip callout-titled callout-style-simple">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Takeaway</strong></p>
+</div>
+<div class="callout-content">
+<ul>
+<li><p>In the US, small prevalence + modest false positive rate is causing the PPV to be much lower than we’d want.</p></li>
+<li><p>In Botswana, higher prevalence “corrects” this issue, leading to PPV being much higher (meaning more people who test positive actually have the condition.)</p></li>
+<li><p>With a modest false positive rate, a higher prevalence can help our PPV be higher, yielding a <strong>more useful diagnostic test</strong> for that setting. With lower prevalence, you need to be careful with the conclusions made by a diagnostic test as it could be misleading.</p></li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+<section id="discrimination-thresholds" class="slide level2">
+<h2>Discrimination thresholds</h2>
+<p>Oral HIV tests give positive or negative results depending on levels of HIV antibodies detected in saliva.</p>
+<ul>
+<li><p>If antibody levels are above a certain threshold, it is classified as a positive test.</p></li>
+<li><p>Varying the threshold for a positive vs.&nbsp;negative test will result in a test in different characteristics.</p></li>
+<li><p>At each threshold value, there is a tradeoff between sensitivity and specificity.</p></li>
+</ul>
+</section>
+<section id="roc-curves" class="slide level2">
+<h2>ROC curves</h2>
+<p>Receiver Operating Characteristic curves show how specificity and sensitivity change as the discrimination threshold changes.</p>
+<ul>
+<li>The ROC curve was first developed by electrical and radar engineers during World War II for detecting enemy objects in battlefields, starting in 1941.</li>
+</ul>
 
-<img data-src="images/lec-4/smallpox.png" class="r-stretch"><p>Write out, in formal notation, the probability that a randomly selected person who was not inoculated died from smallpox, and find this probability.</p>
+<img data-src="images/lec-5/roc.jpg" width="400" class="r-stretch"></section>
+<section id="haenssle-et.-al-2018" class="slide level2">
+<h2>Haenssle et. al (2018)</h2>
+
+<img data-src="images/lec-5/man.png" class="r-stretch"><p><a href="https://www.sciencedirect.com/science/article/pii/S0923753419341055?via%3Dihub">paper link here</a></p>
+<ul>
+<li>Machine learning algorithm outperformed doctors in many cases!</li>
+</ul>
 </section>
-<section id="solution" class="slide level2">
-<h2>Solution</h2>
-<p><span class="math inline">\(P(\textrm{result = died | inoculated = no})=\)</span></p>
-<p><span class="math inline">\(\frac{P(\textrm{result = died and inoculated = no})}{P(\textrm{inoculated = no})} = \frac{(844/6224)}{(5980/6224)} = .141\)</span></p>
+<section id="from-haenssle-et-al.-2018" class="slide level2">
+<h2>From Haenssle et al.&nbsp;(2018)</h2>
+
+<img data-src="images/lec-5/roc.png" width="400" class="r-stretch"><p>ROC curves show, for each false positive rate, what the true positive rate is corresponding to that threshold value.</p>
 </section>
-<section id="exercise" class="slide level2">
-<h2>Exercise</h2>
-<p>The people of Boston self-selected whether or not to be inoculated.</p>
-<ol type="a">
-<li><p>Is this study observational or was this an experiment?</p></li>
-<li><p>Can we infer any causal connection using these data?</p></li>
-<li><p>What are some potential confounding variables that might influence whether someone lived or died and also affect whether that person was inoculated?</p></li>
-</ol>
-<div class="cell">
-<div class="cell-output-display">
-<div class="countdown" id="timer_85e2c927" data-update-every="1" tabindex="0" style="right:0;bottom:0;">
-<div class="countdown-controls"><button class="countdown-bump-down">−</button><button class="countdown-bump-up">+</button></div>
-<code class="countdown-time"><span class="countdown-digits minutes">02</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
-</div>
-</div>
-</div>
+<section id="why-roc-curves" class="slide level2">
+<h2>Why ROC Curves?</h2>
+<ul>
+<li><p>By moving the threshold, we can:</p>
+<ul>
+<li><p>Catch more true cases (↑ sensitivity),</p></li>
+<li><p>But risk more false alarms (↑ false positive rate).</p></li>
+</ul></li>
+<li><p>The ROC curve shows <strong>all possible tradeoffs</strong> at once.</p></li>
+<li><p>The <strong>diagonal line</strong> = random guessing.</p></li>
+<li><p>A “good” test’s ROC curve bows toward the <strong>upper-left corner</strong> (high sensitivity, low false positives).</p></li>
+</ul>
+<p><strong>ROC curves help us evaluate how well a test separates groups<br>
+across all possible thresholds.</strong></p>
 </section>
 <section id="recap" class="slide level2">
 <h2>Recap</h2>
 <ul>
-<li><p>Example &amp; visual illustration of probability</p></li>
-<li><p>DeMorgan’s Laws</p></li>
-<li><p>Conditional probability</p></li>
-<li><p>Independence and disjoint events</p></li>
+<li><p>How conditional probabilities relate to sensitivity, specificity, &amp; more!</p></li>
+<li><p>Examples, how small sample size affects diagnostic tests</p></li>
+<li><p>Thresholds &amp; how they affect diagnostic tests</p></li>
+<li><p>ROC Curves: show tradeoff between sensitivity and specificity</p></li>
 </ul>
 </section>
 <section id="next-class" class="slide level2">
 <h2>Next class</h2>
 <ul>
-<li>Lecture 5: Medical diagnostics</li>
+<li>Discrete distributions</li>
 </ul>
 </section>
 <section id="participation" class="slide level2">
 <h2>Participation</h2>
-<ul>
-<li>Name + How was class</li>
-</ul>
+<p>How is lab going?</p>
+<p>Answer the 1-question survey on Canvas by tomorrow at 11:59pm. Your feedback is extremely helpful!</p>
 
 
-</section></section>
+</section>
     </div>
   <div class="quarto-auto-generated-content" style="display: none;">
 <p><img src="images/logo600-beamer.png" class="slide-logo"></p>
@@ -767,82 +707,6 @@ P(A \cap B) = P(A) \times P(B)
         ]
       });
     </script>
-    
-
-    <script>
-
-      // htmlwidgets need to know to resize themselves when slides are shown/hidden.
-
-      // Fire the "slideenter" event (handled by htmlwidgets.js) when the current
-
-      // slide changes (different for each slide format).
-
-      (function () {
-
-        // dispatch for htmlwidgets
-
-        function fireSlideEnter() {
-
-          const event = window.document.createEvent("Event");
-
-          event.initEvent("slideenter", true, true);
-
-          window.document.dispatchEvent(event);
-
-        }
-
-    
-
-        function fireSlideChanged(previousSlide, currentSlide) {
-
-          fireSlideEnter();
-
-    
-
-          // dispatch for shiny
-
-          if (window.jQuery) {
-
-            if (previousSlide) {
-
-              window.jQuery(previousSlide).trigger("hidden");
-
-            }
-
-            if (currentSlide) {
-
-              window.jQuery(currentSlide).trigger("shown");
-
-            }
-
-          }
-
-        }
-
-    
-
-        // hookup for slidy
-
-        if (window.w3c_slidy) {
-
-          window.w3c_slidy.add_observer(function (slide_num) {
-
-            // slide_num starts at position 1
-
-            fireSlideChanged(null, w3c_slidy.slides[slide_num - 1]);
-
-          });
-
-        }
-
-    
-
-      })();
-
-    </script>
-
-    
-
     <script id="quarto-html-after-body" type="application/javascript">
       window.document.addEventListener("DOMContentLoaded", function (event) {
         const tabsets =  window.document.querySelectorAll(".panel-tabset-tabby")
