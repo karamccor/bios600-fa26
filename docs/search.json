@@ -1,5 +1,292 @@
 [
   {
+    "objectID": "slides/lec-6-discrete.html#announcements",
+    "href": "slides/lec-6-discrete.html#announcements",
+    "title": "Lecture 6: Discrete distributions",
+    "section": "Announcements",
+    "text": "Announcements\n\nLab 3 now due Tuesday at 11:59pm.\nHW 2 due Thursday at 11:59pm.\nParticipation activity for today due Wednesday at 11:59pm.\nTomorrow’s lab session (9/9) is a TA Office Hour, come by if you need assistance with Lab 3 or HW 2!\n\nIn-person and remote options, join the zoom via Canvas &gt; Zoom Pro then click on the meeting for 9/9. Julian will be available to help on zoom."
+  },
+  {
+    "objectID": "slides/lec-6-discrete.html#supplemental-reading",
+    "href": "slides/lec-6-discrete.html#supplemental-reading",
+    "title": "Lecture 6: Discrete distributions",
+    "section": "Supplemental reading",
+    "text": "Supplemental reading\n\nPagano and Gavreau: Section 7.2 and 7.3\nOpenIntro Statistics: 3.4, 4.3, and 4.5"
+  },
+  {
+    "objectID": "slides/lec-6-discrete.html#overview",
+    "href": "slides/lec-6-discrete.html#overview",
+    "title": "Lecture 6: Discrete distributions",
+    "section": "Overview",
+    "text": "Overview\n\nWhat is a random variable?\nDiscrete distributions, Binomial and Poisson, and applications"
+  },
+  {
+    "objectID": "slides/lec-6-discrete.html#what-is-a-random-variable",
+    "href": "slides/lec-6-discrete.html#what-is-a-random-variable",
+    "title": "Lecture 6: Discrete distributions",
+    "section": "What is a random variable?",
+    "text": "What is a random variable?\nA random variable is a quantity whose value depends on the outcome of a random event.\n\nTraditionally, we use capital letters \\(X\\), \\(Y\\), \\(Z\\) to denote random variables.\nThe values that random variables take are in lowercase \\(x\\), \\(y\\), \\(z\\)\nSo, the probability that random variable \\(X\\) has the value \\(x\\) is denoted by \\(P(X = x)\\)\n\nRandom variables encountered in this class will be either discrete or continuous."
+  },
+  {
+    "objectID": "slides/lec-6-discrete.html#discrete-random-variables",
+    "href": "slides/lec-6-discrete.html#discrete-random-variables",
+    "title": "Lecture 6: Discrete distributions",
+    "section": "Discrete random variables",
+    "text": "Discrete random variables\n\nDiscrete random variables are those that can take on a countable number of potential values (could be countably infinite!), each associated with a probability of occurring.\n\nExamples: Tossing a coin (H, T), Rolling a die (1, 2, 3, 4, 5, 6)\n\nThis list of possible values and probabilities is the probability distribution for the discrete random variable in question.\nProbability distributions let us investigate how likely events may be.\nFor discrete random variables, you may also see the term probability mass function, which is the same thing."
+  },
+  {
+    "objectID": "slides/lec-6-discrete.html#example-probability-distribution-of-births-in-the-us",
+    "href": "slides/lec-6-discrete.html#example-probability-distribution-of-births-in-the-us",
+    "title": "Lecture 6: Discrete distributions",
+    "section": "Example: Probability distribution of births in the US",
+    "text": "Example: Probability distribution of births in the US\n\n\n\nLet \\(X\\) be the random variable for birth status in the US. Its probability distribution may be given by\n\n\n\n\nEvent\nProbability\n\n\n\n\nX = pre\n0.10\n\n\nX = early\n0.27\n\n\nX = full\n0.57\n\n\nX = late/post\n0.06"
+  },
+  {
+    "objectID": "slides/lec-6-discrete.html#probability-distribution-of-births-in-the-us",
+    "href": "slides/lec-6-discrete.html#probability-distribution-of-births-in-the-us",
+    "title": "Lecture 6: Discrete distributions",
+    "section": "Probability distribution of births in the US",
+    "text": "Probability distribution of births in the US\n\n\n\n\n\nEvent\nProbability\n\n\n\n\nX = pre\n0.10\n\n\nX = early\n0.27\n\n\nX = full\n0.57\n\n\nX = late/post\n0.06\n\n\n\n\nThere are three rules for discrete probability distributions:\n\nOutcomes must be disjoint\nThe probability of each outcome must be \\(\\geq\\) 0 and \\(\\leq\\) 1\nThe sum of the outcome probabilities must add up to 1.\n\n\n\n\n\n\n\n\nVerify the three rules\n\n\nLet’s verify the three rules above are satisfied with the births example."
+  },
+  {
+    "objectID": "slides/lec-6-discrete.html#bernoulli-random-variables",
+    "href": "slides/lec-6-discrete.html#bernoulli-random-variables",
+    "title": "Lecture 6: Discrete distributions",
+    "section": "Bernoulli random variables",
+    "text": "Bernoulli random variables\n\n\nSome “types” of random variables come up very often. Consider a dichotomous (two-level) random variable \\(X\\):\n\nDead or alive\nCurrent smoker or not\n\nThis is known as a Bernoulli random variable, and has a probability of “success” denoted by \\(p\\)."
+  },
+  {
+    "objectID": "slides/lec-6-discrete.html#bernoulli-random-variables-1",
+    "href": "slides/lec-6-discrete.html#bernoulli-random-variables-1",
+    "title": "Lecture 6: Discrete distributions",
+    "section": "Bernoulli random variables",
+    "text": "Bernoulli random variables\nWith the notation that event \\(X=1\\) is a “success” and \\(X=0\\) is a “failure”, \\(P(X=1)=p\\) and \\(P(X=0) = 1-p\\)\n\nFair coin flip: Let the event X=1 denote heads.\n\n\n\n\nEvent\nP(Event)\n\n\n\n\n\\(X=1\\)\n0.5\n\n\n\\(X=0\\)\n0.5\n\n\n\n\n2018 US births: Let the event \\(X=1\\) denote preterm birth.\n\n\n\n\nEvent\nP(Event)\n\n\n\n\n\\(X=1\\)\n0.1\n\n\n\\(X=0\\)\n0.9\n\n\n\nA “success” is not necessarily positive - if we are interested in the probability of dying, a “success” would be death."
+  },
+  {
+    "objectID": "slides/lec-6-discrete.html#extending-the-bernoulli-distribution",
+    "href": "slides/lec-6-discrete.html#extending-the-bernoulli-distribution",
+    "title": "Lecture 6: Discrete distributions",
+    "section": "Extending the Bernoulli distribution",
+    "text": "Extending the Bernoulli distribution\nSuppose we randomly select two independent US births in 2018, and \\(Z\\) is a new random variable that represents the number of preterm births among them.\n\\(Z\\) can be 0, 1, or 2:\n\n\n\n\n\n\n\n\n\n1st Birth \\(X\\)\n2nd Birth \\(X\\)\n# Preterm Births \\(Z\\)\nProbability of Outcome\n\n\n\n\n0\n0\n0\n\n\n\n1\n0\n1\n\n\n\n0\n1\n1\n\n\n\n1\n1\n2"
+  },
+  {
+    "objectID": "slides/lec-6-discrete.html#extending-the-bernoulli-distribution-1",
+    "href": "slides/lec-6-discrete.html#extending-the-bernoulli-distribution-1",
+    "title": "Lecture 6: Discrete distributions",
+    "section": "Extending the Bernoulli distribution",
+    "text": "Extending the Bernoulli distribution\nLet \\(X_1\\) be 1 if the first birth is preterm, and \\(X_2\\) be 1 if the second birth is preterm, and 0 otherwise.\nBecause these two births are independent, then\n\\[\n\\begin{aligned}\nP(\\textrm{both preterm}) &= P(\\textrm{first preterm and 2nd preterm})\\\\\n&= P(\\textrm{first preterm}) \\cdot P(\\textrm{2nd preterm})\\\\\n&= p * p = 0.1 \\times 0.1 = 0.01\n\\end{aligned}\n\\]"
+  },
+  {
+    "objectID": "slides/lec-6-discrete.html#extending-the-bernoulli-distribution-2",
+    "href": "slides/lec-6-discrete.html#extending-the-bernoulli-distribution-2",
+    "title": "Lecture 6: Discrete distributions",
+    "section": "Extending the Bernoulli distribution",
+    "text": "Extending the Bernoulli distribution\nBack to the table, row 1 is given by\n\\(P(X_1 = 0 \\cap X_2 = 0) = P(X_1 = 0) P(X_2 = 0) = (1-p)(1-p)\\)\n\n\n\n\n\n\n\n\n\n1st Birth \\(X\\)\n2nd Birth \\(X\\)\n# Preterm Births \\(Z\\)\nProbability of Outcome\n\n\n\n\n0\n0\n0\n(0.9)(0.9)=0.81\n\n\n1\n0\n1\n\n\n\n0\n1\n1\n\n\n\n1\n1\n2"
+  },
+  {
+    "objectID": "slides/lec-6-discrete.html#extending-the-bernoulli-distribution-3",
+    "href": "slides/lec-6-discrete.html#extending-the-bernoulli-distribution-3",
+    "title": "Lecture 6: Discrete distributions",
+    "section": "Extending the Bernoulli distribution",
+    "text": "Extending the Bernoulli distribution\nThus, the probability distribution of the number of preterm births out of two independent births is given by\n\n\n\n\n\\(z=0\\)\n\\(z=1\\)\n\\(z=2\\)\n\n\n\n\n\\(P(Z=z)\\)\n0.81\n0.18\n0.01"
+  },
+  {
+    "objectID": "slides/lec-6-discrete.html#extending-the-bernoulli-distribution-4",
+    "href": "slides/lec-6-discrete.html#extending-the-bernoulli-distribution-4",
+    "title": "Lecture 6: Discrete distributions",
+    "section": "Extending the Bernoulli distribution",
+    "text": "Extending the Bernoulli distribution\nNow let \\(Z\\) be the random variable corresponding to the number of preterm births among 3 independently sampled births\n\n\n\n\n\n\n\n\n\n\nFirst Birth \\(X_1\\)\nSecond Birth \\(X_2\\)\nThird Birth \\(X_3\\)\nNumber of Preterm Births \\(Z\\)\nProbability\n\n\n\n\n0\n0\n0\n0\n\n\n\n1\n0\n0\n1\n\n\n\n0\n1\n0\n1\n\n\n\n0\n0\n1\n1\n\n\n\n1\n1\n0\n2\n\n\n\n1\n0\n1\n2\n\n\n\n0\n1\n1\n2\n\n\n\n1\n1\n1\n3"
+  },
+  {
+    "objectID": "slides/lec-6-discrete.html#extending-the-bernoulli-distribution-5",
+    "href": "slides/lec-6-discrete.html#extending-the-bernoulli-distribution-5",
+    "title": "Lecture 6: Discrete distributions",
+    "section": "Extending the Bernoulli distribution",
+    "text": "Extending the Bernoulli distribution\nRow 1 is given by\n\\(P(X_1 = 0 \\cap X_2 = 0 \\cap X_3 = 0) = (1-p)(1-p)(1-p)\\)\n\n\n\n\n\n\n\n\n\n\nFirst Birth \\(X_1\\)\nSecond Birth \\(X_2\\)\nThird Birth \\(X_3\\)\nNumber of Preterm Births \\(Z\\)\nProbability\n\n\n\n\n0\n0\n0\n0\n0.729\n\n\n1\n0\n0\n1\n\n\n\n0\n1\n0\n1\n\n\n\n0\n0\n1\n1\n\n\n\n1\n1\n0\n2\n\n\n\n1\n0\n1\n2\n\n\n\n0\n1\n1\n2\n\n\n\n1\n1\n1\n3"
+  },
+  {
+    "objectID": "slides/lec-6-discrete.html#extending-the-bernoulli-distribution-6",
+    "href": "slides/lec-6-discrete.html#extending-the-bernoulli-distribution-6",
+    "title": "Lecture 6: Discrete distributions",
+    "section": "Extending the Bernoulli distribution",
+    "text": "Extending the Bernoulli distribution\nRow 2 is given by\n\\(P(X_1 = 1 \\cap X_2 = 0 \\cap X_3 = 0) = p(1-p)(1-p)\\)\n\n\n\n\n\n\n\n\n\n\nFirst Birth \\(X_1\\)\nSecond Birth \\(X_2\\)\nThird Birth \\(X_3\\)\nNumber of Preterm Births \\(Z\\)\nProbability\n\n\n\n\n0\n0\n0\n0\n0.729\n\n\n1\n0\n0\n1\n0.081\n\n\n0\n1\n0\n1\n\n\n\n0\n0\n1\n1\n\n\n\n1\n1\n0\n2\n\n\n\n1\n0\n1\n2\n\n\n\n0\n1\n1\n2\n\n\n\n1\n1\n1\n3"
+  },
+  {
+    "objectID": "slides/lec-6-discrete.html#extending-the-bernoulli-distribution-7",
+    "href": "slides/lec-6-discrete.html#extending-the-bernoulli-distribution-7",
+    "title": "Lecture 6: Discrete distributions",
+    "section": "Extending the Bernoulli distribution",
+    "text": "Extending the Bernoulli distribution\n…et cetera\n\n\n\n\n\n\n\n\n\n\nFirst Birth \\(X_1\\)\nSecond Birth \\(X_2\\)\nThird Birth \\(X_3\\)\nNumber of Preterm Births \\(Z\\)\nProbability\n\n\n\n\n0\n0\n0\n0\n0.729\n\n\n1\n0\n0\n1\n0.081\n\n\n0\n1\n0\n1\n0.081\n\n\n0\n0\n1\n1\n0.081\n\n\n1\n1\n0\n2\n0.009\n\n\n1\n0\n1\n2\n0.009\n\n\n0\n1\n1\n2\n0.009\n\n\n1\n1\n1\n3\n0.001"
+  },
+  {
+    "objectID": "slides/lec-6-discrete.html#extending-the-bernoulli-distribution-8",
+    "href": "slides/lec-6-discrete.html#extending-the-bernoulli-distribution-8",
+    "title": "Lecture 6: Discrete distributions",
+    "section": "Extending the Bernoulli distribution",
+    "text": "Extending the Bernoulli distribution\nIf we randomly sample 3 births, what is the chance 2 are preterm?\n0.009 + 0.009 + 0.009 = 0.027 (why?)\n\n\n\n\n\n\n\n\n\n\nFirst Birth \\(X_1\\)\nSecond Birth \\(X_2\\)\nThird Birth \\(X_3\\)\nNumber of Preterm Births \\(Z\\)\nProbability\n\n\n\n\n0\n0\n0\n0\n0.729\n\n\n1\n0\n0\n1\n0.081\n\n\n0\n1\n0\n1\n0.081\n\n\n0\n0\n1\n1\n0.081\n\n\n1\n1\n0\n2\n0.009\n\n\n1\n0\n1\n2\n0.009\n\n\n0\n1\n1\n2\n0.009\n\n\n1\n1\n1\n3\n0.001"
+  },
+  {
+    "objectID": "slides/lec-6-discrete.html#extending-the-bernoulli-distribution-9",
+    "href": "slides/lec-6-discrete.html#extending-the-bernoulli-distribution-9",
+    "title": "Lecture 6: Discrete distributions",
+    "section": "Extending the Bernoulli distribution",
+    "text": "Extending the Bernoulli distribution\nThus, the probability distribution of the number of preterm births out of three independent births is given by\n\n\n\n\n\\(z=0\\)\n\\(z=1\\)\n\\(z=2\\)\n\\(z=3\\)\n\n\n\n\n\\(P(Z=z)\\)\n0.729\n0.243\n0.027\n0.001\n\n\n\n\n\n\n\n\n\nVerify\n\n\nAre these disjoint events, with probabilities in [0,1], that all sum to 1?)"
+  },
+  {
+    "objectID": "slides/lec-6-discrete.html#extending-the-bernoulli-distribution-10",
+    "href": "slides/lec-6-discrete.html#extending-the-bernoulli-distribution-10",
+    "title": "Lecture 6: Discrete distributions",
+    "section": "Extending the Bernoulli distribution",
+    "text": "Extending the Bernoulli distribution\n\nIf we randomly sample 4 births, what is the probability distribution for the number of preterm births?\nTo build a similar table would start to become egregious.\nLuckily, there is a formula for this probability distribution!"
+  },
+  {
+    "objectID": "slides/lec-6-discrete.html#the-binomial-distribution",
+    "href": "slides/lec-6-discrete.html#the-binomial-distribution",
+    "title": "Lecture 6: Discrete distributions",
+    "section": "The binomial distribution",
+    "text": "The binomial distribution\nThe binomial distribution gives the probability of \\(k\\) “successes” from a sequence of \\(n\\) independent Bernoulli trials. There are three assumptions:\n\nThere is a fixed number of trials \\(n\\), each of which is a Bernoulli random variable.\nThe outcomes of the \\(n\\) trials are independent.\nThe probability of success, \\(p\\), is the same of each of these trials."
+  },
+  {
+    "objectID": "slides/lec-6-discrete.html#the-binomial-distribution-1",
+    "href": "slides/lec-6-discrete.html#the-binomial-distribution-1",
+    "title": "Lecture 6: Discrete distributions",
+    "section": "The binomial distribution",
+    "text": "The binomial distribution\nIf \\(X\\) has a binomial distribution, then\n\\[P(X=k) = {n \\choose k}p^k (1-p)^{n-k}\\]\nWhat do these components mean?\n\n\n\n\n\n\nNote\n\n\nThis expression will always be provided to you if needed."
+  },
+  {
+    "objectID": "slides/lec-6-discrete.html#the-binomial-distribution-2",
+    "href": "slides/lec-6-discrete.html#the-binomial-distribution-2",
+    "title": "Lecture 6: Discrete distributions",
+    "section": "The binomial distribution",
+    "text": "The binomial distribution\nIf we randomly sample 3 births, what is the chance 2 are preterm?\n\nThere is a fixed number of trials, each of which is a Bernoulli random variable\nThe outcomes of the trials are independent\nThe probability of success is the same for each of these trials\n\nThus, \\(Z \\sim Binom(3, 0.1)\\).\n\\[\n\\begin{aligned}\nP(Z=2) &= {3 \\choose 2} 0.1^2 (1-0.1)^{3-2} \\\\\n&= \\frac{3!}{2!(3-2)!} \\times 0.1^2 \\times 0.9 ^1 = 0.027\n\\end{aligned}\n\\]"
+  },
+  {
+    "objectID": "slides/lec-6-discrete.html#in-r",
+    "href": "slides/lec-6-discrete.html#in-r",
+    "title": "Lecture 6: Discrete distributions",
+    "section": "In R",
+    "text": "In R\nWe can calculate these probabilities in R with the dbinom() function:\n\ndbinom(2, size = 3, prob = 0.1)\n\n[1] 0.027"
+  },
+  {
+    "objectID": "slides/lec-6-discrete.html#participation",
+    "href": "slides/lec-6-discrete.html#participation",
+    "title": "Lecture 6: Discrete distributions",
+    "section": "Participation",
+    "text": "Participation\n\n\n\n\n\n\nApplication Exercise in R\n\n\n\nFor today’s participation, you’ll practice some of the functions we learn today using R.\nIn Canvas, download the Quarto template for the Application Exercise for today. Save the file with a sensible name (ae-01.qmd) in your project folder.\nBegin by working on Exercises 1 and 2."
+  },
+  {
+    "objectID": "slides/lec-6-discrete.html#the-poisson-distribution",
+    "href": "slides/lec-6-discrete.html#the-poisson-distribution",
+    "title": "Lecture 6: Discrete distributions",
+    "section": "The Poisson distribution",
+    "text": "The Poisson distribution\n\n\n\nDiscrete distribution taking on possible values 0, 1, 2, \\(\\ldots\\), \\(\\infty\\)\nOften used to model counts or rare events\nMuch like the binomial distribution, requires a few assumptions"
+  },
+  {
+    "objectID": "slides/lec-6-discrete.html#the-poisson-distribution-1",
+    "href": "slides/lec-6-discrete.html#the-poisson-distribution-1",
+    "title": "Lecture 6: Discrete distributions",
+    "section": "The Poisson distribution",
+    "text": "The Poisson distribution\nThe Poisson distribution gives the probability that \\(k\\) events occur in a given “interval”. There are four assumptions:\n\nWithin any interval, \\(k\\) may take on values 0, 1, 2, 3, \\(\\ldots\\), \\(\\infty\\)\nEach event occurs independently, both within the same interval, and between intervals\nThe average rate at which events occur in an interval, \\(\\lambda\\), is constant\nTwo events cannot occur simultaneously\n\nWhat is an “interval”?"
+  },
+  {
+    "objectID": "slides/lec-6-discrete.html#the-poisson-distribution-2",
+    "href": "slides/lec-6-discrete.html#the-poisson-distribution-2",
+    "title": "Lecture 6: Discrete distributions",
+    "section": "The Poisson distribution",
+    "text": "The Poisson distribution\nIf \\(X\\) has a Poisson distribution, then\n\\[P(X=k) = \\frac{\\lambda^k e^{-\\lambda}}{k!}\\]\nWhat do these components mean?\n\n\n\n\n\n\nNote\n\n\nThis expression will always be provided to you if needed."
+  },
+  {
+    "objectID": "slides/lec-6-discrete.html#the-poisson-distribution-3",
+    "href": "slides/lec-6-discrete.html#the-poisson-distribution-3",
+    "title": "Lecture 6: Discrete distributions",
+    "section": "The Poisson distribution",
+    "text": "The Poisson distribution\nSuppose on average, there are 1.5 deaths due to Alzheimer’s Disease in a town each year. For a one-year period in this town, what is the chance that two or more people die from Alzheimer’s?\n\nWithin any interval, the number of AD deaths can range from 0 to \\(\\infty\\) (technically not true, but close enough)\nOne individual dying of Alzheimer’s does not affect the chance of another person dying of Alzheimer’s\nThe AD death rate is constant in this town\nTwo AD deaths cannot occur at the same time (we can always subdivide time intervals such that only one person experiences this event in a given sub-interval)"
+  },
+  {
+    "objectID": "slides/lec-6-discrete.html#the-poisson-distribution-4",
+    "href": "slides/lec-6-discrete.html#the-poisson-distribution-4",
+    "title": "Lecture 6: Discrete distributions",
+    "section": "The Poisson distribution",
+    "text": "The Poisson distribution\nThus \\(Z \\sim Pois(1.5)\\), and \\(P(Z=0)\\), \\(P(Z=1)\\), and \\(P(Z\\geq 2)\\) are disjoint events. So, \\(P(Z \\geq 2) = 1- [P(Z = 0) + P(Z = 1)]\\), where\n\\[\n\\begin{aligned}\nP(Z=0) &= \\frac{1.5^0 \\times e^{-1.5}}{0!}\\approx 0.223 \\\\\nP(Z=1) &= \\frac{1.5^1 \\times e^{-1.5}}{1!}\\approx 0.335\n\\end{aligned}\n\\]\nAnd so \\(P(Z \\geq 2) \\approx 1-0.223-0.335 = 0.442\\)."
+  },
+  {
+    "objectID": "slides/lec-6-discrete.html#in-r-1",
+    "href": "slides/lec-6-discrete.html#in-r-1",
+    "title": "Lecture 6: Discrete distributions",
+    "section": "In R",
+    "text": "In R\nWe can calculate these values in R using the dpois() function:\n\ndpois(x = 0, lambda = 1.5)\n\n[1] 0.2231302\n\n\n\ndpois(x = 1, lambda = 1.5)\n\n[1] 0.3346952\n\n\n\n1- (dpois(x = 0, lambda = 1.5) + \n      dpois(x = 1, lambda = 1.5))\n\n[1] 0.4421746\n\n\nNote: Each parentheses needs a buddy! Common source of Quarto files not rendering…"
+  },
+  {
+    "objectID": "slides/lec-6-discrete.html#in-r-2",
+    "href": "slides/lec-6-discrete.html#in-r-2",
+    "title": "Lecture 6: Discrete distributions",
+    "section": "In R",
+    "text": "In R\nIf we wanted to abbreviate our typing (and reduce possibility of typos), we can save our first two probabilities as objects p0 and p1 to use them later.\n\np0 &lt;- dpois(x = 0, lambda = 1.5)\np0\n\n[1] 0.2231302\n\n\n\np1 &lt;- dpois(x = 1, lambda = 1.5)\np1\n\n[1] 0.3346952\n\n\n\n1- (p0 + p1)\n\n[1] 0.4421746"
+  },
+  {
+    "objectID": "slides/lec-6-discrete.html#what-about-other-interval-lengths",
+    "href": "slides/lec-6-discrete.html#what-about-other-interval-lengths",
+    "title": "Lecture 6: Discrete distributions",
+    "section": "What about other interval lengths?",
+    "text": "What about other interval lengths?\nSuppose we have a count random variable that follows a Poisson distribution:\n\nSince each event is independent of others and the rate \\(\\lambda\\) is constant, the probability that an event occurs within an interval is proportional to the length of that interval.\nE.g., we would expect twice the number of events to occur in an interval of twice the length; we would expect 1/9 times the number of events to occur in an interval 9 times as small; and so on."
+  },
+  {
+    "objectID": "slides/lec-6-discrete.html#what-about-other-interval-lengths-1",
+    "href": "slides/lec-6-discrete.html#what-about-other-interval-lengths-1",
+    "title": "Lecture 6: Discrete distributions",
+    "section": "What about other interval lengths?",
+    "text": "What about other interval lengths?\nSuppose on average, there are 1.5 deaths due to Alzheimer’s disease in a town each year.\n\n\n\n\n\n\nExample:\n\n\n\nWhat is the average one-month rate of deaths due to Alzheimer’s disease in this town?\nFor any given one-month period in this town, what is the probability that exactly one person dies from Alzheimer’s? (Just the expression is fine)\n\nFor \\(X \\sim Pois(\\lambda)\\),\n\\[P(X=k) = \\frac{\\lambda^k e^{-\\lambda}}{k!}\\]"
+  },
+  {
+    "objectID": "slides/lec-6-discrete.html#participation-1",
+    "href": "slides/lec-6-discrete.html#participation-1",
+    "title": "Lecture 6: Discrete distributions",
+    "section": "Participation",
+    "text": "Participation\n\n\n\n\n\n\nPractice in R\n\n\nIn today’s participation, continue with Exercise 3.\nWhen you’ve completed the exercises, render, save to PDF, and submit on Canvas&gt; Assignments. Due Wednesday at 11:59pm."
+  },
+  {
+    "objectID": "slides/lec-6-discrete.html#expectation-and-variance",
+    "href": "slides/lec-6-discrete.html#expectation-and-variance",
+    "title": "Lecture 6: Discrete distributions",
+    "section": "Expectation and variance",
+    "text": "Expectation and variance\nNow that we’ve defined random variables and explored a few distributions, we might be interested in some other aspects of their distributions.\nSuppose we are interested in the probability distribution corresponding to the number of preterm births in a random sample of five independent US births.\n\nHow many preterm births should we expect?\nHow “spread out” would this distribution be?"
+  },
+  {
+    "objectID": "slides/lec-6-discrete.html#expected-value",
+    "href": "slides/lec-6-discrete.html#expected-value",
+    "title": "Lecture 6: Discrete distributions",
+    "section": "Expected value",
+    "text": "Expected value\nThe expected value of a discrete random variable \\(X\\) is a weighted average of the possible outcomes:\n\\[E(X) = \\sum_{\\textrm{all } x} x \\cdot P(X = x)\\]\nThis is a property of the distribution of \\(X\\), not of the random variable itself."
+  },
+  {
+    "objectID": "slides/lec-6-discrete.html#properties-of-bernoulli-and-binomial-random-variables",
+    "href": "slides/lec-6-discrete.html#properties-of-bernoulli-and-binomial-random-variables",
+    "title": "Lecture 6: Discrete distributions",
+    "section": "Properties of Bernoulli and binomial random variables",
+    "text": "Properties of Bernoulli and binomial random variables\n\nFor \\(Z \\sim Bern(p)\\), \\(E(Z) = p\\) and \\(Var(Z) = p(1-p)\\)\n\nExample: Let Z be a coin toss. \\(Z \\sim Bern(.5)\\). \\(E(Z) = .5\\) and \\(Var(Z) = 0.5 \\cdot (0.5) = 0.25\\).\n\nFor \\(Z \\sim Binom(n, p)\\), \\(E(Z) = np\\) and \\(Var(Z) = np(1-p)\\)\nFor \\(Z \\sim Pois(\\lambda)\\), \\(E(Z) = Var(Z) = \\lambda\\)"
+  },
+  {
+    "objectID": "slides/lec-6-discrete.html#recap",
+    "href": "slides/lec-6-discrete.html#recap",
+    "title": "Lecture 6: Discrete distributions",
+    "section": "Recap",
+    "text": "Recap\n\nDiscrete random variables\nBinomial, Poisson random variables and applications\nExpected values and variances"
+  },
+  {
+    "objectID": "slides/lec-6-discrete.html#next-class",
+    "href": "slides/lec-6-discrete.html#next-class",
+    "title": "Lecture 6: Discrete distributions",
+    "section": "Next class",
+    "text": "Next class\n\nContinuous distributions"
+  },
+  {
+    "objectID": "slides/lec-4-conditional-bayes.html#welcome",
+    "href": "slides/lec-4-conditional-bayes.html#welcome",
+    "title": "Lecture 4: Conditional Probability",
+    "section": "Welcome!",
+    "text": "Welcome!\nTake 1 piece of paper per 2 people."
+  },
+  {
     "objectID": "slides/lec-4-conditional-bayes.html#announcements",
     "href": "slides/lec-4-conditional-bayes.html#announcements",
     "title": "Lecture 4: Conditional Probability",
@@ -28,6 +315,27 @@
     "text": "Overview\n\nExample & visual illustration of probability\nDeMorgan’s Laws\nConditional probability\nIndependence and disjoint events"
   },
   {
+    "objectID": "slides/lec-4-conditional-bayes.html#example",
+    "href": "slides/lec-4-conditional-bayes.html#example",
+    "title": "Lecture 4: Conditional Probability",
+    "section": "Example",
+    "text": "Example\nConsider the experiment of rolling one fair six-sided die.\nLet’s define the following events:\n\n\\(A\\): roll a 3\n\\(B\\): roll an odd number\n\nLet’s draw out our experiment visually."
+  },
+  {
+    "objectID": "slides/lec-4-conditional-bayes.html#practice",
+    "href": "slides/lec-4-conditional-bayes.html#practice",
+    "title": "Lecture 4: Conditional Probability",
+    "section": "Practice",
+    "text": "Practice\nUsing your illustration, determine the following:\n\nWhat is the sample space of the experiment?\nWhat is P(\\(A\\))?\nWhat is P(\\(B\\))?\nWhat is the probability of \\(A\\) happening, given we know we’ve rolled an odd number?"
+  },
+  {
+    "objectID": "slides/lec-4-conditional-bayes.html#practice-1",
+    "href": "slides/lec-4-conditional-bayes.html#practice-1",
+    "title": "Lecture 4: Conditional Probability",
+    "section": "Practice",
+    "text": "Practice\n\nWhat is P(\\(A^C\\)) ?\nList out the events in \\(A \\cup B\\). What is P\\((A \\cup B)\\)?\nList out the events in \\(A \\cap B\\). What is P\\((A \\cap B)\\)?\nAre the events \\(A\\) and \\(B\\) disjoint?\n\n\n\n\n−+\n04:00"
+  },
+  {
     "objectID": "slides/lec-4-conditional-bayes.html#demorgans-laws",
     "href": "slides/lec-4-conditional-bayes.html#demorgans-laws",
     "title": "Lecture 4: Conditional Probability",
@@ -35,11 +343,18 @@
     "text": "DeMorgan’s laws\n\n\nComplement of union: \\((A\\cup B)^C = A^C \\cap B^C\\)\nComplement of intersection: \\((A\\cap B)^C = A^C \\cup B^C\\)"
   },
   {
-    "objectID": "slides/lec-4-conditional-bayes.html#conditional-probability",
-    "href": "slides/lec-4-conditional-bayes.html#conditional-probability",
-    "title": "Lecture 4: Conditional Probability and Bayes’ Rule",
+    "objectID": "slides/lec-4-conditional-bayes.html#practice-2",
+    "href": "slides/lec-4-conditional-bayes.html#practice-2",
+    "title": "Lecture 4: Conditional Probability",
+    "section": "Practice",
+    "text": "Practice\nVerify the Complement of union law with our dice example. (Draw it out!)"
+  },
+  {
+    "objectID": "slides/lec-4-conditional-bayes.html#conditional-probability-1",
+    "href": "slides/lec-4-conditional-bayes.html#conditional-probability-1",
+    "title": "Lecture 4: Conditional Probability",
     "section": "Conditional probability",
-    "text": "Conditional probability\n\nConditional probability is he probability an event will occur when another event has already occurred. The conditional probability of event \\(A\\) given event \\(B\\) is\n\n\\[\nP(A|B) = \\frac{P(A\\cap B)}{P(B)}\n\\]\n\nHow can we represent this visually? (Drawing)"
+    "text": "Conditional probability\n\nConditional probability is the probability an event will occur when another event has already occurred."
   },
   {
     "objectID": "slides/lec-4-conditional-bayes.html#examples",
@@ -49,11 +364,11 @@
     "text": "Examples\nExamples come up all the time in the real world:\n\nGiven that a mammogram comes back positive, what is the probability that a woman has breast cancer?\nGiven that a 68-year old man has suffered four previous heart attacks, what is the probability he dies in the next five years?\nGiven that a patient has a mutation in the CFTR gene, what is the probability their offspring will have cystic fibrosis?"
   },
   {
-    "objectID": "slides/lec-4-conditional-bayes.html#independence-and-the-multiplicative-rule",
-    "href": "slides/lec-4-conditional-bayes.html#independence-and-the-multiplicative-rule",
-    "title": "Lecture 4: Conditional Probability and Bayes’ Rule",
-    "section": "Independence and the multiplicative rule",
-    "text": "Independence and the multiplicative rule\nWe can rewrite the definition of conditional probability:\n\\[\nP(A|B) = \\frac{P(A\\cap B)}{P(B)} \\implies  \\underbrace{P(A\\cap B) = P(A | B) \\times P(B)}_{\\text{Multiplicative Rule}}\n\\]\n\n\n\n\n\n\nQuestion\n\n\nWhat does the multiplicative rule mean in plain English?\n\n\n\n\nThe probability that A and B both happen is the probability that B happened, multiplied by the probability of A happened (given B already happened)."
+    "objectID": "slides/lec-4-conditional-bayes.html#conditional-probability-2",
+    "href": "slides/lec-4-conditional-bayes.html#conditional-probability-2",
+    "title": "Lecture 4: Conditional Probability",
+    "section": "Conditional probability",
+    "text": "Conditional probability\nDefinition: The conditional probability of event \\(A\\) given event \\(B\\) is\n\\[\nP(A|B) = \\frac{P(A\\cap B)}{P(B)}\n\\]\n\nHow can we represent this visually? (Drawing)\nTakeaway: If we know \\(B\\) has already happened, our sample space effectively shrinks to only events that are contained within \\(B\\)."
   },
   {
     "objectID": "slides/lec-4-conditional-bayes.html#the-multiplicative-rule",
@@ -63,11 +378,18 @@
     "text": "The Multiplicative rule\nWe can rewrite the definition of conditional probability:\n\\[\nP(A|B) = \\frac{P(A\\cap B)}{P(B)} \\implies  \\underbrace{P(A\\cap B) = P(A | B) \\times P(B)}_{\\text{Multiplicative Rule}}\n\\]\n\n\n\n\n\n\nQuestion\n\n\nWhat does the multiplicative rule mean in plain English?\n\n\n\n\nThe probability that A and B both happen is the probability that B happened, multiplied by the probability of A happened (given B already happened)."
   },
   {
-    "objectID": "slides/lec-4-conditional-bayes.html#example",
-    "href": "slides/lec-4-conditional-bayes.html#example",
+    "objectID": "slides/lec-4-conditional-bayes.html#independence",
+    "href": "slides/lec-4-conditional-bayes.html#independence",
+    "title": "Lecture 4: Conditional Probability",
+    "section": "Independence",
+    "text": "Independence\nEvents \\(A\\) and \\(B\\) are said to be independent when\n\n\n\n\\[\nP(A \\cap B) = P(A) \\times P(B)\n\\]\n\n\n\nor equivalently, \\(P(A|B) = P(A)\\) or \\(P(B|A) = P(B)\\)\n\nIn other words, if A and B are independent, then the probability of both happening is simply the probability of A happening times the probability of B happening. (Since B happening has nothing to do with A later happening, or vice-versa)."
+  },
+  {
+    "objectID": "slides/lec-4-conditional-bayes.html#example-1",
+    "href": "slides/lec-4-conditional-bayes.html#example-1",
     "title": "Lecture 4: Conditional Probability",
     "section": "Example",
-    "text": "Example\nConsider the experiment of rolling one fair six-sided die.\nLet’s define the following events:\n\n\\(A\\): roll a 3\n\\(B\\): roll an odd number\n\nLet’s draw out our experiment visually."
+    "text": "Example\n\nExperiment: Toss a fair 6-sided dice two times. We assume the two tosses are independent from each other.\nLet \\(A\\) = getting a 1 on the first toss. Let \\(B\\) = getting a 1 on the second toss.\nWhat is \\(P(A)\\)?\nWhat is \\(P(B)\\)?\nWhat is the \\(P(A \\cap B)\\)?\nWhat is \\(P(A | B)\\) ?\nWhat is \\(P(B | A)\\) ?"
   },
   {
     "objectID": "slides/lec-4-conditional-bayes.html#recall-disjoint-events",
@@ -84,32 +406,25 @@
     "text": "Conditional probabilities and independence\n\n\n\nCoffee drinking\nDied? Yes\nDied? No\nTotal\n\n\n\n\nNone\n1039\n5438\n6477\n\n\nMed-Low\n4440\n29712\n29809\n\n\nHigh\n3601\n24934\n28535\n\n\nTotal\n9080\n60084\n64821\n\n\n\nWhat was the probability a randomly selected person in the study…\n\n…died?\n…died, given they were a non-coffee drinker?\n\n\n\n\n\n\n\nQuestion\n\n\nIn this study, were dying and coffee drinking independent events?"
   },
   {
-    "objectID": "slides/lec-4-conditional-bayes.html#the-law-of-total-probability",
-    "href": "slides/lec-4-conditional-bayes.html#the-law-of-total-probability",
+    "objectID": "slides/lec-4-conditional-bayes.html#order-matters",
+    "href": "slides/lec-4-conditional-bayes.html#order-matters",
     "title": "Lecture 4: Conditional Probability",
-    "section": "The law of total probability",
-    "text": "The law of total probability\n\nSuppose we partition \\(B\\) into mutually disjoint events \\(B_1, B_2, \\ldots B_k\\) that comprise the entire sample space.\nThen the law of total probability states that the probability of event \\(A\\) is\n\n\\[\nP(A) = P(A \\cap B_1) + P(A \\cap B_2) + \\cdots + P(A \\cap B_k)\n\\]\n\n[Drawing]"
+    "section": "Order matters!",
+    "text": "Order matters!\nWhat is the probability that a random person…\n\n\n\nCoffee drinking\nDied? Yes\nDied? No\nTotal\n\n\n\n\nNone\n1039\n5438\n6477\n\n\nMed-Low\n4440\n29712\n29809\n\n\nHigh\n3601\n24934\n28535\n\n\nTotal\n9080\n60084\n64821\n\n\n\n\n…was a high coffee drinker, given that they died?\n…died, given that they were a high coffee drinker?\n\nAre these two probabilities the same?"
   },
   {
-    "objectID": "slides/lec-4-conditional-bayes.html#rewriting",
-    "href": "slides/lec-4-conditional-bayes.html#rewriting",
+    "objectID": "slides/lec-4-conditional-bayes.html#example-smallpox",
+    "href": "slides/lec-4-conditional-bayes.html#example-smallpox",
     "title": "Lecture 4: Conditional Probability",
-    "section": "Rewriting…",
-    "text": "Rewriting…\n\nWe can rewrite these probabilities using the multiplicative rule as follows:\n\n\\[\n\\begin{aligned}\nP(A) &= P(A \\cap B_1) + P(A \\cap B_2) + \\cdots + P(A \\cap B_k) \\\\\n     &= P(A|B_1) P(B_1) + P(A|B_2)P(B_2) + \\cdots + P(A | B_k)P(B_k)\n\\end{aligned}\n\\]\n\nWhy rewrite? Sometimes \\(P(A|B_1)\\), \\(P(B_1)\\) are easier to find than \\(P(A \\cap B_1)\\), etc. We’ll find out WHY (i.e. what these probabilities represent) in our next lecture."
+    "section": "Example: Smallpox",
+    "text": "Example: Smallpox\nThe smallpox data set provides a sample of 6,224 individuals from the year 1721 who were exposed to smallpox in Boston.\nDoctors at the time believed that inoculation, which involves exposing a person to the disease in a controlled form, could reduce the likelihood of death."
   },
   {
-    "objectID": "slides/lec-4-conditional-bayes.html#the-law-of-total-probability-in-action",
-    "href": "slides/lec-4-conditional-bayes.html#the-law-of-total-probability-in-action",
+    "objectID": "slides/lec-4-conditional-bayes.html#example-smallpox-1",
+    "href": "slides/lec-4-conditional-bayes.html#example-smallpox-1",
     "title": "Lecture 4: Conditional Probability",
-    "section": "The law of total probability in action",
-    "text": "The law of total probability in action\n\n\n\nCoffee drinking\nDied? Yes\nDied? No\nTotal\n\n\n\n\nNone\n1039\n5438\n6477\n\n\nMed-Low\n4440\n29712\n29809\n\n\nHigh\n3601\n24934\n28535\n\n\nTotal\n9080\n60084\n64821\n\n\n\nWhat was the probability a randomly selected person died? Let’s find this using the law of total probability."
-  },
-  {
-    "objectID": "slides/lec-4-conditional-bayes.html#the-law-of-total-probability-in-action-1",
-    "href": "slides/lec-4-conditional-bayes.html#the-law-of-total-probability-in-action-1",
-    "title": "Lecture 4: Conditional Probability",
-    "section": "The law of total probability in action",
-    "text": "The law of total probability in action\n\nIn an introductory statistics course, 50% of students were undergrads, 40% were master’s students, and 10% were PhD students.\n80% of the undergrads didn’t give enough sleep, 40% of the master’s students didn’t get enough sleep, and 10% of the PhD students didn’t get enough sleep.\nWhat is the probability that a randomly selected student in this class didn’t get enough sleep? Are sufficient sleep status and year independent?\n\nLet’s solve this using the Law of Total Probability…"
+    "section": "Example: Smallpox",
+    "text": "Example: Smallpox\nEach case represents one person with two variables: inoculated and result. The variable inoculated takes two levels: yes or no, indicating whether the person was inoculated or not. The variable result has outcomes lived or died.\n\nWrite out, in formal notation, the probability that a randomly selected person who was not inoculated died from smallpox, and find this probability."
   },
   {
     "objectID": "slides/lec-4-conditional-bayes.html#solution",
@@ -119,53 +434,11 @@
     "text": "Solution\n\\(P(\\textrm{result = died | inoculated = no})=\\)\n\\(\\frac{P(\\textrm{result = died and inoculated = no})}{P(\\textrm{inoculated = no})} = \\frac{(844/6224)}{(5980/6224)} = .141\\)"
   },
   {
-    "objectID": "slides/lec-4-conditional-bayes.html#order-matters",
-    "href": "slides/lec-4-conditional-bayes.html#order-matters",
+    "objectID": "slides/lec-4-conditional-bayes.html#exercise",
+    "href": "slides/lec-4-conditional-bayes.html#exercise",
     "title": "Lecture 4: Conditional Probability",
-    "section": "Order matters!",
-    "text": "Order matters!\nWhat is the probability that a random person…\n\n\n\nCoffee drinking\nDied? Yes\nDied? No\nTotal\n\n\n\n\nNone\n1039\n5438\n6477\n\n\nMed-Low\n4440\n29712\n29809\n\n\nHigh\n3601\n24934\n28535\n\n\nTotal\n9080\n60084\n64821\n\n\n\n\n…was a high coffee drinker, given that they died?\n…died, given that they were a high coffee drinker?\n\nAre these two probabilities the same?"
-  },
-  {
-    "objectID": "slides/lec-4-conditional-bayes.html#bayes-rule",
-    "href": "slides/lec-4-conditional-bayes.html#bayes-rule",
-    "title": "Lecture 4: Conditional Probability and Bayes’ Rule",
-    "section": "Bayes’ rule",
-    "text": "Bayes’ rule\n\nWe can use Bayes’ rule to “reverse” the order of conditioning.\nBy definition:\n\n\\[P(A | B) = \\frac{P(A \\cap B)}{P(B)} = \\frac{P(B | A) P(A)}{P(B)}\\]"
-  },
-  {
-    "objectID": "slides/lec-4-conditional-bayes.html#bayes-rule-1",
-    "href": "slides/lec-4-conditional-bayes.html#bayes-rule-1",
-    "title": "Lecture 4: Conditional Probability and Bayes’ Rule",
-    "section": "Bayes’ rule",
-    "text": "Bayes’ rule\n\nUsing the definition of conditional probability, the law of total probability, and the multiplicative rule, we have\n\n\\[\\begin{align}\nP(A | B) = \\frac{P(A \\cap B)}{P(B)} &= \\frac{P(B | A) P(A)}{P(B)} \\\\\n&= \\frac{P(B | A) P(A) }{P(B | A) P(A) + P(B | A^C) P(A^C)}\n\\end{align}\\]"
-  },
-  {
-    "objectID": "slides/lec-4-conditional-bayes.html#what-if-a-is-partitioned-into-mutually-disjoint-events",
-    "href": "slides/lec-4-conditional-bayes.html#what-if-a-is-partitioned-into-mutually-disjoint-events",
-    "title": "Lecture 4: Conditional Probability and Bayes’ Rule",
-    "section": "What if \\(A\\) is partitioned into mutually disjoint events?",
-    "text": "What if \\(A\\) is partitioned into mutually disjoint events?\nIf instead \\(A\\) is partitioned into \\(k\\) mutually disjoint events that together comprise the entire sample space, Bayes’ rule gives:\n\\[\\begin{align}\nP(A | B) &= \\frac{P(B | A) P(A)}{P(B)} \\\\\n&= \\frac{P(B | A) P(A) }{P(B | A_1) P(A_1) + P(B | A_2) P(A_2) + \\cdots P(B | A^k) P(A^k)}\n\\end{align}\\]"
-  },
-  {
-    "objectID": "slides/lec-4-conditional-bayes.html#bayes-rule-example",
-    "href": "slides/lec-4-conditional-bayes.html#bayes-rule-example",
-    "title": "Lecture 4: Conditional Probability and Bayes’ Rule",
-    "section": "Bayes’ rule Example",
-    "text": "Bayes’ rule Example\nWhat is the probability that a random person in the coffee study…\n\n\n\nCoffee drinking\nDied? Yes\nDied? No\nTotal\n\n\n\n\nNone\n1039\n5438\n6477\n\n\nMed-Low\n4440\n29712\n29809\n\n\nHigh\n3601\n24934\n28535\n\n\nTotal\n9080\n60084\n64821\n\n\n\n\n…was a high coffee drinker, given that he died?\n…died, given that he was a high coffee drinker?\n\nLet’s verify our results using Bayes’ rule."
-  },
-  {
-    "objectID": "slides/lec-4-conditional-bayes.html#why-do-we-need-bayes-rule",
-    "href": "slides/lec-4-conditional-bayes.html#why-do-we-need-bayes-rule",
-    "title": "Lecture 4: Conditional Probability and Bayes’ Rule",
-    "section": "Why do we need Bayes’ rule?",
-    "text": "Why do we need Bayes’ rule?\n\nIf we have the row and column totals, we can directly calculate these conditional probabilities from a table.\nSo, why would we even need Bayes’ rule?\nThere are many cases where you would not have row/column totals."
-  },
-  {
-    "objectID": "slides/lec-4-conditional-bayes.html#example-medical-diagnosis-with-missing-data",
-    "href": "slides/lec-4-conditional-bayes.html#example-medical-diagnosis-with-missing-data",
-    "title": "Lecture 4: Conditional Probability and Bayes’ Rule",
-    "section": "Example: Medical diagnosis with missing data",
-    "text": "Example: Medical diagnosis with missing data\n\nImagine a scenario where a rare disease is being studied.\nYou may have detailed information about patients who tested positive for the disease (including their symptoms and demographics), but you might lack comprehensive data on the entire population’s symptom distribution or total number of people tested.\nIn this case, you wouldn’t have the full row or column totals, making it necessary to use Bayes’ Theorem to infer probabilities based on the available conditional probabilities and the prevalence of the disease.\nThis is common in situations where data is incomplete, either due to privacy concerns, lack of resources, or when dealing with emerging diseases."
+    "section": "Exercise",
+    "text": "Exercise\nThe people of Boston self-selected whether or not to be inoculated.\n\nIs this study observational or was this an experiment?\nCan we infer any causal connection using these data?\nWhat are some potential confounding variables that might influence whether someone lived or died and also affect whether that person was inoculated?\n\n\n\n\n−+\n02:00"
   },
   {
     "objectID": "slides/lec-4-conditional-bayes.html#recap",
@@ -928,7 +1201,7 @@
     "href": "labs/lab-03-template.html",
     "title": "Lab 03: Wrangling data with tidyverse",
     "section": "",
-    "text": "library(tidyverse)\n\nncbikecrash &lt;- read_csv(\"https://karamccor.github.io/b6002/labs/data/bikecrash.csv\")\n\n\nExercise 1\n\n(a)\n\n# run this code\nncbikecrash |&gt; \n  filter(development == \"Residential\") |&gt;\n  filter(driver_age_group == \"0-19\")\n\n# A tibble: 223 × 65\n    ...1 object_id city   county region development locality on_road rural_urban\n   &lt;dbl&gt;     &lt;dbl&gt; &lt;chr&gt;  &lt;chr&gt;  &lt;chr&gt;  &lt;chr&gt;       &lt;chr&gt;    &lt;chr&gt;   &lt;chr&gt;      \n 1   106      3743 None … Burke  Mount… Residential Mixed (… &lt;NA&gt;    Rural      \n 2   108      3756 Fores… Ruthe… Mount… Residential Urban (… &lt;NA&gt;    Urban      \n 3   113      3805 Ralei… Wake   Piedm… Residential Mixed (… &lt;NA&gt;    Urban      \n 4   115      3824 South… Moore  Piedm… Residential Urban (… &lt;NA&gt;    Urban      \n 5   127      3897 Siler… Chath… Piedm… Residential Urban (… &lt;NA&gt;    Urban      \n 6   177      2173 Asheb… Rando… Piedm… Residential Urban (… &lt;NA&gt;    Urban      \n 7   182      2029 None … Johns… Coast… Residential Rural (… &lt;NA&gt;    Rural      \n 8   211      7047 Mount… Gaston Piedm… Residential Urban (… &lt;NA&gt;    Urban      \n 9   212      7049 None … Meckl… Piedm… Residential Rural (… &lt;NA&gt;    Rural      \n10   250      7245 Charl… Meckl… Piedm… Residential Urban (… &lt;NA&gt;    Urban      \n# ℹ 213 more rows\n# ℹ 56 more variables: speed_limit &lt;chr&gt;, traffic_control &lt;chr&gt;, weather &lt;chr&gt;,\n#   workzone &lt;chr&gt;, bike_age &lt;dbl&gt;, bike_age_group &lt;chr&gt;, bike_alcohol &lt;chr&gt;,\n#   bike_alcohol_drugs &lt;chr&gt;, bike_direction &lt;chr&gt;, bike_injury &lt;chr&gt;,\n#   bike_position &lt;chr&gt;, bike_race &lt;chr&gt;, bike_sex &lt;chr&gt;, driver_age &lt;dbl&gt;,\n#   driver_age_group &lt;chr&gt;, driver_alcohol &lt;chr&gt;, driver_alcohol_drugs &lt;chr&gt;,\n#   driver_est_speed &lt;chr&gt;, driver_injury &lt;chr&gt;, driver_race &lt;chr&gt;, …\n\n\n[type response here]\n\n\n(b)\n\n# edit code below: replace blank with Residential, then run code\n\nncbikecrash |&gt; \n  filter(development == \"______\") |&gt;\n  count(driver_age_group)\n\n\n\n\nExercise 2\n\n# edit code: replace blank with driver estimated speed variable\nncbikecrash |&gt; \n  count(____________) |&gt;\n  arrange(n)\n\n\n\nExercise 3\n\n# type code here\n\n\n\nExercise 4\n\n# type code here\n\n\n\nExercise 5\n\n# type code here\n\n\n# type code here\n\n\n\nExercise 6\n\n# type code here\n\n\n\nExercise 7\n\n# type code here\n\n[write response here]\n\nggplot(ncbikecrash, mapping = aes(x = rural_urban, \n                                  y = driver_age, \n                                  fill = weather)) +\n  geom_boxplot()\n\n\n\n\n\n\n\n\n[write response here]\nSubmission: Remember to render your lab into an .html file and then save it as a .pdf in a web browser. You must turn in a .pdf file corresponding to the Quarto template to Gradescope in order to receive credit for the labs and homework assignments. You must assign each problem to a page in your PDF. Assign the Formatting portion to your page 1. Ensure all code is visible by indenting after commas as needed."
+    "text": "library(tidyverse)\n\nncbikecrash &lt;- read_csv(\"https://karamccor.github.io/b6002/labs/data/bikecrash.csv\")\n\n\nExercise 1\n\n(a)\n\n# run this code\nncbikecrash |&gt; \n  filter(development == \"Residential\") |&gt;\n  filter(driver_age_group == \"0-19\")\n\n# A tibble: 223 × 65\n    ...1 object_id city   county region development locality on_road rural_urban\n   &lt;dbl&gt;     &lt;dbl&gt; &lt;chr&gt;  &lt;chr&gt;  &lt;chr&gt;  &lt;chr&gt;       &lt;chr&gt;    &lt;chr&gt;   &lt;chr&gt;      \n 1   106      3743 None … Burke  Mount… Residential Mixed (… &lt;NA&gt;    Rural      \n 2   108      3756 Fores… Ruthe… Mount… Residential Urban (… &lt;NA&gt;    Urban      \n 3   113      3805 Ralei… Wake   Piedm… Residential Mixed (… &lt;NA&gt;    Urban      \n 4   115      3824 South… Moore  Piedm… Residential Urban (… &lt;NA&gt;    Urban      \n 5   127      3897 Siler… Chath… Piedm… Residential Urban (… &lt;NA&gt;    Urban      \n 6   177      2173 Asheb… Rando… Piedm… Residential Urban (… &lt;NA&gt;    Urban      \n 7   182      2029 None … Johns… Coast… Residential Rural (… &lt;NA&gt;    Rural      \n 8   211      7047 Mount… Gaston Piedm… Residential Urban (… &lt;NA&gt;    Urban      \n 9   212      7049 None … Meckl… Piedm… Residential Rural (… &lt;NA&gt;    Rural      \n10   250      7245 Charl… Meckl… Piedm… Residential Urban (… &lt;NA&gt;    Urban      \n# ℹ 213 more rows\n# ℹ 56 more variables: speed_limit &lt;chr&gt;, traffic_control &lt;chr&gt;, weather &lt;chr&gt;,\n#   workzone &lt;chr&gt;, bike_age &lt;dbl&gt;, bike_age_group &lt;chr&gt;, bike_alcohol &lt;chr&gt;,\n#   bike_alcohol_drugs &lt;chr&gt;, bike_direction &lt;chr&gt;, bike_injury &lt;chr&gt;,\n#   bike_position &lt;chr&gt;, bike_race &lt;chr&gt;, bike_sex &lt;chr&gt;, driver_age &lt;dbl&gt;,\n#   driver_age_group &lt;chr&gt;, driver_alcohol &lt;chr&gt;, driver_alcohol_drugs &lt;chr&gt;,\n#   driver_est_speed &lt;chr&gt;, driver_injury &lt;chr&gt;, driver_race &lt;chr&gt;, …\n\n\n[type response here]\n\n\n(b)\n\n# paste and edit code below: replace blank with Residential, then run code\n\n\n\n\nExercise 2\n\n# paste and edit code below: replace blank with driver estimated speed variable, then run code\n\n\n\nExercise 3\n\n# type code here\n\n\n\nExercise 4\n\n# type code here\n\n\n\nExercise 5\n\n# type code here\n\n\n# type code here\n\n\n\nExercise 6\n\n# type code here\n\n\n\nExercise 7\n\n# type code here\n\n[write response here]\n\nggplot(ncbikecrash, mapping = aes(x = rural_urban, \n                                  y = driver_age, \n                                  fill = weather)) +\n  geom_boxplot()\n\n\n\n\n\n\n\n\n[write response here]\nSubmission: Remember to render your lab into an .html file and then save it as a .pdf in a web browser. You must turn in a .pdf file corresponding to the Quarto template to Gradescope in order to receive credit for the labs and homework assignments. You must assign each problem to a page in your PDF. Assign the Formatting portion to your page 1. Ensure all code is visible by indenting after commas as needed."
   },
   {
     "objectID": "labs/lab-03-data-wrangling.html",
@@ -1131,7 +1404,7 @@
     "href": "index.html",
     "title": "BIOS 600 Fall 2026",
     "section": "",
-    "text": "Lecture 0: Welcome to BIOS 600!\nLab 1: Introducing the Toolkit\nLecture 1: What is statistical inference?\n\n\n\nLab 2: Basic Data Visualization\nLecture 2: The nature of data\nLecture 3: Probability basics\nHW 1\n\n\n\nLab 3: Data Wrangling\nLecture 4: Conditional bayes"
+    "text": "Lecture 0: Welcome to BIOS 600!\nLab 1: Introducing the Toolkit\nLecture 1: What is statistical inference?\n\n\n\nLab 2: Basic Data Visualization\nLecture 2: The nature of data\nLecture 3: Probability basics\nHW 1\n\n\n\nLab 3: Data Wrangling\nLecture 4: Conditional probability\nLecture 5: Medical diagnostics"
   },
   {
     "objectID": "index.html#week-1",
@@ -1152,7 +1425,7 @@
     "href": "index.html#week-3",
     "title": "BIOS 600 Fall 2026",
     "section": "",
-    "text": "Lab 3: Data Wrangling\nLecture 4: Conditional bayes"
+    "text": "Lab 3: Data Wrangling\nLecture 4: Conditional probability\nLecture 5: Medical diagnostics"
   },
   {
     "objectID": "about.html",
@@ -1946,298 +2219,11 @@
     "text": "Recap\n\nProbabilities come up all the time!\nBayesian vs. frequentist approaches\nProbability spaces, sample spaces, events\nSet operations\nHow do probabilities work? (Set operations, DeMorgan’s Laws)"
   },
   {
-    "objectID": "slides/lec-6-discrete.html#announcements",
-    "href": "slides/lec-6-discrete.html#announcements",
-    "title": "Lecture 6: Discrete distributions",
-    "section": "Announcements",
-    "text": "Announcements\n\nLab 3 now due Tuesday at 11:59pm.\nHW 2 due Thursday at 11:59pm.\nParticipation activity for today due Wednesday at 11:59pm.\nTomorrow’s lab session (9/9) is a TA Office Hour, come by if you need assistance with Lab 3 or HW 2!\n\nIn-person and remote options, join the zoom via Canvas &gt; Zoom Pro then click on the meeting for 9/9. Julian will be available to help on zoom."
-  },
-  {
-    "objectID": "slides/lec-6-discrete.html#supplemental-reading",
-    "href": "slides/lec-6-discrete.html#supplemental-reading",
-    "title": "Lecture 6: Discrete distributions",
-    "section": "Supplemental reading",
-    "text": "Supplemental reading\n\nPagano and Gavreau: Section 7.2 and 7.3\nOpenIntro Statistics: 3.4, 4.3, and 4.5"
-  },
-  {
-    "objectID": "slides/lec-6-discrete.html#overview",
-    "href": "slides/lec-6-discrete.html#overview",
-    "title": "Lecture 6: Discrete distributions",
-    "section": "Overview",
-    "text": "Overview\n\nWhat is a random variable?\nDiscrete distributions, Binomial and Poisson, and applications"
-  },
-  {
-    "objectID": "slides/lec-6-discrete.html#what-is-a-random-variable",
-    "href": "slides/lec-6-discrete.html#what-is-a-random-variable",
-    "title": "Lecture 6: Discrete distributions",
-    "section": "What is a random variable?",
-    "text": "What is a random variable?\nA random variable is a quantity whose value depends on the outcome of a random event.\n\nTraditionally, we use capital letters \\(X\\), \\(Y\\), \\(Z\\) to denote random variables.\nThe values that random variables take are in lowercase \\(x\\), \\(y\\), \\(z\\)\nSo, the probability that random variable \\(X\\) has the value \\(x\\) is denoted by \\(P(X = x)\\)\n\nRandom variables encountered in this class will be either discrete or continuous."
-  },
-  {
-    "objectID": "slides/lec-6-discrete.html#discrete-random-variables",
-    "href": "slides/lec-6-discrete.html#discrete-random-variables",
-    "title": "Lecture 6: Discrete distributions",
-    "section": "Discrete random variables",
-    "text": "Discrete random variables\n\nDiscrete random variables are those that can take on a countable number of potential values (could be countably infinite!), each associated with a probability of occurring.\n\nExamples: Tossing a coin (H, T), Rolling a die (1, 2, 3, 4, 5, 6)\n\nThis list of possible values and probabilities is the probability distribution for the discrete random variable in question.\nProbability distributions let us investigate how likely events may be.\nFor discrete random variables, you may also see the term probability mass function, which is the same thing."
-  },
-  {
-    "objectID": "slides/lec-6-discrete.html#example-probability-distribution-of-births-in-the-us",
-    "href": "slides/lec-6-discrete.html#example-probability-distribution-of-births-in-the-us",
-    "title": "Lecture 6: Discrete distributions",
-    "section": "Example: Probability distribution of births in the US",
-    "text": "Example: Probability distribution of births in the US\n\n\n\nLet \\(X\\) be the random variable for birth status in the US. Its probability distribution may be given by\n\n\n\n\nEvent\nProbability\n\n\n\n\nX = pre\n0.10\n\n\nX = early\n0.27\n\n\nX = full\n0.57\n\n\nX = late/post\n0.06"
-  },
-  {
-    "objectID": "slides/lec-6-discrete.html#probability-distribution-of-births-in-the-us",
-    "href": "slides/lec-6-discrete.html#probability-distribution-of-births-in-the-us",
-    "title": "Lecture 6: Discrete distributions",
-    "section": "Probability distribution of births in the US",
-    "text": "Probability distribution of births in the US\n\n\n\n\n\nEvent\nProbability\n\n\n\n\nX = pre\n0.10\n\n\nX = early\n0.27\n\n\nX = full\n0.57\n\n\nX = late/post\n0.06\n\n\n\n\nThere are three rules for discrete probability distributions:\n\nOutcomes must be disjoint\nThe probability of each outcome must be \\(\\geq\\) 0 and \\(\\leq\\) 1\nThe sum of the outcome probabilities must add up to 1.\n\n\n\n\n\n\n\n\nVerify the three rules\n\n\nLet’s verify the three rules above are satisfied with the births example."
-  },
-  {
-    "objectID": "slides/lec-6-discrete.html#bernoulli-random-variables",
-    "href": "slides/lec-6-discrete.html#bernoulli-random-variables",
-    "title": "Lecture 6: Discrete distributions",
-    "section": "Bernoulli random variables",
-    "text": "Bernoulli random variables\n\n\nSome “types” of random variables come up very often. Consider a dichotomous (two-level) random variable \\(X\\):\n\nDead or alive\nCurrent smoker or not\n\nThis is known as a Bernoulli random variable, and has a probability of “success” denoted by \\(p\\)."
-  },
-  {
-    "objectID": "slides/lec-6-discrete.html#bernoulli-random-variables-1",
-    "href": "slides/lec-6-discrete.html#bernoulli-random-variables-1",
-    "title": "Lecture 6: Discrete distributions",
-    "section": "Bernoulli random variables",
-    "text": "Bernoulli random variables\nWith the notation that event \\(X=1\\) is a “success” and \\(X=0\\) is a “failure”, \\(P(X=1)=p\\) and \\(P(X=0) = 1-p\\)\n\nFair coin flip: Let the event X=1 denote heads.\n\n\n\n\nEvent\nP(Event)\n\n\n\n\n\\(X=1\\)\n0.5\n\n\n\\(X=0\\)\n0.5\n\n\n\n\n2018 US births: Let the event \\(X=1\\) denote preterm birth.\n\n\n\n\nEvent\nP(Event)\n\n\n\n\n\\(X=1\\)\n0.1\n\n\n\\(X=0\\)\n0.9\n\n\n\nA “success” is not necessarily positive - if we are interested in the probability of dying, a “success” would be death."
-  },
-  {
-    "objectID": "slides/lec-6-discrete.html#extending-the-bernoulli-distribution",
-    "href": "slides/lec-6-discrete.html#extending-the-bernoulli-distribution",
-    "title": "Lecture 6: Discrete distributions",
-    "section": "Extending the Bernoulli distribution",
-    "text": "Extending the Bernoulli distribution\nSuppose we randomly select two independent US births in 2018, and \\(Z\\) is a new random variable that represents the number of preterm births among them.\n\\(Z\\) can be 0, 1, or 2:\n\n\n\n\n\n\n\n\n\n1st Birth \\(X\\)\n2nd Birth \\(X\\)\n# Preterm Births \\(Z\\)\nProbability of Outcome\n\n\n\n\n0\n0\n0\n\n\n\n1\n0\n1\n\n\n\n0\n1\n1\n\n\n\n1\n1\n2"
-  },
-  {
-    "objectID": "slides/lec-6-discrete.html#extending-the-bernoulli-distribution-1",
-    "href": "slides/lec-6-discrete.html#extending-the-bernoulli-distribution-1",
-    "title": "Lecture 6: Discrete distributions",
-    "section": "Extending the Bernoulli distribution",
-    "text": "Extending the Bernoulli distribution\nLet \\(X_1\\) be 1 if the first birth is preterm, and \\(X_2\\) be 1 if the second birth is preterm, and 0 otherwise.\nBecause these two births are independent, then\n\\[\n\\begin{aligned}\nP(\\textrm{both preterm}) &= P(\\textrm{first preterm and 2nd preterm})\\\\\n&= P(\\textrm{first preterm}) \\cdot P(\\textrm{2nd preterm})\\\\\n&= p * p = 0.1 \\times 0.1 = 0.01\n\\end{aligned}\n\\]"
-  },
-  {
-    "objectID": "slides/lec-6-discrete.html#extending-the-bernoulli-distribution-2",
-    "href": "slides/lec-6-discrete.html#extending-the-bernoulli-distribution-2",
-    "title": "Lecture 6: Discrete distributions",
-    "section": "Extending the Bernoulli distribution",
-    "text": "Extending the Bernoulli distribution\nBack to the table, row 1 is given by\n\\(P(X_1 = 0 \\cap X_2 = 0) = P(X_1 = 0) P(X_2 = 0) = (1-p)(1-p)\\)\n\n\n\n\n\n\n\n\n\n1st Birth \\(X\\)\n2nd Birth \\(X\\)\n# Preterm Births \\(Z\\)\nProbability of Outcome\n\n\n\n\n0\n0\n0\n(0.9)(0.9)=0.81\n\n\n1\n0\n1\n\n\n\n0\n1\n1\n\n\n\n1\n1\n2"
-  },
-  {
-    "objectID": "slides/lec-6-discrete.html#extending-the-bernoulli-distribution-3",
-    "href": "slides/lec-6-discrete.html#extending-the-bernoulli-distribution-3",
-    "title": "Lecture 6: Discrete distributions",
-    "section": "Extending the Bernoulli distribution",
-    "text": "Extending the Bernoulli distribution\nThus, the probability distribution of the number of preterm births out of two independent births is given by\n\n\n\n\n\\(z=0\\)\n\\(z=1\\)\n\\(z=2\\)\n\n\n\n\n\\(P(Z=z)\\)\n0.81\n0.18\n0.01"
-  },
-  {
-    "objectID": "slides/lec-6-discrete.html#extending-the-bernoulli-distribution-4",
-    "href": "slides/lec-6-discrete.html#extending-the-bernoulli-distribution-4",
-    "title": "Lecture 6: Discrete distributions",
-    "section": "Extending the Bernoulli distribution",
-    "text": "Extending the Bernoulli distribution\nNow let \\(Z\\) be the random variable corresponding to the number of preterm births among 3 independently sampled births\n\n\n\n\n\n\n\n\n\n\nFirst Birth \\(X_1\\)\nSecond Birth \\(X_2\\)\nThird Birth \\(X_3\\)\nNumber of Preterm Births \\(Z\\)\nProbability\n\n\n\n\n0\n0\n0\n0\n\n\n\n1\n0\n0\n1\n\n\n\n0\n1\n0\n1\n\n\n\n0\n0\n1\n1\n\n\n\n1\n1\n0\n2\n\n\n\n1\n0\n1\n2\n\n\n\n0\n1\n1\n2\n\n\n\n1\n1\n1\n3"
-  },
-  {
-    "objectID": "slides/lec-6-discrete.html#extending-the-bernoulli-distribution-5",
-    "href": "slides/lec-6-discrete.html#extending-the-bernoulli-distribution-5",
-    "title": "Lecture 6: Discrete distributions",
-    "section": "Extending the Bernoulli distribution",
-    "text": "Extending the Bernoulli distribution\nRow 1 is given by\n\\(P(X_1 = 0 \\cap X_2 = 0 \\cap X_3 = 0) = (1-p)(1-p)(1-p)\\)\n\n\n\n\n\n\n\n\n\n\nFirst Birth \\(X_1\\)\nSecond Birth \\(X_2\\)\nThird Birth \\(X_3\\)\nNumber of Preterm Births \\(Z\\)\nProbability\n\n\n\n\n0\n0\n0\n0\n0.729\n\n\n1\n0\n0\n1\n\n\n\n0\n1\n0\n1\n\n\n\n0\n0\n1\n1\n\n\n\n1\n1\n0\n2\n\n\n\n1\n0\n1\n2\n\n\n\n0\n1\n1\n2\n\n\n\n1\n1\n1\n3"
-  },
-  {
-    "objectID": "slides/lec-6-discrete.html#extending-the-bernoulli-distribution-6",
-    "href": "slides/lec-6-discrete.html#extending-the-bernoulli-distribution-6",
-    "title": "Lecture 6: Discrete distributions",
-    "section": "Extending the Bernoulli distribution",
-    "text": "Extending the Bernoulli distribution\nRow 2 is given by\n\\(P(X_1 = 1 \\cap X_2 = 0 \\cap X_3 = 0) = p(1-p)(1-p)\\)\n\n\n\n\n\n\n\n\n\n\nFirst Birth \\(X_1\\)\nSecond Birth \\(X_2\\)\nThird Birth \\(X_3\\)\nNumber of Preterm Births \\(Z\\)\nProbability\n\n\n\n\n0\n0\n0\n0\n0.729\n\n\n1\n0\n0\n1\n0.081\n\n\n0\n1\n0\n1\n\n\n\n0\n0\n1\n1\n\n\n\n1\n1\n0\n2\n\n\n\n1\n0\n1\n2\n\n\n\n0\n1\n1\n2\n\n\n\n1\n1\n1\n3"
-  },
-  {
-    "objectID": "slides/lec-6-discrete.html#extending-the-bernoulli-distribution-7",
-    "href": "slides/lec-6-discrete.html#extending-the-bernoulli-distribution-7",
-    "title": "Lecture 6: Discrete distributions",
-    "section": "Extending the Bernoulli distribution",
-    "text": "Extending the Bernoulli distribution\n…et cetera\n\n\n\n\n\n\n\n\n\n\nFirst Birth \\(X_1\\)\nSecond Birth \\(X_2\\)\nThird Birth \\(X_3\\)\nNumber of Preterm Births \\(Z\\)\nProbability\n\n\n\n\n0\n0\n0\n0\n0.729\n\n\n1\n0\n0\n1\n0.081\n\n\n0\n1\n0\n1\n0.081\n\n\n0\n0\n1\n1\n0.081\n\n\n1\n1\n0\n2\n0.009\n\n\n1\n0\n1\n2\n0.009\n\n\n0\n1\n1\n2\n0.009\n\n\n1\n1\n1\n3\n0.001"
-  },
-  {
-    "objectID": "slides/lec-6-discrete.html#extending-the-bernoulli-distribution-8",
-    "href": "slides/lec-6-discrete.html#extending-the-bernoulli-distribution-8",
-    "title": "Lecture 6: Discrete distributions",
-    "section": "Extending the Bernoulli distribution",
-    "text": "Extending the Bernoulli distribution\nIf we randomly sample 3 births, what is the chance 2 are preterm?\n0.009 + 0.009 + 0.009 = 0.027 (why?)\n\n\n\n\n\n\n\n\n\n\nFirst Birth \\(X_1\\)\nSecond Birth \\(X_2\\)\nThird Birth \\(X_3\\)\nNumber of Preterm Births \\(Z\\)\nProbability\n\n\n\n\n0\n0\n0\n0\n0.729\n\n\n1\n0\n0\n1\n0.081\n\n\n0\n1\n0\n1\n0.081\n\n\n0\n0\n1\n1\n0.081\n\n\n1\n1\n0\n2\n0.009\n\n\n1\n0\n1\n2\n0.009\n\n\n0\n1\n1\n2\n0.009\n\n\n1\n1\n1\n3\n0.001"
-  },
-  {
-    "objectID": "slides/lec-6-discrete.html#extending-the-bernoulli-distribution-9",
-    "href": "slides/lec-6-discrete.html#extending-the-bernoulli-distribution-9",
-    "title": "Lecture 6: Discrete distributions",
-    "section": "Extending the Bernoulli distribution",
-    "text": "Extending the Bernoulli distribution\nThus, the probability distribution of the number of preterm births out of three independent births is given by\n\n\n\n\n\\(z=0\\)\n\\(z=1\\)\n\\(z=2\\)\n\\(z=3\\)\n\n\n\n\n\\(P(Z=z)\\)\n0.729\n0.243\n0.027\n0.001\n\n\n\n\n\n\n\n\n\nVerify\n\n\nAre these disjoint events, with probabilities in [0,1], that all sum to 1?)"
-  },
-  {
-    "objectID": "slides/lec-6-discrete.html#extending-the-bernoulli-distribution-10",
-    "href": "slides/lec-6-discrete.html#extending-the-bernoulli-distribution-10",
-    "title": "Lecture 6: Discrete distributions",
-    "section": "Extending the Bernoulli distribution",
-    "text": "Extending the Bernoulli distribution\n\nIf we randomly sample 4 births, what is the probability distribution for the number of preterm births?\nTo build a similar table would start to become egregious.\nLuckily, there is a formula for this probability distribution!"
-  },
-  {
-    "objectID": "slides/lec-6-discrete.html#the-binomial-distribution",
-    "href": "slides/lec-6-discrete.html#the-binomial-distribution",
-    "title": "Lecture 6: Discrete distributions",
-    "section": "The binomial distribution",
-    "text": "The binomial distribution\nThe binomial distribution gives the probability of \\(k\\) “successes” from a sequence of \\(n\\) independent Bernoulli trials. There are three assumptions:\n\nThere is a fixed number of trials \\(n\\), each of which is a Bernoulli random variable.\nThe outcomes of the \\(n\\) trials are independent.\nThe probability of success, \\(p\\), is the same of each of these trials."
-  },
-  {
-    "objectID": "slides/lec-6-discrete.html#the-binomial-distribution-1",
-    "href": "slides/lec-6-discrete.html#the-binomial-distribution-1",
-    "title": "Lecture 6: Discrete distributions",
-    "section": "The binomial distribution",
-    "text": "The binomial distribution\nIf \\(X\\) has a binomial distribution, then\n\\[P(X=k) = {n \\choose k}p^k (1-p)^{n-k}\\]\nWhat do these components mean?\n\n\n\n\n\n\nNote\n\n\nThis expression will always be provided to you if needed."
-  },
-  {
-    "objectID": "slides/lec-6-discrete.html#the-binomial-distribution-2",
-    "href": "slides/lec-6-discrete.html#the-binomial-distribution-2",
-    "title": "Lecture 6: Discrete distributions",
-    "section": "The binomial distribution",
-    "text": "The binomial distribution\nIf we randomly sample 3 births, what is the chance 2 are preterm?\n\nThere is a fixed number of trials, each of which is a Bernoulli random variable\nThe outcomes of the trials are independent\nThe probability of success is the same for each of these trials\n\nThus, \\(Z \\sim Binom(3, 0.1)\\).\n\\[\n\\begin{aligned}\nP(Z=2) &= {3 \\choose 2} 0.1^2 (1-0.1)^{3-2} \\\\\n&= \\frac{3!}{2!(3-2)!} \\times 0.1^2 \\times 0.9 ^1 = 0.027\n\\end{aligned}\n\\]"
-  },
-  {
-    "objectID": "slides/lec-6-discrete.html#in-r",
-    "href": "slides/lec-6-discrete.html#in-r",
-    "title": "Lecture 6: Discrete distributions",
-    "section": "In R",
-    "text": "In R\nWe can calculate these probabilities in R with the dbinom() function:\n\ndbinom(2, size = 3, prob = 0.1)\n\n[1] 0.027"
-  },
-  {
-    "objectID": "slides/lec-6-discrete.html#participation",
-    "href": "slides/lec-6-discrete.html#participation",
-    "title": "Lecture 6: Discrete distributions",
-    "section": "Participation",
-    "text": "Participation\n\n\n\n\n\n\nApplication Exercise in R\n\n\n\nFor today’s participation, you’ll practice some of the functions we learn today using R.\nIn Canvas, download the Quarto template for the Application Exercise for today. Save the file with a sensible name (ae-01.qmd) in your project folder.\nBegin by working on Exercises 1 and 2."
-  },
-  {
-    "objectID": "slides/lec-6-discrete.html#the-poisson-distribution",
-    "href": "slides/lec-6-discrete.html#the-poisson-distribution",
-    "title": "Lecture 6: Discrete distributions",
-    "section": "The Poisson distribution",
-    "text": "The Poisson distribution\n\n\n\nDiscrete distribution taking on possible values 0, 1, 2, \\(\\ldots\\), \\(\\infty\\)\nOften used to model counts or rare events\nMuch like the binomial distribution, requires a few assumptions"
-  },
-  {
-    "objectID": "slides/lec-6-discrete.html#the-poisson-distribution-1",
-    "href": "slides/lec-6-discrete.html#the-poisson-distribution-1",
-    "title": "Lecture 6: Discrete distributions",
-    "section": "The Poisson distribution",
-    "text": "The Poisson distribution\nThe Poisson distribution gives the probability that \\(k\\) events occur in a given “interval”. There are four assumptions:\n\nWithin any interval, \\(k\\) may take on values 0, 1, 2, 3, \\(\\ldots\\), \\(\\infty\\)\nEach event occurs independently, both within the same interval, and between intervals\nThe average rate at which events occur in an interval, \\(\\lambda\\), is constant\nTwo events cannot occur simultaneously\n\nWhat is an “interval”?"
-  },
-  {
-    "objectID": "slides/lec-6-discrete.html#the-poisson-distribution-2",
-    "href": "slides/lec-6-discrete.html#the-poisson-distribution-2",
-    "title": "Lecture 6: Discrete distributions",
-    "section": "The Poisson distribution",
-    "text": "The Poisson distribution\nIf \\(X\\) has a Poisson distribution, then\n\\[P(X=k) = \\frac{\\lambda^k e^{-\\lambda}}{k!}\\]\nWhat do these components mean?\n\n\n\n\n\n\nNote\n\n\nThis expression will always be provided to you if needed."
-  },
-  {
-    "objectID": "slides/lec-6-discrete.html#the-poisson-distribution-3",
-    "href": "slides/lec-6-discrete.html#the-poisson-distribution-3",
-    "title": "Lecture 6: Discrete distributions",
-    "section": "The Poisson distribution",
-    "text": "The Poisson distribution\nSuppose on average, there are 1.5 deaths due to Alzheimer’s Disease in a town each year. For a one-year period in this town, what is the chance that two or more people die from Alzheimer’s?\n\nWithin any interval, the number of AD deaths can range from 0 to \\(\\infty\\) (technically not true, but close enough)\nOne individual dying of Alzheimer’s does not affect the chance of another person dying of Alzheimer’s\nThe AD death rate is constant in this town\nTwo AD deaths cannot occur at the same time (we can always subdivide time intervals such that only one person experiences this event in a given sub-interval)"
-  },
-  {
-    "objectID": "slides/lec-6-discrete.html#the-poisson-distribution-4",
-    "href": "slides/lec-6-discrete.html#the-poisson-distribution-4",
-    "title": "Lecture 6: Discrete distributions",
-    "section": "The Poisson distribution",
-    "text": "The Poisson distribution\nThus \\(Z \\sim Pois(1.5)\\), and \\(P(Z=0)\\), \\(P(Z=1)\\), and \\(P(Z\\geq 2)\\) are disjoint events. So, \\(P(Z \\geq 2) = 1- [P(Z = 0) + P(Z = 1)]\\), where\n\\[\n\\begin{aligned}\nP(Z=0) &= \\frac{1.5^0 \\times e^{-1.5}}{0!}\\approx 0.223 \\\\\nP(Z=1) &= \\frac{1.5^1 \\times e^{-1.5}}{1!}\\approx 0.335\n\\end{aligned}\n\\]\nAnd so \\(P(Z \\geq 2) \\approx 1-0.223-0.335 = 0.442\\)."
-  },
-  {
-    "objectID": "slides/lec-6-discrete.html#in-r-1",
-    "href": "slides/lec-6-discrete.html#in-r-1",
-    "title": "Lecture 6: Discrete distributions",
-    "section": "In R",
-    "text": "In R\nWe can calculate these values in R using the dpois() function:\n\ndpois(x = 0, lambda = 1.5)\n\n[1] 0.2231302\n\n\n\ndpois(x = 1, lambda = 1.5)\n\n[1] 0.3346952\n\n\n\n1- (dpois(x = 0, lambda = 1.5) + \n      dpois(x = 1, lambda = 1.5))\n\n[1] 0.4421746\n\n\nNote: Each parentheses needs a buddy! Common source of Quarto files not rendering…"
-  },
-  {
-    "objectID": "slides/lec-6-discrete.html#in-r-2",
-    "href": "slides/lec-6-discrete.html#in-r-2",
-    "title": "Lecture 6: Discrete distributions",
-    "section": "In R",
-    "text": "In R\nIf we wanted to abbreviate our typing (and reduce possibility of typos), we can save our first two probabilities as objects p0 and p1 to use them later.\n\np0 &lt;- dpois(x = 0, lambda = 1.5)\np0\n\n[1] 0.2231302\n\n\n\np1 &lt;- dpois(x = 1, lambda = 1.5)\np1\n\n[1] 0.3346952\n\n\n\n1- (p0 + p1)\n\n[1] 0.4421746"
-  },
-  {
-    "objectID": "slides/lec-6-discrete.html#what-about-other-interval-lengths",
-    "href": "slides/lec-6-discrete.html#what-about-other-interval-lengths",
-    "title": "Lecture 6: Discrete distributions",
-    "section": "What about other interval lengths?",
-    "text": "What about other interval lengths?\nSuppose we have a count random variable that follows a Poisson distribution:\n\nSince each event is independent of others and the rate \\(\\lambda\\) is constant, the probability that an event occurs within an interval is proportional to the length of that interval.\nE.g., we would expect twice the number of events to occur in an interval of twice the length; we would expect 1/9 times the number of events to occur in an interval 9 times as small; and so on."
-  },
-  {
-    "objectID": "slides/lec-6-discrete.html#what-about-other-interval-lengths-1",
-    "href": "slides/lec-6-discrete.html#what-about-other-interval-lengths-1",
-    "title": "Lecture 6: Discrete distributions",
-    "section": "What about other interval lengths?",
-    "text": "What about other interval lengths?\nSuppose on average, there are 1.5 deaths due to Alzheimer’s disease in a town each year.\n\n\n\n\n\n\nExample:\n\n\n\nWhat is the average one-month rate of deaths due to Alzheimer’s disease in this town?\nFor any given one-month period in this town, what is the probability that exactly one person dies from Alzheimer’s? (Just the expression is fine)\n\nFor \\(X \\sim Pois(\\lambda)\\),\n\\[P(X=k) = \\frac{\\lambda^k e^{-\\lambda}}{k!}\\]"
-  },
-  {
-    "objectID": "slides/lec-6-discrete.html#participation-1",
-    "href": "slides/lec-6-discrete.html#participation-1",
-    "title": "Lecture 6: Discrete distributions",
-    "section": "Participation",
-    "text": "Participation\n\n\n\n\n\n\nPractice in R\n\n\nIn today’s participation, continue with Exercise 3.\nWhen you’ve completed the exercises, render, save to PDF, and submit on Canvas&gt; Assignments. Due Wednesday at 11:59pm."
-  },
-  {
-    "objectID": "slides/lec-6-discrete.html#expectation-and-variance",
-    "href": "slides/lec-6-discrete.html#expectation-and-variance",
-    "title": "Lecture 6: Discrete distributions",
-    "section": "Expectation and variance",
-    "text": "Expectation and variance\nNow that we’ve defined random variables and explored a few distributions, we might be interested in some other aspects of their distributions.\nSuppose we are interested in the probability distribution corresponding to the number of preterm births in a random sample of five independent US births.\n\nHow many preterm births should we expect?\nHow “spread out” would this distribution be?"
-  },
-  {
-    "objectID": "slides/lec-6-discrete.html#expected-value",
-    "href": "slides/lec-6-discrete.html#expected-value",
-    "title": "Lecture 6: Discrete distributions",
-    "section": "Expected value",
-    "text": "Expected value\nThe expected value of a discrete random variable \\(X\\) is a weighted average of the possible outcomes:\n\\[E(X) = \\sum_{\\textrm{all } x} x \\cdot P(X = x)\\]\nThis is a property of the distribution of \\(X\\), not of the random variable itself."
-  },
-  {
-    "objectID": "slides/lec-6-discrete.html#properties-of-bernoulli-and-binomial-random-variables",
-    "href": "slides/lec-6-discrete.html#properties-of-bernoulli-and-binomial-random-variables",
-    "title": "Lecture 6: Discrete distributions",
-    "section": "Properties of Bernoulli and binomial random variables",
-    "text": "Properties of Bernoulli and binomial random variables\n\nFor \\(Z \\sim Bern(p)\\), \\(E(Z) = p\\) and \\(Var(Z) = p(1-p)\\)\n\nExample: Let Z be a coin toss. \\(Z \\sim Bern(.5)\\). \\(E(Z) = .5\\) and \\(Var(Z) = 0.5 \\cdot (0.5) = 0.25\\).\n\nFor \\(Z \\sim Binom(n, p)\\), \\(E(Z) = np\\) and \\(Var(Z) = np(1-p)\\)\nFor \\(Z \\sim Pois(\\lambda)\\), \\(E(Z) = Var(Z) = \\lambda\\)"
-  },
-  {
-    "objectID": "slides/lec-6-discrete.html#recap",
-    "href": "slides/lec-6-discrete.html#recap",
-    "title": "Lecture 6: Discrete distributions",
-    "section": "Recap",
-    "text": "Recap\n\nDiscrete random variables\nBinomial, Poisson random variables and applications\nExpected values and variances"
-  },
-  {
-    "objectID": "slides/lec-6-discrete.html#next-class",
-    "href": "slides/lec-6-discrete.html#next-class",
-    "title": "Lecture 6: Discrete distributions",
-    "section": "Next class",
-    "text": "Next class\n\nContinuous distributions"
-  },
-  {
     "objectID": "slides/lec-5-diagnostic.html#announcements",
     "href": "slides/lec-5-diagnostic.html#announcements",
     "title": "Lecture 5: Diagnostic Testing",
     "section": "Announcements",
-    "text": "Announcements\n\nFree Tutoring available! Open sessions and individual sessions.\n\n\n\n\nTutor\nOpen Session Time\nLocation/Loom\n\n\n\n\nMolly Hoch\nMondays, 10am-12pm\nRosenau 231 (10/13: 2005 MHRC)\n\n\nWenqing Zhu\nTues & Thurs, 10-11:30am\nhttps://zoom.us/j/6873416836\n\n\nJose Lopez\nWednesdays, 10am-12pm\nhttps://zoom.us/j/6873416836\n\n\n\n\nEmail bios600tutor@unc.edu to set up an individual appointment."
-  },
-  {
-    "objectID": "slides/lec-5-diagnostic.html#announcements-1",
-    "href": "slides/lec-5-diagnostic.html#announcements-1",
-    "title": "Lecture 5: Diagnostic Testing",
-    "section": "Announcements",
-    "text": "Announcements\n\nLab 3 Due Friday at 11:59pm\nHW 2 will be assigned after class, due Sept 11 at 11:59pm."
+    "text": "Announcements\n\nLab 3 Due Friday at 11:59pm\nHW 2 will be assigned after class, due Sept 10 at 11:59pm."
   },
   {
     "objectID": "slides/lec-5-diagnostic.html#reading",
@@ -2251,28 +2237,70 @@
     "href": "slides/lec-5-diagnostic.html#overview",
     "title": "Lecture 5: Diagnostic Testing",
     "section": "Overview",
-    "text": "Overview\n\nHow conditional probabilities relate to sensitivity, specificity, & more!\nExample with Bayes’ theorem\nROC Curves"
+    "text": "Overview\n\nReview from lab\nDefine prevalence, sensitivity, specificity, positive predictive value, negative predictive value\nHow conditional probabilities relate to sensitivity, specificity\nCalculate sensitivity and specificity based on a 2x2 contingency table\nROC Curves"
+  },
+  {
+    "objectID": "slides/lec-5-diagnostic.html#review",
+    "href": "slides/lec-5-diagnostic.html#review",
+    "title": "Lecture 5: Diagnostic Testing",
+    "section": "Review",
+    "text": "Review\nConsider the iris data set, which gives the measurements in centimeters of the variables sepal length and width and petal length and width, respectively, for 50 flowers from each of 3 species of iris. The species are Iris setosa, versicolor, and virginica.\n\nglimpse(iris)\n\nRows: 150\nColumns: 5\n$ Sepal.Length &lt;dbl&gt; 5.1, 4.9, 4.7, 4.6, 5.0, 5.4, 4.6, 5.0, 4.4, 4.9, 5.4, 4.…\n$ Sepal.Width  &lt;dbl&gt; 3.5, 3.0, 3.2, 3.1, 3.6, 3.9, 3.4, 3.4, 2.9, 3.1, 3.7, 3.…\n$ Petal.Length &lt;dbl&gt; 1.4, 1.4, 1.3, 1.5, 1.4, 1.7, 1.4, 1.5, 1.4, 1.5, 1.5, 1.…\n$ Petal.Width  &lt;dbl&gt; 0.2, 0.2, 0.2, 0.2, 0.2, 0.4, 0.3, 0.2, 0.2, 0.1, 0.2, 0.…\n$ Species      &lt;fct&gt; setosa, setosa, setosa, setosa, setosa, setosa, setosa, s…"
+  },
+  {
+    "objectID": "slides/lec-5-diagnostic.html#participation",
+    "href": "slides/lec-5-diagnostic.html#participation",
+    "title": "Lecture 5: Diagnostic Testing",
+    "section": "Participation",
+    "text": "Participation\nInstructions: Go to Canvas and find today’s participation assignment. Write your answers to the following review questions in the text box. (1 sentence each)\nI will assign questions 1-6 to random groups to report their answer after the timer is up.\nThis assignment is due tomorrow Friday 9/4 at 11:59pm.\n\n\n\n−+\n08:00"
+  },
+  {
+    "objectID": "slides/lec-5-diagnostic.html#review-1",
+    "href": "slides/lec-5-diagnostic.html#review-1",
+    "title": "Lecture 5: Diagnostic Testing",
+    "section": "Review",
+    "text": "Review\nWhat would each of the following do?\n\n\n\n\niris |&gt;\n  select(Sepal.Length, Species)\n\n\n\n\n\niris |&gt;\n  filter(Sepal.Length &gt; 6)\n\n\n\n\n\niris |&gt;\n  distinct(Species)"
+  },
+  {
+    "objectID": "slides/lec-5-diagnostic.html#review-2",
+    "href": "slides/lec-5-diagnostic.html#review-2",
+    "title": "Lecture 5: Diagnostic Testing",
+    "section": "Review",
+    "text": "Review\nWhat would each of the following do?\n\n\n\n\niris |&gt;\n  group_by(Species) |&gt;\n  summarize(avg_sl = mean(Sepal.Length))\n\n\n\n\n\niris |&gt;\n  ggplot(aes(x = Sepal.Length, \n             y = Sepal.Width, \n             color = Species)) +\n  geom_point()"
+  },
+  {
+    "objectID": "slides/lec-5-diagnostic.html#review-3",
+    "href": "slides/lec-5-diagnostic.html#review-3",
+    "title": "Lecture 5: Diagnostic Testing",
+    "section": "Review",
+    "text": "Review\n\nWhat would be the difference in the results from these two code chunks?\n\n\niris |&gt;\n  group_by(Species) |&gt;\n  summarize(avg_sl = mean(Sepal.Length, na.rm = T))\n\niris |&gt;\n  summarize(avg_sl = mean(Sepal.Length))"
   },
   {
     "objectID": "slides/lec-5-diagnostic.html#conditional-probabilities",
     "href": "slides/lec-5-diagnostic.html#conditional-probabilities",
     "title": "Lecture 5: Diagnostic Testing",
     "section": "Conditional probabilities",
-    "text": "Conditional probabilities\nSuppose we care about the probability that someone has HIV, denoted by \\(P(HIV+)\\).\n\nWhat if they have a positive HIV test?\n\n\\(P(HIV + | Test +)\\)\n\nWhat if they have a negative HIV test?\n\n\\(P(HIV + | Test -)\\)\nKnowing the result of the HIV test changes our estimate of their HIV proability.\n\n\n\n\n\n\nQuestion\n\n\nWhich of the three probabilities would we expect to be the highest? The lowest?"
+    "text": "Conditional probabilities\nSuppose we care about the probability that someone has HIV, denoted by \\(P(HIV+)\\).\n\nWhat if they have a positive HIV test?\n\n\\(P(HIV + | Test +)\\)\n\nWhat if they have a negative HIV test?\n\n\\(P(HIV + | Test -)\\)\nKnowing the result of the HIV test changes our estimate of their HIV proability."
+  },
+  {
+    "objectID": "slides/lec-5-diagnostic.html#question",
+    "href": "slides/lec-5-diagnostic.html#question",
+    "title": "Lecture 5: Diagnostic Testing",
+    "section": "Question",
+    "text": "Question\nWhich of the three probabilities would we expect to be the highest? The lowest?\n\n\\(P(HIV+)\\)\n\\(P(HIV + | Test +)\\)\n\\(P(HIV + | Test -)\\)\n\n\n\n\n−+\n01:00"
   },
   {
     "objectID": "slides/lec-5-diagnostic.html#medical-diagnostics",
     "href": "slides/lec-5-diagnostic.html#medical-diagnostics",
     "title": "Lecture 5: Diagnostic Testing",
     "section": "Medical diagnostics",
-    "text": "Medical diagnostics\nSuppose we’re interested in the performance of a diagnostic test. Let \\(A\\) be the event that someone has a condition of interest, and let \\(B\\) be the event that a test for that condition is positive.\n\nPrevalence: \\(P(A)\\)\nSensitivity: \\(P(B|A)\\), or the true positive rate\n\nprobability that the test is positive given the condition is present\n\nSpecificity: \\(P(B^C | A^C)\\), or 1 minus the false positive rate\n\nProbability that the test is negative given the condition is not present"
+    "text": "Medical diagnostics\nSuppose we’re interested in the performance of a diagnostic test. Let \\(A\\) be the event that someone has a condition of interest, and let \\(B\\) be the event that a test for that condition is positive.\n\nPrevalence: \\(P(A)\\)\nSensitivity: \\(P(B|A)\\), or the true positive rate\n\nprobability that the test is positive given the condition is present"
   },
   {
     "objectID": "slides/lec-5-diagnostic.html#medical-diagnostics-continued",
     "href": "slides/lec-5-diagnostic.html#medical-diagnostics-continued",
     "title": "Lecture 5: Diagnostic Testing",
     "section": "Medical diagnostics (continued)",
-    "text": "Medical diagnostics (continued)\n\nPositive Predictive Value (PPV): \\(P(A|B)\\)\n\n\n\nNegative Predictive Value (NPV): \\(P(A^C | B^C)\\)\n\n\n\n\n\n\n\n\n\n\nWrite out the last two probabilities (PPV and NPV) in words."
+    "text": "Medical diagnostics (continued)\n\nSpecificity: \\(P(B^C | A^C)\\), or 1 minus the false positive rate\n\nProbability that the test is negative given the condition is not present\n\nPositive Predictive Value (PPV): \\(P(A|B)\\)\n\nProbability of having the condition of interest, given the test was positive\n\nNegative Predictive Value (NPV): \\(P(A^C | B^C)\\)\n\nProbability that the person does not have the condition of interest, given the test was negative"
   },
   {
     "objectID": "slides/lec-5-diagnostic.html#popularization-of-medical-diagnostics",
@@ -2307,95 +2335,46 @@
     "href": "slides/lec-5-diagnostic.html#takeaway",
     "title": "Lecture 5: Diagnostic Testing",
     "section": "Takeaway",
-    "text": "Takeaway\n\nWhat’s the takeaway here?\nEven if a test never misses true cases (perfect sensitivity), a modest false positive rate can mess up the results, especially when the disease is rare.\n\nConsequence: Most people who test positive may not actually be infected.\n\nThis demonstrates why specificity and disease prevalence are important as well in diagnostic testing."
+    "text": "Takeaway\n\nEven if a test never misses true cases (perfect sensitivity), a modest false positive rate can mess up the results, especially when the disease is rare.\n\nConsequence: Most people who test positive may not actually be infected.\n\nThis demonstrates why specificity and disease prevalence are important as well in diagnostic testing."
   },
   {
-    "objectID": "slides/lec-5-diagnostic.html#rapid-self-administered-hiv-tests",
-    "href": "slides/lec-5-diagnostic.html#rapid-self-administered-hiv-tests",
+    "objectID": "slides/lec-5-diagnostic.html#example",
+    "href": "slides/lec-5-diagnostic.html#example",
     "title": "Lecture 5: Diagnostic Testing",
-    "section": "Rapid self-administered HIV tests",
-    "text": "Rapid self-administered HIV tests\nFrom the FDA package insert for the OraQuick ADVANCE Rapid HIV-1/2 Antibody test,\n\nSensitivity, \\(P(Test+|HIV+)\\): 99.3%\nSpecificity, \\(P(Test - | HIV -)\\): 99.8%\n\nFrom CDC statistics for 2016, 14.3/100,000 Americans aged \\(\\geq\\) 13 are HIV+.\nSuppose a randomly selected American aged \\(\\geq\\) 13 has a positive test on this test. What do you think is the probability they are HIV+?"
+    "section": "Example",
+    "text": "Example\nA new rapid test has been developed to detect influenza infection. A study compares the results of the rapid test against the gold standard laboratory PCR test. The results from 200 patients are shown below:\n\n\n\n\nPCR Positive\nPCR Negative\nTotal\n\n\n\n\nRapid Test Positive\n72\n18\n90\n\n\nRapid Test Negative\n8\n102\n110\n\n\nTotal\n80\n120\n200"
   },
   {
-    "objectID": "slides/lec-5-diagnostic.html#steps-to-solve-using-bayes-rule",
-    "href": "slides/lec-5-diagnostic.html#steps-to-solve-using-bayes-rule",
+    "objectID": "slides/lec-5-diagnostic.html#example-1",
+    "href": "slides/lec-5-diagnostic.html#example-1",
     "title": "Lecture 5: Diagnostic Testing",
-    "section": "Steps to solve using Bayes’ Rule",
-    "text": "Steps to solve using Bayes’ Rule\n\nDefine two events of interest as \\(A\\) and \\(B\\).\nWrite the quantity of interest in terms of Bayes’ Rule.\nExpand denominator in terms of law of total probability.\nIdentify quantities of interest.\nPlug in quantities from step 4 and solve."
+    "section": "Example",
+    "text": "Example\n\n\n\n\nPCR Positive\nPCR Negative\nTotal\n\n\n\n\nRapid Test Positive\n72\n18\n90\n\n\nRapid Test Negative\n8\n102\n110\n\n\nTotal\n80\n120\n200\n\n\n\nCalculate the sensitivity of the rapid test using the definition of conditional probability. (Leave as an expression.)"
   },
   {
-    "objectID": "slides/lec-5-diagnostic.html#bayes-rule",
-    "href": "slides/lec-5-diagnostic.html#bayes-rule",
+    "objectID": "slides/lec-5-diagnostic.html#solution",
+    "href": "slides/lec-5-diagnostic.html#solution",
     "title": "Lecture 5: Diagnostic Testing",
-    "section": "Bayes’ rule",
-    "text": "Bayes’ rule\nRecall Bayes’ rule below. Also recall that we can expand our denominator using Law of Total Probability.\n\\[\n\\begin{aligned}\nP(A | B) = \\frac{P(A \\cap B)}{P(B)} &= \\frac{P(B | A) P(A)}{P(B)} \\\\\n&= \\frac{P(B | A) P(A) }{P(B | A) P(A) + P(B | A^C) P(A^C)}\n\\end{aligned}\n\\]"
+    "section": "Solution",
+    "text": "Solution\n\n\n\n\nPCR Positive\nPCR Negative\nTotal\n\n\n\n\nRapid Test Positive\n72\n18\n90\n\n\nRapid Test Negative\n8\n102\n110\n\n\nTotal\n80\n120\n200\n\n\n\nWant to find \\(P(\\textrm{positive test} | \\textrm{disease present})\\)\n\\(=P(\\textrm{positive test and disease present} | \\textrm{disease present})\\)\n\\(= \\frac{72}{72 + 8} = \\frac{72}{80}\\)"
   },
   {
-    "objectID": "slides/lec-5-diagnostic.html#lets-solve",
-    "href": "slides/lec-5-diagnostic.html#lets-solve",
+    "objectID": "slides/lec-5-diagnostic.html#your-turn",
+    "href": "slides/lec-5-diagnostic.html#your-turn",
     "title": "Lecture 5: Diagnostic Testing",
-    "section": "Let’s solve!",
-    "text": "Let’s solve!\nStep 1: Define events as \\(A\\) and \\(B\\).\nLet \\(A\\) be the event of being HIV+ and \\(B\\) be testing positive.\nStep 2: Write out the quantity of interest using Bayes’ Rule.\n\\[P(HIV + | Test +) = \\frac{P(Test + | HIV +)P(HIV +)}{P(HIV +)}\\]"
+    "section": "Your turn",
+    "text": "Your turn\n\n\n\n\nPCR Positive\nPCR Negative\nTotal\n\n\n\n\nRapid Test Positive\n72\n18\n90\n\n\nRapid Test Negative\n8\n102\n110\n\n\nTotal\n80\n120\n200\n\n\n\n\nCalculate the specificity of the rapid test using the definition of conditional probability. (Leave as an expression.)\nIn one sentence, explain what specificity means in this context.\n\n\n\n\n−+\n04:00"
   },
   {
-    "objectID": "slides/lec-5-diagnostic.html#lets-solve-continued",
-    "href": "slides/lec-5-diagnostic.html#lets-solve-continued",
+    "objectID": "slides/lec-5-diagnostic.html#your-turn-1",
+    "href": "slides/lec-5-diagnostic.html#your-turn-1",
     "title": "Lecture 5: Diagnostic Testing",
-    "section": "Let’s Solve! (continued)",
-    "text": "Let’s Solve! (continued)\nStep 3: Expand the denominator using Law of Total Probability. \\[\n=\\frac{P(Test + | HIV +)P(HIV +)}{P(Test + | HIV +) P(HIV +) + P(Test + | HIV - ) P(HIV -)}\n\\]\nStep 4: Identify quantities of interest.\n\n\\(P(Test + | HIV +)\\) = True positive rate = sensitivity = .993\n\\(P(HIV +)\\) = prevalence = .000143\n\\(P(Test + | HIV - )\\) = False positive rate = 1 - specificity = 1-.998\n\\(P(HIV - )\\) = 1 - prevalence = 1-.000143"
+    "section": "Your turn",
+    "text": "Your turn\n\n\n\n\nPCR Positive\nPCR Negative\nTotal\n\n\n\n\nRapid Test Positive\n72\n18\n90\n\n\nRapid Test Negative\n8\n102\n110\n\n\nTotal\n80\n120\n200\n\n\n\nWhat is the prevalence of the disease in our sample?"
   },
   {
-    "objectID": "slides/lec-5-diagnostic.html#lets-solve-continued-1",
-    "href": "slides/lec-5-diagnostic.html#lets-solve-continued-1",
-    "title": "Lecture 5: Diagnostic Testing",
-    "section": "Let’s solve! (continued)",
-    "text": "Let’s solve! (continued)\nStep 5: Plug in quantities from step 4 and solve.\n\\[P(HIV + | Test +)\\]\n\\[=\\frac{(.993)(.000143)}{(.993)(.000143) + (1-.998)(1-.000143)}\\]\n\\[ = 0.066 = 6.6\\%\\] Is this result surprising? Why?"
-  },
-  {
-    "objectID": "slides/lec-5-diagnostic.html#pause-review",
-    "href": "slides/lec-5-diagnostic.html#pause-review",
-    "title": "Lecture 5: Diagnostic Testing",
-    "section": "Pause & review",
-    "text": "Pause & review\n\n\n\n\n\n\nQuestion\n\n\n\nIn pairs, review the steps of solving this example. Take turns explaining each of the steps to your partner. (Person 1 explains step 1, person 2 explains step 2, etc.)"
-  },
-  {
-    "objectID": "slides/lec-5-diagnostic.html#interpretation-of-result-oraquick-test",
-    "href": "slides/lec-5-diagnostic.html#interpretation-of-result-oraquick-test",
-    "title": "Lecture 5: Diagnostic Testing",
-    "section": "Interpretation of Result: Oraquick test",
-    "text": "Interpretation of Result: Oraquick test\n\nThis calculation is surprising. We would hope that the PPV would be higher.\nWhat is going on?\nBefore we answer that: what if a randomly selected adult in Botswana tested positive (HIV prevalence \\(\\approx\\) 25%)?\nTo calculate this, we can use our same setup as above, but just swap out a new value for prevalence, \\(P(HIV +)\\)."
-  },
-  {
-    "objectID": "slides/lec-5-diagnostic.html#ppv-for-botswana",
-    "href": "slides/lec-5-diagnostic.html#ppv-for-botswana",
-    "title": "Lecture 5: Diagnostic Testing",
-    "section": "PPV for Botswana",
-    "text": "PPV for Botswana\n\\[P(HIV + | Test +)\\]\n\\[=\\frac{(.993)(.25)}{(.993)(.25) + (1-.998)(1-.25)}\\]\n\\[ = .99 = 99\\%\\]"
-  },
-  {
-    "objectID": "slides/lec-5-diagnostic.html#whats-going-on-here",
-    "href": "slides/lec-5-diagnostic.html#whats-going-on-here",
-    "title": "Lecture 5: Diagnostic Testing",
-    "section": "What’s going on here?",
-    "text": "What’s going on here?\n\nThe PPV is only 6.6% for US while it’s 99% in Botswana.\nUS has low prevalence of HIV while Botswana has relatively higher prevalence.\nThere will likely be a higher number of false positives relative to true positives in the place with low prevalence, causing the positive predictive value (PPV) to drop.\n\nThis is simply due to the nature of the test, i.e. having some nonzero false positive rate, in our case .002.\n\nThis is something to look out for! Specificity (i.e. FPR) is important to consider."
-  },
-  {
-    "objectID": "slides/lec-5-diagnostic.html#pause-and-reflect",
-    "href": "slides/lec-5-diagnostic.html#pause-and-reflect",
-    "title": "Lecture 5: Diagnostic Testing",
-    "section": "Pause and reflect",
-    "text": "Pause and reflect\n\nIn small groups, reflect on this example and the following takeaway:\n\n\n\n\n\n\n\nTakeaway\n\n\n\nIn the US, small prevalence + modest false positive rate is causing the PPV to be much lower than we’d want.\nIn Botswana, higher prevalence “corrects” this issue, leading to PPV being much higher (meaning more people who test positive actually have the condition.)\nWith a modest false positive rate, a higher prevalence can help our PPV be higher, yielding a more useful diagnostic test for that setting. With lower prevalence, you need to be careful with the conclusions made by a diagnostic test as it could be misleading."
-  },
-  {
-    "objectID": "slides/lec-5-diagnostic.html#discrimination-thresholds",
-    "href": "slides/lec-5-diagnostic.html#discrimination-thresholds",
-    "title": "Lecture 5: Diagnostic Testing",
-    "section": "Discrimination thresholds",
-    "text": "Discrimination thresholds\nOral HIV tests give positive or negative results depending on levels of HIV antibodies detected in saliva.\n\nIf antibody levels are above a certain threshold, it is classified as a positive test.\nVarying the threshold for a positive vs. negative test will result in a test in different characteristics.\nAt each threshold value, there is a tradeoff between sensitivity and specificity."
-  },
-  {
-    "objectID": "slides/lec-5-diagnostic.html#roc-curves",
-    "href": "slides/lec-5-diagnostic.html#roc-curves",
+    "objectID": "slides/lec-5-diagnostic.html#roc-curves-1",
+    "href": "slides/lec-5-diagnostic.html#roc-curves-1",
     "title": "Lecture 5: Diagnostic Testing",
     "section": "ROC curves",
     "text": "ROC curves\nReceiver Operating Characteristic curves show how specificity and sensitivity change as the discrimination threshold changes.\n\nThe ROC curve was first developed by electrical and radar engineers during World War II for detecting enemy objects in battlefields, starting in 1941."
@@ -2415,18 +2394,32 @@
     "text": "From Haenssle et al. (2018)\n\nROC curves show, for each false positive rate, what the true positive rate is corresponding to that threshold value."
   },
   {
+    "objectID": "slides/lec-5-diagnostic.html#auc",
+    "href": "slides/lec-5-diagnostic.html#auc",
+    "title": "Lecture 5: Diagnostic Testing",
+    "section": "AUC",
+    "text": "AUC\n\nArea Under the Curve (AUC): a metric that evaluates how well a binary classification model can distinguish between two classes\nRanges from 0 to 1. (Ideally, close to 1)\nAUC = 1 means your test is the perfect classifier. Separates out “Yes” and “No” perfectly without error.\nAUC = 0.5 means your test is no better than flipping a coin.\nAUC &lt; 0.5 means your test performs worse than random guessing (may occur due to reversed class labels)"
+  },
+  {
     "objectID": "slides/lec-5-diagnostic.html#why-roc-curves",
     "href": "slides/lec-5-diagnostic.html#why-roc-curves",
     "title": "Lecture 5: Diagnostic Testing",
     "section": "Why ROC Curves?",
-    "text": "Why ROC Curves?\n\nBy moving the threshold, we can:\n\nCatch more true cases (↑ sensitivity),\nBut risk more false alarms (↑ false positive rate).\n\nThe ROC curve shows all possible tradeoffs at once.\nThe diagonal line = random guessing.\nA “good” test’s ROC curve bows toward the upper-left corner (high sensitivity, low false positives).\n\nROC curves help us evaluate how well a test separates groups\nacross all possible thresholds."
+    "text": "Why ROC Curves?\n\nBy moving the threshold, we can:\n\nCatch more true cases (↑ sensitivity),\nBut risk more false alarms (↑ false positive rate).\n\nThe ROC curve shows all possible tradeoffs at once.\nThe diagonal line = random guessing.\nA “good” test’s ROC curve bows toward the upper-left corner (high sensitivity, low false positives)."
+  },
+  {
+    "objectID": "slides/lec-5-diagnostic.html#takeaway-1",
+    "href": "slides/lec-5-diagnostic.html#takeaway-1",
+    "title": "Lecture 5: Diagnostic Testing",
+    "section": "Takeaway",
+    "text": "Takeaway\nROC curves help us evaluate how well a test separates groups\nacross all possible thresholds."
   },
   {
     "objectID": "slides/lec-5-diagnostic.html#recap",
     "href": "slides/lec-5-diagnostic.html#recap",
     "title": "Lecture 5: Diagnostic Testing",
     "section": "Recap",
-    "text": "Recap\n\nHow conditional probabilities relate to sensitivity, specificity, & more!\nExamples, how small sample size affects diagnostic tests\nThresholds & how they affect diagnostic tests\nROC Curves: show tradeoff between sensitivity and specificity"
+    "text": "Recap\n\nDefine prevalence, sensitivity, specificity, positive predictive value, negative predictive value\nHow conditional probabilities relate to sensitivity, specificity\nCalculate sensitivity and specificity based on a 2x2 contingency table\nROC Curves"
   },
   {
     "objectID": "slides/lec-5-diagnostic.html#next-class",
@@ -2436,101 +2429,10 @@
     "text": "Next class\n\nDiscrete distributions"
   },
   {
-    "objectID": "slides/lec-5-diagnostic.html#participation",
-    "href": "slides/lec-5-diagnostic.html#participation",
+    "objectID": "slides/lec-5-diagnostic.html#review-from-lab-1",
+    "href": "slides/lec-5-diagnostic.html#review-from-lab-1",
     "title": "Lecture 5: Diagnostic Testing",
-    "section": "Participation",
-    "text": "Participation\nHow is lab going?\nAnswer the 1-question survey on Canvas by tomorrow at 11:59pm. Your feedback is extremely helpful!"
-  },
-  {
-    "objectID": "slides/lec-4-conditional-bayes.html#practice",
-    "href": "slides/lec-4-conditional-bayes.html#practice",
-    "title": "Lecture 4: Conditional Probability",
-    "section": "Practice",
-    "text": "Practice\nUsing your illustration, determine the following:\n\nWhat is the sample space of the experiment?\nWhat is P(\\(A\\))?\nWhat is P(\\(B\\))?\nWhat is the probability of \\(A\\) happening, given we know we’ve rolled an odd number?"
-  },
-  {
-    "objectID": "slides/lec-4-conditional-bayes.html#practice-1",
-    "href": "slides/lec-4-conditional-bayes.html#practice-1",
-    "title": "Lecture 4: Conditional Probability",
-    "section": "Practice",
-    "text": "Practice\n\nWhat is P(\\(A^C\\)) ?\nList out the events in \\(A \\cup B\\). What is P\\((A \\cup B)\\)?\nList out the events in \\(A \\cap B\\). What is P\\((A \\cap B)\\)?\nAre the events \\(A\\) and \\(B\\) disjoint?\n\n\n\n\n−+\n04:00"
-  },
-  {
-    "objectID": "slides/lec-4-conditional-bayes.html#practice-2",
-    "href": "slides/lec-4-conditional-bayes.html#practice-2",
-    "title": "Lecture 4: Conditional Probability",
-    "section": "Practice",
-    "text": "Practice\nVerify the Complement of union law with our dice example. (Draw it out!)"
-  },
-  {
-    "objectID": "slides/lec-4-conditional-bayes.html#conditional-probability-1",
-    "href": "slides/lec-4-conditional-bayes.html#conditional-probability-1",
-    "title": "Lecture 4: Conditional Probability",
-    "section": "Conditional probability",
-    "text": "Conditional probability\n\nConditional probability is the probability an event will occur when another event has already occurred."
-  },
-  {
-    "objectID": "slides/lec-4-conditional-bayes.html#example-1",
-    "href": "slides/lec-4-conditional-bayes.html#example-1",
-    "title": "Lecture 4: Conditional Probability",
-    "section": "Example",
-    "text": "Example\n\nExperiment: Toss a fair 6-sided dice two times. We assume the two tosses are independent from each other.\nLet \\(A\\) = getting a 1 on the first toss. Let \\(B\\) = getting a 1 on the second toss.\nWhat is \\(P(A)\\)?\nWhat is \\(P(B)\\)?\nWhat is the \\(P(A \\cap B)\\)?\nWhat is \\(P(A | B)\\) ?\nWhat is \\(P(B | A)\\) ?"
-  },
-  {
-    "objectID": "slides/lec-4-conditional-bayes.html#conditional-probability-2",
-    "href": "slides/lec-4-conditional-bayes.html#conditional-probability-2",
-    "title": "Lecture 4: Conditional Probability",
-    "section": "Conditional probability",
-    "text": "Conditional probability\nDefinition: The conditional probability of event \\(A\\) given event \\(B\\) is\n\\[\nP(A|B) = \\frac{P(A\\cap B)}{P(B)}\n\\]\n\nHow can we represent this visually? (Drawing)\nTakeaway: If we know \\(B\\) has already happened, our sample space effectively shrinks to only events that are contained within \\(B\\)."
-  },
-  {
-    "objectID": "slides/lec-4-conditional-bayes.html#the-multiplicative-rule-1",
-    "href": "slides/lec-4-conditional-bayes.html#the-multiplicative-rule-1",
-    "title": "Lecture 4: Conditional Probability and Bayes’ Rule",
-    "section": "The multiplicative rule",
-    "text": "The multiplicative rule\nEvents \\(A\\) and \\(B\\) are said to be independent when\n\n\n\n\\[\nP(A \\cap B) = P(A) \\times P(B)\n\\]\n\n\n\nor equivalently, \\(P(A|B) = P(A)\\) or \\(P(B|A) = P(B)\\)\n\nIn other words, if A and B are independent, then the probability of both happening is simply the probability of A happening times the probability of B happening. (Since B happening has nothing to do with A later happening, or vice-versa)."
-  },
-  {
-    "objectID": "slides/lec-4-conditional-bayes.html#independence",
-    "href": "slides/lec-4-conditional-bayes.html#independence",
-    "title": "Lecture 4: Conditional Probability",
-    "section": "Independence",
-    "text": "Independence\nEvents \\(A\\) and \\(B\\) are said to be independent when\n\n\n\n\\[\nP(A \\cap B) = P(A) \\times P(B)\n\\]\n\n\n\nor equivalently, \\(P(A|B) = P(A)\\) or \\(P(B|A) = P(B)\\)\n\nIn other words, if A and B are independent, then the probability of both happening is simply the probability of A happening times the probability of B happening. (Since B happening has nothing to do with A later happening, or vice-versa)."
-  },
-  {
-    "objectID": "slides/lec-4-conditional-bayes.html#example-smallpox",
-    "href": "slides/lec-4-conditional-bayes.html#example-smallpox",
-    "title": "Lecture 4: Conditional Probability",
-    "section": "Example: Smallpox",
-    "text": "Example: Smallpox\nThe smallpox data set provides a sample of 6,224 individuals from the year 1721 who were exposed to smallpox in Boston.\nDoctors at the time believed that inoculation, which involves exposing a person to the disease in a controlled form, could reduce the likelihood of death."
-  },
-  {
-    "objectID": "slides/lec-4-conditional-bayes.html#example-smallpox-1",
-    "href": "slides/lec-4-conditional-bayes.html#example-smallpox-1",
-    "title": "Lecture 4: Conditional Probability",
-    "section": "Example: Smallpox",
-    "text": "Example: Smallpox\nEach case represents one person with two variables: inoculated and result. The variable inoculated takes two levels: yes or no, indicating whether the person was inoculated or not. The variable result has outcomes lived or died.\n\nWrite out, in formal notation, the probability that a randomly selected person who was not inoculated died from smallpox, and find this probability."
-  },
-  {
-    "objectID": "slides/lec-4-conditional-bayes.html#your-turn",
-    "href": "slides/lec-4-conditional-bayes.html#your-turn",
-    "title": "Lecture 4: Conditional Probability",
-    "section": "Your turn",
-    "text": "Your turn"
-  },
-  {
-    "objectID": "slides/lec-4-conditional-bayes.html#exercise",
-    "href": "slides/lec-4-conditional-bayes.html#exercise",
-    "title": "Lecture 4: Conditional Probability",
-    "section": "Exercise",
-    "text": "Exercise\nThe people of Boston self-selected whether or not to be inoculated.\n\nIs this study observational or was this an experiment?\nCan we infer any causal connection using these data?\nWhat are some potential confounding variables that might influence whether someone lived or died and also affect whether that person was inoculated?\n\n\n\n\n−+\n02:00"
-  },
-  {
-    "objectID": "slides/lec-4-conditional-bayes.html#welcome",
-    "href": "slides/lec-4-conditional-bayes.html#welcome",
-    "title": "Lecture 4: Conditional Probability",
-    "section": "Welcome!",
-    "text": "Welcome!\nTake 1 piece of paper per 2 people."
+    "section": "Review from lab",
+    "text": "Review from lab\nWhat is the following code doing?\n\nWhat does mutate() do?\nWhat does case_when() do?\n\n\nncbikecrash &lt;- ncbikecrash |&gt; \n  mutate(weekend = case_when(\n    crash_day %in% c(\"Saturday\", \"Sunday\") ~ \"Weekend\",\n    crash_day %in% c(\"Monday\", \n                     \"Tuesday\", \n                     \"Wednesday\", \n                     \"Thursday\", \n                     \"Friday\") ~ \"Weekday\"\n  ))"
   }
 ]
