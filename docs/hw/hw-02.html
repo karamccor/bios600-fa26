@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>BIOS 600 Fall 2026</title>
+<title>HW 02 – BIOS 600 Fall 2026</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,27 +20,62 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<script src="site_libs/quarto-html/quarto.js" type="module"></script>
-<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="site_libs/quarto-html/axe/axe-check.js" type="module"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-ed96de9b727972fe78a7b5d16c58bf87.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-e31584831b205ffbb2d98406f31c2a5b.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-ed96de9b727972fe78a7b5d16c58bf87.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-e31584831b205ffbb2d98406f31c2a5b.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -69,8 +104,37 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
-<link rel="stylesheet" href="styles.css">
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+<link rel="stylesheet" href="../styles.css">
 </head>
 
 <body class="nav-fixed quarto-light">
@@ -80,7 +144,7 @@ ul.task-list li input[type="checkbox"] {
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="./index.html">
+    <a class="navbar-brand" href="../index.html">
     <span class="navbar-title">BIOS 600 Fall 2026</span>
     </a>
   </div>
@@ -91,11 +155,11 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link active" href="./index.html" aria-current="page"> 
+    <a class="nav-link" href="../index.html"> 
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./about.html"> 
+    <a class="nav-link" href="../about.html"> 
 <span class="menu-text">About</span></a>
   </li>  
 </ul>
@@ -114,12 +178,14 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#schedule" id="toc-schedule" class="nav-link active" data-scroll-target="#schedule">Schedule</a>
-  <ul class="collapse">
-  <li><a href="#week-1" id="toc-week-1" class="nav-link" data-scroll-target="#week-1">Week 1</a></li>
-  <li><a href="#week-2" id="toc-week-2" class="nav-link" data-scroll-target="#week-2">Week 2</a></li>
-  <li><a href="#week-3" id="toc-week-3" class="nav-link" data-scroll-target="#week-3">Week 3</a></li>
-  </ul></li>
+  <li><a href="#starting-a-new-quarto-file" id="toc-starting-a-new-quarto-file" class="nav-link active" data-scroll-target="#starting-a-new-quarto-file">Starting a new Quarto file</a></li>
+  <li><a href="#exercise-1-seer-data" id="toc-exercise-1-seer-data" class="nav-link" data-scroll-target="#exercise-1-seer-data">Exercise 1: SEER Data</a></li>
+  <li><a href="#exercise-2-chicken-pox-data" id="toc-exercise-2-chicken-pox-data" class="nav-link" data-scroll-target="#exercise-2-chicken-pox-data">Exercise 2: Chicken Pox Data</a></li>
+  <li><a href="#exercise-3" id="toc-exercise-3" class="nav-link" data-scroll-target="#exercise-3">Exercise 3</a></li>
+  <li><a href="#exercise-4-roc-curve" id="toc-exercise-4-roc-curve" class="nav-link" data-scroll-target="#exercise-4-roc-curve">Exercise 4: ROC Curve</a></li>
+  <li><a href="#ai-attestation" id="toc-ai-attestation" class="nav-link" data-scroll-target="#ai-attestation">AI Attestation</a></li>
+  <li><a href="#submission" id="toc-submission" class="nav-link" data-scroll-target="#submission">Submission</a></li>
+  <li><a href="#grading" id="toc-grading" class="nav-link" data-scroll-target="#grading">Grading</a></li>
   </ul>
 </nav>
     </div>
@@ -128,7 +194,8 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">BIOS 600 Fall 2026</h1>
+<h1 class="title">HW 02</h1>
+<p class="subtitle lead">Lectures 04-05</p>
 </div>
 
 
@@ -145,30 +212,171 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="schedule" class="level1">
-<h1>Schedule</h1>
-<section id="week-1" class="level2">
-<h2 class="anchored" data-anchor-id="week-1">Week 1</h2>
-<p><a href="slides/lec-0-welcome.html">Lecture 0: Welcome to BIOS 600!</a></p>
-<p><a href="labs/lab-1.html">Lab 1: Introducing the Toolkit</a></p>
-<p><a href="slides/lec-1-whats-stat-inf.html">Lecture 1: What is statistical inference?</a></p>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Important
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>This homework is due on Thursday, September 10 at 11:59pm. To be considered on time, the following must be done by the due date:</p>
+<ul>
+<li>Final <code>.pdf</code> file submitted on Gradescope</li>
+</ul>
+<p>Be sure to <strong>assign questions to pages</strong> when you turn in your assignment on Gradescope. A .5 point deduction will be made any time the question is not assigned to a page within your PDF.</p>
+<p>Assign the Formatting portion to page 1.</p>
+</div>
+</div>
+<section id="starting-a-new-quarto-file" class="level2">
+<h2 class="anchored" data-anchor-id="starting-a-new-quarto-file">Starting a new Quarto file</h2>
+<p>For this assignment you will begin a new Quarto file. To do this, go to RStudio and click File &gt; New File &gt; Quarto Document. A pop-up will appear asking for a title, author, and format. You may leave these as the default options for now. Click OK and a new file will open.</p>
+<p>In the document, Quarto automatically adds some starter text and code chunks. You may delete everything below the YAML header (everything under the second set of <code>---</code>). You should be left with just a YAML section at the very top, which looks something like this:</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="sc">---</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>title<span class="sc">:</span> <span class="st">"Document Title"</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>author<span class="sc">:</span> <span class="st">"Your Name"</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>date<span class="sc">:</span> <span class="st">"2026-08-26"</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>format<span class="sc">:</span> html</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="sc">---</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<p>Now, Edit the YAML header. Change</p>
+<ul>
+<li><p>title -&gt; the assignment name (e.g.&nbsp;<code>HW 2</code>)</p></li>
+<li><p>author -&gt; your name</p></li>
+<li><p>date -&gt; today’s date</p></li>
+</ul>
+<p>Now, save your file. Go to File &gt; Save as, and name it something clear like <code>hw1.qmd</code>. Keep it in your project folder. You’re ready to begin!</p>
 </section>
-<section id="week-2" class="level2">
-<h2 class="anchored" data-anchor-id="week-2">Week 2</h2>
-<p><a href="labs/lab-2-data-viz.html">Lab 2: Basic Data Visualization</a></p>
-<p><a href="slides/lec-2-nature-data.html">Lecture 2: The nature of data</a></p>
-<p><a href="slides/lec-3-prob-basics.html">Lecture 3: Probability basics</a></p>
-<p><a href="hw/hw-01.html">HW 1</a></p>
+<section id="exercise-1-seer-data" class="level2">
+<h2 class="anchored" data-anchor-id="exercise-1-seer-data">Exercise 1: SEER Data</h2>
+<p>According to data from the Surveillance, Epidemiology, and End Results (SEER) Program of the National Cancer Institute, U.S. women have approximately a 1 in 8 lifetime chance (12.5%) of developing breast cancer.</p>
+<p>In parts (a)-(c) below, please provide a numerical answer by using R’s calculator capability (i.e., insert new R chunks, show code calculating the numeric answers). Be careful with parentheses! In addition, provide a 1-sentence explanation of your work. A numerical answer using R’s calculator is not needed for part (d) - simply provide your response and a 1-sentence explanation.</p>
+<ol type="a">
+<li><p>Suppose three unrelated women are randomly selected from the U.S. population. What is the probability that all three will develop breast cancer at some point during their lives?</p></li>
+<li><p>Suppose three unrelated women are randomly selected from the U.S. population. What is the probability that none of them will develop breast cancer at some point during their lives?</p></li>
+<li><p>Suppose three unrelated women are randomly selected from the U.S. population. What is the probability that at least one of them will develop breast cancer at some point during their lives?</p></li>
+<li><p>A woman with a first-degree female relative with breast cancer has about twice the probability of developing breast cancer during her lifetime compared to a woman without this family history of cancer. Let <span class="math inline">\(A\)</span> be the event that a woman develops breast cancer during her lifetime, and <span class="math inline">\(B\)</span> be the event that a woman has positive family history of breast cancer. Are <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span> independent events? Why or why not?</p></li>
+</ol>
 </section>
-<section id="week-3" class="level2">
-<h2 class="anchored" data-anchor-id="week-3">Week 3</h2>
-<p><a href="labs/lab-03-data-wrangling.html">Lab 3: Data Wrangling</a></p>
-<p><a href="slides/lec-4-conditional-bayes.html">Lecture 4: Conditional probability</a></p>
-<p><a href="slides/lec-5-diagnostic.html">Lecture 5: Medical diagnostics</a></p>
-<p><a href="hw/hw-02.html">HW 2</a></p>
+<section id="exercise-2-chicken-pox-data" class="level2">
+<h2 class="anchored" data-anchor-id="exercise-2-chicken-pox-data">Exercise 2: Chicken Pox Data</h2>
+<p>Suppose a chicken pox outbreak hits a population of unvaccinated children. Researchers collect the following data among randomly sampled households with two unvaccinated children. In 50% of such families, the older sibling has chicken pox, in 50% of families, the younger sibling has chicken pox, and in 35% of families, both children have chicken pox.</p>
+<p>In (a)-(d) below, please provide a numerical answer by using R’s calculator capability (i.e., insert new R chunks, show code calculating the numeric answers). Be careful with parentheses!</p>
+<ol type="a">
+<li><p>Consider two events, <span class="math inline">\(A\)</span> being that the older sibling has chicken pox, and <span class="math inline">\(B\)</span> being that the younger sibling has chicken pox. Are <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span> independent events? Explain using the data provided.</p></li>
+<li><p>Consider a randomly selected household with two unvaccinated children from this population. Given that the older sibling has chicken pox, what is the probability that the younger sibling also has chicken pox?</p></li>
+<li><p>Consider a randomly selected household with two unvaccinated children from this population. Given that the older sibling has chicken pox, what is the probability that the younger sibling does NOT have chicken pox?</p></li>
+</ol>
+</section>
+<section id="exercise-3" class="level2">
+<h2 class="anchored" data-anchor-id="exercise-3">Exercise 3</h2>
+<p>A new rapid antigen test has been developed to detect <strong>Group A Streptococcus (strep throat) infection</strong>. A study compares the results of the rapid test against the gold standard throat culture. The results from 250 patients are shown below:</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 35%">
+<col style="width: 27%">
+<col style="width: 27%">
+<col style="width: 10%">
+</colgroup>
+<thead>
+<tr class="header">
+<th></th>
+<th style="text-align: center;">Culture Positive</th>
+<th style="text-align: center;">Culture Negative</th>
+<th style="text-align: center;">Total</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Rapid Test Positive</strong></td>
+<td style="text-align: center;">85</td>
+<td style="text-align: center;">15</td>
+<td style="text-align: center;">100</td>
+</tr>
+<tr class="even">
+<td><strong>Rapid Test Negative</strong></td>
+<td style="text-align: center;">15</td>
+<td style="text-align: center;">135</td>
+<td style="text-align: center;">150</td>
+</tr>
+<tr class="odd">
+<td><strong>Total</strong></td>
+<td style="text-align: center;">100</td>
+<td style="text-align: center;">150</td>
+<td style="text-align: center;">250</td>
+</tr>
+</tbody>
+</table>
+<ol type="a">
+<li><p>Calculate the <strong>sensitivity</strong> of the rapid test using the definition of conditional probability. (Leave as an expression.)</p></li>
+<li><p>Calculate the <strong>specificity</strong> of the rapid test using the definition of conditional probability. (Leave as an expression.)</p></li>
+<li><p>In one sentence, explain what specificity means in this context.</p></li>
+</ol>
+</section>
+<section id="exercise-4-roc-curve" class="level2">
+<h2 class="anchored" data-anchor-id="exercise-4-roc-curve">Exercise 4: ROC Curve</h2>
+<p>An <strong>ROC curve</strong> is a graphical plot that illustrates the sensitivity and specificity of a dichotomous diagnostic test as its discrimination threshold varies. The plot below shows the ROC curve for two different brain injury-related biomarkers, NDKA and S100β, in determining whether a patient develops bad outcomes at the one-year mark.</p>
+<p><img src="images/hw-2/brain_roc.png" class="img-fluid" width="400"></p>
+<p>Based on the ROC curve, answer (a)-(b) below.</p>
+<ol type="a">
+<li><p>Suppose we are willing to accept a false positive rate of at most 10%. What true positive rates can we attain for NDKA with that stipulation? Justify your answer by referencing the plot.</p></li>
+<li><p>Which biomarker, NDKA or S100β, would you rather use to predict bad outcomes? Why? (For this question, do NOT use the phrase “area under the curve”)</p></li>
+</ol>
+</section>
+<section id="ai-attestation" class="level2">
+<h2 class="anchored" data-anchor-id="ai-attestation">AI Attestation</h2>
+<p>If you used AI for this assignment, list your prompts below. Cite any other online resources you used. If you did not use AI for this assignment, you may simply state “I did not use AI for this assignment.”</p>
+</section>
+<section id="submission" class="level2">
+<h2 class="anchored" data-anchor-id="submission">Submission</h2>
+<p>As you’ve seen previously, we can <strong>Render</strong> into an .html file that can be opened by any web browser. To export it as a .pdf, open the file in your web browser and then print to or save as a .pdf document. Contact your TAs in Ed Discussion if you need help!</p>
+<p>You will submit the PDF documents for labs and homework to Gradescope as part of your final submission.</p>
+<p>To submit your assignment:</p>
+<ul>
+<li><p>Access Gradescope through the menu on the BIOS 600 Canvas site.</p></li>
+<li><p>Click on the assignment, and you’ll be prompted to submit it.</p></li>
+<li><p>Mark the pages associated with each exercise. All of the pages of your lab should be associated with at least one question (i.e., should be “checked”).</p></li>
+<li><p>Select the first page of your .PDF submission to be associated with the “Formatting” section.</p></li>
+</ul>
+</section>
+<section id="grading" class="level2">
+<h2 class="anchored" data-anchor-id="grading">Grading</h2>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Component</th>
+<th>Points</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Ex 1</td>
+<td>4</td>
+</tr>
+<tr class="even">
+<td>Ex 2</td>
+<td>3</td>
+</tr>
+<tr class="odd">
+<td>Ex 3</td>
+<td>3</td>
+</tr>
+<tr class="even">
+<td>Ex 4</td>
+<td>3</td>
+</tr>
+<tr class="odd">
+<td>Formatting</td>
+<td>3</td>
+</tr>
+</tbody>
+</table>
+<p>The “Formatting” grade is to assess the document format. This includes having a neatly organized document (no excessive output, warnings/messages when loading packages and/or data) with readable code and your name and the date updated in the YAML.</p>
 
 
-</section>
 </section>
 
 </main> <!-- /main -->

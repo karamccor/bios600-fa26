@@ -1404,7 +1404,7 @@
     "href": "index.html",
     "title": "BIOS 600 Fall 2026",
     "section": "",
-    "text": "Lecture 0: Welcome to BIOS 600!\nLab 1: Introducing the Toolkit\nLecture 1: What is statistical inference?\n\n\n\nLab 2: Basic Data Visualization\nLecture 2: The nature of data\nLecture 3: Probability basics\nHW 1\n\n\n\nLab 3: Data Wrangling\nLecture 4: Conditional probability\nLecture 5: Medical diagnostics"
+    "text": "Lecture 0: Welcome to BIOS 600!\nLab 1: Introducing the Toolkit\nLecture 1: What is statistical inference?\n\n\n\nLab 2: Basic Data Visualization\nLecture 2: The nature of data\nLecture 3: Probability basics\nHW 1\n\n\n\nLab 3: Data Wrangling\nLecture 4: Conditional probability\nLecture 5: Medical diagnostics\nHW 2"
   },
   {
     "objectID": "index.html#week-1",
@@ -1425,7 +1425,7 @@
     "href": "index.html#week-3",
     "title": "BIOS 600 Fall 2026",
     "section": "",
-    "text": "Lab 3: Data Wrangling\nLecture 4: Conditional probability\nLecture 5: Medical diagnostics"
+    "text": "Lab 3: Data Wrangling\nLecture 4: Conditional probability\nLecture 5: Medical diagnostics\nHW 2"
   },
   {
     "objectID": "about.html",
@@ -1538,6 +1538,69 @@
     "title": "HW 01",
     "section": "Grading",
     "text": "Grading\n\n\n\nComponent\nPoints\n\n\n\n\nEx 1\n3\n\n\nEx 2\n3\n\n\nEx 3\n2\n\n\nEx 4\n2\n\n\nEx 5\n4\n\n\nEx 6\n2\n\n\nEx 7\n2\n\n\nFormatting\n3\n\n\n\nThe “Formatting” grade is to assess the document format. This includes having a neatly organized document (no excessive output, warnings/messages when loading packages and/or data) with readable code and your name and the date updated in the YAML."
+  },
+  {
+    "objectID": "hw/hw-02.html",
+    "href": "hw/hw-02.html",
+    "title": "HW 02",
+    "section": "",
+    "text": "Important\n\n\n\nThis homework is due on Thursday, September 10 at 11:59pm. To be considered on time, the following must be done by the due date:\n\nFinal .pdf file submitted on Gradescope\n\nBe sure to assign questions to pages when you turn in your assignment on Gradescope. A .5 point deduction will be made any time the question is not assigned to a page within your PDF.\nAssign the Formatting portion to page 1."
+  },
+  {
+    "objectID": "hw/hw-02.html#starting-a-new-quarto-file",
+    "href": "hw/hw-02.html#starting-a-new-quarto-file",
+    "title": "HW 02",
+    "section": "Starting a new Quarto file",
+    "text": "Starting a new Quarto file\nFor this assignment you will begin a new Quarto file. To do this, go to RStudio and click File &gt; New File &gt; Quarto Document. A pop-up will appear asking for a title, author, and format. You may leave these as the default options for now. Click OK and a new file will open.\nIn the document, Quarto automatically adds some starter text and code chunks. You may delete everything below the YAML header (everything under the second set of ---). You should be left with just a YAML section at the very top, which looks something like this:\n\n---\ntitle: \"Document Title\"\nauthor: \"Your Name\"\ndate: \"2026-08-26\"\nformat: html\n---\n\nNow, Edit the YAML header. Change\n\ntitle -&gt; the assignment name (e.g. HW 2)\nauthor -&gt; your name\ndate -&gt; today’s date\n\nNow, save your file. Go to File &gt; Save as, and name it something clear like hw1.qmd. Keep it in your project folder. You’re ready to begin!"
+  },
+  {
+    "objectID": "hw/hw-02.html#exercise-1-seer-data",
+    "href": "hw/hw-02.html#exercise-1-seer-data",
+    "title": "HW 02",
+    "section": "Exercise 1: SEER Data",
+    "text": "Exercise 1: SEER Data\nAccording to data from the Surveillance, Epidemiology, and End Results (SEER) Program of the National Cancer Institute, U.S. women have approximately a 1 in 8 lifetime chance (12.5%) of developing breast cancer.\nIn parts (a)-(c) below, please provide a numerical answer by using R’s calculator capability (i.e., insert new R chunks, show code calculating the numeric answers). Be careful with parentheses! In addition, provide a 1-sentence explanation of your work. A numerical answer using R’s calculator is not needed for part (d) - simply provide your response and a 1-sentence explanation.\n\nSuppose three unrelated women are randomly selected from the U.S. population. What is the probability that all three will develop breast cancer at some point during their lives?\nSuppose three unrelated women are randomly selected from the U.S. population. What is the probability that none of them will develop breast cancer at some point during their lives?\nSuppose three unrelated women are randomly selected from the U.S. population. What is the probability that at least one of them will develop breast cancer at some point during their lives?\nA woman with a first-degree female relative with breast cancer has about twice the probability of developing breast cancer during her lifetime compared to a woman without this family history of cancer. Let \\(A\\) be the event that a woman develops breast cancer during her lifetime, and \\(B\\) be the event that a woman has positive family history of breast cancer. Are \\(A\\) and \\(B\\) independent events? Why or why not?"
+  },
+  {
+    "objectID": "hw/hw-02.html#exercise-2-chicken-pox-data",
+    "href": "hw/hw-02.html#exercise-2-chicken-pox-data",
+    "title": "HW 02",
+    "section": "Exercise 2: Chicken Pox Data",
+    "text": "Exercise 2: Chicken Pox Data\nSuppose a chicken pox outbreak hits a population of unvaccinated children. Researchers collect the following data among randomly sampled households with two unvaccinated children. In 50% of such families, the older sibling has chicken pox, in 50% of families, the younger sibling has chicken pox, and in 35% of families, both children have chicken pox.\nIn (a)-(d) below, please provide a numerical answer by using R’s calculator capability (i.e., insert new R chunks, show code calculating the numeric answers). Be careful with parentheses!\n\nConsider two events, \\(A\\) being that the older sibling has chicken pox, and \\(B\\) being that the younger sibling has chicken pox. Are \\(A\\) and \\(B\\) independent events? Explain using the data provided.\nConsider a randomly selected household with two unvaccinated children from this population. Given that the older sibling has chicken pox, what is the probability that the younger sibling also has chicken pox?\nConsider a randomly selected household with two unvaccinated children from this population. Given that the older sibling has chicken pox, what is the probability that the younger sibling does NOT have chicken pox?"
+  },
+  {
+    "objectID": "hw/hw-02.html#exercise-3",
+    "href": "hw/hw-02.html#exercise-3",
+    "title": "HW 02",
+    "section": "Exercise 3",
+    "text": "Exercise 3\nA new rapid antigen test has been developed to detect Group A Streptococcus (strep throat) infection. A study compares the results of the rapid test against the gold standard throat culture. The results from 250 patients are shown below:\n\n\n\n\n\n\n\n\n\n\nCulture Positive\nCulture Negative\nTotal\n\n\n\n\nRapid Test Positive\n85\n15\n100\n\n\nRapid Test Negative\n15\n135\n150\n\n\nTotal\n100\n150\n250\n\n\n\n\nCalculate the sensitivity of the rapid test using the definition of conditional probability. (Leave as an expression.)\nCalculate the specificity of the rapid test using the definition of conditional probability. (Leave as an expression.)\nIn one sentence, explain what specificity means in this context."
+  },
+  {
+    "objectID": "hw/hw-02.html#exercise-4-roc-curve",
+    "href": "hw/hw-02.html#exercise-4-roc-curve",
+    "title": "HW 02",
+    "section": "Exercise 4: ROC Curve",
+    "text": "Exercise 4: ROC Curve\nAn ROC curve is a graphical plot that illustrates the sensitivity and specificity of a dichotomous diagnostic test as its discrimination threshold varies. The plot below shows the ROC curve for two different brain injury-related biomarkers, NDKA and S100β, in determining whether a patient develops bad outcomes at the one-year mark.\n\nBased on the ROC curve, answer (a)-(b) below.\n\nSuppose we are willing to accept a false positive rate of at most 10%. What true positive rates can we attain for NDKA with that stipulation? Justify your answer by referencing the plot.\nWhich biomarker, NDKA or S100β, would you rather use to predict bad outcomes? Why? (For this question, do NOT use the phrase “area under the curve”)"
+  },
+  {
+    "objectID": "hw/hw-02.html#ai-attestation",
+    "href": "hw/hw-02.html#ai-attestation",
+    "title": "HW 02",
+    "section": "AI Attestation",
+    "text": "AI Attestation\nIf you used AI for this assignment, list your prompts below. Cite any other online resources you used. If you did not use AI for this assignment, you may simply state “I did not use AI for this assignment.”"
+  },
+  {
+    "objectID": "hw/hw-02.html#submission",
+    "href": "hw/hw-02.html#submission",
+    "title": "HW 02",
+    "section": "Submission",
+    "text": "Submission\nAs you’ve seen previously, we can Render into an .html file that can be opened by any web browser. To export it as a .pdf, open the file in your web browser and then print to or save as a .pdf document. Contact your TAs in Ed Discussion if you need help!\nYou will submit the PDF documents for labs and homework to Gradescope as part of your final submission.\nTo submit your assignment:\n\nAccess Gradescope through the menu on the BIOS 600 Canvas site.\nClick on the assignment, and you’ll be prompted to submit it.\nMark the pages associated with each exercise. All of the pages of your lab should be associated with at least one question (i.e., should be “checked”).\nSelect the first page of your .PDF submission to be associated with the “Formatting” section."
+  },
+  {
+    "objectID": "hw/hw-02.html#grading",
+    "href": "hw/hw-02.html#grading",
+    "title": "HW 02",
+    "section": "Grading",
+    "text": "Grading\n\n\n\nComponent\nPoints\n\n\n\n\nEx 1\n4\n\n\nEx 2\n3\n\n\nEx 3\n3\n\n\nEx 4\n3\n\n\nFormatting\n3\n\n\n\nThe “Formatting” grade is to assess the document format. This includes having a neatly organized document (no excessive output, warnings/messages when loading packages and/or data) with readable code and your name and the date updated in the YAML."
   },
   {
     "objectID": "labs/lab-01-template.html",
@@ -2251,7 +2314,7 @@
     "href": "slides/lec-5-diagnostic.html#participation",
     "title": "Lecture 5: Diagnostic Testing",
     "section": "Participation",
-    "text": "Participation\nInstructions: Go to Canvas and find today’s participation assignment. Write your answers to the following review questions in the text box. (1 sentence each)\nI will assign questions 1-6 to random groups to report their answer after the timer is up.\nThis assignment is due tomorrow Friday 9/4 at 11:59pm.\n\n\n\n−+\n08:00"
+    "text": "Participation\nInstructions: Go to Canvas and find today’s participation assignment. Write your answers to the following review questions in the text box. (1 sentence each)\nI will assign questions 1-6 to random groups to report their answer after the timer is up.\nThis assignment is due tomorrow Friday 9/4 at 11:59pm.\n\ncountdown(minutes = 8)\n\n\n−+\n08:00"
   },
   {
     "objectID": "slides/lec-5-diagnostic.html#review-1",
@@ -2286,7 +2349,7 @@
     "href": "slides/lec-5-diagnostic.html#question",
     "title": "Lecture 5: Diagnostic Testing",
     "section": "Question",
-    "text": "Question\nWhich of the three probabilities would we expect to be the highest? The lowest?\n\n\\(P(HIV+)\\)\n\\(P(HIV + | Test +)\\)\n\\(P(HIV + | Test -)\\)\n\n\n\n\n−+\n01:00"
+    "text": "Question\nWhich of the three probabilities would we expect to be the highest? The lowest?\n\n\\(P(HIV+)\\)\n\\(P(HIV + | Test +)\\)\n\\(P(HIV + | Test -)\\)\n\n\ncountdown(minutes = 1)\n\n\n−+\n01:00"
   },
   {
     "objectID": "slides/lec-5-diagnostic.html#medical-diagnostics",
@@ -2363,7 +2426,7 @@
     "href": "slides/lec-5-diagnostic.html#your-turn",
     "title": "Lecture 5: Diagnostic Testing",
     "section": "Your turn",
-    "text": "Your turn\n\n\n\n\nPCR Positive\nPCR Negative\nTotal\n\n\n\n\nRapid Test Positive\n72\n18\n90\n\n\nRapid Test Negative\n8\n102\n110\n\n\nTotal\n80\n120\n200\n\n\n\n\nCalculate the specificity of the rapid test using the definition of conditional probability. (Leave as an expression.)\nIn one sentence, explain what specificity means in this context.\n\n\n\n\n−+\n04:00"
+    "text": "Your turn\n\n\n\n\nPCR Positive\nPCR Negative\nTotal\n\n\n\n\nRapid Test Positive\n72\n18\n90\n\n\nRapid Test Negative\n8\n102\n110\n\n\nTotal\n80\n120\n200\n\n\n\n\nCalculate the specificity of the rapid test using the definition of conditional probability. (Leave as an expression.)\nIn one sentence, explain what specificity means in this context.\n\n\ncountdown(minutes = 4)\n\n\n−+\n04:00"
   },
   {
     "objectID": "slides/lec-5-diagnostic.html#your-turn-1",
