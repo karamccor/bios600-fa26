@@ -2314,7 +2314,7 @@
     "href": "slides/lec-5-diagnostic.html#participation",
     "title": "Lecture 5: Diagnostic Testing",
     "section": "Participation",
-    "text": "Participation\nInstructions: Go to Canvas and find today’s participation assignment. Write your answers to the following review questions in the text box. (1 sentence each)\nI will assign questions 1-6 to random groups to report their answer after the timer is up.\nThis assignment is due tomorrow Friday 9/4 at 11:59pm.\n\ncountdown(minutes = 8)\n\n\n−+\n08:00"
+    "text": "Participation\nInstructions: Go to Canvas and find today’s participation assignment. Write your answers to the following review questions in the text box. (1 sentence each)\nI will assign questions 1-6 to random groups to report their answer after the timer is up.\nThis assignment is due tomorrow Friday 9/4 at 11:59pm.\n\n\n\n−+\n08:00"
   },
   {
     "objectID": "slides/lec-5-diagnostic.html#review-1",
@@ -2335,7 +2335,7 @@
     "href": "slides/lec-5-diagnostic.html#review-3",
     "title": "Lecture 5: Diagnostic Testing",
     "section": "Review",
-    "text": "Review\n\nWhat would be the difference in the results from these two code chunks?\n\n\niris |&gt;\n  group_by(Species) |&gt;\n  summarize(avg_sl = mean(Sepal.Length, na.rm = T))\n\niris |&gt;\n  summarize(avg_sl = mean(Sepal.Length))"
+    "text": "Review\n\nWhat would be the difference in the results from these two code chunks?\n\n\niris |&gt;\n  group_by(Species) |&gt;\n  summarize(avg_sw = mean(Sepal.Width), \n            sd_sw = sd(Sepal.Width))\n\niris |&gt;\n  summarize(avg_sw = mean(Sepal.Width),\n            sd_sw = sd(Sepal.Width))"
   },
   {
     "objectID": "slides/lec-5-diagnostic.html#conditional-probabilities",
@@ -2349,7 +2349,7 @@
     "href": "slides/lec-5-diagnostic.html#question",
     "title": "Lecture 5: Diagnostic Testing",
     "section": "Question",
-    "text": "Question\nWhich of the three probabilities would we expect to be the highest? The lowest?\n\n\\(P(HIV+)\\)\n\\(P(HIV + | Test +)\\)\n\\(P(HIV + | Test -)\\)\n\n\ncountdown(minutes = 1)\n\n\n−+\n01:00"
+    "text": "Question\nWhich of the three probabilities would we expect to be the highest? The lowest?\n\n\\(P(HIV+)\\)\n\\(P(HIV + | Test +)\\)\n\\(P(HIV + | Test -)\\)\n\n\n\n\n−+\n01:00"
   },
   {
     "objectID": "slides/lec-5-diagnostic.html#medical-diagnostics",
@@ -2426,7 +2426,7 @@
     "href": "slides/lec-5-diagnostic.html#your-turn",
     "title": "Lecture 5: Diagnostic Testing",
     "section": "Your turn",
-    "text": "Your turn\n\n\n\n\nPCR Positive\nPCR Negative\nTotal\n\n\n\n\nRapid Test Positive\n72\n18\n90\n\n\nRapid Test Negative\n8\n102\n110\n\n\nTotal\n80\n120\n200\n\n\n\n\nCalculate the specificity of the rapid test using the definition of conditional probability. (Leave as an expression.)\nIn one sentence, explain what specificity means in this context.\n\n\ncountdown(minutes = 4)\n\n\n−+\n04:00"
+    "text": "Your turn\n\n\n\n\nPCR Positive\nPCR Negative\nTotal\n\n\n\n\nRapid Test Positive\n72\n18\n90\n\n\nRapid Test Negative\n8\n102\n110\n\n\nTotal\n80\n120\n200\n\n\n\n\nCalculate the specificity of the rapid test using the definition of conditional probability. (Leave as an expression.)\nIn one sentence, explain what specificity means in this context.\n\n\n\n\n−+\n04:00"
   },
   {
     "objectID": "slides/lec-5-diagnostic.html#your-turn-1",
