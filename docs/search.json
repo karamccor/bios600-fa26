@@ -1152,7 +1152,7 @@
     "href": "index.html",
     "title": "BIOS 600 Fall 2026",
     "section": "",
-    "text": "Lecture 0: Welcome to BIOS 600!\nLab 1: Introducing the Toolkit\nLecture 1: What is statistical inference?\n\n\n\nLab 2: Basic Data Visualization\nLecture 2: The nature of data\nLecture 3: Probability basics\nHW 1\n\n\n\nLab 3: Data Wrangling\nLecture 4: Conditional probability\nLecture 5: Medical diagnostics\nHW 2\n\n\n\nLecture 6: Discrete distributions\nLab 4: Practice with ggplot2 and tidyverse"
+    "text": "Lecture 0: Welcome to BIOS 600!\nLab 1: Introducing the Toolkit\nLecture 1: What is statistical inference?\n\n\n\nLab 2: Basic Data Visualization\nLecture 2: The nature of data\nLecture 3: Probability basics\nHW 1\n\n\n\nLab 3: Data Wrangling\nLecture 4: Conditional probability\nLecture 5: Medical diagnostics\nHW 2\n\n\n\nLecture 6: Discrete distributions\nLab 4: Practice with ggplot2 and tidyverse\nApplication Exercise 1: Binomial in a Biomedical Setting"
   },
   {
     "objectID": "index.html#week-1",
@@ -1180,7 +1180,49 @@
     "href": "index.html#week-4",
     "title": "BIOS 600 Fall 2026",
     "section": "",
-    "text": "Lecture 6: Discrete distributions\nLab 4: Practice with ggplot2 and tidyverse"
+    "text": "Lecture 6: Discrete distributions\nLab 4: Practice with ggplot2 and tidyverse\nApplication Exercise 1: Binomial in a Biomedical Setting"
+  },
+  {
+    "objectID": "ae/ae-01-template.html",
+    "href": "ae/ae-01-template.html",
+    "title": "Application Exercise: Practice with Binomial and Poisson",
+    "section": "",
+    "text": "Update your name and today’s date in the YAML above."
+  },
+  {
+    "objectID": "ae/ae-01-template.html#setup",
+    "href": "ae/ae-01-template.html#setup",
+    "title": "Application Exercise: Practice with Binomial and Poisson",
+    "section": "",
+    "text": "Update your name and today’s date in the YAML above."
+  },
+  {
+    "objectID": "ae/ae-01-template.html#a-clinical-trial-binomial-example",
+    "href": "ae/ae-01-template.html#a-clinical-trial-binomial-example",
+    "title": "Application Exercise: Practice with Binomial and Poisson",
+    "section": "A Clinical Trial: Binomial Example",
+    "text": "A Clinical Trial: Binomial Example\nSuppose 5 people receive a new vaccine. From clinical trial data, the probability that any individual experiences a mild side effect (e.g., sore arm, mild fever) is 0.2.\nLet \\(X\\) be the number of people (out of 5) who experience a mild side effect.\nThen \\(X \\sim \\text{Binomial}(n=5, p=0.2)\\).\n\nExercise 1\nWhat is the probability that exactly 2 out of 5 people experience a mild side effect? Use the dbinom function to compute your answer and provide a 1-sentence conclusion.\n\n# type code here\n\n[type response here]"
+  },
+  {
+    "objectID": "ae/ae-01-template.html#exercise-2",
+    "href": "ae/ae-01-template.html#exercise-2",
+    "title": "Application Exercise: Practice with Binomial and Poisson",
+    "section": "Exercise 2",
+    "text": "Exercise 2\nWhat is the probability that at least 1 out of 5 people experiences a mild side effect? (Hint: Use the complement rule: \\(P(X \\geq 1)=1−P(X=0)\\)). Use the dbinom function to compute your answer and provide a 1-sentence conclusion.\n\n# type code here\n\n[type response here]"
+  },
+  {
+    "objectID": "ae/ae-01-template.html#hospital-visits-poisson-example",
+    "href": "ae/ae-01-template.html#hospital-visits-poisson-example",
+    "title": "Application Exercise: Practice with Binomial and Poisson",
+    "section": "Hospital Visits: Poisson Example",
+    "text": "Hospital Visits: Poisson Example\nSuppose that in a hospital emergency department, the average number of asthma-related visits per hour is 3. Let \\(Y\\) be the number of asthma visits in one hour. Then \\(Y \\sim Poisson(\\lambda=3)\\)\n\nExercise 3\nWhat is the probability that in a given hour, exactly 5 asthma patients arrive? Use the dpois function to compute your answer and provide a 1-sentence conclusion.\n\n# type code here\n\n[type response here]"
+  },
+  {
+    "objectID": "ae/ae-01-template.html#submission",
+    "href": "ae/ae-01-template.html#submission",
+    "title": "Application Exercise: Practice with Binomial and Poisson",
+    "section": "Submission",
+    "text": "Submission\nRender to PDF and submit on Canvas &gt; Assignments."
   },
   {
     "objectID": "about.html",
@@ -1188,6 +1230,41 @@
     "title": "About",
     "section": "",
     "text": "About this site"
+  },
+  {
+    "objectID": "ae/ae-01.html",
+    "href": "ae/ae-01.html",
+    "title": "Participation: Binomial in a Biomedical Setting",
+    "section": "",
+    "text": "Important\n\n\n\nThis Application Exercise is due on Wednesday, September 9 at 11:59pm. To be considered on time, the following must be done by the due date:\n\nFinal .pdf file submitted on Canvas\nWhile late work is accepted for HW and Labs, no late work is accepted for AEs."
+  },
+  {
+    "objectID": "ae/ae-01.html#getting-started",
+    "href": "ae/ae-01.html#getting-started",
+    "title": "Participation: Binomial in a Biomedical Setting",
+    "section": "Getting started",
+    "text": "Getting started\nDownload the template for today’s Application Exercise (AE) from Canvas. Open the file, and type your name and today’s date in the YAML. Save your file as ae-01.qmd in your project folder.\nRender your document to ensure the formatting all looks good."
+  },
+  {
+    "objectID": "ae/ae-01.html#clinical-trial-example",
+    "href": "ae/ae-01.html#clinical-trial-example",
+    "title": "Participation: Binomial in a Biomedical Setting",
+    "section": "Clinical Trial Example",
+    "text": "Clinical Trial Example\nSuppose 5 people receive a new vaccine. From clinical trial data, the probability that any individual experiences a mild side effect (e.g., sore arm, mild fever) is 0.2.\nLet \\(X\\) be the number of people (out of 5) who experience a mild side effect.\nThen \\(X \\sim \\text{Binomial}(n=5, p=0.2)\\).\n\nExercise 1\nWhat is the probability that exactly 2 out of 5 people experience a mild side effect? Use the dbinom function.\n\n# type code here"
+  },
+  {
+    "objectID": "ae/ae-01.html#exercise-2",
+    "href": "ae/ae-01.html#exercise-2",
+    "title": "Participation: Binomial in a Biomedical Setting",
+    "section": "Exercise 2",
+    "text": "Exercise 2\nWhat is the probability that at least 1 out of 5 people experiences a mild side effect?\nHint: Use the complement rule: \\(P(X \\geq 1)=1−P(X=0)\\)\nUse the dbinom function to compute your answer and provide a 1-sentence conclusion.\n\n# type code here"
+  },
+  {
+    "objectID": "ae/ae-01.html#submission",
+    "href": "ae/ae-01.html#submission",
+    "title": "Participation: Binomial in a Biomedical Setting",
+    "section": "Submission",
+    "text": "Submission\nAs you’ve seen previously, we can Render the template into an .html file that can be opened by any web browser. To export it as a .pdf, open the file in your web browser and then print to or save as a .pdf document. Your TAs will show you how if you need help! (There is a way to directly knit to a .pdf file, but it’s quite a bit more involved.)\nYou will submit the PDF documents for Application Exercises directly to Canvas.\nTo submit your assignment:\n\nAccess the Application Exercise through Modules on the BIOS 600 Canvas site.\nUpload your PDF."
   },
   {
     "objectID": "hw/hw-01.html",
@@ -1418,14 +1495,7 @@
     "href": "labs/lab-04.html#downloading-the-data",
     "title": "Lab 4: Practice with ggplot2 and tidyverse",
     "section": "Downloading the data",
-    "text": "Downloading the data\nFirst, download the Joey Stanley dataset. The data are available on his website here (https://joeystanley.com/data/), and clicking on “McDonald’s Menu Items. Save the data in your data folder within your project folder as menu.csv.\n\nExercise 1\n\nIn your code chunk labeled load-data, read in the data with the following code:\n\n\nmcd &lt;- read.csv(\"data/menu.csv\")\n\nWatch out for the naming of the file and where it’s saved on your computer! Print the first seven rows of the dataset with slice().\n\n\n\n\n\n\nImportantGetting an error?\n\n\n\nIf you’re getting an error here, check the following:\n\nThat you have your project open within RStudio (there is a blue cube at the top right of your RStudio window with the name of your project folder next to it. If you don’t see this, click File &gt; Open Project… and navigate to your project folder.)\nThat there is a folder called data within this project folder, and menu.csv is saved in that data folder.\n\nIf you’ve checked these things and are still getting an error, reach out to the teaching team for help!"
-  },
-  {
-    "objectID": "labs/lab-04.html#exercise-1-1",
-    "href": "labs/lab-04.html#exercise-1-1",
-    "title": "Lab 4: Practice with ggplot2 and tidyverse",
-    "section": "Exercise 1",
-    "text": "Exercise 1\n\nLoad in the McDonald’s dataset from Joey Stanley’s website (save the file to your computer).\nPrint the column names in your dataset with names()."
+    "text": "Downloading the data\nFirst, download the Joey Stanley dataset. The data are available on his website here (https://joeystanley.com/data/), and clicking on “McDonald’s Menu Items. Save the data in your data folder within your project folder as menu.csv.\n\nExercise 1\n\nIn your code chunk labeled load-data, read in the data with the following code:\n\n\nmcd &lt;- read.csv(\"data/menu.csv\")\n\nWatch out for the naming of the file and where it’s saved on your computer! Print the first seven rows of the dataset with slice().\n\n\n\n\n\n\nImportantGetting an error?\n\n\n\nIf you’re getting an error here, check the following:\n\nThat you have your project open within RStudio (there is a blue cube at the top right of your RStudio window with the name of your project folder next to it. If you don’t see this, click File &gt; Open Project… and navigate to your project folder.)\nThat there is a folder called data within this project folder, and menu.csv is saved in that data folder.\n\nIf you’ve checked these things and are still getting an error, reach out to the teaching team for help!\n\n\n\nPrint the column names in your dataset with names()."
   },
   {
     "objectID": "labs/lab-04.html#on-your-own",
@@ -2419,7 +2489,14 @@
     "href": "slides/lec-6-discrete.html#announcements",
     "title": "Lecture 6: Discrete distributions",
     "section": "Announcements",
-    "text": "Announcements\n\nLab 4 session today at 3:30pm. Lab 4 is due Friday at 11:59pm.\nHW 2 due Thursday at 11:59pm.\nParticipation activity for today due Wednesday at 11:59pm."
+    "text": "Announcements\n\nLab 4 session today at 3:30pm. Lab 4 is due Monday September 14 at 11:59pm. (Adding some time due to shorter week.)\nHW 2 due Thursday at 11:59pm."
+  },
+  {
+    "objectID": "slides/lec-6-discrete.html#announcements-1",
+    "href": "slides/lec-6-discrete.html#announcements-1",
+    "title": "Lecture 6: Discrete distributions",
+    "section": "Announcements",
+    "text": "Announcements\n\nToday, we will do our first Application Exercise (AE). You will get a chance to practice more applied coding.\nAEs will be turned in on Canvas only (not Gradescope).\nToday’s AE is due Wednesday September 9 at 11:59pm. This will count as a participation grade.\n\n\n\n\n\n\n\nImportant\n\n\n\nWhile late work is accepted for HW and Labs, no late work is accepted for AEs."
   },
   {
     "objectID": "slides/lec-6-discrete.html#supplemental-reading",
@@ -2475,7 +2552,7 @@
     "href": "slides/lec-6-discrete.html#practice",
     "title": "Lecture 6: Discrete distributions",
     "section": "Practice",
-    "text": "Practice\nVerify that the three rules above are satisfied with the births example.\n\n\n\n−+\n01:00"
+    "text": "Practice\nLet’s verify that the three rules above are satisfied with the births example."
   },
   {
     "objectID": "slides/lec-6-discrete.html#bernoulli-random-variables",
@@ -2489,14 +2566,14 @@
     "href": "slides/lec-6-discrete.html#bernoulli-random-variables-1",
     "title": "Lecture 6: Discrete distributions",
     "section": "Bernoulli random variables",
-    "text": "Bernoulli random variables\nWith the notation that event \\(X=1\\) is a “success” and \\(X=0\\) is a “failure”,\n\\(P(X=1)=p\\)\nand\n\\(P(X=0) = 1-p\\)"
+    "text": "Bernoulli random variables\nWith the notation that event \\(X=1\\) is a “success” and \\(X=0\\) is a “failure”,\n\\(P(X=1)=p\\)\nand\n\\(P(X=0) = 1-p\\)\n\nNote: \\(P(X = 1)\\) reads: “The probability that the random variable \\(X\\) takes on the value \\(1\\).”"
   },
   {
-    "objectID": "slides/lec-6-discrete.html#examples",
-    "href": "slides/lec-6-discrete.html#examples",
+    "objectID": "slides/lec-6-discrete.html#examples-of-probability-distributions",
+    "href": "slides/lec-6-discrete.html#examples-of-probability-distributions",
     "title": "Lecture 6: Discrete distributions",
-    "section": "Examples",
-    "text": "Examples\n\nFair coin flip: Let the event X=1 denote heads.\n\n\n\n\nEvent\nP(Event)\n\n\n\n\n\\(X=1\\)\n0.5\n\n\n\\(X=0\\)\n0.5\n\n\n\n\n2018 US births: Let the event \\(X=1\\) denote preterm birth.\n\n\n\n\nEvent\nP(Event)\n\n\n\n\n\\(X=1\\)\n0.1\n\n\n\\(X=0\\)\n0.9"
+    "section": "Examples of probability distributions",
+    "text": "Examples of probability distributions\n\nFair coin flip: Let the event X=1 denote heads.\n\n\n\n\nEvent\nP(Event)\n\n\n\n\n\\(X=1\\)\n0.5\n\n\n\\(X=0\\)\n0.5\n\n\n\n\n2018 US births: Let the event \\(X=1\\) denote preterm birth.\n\n\n\n\nEvent\nP(Event)\n\n\n\n\n\\(X=1\\)\n0.1\n\n\n\\(X=0\\)\n0.9"
   },
   {
     "objectID": "slides/lec-6-discrete.html#note-on-bernoulli-random-variables",
@@ -2517,25 +2594,46 @@
     "href": "slides/lec-6-discrete.html#extending-the-bernoulli-distribution-1",
     "title": "Lecture 6: Discrete distributions",
     "section": "Extending the Bernoulli distribution",
-    "text": "Extending the Bernoulli distribution\nLet \\(X_1\\) be 1 if the first birth is preterm, and \\(X_2\\) be 1 if the second birth is preterm, and 0 otherwise.\nBecause these two births are independent, then\n\\[\n\\begin{aligned}\nP(\\textrm{both preterm}) &= P(\\textrm{first preterm and 2nd preterm})\\\\\n&= P(\\textrm{first preterm}) \\cdot P(\\textrm{2nd preterm})\\\\\n&= p * p = 0.1 \\times 0.1 = 0.01\n\\end{aligned}\n\\]"
+    "text": "Extending the Bernoulli distribution\nLet \\(X_1\\) be 1 if the first birth is preterm, and \\(X_2\\) be 1 if the second birth is preterm, and 0 otherwise.\nBecause these two births are independent, then\n\\[\n\\begin{aligned}\nP(\\textrm{both preterm}) &= P(\\textrm{first preterm and 2nd preterm})\\\\\n&= P(\\textrm{first preterm}) \\cdot P(\\textrm{2nd preterm})\\\\\n&= p * p = 0.1 \\times 0.1 = 0.01\n\\end{aligned}\n\\]\nLet’s use this logic to fill out our table."
   },
   {
     "objectID": "slides/lec-6-discrete.html#extending-the-bernoulli-distribution-2",
     "href": "slides/lec-6-discrete.html#extending-the-bernoulli-distribution-2",
     "title": "Lecture 6: Discrete distributions",
     "section": "Extending the Bernoulli distribution",
-    "text": "Extending the Bernoulli distribution\nBack to the table, row 1 is given by\n\\(P(X_1 = 0 \\cap X_2 = 0) = P(X_1 = 0) P(X_2 = 0) = (1-p)(1-p)\\)\n\n\n\n\n\n\n\n\n\n1st Birth \\(X\\)\n2nd Birth \\(X\\)\n# Preterm Births \\(Z\\)\nProbability of Outcome\n\n\n\n\n0\n0\n0\n(0.9)(0.9)=0.81\n\n\n1\n0\n1\n\n\n\n0\n1\n1\n\n\n\n1\n1\n2"
+    "text": "Extending the Bernoulli distribution\n\n\n\n\n\n\n\n\n\n1st Birth \\(X_1\\)\n2nd Birth \\(X_2\\)\n# Preterm Births \\(Z\\)\nProbability of Outcome\n\n\n\n\n0\n0\n0\n\n\n\n1\n0\n1\n\n\n\n0\n1\n1\n\n\n\n1\n1\n2\n(0.1)(0.1)=0.01"
   },
   {
     "objectID": "slides/lec-6-discrete.html#extending-the-bernoulli-distribution-3",
     "href": "slides/lec-6-discrete.html#extending-the-bernoulli-distribution-3",
     "title": "Lecture 6: Discrete distributions",
     "section": "Extending the Bernoulli distribution",
-    "text": "Extending the Bernoulli distribution\nThus, the probability distribution of the number of preterm births out of two independent births is given by\n\n\n\n\n\\(z=0\\)\n\\(z=1\\)\n\\(z=2\\)\n\n\n\n\n\\(P(Z=z)\\)\n0.81\n0.18\n0.01"
+    "text": "Extending the Bernoulli distribution\nBack to the table, row 1 is given by\n\\(P(X_1 = 0 \\cap X_2 = 0) = P(X_1 = 0) P(X_2 = 0) = (1-p)(1-p)\\)\n\n\n\n\n\n\n\n\n\n1st Birth \\(X\\)\n2nd Birth \\(X\\)\n# Preterm Births \\(Z\\)\nProbability of Outcome\n\n\n\n\n0\n0\n0\n(0.9)(0.9)=0.81\n\n\n1\n0\n1\n\n\n\n0\n1\n1\n\n\n\n1\n1\n2\n(0.1)(0.1)=0.01"
   },
   {
     "objectID": "slides/lec-6-discrete.html#extending-the-bernoulli-distribution-4",
     "href": "slides/lec-6-discrete.html#extending-the-bernoulli-distribution-4",
+    "title": "Lecture 6: Discrete distributions",
+    "section": "Extending the Bernoulli distribution",
+    "text": "Extending the Bernoulli distribution\nRow 2 is given by\n\\(P(X_1 = 1 \\cap X_2 = 0) = P(X_1 = 1) P(X_2 = 0) = (p)(1-p)\\)\n\n\n\n\n\n\n\n\n\n1st Birth \\(X\\)\n2nd Birth \\(X\\)\n# Preterm Births \\(Z\\)\nProbability of Outcome\n\n\n\n\n0\n0\n0\n(0.9)(0.9)=0.81\n\n\n1\n0\n1\n(0.1)(0.9)=0.9\n\n\n0\n1\n1\n\n\n\n1\n1\n2\n(0.1)(0.1)=0.01"
+  },
+  {
+    "objectID": "slides/lec-6-discrete.html#extending-the-bernoulli-distribution-5",
+    "href": "slides/lec-6-discrete.html#extending-the-bernoulli-distribution-5",
+    "title": "Lecture 6: Discrete distributions",
+    "section": "Extending the Bernoulli distribution",
+    "text": "Extending the Bernoulli distribution\nRow 3 is given by\n\\(P(X_1 = 0 \\cap X_2 = 1) = P(X_1 = 0) P(X_2 = 1) = (1-p)(p)\\)\n\n\n\n\n\n\n\n\n\n1st Birth \\(X\\)\n2nd Birth \\(X\\)\n# Preterm Births \\(Z\\)\nProbability of Outcome\n\n\n\n\n0\n0\n0\n(0.9)(0.9)=0.81\n\n\n1\n0\n1\n(0.1)(0.9)=0.9\n\n\n0\n1\n1\n(0.9)(0.1)=0.9\n\n\n1\n1\n2\n(0.1)(0.1)=0.01"
+  },
+  {
+    "objectID": "slides/lec-6-discrete.html#extending-the-bernoulli-distribution-6",
+    "href": "slides/lec-6-discrete.html#extending-the-bernoulli-distribution-6",
+    "title": "Lecture 6: Discrete distributions",
+    "section": "Extending the Bernoulli distribution",
+    "text": "Extending the Bernoulli distribution\nThus, the probability distribution of the number of preterm births out of two independent births is given by\n\n\n\n\n\\(z=0\\)\n\\(z=1\\)\n\\(z=2\\)\n\n\n\n\n\\(P(Z=z)\\)\n0.81\n0.18\n0.01\n\n\n\nWhere did the 0.18 come from?"
+  },
+  {
+    "objectID": "slides/lec-6-discrete.html#extending-the-bernoulli-distribution-7",
+    "href": "slides/lec-6-discrete.html#extending-the-bernoulli-distribution-7",
     "title": "Lecture 6: Discrete distributions",
     "section": "Extending the Bernoulli distribution",
     "text": "Extending the Bernoulli distribution\nNow let \\(Z\\) be the random variable corresponding to the number of preterm births among 3 independently sampled births"
@@ -2548,22 +2646,22 @@
     "text": "Three births\n\n\n\n\n\n\n\n\n\n\nFirst Birth \\(X_1\\)\nSecond Birth \\(X_2\\)\nThird Birth \\(X_3\\)\nNumber of Preterm Births \\(Z\\)\nProbability\n\n\n\n\n0\n0\n0\n0\n\n\n\n1\n0\n0\n1\n\n\n\n0\n1\n0\n1\n\n\n\n0\n0\n1\n1\n\n\n\n1\n1\n0\n2\n\n\n\n1\n0\n1\n2\n\n\n\n0\n1\n1\n2\n\n\n\n1\n1\n1\n3"
   },
   {
-    "objectID": "slides/lec-6-discrete.html#extending-the-bernoulli-distribution-5",
-    "href": "slides/lec-6-discrete.html#extending-the-bernoulli-distribution-5",
+    "objectID": "slides/lec-6-discrete.html#extending-the-bernoulli-distribution-8",
+    "href": "slides/lec-6-discrete.html#extending-the-bernoulli-distribution-8",
     "title": "Lecture 6: Discrete distributions",
     "section": "Extending the Bernoulli distribution",
     "text": "Extending the Bernoulli distribution\nRow 1 is given by\n\\(P(X_1 = 0 \\cap X_2 = 0 \\cap X_3 = 0) = (1-p)(1-p)(1-p)\\)\n\n\n\n\n\n\n\n\n\n\nFirst Birth \\(X_1\\)\nSecond Birth \\(X_2\\)\nThird Birth \\(X_3\\)\nNumber of Preterm Births \\(Z\\)\nProbability\n\n\n\n\n0\n0\n0\n0\n0.729\n\n\n1\n0\n0\n1\n\n\n\n0\n1\n0\n1\n\n\n\n0\n0\n1\n1\n\n\n\n1\n1\n0\n2\n\n\n\n1\n0\n1\n2\n\n\n\n0\n1\n1\n2\n\n\n\n1\n1\n1\n3"
   },
   {
-    "objectID": "slides/lec-6-discrete.html#extending-the-bernoulli-distribution-6",
-    "href": "slides/lec-6-discrete.html#extending-the-bernoulli-distribution-6",
+    "objectID": "slides/lec-6-discrete.html#extending-the-bernoulli-distribution-9",
+    "href": "slides/lec-6-discrete.html#extending-the-bernoulli-distribution-9",
     "title": "Lecture 6: Discrete distributions",
     "section": "Extending the Bernoulli distribution",
     "text": "Extending the Bernoulli distribution\nRow 2 is given by\n\\(P(X_1 = 1 \\cap X_2 = 0 \\cap X_3 = 0) = p(1-p)(1-p)\\)\n\n\n\n\n\n\n\n\n\n\nFirst Birth \\(X_1\\)\nSecond Birth \\(X_2\\)\nThird Birth \\(X_3\\)\nNumber of Preterm Births \\(Z\\)\nProbability\n\n\n\n\n0\n0\n0\n0\n0.729\n\n\n1\n0\n0\n1\n0.081\n\n\n0\n1\n0\n1\n\n\n\n0\n0\n1\n1\n\n\n\n1\n1\n0\n2\n\n\n\n1\n0\n1\n2\n\n\n\n0\n1\n1\n2\n\n\n\n1\n1\n1\n3"
   },
   {
-    "objectID": "slides/lec-6-discrete.html#extending-the-bernoulli-distribution-7",
-    "href": "slides/lec-6-discrete.html#extending-the-bernoulli-distribution-7",
+    "objectID": "slides/lec-6-discrete.html#extending-the-bernoulli-distribution-10",
+    "href": "slides/lec-6-discrete.html#extending-the-bernoulli-distribution-10",
     "title": "Lecture 6: Discrete distributions",
     "section": "Extending the Bernoulli distribution",
     "text": "Extending the Bernoulli distribution\n…et cetera\n\n\n\n\n\n\n\n\n\n\nFirst Birth \\(X_1\\)\nSecond Birth \\(X_2\\)\nThird Birth \\(X_3\\)\nNumber of Preterm Births \\(Z\\)\nProbability\n\n\n\n\n0\n0\n0\n0\n0.729\n\n\n1\n0\n0\n1\n0.081\n\n\n0\n1\n0\n1\n0.081\n\n\n0\n0\n1\n1\n0.081\n\n\n1\n1\n0\n2\n0.009\n\n\n1\n0\n1\n2\n0.009\n\n\n0\n1\n1\n2\n0.009\n\n\n1\n1\n1\n3\n0.001"
@@ -2632,29 +2730,36 @@
     "text": "In R\nWe can calculate these probabilities in R with the dbinom() function:\n\ndbinom(2, size = 3, prob = 0.1)\n\n[1] 0.027"
   },
   {
-    "objectID": "slides/lec-6-discrete.html#the-poisson-distribution",
-    "href": "slides/lec-6-discrete.html#the-poisson-distribution",
+    "objectID": "slides/lec-6-discrete.html#participation",
+    "href": "slides/lec-6-discrete.html#participation",
     "title": "Lecture 6: Discrete distributions",
-    "section": "The Poisson distribution",
-    "text": "The Poisson distribution\n\n\n\nDiscrete distribution taking on possible values 0, 1, 2, \\(\\ldots\\), \\(\\infty\\)\nOften used to model counts or rare events\nMuch like the binomial distribution, requires a few assumptions"
+    "section": "Participation",
+    "text": "Participation\n\n\n\n\n\n\nApplication Exercise in R\n\n\n\nFor today’s participation, you’ll practice some of the functions we learn today using R.\nIn Canvas, download the Quarto template for the Application Exercise for today. Save the file with a sensible name (ae-01.qmd) in your project folder.\nWhen you’ve completed the exercises, render, save to PDF, and submit on Canvas&gt; Assignments. Due Wednesday September 9 at 11:59pm.\nWhile late work is accepted for HW and Labs, no late work is accepted for AEs.\n\n\n\n\n\n\n\n−+\n08:00"
   },
   {
     "objectID": "slides/lec-6-discrete.html#the-poisson-distribution-1",
     "href": "slides/lec-6-discrete.html#the-poisson-distribution-1",
     "title": "Lecture 6: Discrete distributions",
     "section": "The Poisson distribution",
-    "text": "The Poisson distribution\nThe Poisson distribution gives the probability that \\(k\\) events occur in a given “interval”. There are four assumptions:\n\nWithin any interval, \\(k\\) may take on values 0, 1, 2, 3, \\(\\ldots\\), \\(\\infty\\)\nEach event occurs independently, both within the same interval, and between intervals\nThe average rate at which events occur in an interval, \\(\\lambda\\), is constant\nTwo events cannot occur simultaneously\n\nWhat is an “interval”?"
+    "text": "The Poisson distribution\n\n\n\nDiscrete distribution taking on possible values 0, 1, 2, \\(\\ldots\\), \\(\\infty\\)\nOften used to model counts or rare events\nMuch like the binomial distribution, requires a few assumptions"
   },
   {
     "objectID": "slides/lec-6-discrete.html#the-poisson-distribution-2",
     "href": "slides/lec-6-discrete.html#the-poisson-distribution-2",
     "title": "Lecture 6: Discrete distributions",
     "section": "The Poisson distribution",
-    "text": "The Poisson distribution\nIf \\(X\\) has a Poisson distribution, then\n\\[P(X=k) = \\frac{\\lambda^k e^{-\\lambda}}{k!}\\]\nWhat do these components mean?\n\n\n\n\n\n\nNote\n\n\nThis expression will always be provided to you if needed."
+    "text": "The Poisson distribution\nThe Poisson distribution gives the probability that \\(k\\) events occur in a given “interval”. There are four assumptions:\n\nWithin any interval, \\(k\\) may take on values 0, 1, 2, 3, \\(\\ldots\\), \\(\\infty\\)\nEach event occurs independently, both within the same interval, and between intervals\nThe average rate at which events occur in an interval, \\(\\lambda\\), is constant\nTwo events cannot occur simultaneously\n\nWhat is an “interval”?"
   },
   {
     "objectID": "slides/lec-6-discrete.html#the-poisson-distribution-3",
     "href": "slides/lec-6-discrete.html#the-poisson-distribution-3",
+    "title": "Lecture 6: Discrete distributions",
+    "section": "The Poisson distribution",
+    "text": "The Poisson distribution\nIf \\(X\\) has a Poisson distribution, then\n\\[P(X=k) = \\frac{\\lambda^k e^{-\\lambda}}{k!}\\]\nWhat do these components mean?\n\n\n\n\n\n\nNote\n\n\nThis expression will always be provided to you if needed."
+  },
+  {
+    "objectID": "slides/lec-6-discrete.html#the-poisson-distribution-4",
+    "href": "slides/lec-6-discrete.html#the-poisson-distribution-4",
     "title": "Lecture 6: Discrete distributions",
     "section": "The Poisson distribution",
     "text": "The Poisson distribution\nSuppose on average, there are 1.5 deaths due to Alzheimer’s Disease in a town each year. For a one-year period in this town, what is the chance that two or more people die from Alzheimer’s?\nTo model this question using a Poisson random variable, let’s verify that the assumptions are met:"
@@ -2667,11 +2772,18 @@
     "text": "Assumptions\n\nWithin any interval, the number of AD deaths can range from 0 to \\(\\infty\\) (technically not true, but close enough)\nOne individual dying of Alzheimer’s does not affect the chance of another person dying of Alzheimer’s\nThe AD death rate is constant in this town\nTwo AD deaths cannot occur at the same time (we can always subdivide time intervals such that only one person experiences this event in a given sub-interval)"
   },
   {
-    "objectID": "slides/lec-6-discrete.html#the-poisson-distribution-4",
-    "href": "slides/lec-6-discrete.html#the-poisson-distribution-4",
+    "objectID": "slides/lec-6-discrete.html#the-poisson-distribution-5",
+    "href": "slides/lec-6-discrete.html#the-poisson-distribution-5",
     "title": "Lecture 6: Discrete distributions",
     "section": "The Poisson distribution",
-    "text": "The Poisson distribution\nThus \\(Z \\sim Pois(1.5)\\), and \\(P(Z=0)\\), \\(P(Z=1)\\), and \\(P(Z\\geq 2)\\) are disjoint events. So, \\(P(Z \\geq 2) = 1- [P(Z = 0) + P(Z = 1)]\\), where\n\\[\n\\begin{aligned}\nP(Z=0) &= \\frac{1.5^0 \\times e^{-1.5}}{0!}\\approx 0.223 \\\\\nP(Z=1) &= \\frac{1.5^1 \\times e^{-1.5}}{1!}\\approx 0.335\n\\end{aligned}\n\\]\nAnd so \\(P(Z \\geq 2) \\approx 1-0.223-0.335 = 0.442\\)."
+    "text": "The Poisson distribution\nNow that we’ve verified that our random variable can be modeled using a Poisson distribution, let’s define it:\nLet \\(Z\\) represent the deaths due to Alzheimer’s disease in a town each year.\nThen, \\(Z\\) can be modeled by a Poisson distribution with rate 1.5.\nIn statistical terms: \\(Z \\sim \\textrm{Poisson}(\\lambda = 1.5)\\)"
+  },
+  {
+    "objectID": "slides/lec-6-discrete.html#the-poisson-distribution-6",
+    "href": "slides/lec-6-discrete.html#the-poisson-distribution-6",
+    "title": "Lecture 6: Discrete distributions",
+    "section": "The Poisson distribution",
+    "text": "The Poisson distribution\n\\(Z \\sim Pois(1.5)\\), and \\(P(Z=0)\\), \\(P(Z=1)\\), and \\(P(Z\\geq 2)\\) are disjoint events. So, \\(P(Z \\geq 2) = 1- [P(Z = 0) + P(Z = 1)]\\), where\n\\[\n\\begin{aligned}\nP(Z=0) &= \\frac{1.5^0 \\times e^{-1.5}}{0!}\\approx 0.223 \\\\\nP(Z=1) &= \\frac{1.5^1 \\times e^{-1.5}}{1!}\\approx 0.335\n\\end{aligned}\n\\]\nAnd so \\(P(Z \\geq 2) \\approx 1-0.223-0.335 = 0.442\\)."
   },
   {
     "objectID": "slides/lec-6-discrete.html#in-r-1",
@@ -2699,14 +2811,7 @@
     "href": "slides/lec-6-discrete.html#what-about-other-interval-lengths-1",
     "title": "Lecture 6: Discrete distributions",
     "section": "What about other interval lengths?",
-    "text": "What about other interval lengths?\nSuppose on average, there are 1.5 deaths due to Alzheimer’s disease in a town each year.\n\n\n\n\n\n\nExample:\n\n\n\nWhat is the average one-month rate of deaths due to Alzheimer’s disease in this town?\nFor any given one-month period in this town, what is the probability that exactly one person dies from Alzheimer’s? (Just the expression is fine)\n\nFor \\(X \\sim Pois(\\lambda)\\),\n\\[P(X=k) = \\frac{\\lambda^k e^{-\\lambda}}{k!}\\]"
-  },
-  {
-    "objectID": "slides/lec-6-discrete.html#participation",
-    "href": "slides/lec-6-discrete.html#participation",
-    "title": "Lecture 6: Discrete distributions",
-    "section": "Participation",
-    "text": "Participation\n\n\n\n\n\n\nApplication Exercise in R\n\n\n\nFor today’s participation, you’ll practice some of the functions we learn today using R.\nIn Canvas, download the Quarto template for the Application Exercise for today. Save the file with a sensible name (ae-01.qmd) in your project folder.\n\nWhen you’ve completed the exercises, render, save to PDF, and submit on Canvas&gt; Assignments. Due Wednesday at 11:59pm."
+    "text": "What about other interval lengths?\nSuppose on average, there are 1.5 deaths due to Alzheimer’s disease in a town each year.\nExample\n\nWhat is the average one-month rate of deaths due to Alzheimer’s disease in this town?\nFor any given one-month period in this town, what is the probability that exactly one person dies from Alzheimer’s? (Just the expression is fine)\n\nFor \\(X \\sim Pois(\\lambda)\\),\n\\[P(X=k) = \\frac{\\lambda^k e^{-\\lambda}}{k!}\\]"
   },
   {
     "objectID": "slides/lec-6-discrete.html#expectation-and-variance",
