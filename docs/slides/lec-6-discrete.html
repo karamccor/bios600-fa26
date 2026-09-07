@@ -186,6 +186,10 @@
       margin-right: 0; 
     }
   </style>
+  <link href="../site_libs/countdown-0.4.0/countdown.css" rel="stylesheet">
+
+  <script src="../site_libs/countdown-0.4.0/countdown.js"></script>
+
 </head>
 <body class="quarto-light">
   <div class="reveal">
@@ -202,13 +206,9 @@
 <section id="announcements" class="slide level2">
 <h2>Announcements</h2>
 <ul>
-<li><p>Lab 3 now due <strong>Tuesday at 11:59pm</strong>.</p></li>
+<li><p>Lab 4 session today at 3:30pm. Lab 4 is due <strong>Friday at 11:59pm</strong>.</p></li>
 <li><p>HW 2 due <strong>Thursday at 11:59pm</strong>.</p></li>
 <li><p>Participation activity for today due <strong>Wednesday at 11:59pm</strong>.</p></li>
-<li><p>Tomorrow’s lab session (9/9) is a TA Office Hour, come by if you need assistance with Lab 3 or HW 2!</p>
-<ul>
-<li>In-person and remote options, join the zoom via Canvas &gt; Zoom Pro then click on the meeting for 9/9. Julian will be available to help on zoom.</li>
-</ul></li>
 </ul>
 </section>
 <section id="supplemental-reading" class="slide level2">
@@ -243,6 +243,11 @@
 <li>Examples: Tossing a coin (H, T), Rolling a die (1, 2, 3, 4, 5, 6)</li>
 </ul></li>
 <li><p>This list of possible values and probabilities is the <strong>probability distribution</strong> for the discrete random variable in question.</p></li>
+</ul>
+</section>
+<section id="probability-distributions" class="slide level2">
+<h2>Probability distributions</h2>
+<ul>
 <li><p>Probability distributions let us investigate how likely events may be.</p></li>
 <li><p>For discrete random variables, you may also see the term <em>probability mass function</em>, which is the same thing.</p></li>
 </ul>
@@ -282,10 +287,10 @@
 </table>
 </div></div>
 </section>
-<section id="probability-distribution-of-births-in-the-us" class="slide level2 smaller">
+<section id="probability-distribution-of-births-in-the-us" class="slide level2">
 <h2>Probability distribution of births in the US</h2>
 <div class="columns">
-<div class="column" style="width:50%;">
+<div class="column" style="width:40%;">
 <table class="caption-top">
 <thead>
 <tr class="header">
@@ -312,7 +317,7 @@
 </tr>
 </tbody>
 </table>
-</div><div class="column" style="width:50%;">
+</div><div class="column" style="width:60%;">
 <p>There are <strong>three rules</strong> for discrete probability distributions:</p>
 <ol type="1">
 <li>Outcomes must be disjoint</li>
@@ -320,16 +325,15 @@
 <li>The sum of the outcome probabilities must add up to 1.</li>
 </ol>
 </div></div>
-<div class="callout callout-tip callout-titled callout-style-default">
-<div class="callout-body">
-<div class="callout-title">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<p><strong>Verify the three rules</strong></p>
-</div>
-<div class="callout-content">
-<p>Let’s verify the three rules above are satisfied with the births example.</p>
+</section>
+<section id="practice" class="slide level2">
+<h2>Practice</h2>
+<p>Verify that the three rules above are satisfied with the births example.</p>
+<div class="cell">
+<div class="cell-output-display">
+<div class="countdown" id="timer_29fe2d32" data-update-every="1" tabindex="0" style="right:0;bottom:0;">
+<div class="countdown-controls"><button class="countdown-bump-down">−</button><button class="countdown-bump-up">+</button></div>
+<code class="countdown-time"><span class="countdown-digits minutes">01</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
 </div>
 </div>
 </div>
@@ -348,9 +352,15 @@
 <p><img data-src="images/lec-6/jacob.jpg"></p>
 </div></div>
 </section>
-<section id="bernoulli-random-variables-1" class="slide level2 smaller">
+<section id="bernoulli-random-variables-1" class="slide level2">
 <h2>Bernoulli random variables</h2>
-<p>With the notation that event <span class="math inline">\(X=1\)</span> is a “success” and <span class="math inline">\(X=0\)</span> is a “failure”, <span class="math inline">\(P(X=1)=p\)</span> and <span class="math inline">\(P(X=0) = 1-p\)</span></p>
+<p>With the notation that event <span class="math inline">\(X=1\)</span> is a “success” and <span class="math inline">\(X=0\)</span> is a “failure”,</p>
+<p><span class="math inline">\(P(X=1)=p\)</span></p>
+<p>and</p>
+<p><span class="math inline">\(P(X=0) = 1-p\)</span></p>
+</section>
+<section id="examples" class="slide level2">
+<h2>Examples</h2>
 <ul>
 <li>Fair coin flip: Let the event X=1 denote heads.</li>
 </ul>
@@ -393,9 +403,12 @@
 </tr>
 </tbody>
 </table>
+</section>
+<section id="note-on-bernoulli-random-variables" class="slide level2">
+<h2>Note on Bernoulli random variables</h2>
 <p>A “success” is not necessarily positive - if we are interested in the probability of dying, a “success” would be death.</p>
 </section>
-<section id="extending-the-bernoulli-distribution" class="slide level2 smaller">
+<section id="extending-the-bernoulli-distribution" class="slide level2">
 <h2>Extending the Bernoulli distribution</h2>
 <p>Suppose we randomly select two independent US births in 2018, and <span class="math inline">\(Z\)</span> is a new random variable that represents the number of preterm births among them.</p>
 <p><span class="math inline">\(Z\)</span> can be 0, 1, or 2:</p>
@@ -442,7 +455,7 @@
 </tbody>
 </table>
 </section>
-<section id="extending-the-bernoulli-distribution-1" class="slide level2 smaller">
+<section id="extending-the-bernoulli-distribution-1" class="slide level2">
 <h2>Extending the Bernoulli distribution</h2>
 <p>Let <span class="math inline">\(X_1\)</span> be 1 if the first birth is preterm, and <span class="math inline">\(X_2\)</span> be 1 if the second birth is preterm, and 0 otherwise.</p>
 <p>Because these two births are <strong>independent</strong>, then</p>
@@ -454,16 +467,16 @@ P(\textrm{both preterm}) &amp;= P(\textrm{first preterm and 2nd preterm})\\
 \end{aligned}
 \]</span></p>
 </section>
-<section id="extending-the-bernoulli-distribution-2" class="slide level2 smaller">
+<section id="extending-the-bernoulli-distribution-2" class="slide level2">
 <h2>Extending the Bernoulli distribution</h2>
 <p>Back to the table, row 1 is given by</p>
 <p><span class="math inline">\(P(X_1 = 0 \cap X_2 = 0) = P(X_1 = 0) P(X_2 = 0) = (1-p)(1-p)\)</span></p>
 <table class="caption-top">
 <colgroup>
-<col style="width: 24%">
-<col style="width: 24%">
-<col style="width: 24%">
-<col style="width: 26%">
+<col style="width: 22%">
+<col style="width: 22%">
+<col style="width: 22%">
+<col style="width: 33%">
 </colgroup>
 <thead>
 <tr class="header">
@@ -501,7 +514,7 @@ P(\textrm{both preterm}) &amp;= P(\textrm{first preterm and 2nd preterm})\\
 </tbody>
 </table>
 </section>
-<section id="extending-the-bernoulli-distribution-3" class="slide level2 smaller">
+<section id="extending-the-bernoulli-distribution-3" class="slide level2">
 <h2>Extending the Bernoulli distribution</h2>
 <p>Thus, the probability distribution of the number of preterm births out of two independent births is given by</p>
 <table class="caption-top">
@@ -523,9 +536,12 @@ P(\textrm{both preterm}) &amp;= P(\textrm{first preterm and 2nd preterm})\\
 </tbody>
 </table>
 </section>
-<section id="extending-the-bernoulli-distribution-4" class="slide level2 smaller">
+<section id="extending-the-bernoulli-distribution-4" class="slide level2">
 <h2>Extending the Bernoulli distribution</h2>
 <p>Now let <span class="math inline">\(Z\)</span> be the random variable corresponding to the number of preterm births among 3 independently sampled births</p>
+</section>
+<section id="three-births" class="slide level2 smaller">
+<h2>Three births</h2>
 <table class="caption-top">
 <colgroup>
 <col style="width: 20%">
@@ -845,8 +861,8 @@ P(\textrm{both preterm}) &amp;= P(\textrm{first preterm and 2nd preterm})\\
 </tbody>
 </table>
 </section>
-<section id="extending-the-bernoulli-distribution-8" class="slide level2 smaller">
-<h2>Extending the Bernoulli distribution</h2>
+<section id="example" class="slide level2 smaller">
+<h2>Example</h2>
 <p>If we randomly sample 3 births, what is the chance 2 are preterm?</p>
 <p>0.009 + 0.009 + 0.009 = 0.027 (why?)</p>
 <table class="caption-top">
@@ -926,8 +942,8 @@ P(\textrm{both preterm}) &amp;= P(\textrm{first preterm and 2nd preterm})\\
 </tbody>
 </table>
 </section>
-<section id="extending-the-bernoulli-distribution-9" class="slide level2">
-<h2>Extending the Bernoulli distribution</h2>
+<section id="probability-distribution" class="slide level2">
+<h2>Probability distribution</h2>
 <p>Thus, the probability distribution of the number of preterm births out of three independent births is given by</p>
 <table class="caption-top">
 <thead>
@@ -963,8 +979,8 @@ P(\textrm{both preterm}) &amp;= P(\textrm{first preterm and 2nd preterm})\\
 </div>
 </div>
 </section>
-<section id="extending-the-bernoulli-distribution-10" class="slide level2">
-<h2>Extending the Bernoulli distribution</h2>
+<section id="extend-to-4-births" class="slide level2">
+<h2>Extend to 4 births</h2>
 <ul>
 <li><p>If we randomly sample 4 births, what is the probability distribution for the number of preterm births?</p></li>
 <li><p>To build a similar table would start to become egregious.</p></li>
@@ -973,7 +989,11 @@ P(\textrm{both preterm}) &amp;= P(\textrm{first preterm and 2nd preterm})\\
 </section>
 <section id="the-binomial-distribution" class="slide level2">
 <h2>The binomial distribution</h2>
-<p>The <strong>binomial distribution</strong> gives the probability of <span class="math inline">\(k\)</span> “successes” from a sequence of <span class="math inline">\(n\)</span> independent Bernoulli trials. There are three assumptions:</p>
+<p>The <strong>binomial distribution</strong> gives the probability of <span class="math inline">\(k\)</span> “successes” from a sequence of <span class="math inline">\(n\)</span> independent Bernoulli trials.</p>
+</section>
+<section id="assumptions" class="slide level2">
+<h2>Assumptions</h2>
+<p>There are <strong>three assumptions</strong>:</p>
 <ol type="1">
 <li><p>There is a fixed number of trials <span class="math inline">\(n\)</span>, each of which is a Bernoulli random variable.</p></li>
 <li><p>The outcomes of the <span class="math inline">\(n\)</span> trials are independent.</p></li>
@@ -999,17 +1019,24 @@ P(\textrm{both preterm}) &amp;= P(\textrm{first preterm and 2nd preterm})\\
 </div>
 </div>
 </section>
-<section id="the-binomial-distribution-2" class="slide level2 smaller">
+<section id="the-binomial-distribution-2" class="slide level2">
 <h2>The binomial distribution</h2>
 <p>If we randomly sample 3 births, what is the chance 2 are preterm?</p>
+<p>Let’s solve this using the binomial distribution.</p>
+<p>First, we need to ensure the assumptions are met:</p>
 <ol type="1">
 <li><p>There is a fixed number of trials, each of which is a Bernoulli random variable</p></li>
 <li><p>The outcomes of the trials are independent</p></li>
 <li><p>The probability of success is the same for each of these trials</p></li>
 </ol>
-<p>Thus, <span class="math inline">\(Z \sim Binom(3, 0.1)\)</span>.</p>
+</section>
+<section id="example-1" class="slide level2">
+<h2>Example</h2>
+<p>So, we can define <span class="math inline">\(Z\)</span> as the number of preterm births in 3 randomly sampled births.</p>
+<p>Then, <span class="math inline">\(Z \sim Binom(3, 0.1)\)</span>.</p>
 <p><span class="math display">\[
 \begin{aligned}
+P(X=k) &amp;= {n \choose k}p^k (1-p)^{n-k} \\
 P(Z=2) &amp;= {3 \choose 2} 0.1^2 (1-0.1)^{3-2} \\
 &amp;= \frac{3!}{2!(3-2)!} \times 0.1^2 \times 0.9 ^1 = 0.027
 \end{aligned}
@@ -1022,26 +1049,6 @@ P(Z=2) &amp;= {3 \choose 2} 0.1^2 (1-0.1)^{3-2} \\
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a></a><span class="fu">dbinom</span>(<span class="dv">2</span>, <span class="at">size =</span> <span class="dv">3</span>, <span class="at">prob =</span> <span class="fl">0.1</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 0.027</code></pre>
-</div>
-</div>
-</section>
-<section id="participation" class="slide level2">
-<h2>Participation</h2>
-<div class="callout callout-tip callout-titled callout-style-default">
-<div class="callout-body">
-<div class="callout-title">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<p><strong>Application Exercise in R</strong></p>
-</div>
-<div class="callout-content">
-<ul>
-<li><p>For today’s participation, you’ll practice some of the functions we learn today using R.</p></li>
-<li><p>In Canvas, download the Quarto template for the Application Exercise for today. Save the file with a sensible name (<code>ae-01.qmd</code>) in your project folder.</p></li>
-<li><p>Begin by working on Exercises 1 and 2.</p></li>
-</ul>
-</div>
 </div>
 </div>
 </section>
@@ -1088,9 +1095,13 @@ P(Z=2) &amp;= {3 \choose 2} 0.1^2 (1-0.1)^{3-2} \\
 </div>
 </div>
 </section>
-<section id="the-poisson-distribution-3" class="slide level2 smaller">
+<section id="the-poisson-distribution-3" class="slide level2">
 <h2>The Poisson distribution</h2>
 <p>Suppose on average, there are 1.5 deaths due to Alzheimer’s Disease in a town each year. For a one-year period in this town, what is the chance that two or more people die from Alzheimer’s?</p>
+<p>To model this question using a Poisson random variable, let’s verify that the assumptions are met:</p>
+</section>
+<section id="assumptions-1" class="slide level2">
+<h2>Assumptions</h2>
 <ol type="1">
 <li><p>Within any interval, the number of AD deaths can range from 0 to <span class="math inline">\(\infty\)</span> (<em>technically</em> not true, but close enough)</p></li>
 <li><p>One individual dying of Alzheimer’s does not affect the chance of another person dying of Alzheimer’s</p></li>
@@ -1187,7 +1198,7 @@ P(Z=1) &amp;= \frac{1.5^1 \times e^{-1.5}}{1!}\approx 0.335
 </div>
 </div>
 </section>
-<section id="participation-1" class="slide level2">
+<section id="participation" class="slide level2">
 <h2>Participation</h2>
 <div class="callout callout-tip callout-titled callout-style-default">
 <div class="callout-body">
@@ -1195,11 +1206,14 @@ P(Z=1) &amp;= \frac{1.5^1 \times e^{-1.5}}{1!}\approx 0.335
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
-<p><strong>Practice in R</strong></p>
+<p><strong>Application Exercise in R</strong></p>
 </div>
 <div class="callout-content">
-<p>In today’s participation, continue with Exercise 3.</p>
-<p>When you’ve completed the exercises, render, save to PDF, and submit on Canvas&gt; Assignments. Due Wednesday at 11:59pm.</p>
+<ul>
+<li><p>For today’s participation, you’ll practice some of the functions we learn today using R.</p></li>
+<li><p>In Canvas, download the Quarto template for the Application Exercise for today. Save the file with a sensible name (<code>ae-01.qmd</code>) in your project folder.</p></li>
+</ul>
+<p>When you’ve completed the exercises, render, save to PDF, and submit on Canvas&gt; Assignments. Due <strong>Wednesday at 11:59pm</strong>.</p>
 </div>
 </div>
 </div>
@@ -1218,24 +1232,14 @@ P(Z=1) &amp;= \frac{1.5^1 \times e^{-1.5}}{1!}\approx 0.335
 <p>The <strong>expected value</strong> of a discrete random variable <span class="math inline">\(X\)</span> is a weighted average of the possible outcomes:</p>
 <p><span class="math display">\[E(X) = \sum_{\textrm{all } x} x \cdot P(X = x)\]</span></p>
 <p>This is a property of the <strong>distribution</strong> of <span class="math inline">\(X\)</span>, not of the random variable itself.</p>
-</section>
-<section id="properties-of-bernoulli-and-binomial-random-variables" class="slide level2">
-<h2>Properties of Bernoulli and binomial random variables</h2>
-<ul>
-<li>For <span class="math inline">\(Z \sim Bern(p)\)</span>, <span class="math inline">\(E(Z) = p\)</span> and <span class="math inline">\(Var(Z) = p(1-p)\)</span></li>
-</ul>
-<p><strong>Example</strong>: Let Z be a coin toss. <span class="math inline">\(Z \sim Bern(.5)\)</span>. <span class="math inline">\(E(Z) = .5\)</span> and <span class="math inline">\(Var(Z) = 0.5 \cdot (0.5) = 0.25\)</span>.</p>
-<ul>
-<li><p>For <span class="math inline">\(Z \sim Binom(n, p)\)</span>, <span class="math inline">\(E(Z) = np\)</span> and <span class="math inline">\(Var(Z) = np(1-p)\)</span></p></li>
-<li><p>For <span class="math inline">\(Z \sim Pois(\lambda)\)</span>, <span class="math inline">\(E(Z) = Var(Z) = \lambda\)</span></p></li>
-</ul>
+<p>More on this next time.</p>
 </section>
 <section id="recap" class="slide level2">
 <h2>Recap</h2>
 <ul>
 <li><p>Discrete random variables</p></li>
 <li><p>Binomial, Poisson random variables and applications</p></li>
-<li><p>Expected values and variances</p></li>
+<li><p>Expected values</p></li>
 </ul>
 </section>
 <section id="next-class" class="slide level2">
