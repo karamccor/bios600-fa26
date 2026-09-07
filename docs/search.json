@@ -1374,126 +1374,126 @@
   {
     "objectID": "labs/lab-04.html",
     "href": "labs/lab-04.html",
-    "title": "Lab 4",
+    "title": "Lab 4: Practice with ggplot2 and tidyverse",
     "section": "",
     "text": "Important\n\n\n\nThis lab is due on Monday, September 14 at 11:59pm. To be considered on time, the following must be done by the due date:\n\nFinal .pdf file submitted on Gradescope\n\nBe sure to assign questions to pages when you turn in your assignment on Gradescope. A .5 point deduction will be made any time the question is not assigned to a page within your PDF.\n\nSelect the first page of your .PDF submission to be associated with the “Formatting” section."
   },
   {
     "objectID": "labs/lab-04.html#getting-started",
     "href": "labs/lab-04.html#getting-started",
-    "title": "Lab 4",
+    "title": "Lab 4: Practice with ggplot2 and tidyverse",
     "section": "Getting started",
     "text": "Getting started\n\nIn Canvas, you’ll find the template for this assignment (“Lab 04 Template”). Download the file and open it.\nSave it in your class project folder as “lab-04.qmd”.\nOpen the document. Replace “Your Name Here” with your name in the YAML (the header of the document). Also, replace “Today’s Date Here” with today’s date. Filling in your name and date will count towards your “Formatting” score from here on out.\nRender your document to make sure your YAML is rendering correctly.\n\n\n\n\n\n\n\nTipTip for the Lab\n\n\n\nWrite all code and narrative in your Quarto file. Write all narrative in complete sentences. Throughout the assignment, you should periodically render your Quarto document to produce the updated html file."
   },
   {
     "objectID": "labs/lab-04.html#load-the-tidyverse",
     "href": "labs/lab-04.html#load-the-tidyverse",
-    "title": "Lab 4",
+    "title": "Lab 4: Practice with ggplot2 and tidyverse",
     "section": "Load the tidyverse",
     "text": "Load the tidyverse\nIn the code chunk labeled load-packages, copy and paste the code below to load in the tidyverse package for today’s lab:\n\nlibrary(tidyverse)\n\n\n\n\n\n\n\nTipGlobally setting warnings and messages to false\n\n\n\nNote that in your template, warnings and message have been set to false globally (i.e. across the entire document) by specifying these options in the YAML. Since we will be loading in packages and a dataset, this will be helpful for you formatting on this assignment.\nIt can be helpful to set global options this way in practice. However, take care when choosing this route, as sometimes warnings and messages can be helpful for troubleshooting."
   },
   {
     "objectID": "labs/lab-04.html#practice-with-ggplot-and-tidyverse",
     "href": "labs/lab-04.html#practice-with-ggplot-and-tidyverse",
-    "title": "Lab 4",
+    "title": "Lab 4: Practice with ggplot2 and tidyverse",
     "section": "Practice with ggplot and tidyverse",
     "text": "Practice with ggplot and tidyverse\nToday’s lab involves more practice with ggplot and the tidyverse. You will also learn about loading data into R and setting a working directory to look for data.\nFast foods have been criticized as offering unhealthy foods which are calorically dense, high in sodium and added sugars, and low in vitamins and minerals. Today’s dataset was compiled by Joey Stanley at BYU and consists of information regarding McDonald’s menu items.\n\n\n\n\n\n\nTipBest practices for data Visualization\n\n\n\nWhen performing data visualization, make sure that all your plots have clear and informative titles and axis labels. When investigating more complex relationships with many variables, this simple tip will save you and your readers a lot of time and confusion."
   },
   {
     "objectID": "labs/lab-04.html#loading-in-data",
     "href": "labs/lab-04.html#loading-in-data",
-    "title": "Lab 4",
+    "title": "Lab 4: Practice with ggplot2 and tidyverse",
     "section": "Loading in data",
     "text": "Loading in data\nPreviously, you loaded data directly into R by using the read.csv command that pointed to a website. But what if you had a dataset on your computer?\nYou can still do so, but need to point R to reference the appropriate space on your computer. For instance, if I downloaded the McDonald’s Menu Items dataset to my Downloads folder and named it file.csv, I might be able to load the dataset into R under the name mcd with the following command:\n\nmcd &lt;- read.csv(\"C:/Users/Kara/Downloads/file.csv\")\n\nNote that file.csv, the name of the file on your computer, could be different from the object name in R (this case, mcd).\nHowever, file paths can be quite long. There’s a better way! This is where our project folder comes in."
   },
   {
     "objectID": "labs/lab-04.html#navigate-to-your-project-folder",
     "href": "labs/lab-04.html#navigate-to-your-project-folder",
-    "title": "Lab 4",
+    "title": "Lab 4: Practice with ggplot2 and tidyverse",
     "section": "Navigate to your project folder",
     "text": "Navigate to your project folder\nFirst, make sure you are in your project folder. You should see a blue cube at the top right of your RStudio window with the name of your project. If you see it, great. If not, you can open your project with File &gt; Open Project.\nAt the beginning of class, you should have created a data folder that lives in your project folder. If you copy your data (perhaps it’s called file.csv) into your data folder, you can read it in with the following code:\n\nmcd &lt;- read.csv(\"data/file.csv\")\n\nBecause we are working out of our project folder, R knew to start looking in the data folder within the project by default. Using this strategy provides a shortcut instead of needing to provide the entire file path.\nAny R output will go into your project folder (for instance, if you want to specifically save plots, figures, etc.) by default.\nNote: there are some syntax issues with the way R parses in slashes, and this may change from Mac to PC (…anyone use Linux?). You can always check your current working directory with the following command in order to check the formatting of the file path (and also see what the current directory is!):\n\ngetwd()\n\n[1] \"C:/Users/kmcco/OneDrive - University of North Carolina at Chapel Hill/Documents/UNC_Teaching/fall2026/bios600-fa26/labs\""
   },
   {
     "objectID": "labs/lab-04.html#downloading-the-data",
     "href": "labs/lab-04.html#downloading-the-data",
-    "title": "Lab 4",
+    "title": "Lab 4: Practice with ggplot2 and tidyverse",
     "section": "Downloading the data",
     "text": "Downloading the data\nFirst, download the Joey Stanley dataset. The data are available on his website here (https://joeystanley.com/data/), and clicking on “McDonald’s Menu Items. Save the data in your data folder within your project folder as menu.csv.\n\nExercise 1\n\nIn your code chunk labeled load-data, read in the data with the following code:\n\n\nmcd &lt;- read.csv(\"data/menu.csv\")\n\nWatch out for the naming of the file and where it’s saved on your computer! Print the first seven rows of the dataset with slice().\n\n\n\n\n\n\nImportantGetting an error?\n\n\n\nIf you’re getting an error here, check the following:\n\nThat you have your project open within RStudio (there is a blue cube at the top right of your RStudio window with the name of your project folder next to it. If you don’t see this, click File &gt; Open Project… and navigate to your project folder.)\nThat there is a folder called data within this project folder, and menu.csv is saved in that data folder.\n\nIf you’ve checked these things and are still getting an error, reach out to the teaching team for help!"
   },
   {
     "objectID": "labs/lab-04.html#exercise-1-1",
     "href": "labs/lab-04.html#exercise-1-1",
-    "title": "Lab 4",
+    "title": "Lab 4: Practice with ggplot2 and tidyverse",
     "section": "Exercise 1",
     "text": "Exercise 1\n\nLoad in the McDonald’s dataset from Joey Stanley’s website (save the file to your computer).\nPrint the column names in your dataset with names()."
   },
   {
     "objectID": "labs/lab-04.html#on-your-own",
     "href": "labs/lab-04.html#on-your-own",
-    "title": "Lab 4",
+    "title": "Lab 4: Practice with ggplot2 and tidyverse",
     "section": "On your own!",
     "text": "On your own!"
   },
   {
     "objectID": "labs/lab-04.html#exercise-2",
     "href": "labs/lab-04.html#exercise-2",
-    "title": "Lab 4",
+    "title": "Lab 4: Practice with ggplot2 and tidyverse",
     "section": "Exercise 2",
     "text": "Exercise 2\nCreate a table which displays the number of menu items in each food category. (Hint: use the count() function.) Which category has the most number of items? Which category has the least?"
   },
   {
     "objectID": "labs/lab-04.html#exercise-3",
     "href": "labs/lab-04.html#exercise-3",
-    "title": "Lab 4",
+    "title": "Lab 4: Practice with ggplot2 and tidyverse",
     "section": "Exercise 3",
     "text": "Exercise 3\n\nModify the code below to create a new variable called cal_oz which calculates the calories per ounce in each of the menu items. In this code, we are saving the dataset to a new object called mcd_cal.\n\n\nmcd_cal &lt;- mcd |&gt;\n  mutate(_______) # create the new variable here\n\n\nCreate a new R Chunk. Now, within your newly created dataset mcd_cal, select the variables Category, Item, and cal_oz, then print the first five observations with slice(). Within the first five observations, which food item has the highest calories per ounce?"
   },
   {
     "objectID": "labs/lab-04.html#exercise-4",
     "href": "labs/lab-04.html#exercise-4",
-    "title": "Lab 4",
+    "title": "Lab 4: Practice with ggplot2 and tidyverse",
     "section": "Exercise 4",
     "text": "Exercise 4\n\nCreate a table which displays the top five most caloric menu items (only based on total calories), with the highest-value item at the top of the table. In doing so, display only the name of the menu item and the calories. You may use the following code to get started:\n\n\nmcd_cal |&gt;\n  select(_____, _____) |&gt;\n  arrange(_______) |&gt; # arrange highest to lowest\n  slice(_______)\n\n\nNow, using similar code as above, create a second table which displays the top five most caloric menu items per ounce (based on the new variable you created in Exercise 2).\nWhich item ranks the highest in each of the tables? Are you surprised?"
   },
   {
     "objectID": "labs/lab-04.html#exercise-5",
     "href": "labs/lab-04.html#exercise-5",
-    "title": "Lab 4",
+    "title": "Lab 4: Practice with ggplot2 and tidyverse",
     "section": "Exercise 5",
     "text": "Exercise 5\nThere are 9 calories per gram of fat. Create a new variable which corresponds to the proportion of calories that come from fat for each of the menu items. (Assign this dataset, with the newly created variable, to the object mcd_cal.) You can define the new variable as follows: prop_cal_fat = Fat*9/Calories. (Nothing needs to be printed out here. Just show your code.)"
   },
   {
     "objectID": "labs/lab-04.html#exercise-6",
     "href": "labs/lab-04.html#exercise-6",
-    "title": "Lab 4",
+    "title": "Lab 4: Practice with ggplot2 and tidyverse",
     "section": "Exercise 6",
     "text": "Exercise 6\nCreate a visualization that shows the distribution of calories in McDonald’s menu items by category. Use the following code to get started, filling in the blanks. (You do not need to alter the geom_boxplot or the theme() parts of the code.)\n\nggplot(data = _______, \n       mapping = aes(y = ________, \n                     x = _________, \n                     fill = ________)) +\n  geom_boxplot() + \n  theme(legend.position = \"none\",\n        axis.text.x = element_text(angle = 45, hjust = 1)) +\n  labs(title = \"___________\")\n\nWhat patterns do you see?"
   },
   {
     "objectID": "labs/lab-04.html#exercise-7",
     "href": "labs/lab-04.html#exercise-7",
-    "title": "Lab 4",
+    "title": "Lab 4: Practice with ggplot2 and tidyverse",
     "section": "Exercise 7",
     "text": "Exercise 7\nCreate a visualization that plots the calories per ounce of items (x-axis) by the proportion of calories that come from fat (y-axis). In this visualization, color by the food category. What pattern(s) do you see?"
   },
   {
     "objectID": "labs/lab-04.html#ai-attestation",
     "href": "labs/lab-04.html#ai-attestation",
-    "title": "Lab 4",
+    "title": "Lab 4: Practice with ggplot2 and tidyverse",
     "section": "AI Attestation",
     "text": "AI Attestation\nIf you used AI for this assignment, list your prompts below. Cite any other online resources you used. If you did not use AI for this assignment, you may simply state “I did not use AI for this assignment.”"
   },
   {
     "objectID": "labs/lab-04.html#submission",
     "href": "labs/lab-04.html#submission",
-    "title": "Lab 4",
+    "title": "Lab 4: Practice with ggplot2 and tidyverse",
     "section": "Submission",
     "text": "Submission\nAs you’ve seen previously, we can Render the template into an .html file that can be opened by any web browser. To export it as a .pdf, open the file in your web browser and then print to or save as a .pdf document. Your TAs will show you how if you need help! (There is a way to directly knit to a .pdf file, but it’s quite a bit more involved.)\nYou will submit the PDF documents for labs and homework to Gradescope as part of your final submission.\nTo submit your assignment:\n\nAccess Gradescope through the menu on the BIOS 600 Canvas site.\nClick on the assignment, and you’ll be prompted to submit it.\nMark the pages associated with each exercise. All of the pages of your lab should be associated with at least one question (i.e., should be “checked”).\nSelect the first page of your .PDF submission to be associated with the “Formatting” section."
   },
   {
     "objectID": "labs/lab-04.html#grading",
     "href": "labs/lab-04.html#grading",
-    "title": "Lab 4",
+    "title": "Lab 4: Practice with ggplot2 and tidyverse",
     "section": "Grading",
     "text": "Grading\n\n\n\nComponent\nPoints\n\n\n\n\nEx 1\n3\n\n\nEx 2\n2\n\n\nEx 3\n3\n\n\nEx 4\n3\n\n\nEx 5\n1\n\n\nEx 6\n3\n\n\nEx 7\n3\n\n\nFormatting\n3\n\n\nTotal\n21\n\n\n\nThe “Formatting” grade is to assess the document format. This includes having a neatly organized document (no excessive output, warnings/messages when loading packages and/or data) with readable code and your name and the date updated in the YAML."
   },
