@@ -1474,7 +1474,7 @@
     "href": "index.html",
     "title": "BIOS 600 Fall 2026",
     "section": "",
-    "text": "Lecture 0: Welcome to BIOS 600!\nLab 1: Introducing the Toolkit\nLecture 1: What is statistical inference?\n\n\n\nLab 2: Basic Data Visualization\nLecture 2: The nature of data\nLecture 3: Probability basics\nHW 1\n\n\n\nLab 3: Data Wrangling\nLecture 4: Conditional probability\nLecture 5: Medical diagnostics\nHW 2\n\n\n\nLecture 6: Discrete distributions\nLab 4: Practice with ggplot2 and tidyverse\nApplication Exercise 1: Binomial in a Biomedical Setting\nLecture 7: Continuous distributions\nApplication Exercise 2: Poisson in a Hospital Setting\nHW 3\n\n\n\nExam 01 Topics List\nExam 01 Formula Sheet"
+    "text": "Lecture 0: Welcome to BIOS 600!\nLab 1: Introducing the Toolkit\nLecture 1: What is statistical inference?\n\n\n\nLab 2: Basic Data Visualization\nLecture 2: The nature of data\nLecture 3: Probability basics\nHW 1\n\n\n\nLab 3: Data Wrangling\nLecture 4: Conditional probability\nLecture 5: Medical diagnostics\nHW 2\n\n\n\nLecture 6: Discrete distributions\nLab 4: Practice with ggplot2 and tidyverse\nApplication Exercise 1: Binomial in a Biomedical Setting\nLecture 7: Continuous distributions\nApplication Exercise 2: Poisson in a Hospital Setting\nHW 3\nAE 1 Solution\n\n\n\nExam 01 Topics List\nExam 01 Formula Sheet\nExam 01 Practice Problems"
   },
   {
     "objectID": "index.html#week-1",
@@ -1502,14 +1502,14 @@
     "href": "index.html#week-4",
     "title": "BIOS 600 Fall 2026",
     "section": "",
-    "text": "Lecture 6: Discrete distributions\nLab 4: Practice with ggplot2 and tidyverse\nApplication Exercise 1: Binomial in a Biomedical Setting\nLecture 7: Continuous distributions\nApplication Exercise 2: Poisson in a Hospital Setting\nHW 3"
+    "text": "Lecture 6: Discrete distributions\nLab 4: Practice with ggplot2 and tidyverse\nApplication Exercise 1: Binomial in a Biomedical Setting\nLecture 7: Continuous distributions\nApplication Exercise 2: Poisson in a Hospital Setting\nHW 3\nAE 1 Solution"
   },
   {
     "objectID": "index.html#exam-resources",
     "href": "index.html#exam-resources",
     "title": "BIOS 600 Fall 2026",
     "section": "",
-    "text": "Exam 01 Topics List\nExam 01 Formula Sheet"
+    "text": "Exam 01 Topics List\nExam 01 Formula Sheet\nExam 01 Practice Problems"
   },
   {
     "objectID": "hw/hw-02.html",
@@ -1650,6 +1650,34 @@
     "title": "Participation: Binomial in a Biomedical Setting",
     "section": "Submission",
     "text": "Submission\nAs you’ve seen previously, we can Render the template into an .html file that can be opened by any web browser. To export it as a .pdf, open the file in your web browser and then print to or save as a .pdf document. Your TAs will show you how if you need help! (There is a way to directly knit to a .pdf file, but it’s quite a bit more involved.)\nYou will submit the PDF documents for Application Exercises directly to Canvas.\nTo submit your assignment:\n\nAccess the Application Exercise through Modules on the BIOS 600 Canvas site.\nUpload your PDF."
+  },
+  {
+    "objectID": "ae/ae-01-solution.html",
+    "href": "ae/ae-01-solution.html",
+    "title": "Application Exercise: Practice with Binomial and Poisson",
+    "section": "",
+    "text": "Suppose 5 people receive a new vaccine. From clinical trial data, the probability that any individual experiences a mild side effect (e.g., sore arm, mild fever) is 0.2.\nLet \\(X\\) be the number of people (out of 5) who experience a mild side effect.\nThen \\(X \\sim \\text{Binomial}(n=5, p=0.2)\\).\n\n\nWhat is the probability that exactly 2 out of 5 people experience a mild side effect? Use the dbinom function to compute your answer and provide a 1-sentence conclusion.\n\ndbinom(2,size=5,prob=0.2)\n\n[1] 0.2048\n\n\nSo, there is about a 20.5% chance that exactly 2 people will have side effects."
+  },
+  {
+    "objectID": "ae/ae-01-solution.html#a-clinical-trial-binomial-example",
+    "href": "ae/ae-01-solution.html#a-clinical-trial-binomial-example",
+    "title": "Application Exercise: Practice with Binomial and Poisson",
+    "section": "",
+    "text": "Suppose 5 people receive a new vaccine. From clinical trial data, the probability that any individual experiences a mild side effect (e.g., sore arm, mild fever) is 0.2.\nLet \\(X\\) be the number of people (out of 5) who experience a mild side effect.\nThen \\(X \\sim \\text{Binomial}(n=5, p=0.2)\\).\n\n\nWhat is the probability that exactly 2 out of 5 people experience a mild side effect? Use the dbinom function to compute your answer and provide a 1-sentence conclusion.\n\ndbinom(2,size=5,prob=0.2)\n\n[1] 0.2048\n\n\nSo, there is about a 20.5% chance that exactly 2 people will have side effects."
+  },
+  {
+    "objectID": "ae/ae-01-solution.html#exercise-2",
+    "href": "ae/ae-01-solution.html#exercise-2",
+    "title": "Application Exercise: Practice with Binomial and Poisson",
+    "section": "Exercise 2",
+    "text": "Exercise 2\nWhat is the probability that at least 1 out of 5 people experiences a mild side effect? (Hint: Use the complement rule: \\(P(X \\geq 1)=1−P(X=0)\\)). Use the dbinom function to compute your answer and provide a 1-sentence conclusion.\n\n1-dbinom(0,size=5,prob=0.2)\n\n[1] 0.67232\n\n\nSo, there is about a 67% chance that at least 1 person will have a mild side effect."
+  },
+  {
+    "objectID": "ae/ae-01-solution.html#hospital-visits-poisson-example",
+    "href": "ae/ae-01-solution.html#hospital-visits-poisson-example",
+    "title": "Application Exercise: Practice with Binomial and Poisson",
+    "section": "Hospital Visits: Poisson Example",
+    "text": "Hospital Visits: Poisson Example\nSuppose that in a hospital emergency department, the average number of asthma-related visits per hour is 3. Let \\(Y\\) be the number of asthma visits in one hour. Then \\(Y \\sim Poisson(\\lambda=3)\\)\n\nExercise 3\nWhat is the probability that in a given hour, exactly 5 asthma patients arrive? Use the dpois function to compute your answer and provide a 1-sentence conclusion.\n\ndpois(5, lambda = 3)\n\n[1] 0.1008188\n\n\nSo, there is about a 10% chance of exactly 5 asthma patients in one hour."
   },
   {
     "objectID": "about.html",
@@ -2140,6 +2168,13 @@
     "title": "Exam 01 Formula Sheet",
     "section": "",
     "text": "If needed, you would be provided any of the following formulas on the exam.\n\nSample standard deviation: \\(s = \\sqrt{\\frac{1}{n-1} \\sum_{i=1}^n (x_i - \\bar{x})^2}\\)\nSample variance: \\(s^2 = \\frac{1}{n-1} \\sum_{i=1}^n(x_i - \\bar{x})^2\\)\nChebyshev’s inequality tells us the proportion of values in the range “average \\(\\pm\\) \\(k\\) SDs” is at least \\(1-\\frac{1}{k^2}\\)\nInclusion-Exclusion: \\(P(A \\cup B) = P(A) + P(B) - P(A \\cap B)\\)\nComplement of union: \\((A\\cup B)^C = A^C \\cap B^C\\)\nComplement of intersection: \\((A\\cap B)^C = A^C \\cup B^C\\)\nConditional probability: \\(P(A|B) = \\frac{P(A\\cap B)}{P(B)}\\)\nLaw of total probability: \\(P(A) = P(A \\cap B_1) + P(A \\cap B_2) + \\cdots + P(A \\cap B_k)\\)\nIf \\(X\\) has a binomial distribution, then \\(P(X=k) = {n \\choose k}p^k (1-p)^{n-k}\\)\nIf \\(X\\) has a Poisson distribution, then \\(P(X=k) = \\frac{\\lambda^k e^{-\\lambda}}{k!}\\)\nGiven \\(n\\) and parameter values, write out the expression for expectation and variance of Bernoulli, Binomial, and Poisson random variables. (Formulas for each given.)\nFor \\(Z \\sim Bern(p)\\), \\(E(Z) = p\\) and \\(Var(Z) = p(1-p)\\)\nFor \\(Z \\sim Binom(n, p)\\), \\(E(Z) = np\\) and \\(Var(Z) = np(1-p)\\)\nFor \\(Z \\sim Pois(\\lambda)\\), \\(E(Z) = Var(Z) = \\lambda\\)"
+  },
+  {
+    "objectID": "resources/exam-01-practice.html",
+    "href": "resources/exam-01-practice.html",
+    "title": "Exam 01 Practice Problems",
+    "section": "",
+    "text": "Code\nDr. X is a clinician learning R in order to perform some statistical analysis on her dataset. You are a biostatistician also working on the project. She’s begun to learn the basics but has some questions for you.\n\nWhat’s the difference between install.packages() and library() ?\nDr. X is tempted to simply Google some excel functions and analyze her data in excel, because R is difficult to learn. She wants to simply email her collaborators her final figures she creates from this process. Why is doing the analysis in excel problematic in terms of reproducibility? How can R help with reproducibility in Dr. X’s analysis?\nIn a Quarto document, what does ### in front of text do?\nIn a code chunk within a Quarto document, what does # in front of code do?\nDr. X is ready to begin her analysis and attempts to load in the tidyverse package but is getting an error. Based on her code below, why is she getting an error and how should she fix it?\n\n\ninstall.packages(\"tidyverse\"))\n\n\nDr. X figured out her error above. She is now doing some practice visualization on the CDC dataset (the same one we worked on in Lab 2). She has produced the following code:\n\n\nggplot(data = cdc, mapping = aes(x = Exercise, \n                                 y = Obesity, \n                                 color = HDI, \n                                 shape = HDI)) +\ngeom_point()\n\nWhat does geom_point() do? (i.e. what kind of plot will it produce?)\n\nDr. X is producing a summary of some of the CDC variables below.\n\n\ncdc |&gt;\n  summarize(avg_exercise = mean(Exercise, na.rm = T))\n\n\nWhat is the summarize() function doing?\nWhat does na.rm = T mean?\n\n\nA new vaccine is tested, and researchers know that it successfully prevents infection in 80% of people who receive it. Suppose 10 people are vaccinated. What R code could you use to calculate the probability that exactly 7 of the 10 vaccinated individuals are protected from infection?\n\ndbinom(7, size = 10, prob = 0.4)\n\nB. dbinom(10, size = 7, prob = 0.8)\nC. dbinom(7, size = 10, prob = 0.8)\nD. ppois(7, lambda = 8)\n\n\n\nConceptual & Applied\n\nWhat’s the difference between reproducibility and replicability?\nWhat is quota sampling? Would this type of sampling be more or less generalizable to the broader population compared to probability sampling?\nIn class, we discussed the response to a COVID-19 seroprevalence paper, and how the investigators recruited their participants using Facebook. Describe why this method may have introduced a form of sampling bias.\nConsider the following research question:\n\n\n“Is the PCV13 vaccine effective against community acquired pneumonia in adults aged 65 or older?”\n\nWhat is the study population?\n\nAccording to CDC growth charts, the mean systolic blood pressure for 60-year-old men is 135 mmHg, with a standard deviation of 20 mmHg. Suppose you are a 60-year-old man with a systolic blood pressure of 165 mmHg.\n\n\nWrite out how to calculate your Z-score (leave as an expression).\nWhy are z-scores helpful when comparing normally distributed variables with different means and variances?\n\n\nA new rapid test has been developed to detect influenza infection. A study compares the results of the rapid test against the gold standard laboratory PCR test. The results from 200 patients are shown below:\n\n\n\n\n\nPCR Positive\nPCR Negative\nTotal\n\n\n\n\nRapid Test Positive\n72\n18\n90\n\n\nRapid Test Negative\n8\n102\n110\n\n\nTotal\n80\n120\n200\n\n\n\n\nCalculate the sensitivity of the rapid test. (Leave as an expression.)\nCalculate the specificity of the rapid test. (Leave as an expression.)\nIn one sentence, explain what specificity means in this context.\n\n\n(True or False): Events \\(A\\) and \\(B\\) are said to be independent when \\(P(A \\cap B) = P(A) \\cdot P(B)\\)."
   },
   {
     "objectID": "slides/lec-0-welcome.html#download-or-print-notes-to-pdf",
