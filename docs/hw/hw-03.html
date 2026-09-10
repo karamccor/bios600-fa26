@@ -6,9 +6,8 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="Your Name Here">
 
-<title>Application Exercise: Binomial in a Biomedical Setting – BIOS 600 Fall 2026</title>
+<title>HW 03 – BIOS 600 Fall 2026</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -179,12 +178,15 @@ window.Quarto = {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#a-clinical-trial-binomial-example" id="toc-a-clinical-trial-binomial-example" class="nav-link active" data-scroll-target="#a-clinical-trial-binomial-example">A Clinical Trial: Binomial Example</a>
-  <ul class="collapse">
+  <li><a href="#starting-a-new-quarto-file" id="toc-starting-a-new-quarto-file" class="nav-link active" data-scroll-target="#starting-a-new-quarto-file">Starting a new Quarto file</a></li>
   <li><a href="#exercise-1" id="toc-exercise-1" class="nav-link" data-scroll-target="#exercise-1">Exercise 1</a></li>
-  </ul></li>
   <li><a href="#exercise-2" id="toc-exercise-2" class="nav-link" data-scroll-target="#exercise-2">Exercise 2</a></li>
+  <li><a href="#exercise-3" id="toc-exercise-3" class="nav-link" data-scroll-target="#exercise-3">Exercise 3</a></li>
+  <li><a href="#exercise-4" id="toc-exercise-4" class="nav-link" data-scroll-target="#exercise-4">Exercise 4</a></li>
+  <li><a href="#exercise-5" id="toc-exercise-5" class="nav-link" data-scroll-target="#exercise-5">Exercise 5</a></li>
+  <li><a href="#ai-attestation" id="toc-ai-attestation" class="nav-link" data-scroll-target="#ai-attestation">AI Attestation</a></li>
   <li><a href="#submission" id="toc-submission" class="nav-link" data-scroll-target="#submission">Submission</a></li>
+  <li><a href="#grading" id="toc-grading" class="nav-link" data-scroll-target="#grading">Grading</a></li>
   </ul>
 </nav>
     </div>
@@ -193,26 +195,15 @@ window.Quarto = {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Application Exercise: Binomial in a Biomedical Setting</h1>
+<h1 class="title">HW 03</h1>
+<p class="subtitle lead">Lectures 06-07</p>
 </div>
 
 
 
 <div class="quarto-title-meta">
 
-    <div>
-    <div class="quarto-title-meta-heading">Author</div>
-    <div class="quarto-title-meta-contents">
-             <p>Your Name Here </p>
-          </div>
-  </div>
     
-    <div>
-    <div class="quarto-title-meta-heading">Published</div>
-    <div class="quarto-title-meta-contents">
-      <p class="date">Invalid Date</p>
-    </div>
-  </div>
   
     
   </div>
@@ -222,31 +213,150 @@ window.Quarto = {
 </header>
 
 
-<section id="a-clinical-trial-binomial-example" class="level2">
-<h2 class="anchored" data-anchor-id="a-clinical-trial-binomial-example">A Clinical Trial: Binomial Example</h2>
-<p>Suppose 5 people receive a new vaccine. From clinical trial data, the probability that any individual experiences a mild side effect (e.g., sore arm, mild fever) is 0.2.<br>
-Let <span class="math inline">\(X\)</span> be the number of people (out of 5) who experience a mild side effect.<br>
-Then <span class="math inline">\(X \sim \text{Binomial}(n=5, p=0.2)\)</span>.</p>
-<section id="exercise-1" class="level3">
-<h3 class="anchored" data-anchor-id="exercise-1">Exercise 1</h3>
-<p>What is the probability that exactly 2 out of 5 people experience a mild side effect? Use the <code>dbinom</code> function to compute your answer and provide a 1-sentence conclusion.</p>
-<div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># type code here</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
 </div>
-<p>[type response here]</p>
+<div class="callout-title-container flex-fill">
+Important
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>This homework is due on Wednesay, September 16 at 11:59pm. To be considered on time, the following must be done by the due date:</p>
+<ul>
+<li>Final <code>.pdf</code> file submitted on Gradescope</li>
+</ul>
+<p>Be sure to <strong>assign questions to pages</strong> when you turn in your assignment on Gradescope. A .5 point deduction will be made any time the question is not assigned to a page within your PDF.</p>
+<p>Assign the Formatting portion to page 1.</p>
+</div>
+</div>
+<section id="starting-a-new-quarto-file" class="level2">
+<h2 class="anchored" data-anchor-id="starting-a-new-quarto-file">Starting a new Quarto file</h2>
+<p>For this assignment you will begin a new Quarto file. To do this, go to RStudio and click File &gt; New File &gt; Quarto Document. A pop-up will appear asking for a title, author, and format. You may leave these as the default options for now. Click OK and a new file will open.</p>
+<p>In the document, Quarto automatically adds some starter text and code chunks. You may delete everything below the YAML header (everything under the second set of <code>---</code>). You should be left with just a YAML section at the very top, which looks something like this:</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="sc">---</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>title<span class="sc">:</span> <span class="st">"Document Title"</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>author<span class="sc">:</span> <span class="st">"Your Name"</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>date<span class="sc">:</span> <span class="st">"Today's date here"</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>format<span class="sc">:</span> html</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="sc">---</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<p>Now, Edit the YAML header. Change</p>
+<ul>
+<li><p>title -&gt; the assignment name (e.g.&nbsp;<code>HW 3</code>)</p></li>
+<li><p>author -&gt; your name</p></li>
+<li><p>date -&gt; today’s date</p></li>
+</ul>
+<p>Now, save your file. Go to File &gt; Save as, and name it something clear like <code>hw3.qmd</code>. Keep it in your project folder. You’re ready to begin!</p>
 </section>
+<section id="exercise-1" class="level2">
+<h2 class="anchored" data-anchor-id="exercise-1">Exercise 1</h2>
+<p>Determine which probability distribution would be most appropriate for modeling the quantity of interest: Bernoulli, Binomial, Normal, or Poisson. No explanation is required (note, it may be the case that not all assumptions are satisfied for your distribution of choice; that’s ok - for here, choose the most appropriate choice).</p>
+<ul>
+<li><ol type="A">
+<li>The mean proportion of people who are left-handed</li>
+</ol></li>
+<li><ol start="2" type="A">
+<li>The number of students in a classroom who have diabetes</li>
+</ol></li>
+<li><ol start="3" type="A">
+<li>How many previous heart attacks a patient has had in the past decade</li>
+</ol></li>
+<li><ol start="4" type="A">
+<li>The number of flights taken by a person in a year</li>
+</ol></li>
+<li><ol start="5" type="A">
+<li>The average weight of newborn infants</li>
+</ol></li>
+<li><ol start="6" type="A">
+<li>Whether a patient develops lung cancer during their life given that they are a smoker</li>
+</ol></li>
+</ul>
 </section>
 <section id="exercise-2" class="level2">
 <h2 class="anchored" data-anchor-id="exercise-2">Exercise 2</h2>
-<p>What is the probability that at least 1 out of 5 people experiences a mild side effect? (Hint: Use the complement rule: <span class="math inline">\(P(X \geq 1)=1−P(X=0)\)</span>). Use the <code>dbinom</code> function to compute your answer and provide a 1-sentence conclusion.</p>
-<div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># type code here</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</div>
-<p>[type response here]</p>
+<p>Air pollution may cause lung deficiencies and development of diseases such as emphysema or COPD. A researcher is interested in the effect of air pollution on mice, and conducts an experiment whereby the researcher exposes mice to high levels of air exhaust for six hours a day for three weeks, and at the end of the three week period, evaluate whether the mice have developed deficiencies in lung function. In a sample of the mice used, 25 out of 100 developed such deficiencies. The researcher is interested in the number of mice that must be sampled before he obtains ten abnormal mice for use in further studies and proposes using a binomial distribution to model this quantity. Evaluate whether the assumptions for a binomial distribution are satisfied.</p>
+</section>
+<section id="exercise-3" class="level2">
+<h2 class="anchored" data-anchor-id="exercise-3">Exercise 3</h2>
+<p>Vaccination is one of the most effective public health tools ever created to control the spread of infectious, communicable diseases. Recently there has been some pushback from the public against mandatory childhood vaccinations. Due to vaccine hesitancy, formerly well-controlled diseases such as measles have made a comeback in certain communities due to lack of vaccination and herd immunity. A researcher is interested in the number of children who develop measles across various school districts in the United States and proposes using a Poisson distribution to model this quantity. Evaluate whether the assumptions for a Poisson distribution are satisfied.</p>
+</section>
+<section id="exercise-4" class="level2">
+<h2 class="anchored" data-anchor-id="exercise-4">Exercise 4</h2>
+<p>A team of scientific researchers in Antarctica is investigating the number of eggs laid in a given season to Adelie penguin breeding pairs. In their initial survey of 100 randomly chosen breeding pairs, they found a mean of 2 eggs (standard deviation 0.3 eggs). Explain why it would or would not be appropriate to use a Poisson distribution to model this quantity. (2-3 sentences)</p>
+</section>
+<section id="exercise-5" class="level2">
+<h2 class="anchored" data-anchor-id="exercise-5">Exercise 5</h2>
+<p>Blood cholesterol is often used as a marker for cardiovascular disease risk.<br>
+Suppose the distribution of total cholesterol levels in adults is approximately normal with:</p>
+<ul>
+<li>Mean (<span class="math inline">\(\mu\)</span>) = 200 mg/dL<br>
+</li>
+<li>Standard deviation (<span class="math inline">\(\sigma\)</span>) = 30 mg/dL</li>
+</ul>
+<p>A patient’s cholesterol level is measured at <strong>260 mg/dL</strong>.</p>
+<ol type="a">
+<li><p>Calculate the <strong>z-score</strong> for this patient’s cholesterol value. Use R for your computation and show your code.</p></li>
+<li><p>Interpret the z-score: how many standard deviations above or below the mean is this value?</p></li>
+<li><p>Based on the z-score, would you consider this value to be <strong>unusually high</strong>?<br>
+<em>(Hint: Recall that values more than ~2 standard deviations from the mean are often considered unusual.)</em></p></li>
+</ol>
+</section>
+<section id="ai-attestation" class="level2">
+<h2 class="anchored" data-anchor-id="ai-attestation">AI Attestation</h2>
+<p>If you used AI for this assignment, list your prompts below. Cite any other online resources you used. If you did not use AI for this assignment, you may simply state “I did not use AI for this assignment.”</p>
 </section>
 <section id="submission" class="level2">
 <h2 class="anchored" data-anchor-id="submission">Submission</h2>
-<p>Render to PDF and submit on Canvas &gt; Assignments.</p>
+<p>As you’ve seen previously, we can <strong>Render</strong> into an .html file that can be opened by any web browser. To export it as a .pdf, open the file in your web browser and then print to or save as a .pdf document. Contact your TAs in Ed Discussion if you need help!</p>
+<p>You will submit the PDF documents for labs and homework to Gradescope as part of your final submission.</p>
+<p>To submit your assignment:</p>
+<ul>
+<li><p>Access Gradescope through the menu on the BIOS 600 Canvas site.</p></li>
+<li><p>Click on the assignment, and you’ll be prompted to submit it.</p></li>
+<li><p>Mark the pages associated with each exercise. All of the pages of your lab should be associated with at least one question (i.e., should be “checked”).</p></li>
+<li><p>Select the first page of your .PDF submission to be associated with the “Formatting” section.</p></li>
+</ul>
+</section>
+<section id="grading" class="level2">
+<h2 class="anchored" data-anchor-id="grading">Grading</h2>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Component</th>
+<th>Points</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Ex 1</td>
+<td>6</td>
+</tr>
+<tr class="even">
+<td>Ex 2</td>
+<td>3</td>
+</tr>
+<tr class="odd">
+<td>Ex 3</td>
+<td>3</td>
+</tr>
+<tr class="even">
+<td>Ex 4</td>
+<td>2</td>
+</tr>
+<tr class="odd">
+<td>Ex 5</td>
+<td>3</td>
+</tr>
+<tr class="even">
+<td>Formatting</td>
+<td>3</td>
+</tr>
+</tbody>
+</table>
+<p>The “Formatting” grade is to assess the document format. This includes having a neatly organized document (no excessive output, warnings/messages when loading packages and/or data) with readable code and your name and the date updated in the YAML.</p>
 
 
 </section>

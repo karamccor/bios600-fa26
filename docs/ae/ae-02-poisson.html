@@ -6,9 +6,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="Your Name Here">
+<meta name="author" content="Your name here">
 
-<title>Application Exercise: Binomial in a Biomedical Setting – BIOS 600 Fall 2026</title>
+<title>Application Exercise 2: Poisson – BIOS 600 Fall 2026</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -179,12 +179,11 @@ window.Quarto = {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#a-clinical-trial-binomial-example" id="toc-a-clinical-trial-binomial-example" class="nav-link active" data-scroll-target="#a-clinical-trial-binomial-example">A Clinical Trial: Binomial Example</a>
+  <li><a href="#getting-started" id="toc-getting-started" class="nav-link active" data-scroll-target="#getting-started">Getting started</a></li>
+  <li><a href="#hospital-visits-poisson-example" id="toc-hospital-visits-poisson-example" class="nav-link" data-scroll-target="#hospital-visits-poisson-example">Hospital Visits: Poisson Example</a>
   <ul class="collapse">
   <li><a href="#exercise-1" id="toc-exercise-1" class="nav-link" data-scroll-target="#exercise-1">Exercise 1</a></li>
   </ul></li>
-  <li><a href="#exercise-2" id="toc-exercise-2" class="nav-link" data-scroll-target="#exercise-2">Exercise 2</a></li>
-  <li><a href="#submission" id="toc-submission" class="nav-link" data-scroll-target="#submission">Submission</a></li>
   </ul>
 </nav>
     </div>
@@ -193,7 +192,7 @@ window.Quarto = {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Application Exercise: Binomial in a Biomedical Setting</h1>
+<h1 class="title">Application Exercise 2: Poisson</h1>
 </div>
 
 
@@ -203,7 +202,7 @@ window.Quarto = {
     <div>
     <div class="quarto-title-meta-heading">Author</div>
     <div class="quarto-title-meta-contents">
-             <p>Your Name Here </p>
+             <p>Your name here </p>
           </div>
   </div>
     
@@ -222,33 +221,41 @@ window.Quarto = {
 </header>
 
 
-<section id="a-clinical-trial-binomial-example" class="level2">
-<h2 class="anchored" data-anchor-id="a-clinical-trial-binomial-example">A Clinical Trial: Binomial Example</h2>
-<p>Suppose 5 people receive a new vaccine. From clinical trial data, the probability that any individual experiences a mild side effect (e.g., sore arm, mild fever) is 0.2.<br>
-Let <span class="math inline">\(X\)</span> be the number of people (out of 5) who experience a mild side effect.<br>
-Then <span class="math inline">\(X \sim \text{Binomial}(n=5, p=0.2)\)</span>.</p>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Important
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>This Application Exercise is due on Friday, September 11 at 11:59pm. To be considered on time, the following must be done by the due date:</p>
+<ul>
+<li><p>Final <code>.pdf</code> file submitted on Canvas</p></li>
+<li><p>While late work is accepted for HW and Labs, no late work is accepted for AEs.</p></li>
+</ul>
+</div>
+</div>
+<section id="getting-started" class="level2">
+<h2 class="anchored" data-anchor-id="getting-started">Getting started</h2>
+<p>Download the template for today’s Application Exercise (AE) from Canvas. Open the file, and type your name and today’s date in the YAML. Save your file as <code>ae-02.qmd</code> in your project folder.</p>
+<p>Render your document to ensure the formatting all looks good.</p>
+</section>
+<section id="hospital-visits-poisson-example" class="level2">
+<h2 class="anchored" data-anchor-id="hospital-visits-poisson-example">Hospital Visits: Poisson Example</h2>
+<p>Suppose that in a hospital emergency department, the average number of asthma-related visits per hour is 3. Let <span class="math inline">\(Y\)</span> be the number of asthma visits in one hour. Then <span class="math inline">\(Y \sim Poisson(\lambda=3)\)</span></p>
 <section id="exercise-1" class="level3">
 <h3 class="anchored" data-anchor-id="exercise-1">Exercise 1</h3>
-<p>What is the probability that exactly 2 out of 5 people experience a mild side effect? Use the <code>dbinom</code> function to compute your answer and provide a 1-sentence conclusion.</p>
+<p>What is the probability that in a given hour, exactly 5 asthma patients arrive? Use the <code>dpois</code> function to compute your answer and provide a 1-sentence conclusion.</p>
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># type code here</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <p>[type response here]</p>
-</section>
-</section>
-<section id="exercise-2" class="level2">
-<h2 class="anchored" data-anchor-id="exercise-2">Exercise 2</h2>
-<p>What is the probability that at least 1 out of 5 people experiences a mild side effect? (Hint: Use the complement rule: <span class="math inline">\(P(X \geq 1)=1−P(X=0)\)</span>). Use the <code>dbinom</code> function to compute your answer and provide a 1-sentence conclusion.</p>
-<div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># type code here</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</div>
-<p>[type response here]</p>
-</section>
-<section id="submission" class="level2">
-<h2 class="anchored" data-anchor-id="submission">Submission</h2>
-<p>Render to PDF and submit on Canvas &gt; Assignments.</p>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->
