@@ -11,7 +11,7 @@
     "href": "slides/lec-7-continuous.html#exam-info",
     "title": "Lecture 7: Poisson & Continuous distributions",
     "section": "Exam Info",
-    "text": "Exam Info\n\nExam 01 will be in-class on Tuesday, September 22.\nToday’s lecture marks the end of the content for Exam 01. (Today’s lecture is included in Exam 01 content.)\nTopics list and Formula sheet have been added to Exam 01 Preparation on Canvas.\n\nThe formula sheet will be provided to you on the exam."
+    "text": "Exam Info\n\nExam 01 will be in-class on Tuesday, September 22.\nToday’s lecture marks the end of the content for Exam 01. (Today’s lecture is included in Exam 01 content.)\nTopics list and Formula sheet have been added to Exam 01 Preparation on Canvas.\n\nThe formula sheet will be provided to you on the exam.\n\nExam review questions will also be posted by end of the day on Friday."
   },
   {
     "objectID": "slides/lec-7-continuous.html#announcements-1",
@@ -165,7 +165,7 @@
     "href": "slides/lec-7-continuous.html#example-2",
     "title": "Lecture 7: Poisson & Continuous distributions",
     "section": "Example",
-    "text": "Example\nLet Z be a coin toss. What is \\(E(Z)\\) and \\(Var(Z)\\)?\n\\(Z \\sim Bern(.5)\\).\n\\(E(Z) = .5\\)\n\\(Var(Z) = 0.5 \\cdot (0.5) = 0.25\\)."
+    "text": "Example\nLet Z be a coin toss. What is \\(E(Z)\\) and \\(Var(Z)\\)?\n\\(Z \\sim Bern(p=.5)\\).\n\\(E(Z) = .5\\)\n\\(Var(Z) = 0.5 \\cdot (0.5) = 0.25\\)."
   },
   {
     "objectID": "slides/lec-7-continuous.html#properties-of-binomial-random-variables",
@@ -1019,14 +1019,14 @@
     "href": "resources/exam-01-topics.html",
     "title": "Topics List",
     "section": "",
-    "text": "Lectures 1-7, HW 1-3, Labs 1-3"
+    "text": "Lectures 1-7, HW 1-3, Labs 1-3, AE 1-2"
   },
   {
     "objectID": "resources/exam-01-topics.html#material-covered",
     "href": "resources/exam-01-topics.html#material-covered",
     "title": "Topics List",
     "section": "",
-    "text": "Lectures 1-7, HW 1-3, Labs 1-3"
+    "text": "Lectures 1-7, HW 1-3, Labs 1-3, AE 1-2"
   },
   {
     "objectID": "resources/exam-01-topics.html#coding",
@@ -1040,7 +1040,7 @@
     "href": "resources/exam-01-topics.html#conceptual-applied",
     "title": "Topics List",
     "section": "Conceptual & Applied",
-    "text": "Conceptual & Applied\n\nPopulation vs. sample vs. one observation within a research question\nWhat does “representative” sample mean? What does it mean for a study to be “generalizable”?\nProbability sampling vs. non-probability sampling & knowing a few examples of each. Which is more generalizable?\nExperimental vs. observational studies.\nWhat is bias? Examples: selection, reporting, non-response, attrition, falsified data.\nWhy is transparency and data/code sharing important ethically in statistical studies?\nDefine Reproducibility vs. replicability\nExploratory data analysis. What is it and why is it helpful?\nCategorical: Nominal vs. Ordinal data & know a few examples of each\nNumerical: Count/rank vs. continuous data & know a few examples of each\nIdentifying data types based on a Table 1 (i.e. demographics or baseline characteristics table) from a paper\nParameter vs. statistic\nMean, median, mode, sample minimum and maximum, range, IQR, five-number summary, sample standard deviation\nSymmetric vs. skewed distributions, right vs.left-skew\nChebyshev’s inequality, why is it useful?\nFrequentist vs. Bayesian schools of thought. When might one be helpful over the other?\nProbability space & its components.\nIntersection, union, complement, difference, disjoint, complement rule, inclusion-exclusion. Drawing out venn-diagrams for each.\nDetermining probabilities and conditional probabilities of events given a table (review Coffee Drinking example in Lecture 3)\nVerifying Komolgorov axioms in a simple example\nConditional probability (formula provided)\nDefinition of independence (in terms of probabilities): \\(P(A \\cap B) = P(A) \\times P(B)\\), or equivalently, \\(P(A | B) = P(A)\\) or \\(P(B | A) = P(B)\\)\nGiven two simple events \\(A\\) and \\(B\\), calculating \\(P(A)\\), \\(P(B)\\), \\(P(A \\cap B)\\), \\(P(A \\cup B)\\), \\(P(A | B)\\), \\(P(B | A)\\) (Review example in Lecture 4.)\nLaw of total probability, using this to find probabilities of events given a scenario (Review Coffee example and sleep example in Lecture 4)\nOrder matters in conditional probability (Coffee example in Lecture 4)\nKnow how to define events and set up Bayes’ rule to solve for conditional probability given a scenario (Review Coffee Example Lecture 4)\nPrevalence, sensitivity, specificity, positive predictive value, negative predictive value. Know the definitions in words and in symbols.\nTradeoffs of sensitivity and specificity in a medical diagnostic test\nHow to read an ROC curve, what’s a “good” ROC curve, what is AUC\nGiven a condition/disease, a diagnostic test, and a 2x2 contingency table, define each event and write out how you would solve for the Sensitivity, Specificity, PPV, and/or NPV using conditional probability. (Leave answer as expression).\nDiscrete distributions. Know the three rules, verify the three rules in an example\nBernoulli random variable. State a simple example of a Bernoulli random variable. What’s the one parameter associated with this distribution?\nFor Binomial and Poisson random variables, Know the assumptions for each. State a simple example, verify the assumptions.\nFor Binomial and Poisson, given the formulas and parameters, write out how you would solve for simple probabilities. i.e. For \\(X \\sim Poi(3)\\), write out how you would solve for \\(P(X = 1)\\).\nWhat is expected value, in words? How about variance?\nDensity functions (for continuous variables), two rules of density functions.\nZ-scores, how to calculate, why is it helpful to standardize?"
+    "text": "Conceptual & Applied\n\nPopulation vs. sample vs. one observation within a research question\nWhat does “representative” sample mean? What does it mean for a study to be “generalizable”?\nProbability sampling vs. non-probability sampling & knowing a few examples of each. Which is more generalizable?\nExperimental vs. observational studies.\nWhat is bias? Examples: selection, reporting, non-response, attrition, falsified data.\nWhy is transparency and data/code sharing important ethically in statistical studies?\nDefine Reproducibility vs. replicability\nExploratory data analysis. What is it and why is it helpful?\nCategorical: Nominal vs. Ordinal data & know a few examples of each\nNumerical: Count/rank vs. continuous data & know a few examples of each\nIdentifying data types based on a Table 1 (i.e. demographics or baseline characteristics table) from a paper\nParameter vs. statistic\nMean, median, mode, sample minimum and maximum, range, IQR, five-number summary, sample standard deviation\nSymmetric vs. skewed distributions, right vs.left-skew\nChebyshev’s inequality, why is it useful?\nFrequentist vs. Bayesian schools of thought. When might one be helpful over the other?\nProbability space & its components.\nIntersection, union, complement, difference, disjoint, complement rule, inclusion-exclusion. Drawing out venn-diagrams for each.\nDetermining probabilities and conditional probabilities of events given a table (review Coffee Drinking example in Lecture 3)\nVerifying Komolgorov axioms in a simple example\nConditional probability (formula provided)\nDefinition of independence (in terms of probabilities): \\(P(A \\cap B) = P(A) \\times P(B)\\), or equivalently, \\(P(A | B) = P(A)\\) or \\(P(B | A) = P(B)\\)\nGiven two simple events \\(A\\) and \\(B\\), calculating \\(P(A)\\), \\(P(B)\\), \\(P(A \\cap B)\\), \\(P(A \\cup B)\\), \\(P(A | B)\\), \\(P(B | A)\\) (Review example in Lecture 4.)\nLaw of total probability, using this to find probabilities of events given a scenario (Review Coffee example and sleep example in Lecture 4)\nOrder matters in conditional probability (Coffee example in Lecture 4)\nKnow how to define events and set up Bayes’ rule to solve for conditional probability given a scenario (Review Coffee Example Lecture 4)\nPrevalence, sensitivity, specificity, positive predictive value, negative predictive value. Know the definitions in words and in symbols.\nTradeoffs of sensitivity and specificity in a medical diagnostic test\nHow to read an ROC curve, what’s a “good” ROC curve, what is AUC\nGiven a condition/disease, a diagnostic test, and a 2x2 contingency table, define each event and write out how you would solve for the Sensitivity, Specificity, PPV, and/or NPV using conditional probability. (Leave answer as expression).\nDiscrete distributions. Know the three rules, verify the three rules in an example\nBernoulli random variable. State a simple example of a Bernoulli random variable. What’s the one parameter associated with this distribution?\nFor Binomial and Poisson random variables, Know the assumptions for each. State a simple example, verify the assumptions.\nFor Binomial and Poisson, given the formulas and parameters, write out how you would solve for simple probabilities. i.e. For \\(X \\sim Poi(3)\\), write out how you would solve for \\(P(X = 1)\\).\nWhat is expected value, in words? How about variance?\nGiven the formulas for expected value and variance for Binomial or Poisson, and given the relevant parameters for each distribution, be able to calculate expectation and variance. (Leave as expression).\nDensity functions (for continuous variables), two rules of density functions.\nZ-scores, how to calculate, why is it helpful to standardize?"
   },
   {
     "objectID": "labs/lab-2-data-viz.html",
@@ -1610,39 +1610,11 @@
     "text": "Hospital Visits: Poisson Example\nSuppose that in a hospital emergency department, the average number of asthma-related visits per hour is 3. Let \\(Y\\) be the number of asthma visits in one hour. Then \\(Y \\sim Poisson(\\lambda=3)\\)\n\nExercise 1\nWhat is the probability that in a given hour, exactly 5 asthma patients arrive? Use the dpois function to compute your answer and provide a 1-sentence conclusion.\n\n# type code here\n\n[type response here]"
   },
   {
-    "objectID": "ae/ae-01-template.html",
-    "href": "ae/ae-01-template.html",
-    "title": "Application Exercise: Binomial in a Biomedical Setting",
-    "section": "",
-    "text": "Suppose 5 people receive a new vaccine. From clinical trial data, the probability that any individual experiences a mild side effect (e.g., sore arm, mild fever) is 0.2.\nLet \\(X\\) be the number of people (out of 5) who experience a mild side effect.\nThen \\(X \\sim \\text{Binomial}(n=5, p=0.2)\\).\n\n\nWhat is the probability that exactly 2 out of 5 people experience a mild side effect? Use the dbinom function to compute your answer and provide a 1-sentence conclusion.\n\n# type code here\n\n[type response here]"
-  },
-  {
-    "objectID": "ae/ae-01-template.html#a-clinical-trial-binomial-example",
-    "href": "ae/ae-01-template.html#a-clinical-trial-binomial-example",
-    "title": "Application Exercise: Binomial in a Biomedical Setting",
-    "section": "",
-    "text": "Suppose 5 people receive a new vaccine. From clinical trial data, the probability that any individual experiences a mild side effect (e.g., sore arm, mild fever) is 0.2.\nLet \\(X\\) be the number of people (out of 5) who experience a mild side effect.\nThen \\(X \\sim \\text{Binomial}(n=5, p=0.2)\\).\n\n\nWhat is the probability that exactly 2 out of 5 people experience a mild side effect? Use the dbinom function to compute your answer and provide a 1-sentence conclusion.\n\n# type code here\n\n[type response here]"
-  },
-  {
-    "objectID": "ae/ae-01-template.html#exercise-2",
-    "href": "ae/ae-01-template.html#exercise-2",
-    "title": "Application Exercise: Binomial in a Biomedical Setting",
-    "section": "Exercise 2",
-    "text": "Exercise 2\nWhat is the probability that at least 1 out of 5 people experiences a mild side effect? (Hint: Use the complement rule: \\(P(X \\geq 1)=1−P(X=0)\\)). Use the dbinom function to compute your answer and provide a 1-sentence conclusion.\n\n# type code here\n\n[type response here]"
-  },
-  {
-    "objectID": "ae/ae-01-template.html#submission",
-    "href": "ae/ae-01-template.html#submission",
-    "title": "Application Exercise: Binomial in a Biomedical Setting",
+    "objectID": "ae/ae-02-poisson.html#submission",
+    "href": "ae/ae-02-poisson.html#submission",
+    "title": "Application Exercise 2: Poisson",
     "section": "Submission",
-    "text": "Submission\nRender to PDF and submit on Canvas &gt; Assignments."
-  },
-  {
-    "objectID": "about.html",
-    "href": "about.html",
-    "title": "About",
-    "section": "",
-    "text": "About this site"
+    "text": "Submission\nAs you’ve seen previously, we can Render the template into an .html file that can be opened by any web browser. To export it as a .pdf, open the file in your web browser and then print to or save as a .pdf document. Your TAs will show you how if you need help! (There is a way to directly knit to a .pdf file, but it’s quite a bit more involved.)\nYou will submit the PDF documents for Application Exercises directly to Canvas.\nTo submit your assignment:\n\nAccess the Application Exercise through Modules on the BIOS 600 Canvas site.\nUpload your PDF."
   },
   {
     "objectID": "ae/ae-01.html",
@@ -1678,6 +1650,55 @@
     "title": "Participation: Binomial in a Biomedical Setting",
     "section": "Submission",
     "text": "Submission\nAs you’ve seen previously, we can Render the template into an .html file that can be opened by any web browser. To export it as a .pdf, open the file in your web browser and then print to or save as a .pdf document. Your TAs will show you how if you need help! (There is a way to directly knit to a .pdf file, but it’s quite a bit more involved.)\nYou will submit the PDF documents for Application Exercises directly to Canvas.\nTo submit your assignment:\n\nAccess the Application Exercise through Modules on the BIOS 600 Canvas site.\nUpload your PDF."
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "About this site"
+  },
+  {
+    "objectID": "ae/ae-01-template.html",
+    "href": "ae/ae-01-template.html",
+    "title": "Application Exercise: Binomial in a Biomedical Setting",
+    "section": "",
+    "text": "Suppose 5 people receive a new vaccine. From clinical trial data, the probability that any individual experiences a mild side effect (e.g., sore arm, mild fever) is 0.2.\nLet \\(X\\) be the number of people (out of 5) who experience a mild side effect.\nThen \\(X \\sim \\text{Binomial}(n=5, p=0.2)\\).\n\n\nWhat is the probability that exactly 2 out of 5 people experience a mild side effect? Use the dbinom function to compute your answer and provide a 1-sentence conclusion.\n\n# type code here\n\n[type response here]"
+  },
+  {
+    "objectID": "ae/ae-01-template.html#a-clinical-trial-binomial-example",
+    "href": "ae/ae-01-template.html#a-clinical-trial-binomial-example",
+    "title": "Application Exercise: Binomial in a Biomedical Setting",
+    "section": "",
+    "text": "Suppose 5 people receive a new vaccine. From clinical trial data, the probability that any individual experiences a mild side effect (e.g., sore arm, mild fever) is 0.2.\nLet \\(X\\) be the number of people (out of 5) who experience a mild side effect.\nThen \\(X \\sim \\text{Binomial}(n=5, p=0.2)\\).\n\n\nWhat is the probability that exactly 2 out of 5 people experience a mild side effect? Use the dbinom function to compute your answer and provide a 1-sentence conclusion.\n\n# type code here\n\n[type response here]"
+  },
+  {
+    "objectID": "ae/ae-01-template.html#exercise-2",
+    "href": "ae/ae-01-template.html#exercise-2",
+    "title": "Application Exercise: Binomial in a Biomedical Setting",
+    "section": "Exercise 2",
+    "text": "Exercise 2\nWhat is the probability that at least 1 out of 5 people experiences a mild side effect? (Hint: Use the complement rule: \\(P(X \\geq 1)=1−P(X=0)\\)). Use the dbinom function to compute your answer and provide a 1-sentence conclusion.\n\n# type code here\n\n[type response here]"
+  },
+  {
+    "objectID": "ae/ae-01-template.html#submission",
+    "href": "ae/ae-01-template.html#submission",
+    "title": "Application Exercise: Binomial in a Biomedical Setting",
+    "section": "Submission",
+    "text": "Submission\nRender to PDF and submit on Canvas &gt; Assignments."
+  },
+  {
+    "objectID": "ae/ae-02-poisson-template.html",
+    "href": "ae/ae-02-poisson-template.html",
+    "title": "Application Exercise 2: Poisson",
+    "section": "",
+    "text": "Suppose that in a hospital emergency department, the average number of asthma-related visits per hour is 3. Let \\(Y\\) be the number of asthma visits in one hour. Then \\(Y \\sim Poisson(\\lambda=3)\\)\n\n\nWhat is the probability that in a given hour, exactly 5 asthma patients arrive? Use the dpois function to compute your answer and provide a 1-sentence conclusion.\n\n# type code here\n\n[type response here]"
+  },
+  {
+    "objectID": "ae/ae-02-poisson-template.html#hospital-visits-poisson-example",
+    "href": "ae/ae-02-poisson-template.html#hospital-visits-poisson-example",
+    "title": "Application Exercise 2: Poisson",
+    "section": "",
+    "text": "Suppose that in a hospital emergency department, the average number of asthma-related visits per hour is 3. Let \\(Y\\) be the number of asthma visits in one hour. Then \\(Y \\sim Poisson(\\lambda=3)\\)\n\n\nWhat is the probability that in a given hour, exactly 5 asthma patients arrive? Use the dpois function to compute your answer and provide a 1-sentence conclusion.\n\n# type code here\n\n[type response here]"
   },
   {
     "objectID": "ae/ae-02-solution.html",

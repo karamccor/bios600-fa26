@@ -6,8 +6,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="author" content="Your name here">
 
-<title>Topics List – BIOS 600 Fall 2026</title>
+<title>Application Exercise 2: Poisson – BIOS 600 Fall 2026</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -19,6 +20,41 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -143,9 +179,10 @@ window.Quarto = {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#material-covered" id="toc-material-covered" class="nav-link active" data-scroll-target="#material-covered">Material covered</a></li>
-  <li><a href="#coding" id="toc-coding" class="nav-link" data-scroll-target="#coding">Coding</a></li>
-  <li><a href="#conceptual-applied" id="toc-conceptual-applied" class="nav-link" data-scroll-target="#conceptual-applied">Conceptual &amp; Applied</a></li>
+  <li><a href="#hospital-visits-poisson-example" id="toc-hospital-visits-poisson-example" class="nav-link active" data-scroll-target="#hospital-visits-poisson-example">Hospital Visits: Poisson Example</a>
+  <ul class="collapse">
+  <li><a href="#exercise-1" id="toc-exercise-1" class="nav-link" data-scroll-target="#exercise-1">Exercise 1</a></li>
+  </ul></li>
   </ul>
 </nav>
     </div>
@@ -154,14 +191,26 @@ window.Quarto = {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Topics List</h1>
+<h1 class="title">Application Exercise 2: Poisson</h1>
 </div>
 
 
 
 <div class="quarto-title-meta">
 
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Your name here </p>
+          </div>
+  </div>
     
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">Invalid Date</p>
+    </div>
+  </div>
   
     
   </div>
@@ -171,81 +220,19 @@ window.Quarto = {
 </header>
 
 
-<section id="material-covered" class="level2">
-<h2 class="anchored" data-anchor-id="material-covered">Material covered</h2>
-<ul>
-<li>Lectures 1-7, HW 1-3, Labs 1-3, AE 1-2</li>
-</ul>
-</section>
-<section id="coding" class="level2">
-<h2 class="anchored" data-anchor-id="coding">Coding</h2>
-<ul>
-<li><p>Console vs.&nbsp;Quarto document. When might you code in Quarto document and not in Console? How can using Quarto help with reproducibility?</p></li>
-<li><p><code>View()</code> and <code>glimpse()</code> and <code>names()</code></p></li>
-<li><p><code>getwd()</code>. What does it tell you?</p></li>
-<li><p>YAML: what is it, how is it helpful for documentation?</p></li>
-<li><p>How to create headers in Quarto</p></li>
-<li><p>How to comment out code within a code chunk</p></li>
-<li><p><code>library()</code> vs.&nbsp;<code>install.packages()</code></p></li>
-<li><p>What is <code>ggplot()</code>?</p></li>
-<li><p>What is the <code>tidyverse</code> ?</p></li>
-<li><p><code>geom_point()</code>, <code>geom_boxplot()</code>, <code>geom_bar()</code>, <code>geom_line()</code>, <code>labs()</code>, size, color, alpha, fill. What do all these do?</p></li>
-<li><p>Which type of ggplot would be appropriate based on different variable types (e.g.&nbsp;scatterplot, boxplot, line plot)</p></li>
-<li><p>Detecting common sources of errors: missing parentheses, missing quotation mark, missing comma</p></li>
-<li><p><code>#| warning: false</code> and <code>#| message: false</code>. What do they do?</p></li>
-<li><p><code>filter()</code>, <code>slice()</code>, <code>distinct()</code>, <code>select()</code>, <code>arrange()</code>, <code>summarize()</code>, <code>group_by()</code>, <code>mutate()</code>, <code>sample_n()</code>, <code>sample_frac()</code>, <code>case_when()</code>. What are each of these used for?</p></li>
-<li><p>pipe, <code>|&gt;</code>, What is it used for?</p></li>
-<li><p>Logical operators in R</p></li>
-<li><p><code>%in%</code></p></li>
-<li><p><code>na.rm = T</code></p></li>
-<li><p>Given a particular <code>ggplot</code> code, describe the type of plot that would be created. (Review examples in Lab 3).</p></li>
-<li><p><code>dbinom()</code> and <code>dpois()</code>, how to use to find probabilities.</p></li>
-</ul>
-</section>
-<section id="conceptual-applied" class="level2">
-<h2 class="anchored" data-anchor-id="conceptual-applied">Conceptual &amp; Applied</h2>
-<ul>
-<li><p>Population vs.&nbsp;sample vs.&nbsp;one observation within a research question</p></li>
-<li><p>What does “representative” sample mean? What does it mean for a study to be “generalizable”?</p></li>
-<li><p>Probability sampling vs.&nbsp;non-probability sampling &amp; knowing a few examples of each. Which is more generalizable?</p></li>
-<li><p>Experimental vs.&nbsp;observational studies.</p></li>
-<li><p>What is bias? Examples: selection, reporting, non-response, attrition, falsified data.</p></li>
-<li><p>Why is transparency and data/code sharing important ethically in statistical studies?</p></li>
-<li><p>Define Reproducibility vs.&nbsp;replicability</p></li>
-<li><p>Exploratory data analysis. What is it and why is it helpful?</p></li>
-<li><p>Categorical: Nominal vs.&nbsp;Ordinal data &amp; know a few examples of each</p></li>
-<li><p>Numerical: Count/rank vs.&nbsp;continuous data &amp; know a few examples of each</p></li>
-<li><p>Identifying data types based on a Table 1 (i.e.&nbsp;demographics or baseline characteristics table) from a paper</p></li>
-<li><p>Parameter vs.&nbsp;statistic</p></li>
-<li><p>Mean, median, mode, sample minimum and maximum, range, IQR, five-number summary, sample standard deviation</p></li>
-<li><p>Symmetric vs.&nbsp;skewed distributions, right vs.left-skew</p></li>
-<li><p>Chebyshev’s inequality, why is it useful?</p></li>
-<li><p>Frequentist vs.&nbsp;Bayesian schools of thought. When might one be helpful over the other?</p></li>
-<li><p>Probability space &amp; its components.</p></li>
-<li><p>Intersection, union, complement, difference, disjoint, complement rule, inclusion-exclusion. Drawing out venn-diagrams for each.</p></li>
-<li><p>Determining probabilities and conditional probabilities of events given a table (review Coffee Drinking example in Lecture 3)</p></li>
-<li><p>Verifying Komolgorov axioms in a simple example</p></li>
-<li><p>Conditional probability (formula provided)</p></li>
-<li><p>Definition of independence (in terms of probabilities): <span class="math inline">\(P(A \cap B) = P(A) \times P(B)\)</span>, or equivalently, <span class="math inline">\(P(A | B) = P(A)\)</span> or <span class="math inline">\(P(B | A) = P(B)\)</span></p></li>
-<li><p>Given two simple events <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span>, calculating <span class="math inline">\(P(A)\)</span>, <span class="math inline">\(P(B)\)</span>, <span class="math inline">\(P(A \cap B)\)</span>, <span class="math inline">\(P(A \cup B)\)</span>, <span class="math inline">\(P(A | B)\)</span>, <span class="math inline">\(P(B | A)\)</span> (Review example in Lecture 4.)</p></li>
-<li><p>Law of total probability, using this to find probabilities of events given a scenario (Review Coffee example and sleep example in Lecture 4)</p></li>
-<li><p>Order matters in conditional probability (Coffee example in Lecture 4)</p></li>
-<li><p>Know how to define events and set up Bayes’ rule to solve for conditional probability given a scenario (Review Coffee Example Lecture 4)</p></li>
-<li><p>Prevalence, sensitivity, specificity, positive predictive value, negative predictive value. <strong>Know the definitions</strong> in words and in symbols.</p></li>
-<li><p>Tradeoffs of sensitivity and specificity in a medical diagnostic test</p></li>
-<li><p>How to read an ROC curve, what’s a “good” ROC curve, what is AUC</p></li>
-<li><p>Given a condition/disease, a diagnostic test, and a 2x2 contingency table, define each event and <strong>write out how you would solve</strong> for the Sensitivity, Specificity, PPV, and/or NPV using conditional probability. (Leave answer as expression).</p></li>
-<li><p>Discrete distributions. Know the three rules, verify the three rules in an example</p></li>
-<li><p>Bernoulli random variable. State a simple example of a Bernoulli random variable. What’s the one parameter associated with this distribution?</p></li>
-<li><p>For Binomial and Poisson random variables, Know the assumptions for each. State a simple example, verify the assumptions.</p></li>
-<li><p>For Binomial and Poisson, given the formulas and parameters, write out how you would solve for simple probabilities. i.e.&nbsp;For <span class="math inline">\(X \sim Poi(3)\)</span>, write out how you would solve for <span class="math inline">\(P(X = 1)\)</span>.</p></li>
-<li><p>What is expected value, in words? How about variance?</p></li>
-<li><p>Given the formulas for expected value and variance for Binomial or Poisson, and given the relevant parameters for each distribution, be able to calculate expectation and variance. (Leave as expression).</p></li>
-<li><p>Density functions (for continuous variables), two rules of density functions.</p></li>
-<li><p>Z-scores, how to calculate, why is it helpful to standardize?</p></li>
-</ul>
+<section id="hospital-visits-poisson-example" class="level2">
+<h2 class="anchored" data-anchor-id="hospital-visits-poisson-example">Hospital Visits: Poisson Example</h2>
+<p>Suppose that in a hospital emergency department, the average number of asthma-related visits per hour is 3. Let <span class="math inline">\(Y\)</span> be the number of asthma visits in one hour. Then <span class="math inline">\(Y \sim Poisson(\lambda=3)\)</span></p>
+<section id="exercise-1" class="level3">
+<h3 class="anchored" data-anchor-id="exercise-1">Exercise 1</h3>
+<p>What is the probability that in a given hour, exactly 5 asthma patients arrive? Use the <code>dpois</code> function to compute your answer and provide a 1-sentence conclusion.</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># type code here</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<p>[type response here]</p>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->
