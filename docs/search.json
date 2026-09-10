@@ -1673,13 +1673,6 @@
     "text": "Exercise 2\nWhat is the probability that at least 1 out of 5 people experiences a mild side effect? (Hint: Use the complement rule: \\(P(X \\geq 1)=1−P(X=0)\\)). Use the dbinom function to compute your answer and provide a 1-sentence conclusion.\n\n1-dbinom(0,size=5,prob=0.2)\n\n[1] 0.67232\n\n\nSo, there is about a 67% chance that at least 1 person will have a mild side effect."
   },
   {
-    "objectID": "ae/ae-01-solution.html#hospital-visits-poisson-example",
-    "href": "ae/ae-01-solution.html#hospital-visits-poisson-example",
-    "title": "Application Exercise: Practice with Binomial and Poisson",
-    "section": "Hospital Visits: Poisson Example",
-    "text": "Hospital Visits: Poisson Example\nSuppose that in a hospital emergency department, the average number of asthma-related visits per hour is 3. Let \\(Y\\) be the number of asthma visits in one hour. Then \\(Y \\sim Poisson(\\lambda=3)\\)\n\nExercise 3\nWhat is the probability that in a given hour, exactly 5 asthma patients arrive? Use the dpois function to compute your answer and provide a 1-sentence conclusion.\n\ndpois(5, lambda = 3)\n\n[1] 0.1008188\n\n\nSo, there is about a 10% chance of exactly 5 asthma patients in one hour."
-  },
-  {
     "objectID": "about.html",
     "href": "about.html",
     "title": "About",

@@ -183,10 +183,6 @@ window.Quarto = {
   <li><a href="#exercise-1" id="toc-exercise-1" class="nav-link" data-scroll-target="#exercise-1">Exercise 1</a></li>
   </ul></li>
   <li><a href="#exercise-2" id="toc-exercise-2" class="nav-link" data-scroll-target="#exercise-2">Exercise 2</a></li>
-  <li><a href="#hospital-visits-poisson-example" id="toc-hospital-visits-poisson-example" class="nav-link" data-scroll-target="#hospital-visits-poisson-example">Hospital Visits: Poisson Example</a>
-  <ul class="collapse">
-  <li><a href="#exercise-3" id="toc-exercise-3" class="nav-link" data-scroll-target="#exercise-3">Exercise 3</a></li>
-  </ul></li>
   </ul>
 </nav>
     </div>
@@ -240,23 +236,8 @@ Then <span class="math inline">\(X \sim \text{Binomial}(n=5, p=0.2)\)</span>.</p
 </div>
 </div>
 <p>So, there is about a 67% chance that at least 1 person will have a mild side effect.</p>
-</section>
-<section id="hospital-visits-poisson-example" class="level2">
-<h2 class="anchored" data-anchor-id="hospital-visits-poisson-example">Hospital Visits: Poisson Example</h2>
-<p>Suppose that in a hospital emergency department, the average number of asthma-related visits per hour is 3. Let <span class="math inline">\(Y\)</span> be the number of asthma visits in one hour. Then <span class="math inline">\(Y \sim Poisson(\lambda=3)\)</span></p>
-<section id="exercise-3" class="level3">
-<h3 class="anchored" data-anchor-id="exercise-3">Exercise 3</h3>
-<p>What is the probability that in a given hour, exactly 5 asthma patients arrive? Use the <code>dpois</code> function to compute your answer and provide a 1-sentence conclusion.</p>
-<div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">dpois</span>(<span class="dv">5</span>, <span class="at">lambda =</span> <span class="dv">3</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] 0.1008188</code></pre>
-</div>
-</div>
-<p>So, there is about a 10% chance of exactly 5 asthma patients in one hour.</p>
 
 
-</section>
 </section>
 
 </main> <!-- /main -->
