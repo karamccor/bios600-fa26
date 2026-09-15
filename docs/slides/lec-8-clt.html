@@ -120,6 +120,10 @@
       margin-right: 0; 
     }
   </style>
+  <link href="../site_libs/countdown-0.4.0/countdown.css" rel="stylesheet">
+
+  <script src="../site_libs/countdown-0.4.0/countdown.js"></script>
+
 </head>
 <body class="quarto-light">
   <div class="reveal">
@@ -243,7 +247,7 @@
 </div>
 <div class="callout-content">
 <p>For today’s participation, go to Canvas and find instructions and template for AE 03.</p>
-<p>AE 03 is due on Canvas on <strong>Friday 9/19 at 11:59pm</strong>.</p>
+<p>AE 03 is due on Canvas on <strong>Wednesday 9/16 at 11:59pm</strong>.</p>
 </div>
 </div>
 </div>
@@ -262,12 +266,17 @@ the sample mean is approximately normal when sample size is large enough.</li>
 </li>
 <li>Justifies the use of t-tests, z-tests, ANOVAs, regression, etc.</li>
 </ul></li>
+</ul>
+</section>
+<section id="why-the-clt-matters-1" class="slide level2">
+<h2>Why the CLT matters</h2>
+<ul>
 <li><strong>Works Across Many Situations</strong>
 <ul>
 <li>Whether data are binary (yes/no), counts, or skewed —<br>
 sample averages will still tend toward a bell curve.</li>
 </ul></li>
-<li><strong>Practical Takeaway</strong>
+<li><strong>Takeaway</strong>
 <ul>
 <li>We can make powerful statistical conclusions <strong>without needing to know the exact population distribution</strong>.</li>
 </ul></li>
@@ -302,9 +311,26 @@ sample averages will still tend toward a bell curve.</li>
 <li><p>The central limit theorem tells us that the distribution of means of samples of size 30 from this population is also normal, with mean <span class="math inline">\(\mu = 100\)</span> and <span class="math inline">\(SE = \sigma/ \sqrt{n} = 15 \sqrt{30} \approx 2.7\)</span>.</p></li>
 <li><p><span class="math inline">\(Z = \frac{\bar{X} - \mu}{SE}\)</span> is a standard normal random variable, and here <span class="math inline">\(Z \approx 7.3\)</span>.</p></li>
 <li><p>The probability of a z-score greater than this is extremely small.</p></li>
+</ul>
+</section>
+<section id="looking-ahead" class="slide level2">
+<h2>Looking ahead</h2>
+<ul>
 <li><p>What does this mean? (p-values coming soon…)</p></li>
 <li><p>What are the upper and lower limits that enclose 95% of the means for samples of size <span class="math inline">\(n\)</span> drawn from the population? (Confidence intervals coming soon…)</p></li>
 </ul>
+</section>
+<section id="your-turn" class="slide level2">
+<h2>Your Turn</h2>
+<p>Find a partner. Take a few minutes to explain the Central Limit Theorem to someone who has never taken a statistics course before. Why is it important?</p>
+<div class="cell">
+<div class="cell-output-display">
+<div class="countdown" id="timer_34721164" data-update-every="1" tabindex="0" style="right:0;bottom:0;">
+<div class="countdown-controls"><button class="countdown-bump-down">−</button><button class="countdown-bump-up">+</button></div>
+<code class="countdown-time"><span class="countdown-digits minutes">03</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
+</div>
+</div>
+</div>
 </section>
 <section id="big-picture" class="slide level2">
 <h2>Big picture</h2>
@@ -544,6 +570,82 @@ sample averages will still tend toward a bell curve.</li>
         ]
       });
     </script>
+    
+
+    <script>
+
+      // htmlwidgets need to know to resize themselves when slides are shown/hidden.
+
+      // Fire the "slideenter" event (handled by htmlwidgets.js) when the current
+
+      // slide changes (different for each slide format).
+
+      (function () {
+
+        // dispatch for htmlwidgets
+
+        function fireSlideEnter() {
+
+          const event = window.document.createEvent("Event");
+
+          event.initEvent("slideenter", true, true);
+
+          window.document.dispatchEvent(event);
+
+        }
+
+    
+
+        function fireSlideChanged(previousSlide, currentSlide) {
+
+          fireSlideEnter();
+
+    
+
+          // dispatch for shiny
+
+          if (window.jQuery) {
+
+            if (previousSlide) {
+
+              window.jQuery(previousSlide).trigger("hidden");
+
+            }
+
+            if (currentSlide) {
+
+              window.jQuery(currentSlide).trigger("shown");
+
+            }
+
+          }
+
+        }
+
+    
+
+        // hookup for slidy
+
+        if (window.w3c_slidy) {
+
+          window.w3c_slidy.add_observer(function (slide_num) {
+
+            // slide_num starts at position 1
+
+            fireSlideChanged(null, w3c_slidy.slides[slide_num - 1]);
+
+          });
+
+        }
+
+    
+
+      })();
+
+    </script>
+
+    
+
     <script id="quarto-html-after-body" type="application/javascript">
       window.document.addEventListener("DOMContentLoaded", function (event) {
         const tabsets =  window.document.querySelectorAll(".panel-tabset-tabby")

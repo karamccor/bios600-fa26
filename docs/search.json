@@ -81,14 +81,21 @@
     "href": "slides/lec-8-clt.html#application-exercise",
     "title": "Lecture 8: The central limit theorem",
     "section": "Application Exercise",
-    "text": "Application Exercise\n\n\n\n\n\n\nApplication Exercise\n\n\nFor today’s participation, go to Canvas and find instructions and template for AE 03.\nAE 03 is due on Canvas on Friday 9/19 at 11:59pm."
+    "text": "Application Exercise\n\n\n\n\n\n\nApplication Exercise\n\n\nFor today’s participation, go to Canvas and find instructions and template for AE 03.\nAE 03 is due on Canvas on Wednesday 9/16 at 11:59pm."
   },
   {
     "objectID": "slides/lec-8-clt.html#why-the-clt-matters",
     "href": "slides/lec-8-clt.html#why-the-clt-matters",
     "title": "Lecture 8: The central limit theorem",
     "section": "Why the CLT matters",
-    "text": "Why the CLT matters\n\nGives us Normality (for free!)\n\nEven if the population distribution is not normal,\nthe sample mean is approximately normal when sample size is large enough.\n\nFoundation for Inference\n\nLets us use normal-based methods for confidence intervals and hypothesis tests.\n\nJustifies the use of t-tests, z-tests, ANOVAs, regression, etc.\n\nWorks Across Many Situations\n\nWhether data are binary (yes/no), counts, or skewed —\nsample averages will still tend toward a bell curve.\n\nPractical Takeaway\n\nWe can make powerful statistical conclusions without needing to know the exact population distribution."
+    "text": "Why the CLT matters\n\nGives us Normality (for free!)\n\nEven if the population distribution is not normal,\nthe sample mean is approximately normal when sample size is large enough.\n\nFoundation for Inference\n\nLets us use normal-based methods for confidence intervals and hypothesis tests.\n\nJustifies the use of t-tests, z-tests, ANOVAs, regression, etc."
+  },
+  {
+    "objectID": "slides/lec-8-clt.html#why-the-clt-matters-1",
+    "href": "slides/lec-8-clt.html#why-the-clt-matters-1",
+    "title": "Lecture 8: The central limit theorem",
+    "section": "Why the CLT matters",
+    "text": "Why the CLT matters\n\nWorks Across Many Situations\n\nWhether data are binary (yes/no), counts, or skewed —\nsample averages will still tend toward a bell curve.\n\nTakeaway\n\nWe can make powerful statistical conclusions without needing to know the exact population distribution."
   },
   {
     "objectID": "slides/lec-8-clt.html#example-iq-tests",
@@ -116,7 +123,21 @@
     "href": "slides/lec-8-clt.html#example-1",
     "title": "Lecture 8: The central limit theorem",
     "section": "Example",
-    "text": "Example\n\nThe central limit theorem tells us that the distribution of means of samples of size 30 from this population is also normal, with mean \\(\\mu = 100\\) and \\(SE = \\sigma/ \\sqrt{n} = 15 \\sqrt{30} \\approx 2.7\\).\n\\(Z = \\frac{\\bar{X} - \\mu}{SE}\\) is a standard normal random variable, and here \\(Z \\approx 7.3\\).\nThe probability of a z-score greater than this is extremely small.\nWhat does this mean? (p-values coming soon…)\nWhat are the upper and lower limits that enclose 95% of the means for samples of size \\(n\\) drawn from the population? (Confidence intervals coming soon…)"
+    "text": "Example\n\nThe central limit theorem tells us that the distribution of means of samples of size 30 from this population is also normal, with mean \\(\\mu = 100\\) and \\(SE = \\sigma/ \\sqrt{n} = 15 \\sqrt{30} \\approx 2.7\\).\n\\(Z = \\frac{\\bar{X} - \\mu}{SE}\\) is a standard normal random variable, and here \\(Z \\approx 7.3\\).\nThe probability of a z-score greater than this is extremely small."
+  },
+  {
+    "objectID": "slides/lec-8-clt.html#looking-ahead",
+    "href": "slides/lec-8-clt.html#looking-ahead",
+    "title": "Lecture 8: The central limit theorem",
+    "section": "Looking ahead",
+    "text": "Looking ahead\n\nWhat does this mean? (p-values coming soon…)\nWhat are the upper and lower limits that enclose 95% of the means for samples of size \\(n\\) drawn from the population? (Confidence intervals coming soon…)"
+  },
+  {
+    "objectID": "slides/lec-8-clt.html#your-turn",
+    "href": "slides/lec-8-clt.html#your-turn",
+    "title": "Lecture 8: The central limit theorem",
+    "section": "Your Turn",
+    "text": "Your Turn\nFind a partner. Take a few minutes to explain the Central Limit Theorem to someone who has never taken a statistics course before. Why is it important?\n\n\n\n−+\n03:00"
   },
   {
     "objectID": "slides/lec-8-clt.html#big-picture",
