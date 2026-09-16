@@ -1,0 +1,67 @@
+---
+title: "Participation: Binomial in a Biomedical Setting"
+author: "Your name here"
+date: "Today's date here"
+format: html
+---
+
+::: callout-important
+
+This Application Exercise is due on Wednesday, September 9 at 11:59pm. To be considered on time, the following must be done by the due date:
+
+- Final `.pdf` file submitted on Canvas
+
+- While late work is accepted for HW and Labs, no late work is accepted for AEs. 
+
+:::
+
+
+## Getting started
+
+Download the template for today's Application Exercise (AE) from Canvas. Open the file, and type your name and today's date in the YAML. Save your file as `ae-01.qmd` in your project folder. 
+
+Render your document to ensure the formatting all looks good. 
+
+
+
+## Clinical Trial Example
+
+Suppose 5 people receive a new vaccine. From clinical trial data, the probability that any individual experiences a mild side effect (e.g., sore arm, mild fever) is 0.2.  
+Let $X$ be the number of people (out of 5) who experience a mild side effect.  
+Then $X \sim \text{Binomial}(n=5, p=0.2)$.
+
+### Exercise 1
+
+What is the probability that exactly 2 out of 5 people experience a mild side effect? Use the `dbinom` function.
+
+```{r}
+# type code here
+```
+
+
+## Exercise 2
+
+What is the probability that at least 1 out of 5 people experiences a mild side effect?
+
+Hint: Use the complement rule: $P(X \geq 1)=1−P(X=0)$ 
+
+Use the `dbinom` function to compute your answer and provide a 1-sentence conclusion.
+
+```{r}
+# type code here
+```
+
+
+## Submission
+
+As you’ve seen previously, we can **Render** the template into an .html file that can be opened by any web browser. To export it as a .pdf, open the file in your web browser and then print to or save as a .pdf document. Your TAs will show you how if you need help! (There is a way to directly knit to a .pdf file, but it’s quite a bit more involved.)
+
+You will submit the PDF documents for Application Exercises directly to Canvas.
+
+To submit your assignment:
+
+- Access the Application Exercise through Modules on the BIOS 600 Canvas site.
+
+- Upload your PDF.
+
+

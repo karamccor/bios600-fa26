@@ -5,5 +5,17 @@
 
 /.quarto/
 **/*.quarto_ipynb
-
+/_site/
 _lab-1-solution.qmd
+_lab-2-solution.qmd
+_lab-03-solution.qmd
+_lab-03-template.qmd
+_lab-03-solution.pdf
+_lab-03-solution.docx
+_lab-03-solution.qmd
+_hw-01-solution.qmd
+_hw-01-solution.docx
+_hw-02-solution.qmd
+_lab-04-solution.pdf
+_ae-01-solution.qmd
+/exam/

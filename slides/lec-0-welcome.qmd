@@ -1,0 +1,296 @@
+---
+title: "Lec 0: Welcome! + Course overview"
+subtitle: "BIOS 600 - Fall 2026"
+institute: "UNC - Chapel Hill"
+logo: "images/logo600-beamer.png"
+format: revealjs
+execute:
+  freeze: auto
+---
+
+# Welcome!
+
+<!--# Maybe combine with lecture 1? This only takes 35 mins or so-->
+
+## Download or print notes to PDF {.smaller}
+
+ 
+
+If you’d like to export this presentation to a PDF, do the following:
+
+ 
+
+1.  Toggle into Print View using the E key.
+
+2.  Open the in-browser print dialog (CTRL/CMD+P)
+
+3.  Change the Destination to Save as PDF.
+
+4.  Change the Layout to Landscape.
+
+5.  Change the Margins to None.
+
+6.  Enable the Background graphics option.
+
+7.  Click Save.
+
+ 
+
+This feature has been confirmed to work in Google Chrome and Firefox.
+
+
+## Welcome! Meet Prof. McCormack
+
+
+-   Teaching Assistant Professor, Department of Biostatistics, Joined August 2023
+
+-   PhD in Biostatistics from Duke University, 2023
+
+-   Originally from Austin, TX
+
+-   Interests: gardening, yoga, cats, and all kinds of art!
+
+## My Office Hours
+
+  - Wednesdays 10:30am-11am via zoom (link in Canvas modules)
+
+  - Thursdays 9:30-10:30 AM in MCG 3106F
+  
+  - And by appointment.
+  
+
+
+## Meet the TAs
+
+-   Teya Davis, Yiran Song, Jeffrey Asubonteng
+
+-   PhD students, Biostatistics department
+
+-   Will lead lab sessions, Tuesdays 3:30-4:50, MHRC 0001 (this room!)
+
+-   Additional TA office hours TBD, will be announced via Canvas
+
+## Check out Ed Discussion
+
+-   This semester, you can ask questions about the class in our discussion forum, [Ed Discussion](https://edstem.org/us/join/UAVSp2)
+- The link to join is also posted on our home page in Canvas.
+- Take a moment to introduce yourself in the forum! Name, Year + Program, and a fun fact about yourself. 
+
+## Meet each other
+
+In groups of 4, share
+
+-   Where you're from
+-   Your year/program
+-   What you hope to get out of this course
+-   Find 2 things that everyone in your group has in common, that isn't necessarily common to the rest of the class.
+
+
+## Course overview: Canvas
+
+-   All course materials by day: syllabus, discussion forum link, class slides, lab materials, assignments
+-   Let's take a tour!
+
+## Course toolkit
+
+-   RStudio
+    -   Note: Later today in the first lab, TAs will help you download RStudio.
+-   Assignment submission and feedback: Gradescope
+    - Join with course code: G64322
+-   Discussion forum: [Ed Discussion](https://edstem.org/us/join/Xjcr2d)
+
+## What have I gotten myself into?
+
+-   BIOS 600 is an introduction to "principles of statistical inference" in biostatistics that:
+    -   provides a tour of basic statistical methods commonly encountered in public health and biomedical research,
+    -   emphasizes understanding of methods, using them to arrive at data-driven decisions, and effective communication of such results.
+    -   Utilizes modern software such as RStudio to reproducibly examine and manipulate data to make sound scientific conclusions
+
+## My goals in the course
+
+- Introduce you to basic biostatistics toolkit so that you can apply it to your own projects in the future, if you choose!
+
+- Build community!
+
+
+## Activities: Participate, Practice, Perform {.smaller}
+
+-   **Participate:** Attend and actively participate in lectures and labs, office hours
+-   **Practice:** Practice applying statistical concepts and computing with lab exercises (individual)
+    -   Review course topics with occasional participation exercises, typically a few questions administered via Canvas. 
+-   **Perform:** Put together what you've learned to analyze real-world data
+    -   Homework assignments (individual)
+    -   Three in-class exams.
+    -   A final project
+
+## Cadence
+
+-   **Lecture:** Tuesday/Thursday 8am-9:15am. Mostly lecture, sometimes a participation activity (could be a quick survey, or an activity to apply your knowledge). Lectures will not be recorded.
+-   **Labs:** Tutorial video and assignment will (typically) be posted Monday around noon. Start and make large progress on Tuesday in lab section, finish up by Friday 11:59pm of that week
+-   **HWs:** Posted approx every 1-2 weeks, typically will have approximately 1 week to complete.
+-   **Exams:** 3 in-class exams, more info as semester progresses.
+-   **Project:** Later in the semester. Most of work done outside of class. 
+
+
+## What to expect in lab
+
+-   Lab session will be Tuesdays from 3:30-4:50, MHRC 0001, led by TA
+
+- Instructions and tutorial video will be posted on Canvas on Monday by noon.
+
+- I know some of you have a conflict w/ lab time. That's okay - attendance is not required. Watch the video and work on the lab, attend other scheduled office hours if you need help. Still turn in the assignment **by Friday at 11:59pm** of that week.
+
+
+## Tips
+
+-   You do not have to finish the lab during the lab session, they will always be due the following **Friday at 11:59 pm**.
+
+-   One work strategy is to get through portions that you think will be most challenging (which initially might be the coding component) during lab when a TA can help you on the spot and leave the narrative writing until later.
+
+-   Use the time wisely to really learn the material and produce a quality report.
+
+
+
+## Grading
+
+| Category | Percentage |
+|----------|------------|
+| Homework | 25%        |
+| Labs     | 20%        |
+| Exams    | 40%        |
+| Project  | 10%        |
+| Participation   | 5%         |
+
+See the course syllabus (available on Canvas) for how the final letter grade will be determined.
+
+## Textbooks
+
+
+Recommended: (free online)
+
+- [OpenIntro Statistics](https://www.openintro.org/book/os/), Diez, Barr, Çetinkaya-Rundel, CreateSpace, 4th Ed. (2019)
+   
+- [R for Data Science](https://r4ds.had.co.nz/), Wickham and Grolemund, O’Reilly Media, 1st Ed. (2017)
+
+Optional:
+
+- Principles of Biostatistics, Pagano and Gavreau, CRC Press, 2nd Ed. (2018)
+    
+## Support
+
+-   Attend office hours
+-   Ask and answer questions on the discussion forum, Ed Discussion
+-   Reserve email for questions on personal matters and/or grades
+-   Additional support resources in the syllabus
+
+## Announcements
+
+-   Posted on Ed Discussion/Canvas (Announcements tool) and sent via email, be sure to check both regularly
+-   I'll assume that you've read an announcement by the next "business" day
+
+## Diversity + inclusion {.smaller}
+
+It is my intent that students from all diverse backgrounds and perspectives be well-served by this course, that students' learning needs be addressed both in and out of class, and that the diversity that the students bring to this class be viewed as a resource, strength and benefit.
+
+
+-   If you have a name that differs from those that appear in your official UNC records, please let me know!
+-   Please let me know your preferred pronouns. You'll also be able to note this in the Getting to know you survey.
+-   If you feel like your performance in the class is being impacted by your experiences outside of class, please don't hesitate to come and talk with me. I want to be a resource for you.
+-   If you prefer to speak with someone outside of the course, your advisers and deans are excellent resources.
+
+
+## Diversity + Inclusion
+
+I (like many people) am still in the process of learning about diverse perspectives and identities. If something was said in class (by anyone) that made you feel uncomfortable, please talk to me about it.
+
+
+## Course policies: Late work
+
+-   HW & Labs: Deadlines are there to help you stay on track. However, I know that life happens.  
+    - May be turned in up to 24 hours late for 5% penalty.
+    - May be turned in 24-48 hours late for 10% penalty. 
+    - **No HW/Labs will be accepted after 48 hours past due date**, except in extenuating circumstances.
+
+- Lowest HW and Lab will be dropped.
+
+-   No late work will be accepted for the project.
+
+## Collaboration policy
+
+-   Only work that is **clearly assigned as team work** should be completed collaboratively.
+
+-   Homeworks must be completed **individually**. You may **not** directly share answers / code with others, however you are welcome to discuss the problems in general and ask for advice.
+
+## AI policy
+
+- Use of artificial intelligence (AI): You should treat AI tools, such as ChatGPT, the same as other online resources. 
+
+- There are two guiding principles that govern how you can use AI in this course:
+
+  (1) Cognitive dimension: Working with AI should **not reduce your ability to think clearly**. We will practice using AI to facilitate—rather than hinder—learning. 
+  
+  (2) Ethical dimension: Students using AI should be **transparent** about their use and make sure it aligns with academic integrity.
+  
+## AI for code
+
+- ✅AI tools for code: You may make use of the technology for coding examples on assignments; if you do so, you must explicitly cite where you obtained the code, and share the AI prompt(s) you used. 
+
+
+- ❌AI tools for narrative: Unless instructed otherwise, AI is not permitted for writing narrative on assignments. In general, you may use AI as a resource as you complete assignments but not to answer the exercises for you. 
+
+## Bottom line
+
+**You are ultimately responsible** for the work you turn in; it should reflect your understanding of the course content.
+
+## Sharing / reusing code policy
+
+-   Unless explicitly stated otherwise, this course's policy is that you may make use of any online resources (e.g. RStudio Community, StackOverflow, ChatGPT, etc.) but you must **explicitly cite** where you obtained any code you directly use or use as inspiration in your solution(s).
+
+- **I know that you will have access to the internet and AI in the real world**. However, you are required to understand (& be able to explain) every line of code you're turning in.
+
+-   Any recycled code that is discovered and is not explicitly cited will be treated as plagiarism, regardless of source.
+
+
+## Most importantly...
+
+Ask if you're not sure if something violates a policy!
+
+
+## Three tips for success
+
+I am here to help you succeed! :-)
+
+1.  Ask questions.
+2.  Do the homework and labs.
+3.  Be proactive, even with the small questions!
+
+## Cultivating a supportive learning environment
+
+I want to make sure that you learn everything you were hoping to learn from this class. If this requires flexibility, please don't hesitate to ask.
+
+
+-   You never owe me personal information about your health (mental or physical) but you're always welcome to talk to me. If I can't help, I likely know someone who can.
+-   I want you to learn lots of things from this class, but I primarily want you to stay healthy, balanced, and grounded.
+
+
+## Questions
+
+What questions do you have?
+
+## This week's tasks
+
+-   Read the syllabus! (available on Canvas)
+-   First lab today! 3:30pm in this room. 
+-   Short lab walk-through video will be posted this afternoon on Canvas.
+-   Keep an eye out for a Getting to Know You Survey via Canvas, I'll send out an announcement.
+
+I'm looking forward to beginning this statistical journey with everyone!
+
+## Notecard 
+
+- Write your name
+
+- What are you excited to learn in this course? 
+
+Turn this in for attendance today.
+

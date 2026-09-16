@@ -1,0 +1,89 @@
+---
+title: "lab-02-solution"
+format: docx
+---
+
+
+```{r data-and-packages, warning = F, message = F}
+library(tidyverse)
+
+# Load in the dataset in the R chunk here! Note that you MUST load in the dataset
+# in the chunk in order for other R chunks to recognize the dataset, even if
+# you've loaded it in the Console.
+cdc <- read.csv("https://karamccor.github.io/b6002/labs/data/cdc_cleaned.csv")
+```
+
+
+
+### Exercise 1
+
+Higher HDI tends to be correlated with higher percentages of residents who get 2.5 hours of aerobic activity.
+
+Higher HDI is correlated with lower percents of residents who are obese across states.
+
+### Exercise 2
+
+```{r ex-2}
+# (1 point for substituting pink below)
+ggplot(data = cdc, mapping = aes(x = Region)) + 
+  geom_bar(fill = "pink") + 
+  labs(title = "Number of US States by Census Region", 
+       x = "Region", y = "Count")
+```
+
+The south has the most number of states, with 15 states.
+
+ The Northeast has the least number of states, with 10.
+
+### Exercise 3
+
+```{r ex-3}
+ggplot(data = cdc, aes(x = HDI, y = Smoking)) + geom_boxplot()+ 
+  labs(title = "Adult Smoking (%) by HDI", 
+       x = "HDI", y = "Adult Smoking (%)")
+```
+
+-   
+
+    a.  In the bottom ten HDI, the distribution of adult smoking is relatively symmetric, with a slight left-skew.  In the Middle HDI, the distribution of adult smoking is relatively symmetric, with one outlier.  In the top ten HDI, however, the distribution of adult smoking is right-skewed, and more concentrated around its median than the other two HDI groups.
+
+-   
+
+    b.  In general, higher HDI is correlated with lower adult smoking.
+
+### Exercise 4
+
+```{r ex4}
+ggplot(data = cdc, aes(x = FluVaccination, y = ChildVaccination)) + geom_point()+ 
+  labs(title = "Flu Vaccination rates (%) by Child Vaccination rates (%)", 
+       x = "Flu Vaccination (%)", y = "Child Vaccination (%)")
+```
+
+Higher flu vaccination rates tend to be (weakly) correlated with higher child vaccination rates.
+
+### Exercise 5
+
+```{r ex5}
+
+ggplot(data = cdc, mapping = aes(x = CVDeathRate, y = Obesity, color = HDI, shape = HDI)) + 
+  geom_point() +
+  labs(title = "Cardiovascular death rate by Obesity (%) by HDI", 
+       x = "Cardiovascular death rate per 100,000", y = "Obesity (%)")
+```
+
+(relationship between `CVDeathRate` and `Obesity`) As cardiovascular death rate increases, obesity levels increase. (1 point - HDI relationship with `CVDeathRate` and `Obesity`) Higher cardiovascular death rates and obesity levels are correlated with the bottom ten HDI, while the lowest death rates due to cardiovascular disease as well as the lowest obesity levels are associated with the top ten HDI levels. (Note, it doesn't have to be this detailed. As long as they mentioned that higher HDI is related to lower CVDeathRate and lower Obesity.)
+
+
+### Exercise 6
+
+```{r ex6}
+ggplot(data = cdc, aes(x = Region, y = InfantMortalityRate)) + 
+  geom_boxplot() +
+  labs(title = "Infant Mortality Rate (%) by Region", 
+       xlab = "Region", 
+       ylab = "Infant Mortality Rate (%)")
+```
+
+Comment on the pattern. (Anything reasonable is ok.)
+
+Distributions of infant mortality rate for Midwest, South, and West are relatively symmetric. Northeast has the lowest infant mortality rate, and its distribution is right-skewed. 

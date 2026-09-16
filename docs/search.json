@@ -1456,130 +1456,263 @@
     "text": "Submission\nTo submit your assignment:\n\nAccess Gradescope through the menu on the BIOS 600 Canvas site.\nClick on the assignment, and you’ll be prompted to submit it.\nMark the pages associated with each exercise. All of the pages of your lab should be associated with at least one question (i.e., should be “checked”)."
   },
   {
-    "objectID": "labs/lab-04.html",
-    "href": "labs/lab-04.html",
-    "title": "Lab 4: Practice with ggplot2 and tidyverse",
+    "objectID": "labs/lab-04-template.html",
+    "href": "labs/lab-04-template.html",
+    "title": "Lab 04",
     "section": "",
-    "text": "Important\n\n\n\nThis lab is due on Monday, September 14 at 11:59pm. To be considered on time, the following must be done by the due date:\n\nFinal .pdf file submitted on Gradescope\n\nBe sure to assign questions to pages when you turn in your assignment on Gradescope. A .5 point deduction will be made any time the question is not assigned to a page within your PDF.\n\nSelect the first page of your .PDF submission to be associated with the “Formatting” section."
+    "text": "# load packages here\n\nlibrary(tidyverse)"
   },
   {
-    "objectID": "labs/lab-04.html#getting-started",
-    "href": "labs/lab-04.html#getting-started",
-    "title": "Lab 4: Practice with ggplot2 and tidyverse",
-    "section": "Getting started",
-    "text": "Getting started\n\nIn Canvas, you’ll find the template for this assignment (“Lab 04 Template”). Download the file and open it.\nSave it in your class project folder as “lab-04.qmd”.\nOpen the document. Replace “Your Name Here” with your name in the YAML (the header of the document). Also, replace “Today’s Date Here” with today’s date. Filling in your name and date will count towards your “Formatting” score from here on out.\nRender your document to make sure your YAML is rendering correctly.\n\n\n\n\n\n\n\nTipTip for the Lab\n\n\n\nWrite all code and narrative in your Quarto file. Write all narrative in complete sentences. Throughout the assignment, you should periodically render your Quarto document to produce the updated html file."
+    "objectID": "labs/lab-04-template.html#exercise-1",
+    "href": "labs/lab-04-template.html#exercise-1",
+    "title": "Lab 04",
+    "section": "Exercise 1",
+    "text": "Exercise 1\n\n\n\n\n# load data here\n\n\n# display first seven rows of dataset with slice() below\n\n\n\n\n\n# print column names of your dataset with names() below:"
   },
   {
-    "objectID": "labs/lab-04.html#load-the-tidyverse",
-    "href": "labs/lab-04.html#load-the-tidyverse",
-    "title": "Lab 4: Practice with ggplot2 and tidyverse",
-    "section": "Load the tidyverse",
-    "text": "Load the tidyverse\nIn the code chunk labeled load-packages, copy and paste the code below to load in the tidyverse package for today’s lab:\n\nlibrary(tidyverse)\n\n\n\n\n\n\n\nTipGlobally setting warnings and messages to false\n\n\n\nNote that in your template, warnings and message have been set to false globally (i.e. across the entire document) by specifying these options in the YAML. Since we will be loading in packages and a dataset, this will be helpful for you formatting on this assignment.\nIt can be helpful to set global options this way in practice. However, take care when choosing this route, as sometimes warnings and messages can be helpful for troubleshooting."
-  },
-  {
-    "objectID": "labs/lab-04.html#practice-with-ggplot-and-tidyverse",
-    "href": "labs/lab-04.html#practice-with-ggplot-and-tidyverse",
-    "title": "Lab 4: Practice with ggplot2 and tidyverse",
-    "section": "Practice with ggplot and tidyverse",
-    "text": "Practice with ggplot and tidyverse\nToday’s lab involves more practice with ggplot and the tidyverse. You will also learn about loading data into R and setting a working directory to look for data.\nFast foods have been criticized as offering unhealthy foods which are calorically dense, high in sodium and added sugars, and low in vitamins and minerals. Today’s dataset was compiled by Joey Stanley at BYU and consists of information regarding McDonald’s menu items.\n\n\n\n\n\n\nTipBest practices for data Visualization\n\n\n\nWhen performing data visualization, make sure that all your plots have clear and informative titles and axis labels. When investigating more complex relationships with many variables, this simple tip will save you and your readers a lot of time and confusion."
-  },
-  {
-    "objectID": "labs/lab-04.html#loading-in-data",
-    "href": "labs/lab-04.html#loading-in-data",
-    "title": "Lab 4: Practice with ggplot2 and tidyverse",
-    "section": "Loading in data",
-    "text": "Loading in data\nPreviously, you loaded data directly into R by using the read.csv command that pointed to a website. But what if you had a dataset on your computer?\nYou can still do so, but need to point R to reference the appropriate space on your computer. For instance, if I downloaded the McDonald’s Menu Items dataset to my Downloads folder and named it file.csv, I might be able to load the dataset into R under the name mcd with the following command:\n\nmcd &lt;- read.csv(\"C:/Users/Kara/Downloads/file.csv\")\n\nNote that file.csv, the name of the file on your computer, could be different from the object name in R (this case, mcd).\nHowever, file paths can be quite long. There’s a better way! This is where our project folder comes in."
-  },
-  {
-    "objectID": "labs/lab-04.html#navigate-to-your-project-folder",
-    "href": "labs/lab-04.html#navigate-to-your-project-folder",
-    "title": "Lab 4: Practice with ggplot2 and tidyverse",
-    "section": "Navigate to your project folder",
-    "text": "Navigate to your project folder\nFirst, make sure you are in your project folder. You should see a blue cube at the top right of your RStudio window with the name of your project. If you see it, great. If not, you can open your project with File &gt; Open Project.\nAt the beginning of class, you should have created a data folder that lives in your project folder. If you copy your data (perhaps it’s called file.csv) into your data folder, you can read it in with the following code:\n\nmcd &lt;- read.csv(\"data/file.csv\")\n\nBecause we are working out of our project folder, R knew to start looking in the data folder within the project by default. Using this strategy provides a shortcut instead of needing to provide the entire file path.\nAny R output will go into your project folder (for instance, if you want to specifically save plots, figures, etc.) by default.\nNote: there are some syntax issues with the way R parses in slashes, and this may change from Mac to PC (…anyone use Linux?). You can always check your current working directory with the following command in order to check the formatting of the file path (and also see what the current directory is!):\n\ngetwd()\n\n[1] \"C:/Users/kmcco/OneDrive - University of North Carolina at Chapel Hill/Documents/UNC_Teaching/fall2026/bios600-fa26/labs\""
-  },
-  {
-    "objectID": "labs/lab-04.html#downloading-the-data",
-    "href": "labs/lab-04.html#downloading-the-data",
-    "title": "Lab 4: Practice with ggplot2 and tidyverse",
-    "section": "Downloading the data",
-    "text": "Downloading the data\nFirst, download the Joey Stanley dataset. The data are available on his website here (https://joeystanley.com/data/), and clicking on “McDonald’s Menu Items. Save the data in your data folder within your project folder as menu.csv.\n\nExercise 1\n\nIn your code chunk labeled load-data, read in the data with the following code:\n\n\nmcd &lt;- read.csv(\"data/menu.csv\")\n\nWatch out for the naming of the file and where it’s saved on your computer! Print the first seven rows of the dataset with slice().\n\n\n\n\n\n\nImportantGetting an error?\n\n\n\nIf you’re getting an error here, check the following:\n\nThat you have your project open within RStudio (there is a blue cube at the top right of your RStudio window with the name of your project folder next to it. If you don’t see this, click File &gt; Open Project… and navigate to your project folder.)\nThat there is a folder called data within this project folder, and menu.csv is saved in that data folder.\n\nIf you’ve checked these things and are still getting an error, reach out to the teaching team for help!\n\n\n\nPrint the column names in your dataset with names()."
-  },
-  {
-    "objectID": "labs/lab-04.html#on-your-own",
-    "href": "labs/lab-04.html#on-your-own",
-    "title": "Lab 4: Practice with ggplot2 and tidyverse",
-    "section": "On your own!",
-    "text": "On your own!"
-  },
-  {
-    "objectID": "labs/lab-04.html#exercise-2",
-    "href": "labs/lab-04.html#exercise-2",
-    "title": "Lab 4: Practice with ggplot2 and tidyverse",
+    "objectID": "labs/lab-04-template.html#exercise-2",
+    "href": "labs/lab-04-template.html#exercise-2",
+    "title": "Lab 04",
     "section": "Exercise 2",
-    "text": "Exercise 2\nCreate a table which displays the number of menu items in each food category. (Hint: use the count() function.) Which category has the most number of items? Which category has the least?"
+    "text": "Exercise 2"
   },
   {
-    "objectID": "labs/lab-04.html#exercise-3",
-    "href": "labs/lab-04.html#exercise-3",
-    "title": "Lab 4: Practice with ggplot2 and tidyverse",
+    "objectID": "labs/lab-04-template.html#exercise-3",
+    "href": "labs/lab-04-template.html#exercise-3",
+    "title": "Lab 04",
     "section": "Exercise 3",
-    "text": "Exercise 3\n\nModify the code below to create a new variable called cal_oz which calculates the calories per ounce in each of the menu items. In this code, we are saving the dataset to a new object called mcd_cal.\n\n\nmcd_cal &lt;- mcd |&gt;\n  mutate(_______) # create the new variable here\n\n\nCreate a new R Chunk. Now, within your newly created dataset mcd_cal, select the variables Category, Item, and cal_oz, then print the first five observations with slice(). Within the first five observations, which food item has the highest calories per ounce?"
+    "text": "Exercise 3"
   },
   {
-    "objectID": "labs/lab-04.html#exercise-4",
-    "href": "labs/lab-04.html#exercise-4",
-    "title": "Lab 4: Practice with ggplot2 and tidyverse",
+    "objectID": "labs/lab-04-template.html#exercise-4",
+    "href": "labs/lab-04-template.html#exercise-4",
+    "title": "Lab 04",
     "section": "Exercise 4",
-    "text": "Exercise 4\n\nCreate a table which displays the top five most caloric menu items (only based on total calories), with the highest-value item at the top of the table. In doing so, display only the name of the menu item and the calories. You may use the following code to get started:\n\n\nmcd_cal |&gt;\n  select(_____, _____) |&gt;\n  arrange(_______) |&gt; # arrange highest to lowest\n  slice(_______)\n\n\nNow, using similar code as above, create a second table which displays the top five most caloric menu items per ounce (based on the new variable you created in Exercise 2).\nWhich item ranks the highest in each of the tables? Are you surprised?"
+    "text": "Exercise 4"
   },
   {
-    "objectID": "labs/lab-04.html#exercise-5",
-    "href": "labs/lab-04.html#exercise-5",
-    "title": "Lab 4: Practice with ggplot2 and tidyverse",
+    "objectID": "labs/lab-04-template.html#exercise-5",
+    "href": "labs/lab-04-template.html#exercise-5",
+    "title": "Lab 04",
     "section": "Exercise 5",
-    "text": "Exercise 5\nThere are 9 calories per gram of fat. Create a new variable which corresponds to the proportion of calories that come from fat for each of the menu items. (Assign this dataset, with the newly created variable, to the object mcd_cal.) You can define the new variable as follows: prop_cal_fat = Fat*9/Calories. (Nothing needs to be printed out here. Just show your code.)"
+    "text": "Exercise 5"
   },
   {
-    "objectID": "labs/lab-04.html#exercise-6",
-    "href": "labs/lab-04.html#exercise-6",
-    "title": "Lab 4: Practice with ggplot2 and tidyverse",
+    "objectID": "labs/lab-04-template.html#exercise-6",
+    "href": "labs/lab-04-template.html#exercise-6",
+    "title": "Lab 04",
     "section": "Exercise 6",
-    "text": "Exercise 6\nCreate a visualization that shows the distribution of calories in McDonald’s menu items by category. Use the following code to get started, filling in the blanks. (You do not need to alter the geom_boxplot or the theme() parts of the code.)\n\nggplot(data = _______, \n       mapping = aes(y = ________, \n                     x = _________, \n                     fill = ________)) +\n  geom_boxplot() + \n  theme(legend.position = \"none\",\n        axis.text.x = element_text(angle = 45, hjust = 1)) +\n  labs(title = \"___________\")\n\nWhat patterns do you see?"
+    "text": "Exercise 6"
   },
   {
-    "objectID": "labs/lab-04.html#exercise-7",
-    "href": "labs/lab-04.html#exercise-7",
-    "title": "Lab 4: Practice with ggplot2 and tidyverse",
+    "objectID": "labs/lab-04-template.html#exercise-7",
+    "href": "labs/lab-04-template.html#exercise-7",
+    "title": "Lab 04",
     "section": "Exercise 7",
-    "text": "Exercise 7\nCreate a visualization that plots the calories per ounce of items (x-axis) by the proportion of calories that come from fat (y-axis). In this visualization, color by the food category. What pattern(s) do you see?"
+    "text": "Exercise 7"
   },
   {
-    "objectID": "labs/lab-04.html#ai-attestation",
-    "href": "labs/lab-04.html#ai-attestation",
-    "title": "Lab 4: Practice with ggplot2 and tidyverse",
+    "objectID": "labs/lab-04-template.html#ai-attestation",
+    "href": "labs/lab-04-template.html#ai-attestation",
+    "title": "Lab 04",
+    "section": "AI Attestation",
+    "text": "AI Attestation"
+  },
+  {
+    "objectID": "labs/lab-03-data-wrangling.html",
+    "href": "labs/lab-03-data-wrangling.html",
+    "title": "Lab 3: Wrangling data with dplyr",
+    "section": "",
+    "text": "Important\n\n\n\nThis lab is due on Friday, Sept 4 at 11:59pm. To be considered on time, the following must be done by the due date:\n\nFinal .pdf file submitted on Gradescope\n\nBe sure to assign questions to pages when you turn in your assignment on Gradescope. A .5 point deduction will be made any time the question is not assigned to a page within your PDF.\n\nSelect the first page of your .PDF submission to be associated with the “Formatting” section."
+  },
+  {
+    "objectID": "labs/lab-03-data-wrangling.html#set-up",
+    "href": "labs/lab-03-data-wrangling.html#set-up",
+    "title": "Lab 3: Wrangling data with dplyr",
+    "section": "Set up",
+    "text": "Set up\n\nIn Canvas, you’ll find the template for this assignment (“Lab 03 Template”). Download the file and open it.\nSave it in your class project folder as “lab-03.qmd”.\nOpen the document. Replace “Your Name Here” with your name in the YAML (the header of the document). Also, replace “Today’s Date Here” with today’s date."
+  },
+  {
+    "objectID": "labs/lab-03-data-wrangling.html#wrangling-data",
+    "href": "labs/lab-03-data-wrangling.html#wrangling-data",
+    "title": "Lab 3: Wrangling data with dplyr",
+    "section": "Wrangling Data",
+    "text": "Wrangling Data\nToday’s lab will focus on data wrangling using the tidyverse (in particular, basic functions in dplyr). The lab has a pretty hefty guided portion – follow along with the code that is written to familiarize yourself with the commands. You are highly encouraged to ask your lab TA or each other for help!\nThe data are available by typing in the following. Note that we are naming the dataset ncbikecrash - you may may the dataset something else if you wish, but make sure that you are using this name consistently throughout the lab!\n\nncbikecrash &lt;- read.csv(\"https://karamccor.github.io/b6002/labs/data/bikecrash.csv\")\n\nSince we are using the tidyverse package, we can load the package in the Console.\n\nlibrary(tidyverse)\n\nWarning: package 'ggplot2' was built under R version 4.4.3\n\n\n── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──\n✔ dplyr     1.1.4     ✔ readr     2.1.5\n✔ forcats   1.0.0     ✔ stringr   1.5.1\n✔ ggplot2   4.0.2     ✔ tibble    3.2.1\n✔ lubridate 1.9.3     ✔ tidyr     1.3.1\n✔ purrr     1.0.2     \n── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──\n✖ dplyr::filter() masks stats::filter()\n✖ dplyr::lag()    masks stats::lag()\nℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors\n\n\nYou’ll notice some “conflicts” above - this is fine. It just means that multiple packages have R functions with the same name. R will assume we want to use the functions from the tidyverse as opposed to the other package, in this case stats. dplyr::filter() masks stats::filter() means that the filter function from the dplyr package (part of the tidyverse) will be used in lieu of the filter function from the stats package. Nothing to worry about for now. (And remember that you’ll suppress these messages in your own lab document with #| warning: false and #| message: false)."
+  },
+  {
+    "objectID": "labs/lab-03-data-wrangling.html#nc-bike-crash-data",
+    "href": "labs/lab-03-data-wrangling.html#nc-bike-crash-data",
+    "title": "Lab 3: Wrangling data with dplyr",
+    "section": "NC bike crash data",
+    "text": "NC bike crash data\nThis week’s data come from the North Carolina Department of Transportation. Each year, about 1,000 bicyclists are involved in police-reported crashes with motor vehicles in North Carolina, with 60 serious injuries and 20 deaths. This is a tragic yet preventable public health issue. Today’s dataset provides all 7,467 police-reported bicycle crashes involving a motor vehicle in North Carolina from 2007 through 2014."
+  },
+  {
+    "objectID": "labs/lab-03-data-wrangling.html#examining-our-dataset",
+    "href": "labs/lab-03-data-wrangling.html#examining-our-dataset",
+    "title": "Lab 3: Wrangling data with dplyr",
+    "section": "Examining our dataset",
+    "text": "Examining our dataset\nRemember, the R Console and the Quarto document live in separate environments. If you load the tidyverse package or the dataset in your console, it won’t be loaded into the workspace for rendering the Quarto document (and vice-versa). The Console is very useful for “testing” code – seeing if what you input results in what you want. However, for creating reproducible documents, you should be editing code in your Quarto document.\nSuppose we’re interested in knowing the names or some basic characteristics of the ncbikecrash dataset. This is probably not something we want to include in our final document, but something just for our own curiosity. Try running the following two commands in the Console:\n\nnames(ncbikecrash)\n\n\nglimpse(ncbikecrash)\n\nThe names() function returns the list of variable names in the dataset, while the glimpse() function (part of the tidyverse) provides a list of names, the type of variable (integer vs. string vs. double, etc.), as well as the first few observations of each so you get a feel for what some of the data points look like for each variable.\nYou can also View the dataset by using the View() function. Try running the following command in the Console:\n\nView(ncbikecrash)"
+  },
+  {
+    "objectID": "labs/lab-03-data-wrangling.html#manipulating-datasets",
+    "href": "labs/lab-03-data-wrangling.html#manipulating-datasets",
+    "title": "Lab 3: Wrangling data with dplyr",
+    "section": "Manipulating datasets",
+    "text": "Manipulating datasets\ndplyr is a package that allows users to do some of the most common data manipulation functions. Essentially, pliers for dataframes (hence the name). It is based on the philosophy of functions as verbs that manipulate dataframes. Under the rules of dplyr, the first argument is always a dataframe, subsequent arguments say what to do with that dataframe, and dplyr-based manipulations will always return a data frame. What are some of these verbs that say what to do with our dataframes?\n\nfilter: pick rows (observations) matching certain criteria\nslice: pick rows (observations) using an index/indices\ndistinct: filter for unique rows\nselect: pick columns (variables) by name\narrange: reorder rows\nsummarize: reduce variables to summary statistic values\nmutate: add new variables (often used with case_when…more on this later)\n…and many more.\n\nAs you can see, many of these verbs do what you would expect them to do based on their function name."
+  },
+  {
+    "objectID": "labs/lab-03-data-wrangling.html#pipes",
+    "href": "labs/lab-03-data-wrangling.html#pipes",
+    "title": "Lab 3: Wrangling data with dplyr",
+    "section": "Pipes",
+    "text": "Pipes\ndplyr functions use a special operator, |&gt;, called a pipe. This operator “pipes” the output of the previous line of code as the first input of the next line of code. You can think of pronouncing it as “and then.” (Note that previous versions of tidyverse used %&gt;%, which you might come across in older documentation. |&gt; is the newer version.)\nLet’s use an everyday example to illustrate how a pipe works. Consider the following sequence of actions: 1) find car keys, 2) start the car, 3) drive to UNC, and finally, 4) park. if we express this sequence of actions as a set of nested functions in R “code,” this might look like\n\npark(drive(start_car(find(\"keys\")), to = \"campus\"))\n\n# ...don't try running this code, it won't work.\n\nIf we use pipes, we have a more natural and easier to read structure:\n\nfind(\"keys\") |&gt;\n  start_car() |&gt;\n  drive(to = \"campus\") |&gt;\n  park()\n\n# don't try running this code, either\n# still, try to \"read\" the code in plain English\n\nRemember, the |&gt; operator is pronounced “and then,” and so the above function using pipes might be pronounced find keys, and then start the car, and then drive to campus, and then park.” Much easier to figure out!"
+  },
+  {
+    "objectID": "labs/lab-03-data-wrangling.html#logical-operators-in-r",
+    "href": "labs/lab-03-data-wrangling.html#logical-operators-in-r",
+    "title": "Lab 3: Wrangling data with dplyr",
+    "section": "Logical operators in R",
+    "text": "Logical operators in R\nIn R, there are different ways of relating variables. Consider two variables, x and y.\n\nx & y: x AND y\nx | y: x OR y\n!x: NOT x\n&lt; and &gt;: less than/greater than\n&lt;= and &gt;=: less than/greater than or equal to\n==: exactly equal to\n!=: not equal to\nis.na(x): tests if x is NA and returns a list of TRUE or FALSE for each element of x (similarly, !is.na(x) tests for NOT being NA)\nx %in% y: tests if elements of x are in y and returns a list of TRUE or FALSE corresponding to each element of x"
+  },
+  {
+    "objectID": "labs/lab-03-data-wrangling.html#putting-it-all-together",
+    "href": "labs/lab-03-data-wrangling.html#putting-it-all-together",
+    "title": "Lab 3: Wrangling data with dplyr",
+    "section": "Putting it all together",
+    "text": "Putting it all together\nIn this section, we’re going to walk through some code that examines the logical operators in R. Follow along these steps that make use of some of the functions above.\n\nfilter\nWe use the filter function to select a subset of observations following some criterion(a). Suppose we are only interested in observations in Durham County. Run the following code:\n\nncbikecrash |&gt;\n  filter(county == \"Durham\")\n\nThe code should have returned a dataset with 340 rows (observations) and the same 65 variables as before. We use the logical operator == to take counties exactly equal to “Durham.” Remember that the output of pipe operators is another dataframe (if you are wondering what a tibble is, you can think of it as a special dataframe format specific to the tidyverse).\nSuppose we wanted to save the Durham County crashes as a new dataframe, durham_crashes. We can use the assignment operator to do that:\n\ndurham_crashes &lt;- ncbikecrash |&gt; \n  filter(county == \"Durham\")\n\nFinally, we can filter for many conditions at once. Suppose we’re interested in crashes in Durham County where an ambulance was required, from 2014 onward. We might use the following code:\n\nncbikecrash |&gt;\n  filter(county == \"Durham\" & ambulance_req == \"Yes\" & crash_year &gt;= 2014)\n\nWe see that there are 28 such observations, and that the previous code returned a tibble containing their information."
+  },
+  {
+    "objectID": "labs/lab-03-data-wrangling.html#slice",
+    "href": "labs/lab-03-data-wrangling.html#slice",
+    "title": "Lab 3: Wrangling data with dplyr",
+    "section": "slice",
+    "text": "slice\nInstead of picking observations that match certain criteria, we can simply take a slice of the dataset that contains specified row numbers that we want. For instance, let’s take the 4th observation:\n\nncbikecrash |&gt;\n  slice(4)\n\nIn R, the : specifies that we want everything from the left side of the colon to the right side. So, 1:8 would be “1 to 8.” So, if we wanted to take the first eight observations, we could take the following slice:\n\nncbikecrash |&gt;\n  slice(1:8)"
+  },
+  {
+    "objectID": "labs/lab-03-data-wrangling.html#select",
+    "href": "labs/lab-03-data-wrangling.html#select",
+    "title": "Lab 3: Wrangling data with dplyr",
+    "section": "select",
+    "text": "select\nOn the other hand, instead of choosing rows (observations), suppose we’re interested in choosing columns (variables). We can use the select function to do so. Say we want to keep only the locality and speed_limit variables from the dataframe. Run the following code and see what happens:\n\nncbikecrash |&gt;\n  select(locality, speed_limit)\n\nWe see that we have a new tibble consisting of only the locality and speed limit variables, but for all 7,467 observations.\nThe magic of pipes is that we can continue to do more and more operations. Try running the following code, remembering that the pipe operator is pronounced “and then”:\n\nncbikecrash |&gt;\n  filter(county == \"Durham\" & ambulance_req == \"Yes\" & crash_year &gt;= 2014) |&gt;\n  select(locality, speed_limit)\n\nWhat are we doing? We are taking the original dataset ncbikecrash, and then filtering observations where the county was Durham AND an ambulance was required AND the crash year was 2014 or greater, and then selecting to keep only the variables corresponding to locality and speed limit. The result is a tibble containing 28 observations of 2 variables.\nWe can also use select to exclude variables. Suppose we want every variable EXCEPT the “region” variable. We can easily do that by using a minus sign:\n\nncbikecrash |&gt; \n  select(-region)\n\nQuick Review\nWhat do you think the following code would do?\n\nncbikecrash |&gt;\n  filter(county %in% c(\"Wake\", \"Richmond\", \"Vance\"))\n\nHow about the following code?\n\nncbikecrash |&gt;\n  filter(development == \"Residential\" | development == \"Commercial\") |&gt;\n  select(region, development, bike_age, driver_age)"
+  },
+  {
+    "objectID": "labs/lab-03-data-wrangling.html#sample_n-and-sample_frac",
+    "href": "labs/lab-03-data-wrangling.html#sample_n-and-sample_frac",
+    "title": "Lab 3: Wrangling data with dplyr",
+    "section": "sample_n and sample_frac",
+    "text": "sample_n and sample_frac\nWe can also take random samples from our datasets. sample_n takes a random sample of n observations, whereas sample_frac takes a random sample based on the fraction of observations. Both of these functions can sample with or without replacement using the option replace = TRUE or FALSE.\nWhat is the difference between the following two sets of code?\n\nncbikecrash |&gt; \n  sample_n(5, replace = FALSE)\n\n\nncbikecrash |&gt;\n  sample_frac(0.2, replace = FALSE)\n\nThe first example using sample_n returned a tibble with 5 observations, while the second example using sample_frac returned a tibble with one-fifth of the total observations in the dataset (proportion equal to 0.2 out of 1). As always, you can save these as new datasets.\nThe following code would save a random sample of 1/3 of the ncbikecrash dataset as a new dataset called ncbikecrash_sample:\n\nncbikecrash_sample &lt;- ncbikecrash |&gt;\n  sample_frac(1/3, replace = FALSE)\n\nNotice that here we used a fraction instead of a decimal."
+  },
+  {
+    "objectID": "labs/lab-03-data-wrangling.html#distinct-and-arrange",
+    "href": "labs/lab-03-data-wrangling.html#distinct-and-arrange",
+    "title": "Lab 3: Wrangling data with dplyr",
+    "section": "distinct and arrange",
+    "text": "distinct and arrange\nThe distinct function returns all unique observations. Suppose we’re interested in all cities and counties that had a bike crash. Run the following code:\n\nncbikecrash |&gt; \n  select(county, city)\n\nAs expected, we have a tibble containing every county/city combination in the dataset, and have only those variables. However, there are a lot of repeats! We can find the unique observations as follows:\n\nncbikecrash |&gt; \n  select(county, city) |&gt;\n  distinct()\n\n“Take the ncbikecrash data, and then select county and city, and then keep only the distinct observations.”\nNote that these are in the order that they first appeared in the dataset. We can arrange them in alphabetical order as follows:\n\nncbikecrash |&gt; \n  select(county, city) |&gt; \n  distinct() |&gt; \n  arrange(county, city)\n\nThe above code, after taking the distinct observations, then arranges in order by county, and then by city. If we wanted to order in the opposite direction (descending, instead of ascending), we can simply use the desc() function:\n\nncbikecrash |&gt; \n  select(county, city) |&gt; \n  distinct() |&gt; \n  arrange(desc(county), city)\n\nWe see that we are ordering first in descending order by county, and then by ascending order by city (within the counties). If we have numeric data, we can also arrange to order the data based on their numeric values. The desc() function works the same way."
+  },
+  {
+    "objectID": "labs/lab-03-data-wrangling.html#summarise-and-group_by",
+    "href": "labs/lab-03-data-wrangling.html#summarise-and-group_by",
+    "title": "Lab 3: Wrangling data with dplyr",
+    "section": "summarise and group_by",
+    "text": "summarise and group_by\nOften times, we want to summarize values in our dataset by calculating certain summary statistics such as the mean, median, or standard deviation, etc. We can do that by using the summarise or summarize function (dplyr was written by Hadley Wickham, who is from New Zealand, hence the British spelling).\nSuppose we are interested in the mean hour at which crashes occur:\n\nncbikecrash |&gt;\n  summarize(avg_hr = mean(crash_hour))\n\nHere, we’re creating a variable avg_hr that has the mean of crash_hour. By running the above code, you should see that the average is 14.7, or around 2:45 PM.\n\nHandling NA values\nIf you have NAs in your dataset, R might throw an error if you try to calculate the mean() of a variable. To remove all NAs, we could do the following:\n\nncbikecrash |&gt;\n  summarize(avg_hr = mean(crash_hour, na.rm = T))\n\nHere, the na.rm = T is telling R to remove any NA values from the crash_hour variable before calculating the mean.\n\n\nSummarizing based on groups\nWe can also summarize based on different groups. For instance, if we were interested in the mean hour at which crashes occur based on whether the crash was a hit and run, we can first group_by the hit_run variable, and then summarize the mean crash_hour as follows:\n\nncbikecrash |&gt; \n  group_by(hit_run) |&gt; \n  summarize(avg_hr = mean(crash_hour))"
+  },
+  {
+    "objectID": "labs/lab-03-data-wrangling.html#count",
+    "href": "labs/lab-03-data-wrangling.html#count",
+    "title": "Lab 3: Wrangling data with dplyr",
+    "section": "count",
+    "text": "count\nIt is also easy to count observations of categorical variables. Suppose we wanted to count the number of observations in each category of the variable driver_alcohol_drugs. We can simply run\n\nncbikecrash |&gt; \n  count(driver_alcohol_drugs)"
+  },
+  {
+    "objectID": "labs/lab-03-data-wrangling.html#mutate-and-case_when",
+    "href": "labs/lab-03-data-wrangling.html#mutate-and-case_when",
+    "title": "Lab 3: Wrangling data with dplyr",
+    "section": "mutate and case_when",
+    "text": "mutate and case_when\nFinally, one of the most common data manipulation tasks is to create a new variable based on values of existing variables. For instance, suppose we have a dataset named dat, that contains measurements of mass (kg), height (m), and body temperature in fahrenheit (fahrenheit) for study participants. We want to make new variables for their BMI and body temperature in celsius. We can create these variables as follows (recalling the appropriate formulas):\n\ndat |&gt; \n  mutate(bmi = kg/m^2)\n\n# Don't run this code; there is no \"dat\" dataset\n\n\ndat |&gt; \n  mutate(celsius = (fahrenheit - 32) * 5/9)\n\n# same.\n\nIn doing so, we’ve created the new variables bmi and celsius equal to the right side of the equals sign in the mutate function. Most often when you define a new variable with mutate, you’ll want to use it later (for instance, in a visualization or in downstream analyses). In this case, you’d want to save the resulting dataframe, often by overwriting the original one. As an example:\n\ndat &lt;- dat |&gt; \n  mutate(bmi = kg/m^2)\n\nIn this case, we’ve saved over the dat dataframe, which now contains the new variable bmi.\nFinally, we can also do more sophisticated data creation using case_when, which allows for a sequence of formulas defining new variables. For instance, let’s suppose we want to create a new variable that categorizes BMI based on CDC cut-offs. Consider the following code, which utilizes the bmi variable we saved previously:\n\ndat &lt;- dat |&gt; \n  mutate(bmi_cat = case_when(\n    bmi &lt; 18 ~ \"underweight\",\n    bmi &gt;= 18 & bmi &lt; 25 ~ \"normal\"\n    bmi &gt;= 25 & bmi &lt; 30 ~ \"oberweight\"\n    bmi &gt; 30 ~ \"obese\"\n  ))\n\n# Be sure all parentheses are closed!\n\nWe have used the case_when function to create a new variable. The individual cases are separated by commas, and within each case, the condition (e.g., BMI &gt; 30) is on the left and the outcome for the new variable (e.g., “obese”) is on the right of a tilde (~). We have also saved over the original dataframe in order to keep this new variable, bmi_cat.\nLet’s do a concrete example using the ncbikecrash data. Suppose we want to classify whether a crash occurred on a weekend or on a weekday. We will use case_when in combination with the logical operator %in% to do so (the c() function tells R that there is a list of things coming up):\n\nncbikecrash &lt;- ncbikecrash |&gt; \n  mutate(weekend = case_when(\n    crash_day %in% c(\"Saturday\", \"Sunday\") ~ \"Weekend\",\n    crash_day %in% c(\"Monday\", \n                     \"Tuesday\", \n                     \"Wednesday\", \n                     \"Thursday\", \n                     \"Friday\") ~ \"Weekday\"\n  ))\n\nLet’s check our work by counting the number of observations in each of our categories:\n\nncbikecrash |&gt;\n  count(weekend)\n\n  weekend    n\n1 Weekday 5658\n2 Weekend 1809\n\n\nIt looks like 1809 crashes happened on weekends and 5658 occurred on weekdays."
+  },
+  {
+    "objectID": "labs/lab-03-data-wrangling.html#your-turn",
+    "href": "labs/lab-03-data-wrangling.html#your-turn",
+    "title": "Lab 3: Wrangling data with dplyr",
+    "section": "Your turn!",
+    "text": "Your turn!\nWow, that was a lot of new material. Don’t worry, the more you practice, the better you’ll get. Try the following exercises using the ncbikecrash dataset.\nNote: each of the following exercises should be done in “one go” using a series of pipes. Code should be fully shown in your final PDF for each exercise. If you are asked to “create a table,” then there is no need for additional narrative, unless specifically asked to make a conclusion based on the table.\n\n\n\n\n\n\nTipEnsure all code is visible on PDF\n\n\n\nIn your final PDF that you turn in on Gradescope, ensure all code is visible for full credit. If lines of code are too long (left to right), they may run off the page when you convert to PDF. You should consider indenting code after commas, as shown in the Weekday case_when example above. Ask your TAs if you need help checking this!"
+  },
+  {
+    "objectID": "labs/lab-03-data-wrangling.html#exercise-1",
+    "href": "labs/lab-03-data-wrangling.html#exercise-1",
+    "title": "Lab 3: Wrangling data with dplyr",
+    "section": "Exercise 1",
+    "text": "Exercise 1\n\nRun the provided code to determine the bike crashes that occurred in residential development areas where the driver age group was 0 to 19. How many such bike crashes satisfy this criteria? Provide a 1-sentence response to answer this question.\n\n\n# run this code\nncbikecrash |&gt; \n  filter(development == \"Residential\") |&gt;\n  filter(driver_age_group == \"0-19\")\n\n\n\n\n\n\n\nTipHint\n\n\n\nTo do this, run the provided code. In the Description of the data frame that is printed out, you’ll see df[rows x columns]. The number of “rows” is the number of observations that satisfy these criteria.\n\n\nNote: Do not display the output of all observations satisfying these criteria. Run the code yourself to find out the answer, but your template will have #| eval: false as a code option which suppresses this lengthy output.\n\nNow, copy and paste the code below into your code chunk within your quarto template. Edit the provided code so that the dataset is filtered to “Residential” development areas, the same as part (a). Then, run the code to create a table displaying the number of bike crashes in each age group for residential areas.\n\n\n# edit code below: replace blank with Residential\nncbikecrash |&gt; \n  filter(development == \"______\") |&gt;\n  count(driver_age_group)"
+  },
+  {
+    "objectID": "labs/lab-03-data-wrangling.html#exercise-2",
+    "href": "labs/lab-03-data-wrangling.html#exercise-2",
+    "title": "Lab 3: Wrangling data with dplyr",
+    "section": "Exercise 2",
+    "text": "Exercise 2\nCopy and paste the code below into your code chunk within your quarto template. Edit the code to create a table which orders the most commonly occurring estimated speed from lowest to highest. (i.e., the least commonly occuring speed will appear first in the table.) To do this, replace the blank with the driver_est_speed variable, then run the code. Note: It’s okay for NA values to be present in your table.\n\n# edit code: replace blank with driver estimated speed variable\nncbikecrash |&gt; \n  count(____________) |&gt;\n  arrange(n)"
+  },
+  {
+    "objectID": "labs/lab-03-data-wrangling.html#exercise-3",
+    "href": "labs/lab-03-data-wrangling.html#exercise-3",
+    "title": "Lab 3: Wrangling data with dplyr",
+    "section": "Exercise 3",
+    "text": "Exercise 3\nWrite code that 1) filters to crashes in Durham, Orange, or Wake counties, 2) groups by county, then 3) summarizes the mean driver age in each county.\nWhat was the mean driver age (driver_age) involved in a crash in each of those three counties? Display output only for those three counties.\nHint: You can filter by multiple counties using the following line of code. Recall the | operator means OR:\nfilter(county == \"Henderson\" | county == \"Wilmington\")\nHint: There are some missing values for driver_age. You can either filter for rows where the driver age isn’t missing or use the na.rm = T option in the mean() function."
+  },
+  {
+    "objectID": "labs/lab-03-data-wrangling.html#exercise-4",
+    "href": "labs/lab-03-data-wrangling.html#exercise-4",
+    "title": "Lab 3: Wrangling data with dplyr",
+    "section": "Exercise 4",
+    "text": "Exercise 4\nWhat is the mean hour for when a crash occurs in Durham County for each month? Create a table which displays this information, arranged from earliest to latest hour."
+  },
+  {
+    "objectID": "labs/lab-03-data-wrangling.html#exercise-5",
+    "href": "labs/lab-03-data-wrangling.html#exercise-5",
+    "title": "Lab 3: Wrangling data with dplyr",
+    "section": "Exercise 5",
+    "text": "Exercise 5\nCreate a new variable named time_crash based on the hour (crash_hour) that the crash occured and save in a new dataset called ncbikecrash_time. If the crash occurred during from 12:00 am to 6:59 am, define time_crash to be “Early morning.” If the crash occurred from 7:00 am to 11:59 am, define time_crash to be “Morning.” From 12:00 pm to 5:59 pm “Afternoon,” and from 6:00 pm to 11:59 pm “Evening.”\nThen, create a table which counts the number of crashes that occurred during these time periods. When do most crashes occur? Note: For this question, you should have one section of code for defining the new dataset with the new variable, and a second section of code for creating the table. (They can be in the same code chunk, but they’ll be two separate pieces.)"
+  },
+  {
+    "objectID": "labs/lab-03-data-wrangling.html#exercise-6",
+    "href": "labs/lab-03-data-wrangling.html#exercise-6",
+    "title": "Lab 3: Wrangling data with dplyr",
+    "section": "Exercise 6",
+    "text": "Exercise 6\n\nCalculate the mean driver age involved in crashes in all NC counties.\nCreate a table which displays the county name and the mean driver age in those counties. In your table, display only the top five counties in terms of oldest drivers, sorted from largest to smallest. Note: You may need to use na.rm = T to remove NA values."
+  },
+  {
+    "objectID": "labs/lab-03-data-wrangling.html#exercise-7",
+    "href": "labs/lab-03-data-wrangling.html#exercise-7",
+    "title": "Lab 3: Wrangling data with dplyr",
+    "section": "Exercise 7",
+    "text": "Exercise 7\n\n(a)\nCreate a side-by-side boxplot showing the distribution of biker age (bike_age) by region. Include an informative title. Fill the boxplots with a color of your choice (other than the default). Click here for a list of colors in R. Provide 1 sentence commenting on the distribution of ages across groups.\n\n\n(b)\nRun the following code to create grouped box plots. (The code should already be in your Quarto template.) Add an informative title and informative axis labels. What do you notice about Snow, Sleet, Hail, Freezing Rain/Drizzle driver ages in Rural vs. Urban areas?\n\nggplot(ncbikecrash, \n       mapping = aes(x = rural_urban, \n                     y = driver_age, \n                     fill = weather)) +\n  geom_boxplot()"
+  },
+  {
+    "objectID": "labs/lab-03-data-wrangling.html#ai-attestation",
+    "href": "labs/lab-03-data-wrangling.html#ai-attestation",
+    "title": "Lab 3: Wrangling data with dplyr",
     "section": "AI Attestation",
     "text": "AI Attestation\nIf you used AI for this assignment, list your prompts below. Cite any other online resources you used. If you did not use AI for this assignment, you may simply state “I did not use AI for this assignment.”"
   },
   {
-    "objectID": "labs/lab-04.html#submission",
-    "href": "labs/lab-04.html#submission",
-    "title": "Lab 4: Practice with ggplot2 and tidyverse",
+    "objectID": "labs/lab-03-data-wrangling.html#submission",
+    "href": "labs/lab-03-data-wrangling.html#submission",
+    "title": "Lab 3: Wrangling data with dplyr",
     "section": "Submission",
-    "text": "Submission\nAs you’ve seen previously, we can Render the template into an .html file that can be opened by any web browser. To export it as a .pdf, open the file in your web browser and then print to or save as a .pdf document. Your TAs will show you how if you need help! (There is a way to directly knit to a .pdf file, but it’s quite a bit more involved.)\nYou will submit the PDF documents for labs and homework to Gradescope as part of your final submission.\nTo submit your assignment:\n\nAccess Gradescope through the menu on the BIOS 600 Canvas site.\nClick on the assignment, and you’ll be prompted to submit it.\nMark the pages associated with each exercise. All of the pages of your lab should be associated with at least one question (i.e., should be “checked”).\nSelect the first page of your .PDF submission to be associated with the “Formatting” section."
+    "text": "Submission\nAs you’ve seen previously, we can Render the template into an .html file that can be opened by any web browser. To export it as a .pdf, open the file in your web browser and then print to or save as a .pdf document. Your TAs will show you how if you need help! (There is a way to directly knit to a .pdf file, but it’s quite a bit more involved.)\nYou will submit the PDF documents for labs and homework to Gradescope as part of your final submission.\nTo submit your assignment:\n\nAccess Gradescope through the menu on the BIOS 600 Canvas site.\nClick on the assignment, and you’ll be prompted to submit it.\nMark the pages associated with each exercise. All of the pages of your lab should be associated with at least one question (i.e., should be “checked”).\nSelect the first page of your .PDF submission to be associated with the “Formatting” section.\nEnsure all code is visible in the PDF document by indenting your code after commas."
   },
   {
-    "objectID": "labs/lab-04.html#grading",
-    "href": "labs/lab-04.html#grading",
-    "title": "Lab 4: Practice with ggplot2 and tidyverse",
+    "objectID": "labs/lab-03-data-wrangling.html#grading",
+    "href": "labs/lab-03-data-wrangling.html#grading",
+    "title": "Lab 3: Wrangling data with dplyr",
     "section": "Grading",
-    "text": "Grading\n\n\n\nComponent\nPoints\n\n\n\n\nEx 1\n3\n\n\nEx 2\n2\n\n\nEx 3\n3\n\n\nEx 4\n3\n\n\nEx 5\n1\n\n\nEx 6\n3\n\n\nEx 7\n3\n\n\nFormatting\n3\n\n\nTotal\n21\n\n\n\nThe “Formatting” grade is to assess the document format. This includes having a neatly organized document (no excessive output, warnings/messages when loading packages and/or data) with readable code and your name and the date updated in the YAML."
+    "text": "Grading\n\n\n\nComponent\nPoints\n\n\n\n\nEx 1\n5\n\n\nEx 2\n3\n\n\nEx 3\n3\n\n\nEx 4\n3\n\n\nEx 5\n3\n\n\nEx 6\n4\n\n\nEx 7\n5\n\n\nFormatting\n3\n\n\n\nThe “Formatting” grade is to assess the document format. This includes having a neatly organized document (no excessive output, warnings/messages when loading packages and/or data) with readable code and your name and the date updated in the YAML."
   },
   {
-    "objectID": "labs/lab-02-template.html",
-    "href": "labs/lab-02-template.html",
-    "title": "Lab 02: Basic Data Visualization",
-    "section": "",
-    "text": "library(tidyverse)\n\n# Load in the dataset in the R chunk here! Note that you MUST load in the dataset\n# in the chunk in order for other R chunks to recognize the dataset, even if\n# you've loaded it in the Console.\ncdc &lt;- read.csv(\"https://karamccor.github.io/b6002/labs/data/cdc_cleaned.csv\")\n\n\nExercise 1\nWrite your narrative to Exercise 1 here.\n\n\nExercise 2\n\n# Use this R chunk to create your visualization for Exercise 2.\n\nWrite your narrative to Exercise 2 here.\n\n\nExercise 3\n\n# Use this R chunk to create your visualization for Exercise 3.\n\nWrite your narrative to Exercise 3 here.\n\n\nExercise 4\n\n# Use this R chunk to create your visualization for Exercise 4.\n\nWrite your narrative to Exercise 4 here.\n\n\nExercise 5\n\n# Use this R chunk to create your visualization for Exercise 5.\n\nWrite your narrative to Exercise 5 here.\n\n\nExercise 6\n\n# Use this R chunk to create your visualization for Exercise 6.\n\nWrite your narrative to Exercise 6 here.\n\n\nAI Attestation\n[Write your AI attestation here.]\nSubmission: Remember to render your lab into an .html file and then save it as a .pdf in a web browser. You must turn in a .pdf file corresponding to the Quarto template to Gradescope in order to receive credit for the labs and homework assignments. You must assign each problem to a page in your PDF. Assign the Formatting portion to your page 1."
+    "objectID": "labs/lab-03-data-wrangling.html#acknowledgements",
+    "href": "labs/lab-03-data-wrangling.html#acknowledgements",
+    "title": "Lab 3: Wrangling data with dplyr",
+    "section": "Acknowledgements",
+    "text": "Acknowledgements\nThis lab was adapted from an activity created as part of Data Science in a Box, accessible at https://datasciencebox.org/. For more info regarding the data, contact Libby Thomas at the UNC Highway Safety Research Center at thomas@hsrc.unc.edu or John Vine-Hodge at the NCDOT Division of Bicycle and Pedestrian Transportation at javinehodge@ncdot.gov."
   },
   {
     "objectID": "labs/lab-01-template.html",
@@ -1964,7 +2097,7 @@
     "href": "ae/ae-03-clt.html#bernoulli-distribution-treatment-response",
     "title": "AE 03: Central Limit Theorem",
     "section": "Bernoulli Distribution (Treatment Response)",
-    "text": "Bernoulli Distribution (Treatment Response)\nImagine a new treatment for a disease. Each patient either responds (1) or does not respond (0) to the treatment. Suppose the probability of response is 0.3.\n\nExercise 1\nWe want to simulate drawing samples of 30 patients at a time, record the average response rate, and repeat this process 1000 times. Then we’ll look at the histogram of these sample averages to see what shape it takes.\nThe following code simulates this situation.\n\nRun the following code.\n\n\nset.seed(123)\n\n# Parameters\np &lt;- 0.3     # probability of success\nn &lt;- 30      # 30 patients at a time\nnsim &lt;- 1000 # number of simulations\n\n# Simulate 1000 sample means\nmeans &lt;- replicate(nsim, \n                   mean(rbinom(n, size = 1, prob = p)))\n\n# Plot histogram of sample means\nhist(means, breaks = 30, \n     col = \"skyblue\", \n     main = \"Sample Means (Bernoulli, p=0.3, n=30)\",\n     xlab = \"Sample Mean\")\n\n\n\n\n\n\n\n\n\nWhat do you notice about the shape of the histogram of sample means?\n\n[type response here]"
+    "text": "Bernoulli Distribution (Treatment Response)\nImagine a new treatment for a disease. Each patient either responds (1) or does not respond (0) to the treatment. Suppose the probability of response is 0.3.\nAdd in something about simply doing rbinom and asking student to describe what is happening.\n\n\nExercise 1\nWe want to simulate drawing samples of 30 patients at a time, record the average response rate, and repeat this process 1000 times. Then we’ll look at the histogram of these sample averages to see what shape it takes.\nThe following code simulates this situation.\n\nRun the following code.\n\n\nset.seed(123)\n\n# Parameters\np &lt;- 0.3     # probability of success\nn &lt;- 30      # 30 patients at a time\nnsim &lt;- 1000 # number of simulations\n\n# Simulate 1000 sample means\nmeans &lt;- replicate(nsim, \n                   mean(rbinom(n, size = 1, prob = p)))\n\n# Plot histogram of sample means\nhist(means, breaks = 30, \n     col = \"skyblue\", \n     main = \"Sample Means (Bernoulli, p=0.3, n=30)\",\n     xlab = \"Sample Mean\")\n\n\n\n\n\n\n\n\n\nWhat do you notice about the shape of the histogram of sample means?\n\n[type response here]"
   },
   {
     "objectID": "ae/ae-03-clt.html#binomial-distribution-number-of-infected-patients",
@@ -2121,200 +2254,11 @@
     "text": "Lecture 8: Central Limit Theorem\nApplication Exercise 3: Central Limit Theorem"
   },
   {
-    "objectID": "labs/lab-03-data-wrangling.html",
-    "href": "labs/lab-03-data-wrangling.html",
-    "title": "Lab 3: Wrangling data with dplyr",
+    "objectID": "labs/lab-02-template.html",
+    "href": "labs/lab-02-template.html",
+    "title": "Lab 02: Basic Data Visualization",
     "section": "",
-    "text": "Important\n\n\n\nThis lab is due on Friday, Sept 4 at 11:59pm. To be considered on time, the following must be done by the due date:\n\nFinal .pdf file submitted on Gradescope\n\nBe sure to assign questions to pages when you turn in your assignment on Gradescope. A .5 point deduction will be made any time the question is not assigned to a page within your PDF.\n\nSelect the first page of your .PDF submission to be associated with the “Formatting” section."
-  },
-  {
-    "objectID": "labs/lab-03-data-wrangling.html#set-up",
-    "href": "labs/lab-03-data-wrangling.html#set-up",
-    "title": "Lab 3: Wrangling data with dplyr",
-    "section": "Set up",
-    "text": "Set up\n\nIn Canvas, you’ll find the template for this assignment (“Lab 03 Template”). Download the file and open it.\nSave it in your class project folder as “lab-03.qmd”.\nOpen the document. Replace “Your Name Here” with your name in the YAML (the header of the document). Also, replace “Today’s Date Here” with today’s date."
-  },
-  {
-    "objectID": "labs/lab-03-data-wrangling.html#wrangling-data",
-    "href": "labs/lab-03-data-wrangling.html#wrangling-data",
-    "title": "Lab 3: Wrangling data with dplyr",
-    "section": "Wrangling Data",
-    "text": "Wrangling Data\nToday’s lab will focus on data wrangling using the tidyverse (in particular, basic functions in dplyr). The lab has a pretty hefty guided portion – follow along with the code that is written to familiarize yourself with the commands. You are highly encouraged to ask your lab TA or each other for help!\nThe data are available by typing in the following. Note that we are naming the dataset ncbikecrash - you may may the dataset something else if you wish, but make sure that you are using this name consistently throughout the lab!\n\nncbikecrash &lt;- read.csv(\"https://karamccor.github.io/b6002/labs/data/bikecrash.csv\")\n\nSince we are using the tidyverse package, we can load the package in the Console.\n\nlibrary(tidyverse)\n\nWarning: package 'ggplot2' was built under R version 4.4.3\n\n\n── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──\n✔ dplyr     1.1.4     ✔ readr     2.1.5\n✔ forcats   1.0.0     ✔ stringr   1.5.1\n✔ ggplot2   4.0.2     ✔ tibble    3.2.1\n✔ lubridate 1.9.3     ✔ tidyr     1.3.1\n✔ purrr     1.0.2     \n── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──\n✖ dplyr::filter() masks stats::filter()\n✖ dplyr::lag()    masks stats::lag()\nℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors\n\n\nYou’ll notice some “conflicts” above - this is fine. It just means that multiple packages have R functions with the same name. R will assume we want to use the functions from the tidyverse as opposed to the other package, in this case stats. dplyr::filter() masks stats::filter() means that the filter function from the dplyr package (part of the tidyverse) will be used in lieu of the filter function from the stats package. Nothing to worry about for now. (And remember that you’ll suppress these messages in your own lab document with #| warning: false and #| message: false)."
-  },
-  {
-    "objectID": "labs/lab-03-data-wrangling.html#nc-bike-crash-data",
-    "href": "labs/lab-03-data-wrangling.html#nc-bike-crash-data",
-    "title": "Lab 3: Wrangling data with dplyr",
-    "section": "NC bike crash data",
-    "text": "NC bike crash data\nThis week’s data come from the North Carolina Department of Transportation. Each year, about 1,000 bicyclists are involved in police-reported crashes with motor vehicles in North Carolina, with 60 serious injuries and 20 deaths. This is a tragic yet preventable public health issue. Today’s dataset provides all 7,467 police-reported bicycle crashes involving a motor vehicle in North Carolina from 2007 through 2014."
-  },
-  {
-    "objectID": "labs/lab-03-data-wrangling.html#examining-our-dataset",
-    "href": "labs/lab-03-data-wrangling.html#examining-our-dataset",
-    "title": "Lab 3: Wrangling data with dplyr",
-    "section": "Examining our dataset",
-    "text": "Examining our dataset\nRemember, the R Console and the Quarto document live in separate environments. If you load the tidyverse package or the dataset in your console, it won’t be loaded into the workspace for rendering the Quarto document (and vice-versa). The Console is very useful for “testing” code – seeing if what you input results in what you want. However, for creating reproducible documents, you should be editing code in your Quarto document.\nSuppose we’re interested in knowing the names or some basic characteristics of the ncbikecrash dataset. This is probably not something we want to include in our final document, but something just for our own curiosity. Try running the following two commands in the Console:\n\nnames(ncbikecrash)\n\n\nglimpse(ncbikecrash)\n\nThe names() function returns the list of variable names in the dataset, while the glimpse() function (part of the tidyverse) provides a list of names, the type of variable (integer vs. string vs. double, etc.), as well as the first few observations of each so you get a feel for what some of the data points look like for each variable.\nYou can also View the dataset by using the View() function. Try running the following command in the Console:\n\nView(ncbikecrash)"
-  },
-  {
-    "objectID": "labs/lab-03-data-wrangling.html#manipulating-datasets",
-    "href": "labs/lab-03-data-wrangling.html#manipulating-datasets",
-    "title": "Lab 3: Wrangling data with dplyr",
-    "section": "Manipulating datasets",
-    "text": "Manipulating datasets\ndplyr is a package that allows users to do some of the most common data manipulation functions. Essentially, pliers for dataframes (hence the name). It is based on the philosophy of functions as verbs that manipulate dataframes. Under the rules of dplyr, the first argument is always a dataframe, subsequent arguments say what to do with that dataframe, and dplyr-based manipulations will always return a data frame. What are some of these verbs that say what to do with our dataframes?\n\nfilter: pick rows (observations) matching certain criteria\nslice: pick rows (observations) using an index/indices\ndistinct: filter for unique rows\nselect: pick columns (variables) by name\narrange: reorder rows\nsummarize: reduce variables to summary statistic values\nmutate: add new variables (often used with case_when…more on this later)\n…and many more.\n\nAs you can see, many of these verbs do what you would expect them to do based on their function name."
-  },
-  {
-    "objectID": "labs/lab-03-data-wrangling.html#pipes",
-    "href": "labs/lab-03-data-wrangling.html#pipes",
-    "title": "Lab 3: Wrangling data with dplyr",
-    "section": "Pipes",
-    "text": "Pipes\ndplyr functions use a special operator, |&gt;, called a pipe. This operator “pipes” the output of the previous line of code as the first input of the next line of code. You can think of pronouncing it as “and then.” (Note that previous versions of tidyverse used %&gt;%, which you might come across in older documentation. |&gt; is the newer version.)\nLet’s use an everyday example to illustrate how a pipe works. Consider the following sequence of actions: 1) find car keys, 2) start the car, 3) drive to UNC, and finally, 4) park. if we express this sequence of actions as a set of nested functions in R “code,” this might look like\n\npark(drive(start_car(find(\"keys\")), to = \"campus\"))\n\n# ...don't try running this code, it won't work.\n\nIf we use pipes, we have a more natural and easier to read structure:\n\nfind(\"keys\") |&gt;\n  start_car() |&gt;\n  drive(to = \"campus\") |&gt;\n  park()\n\n# don't try running this code, either\n# still, try to \"read\" the code in plain English\n\nRemember, the |&gt; operator is pronounced “and then,” and so the above function using pipes might be pronounced find keys, and then start the car, and then drive to campus, and then park.” Much easier to figure out!"
-  },
-  {
-    "objectID": "labs/lab-03-data-wrangling.html#logical-operators-in-r",
-    "href": "labs/lab-03-data-wrangling.html#logical-operators-in-r",
-    "title": "Lab 3: Wrangling data with dplyr",
-    "section": "Logical operators in R",
-    "text": "Logical operators in R\nIn R, there are different ways of relating variables. Consider two variables, x and y.\n\nx & y: x AND y\nx | y: x OR y\n!x: NOT x\n&lt; and &gt;: less than/greater than\n&lt;= and &gt;=: less than/greater than or equal to\n==: exactly equal to\n!=: not equal to\nis.na(x): tests if x is NA and returns a list of TRUE or FALSE for each element of x (similarly, !is.na(x) tests for NOT being NA)\nx %in% y: tests if elements of x are in y and returns a list of TRUE or FALSE corresponding to each element of x"
-  },
-  {
-    "objectID": "labs/lab-03-data-wrangling.html#putting-it-all-together",
-    "href": "labs/lab-03-data-wrangling.html#putting-it-all-together",
-    "title": "Lab 3: Wrangling data with dplyr",
-    "section": "Putting it all together",
-    "text": "Putting it all together\nIn this section, we’re going to walk through some code that examines the logical operators in R. Follow along these steps that make use of some of the functions above.\n\nfilter\nWe use the filter function to select a subset of observations following some criterion(a). Suppose we are only interested in observations in Durham County. Run the following code:\n\nncbikecrash |&gt;\n  filter(county == \"Durham\")\n\nThe code should have returned a dataset with 340 rows (observations) and the same 65 variables as before. We use the logical operator == to take counties exactly equal to “Durham.” Remember that the output of pipe operators is another dataframe (if you are wondering what a tibble is, you can think of it as a special dataframe format specific to the tidyverse).\nSuppose we wanted to save the Durham County crashes as a new dataframe, durham_crashes. We can use the assignment operator to do that:\n\ndurham_crashes &lt;- ncbikecrash |&gt; \n  filter(county == \"Durham\")\n\nFinally, we can filter for many conditions at once. Suppose we’re interested in crashes in Durham County where an ambulance was required, from 2014 onward. We might use the following code:\n\nncbikecrash |&gt;\n  filter(county == \"Durham\" & ambulance_req == \"Yes\" & crash_year &gt;= 2014)\n\nWe see that there are 28 such observations, and that the previous code returned a tibble containing their information."
-  },
-  {
-    "objectID": "labs/lab-03-data-wrangling.html#slice",
-    "href": "labs/lab-03-data-wrangling.html#slice",
-    "title": "Lab 3: Wrangling data with dplyr",
-    "section": "slice",
-    "text": "slice\nInstead of picking observations that match certain criteria, we can simply take a slice of the dataset that contains specified row numbers that we want. For instance, let’s take the 4th observation:\n\nncbikecrash |&gt;\n  slice(4)\n\nIn R, the : specifies that we want everything from the left side of the colon to the right side. So, 1:8 would be “1 to 8.” So, if we wanted to take the first eight observations, we could take the following slice:\n\nncbikecrash |&gt;\n  slice(1:8)"
-  },
-  {
-    "objectID": "labs/lab-03-data-wrangling.html#select",
-    "href": "labs/lab-03-data-wrangling.html#select",
-    "title": "Lab 3: Wrangling data with dplyr",
-    "section": "select",
-    "text": "select\nOn the other hand, instead of choosing rows (observations), suppose we’re interested in choosing columns (variables). We can use the select function to do so. Say we want to keep only the locality and speed_limit variables from the dataframe. Run the following code and see what happens:\n\nncbikecrash |&gt;\n  select(locality, speed_limit)\n\nWe see that we have a new tibble consisting of only the locality and speed limit variables, but for all 7,467 observations.\nThe magic of pipes is that we can continue to do more and more operations. Try running the following code, remembering that the pipe operator is pronounced “and then”:\n\nncbikecrash |&gt;\n  filter(county == \"Durham\" & ambulance_req == \"Yes\" & crash_year &gt;= 2014) |&gt;\n  select(locality, speed_limit)\n\nWhat are we doing? We are taking the original dataset ncbikecrash, and then filtering observations where the county was Durham AND an ambulance was required AND the crash year was 2014 or greater, and then selecting to keep only the variables corresponding to locality and speed limit. The result is a tibble containing 28 observations of 2 variables.\nWe can also use select to exclude variables. Suppose we want every variable EXCEPT the “region” variable. We can easily do that by using a minus sign:\n\nncbikecrash |&gt; \n  select(-region)\n\nQuick Review\nWhat do you think the following code would do?\n\nncbikecrash |&gt;\n  filter(county %in% c(\"Wake\", \"Richmond\", \"Vance\"))\n\nHow about the following code?\n\nncbikecrash |&gt;\n  filter(development == \"Residential\" | development == \"Commercial\") |&gt;\n  select(region, development, bike_age, driver_age)"
-  },
-  {
-    "objectID": "labs/lab-03-data-wrangling.html#sample_n-and-sample_frac",
-    "href": "labs/lab-03-data-wrangling.html#sample_n-and-sample_frac",
-    "title": "Lab 3: Wrangling data with dplyr",
-    "section": "sample_n and sample_frac",
-    "text": "sample_n and sample_frac\nWe can also take random samples from our datasets. sample_n takes a random sample of n observations, whereas sample_frac takes a random sample based on the fraction of observations. Both of these functions can sample with or without replacement using the option replace = TRUE or FALSE.\nWhat is the difference between the following two sets of code?\n\nncbikecrash |&gt; \n  sample_n(5, replace = FALSE)\n\n\nncbikecrash |&gt;\n  sample_frac(0.2, replace = FALSE)\n\nThe first example using sample_n returned a tibble with 5 observations, while the second example using sample_frac returned a tibble with one-fifth of the total observations in the dataset (proportion equal to 0.2 out of 1). As always, you can save these as new datasets.\nThe following code would save a random sample of 1/3 of the ncbikecrash dataset as a new dataset called ncbikecrash_sample:\n\nncbikecrash_sample &lt;- ncbikecrash |&gt;\n  sample_frac(1/3, replace = FALSE)\n\nNotice that here we used a fraction instead of a decimal."
-  },
-  {
-    "objectID": "labs/lab-03-data-wrangling.html#distinct-and-arrange",
-    "href": "labs/lab-03-data-wrangling.html#distinct-and-arrange",
-    "title": "Lab 3: Wrangling data with dplyr",
-    "section": "distinct and arrange",
-    "text": "distinct and arrange\nThe distinct function returns all unique observations. Suppose we’re interested in all cities and counties that had a bike crash. Run the following code:\n\nncbikecrash |&gt; \n  select(county, city)\n\nAs expected, we have a tibble containing every county/city combination in the dataset, and have only those variables. However, there are a lot of repeats! We can find the unique observations as follows:\n\nncbikecrash |&gt; \n  select(county, city) |&gt;\n  distinct()\n\n“Take the ncbikecrash data, and then select county and city, and then keep only the distinct observations.”\nNote that these are in the order that they first appeared in the dataset. We can arrange them in alphabetical order as follows:\n\nncbikecrash |&gt; \n  select(county, city) |&gt; \n  distinct() |&gt; \n  arrange(county, city)\n\nThe above code, after taking the distinct observations, then arranges in order by county, and then by city. If we wanted to order in the opposite direction (descending, instead of ascending), we can simply use the desc() function:\n\nncbikecrash |&gt; \n  select(county, city) |&gt; \n  distinct() |&gt; \n  arrange(desc(county), city)\n\nWe see that we are ordering first in descending order by county, and then by ascending order by city (within the counties). If we have numeric data, we can also arrange to order the data based on their numeric values. The desc() function works the same way."
-  },
-  {
-    "objectID": "labs/lab-03-data-wrangling.html#summarise-and-group_by",
-    "href": "labs/lab-03-data-wrangling.html#summarise-and-group_by",
-    "title": "Lab 3: Wrangling data with dplyr",
-    "section": "summarise and group_by",
-    "text": "summarise and group_by\nOften times, we want to summarize values in our dataset by calculating certain summary statistics such as the mean, median, or standard deviation, etc. We can do that by using the summarise or summarize function (dplyr was written by Hadley Wickham, who is from New Zealand, hence the British spelling).\nSuppose we are interested in the mean hour at which crashes occur:\n\nncbikecrash |&gt;\n  summarize(avg_hr = mean(crash_hour))\n\nHere, we’re creating a variable avg_hr that has the mean of crash_hour. By running the above code, you should see that the average is 14.7, or around 2:45 PM.\n\nHandling NA values\nIf you have NAs in your dataset, R might throw an error if you try to calculate the mean() of a variable. To remove all NAs, we could do the following:\n\nncbikecrash |&gt;\n  summarize(avg_hr = mean(crash_hour, na.rm = T))\n\nHere, the na.rm = T is telling R to remove any NA values from the crash_hour variable before calculating the mean.\n\n\nSummarizing based on groups\nWe can also summarize based on different groups. For instance, if we were interested in the mean hour at which crashes occur based on whether the crash was a hit and run, we can first group_by the hit_run variable, and then summarize the mean crash_hour as follows:\n\nncbikecrash |&gt; \n  group_by(hit_run) |&gt; \n  summarize(avg_hr = mean(crash_hour))"
-  },
-  {
-    "objectID": "labs/lab-03-data-wrangling.html#count",
-    "href": "labs/lab-03-data-wrangling.html#count",
-    "title": "Lab 3: Wrangling data with dplyr",
-    "section": "count",
-    "text": "count\nIt is also easy to count observations of categorical variables. Suppose we wanted to count the number of observations in each category of the variable driver_alcohol_drugs. We can simply run\n\nncbikecrash |&gt; \n  count(driver_alcohol_drugs)"
-  },
-  {
-    "objectID": "labs/lab-03-data-wrangling.html#mutate-and-case_when",
-    "href": "labs/lab-03-data-wrangling.html#mutate-and-case_when",
-    "title": "Lab 3: Wrangling data with dplyr",
-    "section": "mutate and case_when",
-    "text": "mutate and case_when\nFinally, one of the most common data manipulation tasks is to create a new variable based on values of existing variables. For instance, suppose we have a dataset named dat, that contains measurements of mass (kg), height (m), and body temperature in fahrenheit (fahrenheit) for study participants. We want to make new variables for their BMI and body temperature in celsius. We can create these variables as follows (recalling the appropriate formulas):\n\ndat |&gt; \n  mutate(bmi = kg/m^2)\n\n# Don't run this code; there is no \"dat\" dataset\n\n\ndat |&gt; \n  mutate(celsius = (fahrenheit - 32) * 5/9)\n\n# same.\n\nIn doing so, we’ve created the new variables bmi and celsius equal to the right side of the equals sign in the mutate function. Most often when you define a new variable with mutate, you’ll want to use it later (for instance, in a visualization or in downstream analyses). In this case, you’d want to save the resulting dataframe, often by overwriting the original one. As an example:\n\ndat &lt;- dat |&gt; \n  mutate(bmi = kg/m^2)\n\nIn this case, we’ve saved over the dat dataframe, which now contains the new variable bmi.\nFinally, we can also do more sophisticated data creation using case_when, which allows for a sequence of formulas defining new variables. For instance, let’s suppose we want to create a new variable that categorizes BMI based on CDC cut-offs. Consider the following code, which utilizes the bmi variable we saved previously:\n\ndat &lt;- dat |&gt; \n  mutate(bmi_cat = case_when(\n    bmi &lt; 18 ~ \"underweight\",\n    bmi &gt;= 18 & bmi &lt; 25 ~ \"normal\"\n    bmi &gt;= 25 & bmi &lt; 30 ~ \"oberweight\"\n    bmi &gt; 30 ~ \"obese\"\n  ))\n\n# Be sure all parentheses are closed!\n\nWe have used the case_when function to create a new variable. The individual cases are separated by commas, and within each case, the condition (e.g., BMI &gt; 30) is on the left and the outcome for the new variable (e.g., “obese”) is on the right of a tilde (~). We have also saved over the original dataframe in order to keep this new variable, bmi_cat.\nLet’s do a concrete example using the ncbikecrash data. Suppose we want to classify whether a crash occurred on a weekend or on a weekday. We will use case_when in combination with the logical operator %in% to do so (the c() function tells R that there is a list of things coming up):\n\nncbikecrash &lt;- ncbikecrash |&gt; \n  mutate(weekend = case_when(\n    crash_day %in% c(\"Saturday\", \"Sunday\") ~ \"Weekend\",\n    crash_day %in% c(\"Monday\", \n                     \"Tuesday\", \n                     \"Wednesday\", \n                     \"Thursday\", \n                     \"Friday\") ~ \"Weekday\"\n  ))\n\nLet’s check our work by counting the number of observations in each of our categories:\n\nncbikecrash |&gt;\n  count(weekend)\n\n  weekend    n\n1 Weekday 5658\n2 Weekend 1809\n\n\nIt looks like 1809 crashes happened on weekends and 5658 occurred on weekdays."
-  },
-  {
-    "objectID": "labs/lab-03-data-wrangling.html#your-turn",
-    "href": "labs/lab-03-data-wrangling.html#your-turn",
-    "title": "Lab 3: Wrangling data with dplyr",
-    "section": "Your turn!",
-    "text": "Your turn!\nWow, that was a lot of new material. Don’t worry, the more you practice, the better you’ll get. Try the following exercises using the ncbikecrash dataset.\nNote: each of the following exercises should be done in “one go” using a series of pipes. Code should be fully shown in your final PDF for each exercise. If you are asked to “create a table,” then there is no need for additional narrative, unless specifically asked to make a conclusion based on the table.\n\n\n\n\n\n\nTipEnsure all code is visible on PDF\n\n\n\nIn your final PDF that you turn in on Gradescope, ensure all code is visible for full credit. If lines of code are too long (left to right), they may run off the page when you convert to PDF. You should consider indenting code after commas, as shown in the Weekday case_when example above. Ask your TAs if you need help checking this!"
-  },
-  {
-    "objectID": "labs/lab-03-data-wrangling.html#exercise-1",
-    "href": "labs/lab-03-data-wrangling.html#exercise-1",
-    "title": "Lab 3: Wrangling data with dplyr",
-    "section": "Exercise 1",
-    "text": "Exercise 1\n\nRun the provided code to determine the bike crashes that occurred in residential development areas where the driver age group was 0 to 19. How many such bike crashes satisfy this criteria? Provide a 1-sentence response to answer this question.\n\n\n# run this code\nncbikecrash |&gt; \n  filter(development == \"Residential\") |&gt;\n  filter(driver_age_group == \"0-19\")\n\n\n\n\n\n\n\nTipHint\n\n\n\nTo do this, run the provided code. In the Description of the data frame that is printed out, you’ll see df[rows x columns]. The number of “rows” is the number of observations that satisfy these criteria.\n\n\nNote: Do not display the output of all observations satisfying these criteria. Run the code yourself to find out the answer, but your template will have #| eval: false as a code option which suppresses this lengthy output.\n\nNow, copy and paste the code below into your code chunk within your quarto template. Edit the provided code so that the dataset is filtered to “Residential” development areas, the same as part (a). Then, run the code to create a table displaying the number of bike crashes in each age group for residential areas.\n\n\n# edit code below: replace blank with Residential\nncbikecrash |&gt; \n  filter(development == \"______\") |&gt;\n  count(driver_age_group)"
-  },
-  {
-    "objectID": "labs/lab-03-data-wrangling.html#exercise-2",
-    "href": "labs/lab-03-data-wrangling.html#exercise-2",
-    "title": "Lab 3: Wrangling data with dplyr",
-    "section": "Exercise 2",
-    "text": "Exercise 2\nCopy and paste the code below into your code chunk within your quarto template. Edit the code to create a table which orders the most commonly occurring estimated speed from lowest to highest. (i.e., the least commonly occuring speed will appear first in the table.) To do this, replace the blank with the driver_est_speed variable, then run the code. Note: It’s okay for NA values to be present in your table.\n\n# edit code: replace blank with driver estimated speed variable\nncbikecrash |&gt; \n  count(____________) |&gt;\n  arrange(n)"
-  },
-  {
-    "objectID": "labs/lab-03-data-wrangling.html#exercise-3",
-    "href": "labs/lab-03-data-wrangling.html#exercise-3",
-    "title": "Lab 3: Wrangling data with dplyr",
-    "section": "Exercise 3",
-    "text": "Exercise 3\nWrite code that 1) filters to crashes in Durham, Orange, or Wake counties, 2) groups by county, then 3) summarizes the mean driver age in each county.\nWhat was the mean driver age (driver_age) involved in a crash in each of those three counties? Display output only for those three counties.\nHint: You can filter by multiple counties using the following line of code. Recall the | operator means OR:\nfilter(county == \"Henderson\" | county == \"Wilmington\")\nHint: There are some missing values for driver_age. You can either filter for rows where the driver age isn’t missing or use the na.rm = T option in the mean() function."
-  },
-  {
-    "objectID": "labs/lab-03-data-wrangling.html#exercise-4",
-    "href": "labs/lab-03-data-wrangling.html#exercise-4",
-    "title": "Lab 3: Wrangling data with dplyr",
-    "section": "Exercise 4",
-    "text": "Exercise 4\nWhat is the mean hour for when a crash occurs in Durham County for each month? Create a table which displays this information, arranged from earliest to latest hour."
-  },
-  {
-    "objectID": "labs/lab-03-data-wrangling.html#exercise-5",
-    "href": "labs/lab-03-data-wrangling.html#exercise-5",
-    "title": "Lab 3: Wrangling data with dplyr",
-    "section": "Exercise 5",
-    "text": "Exercise 5\nCreate a new variable named time_crash based on the hour (crash_hour) that the crash occured and save in a new dataset called ncbikecrash_time. If the crash occurred during from 12:00 am to 6:59 am, define time_crash to be “Early morning.” If the crash occurred from 7:00 am to 11:59 am, define time_crash to be “Morning.” From 12:00 pm to 5:59 pm “Afternoon,” and from 6:00 pm to 11:59 pm “Evening.”\nThen, create a table which counts the number of crashes that occurred during these time periods. When do most crashes occur? Note: For this question, you should have one section of code for defining the new dataset with the new variable, and a second section of code for creating the table. (They can be in the same code chunk, but they’ll be two separate pieces.)"
-  },
-  {
-    "objectID": "labs/lab-03-data-wrangling.html#exercise-6",
-    "href": "labs/lab-03-data-wrangling.html#exercise-6",
-    "title": "Lab 3: Wrangling data with dplyr",
-    "section": "Exercise 6",
-    "text": "Exercise 6\n\nCalculate the mean driver age involved in crashes in all NC counties.\nCreate a table which displays the county name and the mean driver age in those counties. In your table, display only the top five counties in terms of oldest drivers, sorted from largest to smallest. Note: You may need to use na.rm = T to remove NA values."
-  },
-  {
-    "objectID": "labs/lab-03-data-wrangling.html#exercise-7",
-    "href": "labs/lab-03-data-wrangling.html#exercise-7",
-    "title": "Lab 3: Wrangling data with dplyr",
-    "section": "Exercise 7",
-    "text": "Exercise 7\n\n(a)\nCreate a side-by-side boxplot showing the distribution of biker age (bike_age) by region. Include an informative title. Fill the boxplots with a color of your choice (other than the default). Click here for a list of colors in R. Provide 1 sentence commenting on the distribution of ages across groups.\n\n\n(b)\nRun the following code to create grouped box plots. (The code should already be in your Quarto template.) Add an informative title and informative axis labels. What do you notice about Snow, Sleet, Hail, Freezing Rain/Drizzle driver ages in Rural vs. Urban areas?\n\nggplot(ncbikecrash, \n       mapping = aes(x = rural_urban, \n                     y = driver_age, \n                     fill = weather)) +\n  geom_boxplot()"
-  },
-  {
-    "objectID": "labs/lab-03-data-wrangling.html#ai-attestation",
-    "href": "labs/lab-03-data-wrangling.html#ai-attestation",
-    "title": "Lab 3: Wrangling data with dplyr",
-    "section": "AI Attestation",
-    "text": "AI Attestation\nIf you used AI for this assignment, list your prompts below. Cite any other online resources you used. If you did not use AI for this assignment, you may simply state “I did not use AI for this assignment.”"
-  },
-  {
-    "objectID": "labs/lab-03-data-wrangling.html#submission",
-    "href": "labs/lab-03-data-wrangling.html#submission",
-    "title": "Lab 3: Wrangling data with dplyr",
-    "section": "Submission",
-    "text": "Submission\nAs you’ve seen previously, we can Render the template into an .html file that can be opened by any web browser. To export it as a .pdf, open the file in your web browser and then print to or save as a .pdf document. Your TAs will show you how if you need help! (There is a way to directly knit to a .pdf file, but it’s quite a bit more involved.)\nYou will submit the PDF documents for labs and homework to Gradescope as part of your final submission.\nTo submit your assignment:\n\nAccess Gradescope through the menu on the BIOS 600 Canvas site.\nClick on the assignment, and you’ll be prompted to submit it.\nMark the pages associated with each exercise. All of the pages of your lab should be associated with at least one question (i.e., should be “checked”).\nSelect the first page of your .PDF submission to be associated with the “Formatting” section.\nEnsure all code is visible in the PDF document by indenting your code after commas."
-  },
-  {
-    "objectID": "labs/lab-03-data-wrangling.html#grading",
-    "href": "labs/lab-03-data-wrangling.html#grading",
-    "title": "Lab 3: Wrangling data with dplyr",
-    "section": "Grading",
-    "text": "Grading\n\n\n\nComponent\nPoints\n\n\n\n\nEx 1\n5\n\n\nEx 2\n3\n\n\nEx 3\n3\n\n\nEx 4\n3\n\n\nEx 5\n3\n\n\nEx 6\n4\n\n\nEx 7\n5\n\n\nFormatting\n3\n\n\n\nThe “Formatting” grade is to assess the document format. This includes having a neatly organized document (no excessive output, warnings/messages when loading packages and/or data) with readable code and your name and the date updated in the YAML."
-  },
-  {
-    "objectID": "labs/lab-03-data-wrangling.html#acknowledgements",
-    "href": "labs/lab-03-data-wrangling.html#acknowledgements",
-    "title": "Lab 3: Wrangling data with dplyr",
-    "section": "Acknowledgements",
-    "text": "Acknowledgements\nThis lab was adapted from an activity created as part of Data Science in a Box, accessible at https://datasciencebox.org/. For more info regarding the data, contact Libby Thomas at the UNC Highway Safety Research Center at thomas@hsrc.unc.edu or John Vine-Hodge at the NCDOT Division of Bicycle and Pedestrian Transportation at javinehodge@ncdot.gov."
+    "text": "library(tidyverse)\n\n# Load in the dataset in the R chunk here! Note that you MUST load in the dataset\n# in the chunk in order for other R chunks to recognize the dataset, even if\n# you've loaded it in the Console.\ncdc &lt;- read.csv(\"https://karamccor.github.io/b6002/labs/data/cdc_cleaned.csv\")\n\n\nExercise 1\nWrite your narrative to Exercise 1 here.\n\n\nExercise 2\n\n# Use this R chunk to create your visualization for Exercise 2.\n\nWrite your narrative to Exercise 2 here.\n\n\nExercise 3\n\n# Use this R chunk to create your visualization for Exercise 3.\n\nWrite your narrative to Exercise 3 here.\n\n\nExercise 4\n\n# Use this R chunk to create your visualization for Exercise 4.\n\nWrite your narrative to Exercise 4 here.\n\n\nExercise 5\n\n# Use this R chunk to create your visualization for Exercise 5.\n\nWrite your narrative to Exercise 5 here.\n\n\nExercise 6\n\n# Use this R chunk to create your visualization for Exercise 6.\n\nWrite your narrative to Exercise 6 here.\n\n\nAI Attestation\n[Write your AI attestation here.]\nSubmission: Remember to render your lab into an .html file and then save it as a .pdf in a web browser. You must turn in a .pdf file corresponding to the Quarto template to Gradescope in order to receive credit for the labs and homework assignments. You must assign each problem to a page in your PDF. Assign the Formatting portion to your page 1."
   },
   {
     "objectID": "labs/lab-03-template.html",
@@ -2324,67 +2268,123 @@
     "text": "library(tidyverse)\n\nncbikecrash &lt;- read_csv(\"https://karamccor.github.io/b6002/labs/data/bikecrash.csv\")\n\n\nExercise 1\n\n(a)\n\n# run this code\nncbikecrash |&gt; \n  filter(development == \"Residential\") |&gt;\n  filter(driver_age_group == \"0-19\")\n\n# A tibble: 223 × 65\n    ...1 object_id city   county region development locality on_road rural_urban\n   &lt;dbl&gt;     &lt;dbl&gt; &lt;chr&gt;  &lt;chr&gt;  &lt;chr&gt;  &lt;chr&gt;       &lt;chr&gt;    &lt;chr&gt;   &lt;chr&gt;      \n 1   106      3743 None … Burke  Mount… Residential Mixed (… &lt;NA&gt;    Rural      \n 2   108      3756 Fores… Ruthe… Mount… Residential Urban (… &lt;NA&gt;    Urban      \n 3   113      3805 Ralei… Wake   Piedm… Residential Mixed (… &lt;NA&gt;    Urban      \n 4   115      3824 South… Moore  Piedm… Residential Urban (… &lt;NA&gt;    Urban      \n 5   127      3897 Siler… Chath… Piedm… Residential Urban (… &lt;NA&gt;    Urban      \n 6   177      2173 Asheb… Rando… Piedm… Residential Urban (… &lt;NA&gt;    Urban      \n 7   182      2029 None … Johns… Coast… Residential Rural (… &lt;NA&gt;    Rural      \n 8   211      7047 Mount… Gaston Piedm… Residential Urban (… &lt;NA&gt;    Urban      \n 9   212      7049 None … Meckl… Piedm… Residential Rural (… &lt;NA&gt;    Rural      \n10   250      7245 Charl… Meckl… Piedm… Residential Urban (… &lt;NA&gt;    Urban      \n# ℹ 213 more rows\n# ℹ 56 more variables: speed_limit &lt;chr&gt;, traffic_control &lt;chr&gt;, weather &lt;chr&gt;,\n#   workzone &lt;chr&gt;, bike_age &lt;dbl&gt;, bike_age_group &lt;chr&gt;, bike_alcohol &lt;chr&gt;,\n#   bike_alcohol_drugs &lt;chr&gt;, bike_direction &lt;chr&gt;, bike_injury &lt;chr&gt;,\n#   bike_position &lt;chr&gt;, bike_race &lt;chr&gt;, bike_sex &lt;chr&gt;, driver_age &lt;dbl&gt;,\n#   driver_age_group &lt;chr&gt;, driver_alcohol &lt;chr&gt;, driver_alcohol_drugs &lt;chr&gt;,\n#   driver_est_speed &lt;chr&gt;, driver_injury &lt;chr&gt;, driver_race &lt;chr&gt;, …\n\n\n[type response here]\n\n\n(b)\n\n# paste and edit code below: replace blank with Residential, then run code\n\n\n\n\nExercise 2\n\n# paste and edit code below: replace blank with driver estimated speed variable, then run code\n\n\n\nExercise 3\n\n# type code here\n\n\n\nExercise 4\n\n# type code here\n\n\n\nExercise 5\n\n# type code here\n\n\n# type code here\n\n\n\nExercise 6\n\n# type code here\n\n\n\nExercise 7\n\n# type code here\n\n[write response here]\n\nggplot(ncbikecrash, mapping = aes(x = rural_urban, \n                                  y = driver_age, \n                                  fill = weather)) +\n  geom_boxplot()\n\n\n\n\n\n\n\n\n[write response here]\nSubmission: Remember to render your lab into an .html file and then save it as a .pdf in a web browser. You must turn in a .pdf file corresponding to the Quarto template to Gradescope in order to receive credit for the labs and homework assignments. You must assign each problem to a page in your PDF. Assign the Formatting portion to your page 1. Ensure all code is visible by indenting after commas as needed."
   },
   {
-    "objectID": "labs/lab-04-template.html",
-    "href": "labs/lab-04-template.html",
-    "title": "Lab 04",
+    "objectID": "labs/lab-04.html",
+    "href": "labs/lab-04.html",
+    "title": "Lab 4: Practice with ggplot2 and tidyverse",
     "section": "",
-    "text": "# load packages here\n\nlibrary(tidyverse)"
+    "text": "Important\n\n\n\nThis lab is due on Monday, September 14 at 11:59pm. To be considered on time, the following must be done by the due date:\n\nFinal .pdf file submitted on Gradescope\n\nBe sure to assign questions to pages when you turn in your assignment on Gradescope. A .5 point deduction will be made any time the question is not assigned to a page within your PDF.\n\nSelect the first page of your .PDF submission to be associated with the “Formatting” section."
   },
   {
-    "objectID": "labs/lab-04-template.html#exercise-1",
-    "href": "labs/lab-04-template.html#exercise-1",
-    "title": "Lab 04",
-    "section": "Exercise 1",
-    "text": "Exercise 1\n\n\n\n\n# load data here\n\n\n# display first seven rows of dataset with slice() below\n\n\n\n\n\n# print column names of your dataset with names() below:"
+    "objectID": "labs/lab-04.html#getting-started",
+    "href": "labs/lab-04.html#getting-started",
+    "title": "Lab 4: Practice with ggplot2 and tidyverse",
+    "section": "Getting started",
+    "text": "Getting started\n\nIn Canvas, you’ll find the template for this assignment (“Lab 04 Template”). Download the file and open it.\nSave it in your class project folder as “lab-04.qmd”.\nOpen the document. Replace “Your Name Here” with your name in the YAML (the header of the document). Also, replace “Today’s Date Here” with today’s date. Filling in your name and date will count towards your “Formatting” score from here on out.\nRender your document to make sure your YAML is rendering correctly.\n\n\n\n\n\n\n\nTipTip for the Lab\n\n\n\nWrite all code and narrative in your Quarto file. Write all narrative in complete sentences. Throughout the assignment, you should periodically render your Quarto document to produce the updated html file."
   },
   {
-    "objectID": "labs/lab-04-template.html#exercise-2",
-    "href": "labs/lab-04-template.html#exercise-2",
-    "title": "Lab 04",
+    "objectID": "labs/lab-04.html#load-the-tidyverse",
+    "href": "labs/lab-04.html#load-the-tidyverse",
+    "title": "Lab 4: Practice with ggplot2 and tidyverse",
+    "section": "Load the tidyverse",
+    "text": "Load the tidyverse\nIn the code chunk labeled load-packages, copy and paste the code below to load in the tidyverse package for today’s lab:\n\nlibrary(tidyverse)\n\n\n\n\n\n\n\nTipGlobally setting warnings and messages to false\n\n\n\nNote that in your template, warnings and message have been set to false globally (i.e. across the entire document) by specifying these options in the YAML. Since we will be loading in packages and a dataset, this will be helpful for you formatting on this assignment.\nIt can be helpful to set global options this way in practice. However, take care when choosing this route, as sometimes warnings and messages can be helpful for troubleshooting."
+  },
+  {
+    "objectID": "labs/lab-04.html#practice-with-ggplot-and-tidyverse",
+    "href": "labs/lab-04.html#practice-with-ggplot-and-tidyverse",
+    "title": "Lab 4: Practice with ggplot2 and tidyverse",
+    "section": "Practice with ggplot and tidyverse",
+    "text": "Practice with ggplot and tidyverse\nToday’s lab involves more practice with ggplot and the tidyverse. You will also learn about loading data into R and setting a working directory to look for data.\nFast foods have been criticized as offering unhealthy foods which are calorically dense, high in sodium and added sugars, and low in vitamins and minerals. Today’s dataset was compiled by Joey Stanley at BYU and consists of information regarding McDonald’s menu items.\n\n\n\n\n\n\nTipBest practices for data Visualization\n\n\n\nWhen performing data visualization, make sure that all your plots have clear and informative titles and axis labels. When investigating more complex relationships with many variables, this simple tip will save you and your readers a lot of time and confusion."
+  },
+  {
+    "objectID": "labs/lab-04.html#loading-in-data",
+    "href": "labs/lab-04.html#loading-in-data",
+    "title": "Lab 4: Practice with ggplot2 and tidyverse",
+    "section": "Loading in data",
+    "text": "Loading in data\nPreviously, you loaded data directly into R by using the read.csv command that pointed to a website. But what if you had a dataset on your computer?\nYou can still do so, but need to point R to reference the appropriate space on your computer. For instance, if I downloaded the McDonald’s Menu Items dataset to my Downloads folder and named it file.csv, I might be able to load the dataset into R under the name mcd with the following command:\n\nmcd &lt;- read.csv(\"C:/Users/Kara/Downloads/file.csv\")\n\nNote that file.csv, the name of the file on your computer, could be different from the object name in R (this case, mcd).\nHowever, file paths can be quite long. There’s a better way! This is where our project folder comes in."
+  },
+  {
+    "objectID": "labs/lab-04.html#navigate-to-your-project-folder",
+    "href": "labs/lab-04.html#navigate-to-your-project-folder",
+    "title": "Lab 4: Practice with ggplot2 and tidyverse",
+    "section": "Navigate to your project folder",
+    "text": "Navigate to your project folder\nFirst, make sure you are in your project folder. You should see a blue cube at the top right of your RStudio window with the name of your project. If you see it, great. If not, you can open your project with File &gt; Open Project.\nAt the beginning of class, you should have created a data folder that lives in your project folder. If you copy your data (perhaps it’s called file.csv) into your data folder, you can read it in with the following code:\n\nmcd &lt;- read.csv(\"data/file.csv\")\n\nBecause we are working out of our project folder, R knew to start looking in the data folder within the project by default. Using this strategy provides a shortcut instead of needing to provide the entire file path.\nAny R output will go into your project folder (for instance, if you want to specifically save plots, figures, etc.) by default.\nNote: there are some syntax issues with the way R parses in slashes, and this may change from Mac to PC (…anyone use Linux?). You can always check your current working directory with the following command in order to check the formatting of the file path (and also see what the current directory is!):\n\ngetwd()\n\n[1] \"C:/Users/kmcco/OneDrive - University of North Carolina at Chapel Hill/Documents/UNC_Teaching/fall2026/bios600-fa26/labs\""
+  },
+  {
+    "objectID": "labs/lab-04.html#downloading-the-data",
+    "href": "labs/lab-04.html#downloading-the-data",
+    "title": "Lab 4: Practice with ggplot2 and tidyverse",
+    "section": "Downloading the data",
+    "text": "Downloading the data\nFirst, download the Joey Stanley dataset. The data are available on his website here (https://joeystanley.com/data/), and clicking on “McDonald’s Menu Items. Save the data in your data folder within your project folder as menu.csv.\n\nExercise 1\n\nIn your code chunk labeled load-data, read in the data with the following code:\n\n\nmcd &lt;- read.csv(\"data/menu.csv\")\n\nWatch out for the naming of the file and where it’s saved on your computer! Print the first seven rows of the dataset with slice().\n\n\n\n\n\n\nImportantGetting an error?\n\n\n\nIf you’re getting an error here, check the following:\n\nThat you have your project open within RStudio (there is a blue cube at the top right of your RStudio window with the name of your project folder next to it. If you don’t see this, click File &gt; Open Project… and navigate to your project folder.)\nThat there is a folder called data within this project folder, and menu.csv is saved in that data folder.\n\nIf you’ve checked these things and are still getting an error, reach out to the teaching team for help!\n\n\n\nPrint the column names in your dataset with names()."
+  },
+  {
+    "objectID": "labs/lab-04.html#on-your-own",
+    "href": "labs/lab-04.html#on-your-own",
+    "title": "Lab 4: Practice with ggplot2 and tidyverse",
+    "section": "On your own!",
+    "text": "On your own!"
+  },
+  {
+    "objectID": "labs/lab-04.html#exercise-2",
+    "href": "labs/lab-04.html#exercise-2",
+    "title": "Lab 4: Practice with ggplot2 and tidyverse",
     "section": "Exercise 2",
-    "text": "Exercise 2"
+    "text": "Exercise 2\nCreate a table which displays the number of menu items in each food category. (Hint: use the count() function.) Which category has the most number of items? Which category has the least?"
   },
   {
-    "objectID": "labs/lab-04-template.html#exercise-3",
-    "href": "labs/lab-04-template.html#exercise-3",
-    "title": "Lab 04",
+    "objectID": "labs/lab-04.html#exercise-3",
+    "href": "labs/lab-04.html#exercise-3",
+    "title": "Lab 4: Practice with ggplot2 and tidyverse",
     "section": "Exercise 3",
-    "text": "Exercise 3"
+    "text": "Exercise 3\n\nModify the code below to create a new variable called cal_oz which calculates the calories per ounce in each of the menu items. In this code, we are saving the dataset to a new object called mcd_cal.\n\n\nmcd_cal &lt;- mcd |&gt;\n  mutate(_______) # create the new variable here\n\n\nCreate a new R Chunk. Now, within your newly created dataset mcd_cal, select the variables Category, Item, and cal_oz, then print the first five observations with slice(). Within the first five observations, which food item has the highest calories per ounce?"
   },
   {
-    "objectID": "labs/lab-04-template.html#exercise-4",
-    "href": "labs/lab-04-template.html#exercise-4",
-    "title": "Lab 04",
+    "objectID": "labs/lab-04.html#exercise-4",
+    "href": "labs/lab-04.html#exercise-4",
+    "title": "Lab 4: Practice with ggplot2 and tidyverse",
     "section": "Exercise 4",
-    "text": "Exercise 4"
+    "text": "Exercise 4\n\nCreate a table which displays the top five most caloric menu items (only based on total calories), with the highest-value item at the top of the table. In doing so, display only the name of the menu item and the calories. You may use the following code to get started:\n\n\nmcd_cal |&gt;\n  select(_____, _____) |&gt;\n  arrange(_______) |&gt; # arrange highest to lowest\n  slice(_______)\n\n\nNow, using similar code as above, create a second table which displays the top five most caloric menu items per ounce (based on the new variable you created in Exercise 2).\nWhich item ranks the highest in each of the tables? Are you surprised?"
   },
   {
-    "objectID": "labs/lab-04-template.html#exercise-5",
-    "href": "labs/lab-04-template.html#exercise-5",
-    "title": "Lab 04",
+    "objectID": "labs/lab-04.html#exercise-5",
+    "href": "labs/lab-04.html#exercise-5",
+    "title": "Lab 4: Practice with ggplot2 and tidyverse",
     "section": "Exercise 5",
-    "text": "Exercise 5"
+    "text": "Exercise 5\nThere are 9 calories per gram of fat. Create a new variable which corresponds to the proportion of calories that come from fat for each of the menu items. (Assign this dataset, with the newly created variable, to the object mcd_cal.) You can define the new variable as follows: prop_cal_fat = Fat*9/Calories. (Nothing needs to be printed out here. Just show your code.)"
   },
   {
-    "objectID": "labs/lab-04-template.html#exercise-6",
-    "href": "labs/lab-04-template.html#exercise-6",
-    "title": "Lab 04",
+    "objectID": "labs/lab-04.html#exercise-6",
+    "href": "labs/lab-04.html#exercise-6",
+    "title": "Lab 4: Practice with ggplot2 and tidyverse",
     "section": "Exercise 6",
-    "text": "Exercise 6"
+    "text": "Exercise 6\nCreate a visualization that shows the distribution of calories in McDonald’s menu items by category. Use the following code to get started, filling in the blanks. (You do not need to alter the geom_boxplot or the theme() parts of the code.)\n\nggplot(data = _______, \n       mapping = aes(y = ________, \n                     x = _________, \n                     fill = ________)) +\n  geom_boxplot() + \n  theme(legend.position = \"none\",\n        axis.text.x = element_text(angle = 45, hjust = 1)) +\n  labs(title = \"___________\")\n\nWhat patterns do you see?"
   },
   {
-    "objectID": "labs/lab-04-template.html#exercise-7",
-    "href": "labs/lab-04-template.html#exercise-7",
-    "title": "Lab 04",
+    "objectID": "labs/lab-04.html#exercise-7",
+    "href": "labs/lab-04.html#exercise-7",
+    "title": "Lab 4: Practice with ggplot2 and tidyverse",
     "section": "Exercise 7",
-    "text": "Exercise 7"
+    "text": "Exercise 7\nCreate a visualization that plots the calories per ounce of items (x-axis) by the proportion of calories that come from fat (y-axis). In this visualization, color by the food category. What pattern(s) do you see?"
   },
   {
-    "objectID": "labs/lab-04-template.html#ai-attestation",
-    "href": "labs/lab-04-template.html#ai-attestation",
-    "title": "Lab 04",
+    "objectID": "labs/lab-04.html#ai-attestation",
+    "href": "labs/lab-04.html#ai-attestation",
+    "title": "Lab 4: Practice with ggplot2 and tidyverse",
     "section": "AI Attestation",
-    "text": "AI Attestation"
+    "text": "AI Attestation\nIf you used AI for this assignment, list your prompts below. Cite any other online resources you used. If you did not use AI for this assignment, you may simply state “I did not use AI for this assignment.”"
+  },
+  {
+    "objectID": "labs/lab-04.html#submission",
+    "href": "labs/lab-04.html#submission",
+    "title": "Lab 4: Practice with ggplot2 and tidyverse",
+    "section": "Submission",
+    "text": "Submission\nAs you’ve seen previously, we can Render the template into an .html file that can be opened by any web browser. To export it as a .pdf, open the file in your web browser and then print to or save as a .pdf document. Your TAs will show you how if you need help! (There is a way to directly knit to a .pdf file, but it’s quite a bit more involved.)\nYou will submit the PDF documents for labs and homework to Gradescope as part of your final submission.\nTo submit your assignment:\n\nAccess Gradescope through the menu on the BIOS 600 Canvas site.\nClick on the assignment, and you’ll be prompted to submit it.\nMark the pages associated with each exercise. All of the pages of your lab should be associated with at least one question (i.e., should be “checked”).\nSelect the first page of your .PDF submission to be associated with the “Formatting” section."
+  },
+  {
+    "objectID": "labs/lab-04.html#grading",
+    "href": "labs/lab-04.html#grading",
+    "title": "Lab 4: Practice with ggplot2 and tidyverse",
+    "section": "Grading",
+    "text": "Grading\n\n\n\nComponent\nPoints\n\n\n\n\nEx 1\n3\n\n\nEx 2\n2\n\n\nEx 3\n3\n\n\nEx 4\n3\n\n\nEx 5\n1\n\n\nEx 6\n3\n\n\nEx 7\n3\n\n\nFormatting\n3\n\n\nTotal\n21\n\n\n\nThe “Formatting” grade is to assess the document format. This includes having a neatly organized document (no excessive output, warnings/messages when loading packages and/or data) with readable code and your name and the date updated in the YAML."
   },
   {
     "objectID": "labs/lab-2-data-viz.html",

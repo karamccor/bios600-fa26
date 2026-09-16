@@ -1,0 +1,17 @@
+---
+title: "poisson"
+---
+
+## Hospital Visits: Poisson Example
+
+Suppose that in a hospital emergency department, the average number of asthma-related visits per hour is 3. Let $Y$ be the number of asthma visits in one hour. Then $Y \sim Poisson(\lambda=3)$
+
+### Exercise 3
+
+What is the probability that in a given hour, exactly 5 asthma patients arrive? Use the `dpois` function to compute your answer and provide a 1-sentence conclusion.
+
+```{r}
+# type code here
+```
+
+[type response here]

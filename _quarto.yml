@@ -1,6 +1,17 @@
 project:
   type: website
   output-dir: docs
+  render:
+    - "*.qmd"
+    - "!exam/"
+    - "!hw-01-solution.qmd"
+    - "!hw-02-solution.qmd"
+    - "!hw-03-solution.qmd"
+    - "!lab-1-solution.qmd"
+    - "!lab-02-solution.qmd"
+    - "!lab-03-solution.qmd"
+    - "!lab-04-solution.qmd"
+
 
 website:
   title: "BIOS 600 Fall 2026"

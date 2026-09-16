@@ -1,0 +1,61 @@
+---
+title: "Lab 04"
+author: "Your Name Here"
+date: "Today's Date Here"
+format: html
+execute:
+  warning: false
+  message: false
+---
+
+```{r}
+#| label: load-packages
+# load packages here
+
+library(tidyverse)
+```
+
+
+## Exercise 1
+
+a. 
+
+```{r}
+#| label: load-data-a
+
+# load data here
+
+
+# display first seven rows of dataset with slice() below
+
+```
+
+b. 
+
+```{r}
+#| label: load-data-b
+
+# print column names of your dataset with names() below:
+
+```
+
+
+## Exercise 2
+
+
+## Exercise 3
+
+
+## Exercise 4
+
+
+## Exercise 5
+
+
+## Exercise 6
+
+
+## Exercise 7
+
+
+## AI Attestation

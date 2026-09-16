@@ -1,0 +1,71 @@
+---
+title: "HW 1 Solution"
+format: docx
+---
+
+
+#### Exercise 1:
+
+a. This study would be considered observational rather than experimental. In an observational study, researchers observe and measure outcomes without manipulating the variables or assigning participants to different conditions. In this case, the researchers observed the eating behaviors and caloric intake of patients with different types of dementia without assigning them to any specific group or intervening in their behavior. The different patient types (without dementia, with AD, semantic dementia, and bvFTD) were pre-existing, and the researchers simply observed the outcomes.
+
+b. Right skewed due to shape of the boxplot. Median is shifted to the lower values and there is a longer tail towards the higher end of caloric intake. 
+
+c. Reproducible: being able to take original dementia & caloric intake data and code to
+reproduce all numerical findings. Replicable: being able to independently repeat an entire study without use of the original data (taking new data from a new group of dementia patients, perhaps), with the same methods. 
+
+#### Exercise 2 
+
+- Type of dementia: categorical nominal
+
+- Total caloric intake: numeric continuous
+
+- % of calories from sugar: numeric continuous
+
+- Disease duration: numeric continuous (numeric discrete is OK too)
+
+- Frontal rating scale: categorical ordinal
+
+#### Exercise 3: 
+
+a. Boxplots or bar plots with Frontal rating scale on the x-axis and % of calories on the y-axis.
+
+b. Scatterplot with disease duration on x-axis, caloric intake on the y-axis, and points colored/shaped according to type of dementia.
+
+#### Exercise 4
+
+a. Yes, this is reasonable based on the visualization. The distribution of caloric intake for bvFTD is higher compared to the other dementia types. 
+
+b. (anything reasonable ok here) For example, "Higher caloric intake in bvFTD compared to other dementia types"
+
+#### Exercise 5: 
+
+a. 126/(126+253+129) = 126/508 = .248
+
+b. p(placebo or male) = p(placebo) + p(male) - p(placebo and male) = 126/508 + (126+64+64)/508 - 64/508 = 316/508 = 0.622
+
+c. 64/508 = 0.125.This is the number of (placebo and male) divided by grand total. 
+
+d. (121+120)/508 = 241 / 508 = .4744. Adding those who did not have a high dose, dividing by grand total. 
+
+e. p(female and underlying diseases) = p(female) + p(underlying) - p(female and underlying). Cannot calculate because we need p(female and underlying diseases).
+
+f. p(female) + p(no vaccine dose) - p(female and no vaccine dose) = (127+65+62)/508 + 126/508 - 62/508 = 0.625
+
+g. 152/253 = .6007. Total 18-44 from only within the high dose column, divided by total in the high dose column.
+
+h. (67+32)/(67+32+35) = 99/134 = .738. Number of people 45-54 only assigned to a low or high vaccine dose, divided by total number in that age group. 
+
+#### Exercise 6:
+
+a. Lower HDIs are associated w/ higher prevalence of MSVI. 
+
+b. Nigeria has the lowest HDI out of those countries. 
+
+#### Exercise 7: 
+
+a. India has higher prevalance of MSVI than might be expected given its HDI. We can tell because the point for India is so much higher (on the y-axis, aka the MSVI axis) than the general trend of the points. 
+
+b. (Any response OK, just grade on completion.) This is reasonable, there is a downward trend between HDI and MSVI. However, it may be difficult to define what the question means by "closely associated", so additional statistical tests may be useful. 
+
+
+

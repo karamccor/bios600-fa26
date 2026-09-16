@@ -1,0 +1,53 @@
+---
+title: "Lab 01 Solution"
+subtitle: "BIOS 600 - Fall 2025"
+logo: "images/logo_600.png"
+editor: visual
+format: docx
+---
+
+Due Friday, Aug 22 at 11:59pm.
+
+# On your own
+
+## Exercise 1
+
+R has various useful datasets built-in. One of these datasets is the `mtcars` dataset, extracted from the 1974 *Motor Trend* US magazine. One way we can ask for help in R, and to find out information about the data, is by typing the `?` in the console. Type `?mtcars` in the Console to view the help page for the `mtcars` dataset.
+
+List three variables from this dataset, along with their units.
+
+## Solution
+
+Any three variables with units acceptable. E.g. `mpg` = miles per gallon, `cyl` = number of cylinders, `disp` = displacement (cu. in.)
+
+## Exercise 2
+
+In the space provided, explain what you think \### in front of text (not code) does.
+
+## Solution
+
+\### in front of text creates a header.
+
+## Exercise 3
+
+Write a quick one paragraph intro about yourself. Be creative!
+
+## Solution
+
+Any reasonable answer acceptable.
+
+## Exercise 4
+
+In the R chunk, pick your two favorite numbers and add them together using R’s built-in calculator function. The answer should be knit directly in the document.
+
+## Solution
+
+Any two numbers is fine.
+
+```{r}
+3+2
+```
+
+## From .html to .pdf
+
+Important: You must turn in a .pdf file corresponding to the Quarto template to Gradescope in order to receive credit for the assignment.

@@ -9,3 +9,56 @@ title: "BIOS 600 Fall 2026"
 [Lecture 0: Welcome to BIOS 600!](slides/lec-0-welcome.html)
 
 [Lab 1: Introducing the Toolkit](labs/lab-1.html)
+
+[Lecture 1: What is statistical inference?](slides/lec-1-whats-stat-inf.html)
+
+## Week 2
+
+[Lab 2: Basic Data Visualization](labs/lab-2-data-viz.html)
+
+[Lecture 2: The nature of data](slides/lec-2-nature-data.html)
+
+[Lecture 3: Probability basics](slides/lec-3-prob-basics.html)
+
+[HW 1](hw/hw-01.html)
+
+## Week 3
+
+[Lab 3: Data Wrangling](labs/lab-03-data-wrangling.html)
+
+[Lecture 4: Conditional probability](slides/lec-4-conditional-bayes.html)
+
+[Lecture 5: Medical diagnostics](slides/lec-5-diagnostic.html)
+
+[HW 2](hw/hw-02.html)
+
+## Week 4
+
+[Lecture 6: Discrete distributions](slides/lec-6-discrete.html)
+
+[Lab 4: Practice with ggplot2 and tidyverse](labs/lab-04.html)
+
+[Application Exercise 1: Binomial in a Biomedical Setting](ae/ae-01.html)
+
+[Lecture 7: Continuous distributions](slides/lec-7-continuous.html)
+
+[Application Exercise 2: Poisson in a Hospital Setting](ae/ae-02-poisson.html)
+
+[HW 3](hw/hw-03.html)
+
+[AE 1 Solution](ae/ae-01-solution.html)
+
+## Exam Resources
+
+[Exam 01 Topics List](resources/exam-01-topics.html)
+
+[Exam 01 Formula Sheet](resources/exam-01-formulas.html)
+
+[Exam 01 Practice Problems](resources/exam-01-practice.html)
+
+## Week 5
+
+[Lecture 8: Central Limit Theorem](slides/lec-8-clt.html)
+
+[Application Exercise 3: Central Limit Theorem](ae/ae-03-clt.html)
+
