@@ -1323,6 +1323,34 @@
     "text": "Notecard\n\nWrite your name\nWhat are you excited to learn in this course?\n\nTurn this in for attendance today."
   },
   {
+    "objectID": "resources/exam-01-topics.html",
+    "href": "resources/exam-01-topics.html",
+    "title": "Topics List",
+    "section": "",
+    "text": "Lectures 1-7, HW 1-3, Labs 1-3, AE 1-2"
+  },
+  {
+    "objectID": "resources/exam-01-topics.html#material-covered",
+    "href": "resources/exam-01-topics.html#material-covered",
+    "title": "Topics List",
+    "section": "",
+    "text": "Lectures 1-7, HW 1-3, Labs 1-3, AE 1-2"
+  },
+  {
+    "objectID": "resources/exam-01-topics.html#coding",
+    "href": "resources/exam-01-topics.html#coding",
+    "title": "Topics List",
+    "section": "Coding",
+    "text": "Coding\n\nConsole vs. Quarto document. When might you code in Quarto document and not in Console? How can using Quarto help with reproducibility?\nView() and glimpse() and names()\ngetwd(). What does it tell you?\nYAML: what is it, how is it helpful for documentation?\nHow to create headers in Quarto\nHow to comment out code within a code chunk\nlibrary() vs. install.packages()\nWhat is ggplot()?\nWhat is the tidyverse ?\ngeom_point(), geom_boxplot(), geom_bar(), geom_line(), labs(), size, color, alpha, fill. What do all these do?\nWhich type of ggplot would be appropriate based on different variable types (e.g. scatterplot, boxplot, line plot)\nDetecting common sources of errors: missing parentheses, missing quotation mark, missing comma\n#| warning: false and #| message: false. What do they do?\nfilter(), slice(), distinct(), select(), arrange(), summarize(), group_by(), mutate(), sample_n(), sample_frac(), case_when(). What are each of these used for?\npipe, |&gt;, What is it used for?\nLogical operators in R\n%in%\nna.rm = T\nGiven a particular ggplot code, describe the type of plot that would be created. (Review examples in Lab 3).\ndbinom() and dpois(), how to use to find probabilities."
+  },
+  {
+    "objectID": "resources/exam-01-topics.html#conceptual-applied",
+    "href": "resources/exam-01-topics.html#conceptual-applied",
+    "title": "Topics List",
+    "section": "Conceptual & Applied",
+    "text": "Conceptual & Applied\n\nPopulation vs. sample vs. one observation within a research question\nWhat does “representative” sample mean? What does it mean for a study to be “generalizable”?\nProbability sampling vs. non-probability sampling & knowing a few examples of each. Which is more generalizable?\nExperimental vs. observational studies.\nWhat is bias? Examples: selection, reporting, non-response, attrition, falsified data.\nWhy is transparency and data/code sharing important ethically in statistical studies?\nDefine Reproducibility vs. replicability\nExploratory data analysis. What is it and why is it helpful?\nCategorical: Nominal vs. Ordinal data & know a few examples of each\nNumerical: Count/rank vs. continuous data & know a few examples of each\nIdentifying data types based on a Table 1 (i.e. demographics or baseline characteristics table) from a paper\nParameter vs. statistic\nMean, median, mode, sample minimum and maximum, range, IQR, five-number summary, sample standard deviation\nSymmetric vs. skewed distributions, right vs.left-skew\nChebyshev’s inequality, why is it useful?\nFrequentist vs. Bayesian schools of thought. When might one be helpful over the other?\nProbability space & its components.\nIntersection, union, complement, difference, disjoint, complement rule, inclusion-exclusion. Drawing out venn-diagrams for each.\nDetermining probabilities and conditional probabilities of events given a table (review Coffee Drinking example in Lecture 3)\nVerifying Komolgorov axioms in a simple example\nConditional probability (formula provided)\nDefinition of independence (in terms of probabilities): \\(P(A \\cap B) = P(A) \\times P(B)\\), or equivalently, \\(P(A | B) = P(A)\\) or \\(P(B | A) = P(B)\\)\nGiven two simple events \\(A\\) and \\(B\\), calculating \\(P(A)\\), \\(P(B)\\), \\(P(A \\cap B)\\), \\(P(A \\cup B)\\), \\(P(A | B)\\), \\(P(B | A)\\) (Review example in Lecture 4.)\nLaw of total probability, using this to find probabilities of events given a scenario (Review Coffee example and sleep example in Lecture 4)\nOrder matters in conditional probability (Coffee example in Lecture 4)\nKnow how to define events and set up Bayes’ rule to solve for conditional probability given a scenario (Review Coffee Example Lecture 4)\nPrevalence, sensitivity, specificity, positive predictive value, negative predictive value. Know the definitions in words and in symbols.\nTradeoffs of sensitivity and specificity in a medical diagnostic test\nHow to read an ROC curve, what’s a “good” ROC curve, what is AUC\nGiven a condition/disease, a diagnostic test, and a 2x2 contingency table, define each event and write out how you would solve for the Sensitivity, Specificity, PPV, and/or NPV using conditional probability. (Leave answer as expression).\nDiscrete distributions. Know the three rules, verify the three rules in an example\nBernoulli random variable. State a simple example of a Bernoulli random variable. What’s the one parameter associated with this distribution?\nFor Binomial and Poisson random variables, Know the assumptions for each. State a simple example, verify the assumptions.\nFor Binomial and Poisson, given the formulas and parameters, write out how you would solve for simple probabilities. i.e. For \\(X \\sim Poi(3)\\), write out how you would solve for \\(P(X = 1)\\).\nWhat is expected value, in words? How about variance?\nGiven the formulas for expected value and variance for Binomial or Poisson, and given the relevant parameters for each distribution, be able to calculate expectation and variance. (Leave as expression).\nDensity functions (for continuous variables), two rules of density functions.\nZ-scores, how to calculate, why is it helpful to standardize?"
+  },
+  {
     "objectID": "resources/exam-01-practice.html",
     "href": "resources/exam-01-practice.html",
     "title": "Exam 01 Practice Problems",
@@ -1628,7 +1656,7 @@
     "href": "index.html",
     "title": "BIOS 600 Fall 2026",
     "section": "",
-    "text": "Lecture 0: Welcome to BIOS 600!\nLab 1: Introducing the Toolkit\nLecture 1: What is statistical inference?\n\n\n\nLab 2: Basic Data Visualization\nLecture 2: The nature of data\nLecture 3: Probability basics\nHW 1\n\n\n\nLab 3: Data Wrangling\nLecture 4: Conditional probability\nLecture 5: Medical diagnostics\nHW 2\n\n\n\nLecture 6: Discrete distributions\nLab 4: Practice with ggplot2 and tidyverse\nApplication Exercise 1: Binomial in a Biomedical Setting\nLecture 7: Continuous distributions\nApplication Exercise 2: Poisson in a Hospital Setting\nHW 3\nAE 1 Solution\n\n\n\nExam 01 Topics List\nExam 01 Formula Sheet\nExam 01 Practice Problems\n\n\n\nLecture 8: Central Limit Theorem\nApplication Exercise 3: Central Limit Theorem"
+    "text": "Lecture 0: Welcome to BIOS 600!\nLab 1: Introducing the Toolkit\nLecture 1: What is statistical inference?\n\n\n\nLab 2: Basic Data Visualization\nLecture 2: The nature of data\nLecture 3: Probability basics\nHW 1\n\n\n\nLab 3: Data Wrangling\nLecture 4: Conditional probability\nLecture 5: Medical diagnostics\nHW 2\n\n\n\nLecture 6: Discrete distributions\nLab 4: Practice with ggplot2 and tidyverse\nApplication Exercise 1: Binomial in a Biomedical Setting\nLecture 7: Continuous distributions\nApplication Exercise 2: Poisson in a Hospital Setting\nHW 3\nAE 1 Solution\n\n\n\nExam 01 Topics List\nExam 01 Formula Sheet\nExam 01 Practice Problems\n\n\n\nLecture 8: Central Limit Theorem\nApplication Exercise 3: Central Limit Theorem\nExam 01 Review Slides\nApplication Exercise 4: Exam 01 Review"
   },
   {
     "objectID": "index.html#week-1",
@@ -1670,7 +1698,7 @@
     "href": "index.html#week-5",
     "title": "BIOS 600 Fall 2026",
     "section": "",
-    "text": "Lecture 8: Central Limit Theorem\nApplication Exercise 3: Central Limit Theorem"
+    "text": "Lecture 8: Central Limit Theorem\nApplication Exercise 3: Central Limit Theorem\nExam 01 Review Slides\nApplication Exercise 4: Exam 01 Review"
   },
   {
     "objectID": "hw/hw-02.html",
@@ -1750,6 +1778,153 @@
     "text": "Suppose that in a hospital emergency department, the average number of asthma-related visits per hour is 3. Let \\(Y\\) be the number of asthma visits in one hour. Then \\(Y \\sim Poisson(\\lambda=3)\\)\n\n\nWhat is the probability that in a given hour, exactly 5 asthma patients arrive? Use the dpois function to compute your answer and provide a 1-sentence conclusion.\n\n# type code here\n\n[type response here]"
   },
   {
+    "objectID": "ae/ae-03-template.html",
+    "href": "ae/ae-03-template.html",
+    "title": "AE 03: Central Limit Theorem",
+    "section": "",
+    "text": "Imagine a new treatment for a disease. Each patient either responds (1) or does not respond (0) to the treatment. Suppose the probability of response is 0.3.\n\n\nWe want to simulate drawing samples of 30 patients at a time, record the average response rate, and repeat this process 1000 times. Then we’ll look at the histogram of these sample averages to see what shape it takes.\nThe following code simulates this situation.\n\nRun the following code.\n\n\nset.seed(123)\n\n# Parameters\np &lt;- 0.3     # probability of success\nn &lt;- 30      # 30 patients at a time\nnsim &lt;- 1000 # number of simulations\n\n# Simulate 1000 sample means\nmeans &lt;- replicate(nsim, \n                   mean(rbinom(n, size = 1, prob = p)))\n\n# Plot histogram of sample means\nhist(means, breaks = 30, \n     col = \"skyblue\", \n     main = \"Sample Means (Bernoulli, p=0.3, n=30)\",\n     xlab = \"Sample Mean\")\n\n\n\n\n\n\n\n\n\nWhat do you notice about the shape of the histogram of sample means?\n\n[type response here]"
+  },
+  {
+    "objectID": "ae/ae-03-template.html#bernoulli-distribution-treatment-response",
+    "href": "ae/ae-03-template.html#bernoulli-distribution-treatment-response",
+    "title": "AE 03: Central Limit Theorem",
+    "section": "",
+    "text": "Imagine a new treatment for a disease. Each patient either responds (1) or does not respond (0) to the treatment. Suppose the probability of response is 0.3.\n\n\nWe want to simulate drawing samples of 30 patients at a time, record the average response rate, and repeat this process 1000 times. Then we’ll look at the histogram of these sample averages to see what shape it takes.\nThe following code simulates this situation.\n\nRun the following code.\n\n\nset.seed(123)\n\n# Parameters\np &lt;- 0.3     # probability of success\nn &lt;- 30      # 30 patients at a time\nnsim &lt;- 1000 # number of simulations\n\n# Simulate 1000 sample means\nmeans &lt;- replicate(nsim, \n                   mean(rbinom(n, size = 1, prob = p)))\n\n# Plot histogram of sample means\nhist(means, breaks = 30, \n     col = \"skyblue\", \n     main = \"Sample Means (Bernoulli, p=0.3, n=30)\",\n     xlab = \"Sample Mean\")\n\n\n\n\n\n\n\n\n\nWhat do you notice about the shape of the histogram of sample means?\n\n[type response here]"
+  },
+  {
+    "objectID": "ae/ae-03-template.html#binomial-distribution-number-of-infected-patients",
+    "href": "ae/ae-03-template.html#binomial-distribution-number-of-infected-patients",
+    "title": "AE 03: Central Limit Theorem",
+    "section": "Binomial Distribution (Number of Infected Patients)",
+    "text": "Binomial Distribution (Number of Infected Patients)\nSuppose in a community, the number of patients infected in a given week follows a Binomial distribution with parameters \\(n=20\\) and \\(p=0.1\\) (i.e., 20 people at risk each week, 10% chance of infection per person).\nHere, we simulate 40 weeks of data (sample size = 40), each week producing a Binomial(20, 0.1) random number. We then calculate the average across those 40 weeks. This whole process is repeated 1000 times, and we examine the histogram of the averages.\n\nExercise 2\n\nRun the following code to produce the simulation and histogram of results.\n\n\nset.seed(123)\n\n# Parameters\nsize &lt;- 20   # 20 people at risk each week\np &lt;- 0.1     # probability of infection = 0.1\nn &lt;- 40      # simulate 40 weeks of data\nnsim &lt;- 1000 # do this simulation 1000 times\n\n# Simulate 1000 sample means\nmeans &lt;- replicate(nsim, \n                   mean(rbinom(n, size = size, prob = p)))\n\n# Plot histogram of sample means\nhist(means, breaks = 30, \n     col = \"lightgreen\", \n     main = \"Sample Means (Binomial, size=20, p=0.1, n=40)\",\n     xlab = \"Sample Mean\")\n\n\n\n\n\n\n\n\n\nWhat do you notice about the shape of the histogram of sample means?\n\n[type response here]"
+  },
+  {
+    "objectID": "ae/ae-03-template.html#poisson-distribution-er-visits",
+    "href": "ae/ae-03-template.html#poisson-distribution-er-visits",
+    "title": "AE 03: Central Limit Theorem",
+    "section": "Poisson Distribution: (ER Visits)",
+    "text": "Poisson Distribution: (ER Visits)\nSuppose the number of asthma-related ER visits per day follows a Poisson distribution with average \\(\\lambda = 2\\).\nHere, we simulate 50 days of ER visits at a time (sample size = 50), calculate the mean number of visits within those 50 days, and then repeat this 1000 times. Finally, we look at the histogram of sample means to see how it compares to a bell curve.\n\nExercise 3\n\nRun the following code to produce the simulation and histogram of results.\n\n\nset.seed(123)\n\n# Parameters\nlambda &lt;- 2  # Poisson rate\nn &lt;- 50      # sample size\nnsim &lt;- 1000 # number of simulations\n\n# Simulate 1000 sample means\nmeans &lt;- replicate(nsim, \n                   mean(rpois(n, lambda = lambda)))\n\n# Plot histogram of sample means\nhist(means, breaks = 30, \n     col = \"pink\", \n     main = \"Sample Means (Poisson, λ=2, n=50)\",\n     xlab = \"Sample Mean\")\n\n\n\n\n\n\n\n\n\nDoes the histogram resemble a bell curve?\n\n[type response here]\n\nUse the code chunk below to repeat the above simulation and produce a new histogram, making one small change: change n &lt;- 50 to n &lt;- 100. Run the code.\n\n\nHow does the histogram in part (c) compare to the one in part (b)? Why does this occur?\n\n[type response here]"
+  },
+  {
+    "objectID": "ae/ae-03-template.html#takeaway",
+    "href": "ae/ae-03-template.html#takeaway",
+    "title": "AE 03: Central Limit Theorem",
+    "section": "Takeaway",
+    "text": "Takeaway\nAcross different distributions (Bernoulli, Binomial, Poisson), when we look at the distribution of sample means for reasonably large sample sizes, the shape becomes approximately normal.\nThis is the Central Limit Theorem in action!"
+  },
+  {
+    "objectID": "ae/ae-02-poisson.html",
+    "href": "ae/ae-02-poisson.html",
+    "title": "Application Exercise 2: Poisson",
+    "section": "",
+    "text": "Important\n\n\n\nThis Application Exercise is due on Friday, September 11 at 11:59pm. To be considered on time, the following must be done by the due date:\n\nFinal .pdf file submitted on Canvas\nWhile late work is accepted for HW and Labs, no late work is accepted for AEs."
+  },
+  {
+    "objectID": "ae/ae-02-poisson.html#getting-started",
+    "href": "ae/ae-02-poisson.html#getting-started",
+    "title": "Application Exercise 2: Poisson",
+    "section": "Getting started",
+    "text": "Getting started\nDownload the template for today’s Application Exercise (AE) from Canvas. Open the file, and type your name and today’s date in the YAML. Save your file as ae-02.qmd in your project folder.\nRender your document to ensure the formatting all looks good."
+  },
+  {
+    "objectID": "ae/ae-02-poisson.html#hospital-visits-poisson-example",
+    "href": "ae/ae-02-poisson.html#hospital-visits-poisson-example",
+    "title": "Application Exercise 2: Poisson",
+    "section": "Hospital Visits: Poisson Example",
+    "text": "Hospital Visits: Poisson Example\nSuppose that in a hospital emergency department, the average number of asthma-related visits per hour is 3. Let \\(Y\\) be the number of asthma visits in one hour. Then \\(Y \\sim Poisson(\\lambda=3)\\)\n\nExercise 1\nWhat is the probability that in a given hour, exactly 5 asthma patients arrive? Use the dpois function to compute your answer and provide a 1-sentence conclusion.\n\n# type code here\n\n[type response here]"
+  },
+  {
+    "objectID": "ae/ae-02-poisson.html#submission",
+    "href": "ae/ae-02-poisson.html#submission",
+    "title": "Application Exercise 2: Poisson",
+    "section": "Submission",
+    "text": "Submission\nAs you’ve seen previously, we can Render the template into an .html file that can be opened by any web browser. To export it as a .pdf, open the file in your web browser and then print to or save as a .pdf document. Your TAs will show you how if you need help! (There is a way to directly knit to a .pdf file, but it’s quite a bit more involved.)\nYou will submit the PDF documents for Application Exercises directly to Canvas.\nTo submit your assignment:\n\nAccess the Application Exercise through Modules on the BIOS 600 Canvas site.\nUpload your PDF."
+  },
+  {
+    "objectID": "ae/ae-01.html",
+    "href": "ae/ae-01.html",
+    "title": "Participation: Binomial in a Biomedical Setting",
+    "section": "",
+    "text": "Important\n\n\n\nThis Application Exercise is due on Wednesday, September 9 at 11:59pm. To be considered on time, the following must be done by the due date:\n\nFinal .pdf file submitted on Canvas\nWhile late work is accepted for HW and Labs, no late work is accepted for AEs."
+  },
+  {
+    "objectID": "ae/ae-01.html#getting-started",
+    "href": "ae/ae-01.html#getting-started",
+    "title": "Participation: Binomial in a Biomedical Setting",
+    "section": "Getting started",
+    "text": "Getting started\nDownload the template for today’s Application Exercise (AE) from Canvas. Open the file, and type your name and today’s date in the YAML. Save your file as ae-01.qmd in your project folder.\nRender your document to ensure the formatting all looks good."
+  },
+  {
+    "objectID": "ae/ae-01.html#clinical-trial-example",
+    "href": "ae/ae-01.html#clinical-trial-example",
+    "title": "Participation: Binomial in a Biomedical Setting",
+    "section": "Clinical Trial Example",
+    "text": "Clinical Trial Example\nSuppose 5 people receive a new vaccine. From clinical trial data, the probability that any individual experiences a mild side effect (e.g., sore arm, mild fever) is 0.2.\nLet \\(X\\) be the number of people (out of 5) who experience a mild side effect.\nThen \\(X \\sim \\text{Binomial}(n=5, p=0.2)\\).\n\nExercise 1\nWhat is the probability that exactly 2 out of 5 people experience a mild side effect? Use the dbinom function.\n\n# type code here"
+  },
+  {
+    "objectID": "ae/ae-01.html#exercise-2",
+    "href": "ae/ae-01.html#exercise-2",
+    "title": "Participation: Binomial in a Biomedical Setting",
+    "section": "Exercise 2",
+    "text": "Exercise 2\nWhat is the probability that at least 1 out of 5 people experiences a mild side effect?\nHint: Use the complement rule: \\(P(X \\geq 1)=1−P(X=0)\\)\nUse the dbinom function to compute your answer and provide a 1-sentence conclusion.\n\n# type code here"
+  },
+  {
+    "objectID": "ae/ae-01.html#submission",
+    "href": "ae/ae-01.html#submission",
+    "title": "Participation: Binomial in a Biomedical Setting",
+    "section": "Submission",
+    "text": "Submission\nAs you’ve seen previously, we can Render the template into an .html file that can be opened by any web browser. To export it as a .pdf, open the file in your web browser and then print to or save as a .pdf document. Your TAs will show you how if you need help! (There is a way to directly knit to a .pdf file, but it’s quite a bit more involved.)\nYou will submit the PDF documents for Application Exercises directly to Canvas.\nTo submit your assignment:\n\nAccess the Application Exercise through Modules on the BIOS 600 Canvas site.\nUpload your PDF."
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "About this site"
+  },
+  {
+    "objectID": "ae/ae-01-template.html",
+    "href": "ae/ae-01-template.html",
+    "title": "Application Exercise: Binomial in a Biomedical Setting",
+    "section": "",
+    "text": "Suppose 5 people receive a new vaccine. From clinical trial data, the probability that any individual experiences a mild side effect (e.g., sore arm, mild fever) is 0.2.\nLet \\(X\\) be the number of people (out of 5) who experience a mild side effect.\nThen \\(X \\sim \\text{Binomial}(n=5, p=0.2)\\).\n\n\nWhat is the probability that exactly 2 out of 5 people experience a mild side effect? Use the dbinom function to compute your answer and provide a 1-sentence conclusion.\n\n# type code here\n\n[type response here]"
+  },
+  {
+    "objectID": "ae/ae-01-template.html#a-clinical-trial-binomial-example",
+    "href": "ae/ae-01-template.html#a-clinical-trial-binomial-example",
+    "title": "Application Exercise: Binomial in a Biomedical Setting",
+    "section": "",
+    "text": "Suppose 5 people receive a new vaccine. From clinical trial data, the probability that any individual experiences a mild side effect (e.g., sore arm, mild fever) is 0.2.\nLet \\(X\\) be the number of people (out of 5) who experience a mild side effect.\nThen \\(X \\sim \\text{Binomial}(n=5, p=0.2)\\).\n\n\nWhat is the probability that exactly 2 out of 5 people experience a mild side effect? Use the dbinom function to compute your answer and provide a 1-sentence conclusion.\n\n# type code here\n\n[type response here]"
+  },
+  {
+    "objectID": "ae/ae-01-template.html#exercise-2",
+    "href": "ae/ae-01-template.html#exercise-2",
+    "title": "Application Exercise: Binomial in a Biomedical Setting",
+    "section": "Exercise 2",
+    "text": "Exercise 2\nWhat is the probability that at least 1 out of 5 people experiences a mild side effect? (Hint: Use the complement rule: \\(P(X \\geq 1)=1−P(X=0)\\)). Use the dbinom function to compute your answer and provide a 1-sentence conclusion.\n\n# type code here\n\n[type response here]"
+  },
+  {
+    "objectID": "ae/ae-01-template.html#submission",
+    "href": "ae/ae-01-template.html#submission",
+    "title": "Application Exercise: Binomial in a Biomedical Setting",
+    "section": "Submission",
+    "text": "Submission\nRender to PDF and submit on Canvas &gt; Assignments."
+  },
+  {
+    "objectID": "ae/ae-02-poisson-template.html",
+    "href": "ae/ae-02-poisson-template.html",
+    "title": "Application Exercise 2: Poisson",
+    "section": "",
+    "text": "Suppose that in a hospital emergency department, the average number of asthma-related visits per hour is 3. Let \\(Y\\) be the number of asthma visits in one hour. Then \\(Y \\sim Poisson(\\lambda=3)\\)\n\n\nWhat is the probability that in a given hour, exactly 5 asthma patients arrive? Use the dpois function to compute your answer and provide a 1-sentence conclusion.\n\n# type code here\n\n[type response here]"
+  },
+  {
+    "objectID": "ae/ae-02-poisson-template.html#hospital-visits-poisson-example",
+    "href": "ae/ae-02-poisson-template.html#hospital-visits-poisson-example",
+    "title": "Application Exercise 2: Poisson",
+    "section": "",
+    "text": "Suppose that in a hospital emergency department, the average number of asthma-related visits per hour is 3. Let \\(Y\\) be the number of asthma visits in one hour. Then \\(Y \\sim Poisson(\\lambda=3)\\)\n\n\nWhat is the probability that in a given hour, exactly 5 asthma patients arrive? Use the dpois function to compute your answer and provide a 1-sentence conclusion.\n\n# type code here\n\n[type response here]"
+  },
+  {
     "objectID": "ae/ae-03-clt.html",
     "href": "ae/ae-03-clt.html",
     "title": "AE 03: Central Limit Theorem",
@@ -1806,151 +1981,109 @@
     "text": "Submission\nRender to PDF and submit on Canvas &gt; Assignments."
   },
   {
-    "objectID": "ae/ae-02-poisson-template.html",
-    "href": "ae/ae-02-poisson-template.html",
-    "title": "Application Exercise 2: Poisson",
+    "objectID": "ae/ae-04-exam-01-review.html",
+    "href": "ae/ae-04-exam-01-review.html",
+    "title": "AE 04: Exam 01 Review",
     "section": "",
-    "text": "Suppose that in a hospital emergency department, the average number of asthma-related visits per hour is 3. Let \\(Y\\) be the number of asthma visits in one hour. Then \\(Y \\sim Poisson(\\lambda=3)\\)\n\n\nWhat is the probability that in a given hour, exactly 5 asthma patients arrive? Use the dpois function to compute your answer and provide a 1-sentence conclusion.\n\n# type code here\n\n[type response here]"
+    "text": "Important\n\n\n\nThis Application Exercise is due on Sunday, September 20 at 11:59pm. To be considered on time, the following must be done by the due date:\n\nFinal .pdf file submitted on Canvas\nWhile late work is accepted for HW and Labs, no late work is accepted for AEs."
   },
   {
-    "objectID": "ae/ae-02-poisson-template.html#hospital-visits-poisson-example",
-    "href": "ae/ae-02-poisson-template.html#hospital-visits-poisson-example",
-    "title": "Application Exercise 2: Poisson",
-    "section": "",
-    "text": "Suppose that in a hospital emergency department, the average number of asthma-related visits per hour is 3. Let \\(Y\\) be the number of asthma visits in one hour. Then \\(Y \\sim Poisson(\\lambda=3)\\)\n\n\nWhat is the probability that in a given hour, exactly 5 asthma patients arrive? Use the dpois function to compute your answer and provide a 1-sentence conclusion.\n\n# type code here\n\n[type response here]"
+    "objectID": "ae/ae-04-exam-01-review.html#getting-started",
+    "href": "ae/ae-04-exam-01-review.html#getting-started",
+    "title": "AE 04: Exam 01 Review",
+    "section": "Getting started",
+    "text": "Getting started\nTo get started, create a new Quarto document. In your document, provide your answers to the following questions."
   },
   {
-    "objectID": "ae/ae-01-template.html",
-    "href": "ae/ae-01-template.html",
-    "title": "Application Exercise: Binomial in a Biomedical Setting",
-    "section": "",
-    "text": "Suppose 5 people receive a new vaccine. From clinical trial data, the probability that any individual experiences a mild side effect (e.g., sore arm, mild fever) is 0.2.\nLet \\(X\\) be the number of people (out of 5) who experience a mild side effect.\nThen \\(X \\sim \\text{Binomial}(n=5, p=0.2)\\).\n\n\nWhat is the probability that exactly 2 out of 5 people experience a mild side effect? Use the dbinom function to compute your answer and provide a 1-sentence conclusion.\n\n# type code here\n\n[type response here]"
+    "objectID": "ae/ae-04-exam-01-review.html#q1",
+    "href": "ae/ae-04-exam-01-review.html#q1",
+    "title": "AE 04: Exam 01 Review",
+    "section": "Q1",
+    "text": "Q1\nRapid antigen tests are commonly used to detect COVID-19 infection. Suppose a new rapid test is compared against the gold standard PCR test.\nFor this question, focus on asymptomatic adults. About 5% of asymptomatic adults truly have COVID-19 infection. The test has a sensitivity of 90% and a specificity of 95% for detecting infection in this population.\n\nSuppose you administer the rapid test to someone who truly has COVID-19. What is the probability that the test will return a positive result? Circle one.\n\n\n5%\n\n90%\n\n10%\n\n95%\n\nNot enough information to determine this probability\n\n\nA new rapid test has been developed to detect hepatitis B infection. A study compares the results of the rapid test against the gold standard laboratory test. The results from 200 patients are summarized below:\n\n\n\n\n\n\n\n\n\n\n\nGold Standard Positive\nGold Standard Negative\nTotal\n\n\n\n\nRapid Test Positive\n70\n25\n95\n\n\nRapid Test Negative\n10\n95\n105\n\n\nTotal\n80\n120\n200\n\n\n\nQuestion:\nCalculate the sensitivity of the rapid test using the definition of conditional probability. Leave your answer as a fraction."
   },
   {
-    "objectID": "ae/ae-01-template.html#a-clinical-trial-binomial-example",
-    "href": "ae/ae-01-template.html#a-clinical-trial-binomial-example",
-    "title": "Application Exercise: Binomial in a Biomedical Setting",
-    "section": "",
-    "text": "Suppose 5 people receive a new vaccine. From clinical trial data, the probability that any individual experiences a mild side effect (e.g., sore arm, mild fever) is 0.2.\nLet \\(X\\) be the number of people (out of 5) who experience a mild side effect.\nThen \\(X \\sim \\text{Binomial}(n=5, p=0.2)\\).\n\n\nWhat is the probability that exactly 2 out of 5 people experience a mild side effect? Use the dbinom function to compute your answer and provide a 1-sentence conclusion.\n\n# type code here\n\n[type response here]"
+    "objectID": "ae/ae-04-exam-01-review.html#q2",
+    "href": "ae/ae-04-exam-01-review.html#q2",
+    "title": "AE 04: Exam 01 Review",
+    "section": "Q2",
+    "text": "Q2\nA researcher is studying the number of patients arriving at a hospital emergency room with asthma attacks during a 1-hour period. She proposes using a Poisson distribution to model the number of arrivals per hour.\nDescribe how you would verify whether each of the assumptions for a Poisson distribution are satisfied in this context. (e.g. what would you need to know/verify for each assumption, specific to this context?)"
   },
   {
-    "objectID": "ae/ae-01-template.html#exercise-2",
-    "href": "ae/ae-01-template.html#exercise-2",
-    "title": "Application Exercise: Binomial in a Biomedical Setting",
-    "section": "Exercise 2",
-    "text": "Exercise 2\nWhat is the probability that at least 1 out of 5 people experiences a mild side effect? (Hint: Use the complement rule: \\(P(X \\geq 1)=1−P(X=0)\\)). Use the dbinom function to compute your answer and provide a 1-sentence conclusion.\n\n# type code here\n\n[type response here]"
+    "objectID": "ae/ae-04-exam-01-review.html#q3",
+    "href": "ae/ae-04-exam-01-review.html#q3",
+    "title": "AE 04: Exam 01 Review",
+    "section": "Q3",
+    "text": "Q3\n\nAn environmental agency classifies daily air quality in a city into three categories: Good, Moderate, and Unhealthy. The probabilities of each category on a randomly selected day are summarized in the table below:\n\n\n\n\nAir Quality\nProbability\n\n\n\n\nGood\n0.5\n\n\nModerate\n0.3\n\n\nUnhealthy\n0.2\n\n\n\nState the Kolmogorov axioms. Are all axioms true for this example?\n\nA public health researcher is studying the number of asthma attacks requiring emergency care per day in a mid-sized city. She models the number of attacks per day using a Poisson distribution with rate parameter \\(\\lambda = 3\\).\n\nRecall the Poisson PMF:\n\\[P(X = k) = \\frac{e^{-\\lambda} \\lambda^k}{k!}, \\quad k = 0, 1, 2, \\dots\\]\nWrite out, in terms of the Poisson PMF, the probability that on a randomly selected day there are at least 2 asthma attacks. You do not need to compute the numeric value.\n\n\n\n\n\n\nTipTyping equations in Latex\n\n\n\nIf you would like to type your answer using LaTeX (a typesetting tool used to write nice equations), consider the following:\nThe code\n$P(X = k) = \\frac{e^{-7} 7^k}{k!}$\nproduces\n\\(P(X = k) = \\frac{e^{-7} 7^k}{k!}\\)\n\n\n\nContinuing part (b) above, Which of the following R commands correctly calculates the probability that on a randomly selected day there is at least 1 asthma attacks?\n\n\ndbinom(1, lambda = 3)\n1 - dpois(0, lambda = 3) - dpois(1, lambda = 3)\ndpois(2, lambda = 3) + dpois(3, lambda = 3)\ndpois(1, lambda = 3)"
   },
   {
-    "objectID": "ae/ae-01-template.html#submission",
-    "href": "ae/ae-01-template.html#submission",
-    "title": "Application Exercise: Binomial in a Biomedical Setting",
+    "objectID": "ae/ae-04-exam-01-review.html#code-questions",
+    "href": "ae/ae-04-exam-01-review.html#code-questions",
+    "title": "AE 04: Exam 01 Review",
+    "section": "Code Questions",
+    "text": "Code Questions\nElena Epidata is an epidemiologist exploring health trends in the U.S. population. She is using a clinical dataset which includes variables such as age, BMI, blood pressure, and cholesterol for a sample of adults. Elena is new to R and is practicing basic data exploration."
+  },
+  {
+    "objectID": "ae/ae-04-exam-01-review.html#q4",
+    "href": "ae/ae-04-exam-01-review.html#q4",
+    "title": "AE 04: Exam 01 Review",
+    "section": "Q4",
+    "text": "Q4\nElena types the following code in R:\n\nlibrary(tidyverse)\ndata &lt;- read_csv(\"data.csv\")\nView(data)\nglimpse(data)\nnames(data)\n\nWhich of the following statements are true about the outputs of these commands? Select all that apply.\n\nView() opens a spreadsheet-style view of the dataset.\nglimpse() prints a concise summary of the dataset to the console.\nnames() lists the names of the columns.\nView() returns a vector of column names."
+  },
+  {
+    "objectID": "ae/ae-04-exam-01-review.html#q5",
+    "href": "ae/ae-04-exam-01-review.html#q5",
+    "title": "AE 04: Exam 01 Review",
+    "section": "Q5",
+    "text": "Q5\nElena wants to examine a subset of the data. She types:\n\ndata_highbp &lt;- data |&gt;\n  filter(age &gt;= 50, sbp &gt; 140)\n\n\nWhat subset of data has she created?\n\n\nWhat does |&gt; do?\n\n\nWill anything be printed out by running this code? Why or why not?"
+  },
+  {
+    "objectID": "ae/ae-04-exam-01-review.html#q6",
+    "href": "ae/ae-04-exam-01-review.html#q6",
+    "title": "AE 04: Exam 01 Review",
+    "section": "Q6",
+    "text": "Q6\nElena wants to create a scatter plot of BMI vs. systolic blood pressure and color points by sex. She writes:\n\nggplot(data, aes(x = bmi, y = sbp, color = sex)) +\n  geom_point() +\n  labs(x = \"BMI\", y = \"Systolic Blood Pressure (mmHg)\")\n\nWhich of the following statements are true? Select all that apply.\n\ngeom_point() creates a scatter plot.\nPoints are colored based on BMI.\nThis code produces a boxplot of blood pressure.\nThe x-axis represents BMI."
+  },
+  {
+    "objectID": "ae/ae-04-exam-01-review.html#q7",
+    "href": "ae/ae-04-exam-01-review.html#q7",
+    "title": "AE 04: Exam 01 Review",
+    "section": "Q7",
+    "text": "Q7\nElena wants to calculate the average BMI by age_group. This variable has 3 categories: young, mid, and older. She types:\n\ndata_summary &lt;- data |&gt;\n  group_by(age_group) |&gt;\n  summarize(mean_bmi = mean(bmi, na.rm = TRUE))\n\nWhat does data_summary contain?"
+  },
+  {
+    "objectID": "ae/ae-04-exam-01-review.html#conceptual-truefalse",
+    "href": "ae/ae-04-exam-01-review.html#conceptual-truefalse",
+    "title": "AE 04: Exam 01 Review",
+    "section": "Conceptual (True/False)",
+    "text": "Conceptual (True/False)\nCircle either True or False."
+  },
+  {
+    "objectID": "ae/ae-04-exam-01-review.html#q8",
+    "href": "ae/ae-04-exam-01-review.html#q8",
+    "title": "AE 04: Exam 01 Review",
+    "section": "Q8",
+    "text": "Q8\nThe Poisson distribution is often used to model counts of rare events occurring independently in a fixed time or space interval.\nTrue\nFalse"
+  },
+  {
+    "objectID": "ae/ae-04-exam-01-review.html#q9",
+    "href": "ae/ae-04-exam-01-review.html#q9",
+    "title": "AE 04: Exam 01 Review",
+    "section": "Q9",
+    "text": "Q9\nIn a discrete probability distribution, all individual probabilities must be greater than 0.\nTrue\nFalse"
+  },
+  {
+    "objectID": "ae/ae-04-exam-01-review.html#q10",
+    "href": "ae/ae-04-exam-01-review.html#q10",
+    "title": "AE 04: Exam 01 Review",
+    "section": "Q10",
+    "text": "Q10\nA frequentist interprets probability using a personal degree of belief, while a Bayesian interprets probability using the long-run relative frequency of events.\nTrue\nFalse"
+  },
+  {
+    "objectID": "ae/ae-04-exam-01-review.html#submission",
+    "href": "ae/ae-04-exam-01-review.html#submission",
+    "title": "AE 04: Exam 01 Review",
     "section": "Submission",
     "text": "Submission\nRender to PDF and submit on Canvas &gt; Assignments."
-  },
-  {
-    "objectID": "about.html",
-    "href": "about.html",
-    "title": "About",
-    "section": "",
-    "text": "About this site"
-  },
-  {
-    "objectID": "ae/ae-01.html",
-    "href": "ae/ae-01.html",
-    "title": "Participation: Binomial in a Biomedical Setting",
-    "section": "",
-    "text": "Important\n\n\n\nThis Application Exercise is due on Wednesday, September 9 at 11:59pm. To be considered on time, the following must be done by the due date:\n\nFinal .pdf file submitted on Canvas\nWhile late work is accepted for HW and Labs, no late work is accepted for AEs."
-  },
-  {
-    "objectID": "ae/ae-01.html#getting-started",
-    "href": "ae/ae-01.html#getting-started",
-    "title": "Participation: Binomial in a Biomedical Setting",
-    "section": "Getting started",
-    "text": "Getting started\nDownload the template for today’s Application Exercise (AE) from Canvas. Open the file, and type your name and today’s date in the YAML. Save your file as ae-01.qmd in your project folder.\nRender your document to ensure the formatting all looks good."
-  },
-  {
-    "objectID": "ae/ae-01.html#clinical-trial-example",
-    "href": "ae/ae-01.html#clinical-trial-example",
-    "title": "Participation: Binomial in a Biomedical Setting",
-    "section": "Clinical Trial Example",
-    "text": "Clinical Trial Example\nSuppose 5 people receive a new vaccine. From clinical trial data, the probability that any individual experiences a mild side effect (e.g., sore arm, mild fever) is 0.2.\nLet \\(X\\) be the number of people (out of 5) who experience a mild side effect.\nThen \\(X \\sim \\text{Binomial}(n=5, p=0.2)\\).\n\nExercise 1\nWhat is the probability that exactly 2 out of 5 people experience a mild side effect? Use the dbinom function.\n\n# type code here"
-  },
-  {
-    "objectID": "ae/ae-01.html#exercise-2",
-    "href": "ae/ae-01.html#exercise-2",
-    "title": "Participation: Binomial in a Biomedical Setting",
-    "section": "Exercise 2",
-    "text": "Exercise 2\nWhat is the probability that at least 1 out of 5 people experiences a mild side effect?\nHint: Use the complement rule: \\(P(X \\geq 1)=1−P(X=0)\\)\nUse the dbinom function to compute your answer and provide a 1-sentence conclusion.\n\n# type code here"
-  },
-  {
-    "objectID": "ae/ae-01.html#submission",
-    "href": "ae/ae-01.html#submission",
-    "title": "Participation: Binomial in a Biomedical Setting",
-    "section": "Submission",
-    "text": "Submission\nAs you’ve seen previously, we can Render the template into an .html file that can be opened by any web browser. To export it as a .pdf, open the file in your web browser and then print to or save as a .pdf document. Your TAs will show you how if you need help! (There is a way to directly knit to a .pdf file, but it’s quite a bit more involved.)\nYou will submit the PDF documents for Application Exercises directly to Canvas.\nTo submit your assignment:\n\nAccess the Application Exercise through Modules on the BIOS 600 Canvas site.\nUpload your PDF."
-  },
-  {
-    "objectID": "ae/ae-02-poisson.html",
-    "href": "ae/ae-02-poisson.html",
-    "title": "Application Exercise 2: Poisson",
-    "section": "",
-    "text": "Important\n\n\n\nThis Application Exercise is due on Friday, September 11 at 11:59pm. To be considered on time, the following must be done by the due date:\n\nFinal .pdf file submitted on Canvas\nWhile late work is accepted for HW and Labs, no late work is accepted for AEs."
-  },
-  {
-    "objectID": "ae/ae-02-poisson.html#getting-started",
-    "href": "ae/ae-02-poisson.html#getting-started",
-    "title": "Application Exercise 2: Poisson",
-    "section": "Getting started",
-    "text": "Getting started\nDownload the template for today’s Application Exercise (AE) from Canvas. Open the file, and type your name and today’s date in the YAML. Save your file as ae-02.qmd in your project folder.\nRender your document to ensure the formatting all looks good."
-  },
-  {
-    "objectID": "ae/ae-02-poisson.html#hospital-visits-poisson-example",
-    "href": "ae/ae-02-poisson.html#hospital-visits-poisson-example",
-    "title": "Application Exercise 2: Poisson",
-    "section": "Hospital Visits: Poisson Example",
-    "text": "Hospital Visits: Poisson Example\nSuppose that in a hospital emergency department, the average number of asthma-related visits per hour is 3. Let \\(Y\\) be the number of asthma visits in one hour. Then \\(Y \\sim Poisson(\\lambda=3)\\)\n\nExercise 1\nWhat is the probability that in a given hour, exactly 5 asthma patients arrive? Use the dpois function to compute your answer and provide a 1-sentence conclusion.\n\n# type code here\n\n[type response here]"
-  },
-  {
-    "objectID": "ae/ae-02-poisson.html#submission",
-    "href": "ae/ae-02-poisson.html#submission",
-    "title": "Application Exercise 2: Poisson",
-    "section": "Submission",
-    "text": "Submission\nAs you’ve seen previously, we can Render the template into an .html file that can be opened by any web browser. To export it as a .pdf, open the file in your web browser and then print to or save as a .pdf document. Your TAs will show you how if you need help! (There is a way to directly knit to a .pdf file, but it’s quite a bit more involved.)\nYou will submit the PDF documents for Application Exercises directly to Canvas.\nTo submit your assignment:\n\nAccess the Application Exercise through Modules on the BIOS 600 Canvas site.\nUpload your PDF."
-  },
-  {
-    "objectID": "ae/ae-03-template.html",
-    "href": "ae/ae-03-template.html",
-    "title": "AE 03: Central Limit Theorem",
-    "section": "",
-    "text": "Imagine a new treatment for a disease. Each patient either responds (1) or does not respond (0) to the treatment. Suppose the probability of response is 0.3.\n\n\nWe want to simulate drawing samples of 30 patients at a time, record the average response rate, and repeat this process 1000 times. Then we’ll look at the histogram of these sample averages to see what shape it takes.\nThe following code simulates this situation.\n\nRun the following code.\n\n\nset.seed(123)\n\n# Parameters\np &lt;- 0.3     # probability of success\nn &lt;- 30      # 30 patients at a time\nnsim &lt;- 1000 # number of simulations\n\n# Simulate 1000 sample means\nmeans &lt;- replicate(nsim, \n                   mean(rbinom(n, size = 1, prob = p)))\n\n# Plot histogram of sample means\nhist(means, breaks = 30, \n     col = \"skyblue\", \n     main = \"Sample Means (Bernoulli, p=0.3, n=30)\",\n     xlab = \"Sample Mean\")\n\n\n\n\n\n\n\n\n\nWhat do you notice about the shape of the histogram of sample means?\n\n[type response here]"
-  },
-  {
-    "objectID": "ae/ae-03-template.html#bernoulli-distribution-treatment-response",
-    "href": "ae/ae-03-template.html#bernoulli-distribution-treatment-response",
-    "title": "AE 03: Central Limit Theorem",
-    "section": "",
-    "text": "Imagine a new treatment for a disease. Each patient either responds (1) or does not respond (0) to the treatment. Suppose the probability of response is 0.3.\n\n\nWe want to simulate drawing samples of 30 patients at a time, record the average response rate, and repeat this process 1000 times. Then we’ll look at the histogram of these sample averages to see what shape it takes.\nThe following code simulates this situation.\n\nRun the following code.\n\n\nset.seed(123)\n\n# Parameters\np &lt;- 0.3     # probability of success\nn &lt;- 30      # 30 patients at a time\nnsim &lt;- 1000 # number of simulations\n\n# Simulate 1000 sample means\nmeans &lt;- replicate(nsim, \n                   mean(rbinom(n, size = 1, prob = p)))\n\n# Plot histogram of sample means\nhist(means, breaks = 30, \n     col = \"skyblue\", \n     main = \"Sample Means (Bernoulli, p=0.3, n=30)\",\n     xlab = \"Sample Mean\")\n\n\n\n\n\n\n\n\n\nWhat do you notice about the shape of the histogram of sample means?\n\n[type response here]"
-  },
-  {
-    "objectID": "ae/ae-03-template.html#binomial-distribution-number-of-infected-patients",
-    "href": "ae/ae-03-template.html#binomial-distribution-number-of-infected-patients",
-    "title": "AE 03: Central Limit Theorem",
-    "section": "Binomial Distribution (Number of Infected Patients)",
-    "text": "Binomial Distribution (Number of Infected Patients)\nSuppose in a community, the number of patients infected in a given week follows a Binomial distribution with parameters \\(n=20\\) and \\(p=0.1\\) (i.e., 20 people at risk each week, 10% chance of infection per person).\nHere, we simulate 40 weeks of data (sample size = 40), each week producing a Binomial(20, 0.1) random number. We then calculate the average across those 40 weeks. This whole process is repeated 1000 times, and we examine the histogram of the averages.\n\nExercise 2\n\nRun the following code to produce the simulation and histogram of results.\n\n\nset.seed(123)\n\n# Parameters\nsize &lt;- 20   # 20 people at risk each week\np &lt;- 0.1     # probability of infection = 0.1\nn &lt;- 40      # simulate 40 weeks of data\nnsim &lt;- 1000 # do this simulation 1000 times\n\n# Simulate 1000 sample means\nmeans &lt;- replicate(nsim, \n                   mean(rbinom(n, size = size, prob = p)))\n\n# Plot histogram of sample means\nhist(means, breaks = 30, \n     col = \"lightgreen\", \n     main = \"Sample Means (Binomial, size=20, p=0.1, n=40)\",\n     xlab = \"Sample Mean\")\n\n\n\n\n\n\n\n\n\nWhat do you notice about the shape of the histogram of sample means?\n\n[type response here]"
-  },
-  {
-    "objectID": "ae/ae-03-template.html#poisson-distribution-er-visits",
-    "href": "ae/ae-03-template.html#poisson-distribution-er-visits",
-    "title": "AE 03: Central Limit Theorem",
-    "section": "Poisson Distribution: (ER Visits)",
-    "text": "Poisson Distribution: (ER Visits)\nSuppose the number of asthma-related ER visits per day follows a Poisson distribution with average \\(\\lambda = 2\\).\nHere, we simulate 50 days of ER visits at a time (sample size = 50), calculate the mean number of visits within those 50 days, and then repeat this 1000 times. Finally, we look at the histogram of sample means to see how it compares to a bell curve.\n\nExercise 3\n\nRun the following code to produce the simulation and histogram of results.\n\n\nset.seed(123)\n\n# Parameters\nlambda &lt;- 2  # Poisson rate\nn &lt;- 50      # sample size\nnsim &lt;- 1000 # number of simulations\n\n# Simulate 1000 sample means\nmeans &lt;- replicate(nsim, \n                   mean(rpois(n, lambda = lambda)))\n\n# Plot histogram of sample means\nhist(means, breaks = 30, \n     col = \"pink\", \n     main = \"Sample Means (Poisson, λ=2, n=50)\",\n     xlab = \"Sample Mean\")\n\n\n\n\n\n\n\n\n\nDoes the histogram resemble a bell curve?\n\n[type response here]\n\nUse the code chunk below to repeat the above simulation and produce a new histogram, making one small change: change n &lt;- 50 to n &lt;- 100. Run the code.\n\n\nHow does the histogram in part (c) compare to the one in part (b)? Why does this occur?\n\n[type response here]"
-  },
-  {
-    "objectID": "ae/ae-03-template.html#takeaway",
-    "href": "ae/ae-03-template.html#takeaway",
-    "title": "AE 03: Central Limit Theorem",
-    "section": "Takeaway",
-    "text": "Takeaway\nAcross different distributions (Bernoulli, Binomial, Poisson), when we look at the distribution of sample means for reasonably large sample sizes, the shape becomes approximately normal.\nThis is the Central Limit Theorem in action!"
   },
   {
     "objectID": "hw/hw-01.html",
@@ -2520,32 +2653,116 @@
     "text": "If needed, you would be provided any of the following formulas on the exam.\n\nSample standard deviation: \\(s = \\sqrt{\\frac{1}{n-1} \\sum_{i=1}^n (x_i - \\bar{x})^2}\\)\nSample variance: \\(s^2 = \\frac{1}{n-1} \\sum_{i=1}^n(x_i - \\bar{x})^2\\)\nChebyshev’s inequality tells us the proportion of values in the range “average \\(\\pm\\) \\(k\\) SDs” is at least \\(1-\\frac{1}{k^2}\\)\nInclusion-Exclusion: \\(P(A \\cup B) = P(A) + P(B) - P(A \\cap B)\\)\nComplement of union: \\((A\\cup B)^C = A^C \\cap B^C\\)\nComplement of intersection: \\((A\\cap B)^C = A^C \\cup B^C\\)\nConditional probability: \\(P(A|B) = \\frac{P(A\\cap B)}{P(B)}\\)\nLaw of total probability: \\(P(A) = P(A \\cap B_1) + P(A \\cap B_2) + \\cdots + P(A \\cap B_k)\\)\nIf \\(X\\) has a binomial distribution, then \\(P(X=k) = {n \\choose k}p^k (1-p)^{n-k}\\)\nIf \\(X\\) has a Poisson distribution, then \\(P(X=k) = \\frac{\\lambda^k e^{-\\lambda}}{k!}\\)\nGiven \\(n\\) and parameter values, write out the expression for expectation and variance of Bernoulli, Binomial, and Poisson random variables. (Formulas for each given.)\nFor \\(Z \\sim Bern(p)\\), \\(E(Z) = p\\) and \\(Var(Z) = p(1-p)\\)\nFor \\(Z \\sim Binom(n, p)\\), \\(E(Z) = np\\) and \\(Var(Z) = np(1-p)\\)\nFor \\(Z \\sim Pois(\\lambda)\\), \\(E(Z) = Var(Z) = \\lambda\\)"
   },
   {
-    "objectID": "resources/exam-01-topics.html",
-    "href": "resources/exam-01-topics.html",
-    "title": "Topics List",
+    "objectID": "resources/exam-01-review.html",
+    "href": "resources/exam-01-review.html",
+    "title": "Exam Review",
     "section": "",
-    "text": "Lectures 1-7, HW 1-3, Labs 1-3, AE 1-2"
+    "text": "Rapid antigen tests are commonly used to detect COVID-19 infection. Suppose a new rapid test is compared against the gold standard PCR test.\nFor this question, focus on asymptomatic adults. About 5% of asymptomatic adults truly have COVID-19 infection. The test has a sensitivity of 90% and a specificity of 95% for detecting infection in this population.\n\nSuppose you administer the rapid test to someone who truly has COVID-19. What is the probability that the test will return a positive result? Circle one.\n\n\n5%\n\n90%\n\n10%\n\n95%\n\nNot enough information to determine this probability\n\n\nA new rapid test has been developed to detect hepatitis B infection. A study compares the results of the rapid test against the gold standard laboratory test. The results from 200 patients are summarized below:\n\n\n\n\n\n\n\n\n\n\n\nGold Standard Positive\nGold Standard Negative\nTotal\n\n\n\n\nRapid Test Positive\n70\n25\n95\n\n\nRapid Test Negative\n10\n95\n105\n\n\nTotal\n80\n120\n200\n\n\n\nQuestion:\nCalculate the sensitivity of the rapid test. Leave your answer as a fraction.\n\n\n\nA researcher is studying the number of patients arriving at a hospital emergency room with asthma attacks during a 1-hour period. She proposes using a Poisson distribution to model the number of arrivals per hour.\nDescribe how you would verify whether each of the assumptions for a Poisson distribution are satisfied in this context. (e.g. what would you need to know/verify for each assumption, specific to this context?)\n\n\n\n\nAn environmental agency classifies daily air quality in a city into three categories: Good, Moderate, and Unhealthy. The probabilities of each category on a randomly selected day are summarized in the table below:\n\n\n\n\nAir Quality\nProbability\n\n\n\n\nGood\n0.5\n\n\nModerate\n0.3\n\n\nUnhealthy\n0.2\n\n\n\nState the Kolmogorov axioms. Are all axioms true for this example?\n\nA public health researcher is studying the number of asthma attacks requiring emergency care per day in a mid-sized city. She models the number of attacks per day using a Poisson distribution with rate parameter \\(\\lambda = 3\\).\n\nRecall the Poisson PMF:\n\\[P(X = k) = \\frac{e^{-\\lambda} \\lambda^k}{k!}, \\quad k = 0, 1, 2, \\dots\\]\nWrite out, in terms of the Poisson PMF, the probability that on a randomly selected day there are at least 2 asthma attacks. You do not need to compute the numeric value.\n\nContinuing part (b) above, Which of the following R commands correctly calculates the probability that on a randomly selected day there are at least 2 asthma attacks?\n\n\ndbinom(1, lambda = 3)\n1 - ppois(1, lambda = 3)\nppois(2, lambda = 3)\n1 - dpois(2, lambda = 3)\n\n\n\n\nElena Epidata is an epidemiologist exploring health trends in the U.S. population. She is using a clinical dataset which includes variables such as age, BMI, blood pressure, and cholesterol for a sample of adults. Elena is new to R and is practicing basic data exploration.\n\n\n\nElena types the following code in R:\n\nlibrary(tidyverse)\ndata &lt;- read_csv(\"data.csv\")\nView(data)\nglimpse(data)\nnames(data)\n\nWhich of the following statements are true about the outputs of these commands? Select all that apply.\n\nView() opens a spreadsheet-style view of the dataset.\nglimpse() prints a concise summary of the dataset to the console.\nnames() lists the names of the columns.\nView() returns a vector of column names.\n\n\n\n\nElena wants to examine a subset of the data. She types:\n\ndata_highbp &lt;- data |&gt;\n  filter(age &gt;= 50, sbp &gt; 140)\n\n\nWhat subset of data has she created?\n\n\nWhat does |&gt; do?\n\n\nWill anything be printed out by running this code? Why or why not?\n\n\n\n\nElena wants to create a scatter plot of BMI vs. systolic blood pressure and color points by sex. She writes:\n\nggplot(data, aes(x = bmi, y = sbp, color = sex)) +\n  geom_point() +\n  labs(x = \"BMI\", y = \"Systolic Blood Pressure (mmHg)\")\n\nWhich of the following statements are true? Select all that apply.\n\ngeom_point() creates a scatter plot.\nPoints are colored based on BMI.\nThis code produces a boxplot of blood pressure.\nThe x-axis represents BMI.\n\n\n\n\nElena wants to calculate the average BMI by age_group. This variable has 3 categories: young, mid, and older. She types:\n\ndata_summary &lt;- data |&gt;\n  group_by(age_group) |&gt;\n  summarize(mean_bmi = mean(bmi, na.rm = TRUE))\n\nWhat does data_summary contain?\n\n\n\nCircle either True or False.\n\n\n\nThe Poisson distribution is often used to model counts of rare events occurring independently in a fixed time or space interval.\nTrue\nFalse\n\n\n\nIn a discrete probability distribution, all individual probabilities must be greater than 0.\nTrue\nFalse\n\n\n\nA frequentist interprets probability as a personal degree of belief, while a Bayesian interprets probability as the long-run relative frequency of events.\nTrue\nFalse"
   },
   {
-    "objectID": "resources/exam-01-topics.html#material-covered",
-    "href": "resources/exam-01-topics.html#material-covered",
-    "title": "Topics List",
+    "objectID": "resources/exam-01-review.html#q1",
+    "href": "resources/exam-01-review.html#q1",
+    "title": "Exam Review",
     "section": "",
-    "text": "Lectures 1-7, HW 1-3, Labs 1-3, AE 1-2"
+    "text": "Rapid antigen tests are commonly used to detect COVID-19 infection. Suppose a new rapid test is compared against the gold standard PCR test.\nFor this question, focus on asymptomatic adults. About 5% of asymptomatic adults truly have COVID-19 infection. The test has a sensitivity of 90% and a specificity of 95% for detecting infection in this population.\n\nSuppose you administer the rapid test to someone who truly has COVID-19. What is the probability that the test will return a positive result? Circle one.\n\n\n5%\n\n90%\n\n10%\n\n95%\n\nNot enough information to determine this probability\n\n\nA new rapid test has been developed to detect hepatitis B infection. A study compares the results of the rapid test against the gold standard laboratory test. The results from 200 patients are summarized below:\n\n\n\n\n\n\n\n\n\n\n\nGold Standard Positive\nGold Standard Negative\nTotal\n\n\n\n\nRapid Test Positive\n70\n25\n95\n\n\nRapid Test Negative\n10\n95\n105\n\n\nTotal\n80\n120\n200\n\n\n\nQuestion:\nCalculate the sensitivity of the rapid test. Leave your answer as a fraction."
   },
   {
-    "objectID": "resources/exam-01-topics.html#coding",
-    "href": "resources/exam-01-topics.html#coding",
-    "title": "Topics List",
-    "section": "Coding",
-    "text": "Coding\n\nConsole vs. Quarto document. When might you code in Quarto document and not in Console? How can using Quarto help with reproducibility?\nView() and glimpse() and names()\ngetwd(). What does it tell you?\nYAML: what is it, how is it helpful for documentation?\nHow to create headers in Quarto\nHow to comment out code within a code chunk\nlibrary() vs. install.packages()\nWhat is ggplot()?\nWhat is the tidyverse ?\ngeom_point(), geom_boxplot(), geom_bar(), geom_line(), labs(), size, color, alpha, fill. What do all these do?\nWhich type of ggplot would be appropriate based on different variable types (e.g. scatterplot, boxplot, line plot)\nDetecting common sources of errors: missing parentheses, missing quotation mark, missing comma\n#| warning: false and #| message: false. What do they do?\nfilter(), slice(), distinct(), select(), arrange(), summarize(), group_by(), mutate(), sample_n(), sample_frac(), case_when(). What are each of these used for?\npipe, |&gt;, What is it used for?\nLogical operators in R\n%in%\nna.rm = T\nGiven a particular ggplot code, describe the type of plot that would be created. (Review examples in Lab 3).\ndbinom() and dpois(), how to use to find probabilities."
+    "objectID": "resources/exam-01-review.html#q2",
+    "href": "resources/exam-01-review.html#q2",
+    "title": "Exam Review",
+    "section": "",
+    "text": "A researcher is studying the number of patients arriving at a hospital emergency room with asthma attacks during a 1-hour period. She proposes using a Poisson distribution to model the number of arrivals per hour.\nDescribe how you would verify whether each of the assumptions for a Poisson distribution are satisfied in this context. (e.g. what would you need to know/verify for each assumption, specific to this context?)"
   },
   {
-    "objectID": "resources/exam-01-topics.html#conceptual-applied",
-    "href": "resources/exam-01-topics.html#conceptual-applied",
-    "title": "Topics List",
-    "section": "Conceptual & Applied",
-    "text": "Conceptual & Applied\n\nPopulation vs. sample vs. one observation within a research question\nWhat does “representative” sample mean? What does it mean for a study to be “generalizable”?\nProbability sampling vs. non-probability sampling & knowing a few examples of each. Which is more generalizable?\nExperimental vs. observational studies.\nWhat is bias? Examples: selection, reporting, non-response, attrition, falsified data.\nWhy is transparency and data/code sharing important ethically in statistical studies?\nDefine Reproducibility vs. replicability\nExploratory data analysis. What is it and why is it helpful?\nCategorical: Nominal vs. Ordinal data & know a few examples of each\nNumerical: Count/rank vs. continuous data & know a few examples of each\nIdentifying data types based on a Table 1 (i.e. demographics or baseline characteristics table) from a paper\nParameter vs. statistic\nMean, median, mode, sample minimum and maximum, range, IQR, five-number summary, sample standard deviation\nSymmetric vs. skewed distributions, right vs.left-skew\nChebyshev’s inequality, why is it useful?\nFrequentist vs. Bayesian schools of thought. When might one be helpful over the other?\nProbability space & its components.\nIntersection, union, complement, difference, disjoint, complement rule, inclusion-exclusion. Drawing out venn-diagrams for each.\nDetermining probabilities and conditional probabilities of events given a table (review Coffee Drinking example in Lecture 3)\nVerifying Komolgorov axioms in a simple example\nConditional probability (formula provided)\nDefinition of independence (in terms of probabilities): \\(P(A \\cap B) = P(A) \\times P(B)\\), or equivalently, \\(P(A | B) = P(A)\\) or \\(P(B | A) = P(B)\\)\nGiven two simple events \\(A\\) and \\(B\\), calculating \\(P(A)\\), \\(P(B)\\), \\(P(A \\cap B)\\), \\(P(A \\cup B)\\), \\(P(A | B)\\), \\(P(B | A)\\) (Review example in Lecture 4.)\nLaw of total probability, using this to find probabilities of events given a scenario (Review Coffee example and sleep example in Lecture 4)\nOrder matters in conditional probability (Coffee example in Lecture 4)\nKnow how to define events and set up Bayes’ rule to solve for conditional probability given a scenario (Review Coffee Example Lecture 4)\nPrevalence, sensitivity, specificity, positive predictive value, negative predictive value. Know the definitions in words and in symbols.\nTradeoffs of sensitivity and specificity in a medical diagnostic test\nHow to read an ROC curve, what’s a “good” ROC curve, what is AUC\nGiven a condition/disease, a diagnostic test, and a 2x2 contingency table, define each event and write out how you would solve for the Sensitivity, Specificity, PPV, and/or NPV using conditional probability. (Leave answer as expression).\nDiscrete distributions. Know the three rules, verify the three rules in an example\nBernoulli random variable. State a simple example of a Bernoulli random variable. What’s the one parameter associated with this distribution?\nFor Binomial and Poisson random variables, Know the assumptions for each. State a simple example, verify the assumptions.\nFor Binomial and Poisson, given the formulas and parameters, write out how you would solve for simple probabilities. i.e. For \\(X \\sim Poi(3)\\), write out how you would solve for \\(P(X = 1)\\).\nWhat is expected value, in words? How about variance?\nGiven the formulas for expected value and variance for Binomial or Poisson, and given the relevant parameters for each distribution, be able to calculate expectation and variance. (Leave as expression).\nDensity functions (for continuous variables), two rules of density functions.\nZ-scores, how to calculate, why is it helpful to standardize?"
+    "objectID": "resources/exam-01-review.html#q3",
+    "href": "resources/exam-01-review.html#q3",
+    "title": "Exam Review",
+    "section": "",
+    "text": "An environmental agency classifies daily air quality in a city into three categories: Good, Moderate, and Unhealthy. The probabilities of each category on a randomly selected day are summarized in the table below:\n\n\n\n\nAir Quality\nProbability\n\n\n\n\nGood\n0.5\n\n\nModerate\n0.3\n\n\nUnhealthy\n0.2\n\n\n\nState the Kolmogorov axioms. Are all axioms true for this example?\n\nA public health researcher is studying the number of asthma attacks requiring emergency care per day in a mid-sized city. She models the number of attacks per day using a Poisson distribution with rate parameter \\(\\lambda = 3\\).\n\nRecall the Poisson PMF:\n\\[P(X = k) = \\frac{e^{-\\lambda} \\lambda^k}{k!}, \\quad k = 0, 1, 2, \\dots\\]\nWrite out, in terms of the Poisson PMF, the probability that on a randomly selected day there are at least 2 asthma attacks. You do not need to compute the numeric value.\n\nContinuing part (b) above, Which of the following R commands correctly calculates the probability that on a randomly selected day there are at least 2 asthma attacks?\n\n\ndbinom(1, lambda = 3)\n1 - ppois(1, lambda = 3)\nppois(2, lambda = 3)\n1 - dpois(2, lambda = 3)"
+  },
+  {
+    "objectID": "resources/exam-01-review.html#code",
+    "href": "resources/exam-01-review.html#code",
+    "title": "Exam Review",
+    "section": "",
+    "text": "Elena Epidata is an epidemiologist exploring health trends in the U.S. population. She is using a clinical dataset which includes variables such as age, BMI, blood pressure, and cholesterol for a sample of adults. Elena is new to R and is practicing basic data exploration."
+  },
+  {
+    "objectID": "resources/exam-01-review.html#q4",
+    "href": "resources/exam-01-review.html#q4",
+    "title": "Exam Review",
+    "section": "",
+    "text": "Elena types the following code in R:\n\nlibrary(tidyverse)\ndata &lt;- read_csv(\"data.csv\")\nView(data)\nglimpse(data)\nnames(data)\n\nWhich of the following statements are true about the outputs of these commands? Select all that apply.\n\nView() opens a spreadsheet-style view of the dataset.\nglimpse() prints a concise summary of the dataset to the console.\nnames() lists the names of the columns.\nView() returns a vector of column names."
+  },
+  {
+    "objectID": "resources/exam-01-review.html#q5",
+    "href": "resources/exam-01-review.html#q5",
+    "title": "Exam Review",
+    "section": "",
+    "text": "Elena wants to examine a subset of the data. She types:\n\ndata_highbp &lt;- data |&gt;\n  filter(age &gt;= 50, sbp &gt; 140)\n\n\nWhat subset of data has she created?\n\n\nWhat does |&gt; do?\n\n\nWill anything be printed out by running this code? Why or why not?"
+  },
+  {
+    "objectID": "resources/exam-01-review.html#q6",
+    "href": "resources/exam-01-review.html#q6",
+    "title": "Exam Review",
+    "section": "",
+    "text": "Elena wants to create a scatter plot of BMI vs. systolic blood pressure and color points by sex. She writes:\n\nggplot(data, aes(x = bmi, y = sbp, color = sex)) +\n  geom_point() +\n  labs(x = \"BMI\", y = \"Systolic Blood Pressure (mmHg)\")\n\nWhich of the following statements are true? Select all that apply.\n\ngeom_point() creates a scatter plot.\nPoints are colored based on BMI.\nThis code produces a boxplot of blood pressure.\nThe x-axis represents BMI."
+  },
+  {
+    "objectID": "resources/exam-01-review.html#q7",
+    "href": "resources/exam-01-review.html#q7",
+    "title": "Exam Review",
+    "section": "",
+    "text": "Elena wants to calculate the average BMI by age_group. This variable has 3 categories: young, mid, and older. She types:\n\ndata_summary &lt;- data |&gt;\n  group_by(age_group) |&gt;\n  summarize(mean_bmi = mean(bmi, na.rm = TRUE))\n\nWhat does data_summary contain?"
+  },
+  {
+    "objectID": "resources/exam-01-review.html#conceptual-truefalse",
+    "href": "resources/exam-01-review.html#conceptual-truefalse",
+    "title": "Exam Review",
+    "section": "",
+    "text": "Circle either True or False."
+  },
+  {
+    "objectID": "resources/exam-01-review.html#q8",
+    "href": "resources/exam-01-review.html#q8",
+    "title": "Exam Review",
+    "section": "",
+    "text": "The Poisson distribution is often used to model counts of rare events occurring independently in a fixed time or space interval.\nTrue\nFalse"
+  },
+  {
+    "objectID": "resources/exam-01-review.html#q9",
+    "href": "resources/exam-01-review.html#q9",
+    "title": "Exam Review",
+    "section": "",
+    "text": "In a discrete probability distribution, all individual probabilities must be greater than 0.\nTrue\nFalse"
+  },
+  {
+    "objectID": "resources/exam-01-review.html#q10",
+    "href": "resources/exam-01-review.html#q10",
+    "title": "Exam Review",
+    "section": "",
+    "text": "A frequentist interprets probability as a personal degree of belief, while a Bayesian interprets probability as the long-run relative frequency of events.\nTrue\nFalse"
+  },
+  {
+    "objectID": "slides/exam-01-review-slides.html#announcements",
+    "href": "slides/exam-01-review-slides.html#announcements",
+    "title": "Exam 01 Review",
+    "section": "Announcements",
+    "text": "Announcements\n\nExam 01 on Tuesday September 22, in-class\nYou only need something to write with. Calculators not permitted.\nArrive by 7:50 to get settled in."
+  },
+  {
+    "objectID": "slides/exam-01-review-slides.html#application-exercise",
+    "href": "slides/exam-01-review-slides.html#application-exercise",
+    "title": "Exam 01 Review",
+    "section": "Application Exercise",
+    "text": "Application Exercise\n\n\n\n\n\n\nApplication Exercise\n\n\nToday’s application exercise is review questions to help prepare for the exam. Head to Canvas and find instructions for AE 04.\nAE 04 is due on Sunday 9/20 at 11:59pm.\nBegin by working on Questions 1-3\n\n\n\n\n\n\n−+\n15:00"
+  },
+  {
+    "objectID": "slides/exam-01-review-slides.html#application-exercise-2",
+    "href": "slides/exam-01-review-slides.html#application-exercise-2",
+    "title": "Exam 01 Review",
+    "section": "Application Exercise",
+    "text": "Application Exercise\n\nNext, work on questions 4-10\n\n\n\n\n−+\n15:00"
   },
   {
     "objectID": "slides/lec-1-whats-stat-inf.html#download-or-print-notes-to-pdf",

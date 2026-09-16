@@ -6,8 +6,10 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="author" content="Your Name Here">
+<meta name="dcterms.date" content="2025-09-17">
 
-<title>BIOS 600 Fall 2026</title>
+<title>AE 04: Exam 01 Review – BIOS 600 Fall 2026</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,27 +22,62 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<script src="site_libs/quarto-html/quarto.js" type="module"></script>
-<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="site_libs/quarto-html/axe/axe-check.js" type="module"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-ed96de9b727972fe78a7b5d16c58bf87.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-e31584831b205ffbb2d98406f31c2a5b.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-ed96de9b727972fe78a7b5d16c58bf87.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-e31584831b205ffbb2d98406f31c2a5b.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -69,8 +106,37 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
-<link rel="stylesheet" href="styles.css">
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+<link rel="stylesheet" href="../styles.css">
 </head>
 
 <body class="nav-fixed quarto-light">
@@ -80,7 +146,7 @@ ul.task-list li input[type="checkbox"] {
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="./index.html">
+    <a class="navbar-brand" href="../index.html">
     <span class="navbar-title">BIOS 600 Fall 2026</span>
     </a>
   </div>
@@ -91,11 +157,11 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link active" href="./index.html" aria-current="page"> 
+    <a class="nav-link" href="../index.html"> 
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./about.html"> 
+    <a class="nav-link" href="../about.html"> 
 <span class="menu-text">About</span></a>
   </li>  
 </ul>
@@ -114,15 +180,20 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#schedule" id="toc-schedule" class="nav-link active" data-scroll-target="#schedule">Schedule</a>
-  <ul class="collapse">
-  <li><a href="#week-1" id="toc-week-1" class="nav-link" data-scroll-target="#week-1">Week 1</a></li>
-  <li><a href="#week-2" id="toc-week-2" class="nav-link" data-scroll-target="#week-2">Week 2</a></li>
-  <li><a href="#week-3" id="toc-week-3" class="nav-link" data-scroll-target="#week-3">Week 3</a></li>
-  <li><a href="#week-4" id="toc-week-4" class="nav-link" data-scroll-target="#week-4">Week 4</a></li>
-  <li><a href="#exam-resources" id="toc-exam-resources" class="nav-link" data-scroll-target="#exam-resources">Exam Resources</a></li>
-  <li><a href="#week-5" id="toc-week-5" class="nav-link" data-scroll-target="#week-5">Week 5</a></li>
-  </ul></li>
+  <li><a href="#getting-started" id="toc-getting-started" class="nav-link active" data-scroll-target="#getting-started">Getting started</a></li>
+  <li><a href="#q1" id="toc-q1" class="nav-link" data-scroll-target="#q1">Q1</a></li>
+  <li><a href="#q2" id="toc-q2" class="nav-link" data-scroll-target="#q2">Q2</a></li>
+  <li><a href="#q3" id="toc-q3" class="nav-link" data-scroll-target="#q3">Q3</a></li>
+  <li><a href="#code-questions" id="toc-code-questions" class="nav-link" data-scroll-target="#code-questions">Code Questions</a></li>
+  <li><a href="#q4" id="toc-q4" class="nav-link" data-scroll-target="#q4">Q4</a></li>
+  <li><a href="#q5" id="toc-q5" class="nav-link" data-scroll-target="#q5">Q5</a></li>
+  <li><a href="#q6" id="toc-q6" class="nav-link" data-scroll-target="#q6">Q6</a></li>
+  <li><a href="#q7" id="toc-q7" class="nav-link" data-scroll-target="#q7">Q7</a></li>
+  <li><a href="#conceptual-truefalse" id="toc-conceptual-truefalse" class="nav-link" data-scroll-target="#conceptual-truefalse">Conceptual (True/False)</a></li>
+  <li><a href="#q8" id="toc-q8" class="nav-link" data-scroll-target="#q8">Q8</a></li>
+  <li><a href="#q9" id="toc-q9" class="nav-link" data-scroll-target="#q9">Q9</a></li>
+  <li><a href="#q10" id="toc-q10" class="nav-link" data-scroll-target="#q10">Q10</a></li>
+  <li><a href="#submission" id="toc-submission" class="nav-link" data-scroll-target="#submission">Submission</a></li>
   </ul>
 </nav>
     </div>
@@ -131,14 +202,26 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">BIOS 600 Fall 2026</h1>
+<h1 class="title">AE 04: Exam 01 Review</h1>
 </div>
 
 
 
 <div class="quarto-title-meta">
 
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Your Name Here </p>
+          </div>
+  </div>
     
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">September 17, 2025</p>
+    </div>
+  </div>
   
     
   </div>
@@ -148,53 +231,245 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="schedule" class="level1">
-<h1>Schedule</h1>
-<section id="week-1" class="level2">
-<h2 class="anchored" data-anchor-id="week-1">Week 1</h2>
-<p><a href="slides/lec-0-welcome.html">Lecture 0: Welcome to BIOS 600!</a></p>
-<p><a href="labs/lab-1.html">Lab 1: Introducing the Toolkit</a></p>
-<p><a href="slides/lec-1-whats-stat-inf.html">Lecture 1: What is statistical inference?</a></p>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Important
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>This Application Exercise is due on Sunday, September 20 at 11:59pm. To be considered on time, the following must be done by the due date:</p>
+<ul>
+<li><p>Final <code>.pdf</code> file submitted on Canvas</p></li>
+<li><p>While late work is accepted for HW and Labs, no late work is accepted for AEs.</p></li>
+</ul>
+</div>
+</div>
+<section id="getting-started" class="level2">
+<h2 class="anchored" data-anchor-id="getting-started">Getting started</h2>
+<p>To get started, create a new Quarto document. In your document, provide your answers to the following questions.</p>
 </section>
-<section id="week-2" class="level2">
-<h2 class="anchored" data-anchor-id="week-2">Week 2</h2>
-<p><a href="labs/lab-2-data-viz.html">Lab 2: Basic Data Visualization</a></p>
-<p><a href="slides/lec-2-nature-data.html">Lecture 2: The nature of data</a></p>
-<p><a href="slides/lec-3-prob-basics.html">Lecture 3: Probability basics</a></p>
-<p><a href="hw/hw-01.html">HW 1</a></p>
+<section id="q1" class="level2">
+<h2 class="anchored" data-anchor-id="q1">Q1</h2>
+<p>Rapid antigen tests are commonly used to detect <strong>COVID-19 infection</strong>. Suppose a new rapid test is compared against the gold standard PCR test.</p>
+<p>For this question, focus on <strong>asymptomatic adults</strong>. About <strong>5% of asymptomatic adults</strong> truly have COVID-19 infection. The test has a <strong>sensitivity of 90%</strong> and a <strong>specificity of 95%</strong> for detecting infection in this population.</p>
+<ol type="a">
+<li>Suppose you administer the rapid test to someone who truly has COVID-19. What is the probability that the test will return a positive result? Circle one.</li>
+</ol>
+<ol type="A">
+<li>5%<br>
+</li>
+<li>90%<br>
+</li>
+<li>10%<br>
+</li>
+<li>95%<br>
+</li>
+<li>Not enough information to determine this probability</li>
+</ol>
+<ol start="2" type="a">
+<li>A new rapid test has been developed to detect <strong>hepatitis B infection</strong>. A study compares the results of the rapid test against the gold standard laboratory test. The results from 200 patients are summarized below:</li>
+</ol>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 31%">
+<col style="width: 29%">
+<col style="width: 29%">
+<col style="width: 9%">
+</colgroup>
+<thead>
+<tr class="header">
+<th></th>
+<th>Gold Standard Positive</th>
+<th>Gold Standard Negative</th>
+<th>Total</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Rapid Test Positive</strong></td>
+<td>70</td>
+<td>25</td>
+<td>95</td>
+</tr>
+<tr class="even">
+<td><strong>Rapid Test Negative</strong></td>
+<td>10</td>
+<td>95</td>
+<td>105</td>
+</tr>
+<tr class="odd">
+<td><strong>Total</strong></td>
+<td>80</td>
+<td>120</td>
+<td>200</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Question:</strong><br>
+Calculate the <strong>sensitivity</strong> of the rapid test using the definition of conditional probability. Leave your answer as a fraction.</p>
 </section>
-<section id="week-3" class="level2">
-<h2 class="anchored" data-anchor-id="week-3">Week 3</h2>
-<p><a href="labs/lab-03-data-wrangling.html">Lab 3: Data Wrangling</a></p>
-<p><a href="slides/lec-4-conditional-bayes.html">Lecture 4: Conditional probability</a></p>
-<p><a href="slides/lec-5-diagnostic.html">Lecture 5: Medical diagnostics</a></p>
-<p><a href="hw/hw-02.html">HW 2</a></p>
+<section id="q2" class="level2">
+<h2 class="anchored" data-anchor-id="q2">Q2</h2>
+<p>A researcher is studying the number of patients arriving at a hospital emergency room with asthma attacks during a 1-hour period. She proposes using a Poisson distribution to model the number of arrivals per hour.</p>
+<p>Describe how you would verify whether each of the assumptions for a Poisson distribution are satisfied in this context. (e.g.&nbsp;what would you need to know/verify for each assumption, specific to this context?)</p>
 </section>
-<section id="week-4" class="level2">
-<h2 class="anchored" data-anchor-id="week-4">Week 4</h2>
-<p><a href="slides/lec-6-discrete.html">Lecture 6: Discrete distributions</a></p>
-<p><a href="labs/lab-04.html">Lab 4: Practice with ggplot2 and tidyverse</a></p>
-<p><a href="ae/ae-01.html">Application Exercise 1: Binomial in a Biomedical Setting</a></p>
-<p><a href="slides/lec-7-continuous.html">Lecture 7: Continuous distributions</a></p>
-<p><a href="ae/ae-02-poisson.html">Application Exercise 2: Poisson in a Hospital Setting</a></p>
-<p><a href="hw/hw-03.html">HW 3</a></p>
-<p><a href="ae/ae-01-solution.html">AE 1 Solution</a></p>
+<section id="q3" class="level2">
+<h2 class="anchored" data-anchor-id="q3">Q3</h2>
+<ol type="a">
+<li>An environmental agency classifies daily air quality in a city into three categories: Good, Moderate, and Unhealthy. The probabilities of each category on a randomly selected day are summarized in the table below:</li>
+</ol>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Air Quality</th>
+<th>Probability</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Good</td>
+<td>0.5</td>
+</tr>
+<tr class="even">
+<td>Moderate</td>
+<td>0.3</td>
+</tr>
+<tr class="odd">
+<td>Unhealthy</td>
+<td>0.2</td>
+</tr>
+</tbody>
+</table>
+<p>State the Kolmogorov axioms. Are all axioms true for this example?</p>
+<ol start="2" type="a">
+<li>A public health researcher is studying the number of <strong>asthma attacks requiring emergency care per day</strong> in a mid-sized city. She models the number of attacks per day using a Poisson distribution with rate parameter <span class="math inline">\(\lambda = 3\)</span>.</li>
+</ol>
+<p>Recall the Poisson PMF:</p>
+<p><span class="math display">\[P(X = k) = \frac{e^{-\lambda} \lambda^k}{k!}, \quad k = 0, 1, 2, \dots\]</span></p>
+<p>Write out, in terms of the Poisson PMF, the probability that on a randomly selected day there are <strong>at least 2 asthma attacks</strong>. You do not need to compute the numeric value.</p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Typing equations in Latex
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>If you would like to type your answer using LaTeX (a typesetting tool used to write nice equations), consider the following:</p>
+<p>The code</p>
+<p><code>$P(X = k) = \frac{e^{-7} 7^k}{k!}$</code></p>
+<p>produces</p>
+<p><span class="math inline">\(P(X = k) = \frac{e^{-7} 7^k}{k!}\)</span></p>
+</div>
+</div>
+<ol start="3" type="a">
+<li>Continuing part (b) above, Which of the following R commands correctly calculates the probability that on a randomly selected day there is <strong>at least 1 asthma attacks</strong>?</li>
+</ol>
+<ol type="A">
+<li><p><code>dbinom(1, lambda = 3)</code></p></li>
+<li><p><code>1 - dpois(0, lambda = 3) - dpois(1, lambda = 3)</code></p></li>
+<li><p><code>dpois(2, lambda = 3) + dpois(3, lambda = 3)</code></p></li>
+<li><p><code>dpois(1, lambda = 3)</code></p></li>
+</ol>
 </section>
-<section id="exam-resources" class="level2">
-<h2 class="anchored" data-anchor-id="exam-resources">Exam Resources</h2>
-<p><a href="resources/exam-01-topics.html">Exam 01 Topics List</a></p>
-<p><a href="resources/exam-01-formulas.html">Exam 01 Formula Sheet</a></p>
-<p><a href="resources/exam-01-practice.html">Exam 01 Practice Problems</a></p>
+<section id="code-questions" class="level2">
+<h2 class="anchored" data-anchor-id="code-questions">Code Questions</h2>
+<p>Elena Epidata is an epidemiologist exploring health trends in the U.S. population. She is using a clinical dataset which includes variables such as <strong>age, BMI, blood pressure, and cholesterol</strong> for a sample of adults. Elena is new to R and is practicing basic data exploration.</p>
 </section>
-<section id="week-5" class="level2">
-<h2 class="anchored" data-anchor-id="week-5">Week 5</h2>
-<p><a href="slides/lec-8-clt.html">Lecture 8: Central Limit Theorem</a></p>
-<p><a href="ae/ae-03-clt.html">Application Exercise 3: Central Limit Theorem</a></p>
-<p><a href="slides/exam-01-review-slides.html">Exam 01 Review Slides</a></p>
-<p><a href="ae/ae-04-exam-01-review.html">Application Exercise 4: Exam 01 Review</a></p>
+<section id="q4" class="level2">
+<h2 class="anchored" data-anchor-id="q4">Q4</h2>
+<p>Elena types the following code in R:</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>data <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"data.csv"</span>)</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">View</span>(data)</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="fu">glimpse</span>(data)</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="fu">names</span>(data)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<p>Which of the following statements are true about the outputs of these commands? Select all that apply.</p>
+<ol type="A">
+<li><code>View()</code> opens a spreadsheet-style view of the dataset.</li>
+<li><code>glimpse()</code> prints a concise summary of the dataset to the console.</li>
+<li><code>names()</code> lists the names of the columns.</li>
+<li><code>View()</code> returns a vector of column names.</li>
+</ol>
+</section>
+<section id="q5" class="level2">
+<h2 class="anchored" data-anchor-id="q5">Q5</h2>
+<p>Elena wants to examine a subset of the data. She types:</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>data_highbp <span class="ot">&lt;-</span> data <span class="sc">|&gt;</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(age <span class="sc">&gt;=</span> <span class="dv">50</span>, sbp <span class="sc">&gt;</span> <span class="dv">140</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<ol type="a">
+<li>What subset of data has she created?</li>
+</ol>
+<ol start="2" type="a">
+<li>What does <code>|&gt;</code> do?</li>
+</ol>
+<ol start="3" type="a">
+<li>Will anything be printed out by running this code? Why or why not?</li>
+</ol>
+</section>
+<section id="q6" class="level2">
+<h2 class="anchored" data-anchor-id="q6">Q6</h2>
+<p>Elena wants to create a scatter plot of BMI vs.&nbsp;systolic blood pressure and color points by sex. She writes:</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(data, <span class="fu">aes</span>(<span class="at">x =</span> bmi, <span class="at">y =</span> sbp, <span class="at">color =</span> sex)) <span class="sc">+</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">"BMI"</span>, <span class="at">y =</span> <span class="st">"Systolic Blood Pressure (mmHg)"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<p>Which of the following statements are true? Select all that apply.</p>
+<ol type="A">
+<li><code>geom_point()</code> creates a scatter plot.</li>
+<li>Points are colored based on BMI.</li>
+<li>This code produces a boxplot of blood pressure.</li>
+<li>The x-axis represents BMI.</li>
+</ol>
+</section>
+<section id="q7" class="level2">
+<h2 class="anchored" data-anchor-id="q7">Q7</h2>
+<p>Elena wants to calculate the average BMI by <code>age_group</code>. This variable has 3 categories: <code>young</code>, <code>mid</code>, and <code>older</code>. She types:</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>data_summary <span class="ot">&lt;-</span> data <span class="sc">|&gt;</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(age_group) <span class="sc">|&gt;</span></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarize</span>(<span class="at">mean_bmi =</span> <span class="fu">mean</span>(bmi, <span class="at">na.rm =</span> <span class="cn">TRUE</span>))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<p>What does <code>data_summary</code> contain?</p>
+</section>
+<section id="conceptual-truefalse" class="level2">
+<h2 class="anchored" data-anchor-id="conceptual-truefalse">Conceptual (True/False)</h2>
+<p>Circle either True or False.</p>
+</section>
+<section id="q8" class="level2">
+<h2 class="anchored" data-anchor-id="q8">Q8</h2>
+<p>The Poisson distribution is often used to model counts of rare events occurring independently in a fixed time or space interval.</p>
+<p>True</p>
+<p>False</p>
+</section>
+<section id="q9" class="level2">
+<h2 class="anchored" data-anchor-id="q9">Q9</h2>
+<p>In a discrete probability distribution, all individual probabilities must be greater than 0.</p>
+<p>True</p>
+<p>False</p>
+</section>
+<section id="q10" class="level2">
+<h2 class="anchored" data-anchor-id="q10">Q10</h2>
+<p>A frequentist interprets probability using a personal degree of belief, while a Bayesian interprets probability using the long-run relative frequency of events.</p>
+<p>True</p>
+<p>False</p>
+</section>
+<section id="submission" class="level2">
+<h2 class="anchored" data-anchor-id="submission">Submission</h2>
+<p>Render to PDF and submit on Canvas &gt; Assignments.</p>
 
 
-</section>
 </section>
 
 </main> <!-- /main -->
