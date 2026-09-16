@@ -11,7 +11,7 @@ project:
     - "!lab-02-solution.qmd"
     - "!lab-03-solution.qmd"
     - "!lab-04-solution.qmd"
-
+    - "!solutions/"
 
 website:
   title: "BIOS 600 Fall 2026"

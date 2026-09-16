@@ -1932,81 +1932,32 @@
     "text": "Takeaway\nAcross different distributions (Bernoulli, Binomial, Poisson), when we look at the distribution of sample means for reasonably large sample sizes, the shape becomes approximately normal.\nThis is the Central Limit Theorem in action!"
   },
   {
-    "objectID": "ae/ae-02-solution.html",
-    "href": "ae/ae-02-solution.html",
-    "title": "AE 02 Solution",
-    "section": "",
-    "text": "What is the probability that in a given hour, exactly 5 asthma patients arrive? Use the dpois function to compute your answer and provide a 1-sentence conclusion.\n\ndpois(5, lambda = 3)\n\n[1] 0.1008188\n\n\nSo, there is about a 10% chance of exactly 5 asthma patients in one hour."
-  },
-  {
-    "objectID": "ae/ae-02-poisson-template.html",
-    "href": "ae/ae-02-poisson-template.html",
+    "objectID": "ae/ae-02-poisson.html",
+    "href": "ae/ae-02-poisson.html",
     "title": "Application Exercise 2: Poisson",
     "section": "",
-    "text": "Suppose that in a hospital emergency department, the average number of asthma-related visits per hour is 3. Let \\(Y\\) be the number of asthma visits in one hour. Then \\(Y \\sim Poisson(\\lambda=3)\\)\n\n\nWhat is the probability that in a given hour, exactly 5 asthma patients arrive? Use the dpois function to compute your answer and provide a 1-sentence conclusion.\n\n# type code here\n\n[type response here]"
+    "text": "Important\n\n\n\nThis Application Exercise is due on Friday, September 11 at 11:59pm. To be considered on time, the following must be done by the due date:\n\nFinal .pdf file submitted on Canvas\nWhile late work is accepted for HW and Labs, no late work is accepted for AEs."
   },
   {
-    "objectID": "ae/ae-02-poisson-template.html#hospital-visits-poisson-example",
-    "href": "ae/ae-02-poisson-template.html#hospital-visits-poisson-example",
+    "objectID": "ae/ae-02-poisson.html#getting-started",
+    "href": "ae/ae-02-poisson.html#getting-started",
     "title": "Application Exercise 2: Poisson",
-    "section": "",
-    "text": "Suppose that in a hospital emergency department, the average number of asthma-related visits per hour is 3. Let \\(Y\\) be the number of asthma visits in one hour. Then \\(Y \\sim Poisson(\\lambda=3)\\)\n\n\nWhat is the probability that in a given hour, exactly 5 asthma patients arrive? Use the dpois function to compute your answer and provide a 1-sentence conclusion.\n\n# type code here\n\n[type response here]"
+    "section": "Getting started",
+    "text": "Getting started\nDownload the template for today’s Application Exercise (AE) from Canvas. Open the file, and type your name and today’s date in the YAML. Save your file as ae-02.qmd in your project folder.\nRender your document to ensure the formatting all looks good."
   },
   {
-    "objectID": "ae/ae-01-template.html",
-    "href": "ae/ae-01-template.html",
-    "title": "Application Exercise: Binomial in a Biomedical Setting",
-    "section": "",
-    "text": "Suppose 5 people receive a new vaccine. From clinical trial data, the probability that any individual experiences a mild side effect (e.g., sore arm, mild fever) is 0.2.\nLet \\(X\\) be the number of people (out of 5) who experience a mild side effect.\nThen \\(X \\sim \\text{Binomial}(n=5, p=0.2)\\).\n\n\nWhat is the probability that exactly 2 out of 5 people experience a mild side effect? Use the dbinom function to compute your answer and provide a 1-sentence conclusion.\n\n# type code here\n\n[type response here]"
+    "objectID": "ae/ae-02-poisson.html#hospital-visits-poisson-example",
+    "href": "ae/ae-02-poisson.html#hospital-visits-poisson-example",
+    "title": "Application Exercise 2: Poisson",
+    "section": "Hospital Visits: Poisson Example",
+    "text": "Hospital Visits: Poisson Example\nSuppose that in a hospital emergency department, the average number of asthma-related visits per hour is 3. Let \\(Y\\) be the number of asthma visits in one hour. Then \\(Y \\sim Poisson(\\lambda=3)\\)\n\nExercise 1\nWhat is the probability that in a given hour, exactly 5 asthma patients arrive? Use the dpois function to compute your answer and provide a 1-sentence conclusion.\n\n# type code here\n\n[type response here]"
   },
   {
-    "objectID": "ae/ae-01-template.html#a-clinical-trial-binomial-example",
-    "href": "ae/ae-01-template.html#a-clinical-trial-binomial-example",
-    "title": "Application Exercise: Binomial in a Biomedical Setting",
-    "section": "",
-    "text": "Suppose 5 people receive a new vaccine. From clinical trial data, the probability that any individual experiences a mild side effect (e.g., sore arm, mild fever) is 0.2.\nLet \\(X\\) be the number of people (out of 5) who experience a mild side effect.\nThen \\(X \\sim \\text{Binomial}(n=5, p=0.2)\\).\n\n\nWhat is the probability that exactly 2 out of 5 people experience a mild side effect? Use the dbinom function to compute your answer and provide a 1-sentence conclusion.\n\n# type code here\n\n[type response here]"
-  },
-  {
-    "objectID": "ae/ae-01-template.html#exercise-2",
-    "href": "ae/ae-01-template.html#exercise-2",
-    "title": "Application Exercise: Binomial in a Biomedical Setting",
-    "section": "Exercise 2",
-    "text": "Exercise 2\nWhat is the probability that at least 1 out of 5 people experiences a mild side effect? (Hint: Use the complement rule: \\(P(X \\geq 1)=1−P(X=0)\\)). Use the dbinom function to compute your answer and provide a 1-sentence conclusion.\n\n# type code here\n\n[type response here]"
-  },
-  {
-    "objectID": "ae/ae-01-template.html#submission",
-    "href": "ae/ae-01-template.html#submission",
-    "title": "Application Exercise: Binomial in a Biomedical Setting",
+    "objectID": "ae/ae-02-poisson.html#submission",
+    "href": "ae/ae-02-poisson.html#submission",
+    "title": "Application Exercise 2: Poisson",
     "section": "Submission",
-    "text": "Submission\nRender to PDF and submit on Canvas &gt; Assignments."
-  },
-  {
-    "objectID": "about.html",
-    "href": "about.html",
-    "title": "About",
-    "section": "",
-    "text": "About this site"
-  },
-  {
-    "objectID": "ae/ae-01-solution.html",
-    "href": "ae/ae-01-solution.html",
-    "title": "Application Exercise: Practice with Binomial and Poisson",
-    "section": "",
-    "text": "Suppose 5 people receive a new vaccine. From clinical trial data, the probability that any individual experiences a mild side effect (e.g., sore arm, mild fever) is 0.2.\nLet \\(X\\) be the number of people (out of 5) who experience a mild side effect.\nThen \\(X \\sim \\text{Binomial}(n=5, p=0.2)\\).\n\n\nWhat is the probability that exactly 2 out of 5 people experience a mild side effect? Use the dbinom function to compute your answer and provide a 1-sentence conclusion.\n\ndbinom(2,size=5,prob=0.2)\n\n[1] 0.2048\n\n\nSo, there is about a 20.5% chance that exactly 2 people will have side effects."
-  },
-  {
-    "objectID": "ae/ae-01-solution.html#a-clinical-trial-binomial-example",
-    "href": "ae/ae-01-solution.html#a-clinical-trial-binomial-example",
-    "title": "Application Exercise: Practice with Binomial and Poisson",
-    "section": "",
-    "text": "Suppose 5 people receive a new vaccine. From clinical trial data, the probability that any individual experiences a mild side effect (e.g., sore arm, mild fever) is 0.2.\nLet \\(X\\) be the number of people (out of 5) who experience a mild side effect.\nThen \\(X \\sim \\text{Binomial}(n=5, p=0.2)\\).\n\n\nWhat is the probability that exactly 2 out of 5 people experience a mild side effect? Use the dbinom function to compute your answer and provide a 1-sentence conclusion.\n\ndbinom(2,size=5,prob=0.2)\n\n[1] 0.2048\n\n\nSo, there is about a 20.5% chance that exactly 2 people will have side effects."
-  },
-  {
-    "objectID": "ae/ae-01-solution.html#exercise-2",
-    "href": "ae/ae-01-solution.html#exercise-2",
-    "title": "Application Exercise: Practice with Binomial and Poisson",
-    "section": "Exercise 2",
-    "text": "Exercise 2\nWhat is the probability that at least 1 out of 5 people experiences a mild side effect? (Hint: Use the complement rule: \\(P(X \\geq 1)=1−P(X=0)\\)). Use the dbinom function to compute your answer and provide a 1-sentence conclusion.\n\n1-dbinom(0,size=5,prob=0.2)\n\n[1] 0.67232\n\n\nSo, there is about a 67% chance that at least 1 person will have a mild side effect."
+    "text": "Submission\nAs you’ve seen previously, we can Render the template into an .html file that can be opened by any web browser. To export it as a .pdf, open the file in your web browser and then print to or save as a .pdf document. Your TAs will show you how if you need help! (There is a way to directly knit to a .pdf file, but it’s quite a bit more involved.)\nYou will submit the PDF documents for Application Exercises directly to Canvas.\nTo submit your assignment:\n\nAccess the Application Exercise through Modules on the BIOS 600 Canvas site.\nUpload your PDF."
   },
   {
     "objectID": "ae/ae-01.html",
@@ -2044,32 +1995,53 @@
     "text": "Submission\nAs you’ve seen previously, we can Render the template into an .html file that can be opened by any web browser. To export it as a .pdf, open the file in your web browser and then print to or save as a .pdf document. Your TAs will show you how if you need help! (There is a way to directly knit to a .pdf file, but it’s quite a bit more involved.)\nYou will submit the PDF documents for Application Exercises directly to Canvas.\nTo submit your assignment:\n\nAccess the Application Exercise through Modules on the BIOS 600 Canvas site.\nUpload your PDF."
   },
   {
-    "objectID": "ae/ae-02-poisson.html",
-    "href": "ae/ae-02-poisson.html",
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "About this site"
+  },
+  {
+    "objectID": "ae/ae-01-template.html",
+    "href": "ae/ae-01-template.html",
+    "title": "Application Exercise: Binomial in a Biomedical Setting",
+    "section": "",
+    "text": "Suppose 5 people receive a new vaccine. From clinical trial data, the probability that any individual experiences a mild side effect (e.g., sore arm, mild fever) is 0.2.\nLet \\(X\\) be the number of people (out of 5) who experience a mild side effect.\nThen \\(X \\sim \\text{Binomial}(n=5, p=0.2)\\).\n\n\nWhat is the probability that exactly 2 out of 5 people experience a mild side effect? Use the dbinom function to compute your answer and provide a 1-sentence conclusion.\n\n# type code here\n\n[type response here]"
+  },
+  {
+    "objectID": "ae/ae-01-template.html#a-clinical-trial-binomial-example",
+    "href": "ae/ae-01-template.html#a-clinical-trial-binomial-example",
+    "title": "Application Exercise: Binomial in a Biomedical Setting",
+    "section": "",
+    "text": "Suppose 5 people receive a new vaccine. From clinical trial data, the probability that any individual experiences a mild side effect (e.g., sore arm, mild fever) is 0.2.\nLet \\(X\\) be the number of people (out of 5) who experience a mild side effect.\nThen \\(X \\sim \\text{Binomial}(n=5, p=0.2)\\).\n\n\nWhat is the probability that exactly 2 out of 5 people experience a mild side effect? Use the dbinom function to compute your answer and provide a 1-sentence conclusion.\n\n# type code here\n\n[type response here]"
+  },
+  {
+    "objectID": "ae/ae-01-template.html#exercise-2",
+    "href": "ae/ae-01-template.html#exercise-2",
+    "title": "Application Exercise: Binomial in a Biomedical Setting",
+    "section": "Exercise 2",
+    "text": "Exercise 2\nWhat is the probability that at least 1 out of 5 people experiences a mild side effect? (Hint: Use the complement rule: \\(P(X \\geq 1)=1−P(X=0)\\)). Use the dbinom function to compute your answer and provide a 1-sentence conclusion.\n\n# type code here\n\n[type response here]"
+  },
+  {
+    "objectID": "ae/ae-01-template.html#submission",
+    "href": "ae/ae-01-template.html#submission",
+    "title": "Application Exercise: Binomial in a Biomedical Setting",
+    "section": "Submission",
+    "text": "Submission\nRender to PDF and submit on Canvas &gt; Assignments."
+  },
+  {
+    "objectID": "ae/ae-02-poisson-template.html",
+    "href": "ae/ae-02-poisson-template.html",
     "title": "Application Exercise 2: Poisson",
     "section": "",
-    "text": "Important\n\n\n\nThis Application Exercise is due on Friday, September 11 at 11:59pm. To be considered on time, the following must be done by the due date:\n\nFinal .pdf file submitted on Canvas\nWhile late work is accepted for HW and Labs, no late work is accepted for AEs."
+    "text": "Suppose that in a hospital emergency department, the average number of asthma-related visits per hour is 3. Let \\(Y\\) be the number of asthma visits in one hour. Then \\(Y \\sim Poisson(\\lambda=3)\\)\n\n\nWhat is the probability that in a given hour, exactly 5 asthma patients arrive? Use the dpois function to compute your answer and provide a 1-sentence conclusion.\n\n# type code here\n\n[type response here]"
   },
   {
-    "objectID": "ae/ae-02-poisson.html#getting-started",
-    "href": "ae/ae-02-poisson.html#getting-started",
+    "objectID": "ae/ae-02-poisson-template.html#hospital-visits-poisson-example",
+    "href": "ae/ae-02-poisson-template.html#hospital-visits-poisson-example",
     "title": "Application Exercise 2: Poisson",
-    "section": "Getting started",
-    "text": "Getting started\nDownload the template for today’s Application Exercise (AE) from Canvas. Open the file, and type your name and today’s date in the YAML. Save your file as ae-02.qmd in your project folder.\nRender your document to ensure the formatting all looks good."
-  },
-  {
-    "objectID": "ae/ae-02-poisson.html#hospital-visits-poisson-example",
-    "href": "ae/ae-02-poisson.html#hospital-visits-poisson-example",
-    "title": "Application Exercise 2: Poisson",
-    "section": "Hospital Visits: Poisson Example",
-    "text": "Hospital Visits: Poisson Example\nSuppose that in a hospital emergency department, the average number of asthma-related visits per hour is 3. Let \\(Y\\) be the number of asthma visits in one hour. Then \\(Y \\sim Poisson(\\lambda=3)\\)\n\nExercise 1\nWhat is the probability that in a given hour, exactly 5 asthma patients arrive? Use the dpois function to compute your answer and provide a 1-sentence conclusion.\n\n# type code here\n\n[type response here]"
-  },
-  {
-    "objectID": "ae/ae-02-poisson.html#submission",
-    "href": "ae/ae-02-poisson.html#submission",
-    "title": "Application Exercise 2: Poisson",
-    "section": "Submission",
-    "text": "Submission\nAs you’ve seen previously, we can Render the template into an .html file that can be opened by any web browser. To export it as a .pdf, open the file in your web browser and then print to or save as a .pdf document. Your TAs will show you how if you need help! (There is a way to directly knit to a .pdf file, but it’s quite a bit more involved.)\nYou will submit the PDF documents for Application Exercises directly to Canvas.\nTo submit your assignment:\n\nAccess the Application Exercise through Modules on the BIOS 600 Canvas site.\nUpload your PDF."
+    "section": "",
+    "text": "Suppose that in a hospital emergency department, the average number of asthma-related visits per hour is 3. Let \\(Y\\) be the number of asthma visits in one hour. Then \\(Y \\sim Poisson(\\lambda=3)\\)\n\n\nWhat is the probability that in a given hour, exactly 5 asthma patients arrive? Use the dpois function to compute your answer and provide a 1-sentence conclusion.\n\n# type code here\n\n[type response here]"
   },
   {
     "objectID": "ae/ae-03-clt.html",
