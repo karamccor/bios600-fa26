@@ -12,6 +12,7 @@ project:
     - "!lab-03-solution.qmd"
     - "!lab-04-solution.qmd"
     - "!solutions/"
+    - "!exam-01-practice-solution.qmd"
 
 website:
   title: "BIOS 600 Fall 2026"
