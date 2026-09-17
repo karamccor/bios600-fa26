@@ -1992,7 +1992,7 @@
     "href": "ae/ae-04-exam-01-review.html#getting-started",
     "title": "AE 04: Exam 01 Review",
     "section": "Getting started",
-    "text": "Getting started\nTo get started, create a new Quarto document. In your document, provide your answers to the following questions."
+    "text": "Getting started\nTo get started, create a new Quarto document. Type your name and today’s date in the YAML. Save your file as ae-04.qmd in your project folder.\nIn your document, provide your answers to the following questions."
   },
   {
     "objectID": "ae/ae-04-exam-01-review.html#q1",
@@ -2006,14 +2006,14 @@
     "href": "ae/ae-04-exam-01-review.html#q2",
     "title": "AE 04: Exam 01 Review",
     "section": "Q2",
-    "text": "Q2\nA researcher is studying the number of patients arriving at a hospital emergency room with asthma attacks during a 1-hour period. She proposes using a Poisson distribution to model the number of arrivals per hour.\nDescribe how you would verify whether each of the assumptions for a Poisson distribution are satisfied in this context. (e.g. what would you need to know/verify for each assumption, specific to this context?)"
+    "text": "Q2\nA researcher is studying the number of patients arriving at a hospital emergency room with asthma attacks during a 1-hour period. She proposes using a Poisson distribution to model the number of arrivals per hour.\nDescribe each of the four assumptions for a Poisson distribution, and how they would apply in this context. (e.g. what would you need to know/verify for each assumption, specific to this context?)"
   },
   {
     "objectID": "ae/ae-04-exam-01-review.html#q3",
     "href": "ae/ae-04-exam-01-review.html#q3",
     "title": "AE 04: Exam 01 Review",
     "section": "Q3",
-    "text": "Q3\n\nAn environmental agency classifies daily air quality in a city into three categories: Good, Moderate, and Unhealthy. The probabilities of each category on a randomly selected day are summarized in the table below:\n\n\n\n\nAir Quality\nProbability\n\n\n\n\nGood\n0.5\n\n\nModerate\n0.3\n\n\nUnhealthy\n0.2\n\n\n\nState the Kolmogorov axioms. Are all axioms true for this example?\n\nA public health researcher is studying the number of asthma attacks requiring emergency care per day in a mid-sized city. She models the number of attacks per day using a Poisson distribution with rate parameter \\(\\lambda = 3\\).\n\nRecall the Poisson PMF:\n\\[P(X = k) = \\frac{e^{-\\lambda} \\lambda^k}{k!}, \\quad k = 0, 1, 2, \\dots\\]\nWrite out, in terms of the Poisson PMF, the probability that on a randomly selected day there are at least 2 asthma attacks. You do not need to compute the numeric value.\n\n\n\n\n\n\nTipTyping equations in Latex\n\n\n\nIf you would like to type your answer using LaTeX (a typesetting tool used to write nice equations), consider the following:\nThe code\n$P(X = k) = \\frac{e^{-7} 7^k}{k!}$\nproduces\n\\(P(X = k) = \\frac{e^{-7} 7^k}{k!}\\)\n\n\n\nContinuing part (b) above, Which of the following R commands correctly calculates the probability that on a randomly selected day there is at least 1 asthma attacks?\n\n\ndbinom(1, lambda = 3)\n1 - dpois(0, lambda = 3) - dpois(1, lambda = 3)\ndpois(2, lambda = 3) + dpois(3, lambda = 3)\ndpois(1, lambda = 3)"
+    "text": "Q3\n\nAn environmental agency classifies daily air quality in a city into three categories: Good, Moderate, and Unhealthy. The probabilities of each category on a randomly selected day are summarized in the table below:\n\n\n\n\nAir Quality\nProbability\n\n\n\n\nGood\n0.5\n\n\nModerate\n0.3\n\n\nUnhealthy\n0.2\n\n\n\nState the Kolmogorov axioms. Are all axioms true for this example?\n\nA public health researcher is studying the number of asthma attacks requiring emergency care per day in a mid-sized city. She models the number of attacks per day using a Poisson distribution with rate parameter \\(\\lambda = 3\\).\n\nRecall the Poisson PMF:\n\\[P(X = k) = \\frac{e^{-\\lambda} \\lambda^k}{k!}, \\quad k = 0, 1, 2, \\dots\\]\nWrite out, in terms of the Poisson PMF, the probability that on a randomly selected day there are at least 2 asthma attacks. You do not need to compute the numeric value.\n\n\n\n\n\n\nTipTyping equations in Latex\n\n\n\nIf you would like to type your answer using LaTeX (a typesetting tool used to write nice equations), consider the following:\nThe code\n$P(X = k) = \\frac{e^{-7} 7^k}{k!}$\nproduces\n\\(P(X = k) = \\frac{e^{-7} 7^k}{k!}\\)\n\n\n\nContinuing part (b) above, Which of the following R commands correctly calculates the probability that on a randomly selected day there is at least 2 asthma attacks?\n\n\ndbinom(1, lambda = 3)\n1 - dpois(0, lambda = 3) - dpois(1, lambda = 3)\ndpois(2, lambda = 3) + dpois(3, lambda = 3)\ndpois(1, lambda = 3)"
   },
   {
     "objectID": "ae/ae-04-exam-01-review.html#code-questions",
