@@ -285,6 +285,41 @@
 <ul>
 <li>The confidence multiplier <span class="math inline">\(\times\)</span> standard error is known as the <strong>margin of error</strong></li>
 </ul>
+<p>How did we get this form of a CI?</p>
+</section>
+<section id="from-z-to-a-confidence-interval" class="slide level2">
+<h2>From <span class="math inline">\(Z\)</span> to a Confidence Interval</h2>
+<div class="fragment">
+<p><strong>Start with what we know about</strong> <span class="math inline">\(Z\)</span>: <span class="math display">\[0.95 = P(-1.96 \leq Z \leq 1.96)\]</span></p>
+</div>
+<div class="fragment">
+<p><strong>Substitute</strong> <span class="math inline">\(Z = \dfrac{\bar X - \mu}{\sigma/\sqrt n}\)</span>: <span class="math display">\[0.95 = P\left(-1.96 \leq \frac{\bar X - \mu}{\sigma/\sqrt n} \leq 1.96\right)\]</span></p>
+</div>
+</section>
+<section id="from-z-to-a-confidence-interval-contd" class="slide level2">
+<h2>From <span class="math inline">\(Z\)</span> to a Confidence Interval (cont’d)</h2>
+<div class="fragment">
+<p><strong>Multiply all three parts by</strong> <span class="math inline">\(\sigma/\sqrt n\)</span>: <span class="math display">\[0.95 = P\left(-1.96\tfrac{\sigma}{\sqrt n} \leq \bar X - \mu \leq 1.96\tfrac{\sigma}{\sqrt n}\right)\]</span></p>
+</div>
+<div class="fragment">
+<p><strong>Subtract</strong> <span class="math inline">\(\bar X\)</span>, <strong>then multiply by</strong> <span class="math inline">\(-1\)</span> (flip inequalities): <span class="math display">\[0.95 = P\left(\bar X - 1.96\tfrac{\sigma}{\sqrt n} \leq \mu \leq \bar X + 1.96\tfrac{\sigma}{\sqrt n}\right)\]</span></p>
+</div>
+</section>
+<section id="from-z-to-a-confidence-interval-contd-1" class="slide level2">
+<h2>From <span class="math inline">\(Z\)</span> to a Confidence Interval (cont’d)</h2>
+<p><strong>Result — the 95% confidence interval:</strong> <span class="math display">\[\left(\bar X - 1.96\frac{\sigma}{\sqrt n},\ \ \bar X + 1.96\frac{\sigma}{\sqrt n}\right)\]</span></p>
+</section>
+<section id="pause-and-reflect" class="slide level2">
+<h2>Pause and reflect</h2>
+<p>In small groups, take turns reviewing the parts of the derivation above. Take turns explaining each of the steps to each other.</p>
+<div class="cell">
+<div class="cell-output-display">
+<div class="countdown" id="timer_905d54ed" data-update-every="1" tabindex="0" style="right:0;bottom:0;">
+<div class="countdown-controls"><button class="countdown-bump-down">−</button><button class="countdown-bump-up">+</button></div>
+<code class="countdown-time"><span class="countdown-digits minutes">03</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
+</div>
+</div>
+</div>
 </section>
 <section id="finding-confidence-multiplier-1.96-in-r" class="slide level2">
 <h2>Finding confidence multiplier (1.96) in R</h2>
@@ -387,7 +422,7 @@
 <section id="visual-1" class="slide level2">
 <h2>Visual</h2>
 
-<img data-src="lec-9-ci_files/figure-revealjs/unnamed-chunk-9-1.png" width="960" class="r-stretch"></section>
+<img data-src="lec-9-ci_files/figure-revealjs/unnamed-chunk-10-1.png" width="960" class="r-stretch"></section>
 <section id="your-turn" class="slide level2">
 <h2>Your turn</h2>
 <p>What value will the following code return, and why?</p>
@@ -396,7 +431,7 @@
 </div>
 <div class="cell">
 <div class="cell-output-display">
-<div class="countdown" id="timer_009d5b04" data-update-every="1" tabindex="0" style="right:0;bottom:0;">
+<div class="countdown" id="timer_b9c69756" data-update-every="1" tabindex="0" style="right:0;bottom:0;">
 <div class="countdown-controls"><button class="countdown-bump-down">−</button><button class="countdown-bump-up">+</button></div>
 <code class="countdown-time"><span class="countdown-digits minutes">01</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
 </div>
@@ -443,7 +478,7 @@
 <p>Each person should pick a number of confidence intervals to generate (over 50), then explain to their partner 1) how many of of their CIs generated contained the true parameter, and 2) how this relates to the idea of confidence.</p>
 <div class="cell">
 <div class="cell-output-display">
-<div class="countdown" id="timer_31111118" data-update-every="1" tabindex="0" style="right:0;bottom:0;">
+<div class="countdown" id="timer_6cf93096" data-update-every="1" tabindex="0" style="right:0;bottom:0;">
 <div class="countdown-controls"><button class="countdown-bump-down">−</button><button class="countdown-bump-up">+</button></div>
 <code class="countdown-time"><span class="countdown-digits minutes">04</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
 </div>
@@ -465,7 +500,7 @@
 <p>How would you interpret this confidence interval? Include units!</p>
 <div class="cell">
 <div class="cell-output-display">
-<div class="countdown" id="timer_d724934c" data-update-every="1" tabindex="0" style="right:0;bottom:0;">
+<div class="countdown" id="timer_48c19e7d" data-update-every="1" tabindex="0" style="right:0;bottom:0;">
 <div class="countdown-controls"><button class="countdown-bump-down">−</button><button class="countdown-bump-up">+</button></div>
 <code class="countdown-time"><span class="countdown-digits minutes">02</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
 </div>
@@ -521,7 +556,7 @@
 <section id="visual-2" class="slide level2">
 <h2>Visual</h2>
 
-<img data-src="lec-9-ci_files/figure-revealjs/unnamed-chunk-14-1.png" width="960" class="r-stretch"></section>
+<img data-src="lec-9-ci_files/figure-revealjs/unnamed-chunk-15-1.png" width="960" class="r-stretch"></section>
 <section id="students-t-distribution-1" class="slide level2">
 <h2>Student’s <span class="math inline">\(t\)</span> distribution</h2>
 <ul>

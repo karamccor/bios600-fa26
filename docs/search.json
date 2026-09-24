@@ -67,7 +67,35 @@
     "href": "slides/lec-9-ci.html#deriving-the-two-sided-interval-1",
     "title": "Lecture 9: Confidence Intervals",
     "section": "Deriving the two-sided interval",
-    "text": "Deriving the two-sided interval\n\nSo, a 95% CI is given by\n\n\\[(\\bar X - 1.96 \\frac{\\sigma}{\\sqrt n}, \\bar X + 1.96 \\frac{\\sigma}{\\sqrt n})\\]\nGeneric form of confidence interval:\nPoint estimate \\(\\pm\\) confidence multiplier \\(\\times\\) standard error\n\nThe confidence multiplier \\(\\times\\) standard error is known as the margin of error"
+    "text": "Deriving the two-sided interval\n\nSo, a 95% CI is given by\n\n\\[(\\bar X - 1.96 \\frac{\\sigma}{\\sqrt n}, \\bar X + 1.96 \\frac{\\sigma}{\\sqrt n})\\]\nGeneric form of confidence interval:\nPoint estimate \\(\\pm\\) confidence multiplier \\(\\times\\) standard error\n\nThe confidence multiplier \\(\\times\\) standard error is known as the margin of error\n\nHow did we get this form of a CI?"
+  },
+  {
+    "objectID": "slides/lec-9-ci.html#from-z-to-a-confidence-interval",
+    "href": "slides/lec-9-ci.html#from-z-to-a-confidence-interval",
+    "title": "Lecture 9: Confidence Intervals",
+    "section": "From \\(Z\\) to a Confidence Interval",
+    "text": "From \\(Z\\) to a Confidence Interval\n\nStart with what we know about \\(Z\\): \\[0.95 = P(-1.96 \\leq Z \\leq 1.96)\\]\n\n\nSubstitute \\(Z = \\dfrac{\\bar X - \\mu}{\\sigma/\\sqrt n}\\): \\[0.95 = P\\left(-1.96 \\leq \\frac{\\bar X - \\mu}{\\sigma/\\sqrt n} \\leq 1.96\\right)\\]"
+  },
+  {
+    "objectID": "slides/lec-9-ci.html#from-z-to-a-confidence-interval-contd",
+    "href": "slides/lec-9-ci.html#from-z-to-a-confidence-interval-contd",
+    "title": "Lecture 9: Confidence Intervals",
+    "section": "From \\(Z\\) to a Confidence Interval (cont’d)",
+    "text": "From \\(Z\\) to a Confidence Interval (cont’d)\n\nMultiply all three parts by \\(\\sigma/\\sqrt n\\): \\[0.95 = P\\left(-1.96\\tfrac{\\sigma}{\\sqrt n} \\leq \\bar X - \\mu \\leq 1.96\\tfrac{\\sigma}{\\sqrt n}\\right)\\]\n\n\nSubtract \\(\\bar X\\), then multiply by \\(-1\\) (flip inequalities): \\[0.95 = P\\left(\\bar X - 1.96\\tfrac{\\sigma}{\\sqrt n} \\leq \\mu \\leq \\bar X + 1.96\\tfrac{\\sigma}{\\sqrt n}\\right)\\]"
+  },
+  {
+    "objectID": "slides/lec-9-ci.html#from-z-to-a-confidence-interval-contd-1",
+    "href": "slides/lec-9-ci.html#from-z-to-a-confidence-interval-contd-1",
+    "title": "Lecture 9: Confidence Intervals",
+    "section": "From \\(Z\\) to a Confidence Interval (cont’d)",
+    "text": "From \\(Z\\) to a Confidence Interval (cont’d)\nResult — the 95% confidence interval: \\[\\left(\\bar X - 1.96\\frac{\\sigma}{\\sqrt n},\\ \\ \\bar X + 1.96\\frac{\\sigma}{\\sqrt n}\\right)\\]"
+  },
+  {
+    "objectID": "slides/lec-9-ci.html#pause-and-reflect",
+    "href": "slides/lec-9-ci.html#pause-and-reflect",
+    "title": "Lecture 9: Confidence Intervals",
+    "section": "Pause and reflect",
+    "text": "Pause and reflect\nIn small groups, take turns reviewing the parts of the derivation above. Take turns explaining each of the steps to each other.\n\n\n\n−+\n03:00"
   },
   {
     "objectID": "slides/lec-9-ci.html#finding-confidence-multiplier-1.96-in-r",
@@ -2510,7 +2538,7 @@
     "href": "index.html",
     "title": "BIOS 600 Fall 2026",
     "section": "",
-    "text": "Lecture 0: Welcome to BIOS 600!\nLab 1: Introducing the Toolkit\nLecture 1: What is statistical inference?\n\n\n\nLab 2: Basic Data Visualization\nLecture 2: The nature of data\nLecture 3: Probability basics\nHW 1\n\n\n\nLab 3: Data Wrangling\nLecture 4: Conditional probability\nLecture 5: Medical diagnostics\nHW 2\n\n\n\nLecture 6: Discrete distributions\nLab 4: Practice with ggplot2 and tidyverse\nApplication Exercise 1: Binomial in a Biomedical Setting\nLecture 7: Continuous distributions\nApplication Exercise 2: Poisson in a Hospital Setting\nHW 3\nAE 1 Solution\n\n\n\nExam 01 Topics List\nExam 01 Formula Sheet\nExam 01 Practice Problems\n\n\n\nLecture 8: Central Limit Theorem\nApplication Exercise 3: Central Limit Theorem\nExam 01 Review Slides\nApplication Exercise 4: Exam 01 Review\nAE 01 Solution\nAE 02 Solution\nAE 03 Solution\n\n\n\nLecture 8: Confidence Intervals"
+    "text": "Lecture 0: Welcome to BIOS 600!\nLab 1: Introducing the Toolkit\nLecture 1: What is statistical inference?\n\n\n\nLab 2: Basic Data Visualization\nLecture 2: The nature of data\nLecture 3: Probability basics\nHW 1\n\n\n\nLab 3: Data Wrangling\nLecture 4: Conditional probability\nLecture 5: Medical diagnostics\nHW 2\n\n\n\nLecture 6: Discrete distributions\nLab 4: Practice with ggplot2 and tidyverse\nApplication Exercise 1: Binomial in a Biomedical Setting\nLecture 7: Continuous distributions\nApplication Exercise 2: Poisson in a Hospital Setting\nHW 3\nAE 1 Solution\n\n\n\nExam 01 Topics List\nExam 01 Formula Sheet\nExam 01 Practice Problems\n\n\n\nLecture 8: Central Limit Theorem\nApplication Exercise 3: Central Limit Theorem\nExam 01 Review Slides\nApplication Exercise 4: Exam 01 Review\nAE 01 Solution\nAE 02 Solution\nAE 03 Solution\n\n\n\nLecture 9: Confidence Intervals"
   },
   {
     "objectID": "index.html#week-1",
@@ -2559,7 +2587,7 @@
     "href": "index.html#week-6",
     "title": "BIOS 600 Fall 2026",
     "section": "",
-    "text": "Lecture 8: Confidence Intervals"
+    "text": "Lecture 9: Confidence Intervals"
   },
   {
     "objectID": "labs/lab-02-template.html",
