@@ -1131,7 +1131,14 @@
     "href": "slides/lec-10-hypothesis.html#overview",
     "title": "Lecture 10: Hypothesis Testing",
     "section": "Overview",
-    "text": "Overview\n\nqt() function\nHypothesis tests: how to conduct them, how to interpret them\nPass back exams"
+    "text": "Overview\n\nReview from last class\nqt() function\nHypothesis tests: how to conduct them, how to interpret them\nPass back exams"
+  },
+  {
+    "objectID": "slides/lec-10-hypothesis.html#review",
+    "href": "slides/lec-10-hypothesis.html#review",
+    "title": "Lecture 10: Hypothesis Testing",
+    "section": "Review",
+    "text": "Review\n\nWhat will be the output of running the following code?\n\n\nqnorm(.5, mean = 0, sd = 1)\n\n\nWhich of the following lines of code will return a larger value, and why?\n\n\npnorm(-1, mean = 0, sd = 1)\n\npnorm(1, mean = 0, sd = 1)\n\n\n\n\n−+\n03:00"
   },
   {
     "objectID": "slides/lec-10-hypothesis.html#helpful-code-for-hw-4",

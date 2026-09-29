@@ -235,10 +235,36 @@
 <section id="overview" class="slide level2">
 <h2>Overview</h2>
 <ul>
+<li><p>Review from last class</p></li>
 <li><p><code>qt()</code> function</p></li>
 <li><p>Hypothesis tests: how to conduct them, how to interpret them</p></li>
 <li><p>Pass back exams</p></li>
 </ul>
+</section>
+<section id="review" class="slide level2">
+<h2>Review</h2>
+<ol type="1">
+<li>What will be the output of running the following code?</li>
+</ol>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a></a><span class="fu">qnorm</span>(.<span class="dv">5</span>, <span class="at">mean =</span> <span class="dv">0</span>, <span class="at">sd =</span> <span class="dv">1</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<ol start="2" type="1">
+<li>Which of the following lines of code will return a larger value, and why?</li>
+</ol>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a></a><span class="fu">pnorm</span>(<span class="sc">-</span><span class="dv">1</span>, <span class="at">mean =</span> <span class="dv">0</span>, <span class="at">sd =</span> <span class="dv">1</span>)</span>
+<span id="cb2-2"><a></a></span>
+<span id="cb2-3"><a></a><span class="fu">pnorm</span>(<span class="dv">1</span>, <span class="at">mean =</span> <span class="dv">0</span>, <span class="at">sd =</span> <span class="dv">1</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<div class="cell">
+<div class="cell-output-display">
+<div class="countdown" id="timer_1a22d576" data-update-every="1" tabindex="0" style="right:0;bottom:0;">
+<div class="countdown-controls"><button class="countdown-bump-down">−</button><button class="countdown-bump-up">+</button></div>
+<code class="countdown-time"><span class="countdown-digits minutes">03</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
+</div>
+</div>
+</div>
 </section>
 <section id="helpful-code-for-hw-4" class="slide level2">
 <h2>Helpful code for HW 4</h2>
@@ -256,15 +282,15 @@
 <h3 id="example">Example</h3>
 <p>Suppose we want a 95% confidence interval with <span class="math inline">\(n = 20\)</span> observations:</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a></a>alpha <span class="ot">&lt;-</span> <span class="fl">0.05</span></span>
-<span id="cb1-2"><a></a>n <span class="ot">&lt;-</span> <span class="dv">20</span></span>
-<span id="cb1-3"><a></a></span>
-<span id="cb1-4"><a></a><span class="co"># degrees of freedom</span></span>
-<span id="cb1-5"><a></a>df <span class="ot">&lt;-</span> n <span class="sc">-</span> <span class="dv">1</span>  </span>
-<span id="cb1-6"><a></a></span>
-<span id="cb1-7"><a></a><span class="co"># t critical value</span></span>
-<span id="cb1-8"><a></a>t_crit <span class="ot">&lt;-</span> <span class="fu">qt</span>(<span class="dv">1</span> <span class="sc">-</span> alpha<span class="sc">/</span><span class="dv">2</span>, <span class="at">df =</span> df)</span>
-<span id="cb1-9"><a></a>t_crit</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a></a>alpha <span class="ot">&lt;-</span> <span class="fl">0.05</span></span>
+<span id="cb3-2"><a></a>n <span class="ot">&lt;-</span> <span class="dv">20</span></span>
+<span id="cb3-3"><a></a></span>
+<span id="cb3-4"><a></a><span class="co"># degrees of freedom</span></span>
+<span id="cb3-5"><a></a>df <span class="ot">&lt;-</span> n <span class="sc">-</span> <span class="dv">1</span>  </span>
+<span id="cb3-6"><a></a></span>
+<span id="cb3-7"><a></a><span class="co"># t critical value</span></span>
+<span id="cb3-8"><a></a>t_crit <span class="ot">&lt;-</span> <span class="fu">qt</span>(<span class="dv">1</span> <span class="sc">-</span> alpha<span class="sc">/</span><span class="dv">2</span>, <span class="at">df =</span> df)</span>
+<span id="cb3-9"><a></a>t_crit</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 2.093024</code></pre>
 </div>
@@ -364,8 +390,8 @@
 <li>(For purposes of this example, we’ve simulated the data with the desired sample size, mean, and sd)</li>
 </ul>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a></a>df <span class="sc">|&gt;</span></span>
-<span id="cb3-2"><a></a>  <span class="fu">slice</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">5</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a></a>df <span class="sc">|&gt;</span></span>
+<span id="cb5-2"><a></a>  <span class="fu">slice</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">5</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>  sample_data
 1  0.01251619
@@ -420,7 +446,7 @@
 <section id="perform-one-sample-t-test-against-mu-0.020" class="slide level2">
 <h2>Perform one-sample t-test against mu = 0.020</h2>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a></a><span class="fu">t.test</span>(df<span class="sc">$</span>sample_data, <span class="at">mu =</span> <span class="fl">0.020</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a></a><span class="fu">t.test</span>(df<span class="sc">$</span>sample_data, <span class="at">mu =</span> <span class="fl">0.020</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>
     One Sample t-test
@@ -462,7 +488,7 @@ sample estimates:
 <p>Get in your small groups. Discuss: What do you think is the point of this comic?</p>
 <div class="cell">
 <div class="cell-output-display">
-<div class="countdown" id="timer_d5fdde7a" data-update-every="1" tabindex="0" style="right:0;bottom:0;">
+<div class="countdown" id="timer_d39a027a" data-update-every="1" tabindex="0" style="right:0;bottom:0;">
 <div class="countdown-controls"><button class="countdown-bump-down">−</button><button class="countdown-bump-up">+</button></div>
 <code class="countdown-time"><span class="countdown-digits minutes">03</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
 </div>
