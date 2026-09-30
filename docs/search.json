@@ -1827,6 +1827,27 @@
     "text": "Submission\nTo submit your assignment:\n\nAccess Gradescope through the menu on the BIOS 600 Canvas site.\nClick on the assignment, and you’ll be prompted to submit it.\nMark the pages associated with each exercise. All of the pages of your lab should be associated with at least one question (i.e., should be “checked”)."
   },
   {
+    "objectID": "labs/lab-05-template.html",
+    "href": "labs/lab-05-template.html",
+    "title": "Lab 05: Coding Style",
+    "section": "",
+    "text": "Important\n\n\n\nDo not actually run the code. You will get an error if you try to run the code, as objects are not defined. Keep the Quarto chunk setting as eval: FALSE in order to prevent the code from running.\nThe idea with this assignment is to simply adjust the coding style."
+  },
+  {
+    "objectID": "labs/lab-05-template.html#exercises-4-5-on-your-own",
+    "href": "labs/lab-05-template.html#exercises-4-5-on-your-own",
+    "title": "Lab 05: Coding Style",
+    "section": "Exercises 4-5: On your Own",
+    "text": "Exercises 4-5: On your Own\nNow, use what you’ve learned to edit the code in Exercises 4-5 so that they adhere to the style guidelines.\n\nExercise 4\n\nd&lt;-data.frame(grp=c(\"A\",\"A\",\"B\",\"B\",\"C\",\"C\"),val=c(3,5,4,6,2,7))\nggplot(d,aes(x=grp,y=val,fill=grp))+geom_bar(stat=\"identity\")+theme_bw()+labs(title=\"average value by group\")+theme(axis.text.x=element_text(angle=45,hjust=1))\n\n\n\nExercise 5\nThe code below is performing a bootstrap simulation to estimate the sampling distribution and confidence interval for the proportion of people in Durham who are satisfied with parks and recreation quality.\n(Hint: One of the changes you should make is changing ex_5_dat to a more meaningful name.)\n\nset.seed(5)\n\nboot_boot_boot_dist&lt;-numeric(1000) \n\nex_5_dat&lt;-durham |&gt; filter(quality_parks_rec!=9)\n\nfor(i in 1:1000){\n\nindices &lt;- sample(1:nrow(ex_5_dat), replace = T)\n\n\n\nboot_prop&lt;-ex_5_dat |&gt;\n\nslice(indices )|&gt;\n\nmutate(parks_satisfied = ifelse(quality_parks_rec &gt; 3,1,0)) |&gt; \n\nsummarize(prop_parks = mean(parks_satisfied))|&gt;pull()\nboot_dist[i] &lt;- boot_prop}\n\nboot_dist &lt;- tibble(boot_props=boot_dist)\n\nex_5_interval &lt;- boot_dist |&gt; summarize(lower=quantile(boot_props,0.005),upper=quantile(boot_props,0.995))|&gt;round(3)"
+  },
+  {
+    "objectID": "labs/lab-05-template.html#ai-attestation",
+    "href": "labs/lab-05-template.html#ai-attestation",
+    "title": "Lab 05: Coding Style",
+    "section": "AI Attestation",
+    "text": "AI Attestation\nAI is not permitted for Lab 5. Please state “I did not use AI for this assignment.”, and type your name."
+  },
+  {
     "objectID": "labs/lab-04.html",
     "href": "labs/lab-04.html",
     "title": "Lab 4: Practice with ggplot2 and tidyverse",
@@ -1964,7 +1985,7 @@
     "href": "index.html",
     "title": "BIOS 600 Fall 2026",
     "section": "",
-    "text": "Lecture 0: Welcome to BIOS 600!\nLab 1: Introducing the Toolkit\nLecture 1: What is statistical inference?\n\n\n\nLab 2: Basic Data Visualization\nLecture 2: The nature of data\nLecture 3: Probability basics\nHW 1\n\n\n\nLab 3: Data Wrangling\nLecture 4: Conditional probability\nLecture 5: Medical diagnostics\nHW 2\n\n\n\nLecture 6: Discrete distributions\nLab 4: Practice with ggplot2 and tidyverse\nApplication Exercise 1: Binomial in a Biomedical Setting\nLecture 7: Continuous distributions\nApplication Exercise 2: Poisson in a Hospital Setting\nHW 3\nAE 1 Solution\n\n\n\nExam 01 Topics List\nExam 01 Formula Sheet\nExam 01 Practice Problems\n\n\n\nLecture 8: Central Limit Theorem\nApplication Exercise 3: Central Limit Theorem\nExam 01 Review Slides\nApplication Exercise 4: Exam 01 Review\nAE 01 Solution\nAE 02 Solution\nAE 03 Solution\n\n\n\nLecture 9: Confidence Intervals\nHW 04\n\n\n\nLecture 10: Hypothesis Testing\nLab 5: Code Style\nLecture 11: Compare Means"
+    "text": "Lecture 0: Welcome to BIOS 600!\nLab 1: Introducing the Toolkit\nLecture 1: What is statistical inference?\n\n\n\nLab 2: Basic Data Visualization\nLecture 2: The nature of data\nLecture 3: Probability basics\nHW 1\n\n\n\nLab 3: Data Wrangling\nLecture 4: Conditional probability\nLecture 5: Medical diagnostics\nHW 2\n\n\n\nLecture 6: Discrete distributions\nLab 4: Practice with ggplot2 and tidyverse\nApplication Exercise 1: Binomial in a Biomedical Setting\nLecture 7: Continuous distributions\nApplication Exercise 2: Poisson in a Hospital Setting\nHW 3\nAE 1 Solution\n\n\n\nExam 01 Topics List\nExam 01 Formula Sheet\nExam 01 Practice Problems\n\n\n\nLecture 8: Central Limit Theorem\nApplication Exercise 3: Central Limit Theorem\nExam 01 Review Slides\nApplication Exercise 4: Exam 01 Review\nAE 01 Solution\nAE 02 Solution\nAE 03 Solution\n\n\n\nLecture 9: Confidence Intervals\nHW 04\n\n\n\nLecture 10: Hypothesis Testing\nLab 5: Code Style\nLecture 11: Compare Means\nHW 5"
   },
   {
     "objectID": "index.html#week-1",
@@ -2020,7 +2041,7 @@
     "href": "index.html#week-7",
     "title": "BIOS 600 Fall 2026",
     "section": "",
-    "text": "Lecture 10: Hypothesis Testing\nLab 5: Code Style\nLecture 11: Compare Means"
+    "text": "Lecture 10: Hypothesis Testing\nLab 5: Code Style\nLecture 11: Compare Means\nHW 5"
   },
   {
     "objectID": "hw/hw-04.html",
@@ -3183,27 +3204,6 @@
     "title": "Lab 5: Code Style",
     "section": "Grading",
     "text": "Grading\n\n\n\nComponent\nPoints\n\n\n\n\nEx 1\n4\n\n\nEx 2\n4\n\n\nEx 3\n4\n\n\nEx 4\n4\n\n\nEx 5\n4\n\n\nFormatting\n3\n\n\n\nThe “Formatting” grade is to assess the document format. This includes having a neatly organized document (no excessive output, warnings/messages when loading packages and/or data) with readable code and your name and the date updated in the YAML."
-  },
-  {
-    "objectID": "labs/lab-05-template.html",
-    "href": "labs/lab-05-template.html",
-    "title": "Lab 05: Coding Style",
-    "section": "",
-    "text": "Important\n\n\n\nDo not actually run the code. You will get an error if you try to run the code, as objects are not defined. Keep the Quarto chunk setting as eval: FALSE in order to prevent the code from running.\nThe idea with this assignment is to simply adjust the coding style."
-  },
-  {
-    "objectID": "labs/lab-05-template.html#exercises-4-5-on-your-own",
-    "href": "labs/lab-05-template.html#exercises-4-5-on-your-own",
-    "title": "Lab 05: Coding Style",
-    "section": "Exercises 4-5: On your Own",
-    "text": "Exercises 4-5: On your Own\nNow, use what you’ve learned to edit the code in Exercises 4-5 so that they adhere to the style guidelines.\n\nExercise 4\n\nd&lt;-data.frame(grp=c(\"A\",\"A\",\"B\",\"B\",\"C\",\"C\"),val=c(3,5,4,6,2,7))\nggplot(d,aes(x=grp,y=val,fill=grp))+geom_bar(stat=\"identity\")+theme_bw()+labs(title=\"average value by group\")+theme(axis.text.x=element_text(angle=45,hjust=1))\n\n\n\nExercise 5\nThe code below is performing a bootstrap simulation to estimate the sampling distribution and confidence interval for the proportion of people in Durham who are satisfied with parks and recreation quality.\n(Hint: One of the changes you should make is changing ex_5_dat to a more meaningful name.)\n\nset.seed(5)\n\nboot_boot_boot_dist&lt;-numeric(1000) \n\nex_5_dat&lt;-durham |&gt; filter(quality_parks_rec!=9)\n\nfor(i in 1:1000){\n\nindices &lt;- sample(1:nrow(ex_5_dat), replace = T)\n\n\n\nboot_prop&lt;-ex_5_dat |&gt;\n\nslice(indices )|&gt;\n\nmutate(parks_satisfied = ifelse(quality_parks_rec &gt; 3,1,0)) |&gt; \n\nsummarize(prop_parks = mean(parks_satisfied))|&gt;pull()\nboot_dist[i] &lt;- boot_prop}\n\nboot_dist &lt;- tibble(boot_props=boot_dist)\n\nex_5_interval &lt;- boot_dist |&gt; summarize(lower=quantile(boot_props,0.005),upper=quantile(boot_props,0.995))|&gt;round(3)"
-  },
-  {
-    "objectID": "labs/lab-05-template.html#ai-attestation",
-    "href": "labs/lab-05-template.html#ai-attestation",
-    "title": "Lab 05: Coding Style",
-    "section": "AI Attestation",
-    "text": "AI Attestation\nAI is not permitted for Lab 5. Please state “I did not use AI for this assignment.”, and type your name."
   },
   {
     "objectID": "labs/lab-06-spatial.html",
