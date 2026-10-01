@@ -1117,7 +1117,7 @@
     "href": "slides/lec-11-compare-means.html#announcements",
     "title": "Lecture 11: Comparing Two Means",
     "section": "Announcements",
-    "text": "Announcements\n\nHW 4 due Tonight at 11:59pm.\nLab 4 due Saturday at 11:59pm.\nNo class and No lab session on Tuesday 10/6, Wellness Day! (No lab assignment next week.)\nHW 5 will be released after class. HW 5 is due next Thursday 10/9 at 11:59pm."
+    "text": "Announcements\n\nHW 4 due Tonight at 11:59pm.\nLab 4 due Saturday at 11:59pm.\nNo class and No lab session on Tuesday 10/6, Wellness Day! (No lab assignment next week.)\nHW 5 will be released after class. HW 5 is due next Thursday 10/8 at 11:59pm."
   },
   {
     "objectID": "slides/lec-11-compare-means.html#overview",
@@ -1176,11 +1176,11 @@
     "text": "Paired samples\nSamples are often paired for a variety of reasons\n\nMeasurements are taken on a single subject at two distinct points in time (e.g., baseline and follow-up)\nSubjects may be matched so that members of each pair are as much alike as possible with respect to important characteristics like age and sex (e.g., matched case-control study)"
   },
   {
-    "objectID": "slides/lec-11-compare-means.html#a-benefit-of-paiting",
-    "href": "slides/lec-11-compare-means.html#a-benefit-of-paiting",
+    "objectID": "slides/lec-11-compare-means.html#a-benefit-of-pairing",
+    "href": "slides/lec-11-compare-means.html#a-benefit-of-pairing",
     "title": "Lecture 11: Comparing Two Means",
-    "section": "A benefit of paiting",
-    "text": "A benefit of paiting\n\nPairing can control for unwanted sources of variation that might otherwise influence the results of a comparison.\nMatching within subject (e.g., baseline and follow-up) is a powerful way to eliminate subject-specific factors."
+    "section": "A benefit of pairing",
+    "text": "A benefit of pairing\n\nPairing can control for unwanted sources of variation that might otherwise influence the results of a comparison.\nMatching within subject (e.g., baseline and follow-up) is a powerful way to eliminate subject-specific factors."
   },
   {
     "objectID": "slides/lec-11-compare-means.html#designing-a-study-impaired-driving",
@@ -2826,6 +2826,90 @@
     "title": "HW 03",
     "section": "Grading",
     "text": "Grading\n\n\n\nComponent\nPoints\n\n\n\n\nEx 1\n6\n\n\nEx 2\n3\n\n\nEx 3\n3\n\n\nEx 4\n2\n\n\nEx 5\n3\n\n\nFormatting\n3\n\n\n\nThe “Formatting” grade is to assess the document format. This includes having a neatly organized document (no excessive output, warnings/messages when loading packages and/or data) with readable code and your name and the date updated in the YAML."
+  },
+  {
+    "objectID": "hw/hw-05.html",
+    "href": "hw/hw-05.html",
+    "title": "HW 5",
+    "section": "",
+    "text": "Important\n\n\n\nThis homework is due on Thursday, October 8 at 11:59pm. To be considered on time, the following must be done by the due date:\n\nFinal .pdf file submitted on Gradescope\n\nBe sure to assign questions to pages when you turn in your assignment on Gradescope. A .5 point deduction will be made any time the question is not assigned to a page within your PDF.\nAssign the Formatting portion to page 1."
+  },
+  {
+    "objectID": "hw/hw-05.html#starting-a-new-quarto-file",
+    "href": "hw/hw-05.html#starting-a-new-quarto-file",
+    "title": "HW 5",
+    "section": "Starting a new Quarto file",
+    "text": "Starting a new Quarto file\nFor this assignment you will begin a new Quarto file. To do this, go to RStudio and click File &gt; New File &gt; Quarto Document. A pop-up will appear asking for a title, author, and format. You may leave these as the default options for now. Click OK and a new file will open. Update the YAML with your title, name, and date."
+  },
+  {
+    "objectID": "hw/hw-05.html#exercises",
+    "href": "hw/hw-05.html#exercises",
+    "title": "HW 5",
+    "section": "Exercises",
+    "text": "Exercises\nIn Exercise 1, you will be asked questions about a hypothesis test that you have not seen before (and likely won’t ever see). These questions are intended to assess whether you are familiar with the hypothesis testing process itself and underlying philosophical details. Only use the information provided below, and assume that required assumptions are satisfied.\n\nThe Anderson-Darling test\nThe one-sample Anderson-Darling (AD) test can be used to test whether a sample comes from a specific target probability distribution based looking at a function of the empirical distribution function (EDF) of the observed data. The null and alternative hypotheses are given by\n\n\\(H_0\\): the sample is consistent with a population that has the target distribution of interest\n\\(H_A\\): the sample is NOT consistent with a population that has the target distribution of interest\n\nIf, in our observed data, the difference between the EDF and the target distribution is “large enough,” then we reject the null hypothesis in favor of the alternative.\nSuppose we conducted a one-sample AD test against some target distribution at the \\(\\alpha\\)= 0.10 level and obtained a p-value of 0.24."
+  },
+  {
+    "objectID": "hw/hw-05.html#exercise-1",
+    "href": "hw/hw-05.html#exercise-1",
+    "title": "HW 5",
+    "section": "Exercise 1",
+    "text": "Exercise 1\nFor each of the following, answer whether the statement is True or False. If True, you may simply state “True” and no explanation is needed. If the statement is False, additionally provide a 1-sentence explanation as to why it is false.\n\nTRUE/FALSE: Finding a very large p-value from the Anderson- Darling test gives us strong evidence that the sample is consistent with a population with the target distribution of interest.\nTRUE/FALSE: If we instead found a p-value smaller than our pre-specified \\(\\alpha\\), then there would be enough evidence for us to conclude that the observed EDF is NOT consistent with a population with the target distribution of interest.\nTRUE/FALSE: Given the p-value of 0.24, the probability that we have made the correct decision is greater than 0.90.\nTRUE/FALSE: Given the p-value of 0.24, the probability that the sample is consistent with a population that has the target distribution of interest is 0.24."
+  },
+  {
+    "objectID": "hw/hw-05.html#sore-throat-data-implementing-t-tests-in-r",
+    "href": "hw/hw-05.html#sore-throat-data-implementing-t-tests-in-r",
+    "title": "HW 5",
+    "section": "Sore Throat Data: Implementing t-tests in R",
+    "text": "Sore Throat Data: Implementing t-tests in R\nToday’s data are made available by the Lerner Research Institute and Dr. Amy S. Nowacki of the Cleveland Clinic. This dataset is representative of a study by Ruetzler et al. (2013) that examined the effect of licorice gargles on postextubation sore throat.\nPostoperative sore throat is an annoying complication of intubation after surgery, particularly with double-lumen tubes, which are of a wider gauge. Reutzler et al. (2013) performed an experimental study among patients having elective surgery who required intubation with a double-lumen tube. Prior to anesthesia, patients were randomly assigned to gargle either a licorice-based solution or sugar water. Sore throat was evaluated 30 minutes, 90 minutes, and 4 hours after conclusion of the surgery, evaluated using an 11-point Likert scale (0 = no pain, 10 = worst pain).\nLet’s assume that we can treat this pain score as a continuous numeric variable.\nFirst, load the tidyverse.\n\nlibrary(tidyverse)\n\nDownload licorice.csv from the Canvas assignment page. Copy the data into your project data folder. Ensure you are in your project folder in RStudio (check for the blue box in the upper right corner with the project folder name visible.)\nThen, read in the data the following code:\n\nlicorice &lt;- read.csv(\"data/licorice.csv\")\n\n\n\n\n\n\n\nTipNeed help reading in your data?\n\n\n\nIf you’re having trouble reading in your data, it may be a file path issue. Try typing getwd() in the console and make sure you are in your project directory. Make sure the data is in your data folder and that you are reading it in exactly as it’s named. Contact the teaching team or post in Ed Discussion if you need assistance.\n\n\n\n\n\n\n\n\nTip\n\n\n\nRemember to suppress warnings and messages when 1) loading packages and/or 2) reading in data using Quarto options #| message: false and #| warning: false.\nRender your document now to check!\n\n\nSome relevant variables of interest are:\n\npreOp_sex: Sex (0 = Male; 1 = Female)\npreOp_calcBMI: Body mass index in kg/m2\ntreat: Treatment given (0 = Sugar placebo; 1 = Licorice solution)\npacu30min_throatPain: Sore throat pain score 30 minutes after arrival in PACU (11-point scale: 0 = No pain; 10 = Worst pain)\npostOp4hour_throatPain: Sore throat pain score 4 hours after surgery (11-point scale: 0 = No pain; 10 = worst pain)\n\nQuestions 2-5 use the licorice dataset above. You may assume that the pain scores are continuous numeric variables for the purposes of this assignment."
+  },
+  {
+    "objectID": "hw/hw-05.html#exercise-2",
+    "href": "hw/hw-05.html#exercise-2",
+    "title": "HW 5",
+    "section": "Exercise 2",
+    "text": "Exercise 2\nAmong patients who received the placebo sugar solution, we’d like to test the hypothesis that the mean throat pain score 30 minutes after surgery is not equal to 1. Use \\(\\alpha\\) = .05. To do this, follow the steps below:\n\nWrite out the null and alternative hypotheses in words.\nWrite out the null and alternative hypotheses in symbols. (Use LaTex.)\n\n\n\n\n\n\n\nTip\n\n\n\nThe null hypothesis is provided for you. Write the following in your Quarto document: $H_0: \\mu = 1$.\n\n\nNow write out the alternative hypothesis on your own.\n\nUnder the null hypothesis, what distribution does our test statistic follow? Include degrees of freedom. (LaTex is optional for this part.)\nCreate a new dataset called licorice_s from the original licorice dataset, filtering to only those in the placebo/sugar group. (Nothing needs to be printed here. Just show the code.)\nWith your new dataset (licorice_s), test the hypothesis that the mean throat pain score 30 minutes after surgery is not equal to 1. Use \\(\\alpha = 0.05\\).\nWhat is your conclusion based on part (e)?"
+  },
+  {
+    "objectID": "hw/hw-05.html#exercise-3",
+    "href": "hw/hw-05.html#exercise-3",
+    "title": "HW 5",
+    "section": "Exercise 3",
+    "text": "Exercise 3\nNow we’d like to compare the two treatment groups, assessing the hypothesis that the mean throat pain score 30 minutes after surgery was different between them. Follow the steps below to conduct the test:\n\nWrite out the null and alternative hypotheses in words.\nWrite out the null and alternative hypotheses in symbols. (Use LaTex.)\n\n\n\n\n\n\n\nTip\n\n\n\nThe null hypothesis is provided for you. Write the following in your Quarto document: $H_0: \\mu_L = \\mu_S$. \\(L\\) and \\(S\\) denote licorice and sugar, respectively.\n\n\nNow write out the alternative hypothesis on your own.\n\nWith the licorice dataset, test the hypothesis that the mean throat pain score between treatment and placebo groups 30 minutes after surgery are not equal. Use \\(\\alpha = 0.05\\). Assume unequal variances.\nWhat is your conclusion based on part (c)?"
+  },
+  {
+    "objectID": "hw/hw-05.html#exercise-4",
+    "href": "hw/hw-05.html#exercise-4",
+    "title": "HW 5",
+    "section": "Exercise 4",
+    "text": "Exercise 4\nSuppose we are interested in testing whether the difference in mean throat pain scores 4 hours after surgery differs between the two treatment groups.\n\nWrite out the null and alternative hypotheses in words.\nWith the licorice dataset, use t.test to test the hypothesis that the mean throat pain score between treatment and placebo groups 4 hours after surgery are not equal. Use \\(\\alpha = 0.01\\). Assume unequal variances. (Simply show code and display output.)\nWhat is the p-value reported from part (b)?\nPart of a t.test output is a confidence interval of the average difference in measurements. If a confidence interval contains zero, we fail to reject the null hypothesis. If a confidence interval does not contain zero, then we reject the null hypothesis.\n\nBased on the t.test output in part (b), what is the 99% confidence interval for the mean difference in throat pain levels between the two treatment groups? (Round to three decimals when reporting.) Does this confidence interval include zero? Based on this, would we reject or fail to reject \\(H_0\\) in this case, and does your answer agree or disagree with the p-value in part (c)?"
+  },
+  {
+    "objectID": "hw/hw-05.html#exercise-5",
+    "href": "hw/hw-05.html#exercise-5",
+    "title": "HW 5",
+    "section": "Exercise 5",
+    "text": "Exercise 5\nBased on your analyses in Exercises 2-4, do you think that licorice gargle prior to surgery is effective in reducing post-intubation sore throat? Explain your answer in 3-4 sentences."
+  },
+  {
+    "objectID": "hw/hw-05.html#ai-attestation",
+    "href": "hw/hw-05.html#ai-attestation",
+    "title": "HW 5",
+    "section": "AI Attestation",
+    "text": "AI Attestation\nIf you used AI for this assignment, list your prompts below. Cite any other online resources you used. If you did not use AI for this assignment, you may simply state “I did not use AI for this assignment.”"
+  },
+  {
+    "objectID": "hw/hw-05.html#submission",
+    "href": "hw/hw-05.html#submission",
+    "title": "HW 5",
+    "section": "Submission",
+    "text": "Submission\nAs you’ve seen previously, we can Render into an .html file that can be opened by any web browser. To export it as a .pdf, open the file in your web browser and then print to or save as a .pdf document. Contact your TAs in Ed Discussion if you need help!\nYou will submit the PDF documents for labs and homework to Gradescope as part of your final submission.\nTo submit your assignment:\n\nAccess Gradescope through the menu on the BIOS 600 Canvas site.\nClick on the assignment, and you’ll be prompted to submit it.\nMark the pages associated with each exercise. All of the pages of your lab should be associated with at least one question (i.e., should be “checked”).\nSelect the first page of your .PDF submission to be associated with the “Formatting” section."
+  },
+  {
+    "objectID": "hw/hw-05.html#grading",
+    "href": "hw/hw-05.html#grading",
+    "title": "HW 5",
+    "section": "Grading",
+    "text": "Grading\n\n\n\nComponent\nPoints\n\n\n\n\nEx 1\n4\n\n\nEx 2\n6\n\n\nEx 3\n4\n\n\nEx 4\n4\n\n\nEx 5\n2\n\n\nFormatting\n3\n\n\n\nThe “Formatting” grade is to assess the document format. This includes having a neatly organized document (no excessive output, warnings/messages when loading packages and/or data) with readable code and your name and the date updated in the YAML."
   },
   {
     "objectID": "labs/lab-01-template.html",
