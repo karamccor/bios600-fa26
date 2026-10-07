@@ -9,7 +9,7 @@
 <link href="../site_libs/quarto-html/quarto-syntax-highlighting-ed96de9b727972fe78a7b5d16c58bf87.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
   <meta name="generator" content="quarto-1.8.27">
 
-  <title>BIOS 600 Fall 2026 – Lecture 11: Comparing Two Means</title>
+  <title>BIOS 600 Fall 2026 – Lecture 13: Proportions and Categorical data</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -186,17 +186,13 @@
       margin-right: 0; 
     }
   </style>
-  <link href="../site_libs/countdown-0.4.0/countdown.css" rel="stylesheet">
-
-  <script src="../site_libs/countdown-0.4.0/countdown.js"></script>
-
 </head>
 <body class="quarto-light">
   <div class="reveal">
     <div class="slides">
 
 <section id="title-slide" class="quarto-title-block center">
-  <h1 class="title">Lecture 11: Comparing Two Means</h1>
+  <h1 class="title">Lecture 13: Proportions and Categorical data</h1>
   <p class="subtitle">BIOS 600 - Fall 2026</p>
 
 <div class="quarto-title-authors">
@@ -206,430 +202,621 @@
 <section id="announcements" class="slide level2">
 <h2>Announcements</h2>
 <ul>
-<li><p>HW 4 due Tonight at 11:59pm.</p></li>
-<li><p>Lab 5 due Saturday at 11:59pm.</p></li>
-<li><p><strong>No class</strong> and <strong>No lab session</strong> on Tuesday 10/6, Wellness Day! (No lab assignment next week.)</p></li>
-<li><p>HW 5 will be released after class. HW 5 is due next <strong>Thursday 10/8 at 11:59pm</strong>.</p></li>
+<li><p>Lab 5 session today. Watch the video ahead of time and attend at 3:30 if you need help.</p></li>
+<li><p>Lab 5 due Tuesday 10/21 at 11:59pm (due to fall break)</p></li>
+<li><p>No HW until next week - enjoy your fall break!</p></li>
 </ul>
 </section>
 <section id="overview" class="slide level2">
 <h2>Overview</h2>
 <ul>
-<li><p>Review hypothesis test framework</p></li>
-<li><p>Independent 2-sample t-test vs.&nbsp;paired t-test</p></li>
-<li><p>Example: independent 2-sample t-test, licorice treatment</p></li>
-<li><p>Example: paired t-test, exercise plan</p></li>
+<li><p>Review AE 03 from last time.</p></li>
+<li><p>Chi-square test and example</p></li>
+<li><p>Fisher exact test and example</p></li>
 </ul>
 </section>
-<section id="reading" class="slide level2">
-<h2>Reading</h2>
+<section id="very-optional-reading" class="slide level2">
+<h2>Very optional reading</h2>
 <ul>
-<li><p>P&amp;G: Chapter 11</p></li>
-<li><p>OI: 7.3</p></li>
+<li><p>P&amp;G Chapters 14, 15</p></li>
+<li><p>OI: Sections 5.2, 5.3, 6.1, 6.2, 6.4</p></li>
 </ul>
 </section>
-<section id="review-hypothesis-testing-steps" class="slide level2">
-<h2>Review: Hypothesis testing steps</h2>
+<section id="application-exercise" class="slide level2">
+<h2>Application Exercise</h2>
 <div class="callout callout-tip callout-titled callout-style-default">
 <div class="callout-body">
 <div class="callout-title">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
-<p><strong>Fill in the blanks</strong></p>
+<p><strong>AE 03</strong></p>
 </div>
 <div class="callout-content">
-<ol type="1">
-<li><p>State the null and alternative hypotheses. The null hypothesis states “____________________________” and the alternative challenges it.</p></li>
-<li><p>Collect relevant data and summarize it</p></li>
-<li><p>Assess how surprising it would be to see data like that if the _________________________ were really true</p></li>
-<li><p>Draw conclusions</p></li>
-</ol>
+<p>In small groups, take a few minutes to review AE 03.</p>
+<ul>
+<li><p>If you’re already done, take turns presenting the exercises to a partner (explain the code, explain how you got your conclusion.)</p></li>
+<li><p>If you still need some time to work on it, take this time to do so.</p></li>
+</ul>
 </div>
 </div>
 </div>
+</section>
+<section id="pneumococcal-disease" class="slide level2">
+<h2>Pneumococcal disease</h2>
+<p>The World Health Organization estimates that in developing countries 814,000 children under the age of five die annually from invasive pneumococcal disease (IPD), with an estimated 1.6 million deaths affecting all ages globally.</p>
+<p>Several recent studies have identified associations between pneumococcal serotypes (species variations) and patient outcomes from IPD. We consider data from a study of pneumococcal serotypes and mortality (Inverarity et al.&nbsp;(2011)).</p>
+</section>
+<section id="pneumococcal-disease-1" class="slide level2">
+<h2>Pneumococcal disease</h2>
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th>Serotype</th>
+<th>Alive</th>
+<th>Dead</th>
+<th>Total</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Serotype 10</td>
+<td>37</td>
+<td>7</td>
+<td>44</td>
+</tr>
+<tr class="even">
+<td>Serotype 31</td>
+<td>24</td>
+<td>10</td>
+<td>34</td>
+</tr>
+<tr class="odd">
+<td>Total</td>
+<td>61</td>
+<td>17</td>
+<td>78</td>
+</tr>
+</tbody>
+</table>
+<p>Is there an association between serotype and mortality?</p>
+</section>
+<section id="chi-square-tests" class="slide level2">
+<h2>Chi-square tests</h2>
+<p><span class="math inline">\(H_0\)</span>: There is no association between serotype and mortality</p>
+<p><span class="math inline">\(H_1\)</span>: There is an association between serotype and mortality</p>
+<p>Under <span class="math inline">\(H_0\)</span>, we have independence between serotype and mortality, implying that joint probabilities should be equal to products of marginal distributions:</p>
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th>Serotype</th>
+<th>Alive</th>
+<th>Dead</th>
+<th>Total</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Serotype 10</td>
+<td>?</td>
+<td>?</td>
+<td>44</td>
+</tr>
+<tr class="even">
+<td>Serotype 31</td>
+<td>?</td>
+<td>?</td>
+<td>34</td>
+</tr>
+<tr class="odd">
+<td>Total</td>
+<td>61</td>
+<td>17</td>
+<td>78</td>
+</tr>
+</tbody>
+</table>
+<p>What counts might we expect under <span class="math inline">\(H_0\)</span>?</p>
+</section>
+<section id="intuition-joint-and-marginal-probabilities" class="slide level2">
+<h2>Intuition: Joint and Marginal Probabilities</h2>
+<ul>
+<li><p>Suppose we look at two variables: <strong>Serotype</strong> and <strong>Mortality</strong> (Alive or Dead).</p></li>
+<li><p>The <strong>joint probability</strong> describes the probability of being in <em>both</em> categories (e.g., “Serotype 10 <strong>and</strong> Alive”).</p></li>
+<li><p>The <strong>marginal probabilities</strong> describe totals across one variable:</p>
+<ul>
+<li>P(Serotype 10) = proportion of all patients with Serotype 10<br>
+</li>
+<li>P(Alive) = proportion of all patients who survived</li>
+</ul></li>
+</ul>
+<div class="columns">
+<div class="column">
+<h4 id="marginal-totals">Marginal totals</h4>
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th>Serotype</th>
+<th>Total</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>10</td>
+<td>44</td>
+</tr>
+<tr class="even">
+<td>31</td>
+<td>34</td>
+</tr>
+<tr class="odd">
+<td><strong>Total</strong></td>
+<td><strong>78</strong></td>
+</tr>
+</tbody>
+</table>
+</div><div class="column">
+<h4 id="marginal-totals-1">Marginal totals</h4>
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th>Outcome</th>
+<th>Total</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Alive</td>
+<td>61</td>
+</tr>
+<tr class="even">
+<td>Dead</td>
+<td>17</td>
+</tr>
+<tr class="odd">
+<td><strong>Total</strong></td>
+<td><strong>78</strong></td>
+</tr>
+</tbody>
+</table>
+</div></div>
+</section>
+<section id="what-would-happen-if-these-two-variables-were-independent" class="slide level2">
+<h2>What would happen if these two variables were independent?</h2>
+<ul>
+<li>Under the <strong>null hypothesis of independence</strong>, the chance of being both “Serotype 10” <strong>and</strong> “Alive” should just be:</li>
+</ul>
+<p><span class="math display">\[
+P(\text{Serotype 10 and Alive}) = P(\text{Serotype 10}) \times P(\text{Alive})
+\]</span></p>
+<ul>
+<li>We can multiply these probabilities by the total number of observations to find the <strong>expected counts</strong>.</li>
+</ul>
+<p>For example:</p>
+<p><span class="math display">\[
+E_{10,Alive} = P(\text{Serotype 10}) \times P(\text{Alive}) \times N
+\]</span></p>
+<ul>
+<li>Using our totals:</li>
+</ul>
+<p><span class="math display">\[
+P(\text{Serotype 10}) = \frac{44}{78}, \quad P(\text{Alive}) = \frac{61}{78}, \quad N = 78
+\]</span></p>
+</section>
+<section id="compute-expected-count-under-independence" class="slide level2">
+<h2>Compute expected count under independence</h2>
 <div class="cell">
-<div class="cell-output-display">
-<div class="countdown" id="timer_2be3f7ad" data-update-every="1" tabindex="0" style="right:0;bottom:0;">
-<div class="countdown-controls"><button class="countdown-bump-down">−</button><button class="countdown-bump-up">+</button></div>
-<code class="countdown-time"><span class="countdown-digits minutes">02</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
-</div>
-</div>
-</div>
-</section>
-<section id="independent-samples" class="slide level2">
-<h2>Independent samples</h2>
-<ul>
-<li>The type of t-test we use to compare two means depends on how the samples were obtained. One approach would be to obtain <strong>two independent samples</strong> and test the equality of means <span class="math inline">\(\mu_1\)</span> and <span class="math inline">\(\mu_2\)</span></li>
-</ul>
-</section>
-<section id="independent-samples-1" class="slide level2">
-<h2>Independent samples</h2>
-
-<img data-src="images/lec-11/indep1.png" width="200" class="r-stretch"></section>
-<section id="paired-or-matched-samples" class="slide level2">
-<h2>Paired or matched samples</h2>
-<ul>
-<li><p>An alternative would be to obtain <strong>paired</strong> or <strong>matched samples</strong> and test the equality of means <span class="math inline">\(\mu_1\)</span> and <span class="math inline">\(\mu_2\)</span>.</p></li>
-<li><p>Matching could be by person (e.g., before and after measures) or could be a pair of individuals who belong together in another way (e.g., same date of birth in same hospital; married couple, twins etc.)</p></li>
-</ul>
-</section>
-<section id="paired-or-matched-samples-1" class="slide level2">
-<h2>Paired or matched samples</h2>
-
-<img data-src="images/lec-11/paired.png" width="200" class="r-stretch"></section>
-<section id="paired-samples" class="slide level2">
-<h2>Paired samples</h2>
-<p>Samples are often paired for a variety of reasons</p>
-<ul>
-<li><p>Measurements are taken on a single subject at two distinct points in time (e.g., baseline and follow-up)</p></li>
-<li><p>Subjects may be matched so that members of each pair are as much alike as possible with respect to important characteristics like age and sex (e.g., matched case-control study)</p></li>
-</ul>
-</section>
-<section id="a-benefit-of-pairing" class="slide level2">
-<h2>A benefit of pairing</h2>
-<ul>
-<li><p>Pairing can <strong>control for unwanted sources of variation</strong> that might otherwise influence the results of a comparison.</p></li>
-<li><p>Matching within subject (e.g., baseline and follow-up) is a powerful way to eliminate subject-specific factors.</p></li>
-</ul>
-</section>
-<section id="designing-a-study-impaired-driving" class="slide level2">
-<h2>Designing a study: impaired driving</h2>
-<p>The Department of Motor Vehicles wishes to compare impairment of drivers while texting to impairment after being sleep deprived for 24 hours.</p>
-<div class="callout callout-tip callout-style-simple">
-<div class="callout-body">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-content">
-<p>In small groups, describe an independent samples design and a matched pairs design for this question of interest.</p>
-</div>
-</div>
-</div>
-<div class="cell">
-<div class="cell-output-display">
-<div class="countdown" id="timer_bd339f72" data-update-every="1" tabindex="0" style="right:0;bottom:0;">
-<div class="countdown-controls"><button class="countdown-bump-down">−</button><button class="countdown-bump-up">+</button></div>
-<code class="countdown-time"><span class="countdown-digits minutes">03</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
-</div>
-</div>
-</div>
-</section>
-<section id="case-study-licorice-and-surgery" class="slide level2">
-<h2>Case study: licorice and surgery</h2>
-<ul>
-<li><p>Reutzler et al.&nbsp;(2013) performed an experiment among patients having surgery who required intubation.</p></li>
-<li><p>Prior to anesthesia, patients were randomly assigned to gargle either a licorice-based solution or sugar water (as placebo).</p></li>
-<li><p>Sore throat was evaluated 30 minutes, 90 minutes, and 4 hours after conclusion of the surgery on a pain scale from 0 to 10 (0 = no pain; 10 = worst).</p></li>
-<li><p>Let’s evaluate whether <strong>gargling licorice before surgery</strong> led to <strong>different mean pain scores</strong> when swallowing, at 30 minutes after arrival in the PACU (post-anesthesia care unit).</p></li>
-</ul>
-</section>
-<section id="case-study-hypothesis-testing-step-1" class="slide level2">
-<h2>Case study: hypothesis testing step 1</h2>
-<ul>
-<li>The null hypothesis is that patients receiving licorice gargle (<code>treat</code> = 1) and sugar solution (<code>treat</code> = 0) placebo have the same mean pain scores relating to swallowing 30 minutes after arrival in the PACU, <code>pacu30min_swallowPain</code>, (treatment is unrelated to mean pain), while the alternative is that they do not.</li>
-</ul>
-<div class="callout callout-tip callout-style-simple">
-<div class="callout-body">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-content">
-<p>What are the null and alternative hypotheses written out in symbols?</p>
-</div>
-</div>
-</div>
-</section>
-<section id="null-and-alternatives" class="slide level2">
-<h2>Null and alternatives</h2>
-<p><span class="math inline">\(H_0: \mu_{\textrm{licorice}} =\mu_{\textrm{placebo}}\)</span></p>
-<p><span class="math inline">\(H_A: \mu_{\textrm{licorice}}  \neq \mu_{\textrm{placebo}}\)</span></p>
-<p>where <span class="math inline">\(\mu\)</span> is the mean pain score either from the licorice or the placebo group.</p>
-</section>
-<section id="latex-note" class="slide level2">
-<h2>Latex note</h2>
-<p>To get the nice non-italicized text subscript on the previous slide, use this:</p>
-<p><code>$H_0: \mu_{\textrm{licorice}} =\mu_{\textrm{placebo}}$</code></p>
-</section>
-<section id="setup" class="slide level2">
-<h2>Setup</h2>
-<ul>
-<li>First, we can load tidyverse and read in our data.</li>
-</ul>
-<div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a></a><span class="fu">library</span>(tidyverse)</span>
-<span id="cb1-2"><a></a>licorice <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">"data/licorice.csv"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</div>
-<p>Variables of interest:</p>
-<ul>
-<li><p><code>treat</code>: Treatment given (0 = Sugar placebo; 1 = Licorice solution)</p></li>
-<li><p><code>pacu30min_swallowPain</code>: Swallow pain score 30 minutes after surgery (11-point scale: 0 = No pain; 10 = worst pain)</p></li>
-</ul>
-</section>
-<section id="looking-at-some-data" class="slide level2">
-<h2>Looking at some data</h2>
-<div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a></a>licorice <span class="sc">|&gt;</span></span>
-<span id="cb2-2"><a></a>  <span class="fu">select</span>(pacu30min_swallowPain, treat) <span class="sc">|&gt;</span></span>
-<span id="cb2-3"><a></a>  <span class="fu">slice</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">5</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a></a><span class="co"># Compute expected count under independence</span></span>
+<span id="cb1-2"><a></a>expected_10_alive <span class="ot">&lt;-</span> (<span class="dv">44</span><span class="sc">/</span><span class="dv">78</span>) <span class="sc">*</span> (<span class="dv">61</span><span class="sc">/</span><span class="dv">78</span>) <span class="sc">*</span> <span class="dv">78</span></span>
+<span id="cb1-3"><a></a>expected_10_alive</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>  pacu30min_swallowPain treat
-1                     0     1
-2                     0     1
-3                     0     1
-4                     0     1
-5                     0     1</code></pre>
+<pre><code>[1] 34.41026</code></pre>
 </div>
 </div>
-<div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a></a>licorice <span class="sc">|&gt;</span></span>
-<span id="cb4-2"><a></a>  <span class="fu">count</span>(treat)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>  treat   n
-1     0 116
-2     1 117</code></pre>
-</div>
-</div>
-</section>
-<section id="step-2-continued" class="slide level2">
-<h2>Step 2 continued</h2>
-<div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a></a>licorice <span class="sc">|&gt;</span></span>
-<span id="cb6-2"><a></a>  <span class="fu">group_by</span>(treat) <span class="sc">|&gt;</span> </span>
-<span id="cb6-3"><a></a>  <span class="fu">summarize</span>(<span class="at">mean =</span> <span class="fu">mean</span>(pacu30min_swallowPain), </span>
-<span id="cb6-4"><a></a>            <span class="at">sd =</span> <span class="fu">sd</span>(pacu30min_swallowPain))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-stdout">
-<pre><code># A tibble: 2 × 3
-  treat  mean    sd
-  &lt;int&gt; &lt;dbl&gt; &lt;dbl&gt;
-1     0 1.38  2.29 
-2     1 0.308 0.825</code></pre>
-</div>
-</div>
-<p>Analyzing the data, we obtained</p>
 <ul>
-<li><p><span class="math inline">\(\bar{x}_L\)</span>=0.308</p></li>
-<li><p><span class="math inline">\(\bar{x}_S\)</span>=1.38</p></li>
-<li><p><span class="math inline">\(s_L\)</span>=0.825</p></li>
-<li><p><span class="math inline">\(s_S\)</span>=2.29</p></li>
+<li><p>We can repeat this for each cell to find what we’d expect if serotype and mortality were truly unrelated.</p></li>
+<li><p>The chi-square test then measures how far our observed counts deviate from these expected counts.</p></li>
+</ul>
+<p><span class="math display">\[\chi^2 = \sum\frac{(O-E)^2}{E}\]</span></p>
+</section>
+<section id="intuition" class="slide level2">
+<h2>Intuition</h2>
+<ul>
+<li><p>If observed counts are <strong>close</strong> to what we’d expect under independence, <span class="math inline">\(\chi^2\)</span> will be small, then we’d fail to reject <span class="math inline">\(H_0\)</span>.</p></li>
+<li><p>If they’re <strong>far</strong> from expected, <span class="math inline">\(\chi^2\)</span> will be large, which might lead to evidence of an association.</p></li>
 </ul>
 </section>
-<section id="visualizing-the-means-code" class="slide level2">
-<h2>Visualizing the means: code</h2>
-<div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb8"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a></a><span class="fu">ggplot</span>(licorice, <span class="fu">aes</span>(<span class="at">x =</span> <span class="fu">as.factor</span>(treat), </span>
-<span id="cb8-2"><a></a>                     <span class="at">y =</span> pacu30min_swallowPain)) <span class="sc">+</span></span>
-<span id="cb8-3"><a></a>  <span class="fu">geom_boxplot</span>() <span class="sc">+</span></span>
-<span id="cb8-4"><a></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">"Treat"</span>, <span class="at">y =</span> <span class="st">"Swallow Pain 30 min Post"</span>) <span class="sc">+</span></span>
-<span id="cb8-5"><a></a>  <span class="fu">theme_minimal</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</div>
-</section>
-<section id="visualizing-the-means-plot" class="slide level2">
-<h2>Visualizing the means: plot</h2>
+<section id="visualizing-observed-vs-expected-counts" class="slide level2">
+<h2>Visualizing Observed vs Expected Counts</h2>
+<p>Let’s visualize how the <strong>observed</strong> counts compare to the <strong>expected</strong> counts under independence.</p>
 
-<img data-src="lec-11-compare-means_files/figure-revealjs/unnamed-chunk-9-1.png" width="960" class="r-stretch"></section>
-<section id="two-sample-t-test-independent-samples" class="slide level2">
-<h2>Two-sample t-test, independent samples</h2>
-<p>The two-sample t-test for independent samples is given by</p>
-<div class="poll">
-<p><span class="math display">\[t = \frac{(\bar{x}_1 - \bar{x}_2) - (\mu_1 - \mu_2)}{\sqrt{\frac{s_1^2}{n_1} + \frac{s_2^2}{n_2}}}\]</span></p>
-</div>
-<p>The degrees of freedom of the <span class="math inline">\(t\)</span> statistic depend on whether or not <span class="math inline">\(\sigma_1^2 = \sigma_2^2\)</span>.</p>
+<img data-src="lec-13-proportions_files/figure-revealjs/unnamed-chunk-4-1.png" width="960" class="r-stretch"></section>
+<section id="chi-square-tests-1" class="slide level2">
+<h2>Chi-square tests</h2>
+<p>The <strong>chi-square test</strong> compares the observed frequencies in each cell to the expected count under <span class="math inline">\(H_0\)</span>; if the total differences are large enough, we reject <span class="math inline">\(H_0\)</span>:</p>
+<p><span class="math display">\[\chi^2 = \sum_{i=1}^{r \times c}\frac{(O_i - E_i)^2}{E_i}\]</span></p>
+<p>which has a <span class="math inline">\(\chi^2_{(r - 1) \times (c-1)}\)</span> distribution, under <span class="math inline">\(H_0\)</span>.</p>
 </section>
-<section id="equal-or-unequal-variances" class="slide level2">
-<h2>Equal or unequal variances?</h2>
-<ul>
-<li><p>The choice of <span class="math inline">\(df\)</span> depends on whether the independent samples have the same or different variances</p></li>
-<li><p>If the variances are equal, then we can use a pooled estimate of <span class="math inline">\(s^2\)</span>, and the degrees of freedom are given by <span class="math inline">\((n_1−1)+(n_2−1)=n_1+n_2−2\)</span>.</p></li>
-</ul>
-</section>
-<section id="equal-or-unequal-variances-1" class="slide level2">
-<h2>Equal or unequal variances?</h2>
-<ul>
-<li><p>If the variances are unequal, the degrees of freedom are difficult to derive, and something called a <strong>Satterthwaite approximation</strong> is often used (use software).</p></li>
-<li><p>Unequal variances is the default in <code>t.test()</code> (and it should be the default choice), as the t-test assuming equal variances can be quite unreliable if the variances differ, especially when the group sizes differ as well.</p></li>
-</ul>
-</section>
-<section id="case-study-hypothesis-testing-step-3" class="slide level2">
-<h2>Case study: hypothesis testing step 3</h2>
+<section id="chi-square-tests-2" class="slide level2">
+<h2>Chi-square tests</h2>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a></a><span class="fu">t.test</span>(pacu30min_throatPain <span class="sc">~</span> treat, </span>
-<span id="cb9-2"><a></a>       <span class="at">data =</span> licorice,</span>
-<span id="cb9-3"><a></a>       <span class="at">mu =</span> <span class="dv">0</span>,</span>
-<span id="cb9-4"><a></a>       <span class="at">alternative =</span> <span class="st">"two.sided"</span>,</span>
-<span id="cb9-5"><a></a>       <span class="at">var.equal =</span> <span class="cn">FALSE</span>,</span>
-<span id="cb9-6"><a></a>       <span class="at">conf.level =</span> <span class="fl">0.95</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a></a>data <span class="ot">&lt;-</span> <span class="fu">matrix</span>(<span class="fu">c</span>(<span class="dv">37</span>, <span class="dv">7</span>, <span class="dv">24</span>, <span class="dv">10</span>), </span>
+<span id="cb3-2"><a></a>               <span class="at">byrow =</span> T, <span class="at">nrow =</span> <span class="dv">2</span>)</span>
+<span id="cb3-3"><a></a>data</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>     [,1] [,2]
+[1,]   37    7
+[2,]   24   10</code></pre>
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a></a><span class="fu">chisq.test</span>(data)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>
-    Welch Two Sample t-test
+    Pearson's Chi-squared test with Yates' continuity correction
 
-data:  pacu30min_throatPain by treat
-t = 4.8035, df = 157.3, p-value = 3.608e-06
-alternative hypothesis: true difference in means between group 0 and group 1 is not equal to 0
-95 percent confidence interval:
- 0.4429931 1.0617225
-sample estimates:
-mean in group 0 mean in group 1 
-      1.0258621       0.2735043 </code></pre>
+data:  data
+X-squared = 1.3359, df = 1, p-value = 0.2478</code></pre>
 </div>
 </div>
-</section>
-<section id="case-study-hypothesis-testing-step-3-1" class="slide level2">
-<h2>Case study: hypothesis testing step 3</h2>
-<p>Carrying out the two sample t-test for independent samples with unequal variances using software on the previous slide, we get <span class="math inline">\(t=4.80\)</span>, <span class="math inline">\(df\)</span>≈157.3, with a corresponding p-value &lt; 0.001.</p>
-</section>
-<section id="case-study-hypothesis-testing-step-4" class="slide level2 smaller">
-<h2>Case study: hypothesis testing step 4</h2>
-<ul>
-<li><strong>Conclusion</strong>: Based on our observed data, we conclude that there is evidence of a potential difference in mean pain score between the two groups. In particular, we have evidence that those receiving the licorice gargle before their surgery reported a lower mean pain score compared to placebo patients.</li>
-</ul>
-
-<img data-src="images/lec-11/licorice.jpg" width="400" class="r-stretch"></section>
-<section id="case-study-athletic-training" class="slide level2">
-<h2>Case study: athletic training</h2>
-<ul>
-<li>A school athletics department wants to test the effectiveness of the new type of training proposed by comparing the average times of 10 runners in the 100 meters in seconds before and after the new training is implemented.</li>
-</ul>
-<div class="callout callout-tip callout-style-simple">
-<div class="callout-body">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-content">
-<ul>
-<li><p>What are <span class="math inline">\(H_0\)</span> and <span class="math inline">\(H_1\)</span>?</p></li>
-<li><p>Which test should we use?</p></li>
-</ul>
-</div>
-</div>
-</div>
-</section>
-<section id="in-r" class="slide level2">
-<h2>In R</h2>
-<ul>
-<li>Our dataset in R is called <code>training</code>:</li>
-</ul>
-<div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb11"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a></a>training</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>   subject before after
-1        1   12.9  12.0
-2        2   13.5  12.2
-3        3   12.8  11.2
-4        4   15.6  13.0
-5        5   17.2  15.0
-6        6   19.2  15.8
-7        7   12.6  12.2
-8        8   15.3  13.4
-9        9   14.4  12.9
-10      10   11.3  11.0</code></pre>
-</div>
-</div>
-</section>
-<section id="paired-t-test" class="slide level2">
-<h2>Paired t-test</h2>
-<div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb13"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a></a><span class="fu">t.test</span>(training<span class="sc">$</span>before, </span>
-<span id="cb13-2"><a></a>       training<span class="sc">$</span>after, </span>
-<span id="cb13-3"><a></a>       <span class="at">mu =</span> <span class="dv">0</span>,</span>
-<span id="cb13-4"><a></a>       <span class="at">paired =</span> T,</span>
-<span id="cb13-5"><a></a>       <span class="at">alternative =</span> <span class="st">"two.sided"</span>,</span>
-<span id="cb13-6"><a></a>       <span class="at">var.equal =</span> <span class="cn">FALSE</span>,</span>
-<span id="cb13-7"><a></a>       <span class="at">conf.level =</span> <span class="fl">0.95</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>
-    Paired t-test
-
-data:  training$before and training$after
-t = 5.2671, df = 9, p-value = 0.0005158
-alternative hypothesis: true mean difference is not equal to 0
-95 percent confidence interval:
- 0.9185294 2.3014706
-sample estimates:
-mean difference 
-           1.61 </code></pre>
-</div>
-</div>
+<p>What might we conclude at <span class="math inline">\(\alpha = .05\)</span>?</p>
 </section>
 <section id="conclusion" class="slide level2">
 <h2>Conclusion</h2>
+<ul>
+<li><strong>Conclusion</strong>: Since the p-value is greater than 0.05, we fail to reject the null hypothesis. There is not enough evidence to conclude that survival differs between Serotype 10 and Serotype 31.</li>
+</ul>
+</section>
+<section id="fishers-exact-test" class="slide level2">
+<h2>Fisher’s exact test</h2>
+<ul>
+<li><p>The chi-square test relies on asymptotic results (i.e.&nbsp;large sample size), which might not be appropriate if we have small cell counts (common rules of thumb are &gt;5 or &gt;10 observed in each cell).</p></li>
+<li><p><strong>Fisher’s exact test</strong> calculates an exact p-value under a specific distributional assumption.</p></li>
+</ul>
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th>Serotype</th>
+<th>Alive</th>
+<th>Dead</th>
+<th>Total</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Serotype 10</td>
+<td>37</td>
+<td>7</td>
+<td>44</td>
+</tr>
+<tr class="even">
+<td>Serotype 31</td>
+<td>24</td>
+<td>10</td>
+<td>34</td>
+</tr>
+<tr class="odd">
+<td>Total</td>
+<td>61</td>
+<td>17</td>
+<td>78</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="fishers-exact-test-1" class="slide level2">
+<h2>Fisher’s exact test</h2>
+<p>Fisher’s exact test relies on the <strong>hypergeometric distribution</strong> (don’t worry about this, seriously).</p>
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th>Serotype</th>
+<th>Alive</th>
+<th>Dead</th>
+<th>Total</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Serotype 10</td>
+<td>a</td>
+<td>c</td>
+<td>a + c</td>
+</tr>
+<tr class="even">
+<td>Serotype 31</td>
+<td>b</td>
+<td>d</td>
+<td>b + d</td>
+</tr>
+<tr class="odd">
+<td>Total</td>
+<td>a + b</td>
+<td>c + d</td>
+<td>a + b + c + d</td>
+</tr>
+</tbody>
+</table>
+<p>Conditionally on the margins (assumed fixed), then each of the individual cells is distributed according to the hypergeometric distribution. We can thus calculate the exact probabilities of obtaining specific <em>tables</em>.</p>
+</section>
+<section id="fishers-exact-test-2" class="slide level2">
+<h2>Fisher’s exact test</h2>
+<p>Observed data:</p>
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th>Serotype</th>
+<th>Alive</th>
+<th>Dead</th>
+<th>Total</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Serotype 10</td>
+<td>37</td>
+<td>7</td>
+<td>44</td>
+</tr>
+<tr class="even">
+<td>Serotype 31</td>
+<td>24</td>
+<td>10</td>
+<td>34</td>
+</tr>
+<tr class="odd">
+<td>Total</td>
+<td>61</td>
+<td>17</td>
+<td>78</td>
+</tr>
+</tbody>
+</table>
+<p>We could use the hypergeometric distribution to calculate the probability of seeing this table, assuming 61 total alive patients, 17 dead, and 44 and 34 infections of serotypes 10 and 31, respectively (lots of factorials, so you could imagine it wasn’t fun before modern computers).</p>
+</section>
+<section id="fishers-exact-test-3" class="slide level2">
+<h2>Fisher’s exact test</h2>
+<p>Another “possible” table:</p>
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th>Serotype</th>
+<th>Alive</th>
+<th>Dead</th>
+<th>Total</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Serotype 10</td>
+<td>36</td>
+<td>8</td>
+<td>44</td>
+</tr>
+<tr class="even">
+<td>Serotype 31</td>
+<td>25</td>
+<td>9</td>
+<td>34</td>
+</tr>
+<tr class="odd">
+<td>Total</td>
+<td>61</td>
+<td>17</td>
+<td>78</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><p>Here we’ve displayed another table with the <strong>same margins</strong>, but with some slightly different potential cell counts.</p></li>
+<li><p>Again we could use the hypergeometric distribution to calculate the probability of observing the cell counts conditionally on fixed margins.</p></li>
+</ul>
+</section>
+<section id="fishers-exact-test-4" class="slide level2">
+<h2>Fisher’s exact test</h2>
+<p>Fisher’s exact test relies on constructing <em>all possible</em> contingency tables with the same margins, and then summing up probabilities of all tables as extreme or more extreme than the observed data.</p>
+<div class="callout callout-tip callout-titled callout-style-simple">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Question</strong></p>
+</div>
+<div class="callout-content">
+<p>What might “more extreme” mean in the context of contingency tables?</p>
+</div>
+</div>
+</div>
+</section>
+<section id="fishers-exact-test-5" class="slide level2">
+<h2>Fisher’s exact test</h2>
+<p><span class="math inline">\(H_0\)</span>: The proportion of deaths is the same for Serotype 10 and Serotype 31 (no association between serotype and outcome).</p>
+<p><span class="math inline">\(H_A\)</span>: The proportion of deaths differs between serotypes (there <em>is</em> an association)</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a></a>data <span class="ot">&lt;-</span> <span class="fu">matrix</span>(<span class="fu">c</span>(<span class="dv">37</span>, <span class="dv">7</span>, <span class="dv">24</span>, <span class="dv">10</span>), <span class="at">byrow =</span> T, <span class="at">nrow =</span> <span class="dv">2</span>)</span>
+<span id="cb7-2"><a></a>data</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>     [,1] [,2]
+[1,]   37    7
+[2,]   24   10</code></pre>
+</div>
+</div>
+</section>
+<section id="conducting-the-fishers-exact-test" class="slide level2">
+<h2>Conducting the Fisher’s Exact test</h2>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a></a><span class="fu">fisher.test</span>(data)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+    Fisher's Exact Test for Count Data
+
+data:  data
+p-value = 0.1758
+alternative hypothesis: true odds ratio is not equal to 1
+95 percent confidence interval:
+ 0.6465347 7.7636744
+sample estimates:
+odds ratio 
+  2.179552 </code></pre>
+</div>
+</div>
+<ul>
+<li>What might we conclude at <span class="math inline">\(\alpha = 0.05\)</span>?</li>
+</ul>
+</section>
+<section id="conclusion-1" class="slide level2">
+<h2>Conclusion</h2>
+<ul>
+<li><p>The Fisher’s Exact Test yielded a p-value of 0.17, which is greater than the conventional significance level of 0.05. Therefore, we fail to reject the null hypothesis.</p></li>
+<li><p>There is no statistically significant evidence of an association between serotype and survival status in this sample.</p></li>
+</ul>
+</section>
+<section id="odds-ratios" class="slide level2 smaller">
+<h2>Odds ratios</h2>
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th>Serotype</th>
+<th>Alive</th>
+<th>Dead</th>
+<th>Total</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Serotype 10</td>
+<td>37</td>
+<td>7</td>
+<td>44</td>
+</tr>
+<tr class="even">
+<td>Serotype 31</td>
+<td>24</td>
+<td>10</td>
+<td>34</td>
+</tr>
+<tr class="odd">
+<td>Total</td>
+<td>61</td>
+<td>17</td>
+<td>78</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><p>Odds of death among serotype 10 patients = <span class="math inline">\(\frac{7/44}{37/44} = 7/37\)</span></p></li>
+<li><p>Odds of death among serotype 31 patients = <span class="math inline">\(\frac{10/34}{24/34} = 10/24\)</span></p></li>
+<li><p><strong>Odds ratio</strong> of death comparing 31 to 10 is thus <span class="math inline">\(\frac{10/24}{7/37} \approx 2.2\)</span></p></li>
+</ul>
+</section>
+<section id="r-by-c-tables" class="slide level2">
+<h2>r by c tables</h2>
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th>Serotype</th>
+<th>Alive</th>
+<th>Dead</th>
+<th>Total</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Serotype 10</td>
+<td>37</td>
+<td>7</td>
+<td>44</td>
+</tr>
+<tr class="even">
+<td>Serotype 15</td>
+<td>60</td>
+<td>12</td>
+<td>72</td>
+</tr>
+<tr class="odd">
+<td>Serotype 20</td>
+<td>97</td>
+<td>9</td>
+<td>106</td>
+</tr>
+<tr class="even">
+<td>Serotype 31</td>
+<td>24</td>
+<td>10</td>
+<td>34</td>
+</tr>
+<tr class="odd">
+<td><strong>Total</strong></td>
+<td><strong>218</strong></td>
+<td><strong>38</strong></td>
+<td><strong>256</strong></td>
+</tr>
+</tbody>
+</table>
+<p>We can also extend the chi-square test and Fisher’s exact test to more general contingency tables (although the notion of an odds ratio no longer makes sense here).</p>
+</section>
+<section id="winter-olympics-training" class="slide level2">
+<h2>Winter Olympics training</h2>
+<p>Suppose we were interested in whether a particular training regimen was associated with “success” as measured by whether an athlete qualified for being on the US Winter Olympic Team for giant slalom.</p>
+</section>
+<section id="winter-olympics-training-1" class="slide level2">
+<h2>Winter Olympics training</h2>
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th></th>
+<th>Qualified</th>
+<th>Did Not Qualify</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>New Regimen</strong></td>
+<td>129</td>
+<td>97</td>
+</tr>
+<tr class="even">
+<td><strong>Old Regimen</strong></td>
+<td>112</td>
+<td>114</td>
+</tr>
+</tbody>
+</table>
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code>
+    Pearson's Chi-squared test with Yates' continuity correction
+
+data:  data
+X-squared = 2.2755, df = 1, p-value = 0.1314</code></pre>
+</div>
+</div>
 <div class="callout callout-tip callout-titled callout-style-default">
 <div class="callout-body">
 <div class="callout-title">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
-<p><strong>Tip</strong></p>
+<p><strong>Practice</strong></p>
 </div>
 <div class="callout-content">
-<p>What is your conclusion?</p>
+<p>Write out the code to 1) construct the data matrix and 2) to conduct a chi square test in R. What might we conclude using alpha = .05?</p>
 </div>
 </div>
 </div>
 </section>
-<section id="but-wait" class="slide level2">
-<h2>But wait…</h2>
-<div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb15"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a></a>training_diff <span class="ot">&lt;-</span> training <span class="sc">|&gt;</span> </span>
-<span id="cb15-2"><a></a>  <span class="fu">mutate</span>(<span class="at">diff =</span> after <span class="sc">-</span> before)</span>
-<span id="cb15-3"><a></a>training_diff</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>   subject before after diff
-1        1   12.9  12.0 -0.9
-2        2   13.5  12.2 -1.3
-3        3   12.8  11.2 -1.6
-4        4   15.6  13.0 -2.6
-5        5   17.2  15.0 -2.2
-6        6   19.2  15.8 -3.4
-7        7   12.6  12.2 -0.4
-8        8   15.3  13.4 -1.9
-9        9   14.4  12.9 -1.5
-10      10   11.3  11.0 -0.3</code></pre>
-</div>
-</div>
-</section>
-<section id="but-wait.." class="slide level2">
-<h2>But wait..</h2>
-<div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb17"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a></a><span class="fu">t.test</span>(training_diff<span class="sc">$</span>diff, </span>
-<span id="cb17-2"><a></a>       <span class="at">mu =</span> <span class="dv">0</span>,</span>
-<span id="cb17-3"><a></a>       <span class="at">alternative =</span> <span class="st">"two.sided"</span>,</span>
-<span id="cb17-4"><a></a>       <span class="at">conf.level =</span> <span class="fl">0.95</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>
-    One Sample t-test
-
-data:  training_diff$diff
-t = -5.2671, df = 9, p-value = 0.0005158
-alternative hypothesis: true mean is not equal to 0
-95 percent confidence interval:
- -2.3014706 -0.9185294
-sample estimates:
-mean of x 
-    -1.61 </code></pre>
-</div>
-</div>
-</section>
-<section id="takeaway" class="slide level2">
-<h2>Takeaway</h2>
+<section id="overview-1" class="slide level2">
+<h2>Overview</h2>
 <ul>
-<li>A paired t-test is the <strong>same</strong> as a one-sample t-test on the differences.</li>
-</ul>
-</section>
-<section id="recap" class="slide level2">
-<h2>Recap</h2>
-<ul>
-<li><p>Review hypothesis test framework</p></li>
-<li><p>Independent 2-sample t-test vs.&nbsp;paired t-test</p></li>
-<li><p>Example: independent 2-sample t-test, licorice treatment</p></li>
-<li><p>Example: paired t-test, exercise plan</p></li>
+<li><p>Reviewed AE 03 from last time.</p></li>
+<li><p>Chi-square test and example</p></li>
+<li><p>Fisher exact test and example (use if sample sizes aren’t large enough)</p></li>
 </ul>
 </section>
 <section id="next-class" class="slide level2">
-<h2>Next class</h2>
+<h2>Next Class</h2>
 <ul>
-<li><p>No class on Tuesday. Enjoy your Wellness Day.</p></li>
-<li><p>Thursday’s class: ANOVA</p></li>
+<li><p>Tuesday’s class: Non-Parametric Methods</p></li>
+<li><p>Enjoy Fall Break!</p></li>
 </ul>
 
 

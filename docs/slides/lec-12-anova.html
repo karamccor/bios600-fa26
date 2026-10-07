@@ -9,7 +9,7 @@
 <link href="../site_libs/quarto-html/quarto-syntax-highlighting-ed96de9b727972fe78a7b5d16c58bf87.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
   <meta name="generator" content="quarto-1.8.27">
 
-  <title>BIOS 600 Fall 2026 – Lecture 11: Comparing Two Means</title>
+  <title>BIOS 600 Fall 2026 – Lecture 12: ANOVA</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -196,7 +196,7 @@
     <div class="slides">
 
 <section id="title-slide" class="quarto-title-block center">
-  <h1 class="title">Lecture 11: Comparing Two Means</h1>
+  <h1 class="title">Lecture 12: ANOVA</h1>
   <p class="subtitle">BIOS 600 - Fall 2026</p>
 
 <div class="quarto-title-authors">
@@ -206,353 +206,66 @@
 <section id="announcements" class="slide level2">
 <h2>Announcements</h2>
 <ul>
-<li><p>HW 4 due Tonight at 11:59pm.</p></li>
-<li><p>Lab 5 due Saturday at 11:59pm.</p></li>
-<li><p><strong>No class</strong> and <strong>No lab session</strong> on Tuesday 10/6, Wellness Day! (No lab assignment next week.)</p></li>
-<li><p>HW 5 will be released after class. HW 5 is due next <strong>Thursday 10/8 at 11:59pm</strong>.</p></li>
+<li><p>HW 5 due tonight at 11:59pm.</p></li>
+<li><p>No new HW assigned today.</p></li>
 </ul>
 </section>
 <section id="overview" class="slide level2">
 <h2>Overview</h2>
 <ul>
-<li><p>Review hypothesis test framework</p></li>
-<li><p>Independent 2-sample t-test vs.&nbsp;paired t-test</p></li>
-<li><p>Example: independent 2-sample t-test, licorice treatment</p></li>
-<li><p>Example: paired t-test, exercise plan</p></li>
+<li><p>Comparing more than three means</p></li>
+<li><p>ANOVA test and how it relates to a t-test</p></li>
+<li><p>Multiple comparisons issue and Inflated type I error rates</p></li>
+<li><p>Pulse example: ANOVA</p></li>
+<li><p>Bonferroni Correction</p></li>
 </ul>
 </section>
-<section id="reading" class="slide level2">
-<h2>Reading</h2>
+<section id="optional-reading" class="slide level2">
+<h2>Optional reading</h2>
 <ul>
-<li><p>P&amp;G: Chapter 11</p></li>
-<li><p>OI: 7.3</p></li>
+<li><p>P&amp;G: Chapter 12</p></li>
+<li><p>OI: 7.5</p></li>
 </ul>
 </section>
-<section id="review-hypothesis-testing-steps" class="slide level2">
-<h2>Review: Hypothesis testing steps</h2>
-<div class="callout callout-tip callout-titled callout-style-default">
-<div class="callout-body">
-<div class="callout-title">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<p><strong>Fill in the blanks</strong></p>
-</div>
-<div class="callout-content">
-<ol type="1">
-<li><p>State the null and alternative hypotheses. The null hypothesis states “____________________________” and the alternative challenges it.</p></li>
-<li><p>Collect relevant data and summarize it</p></li>
-<li><p>Assess how surprising it would be to see data like that if the _________________________ were really true</p></li>
-<li><p>Draw conclusions</p></li>
-</ol>
-</div>
-</div>
-</div>
-<div class="cell">
-<div class="cell-output-display">
-<div class="countdown" id="timer_2be3f7ad" data-update-every="1" tabindex="0" style="right:0;bottom:0;">
-<div class="countdown-controls"><button class="countdown-bump-down">−</button><button class="countdown-bump-up">+</button></div>
-<code class="countdown-time"><span class="countdown-digits minutes">02</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
-</div>
-</div>
-</div>
-</section>
-<section id="independent-samples" class="slide level2">
-<h2>Independent samples</h2>
-<ul>
-<li>The type of t-test we use to compare two means depends on how the samples were obtained. One approach would be to obtain <strong>two independent samples</strong> and test the equality of means <span class="math inline">\(\mu_1\)</span> and <span class="math inline">\(\mu_2\)</span></li>
-</ul>
-</section>
-<section id="independent-samples-1" class="slide level2">
-<h2>Independent samples</h2>
+<section id="puppies" class="slide level2">
+<h2>Puppies</h2>
 
-<img data-src="images/lec-11/indep1.png" width="200" class="r-stretch"></section>
-<section id="paired-or-matched-samples" class="slide level2">
-<h2>Paired or matched samples</h2>
+<img data-src="images/lec-12/puppies.jpg" width="300" class="r-stretch"></section>
+<section id="experiment-pets-and-stress-level" class="slide level2">
+<h2>Experiment: Pets and Stress Level</h2>
 <ul>
-<li><p>An alternative would be to obtain <strong>paired</strong> or <strong>matched samples</strong> and test the equality of means <span class="math inline">\(\mu_1\)</span> and <span class="math inline">\(\mu_2\)</span>.</p></li>
-<li><p>Matching could be by person (e.g., before and after measures) or could be a pair of individuals who belong together in another way (e.g., same date of birth in same hospital; married couple, twins etc.)</p></li>
+<li><p>For today’s topic, we will consider an experiment where heart rates were measured (as a proxy for stress level) for a group of <span class="math inline">\(n=90\)</span> students after 10 minutes of being under certain conditions.</p></li>
+<li><p><strong>The 3 Conditions/Groups</strong>: Of the 90 total students, 30 students spent time holding puppies, 30 students sat alone, and 30 students chatted with a friend.</p></li>
+<li><p>After 10 minutes, each student’s <strong>heart rate</strong> was measured.</p></li>
 </ul>
 </section>
-<section id="paired-or-matched-samples-1" class="slide level2">
-<h2>Paired or matched samples</h2>
+<section id="research-question" class="slide level2">
+<h2>Research Question</h2>
+<ul>
+<li><p>Is there a group (puppies, friend, alone/neither) associated with lower heart rate compared to the others?</p></li>
+<li><p>Let’s take a look at the data on the next slide.</p></li>
+</ul>
+</section>
+<section id="distribution-of-heart-rate-data" class="slide level2">
+<h2>Distribution of heart rate data</h2>
 
-<img data-src="images/lec-11/paired.png" width="200" class="r-stretch"></section>
-<section id="paired-samples" class="slide level2">
-<h2>Paired samples</h2>
-<p>Samples are often paired for a variety of reasons</p>
+<img data-src="lec-12-anova_files/figure-revealjs/unnamed-chunk-2-1.png" width="960" class="r-stretch"><p>How do we compare across three groups? Which groups are different?</p>
+</section>
+<section id="example-pets-and-stress" class="slide level2">
+<h2>Example: pets and stress</h2>
+<p>We are interested in testing</p>
+<p><span class="math display">\[H_0: \mu_P = \mu_F = \mu_N\]</span></p>
+<p>against the alternative that at least one mean is different from the others.</p>
+</section>
+<section id="a-potential-approach" class="slide level2">
+<h2>A potential approach</h2>
 <ul>
-<li><p>Measurements are taken on a single subject at two distinct points in time (e.g., baseline and follow-up)</p></li>
-<li><p>Subjects may be matched so that members of each pair are as much alike as possible with respect to important characteristics like age and sex (e.g., matched case-control study)</p></li>
+<li><p>One way to do this would be to use t-tests on all possible pairs of tests (here there are just three - how many pairs of tests would this be?). However, if we have more groups, this becomes quite complicated.</p></li>
+<li><p>For example, with 10 groups we need to do <span class="math inline">\(10\choose {2}\)</span> = 45 tests!</p></li>
 </ul>
 </section>
-<section id="a-benefit-of-pairing" class="slide level2">
-<h2>A benefit of pairing</h2>
-<ul>
-<li><p>Pairing can <strong>control for unwanted sources of variation</strong> that might otherwise influence the results of a comparison.</p></li>
-<li><p>Matching within subject (e.g., baseline and follow-up) is a powerful way to eliminate subject-specific factors.</p></li>
-</ul>
-</section>
-<section id="designing-a-study-impaired-driving" class="slide level2">
-<h2>Designing a study: impaired driving</h2>
-<p>The Department of Motor Vehicles wishes to compare impairment of drivers while texting to impairment after being sleep deprived for 24 hours.</p>
-<div class="callout callout-tip callout-style-simple">
-<div class="callout-body">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-content">
-<p>In small groups, describe an independent samples design and a matched pairs design for this question of interest.</p>
-</div>
-</div>
-</div>
-<div class="cell">
-<div class="cell-output-display">
-<div class="countdown" id="timer_bd339f72" data-update-every="1" tabindex="0" style="right:0;bottom:0;">
-<div class="countdown-controls"><button class="countdown-bump-down">−</button><button class="countdown-bump-up">+</button></div>
-<code class="countdown-time"><span class="countdown-digits minutes">03</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
-</div>
-</div>
-</div>
-</section>
-<section id="case-study-licorice-and-surgery" class="slide level2">
-<h2>Case study: licorice and surgery</h2>
-<ul>
-<li><p>Reutzler et al.&nbsp;(2013) performed an experiment among patients having surgery who required intubation.</p></li>
-<li><p>Prior to anesthesia, patients were randomly assigned to gargle either a licorice-based solution or sugar water (as placebo).</p></li>
-<li><p>Sore throat was evaluated 30 minutes, 90 minutes, and 4 hours after conclusion of the surgery on a pain scale from 0 to 10 (0 = no pain; 10 = worst).</p></li>
-<li><p>Let’s evaluate whether <strong>gargling licorice before surgery</strong> led to <strong>different mean pain scores</strong> when swallowing, at 30 minutes after arrival in the PACU (post-anesthesia care unit).</p></li>
-</ul>
-</section>
-<section id="case-study-hypothesis-testing-step-1" class="slide level2">
-<h2>Case study: hypothesis testing step 1</h2>
-<ul>
-<li>The null hypothesis is that patients receiving licorice gargle (<code>treat</code> = 1) and sugar solution (<code>treat</code> = 0) placebo have the same mean pain scores relating to swallowing 30 minutes after arrival in the PACU, <code>pacu30min_swallowPain</code>, (treatment is unrelated to mean pain), while the alternative is that they do not.</li>
-</ul>
-<div class="callout callout-tip callout-style-simple">
-<div class="callout-body">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-content">
-<p>What are the null and alternative hypotheses written out in symbols?</p>
-</div>
-</div>
-</div>
-</section>
-<section id="null-and-alternatives" class="slide level2">
-<h2>Null and alternatives</h2>
-<p><span class="math inline">\(H_0: \mu_{\textrm{licorice}} =\mu_{\textrm{placebo}}\)</span></p>
-<p><span class="math inline">\(H_A: \mu_{\textrm{licorice}}  \neq \mu_{\textrm{placebo}}\)</span></p>
-<p>where <span class="math inline">\(\mu\)</span> is the mean pain score either from the licorice or the placebo group.</p>
-</section>
-<section id="latex-note" class="slide level2">
-<h2>Latex note</h2>
-<p>To get the nice non-italicized text subscript on the previous slide, use this:</p>
-<p><code>$H_0: \mu_{\textrm{licorice}} =\mu_{\textrm{placebo}}$</code></p>
-</section>
-<section id="setup" class="slide level2">
-<h2>Setup</h2>
-<ul>
-<li>First, we can load tidyverse and read in our data.</li>
-</ul>
-<div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a></a><span class="fu">library</span>(tidyverse)</span>
-<span id="cb1-2"><a></a>licorice <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">"data/licorice.csv"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</div>
-<p>Variables of interest:</p>
-<ul>
-<li><p><code>treat</code>: Treatment given (0 = Sugar placebo; 1 = Licorice solution)</p></li>
-<li><p><code>pacu30min_swallowPain</code>: Swallow pain score 30 minutes after surgery (11-point scale: 0 = No pain; 10 = worst pain)</p></li>
-</ul>
-</section>
-<section id="looking-at-some-data" class="slide level2">
-<h2>Looking at some data</h2>
-<div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a></a>licorice <span class="sc">|&gt;</span></span>
-<span id="cb2-2"><a></a>  <span class="fu">select</span>(pacu30min_swallowPain, treat) <span class="sc">|&gt;</span></span>
-<span id="cb2-3"><a></a>  <span class="fu">slice</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">5</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>  pacu30min_swallowPain treat
-1                     0     1
-2                     0     1
-3                     0     1
-4                     0     1
-5                     0     1</code></pre>
-</div>
-</div>
-<div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a></a>licorice <span class="sc">|&gt;</span></span>
-<span id="cb4-2"><a></a>  <span class="fu">count</span>(treat)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>  treat   n
-1     0 116
-2     1 117</code></pre>
-</div>
-</div>
-</section>
-<section id="step-2-continued" class="slide level2">
-<h2>Step 2 continued</h2>
-<div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a></a>licorice <span class="sc">|&gt;</span></span>
-<span id="cb6-2"><a></a>  <span class="fu">group_by</span>(treat) <span class="sc">|&gt;</span> </span>
-<span id="cb6-3"><a></a>  <span class="fu">summarize</span>(<span class="at">mean =</span> <span class="fu">mean</span>(pacu30min_swallowPain), </span>
-<span id="cb6-4"><a></a>            <span class="at">sd =</span> <span class="fu">sd</span>(pacu30min_swallowPain))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-stdout">
-<pre><code># A tibble: 2 × 3
-  treat  mean    sd
-  &lt;int&gt; &lt;dbl&gt; &lt;dbl&gt;
-1     0 1.38  2.29 
-2     1 0.308 0.825</code></pre>
-</div>
-</div>
-<p>Analyzing the data, we obtained</p>
-<ul>
-<li><p><span class="math inline">\(\bar{x}_L\)</span>=0.308</p></li>
-<li><p><span class="math inline">\(\bar{x}_S\)</span>=1.38</p></li>
-<li><p><span class="math inline">\(s_L\)</span>=0.825</p></li>
-<li><p><span class="math inline">\(s_S\)</span>=2.29</p></li>
-</ul>
-</section>
-<section id="visualizing-the-means-code" class="slide level2">
-<h2>Visualizing the means: code</h2>
-<div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb8"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a></a><span class="fu">ggplot</span>(licorice, <span class="fu">aes</span>(<span class="at">x =</span> <span class="fu">as.factor</span>(treat), </span>
-<span id="cb8-2"><a></a>                     <span class="at">y =</span> pacu30min_swallowPain)) <span class="sc">+</span></span>
-<span id="cb8-3"><a></a>  <span class="fu">geom_boxplot</span>() <span class="sc">+</span></span>
-<span id="cb8-4"><a></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">"Treat"</span>, <span class="at">y =</span> <span class="st">"Swallow Pain 30 min Post"</span>) <span class="sc">+</span></span>
-<span id="cb8-5"><a></a>  <span class="fu">theme_minimal</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</div>
-</section>
-<section id="visualizing-the-means-plot" class="slide level2">
-<h2>Visualizing the means: plot</h2>
-
-<img data-src="lec-11-compare-means_files/figure-revealjs/unnamed-chunk-9-1.png" width="960" class="r-stretch"></section>
-<section id="two-sample-t-test-independent-samples" class="slide level2">
-<h2>Two-sample t-test, independent samples</h2>
-<p>The two-sample t-test for independent samples is given by</p>
-<div class="poll">
-<p><span class="math display">\[t = \frac{(\bar{x}_1 - \bar{x}_2) - (\mu_1 - \mu_2)}{\sqrt{\frac{s_1^2}{n_1} + \frac{s_2^2}{n_2}}}\]</span></p>
-</div>
-<p>The degrees of freedom of the <span class="math inline">\(t\)</span> statistic depend on whether or not <span class="math inline">\(\sigma_1^2 = \sigma_2^2\)</span>.</p>
-</section>
-<section id="equal-or-unequal-variances" class="slide level2">
-<h2>Equal or unequal variances?</h2>
-<ul>
-<li><p>The choice of <span class="math inline">\(df\)</span> depends on whether the independent samples have the same or different variances</p></li>
-<li><p>If the variances are equal, then we can use a pooled estimate of <span class="math inline">\(s^2\)</span>, and the degrees of freedom are given by <span class="math inline">\((n_1−1)+(n_2−1)=n_1+n_2−2\)</span>.</p></li>
-</ul>
-</section>
-<section id="equal-or-unequal-variances-1" class="slide level2">
-<h2>Equal or unequal variances?</h2>
-<ul>
-<li><p>If the variances are unequal, the degrees of freedom are difficult to derive, and something called a <strong>Satterthwaite approximation</strong> is often used (use software).</p></li>
-<li><p>Unequal variances is the default in <code>t.test()</code> (and it should be the default choice), as the t-test assuming equal variances can be quite unreliable if the variances differ, especially when the group sizes differ as well.</p></li>
-</ul>
-</section>
-<section id="case-study-hypothesis-testing-step-3" class="slide level2">
-<h2>Case study: hypothesis testing step 3</h2>
-<div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a></a><span class="fu">t.test</span>(pacu30min_throatPain <span class="sc">~</span> treat, </span>
-<span id="cb9-2"><a></a>       <span class="at">data =</span> licorice,</span>
-<span id="cb9-3"><a></a>       <span class="at">mu =</span> <span class="dv">0</span>,</span>
-<span id="cb9-4"><a></a>       <span class="at">alternative =</span> <span class="st">"two.sided"</span>,</span>
-<span id="cb9-5"><a></a>       <span class="at">var.equal =</span> <span class="cn">FALSE</span>,</span>
-<span id="cb9-6"><a></a>       <span class="at">conf.level =</span> <span class="fl">0.95</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>
-    Welch Two Sample t-test
-
-data:  pacu30min_throatPain by treat
-t = 4.8035, df = 157.3, p-value = 3.608e-06
-alternative hypothesis: true difference in means between group 0 and group 1 is not equal to 0
-95 percent confidence interval:
- 0.4429931 1.0617225
-sample estimates:
-mean in group 0 mean in group 1 
-      1.0258621       0.2735043 </code></pre>
-</div>
-</div>
-</section>
-<section id="case-study-hypothesis-testing-step-3-1" class="slide level2">
-<h2>Case study: hypothesis testing step 3</h2>
-<p>Carrying out the two sample t-test for independent samples with unequal variances using software on the previous slide, we get <span class="math inline">\(t=4.80\)</span>, <span class="math inline">\(df\)</span>≈157.3, with a corresponding p-value &lt; 0.001.</p>
-</section>
-<section id="case-study-hypothesis-testing-step-4" class="slide level2 smaller">
-<h2>Case study: hypothesis testing step 4</h2>
-<ul>
-<li><strong>Conclusion</strong>: Based on our observed data, we conclude that there is evidence of a potential difference in mean pain score between the two groups. In particular, we have evidence that those receiving the licorice gargle before their surgery reported a lower mean pain score compared to placebo patients.</li>
-</ul>
-
-<img data-src="images/lec-11/licorice.jpg" width="400" class="r-stretch"></section>
-<section id="case-study-athletic-training" class="slide level2">
-<h2>Case study: athletic training</h2>
-<ul>
-<li>A school athletics department wants to test the effectiveness of the new type of training proposed by comparing the average times of 10 runners in the 100 meters in seconds before and after the new training is implemented.</li>
-</ul>
-<div class="callout callout-tip callout-style-simple">
-<div class="callout-body">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-content">
-<ul>
-<li><p>What are <span class="math inline">\(H_0\)</span> and <span class="math inline">\(H_1\)</span>?</p></li>
-<li><p>Which test should we use?</p></li>
-</ul>
-</div>
-</div>
-</div>
-</section>
-<section id="in-r" class="slide level2">
-<h2>In R</h2>
-<ul>
-<li>Our dataset in R is called <code>training</code>:</li>
-</ul>
-<div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb11"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a></a>training</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>   subject before after
-1        1   12.9  12.0
-2        2   13.5  12.2
-3        3   12.8  11.2
-4        4   15.6  13.0
-5        5   17.2  15.0
-6        6   19.2  15.8
-7        7   12.6  12.2
-8        8   15.3  13.4
-9        9   14.4  12.9
-10      10   11.3  11.0</code></pre>
-</div>
-</div>
-</section>
-<section id="paired-t-test" class="slide level2">
-<h2>Paired t-test</h2>
-<div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb13"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a></a><span class="fu">t.test</span>(training<span class="sc">$</span>before, </span>
-<span id="cb13-2"><a></a>       training<span class="sc">$</span>after, </span>
-<span id="cb13-3"><a></a>       <span class="at">mu =</span> <span class="dv">0</span>,</span>
-<span id="cb13-4"><a></a>       <span class="at">paired =</span> T,</span>
-<span id="cb13-5"><a></a>       <span class="at">alternative =</span> <span class="st">"two.sided"</span>,</span>
-<span id="cb13-6"><a></a>       <span class="at">var.equal =</span> <span class="cn">FALSE</span>,</span>
-<span id="cb13-7"><a></a>       <span class="at">conf.level =</span> <span class="fl">0.95</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>
-    Paired t-test
-
-data:  training$before and training$after
-t = 5.2671, df = 9, p-value = 0.0005158
-alternative hypothesis: true mean difference is not equal to 0
-95 percent confidence interval:
- 0.9185294 2.3014706
-sample estimates:
-mean difference 
-           1.61 </code></pre>
-</div>
-</div>
-</section>
-<section id="conclusion" class="slide level2">
-<h2>Conclusion</h2>
+<section id="review-error-rates" class="slide level2">
+<h2>Review: Error rates</h2>
 <div class="callout callout-tip callout-titled callout-style-default">
 <div class="callout-body">
 <div class="callout-title">
@@ -562,78 +275,313 @@ mean difference
 <p><strong>Tip</strong></p>
 </div>
 <div class="callout-content">
-<p>What is your conclusion?</p>
+<p>In groups, fill in the blanks:</p>
+<ul>
+<li>Suppose we test the null hypothesis <span class="math inline">\(H_0\)</span>:<span class="math inline">\(\mu = \mu_0\)</span>. We could potentially make two types of errors:</li>
+</ul>
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th>Truth</th>
+<th><span class="math inline">\(\mu = \mu_0\)</span></th>
+<th><span class="math inline">\(\mu \neq \mu_0\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Fail to reject <span class="math inline">\(H_0\)</span></td>
+<td>correct decision</td>
+<td>____________</td>
+</tr>
+<tr class="even">
+<td>Reject <span class="math inline">\(H_0\)</span></td>
+<td>___________</td>
+<td>correct decision</td>
+</tr>
+</tbody>
+</table>
+<p>How would you explain the following in words?</p>
+<ul>
+<li><strong>Type I Error</strong>: ____________</li>
+</ul>
+<ul>
+<li><strong>Type II Error</strong>: ____________</li>
+</ul>
 </div>
 </div>
 </div>
 </section>
-<section id="but-wait" class="slide level2">
-<h2>But wait…</h2>
-<div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb15"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a></a>training_diff <span class="ot">&lt;-</span> training <span class="sc">|&gt;</span> </span>
-<span id="cb15-2"><a></a>  <span class="fu">mutate</span>(<span class="at">diff =</span> after <span class="sc">-</span> before)</span>
-<span id="cb15-3"><a></a>training_diff</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>   subject before after diff
-1        1   12.9  12.0 -0.9
-2        2   13.5  12.2 -1.3
-3        3   12.8  11.2 -1.6
-4        4   15.6  13.0 -2.6
-5        5   17.2  15.0 -2.2
-6        6   19.2  15.8 -3.4
-7        7   12.6  12.2 -0.4
-8        8   15.3  13.4 -1.9
-9        9   14.4  12.9 -1.5
-10      10   11.3  11.0 -0.3</code></pre>
-</div>
-</div>
+<section id="multiple-comparisons" class="slide level2">
+<h2>Multiple comparisons</h2>
+<ul>
+<li><p>Now that we’ve reviewed Type I and Type II errors, we need to discuss <strong>multiple comparisons</strong> - an important concept in statistics.</p></li>
+<li><p>Back to our pet example. What if we had 10 groups?</p></li>
+<li><p>In addition to being time-consuming, carrying out multiple tests can lead to <strong>inflated Type I error rates</strong> which puts into question the validity of a given study if these <strong>multiple comparisons</strong> are not accounted for.</p></li>
+</ul>
 </section>
-<section id="but-wait.." class="slide level2">
-<h2>But wait..</h2>
-<div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb17"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a></a><span class="fu">t.test</span>(training_diff<span class="sc">$</span>diff, </span>
-<span id="cb17-2"><a></a>       <span class="at">mu =</span> <span class="dv">0</span>,</span>
-<span id="cb17-3"><a></a>       <span class="at">alternative =</span> <span class="st">"two.sided"</span>,</span>
-<span id="cb17-4"><a></a>       <span class="at">conf.level =</span> <span class="fl">0.95</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>
-    One Sample t-test
+<section id="multiple-comparisons-in-action-overall-test" class="slide level2">
+<h2>Multiple comparisons in action: overall test</h2>
 
-data:  training_diff$diff
-t = -5.2671, df = 9, p-value = 0.0005158
-alternative hypothesis: true mean is not equal to 0
-95 percent confidence interval:
- -2.3014706 -0.9185294
-sample estimates:
-mean of x 
-    -1.61 </code></pre>
-</div>
-</div>
+<img data-src="images/lec-12/multiple.png" width="400" class="r-stretch"></section>
+<section id="extra-testswhoa" class="slide level2">
+<h2>Extra tests…whoa!</h2>
+
+<img data-src="images/lec-12/multiple2.png" width="600" class="r-stretch"></section>
+<section id="green-jelly-beans" class="slide level2">
+<h2>Green jelly beans!</h2>
+
+<img data-src="images/lec-12/green.png" width="300" class="r-stretch"></section>
+<section id="so-what-went-wrong" class="slide level2">
+<h2>So what went wrong?</h2>
+
+<img data-src="images/lec-12/stop.jpg" width="300" class="r-stretch"></section>
+<section id="multiple-comparisons-1" class="slide level2">
+<h2>Multiple comparisons</h2>
+<p>Consider our pets / stress example, where we had three pairwise comparisons.</p>
+<ul>
+<li>Suppose all means are truly equal and we conduct all three pairwise tests</li>
+</ul>
+<ol type="1">
+<li><p><span class="math inline">\(H_0\)</span>: <span class="math inline">\(\mu_P = \mu_F\)</span> vs.&nbsp;<span class="math inline">\(H_A\)</span>: <span class="math inline">\(\mu_P \neq \mu_F\)</span></p></li>
+<li><p><span class="math inline">\(H_0\)</span>: <span class="math inline">\(\mu_P = \mu_N\)</span> vs.&nbsp;<span class="math inline">\(H_A\)</span>: <span class="math inline">\(\mu_P \neq \mu_N\)</span></p></li>
+<li><p><span class="math inline">\(H_0\)</span>: <span class="math inline">\(\mu_N = \mu_F\)</span> vs.&nbsp;<span class="math inline">\(H_A\)</span>: <span class="math inline">\(\mu_N \neq \mu_F\)</span></p></li>
+</ol>
+</section>
+<section id="multiple-comparisons-2" class="slide level2">
+<h2>Multiple comparisons</h2>
+<ul>
+<li><p>Suppose also the tests are independent and done at a 0.05 significance level</p></li>
+<li><p>Then the probability we fail to reject <strong>all three tests if the null hypothesis were true</strong> (i.e.&nbsp;the <strong>correct decision</strong>), assuming the tests are independent, is:</p></li>
+</ul>
+<p>$P( | H_0 )$</p>
+<p>$P( | H_0 ) $</p>
+<p><span class="math inline">\(P(\text{fail to reject Test 3} | H_0 \text{ true})\)</span></p>
+</section>
+<section id="multiple-comparisons-continued" class="slide level2">
+<h2>Multiple comparisons (continued)</h2>
+<ul>
+<li><p>Assuming the tests are independent, this probability is <span class="math inline">\((1−0.05)^3=0.95^3=0.857\)</span> , and so the probability of rejecting at least one of the three null hypotheses, called the <strong>family-wise error rate</strong>, is <span class="math inline">\(1−0.857=0.143&gt;0.05\)</span></p></li>
+<li><p>If we had 10 groups instead, we would need 45 pairwise tests. With 45 tests, the probability of rejecting at least 1 of them (incorrectly!) is over 90%!</p></li>
+</ul>
+</section>
+<section id="intuitive-takeaway-why-multiple-comparisons-matter" class="slide level2">
+<h2>Intuitive Takeaway: Why Multiple Comparisons Matter</h2>
+<ul>
+<li>Each hypothesis test carries a small chance (e.g., 5%) of being a <strong>false positive</strong>.
+<ul>
+<li>Like flipping a coin: occasionally, you’ll get “heads” just by chance.</li>
+</ul></li>
+</ul>
+</section>
+<section id="intuition-continued" class="slide level2">
+<h2>Intuition (continued)</h2>
+<ul>
+<li>When we run <strong>many tests</strong>, those small chances add up.
+<ul>
+<li>With only 3 tests, there’s already a 14% chance of at least one false alarm. With 45 tests, that chance exceeds 90%!</li>
+</ul></li>
+<li>In practice: Even if nothing real is going on, we’re <strong>almost guaranteed</strong> to find something “statistically significant.” This can lead to <strong>misleading conclusions</strong> — especially in large studies testing many variables.</li>
+</ul>
 </section>
 <section id="takeaway" class="slide level2">
 <h2>Takeaway</h2>
 <ul>
-<li>A paired t-test is the <strong>same</strong> as a one-sample t-test on the differences.</li>
+<li>The more tests we do, the more we must <strong>adjust for multiple comparisons</strong> (e.g., Bonferroni correction, FDR (false discovery) control) to avoid fooling ourselves.</li>
 </ul>
+</section>
+<section id="pause-and-reflect" class="slide level2">
+<h2>Pause and reflect</h2>
+<p>Get in small groups. Discuss: What are “multiple comparisions” and why are they an issue?</p>
+<div class="cell">
+<div class="cell-output-display">
+<div class="countdown" id="timer_e41209e3" data-update-every="1" tabindex="0" style="right:0;bottom:0;">
+<div class="countdown-controls"><button class="countdown-bump-down">−</button><button class="countdown-bump-up">+</button></div>
+<code class="countdown-time"><span class="countdown-digits minutes">02</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
+</div>
+</div>
+</div>
+</section>
+<section id="multiple-comparisons-3" class="slide level2">
+<h2>Multiple comparisons</h2>
+<ul>
+<li><p><strong>ANOVA</strong> extends the t-test and is one way to control the overall Type I error rate at a fixed level <span class="math inline">\(\alpha\)</span>, if we only test pairwise differences when the overall ANOVA test is rejected</p></li>
+<li><p>ANOVA stands for <strong>analysis of variance</strong>. We use ANOVA when we want to compare more than two groups.</p></li>
+</ul>
+</section>
+<section id="anova-null-hypothesis" class="slide level2">
+<h2>ANOVA null hypothesis</h2>
+<p>In ANOVA, we typically follow this testing procedure:</p>
+<ol type="1">
+<li><p>First, we conduct an <strong>overall</strong> test of the null hypothesis that the means of all of the groups are equal.</p></li>
+<li><p>If this is rejected, then we <strong>step down</strong> to see which means are different from each other. A <strong>multiple comparisons</strong> correction is sometimes used for these pairwise comparisons of means.</p></li>
+<li><p>If we fail to reject the null hypothesis, then no further testing should be done.</p></li>
+</ol>
+</section>
+<section id="anova-alternative-hypothesis" class="slide level2">
+<h2>ANOVA alternative hypothesis</h2>
+<p>For ANOVA with three groups, our null hypothesis is <span class="math inline">\(H_0: \mu_P = \mu_F = \mu_N\)</span>. What could happen under the alternative?</p>
+<ul>
+<li><p><span class="math inline">\(μ_P≠μ_F≠μ_N\)</span></p></li>
+<li><p><span class="math inline">\(μ_P=μ_F\)</span>, but <span class="math inline">\(μ_N\)</span> is different</p></li>
+<li><p><span class="math inline">\(μ_P=μ_N\)</span>, but <span class="math inline">\(μ_F\)</span> is different</p></li>
+<li><p><span class="math inline">\(μ_F=μ_N\)</span>, but <span class="math inline">\(μ_P\)</span> is different</p></li>
+</ul>
+<p>The alternative hypothesis for ANOVA is that at least one of the means is different from the others.</p>
+</section>
+<section id="assumptions-of-anova" class="slide level2">
+<h2>Assumptions of ANOVA</h2>
+<ol type="1">
+<li><p>Outcomes within groups are normally distributed</p></li>
+<li><p>Homoscedastic variance (the within-group variance is the same for all groups)</p></li>
+<li><p>Samples are independent</p></li>
+</ol>
+<p>If these assumptions are violated, then results from ANOVA may not be valid. We will discuss some alternatives later in the course.</p>
+</section>
+<section id="validity-of-anova-for-pet-data" class="slide level2">
+<h2>Validity of ANOVA for pet data</h2>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a></a>pulse_data <span class="sc">|&gt;</span></span>
+<span id="cb1-2"><a></a>  <span class="fu">ggplot</span>(<span class="at">mapping =</span> <span class="fu">aes</span>(<span class="at">x =</span> pulse)) <span class="sc">+</span> </span>
+<span id="cb1-3"><a></a>  <span class="fu">geom_histogram</span>(<span class="at">bins=</span><span class="dv">10</span>) <span class="sc">+</span></span>
+<span id="cb1-4"><a></a>  <span class="fu">facet_wrap</span>(<span class="sc">~</span>group)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+</section>
+<section id="validity-of-anova-for-pet-data-1" class="slide level2">
+<h2>Validity of ANOVA for pet data</h2>
+
+<img data-src="lec-12-anova_files/figure-revealjs/unnamed-chunk-5-1.png" width="960" class="r-stretch"><p>Variances appear to be similar, but normality may be slightly questionable. For now, let’s proceed despite this.</p>
+</section>
+<section id="why-analyze-variance-when-we-want-means" class="slide level2">
+<h2>Why analyze variance when we want means?</h2>
+<ul>
+<li><p>Remember, ANOVA stands for analysis of variance.</p></li>
+<li><p>What does variance have to do with our null hypothesis, which is about equality of means (say, <span class="math inline">\(H_0:μ_1=μ_2=⋯=μ_K\)</span>)?</p></li>
+<li><p>To explain the variance part, we first need to introduce another part of ANOVA: ANOVA uses something called an <strong>F-test</strong> to determine if the means of three or more groups are significantly different.</p></li>
+</ul>
+</section>
+<section id="f-test" class="slide level2">
+<h2>F-test</h2>
+<p><strong>F-test</strong>: If the <strong>group-specific means</strong> vary around the <strong>overall grand mean</strong> more than the individual observations vary around their group-specific sample means, then we have evidence that the corresponding population means are in fact different.</p>
+</section>
+<section id="example" class="slide level2">
+<h2>Example</h2>
+
+<img data-src="lec-12-anova_files/figure-revealjs/unnamed-chunk-6-1.png" width="960" class="r-stretch"></section>
+<section id="example-1" class="slide level2">
+<h2>Example</h2>
+
+<img data-src="lec-12-anova_files/figure-revealjs/unnamed-chunk-7-1.png" width="960" class="r-stretch"></section>
+<section id="f-test-1" class="slide level2">
+<h2>F-test</h2>
+<p>How do we formally compare these variances? Consider the F statistic given by</p>
+<p><span class="math display">\[F = \frac{s^2_{between}}{s^2_{within}}\]</span></p>
+<p>which if <span class="math inline">\(H_0\)</span> is true, has an F distribution with K−1 <strong>numerator</strong> degrees of freedom and <span class="math inline">\(n−K\)</span> <strong>denominator</strong> degrees of freedom, where K is the number of groups and <span class="math inline">\(n\)</span> is the total number of observations.</p>
+</section>
+<section id="f-test-2" class="slide level2">
+<h2>F-test</h2>
+<ul>
+<li><p>The F-test for ANOVA is inherently one-tailed, rejecting <span class="math inline">\(H_0\)</span> only if F is considerably larger than one.</p></li>
+<li><p>Importantly, this does not mean we have a one-sided alternative; we just look at one tail of the F distribution to get the p-value.</p></li>
+<li><p>If there are only two groups, then the F-test gives the same result as the independent-samples t-test.</p></li>
+</ul>
+</section>
+<section id="output" class="slide level2">
+<h2>Output</h2>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a></a><span class="co"># anova in R:</span></span>
+<span id="cb2-2"><a></a><span class="fu">summary</span>(<span class="fu">aov</span>(pulse <span class="sc">~</span> group, <span class="at">data =</span> pulse_data))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>            Df Sum Sq Mean Sq F value   Pr(&gt;F)    
+group        2  877.7   438.8   15.77 1.44e-06 ***
+Residuals   87 2421.7    27.8                     
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1</code></pre>
+</div>
+</div>
+<div class="callout callout-tip callout-style-simple">
+<div class="callout-body">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-content">
+<p>Which rows correspond to the between-group and within-group variances here, respectively?</p>
+</div>
+</div>
+</div>
+</section>
+<section id="f-test-for-pet-data" class="slide level2">
+<h2>F-test for pet data</h2>
+<ul>
+<li><p>Note that <span class="math inline">\(F = s^2_B / s^2_W = \frac{(877.7/2)}{(2421.7/87)} = 15.77\)</span>, with ndf = <span class="math inline">\(3-1 = 2\)</span> and ddf <span class="math inline">\(90-3=87\)</span>.</p></li>
+<li><p>This corresponds to a p-value &lt;.0001.</p></li>
+<li><p><strong>Conclusion</strong>: At <span class="math inline">\(\alpha = 0.05\)</span>, we reject the null hypothesis. There is sufficient evidence that at least one of the three groups comes from a population with a different mean than the others.</p></li>
+<li><p>Which groups might be different?</p></li>
+</ul>
+</section>
+<section>
+<section id="bonferroni-correction" class="title-slide slide level1 center">
+<h1>Bonferroni correction</h1>
+
+</section>
+<section id="bonferroni-correction-1" class="slide level2">
+<h2>Bonferroni correction</h2>
+<ul>
+<li><p>As we showed earlier, conducting multiple tests on a data set increases the <strong>family-wise error rate</strong>.</p></li>
+<li><p>One very conservative way to ensure this is not the case is to simply divide α by the number of tests to be done and to use that as the significance level.</p></li>
+<li><p>This procedure is called the <strong>Bonferroni correction</strong>.</p></li>
+</ul>
+</section>
+<section id="bonferroni-correction-2" class="slide level2">
+<h2>Bonferroni correction</h2>
+<ul>
+<li><p>For example: for two tests, to preserve an overall 0.05 type I error rate, the Bonferroni correction would use <span class="math inline">\(\alpha/2=0.025\)</span> as the significance level for each individual test instead of 0.05.</p></li>
+<li><p>Bonferroni is a conservative correction, making it harder to reject the null hypothesis, but it is a safe bet in controlling the Type I error rate.</p></li>
+</ul>
+</section>
+<section id="pets-and-stress-group-differences" class="slide level2">
+<h2>Pets and stress: group differences</h2>
+<ul>
+<li><p>We can compare the groups using a Bonferroni correction (here we have three tests, so the significance level for each test is <span class="math inline">\(\alpha/3\)</span>).</p></li>
+<li><p>The raw (uncorrected) p-values for the t-test comparing friend vs.&nbsp;pet was <span class="math inline">\(&lt;0.0001\)</span>; for friend vs.&nbsp;neither was 0.021, and for pet vs.&nbsp;neither was 0.009.</p></li>
+</ul>
+<div class="callout callout-tip callout-style-simple">
+<div class="callout-body">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-content">
+<p>In your small groups: What might we conclude?</p>
+</div>
+</div>
+</div>
+<div class="cell">
+<div class="cell-output-display">
+<div class="countdown" id="timer_95ba953d" data-update-every="1" tabindex="0" style="right:0;bottom:0;">
+<div class="countdown-controls"><button class="countdown-bump-down">−</button><button class="countdown-bump-up">+</button></div>
+<code class="countdown-time"><span class="countdown-digits minutes">02</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
+</div>
+</div>
+</div>
 </section>
 <section id="recap" class="slide level2">
 <h2>Recap</h2>
 <ul>
-<li><p>Review hypothesis test framework</p></li>
-<li><p>Independent 2-sample t-test vs.&nbsp;paired t-test</p></li>
-<li><p>Example: independent 2-sample t-test, licorice treatment</p></li>
-<li><p>Example: paired t-test, exercise plan</p></li>
+<li><p>Comparing more than three means</p></li>
+<li><p>ANOVA test and how it relates to a t-test</p></li>
+<li><p>Multiple comparisons issue and Inflated type I error rates</p></li>
+<li><p>Pulse example: ANOVA</p></li>
+<li><p>Bonferroni Correction</p></li>
 </ul>
 </section>
-<section id="next-class" class="slide level2">
-<h2>Next class</h2>
+<section id="next-up" class="slide level2">
+<h2>Next up</h2>
 <ul>
-<li><p>No class on Tuesday. Enjoy your Wellness Day.</p></li>
-<li><p>Thursday’s class: ANOVA</p></li>
+<li><p>Proportions and categorical data</p></li>
+<li><p>Guest lecturer: Cassi Chen, PhD student</p></li>
 </ul>
 
 
-</section>
+</section></section>
     </div>
   <div class="quarto-auto-generated-content" style="display: none;">
 <p><img src="images/logo600-beamer.png" class="slide-logo"></p>

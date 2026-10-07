@@ -1113,11 +1113,214 @@
     "text": "Recap\n\nProbabilities come up all the time!\nBayesian vs. frequentist approaches\nProbability spaces, sample spaces, events\nSet operations\nHow do probabilities work? (Set operations, DeMorgan’s Laws)"
   },
   {
+    "objectID": "slides/lec-13-proportions.html#announcements",
+    "href": "slides/lec-13-proportions.html#announcements",
+    "title": "Lecture 13: Proportions and Categorical data",
+    "section": "Announcements",
+    "text": "Announcements\n\nLab 5 session today. Watch the video ahead of time and attend at 3:30 if you need help.\nLab 5 due Tuesday 10/21 at 11:59pm (due to fall break)\nNo HW until next week - enjoy your fall break!"
+  },
+  {
+    "objectID": "slides/lec-13-proportions.html#overview",
+    "href": "slides/lec-13-proportions.html#overview",
+    "title": "Lecture 13: Proportions and Categorical data",
+    "section": "Overview",
+    "text": "Overview\n\nReview AE 03 from last time.\nChi-square test and example\nFisher exact test and example"
+  },
+  {
+    "objectID": "slides/lec-13-proportions.html#very-optional-reading",
+    "href": "slides/lec-13-proportions.html#very-optional-reading",
+    "title": "Lecture 13: Proportions and Categorical data",
+    "section": "Very optional reading",
+    "text": "Very optional reading\n\nP&G Chapters 14, 15\nOI: Sections 5.2, 5.3, 6.1, 6.2, 6.4"
+  },
+  {
+    "objectID": "slides/lec-13-proportions.html#application-exercise",
+    "href": "slides/lec-13-proportions.html#application-exercise",
+    "title": "Lecture 13: Proportions and Categorical data",
+    "section": "Application Exercise",
+    "text": "Application Exercise\n\n\n\n\n\n\nAE 03\n\n\nIn small groups, take a few minutes to review AE 03.\n\nIf you’re already done, take turns presenting the exercises to a partner (explain the code, explain how you got your conclusion.)\nIf you still need some time to work on it, take this time to do so."
+  },
+  {
+    "objectID": "slides/lec-13-proportions.html#pneumococcal-disease",
+    "href": "slides/lec-13-proportions.html#pneumococcal-disease",
+    "title": "Lecture 13: Proportions and Categorical data",
+    "section": "Pneumococcal disease",
+    "text": "Pneumococcal disease\nThe World Health Organization estimates that in developing countries 814,000 children under the age of five die annually from invasive pneumococcal disease (IPD), with an estimated 1.6 million deaths affecting all ages globally.\nSeveral recent studies have identified associations between pneumococcal serotypes (species variations) and patient outcomes from IPD. We consider data from a study of pneumococcal serotypes and mortality (Inverarity et al. (2011))."
+  },
+  {
+    "objectID": "slides/lec-13-proportions.html#pneumococcal-disease-1",
+    "href": "slides/lec-13-proportions.html#pneumococcal-disease-1",
+    "title": "Lecture 13: Proportions and Categorical data",
+    "section": "Pneumococcal disease",
+    "text": "Pneumococcal disease\n\n\n\nSerotype\nAlive\nDead\nTotal\n\n\n\n\nSerotype 10\n37\n7\n44\n\n\nSerotype 31\n24\n10\n34\n\n\nTotal\n61\n17\n78\n\n\n\nIs there an association between serotype and mortality?"
+  },
+  {
+    "objectID": "slides/lec-13-proportions.html#chi-square-tests",
+    "href": "slides/lec-13-proportions.html#chi-square-tests",
+    "title": "Lecture 13: Proportions and Categorical data",
+    "section": "Chi-square tests",
+    "text": "Chi-square tests\n\\(H_0\\): There is no association between serotype and mortality\n\\(H_1\\): There is an association between serotype and mortality\nUnder \\(H_0\\), we have independence between serotype and mortality, implying that joint probabilities should be equal to products of marginal distributions:\n\n\n\nSerotype\nAlive\nDead\nTotal\n\n\n\n\nSerotype 10\n?\n?\n44\n\n\nSerotype 31\n?\n?\n34\n\n\nTotal\n61\n17\n78\n\n\n\nWhat counts might we expect under \\(H_0\\)?"
+  },
+  {
+    "objectID": "slides/lec-13-proportions.html#intuition-joint-and-marginal-probabilities",
+    "href": "slides/lec-13-proportions.html#intuition-joint-and-marginal-probabilities",
+    "title": "Lecture 13: Proportions and Categorical data",
+    "section": "Intuition: Joint and Marginal Probabilities",
+    "text": "Intuition: Joint and Marginal Probabilities\n\nSuppose we look at two variables: Serotype and Mortality (Alive or Dead).\nThe joint probability describes the probability of being in both categories (e.g., “Serotype 10 and Alive”).\nThe marginal probabilities describe totals across one variable:\n\nP(Serotype 10) = proportion of all patients with Serotype 10\n\nP(Alive) = proportion of all patients who survived\n\n\n\n\nMarginal totals\n\n\n\nSerotype\nTotal\n\n\n\n\n10\n44\n\n\n31\n34\n\n\nTotal\n78\n\n\n\n\nMarginal totals\n\n\n\nOutcome\nTotal\n\n\n\n\nAlive\n61\n\n\nDead\n17\n\n\nTotal\n78"
+  },
+  {
+    "objectID": "slides/lec-13-proportions.html#what-would-happen-if-these-two-variables-were-independent",
+    "href": "slides/lec-13-proportions.html#what-would-happen-if-these-two-variables-were-independent",
+    "title": "Lecture 13: Proportions and Categorical data",
+    "section": "What would happen if these two variables were independent?",
+    "text": "What would happen if these two variables were independent?\n\nUnder the null hypothesis of independence, the chance of being both “Serotype 10” and “Alive” should just be:\n\n\\[\nP(\\text{Serotype 10 and Alive}) = P(\\text{Serotype 10}) \\times P(\\text{Alive})\n\\]\n\nWe can multiply these probabilities by the total number of observations to find the expected counts.\n\nFor example:\n\\[\nE_{10,Alive} = P(\\text{Serotype 10}) \\times P(\\text{Alive}) \\times N\n\\]\n\nUsing our totals:\n\n\\[\nP(\\text{Serotype 10}) = \\frac{44}{78}, \\quad P(\\text{Alive}) = \\frac{61}{78}, \\quad N = 78\n\\]"
+  },
+  {
+    "objectID": "slides/lec-13-proportions.html#compute-expected-count-under-independence",
+    "href": "slides/lec-13-proportions.html#compute-expected-count-under-independence",
+    "title": "Lecture 13: Proportions and Categorical data",
+    "section": "Compute expected count under independence",
+    "text": "Compute expected count under independence\n\n# Compute expected count under independence\nexpected_10_alive &lt;- (44/78) * (61/78) * 78\nexpected_10_alive\n\n[1] 34.41026\n\n\n\nWe can repeat this for each cell to find what we’d expect if serotype and mortality were truly unrelated.\nThe chi-square test then measures how far our observed counts deviate from these expected counts.\n\n\\[\\chi^2 = \\sum\\frac{(O-E)^2}{E}\\]"
+  },
+  {
+    "objectID": "slides/lec-13-proportions.html#intuition",
+    "href": "slides/lec-13-proportions.html#intuition",
+    "title": "Lecture 13: Proportions and Categorical data",
+    "section": "Intuition",
+    "text": "Intuition\n\nIf observed counts are close to what we’d expect under independence, \\(\\chi^2\\) will be small, then we’d fail to reject \\(H_0\\).\nIf they’re far from expected, \\(\\chi^2\\) will be large, which might lead to evidence of an association."
+  },
+  {
+    "objectID": "slides/lec-13-proportions.html#visualizing-observed-vs-expected-counts",
+    "href": "slides/lec-13-proportions.html#visualizing-observed-vs-expected-counts",
+    "title": "Lecture 13: Proportions and Categorical data",
+    "section": "Visualizing Observed vs Expected Counts",
+    "text": "Visualizing Observed vs Expected Counts\nLet’s visualize how the observed counts compare to the expected counts under independence."
+  },
+  {
+    "objectID": "slides/lec-13-proportions.html#chi-square-tests-1",
+    "href": "slides/lec-13-proportions.html#chi-square-tests-1",
+    "title": "Lecture 13: Proportions and Categorical data",
+    "section": "Chi-square tests",
+    "text": "Chi-square tests\nThe chi-square test compares the observed frequencies in each cell to the expected count under \\(H_0\\); if the total differences are large enough, we reject \\(H_0\\):\n\\[\\chi^2 = \\sum_{i=1}^{r \\times c}\\frac{(O_i - E_i)^2}{E_i}\\]\nwhich has a \\(\\chi^2_{(r - 1) \\times (c-1)}\\) distribution, under \\(H_0\\)."
+  },
+  {
+    "objectID": "slides/lec-13-proportions.html#chi-square-tests-2",
+    "href": "slides/lec-13-proportions.html#chi-square-tests-2",
+    "title": "Lecture 13: Proportions and Categorical data",
+    "section": "Chi-square tests",
+    "text": "Chi-square tests\n\ndata &lt;- matrix(c(37, 7, 24, 10), \n               byrow = T, nrow = 2)\ndata\n\n     [,1] [,2]\n[1,]   37    7\n[2,]   24   10\n\nchisq.test(data)\n\n\n    Pearson's Chi-squared test with Yates' continuity correction\n\ndata:  data\nX-squared = 1.3359, df = 1, p-value = 0.2478\n\n\nWhat might we conclude at \\(\\alpha = .05\\)?"
+  },
+  {
+    "objectID": "slides/lec-13-proportions.html#conclusion",
+    "href": "slides/lec-13-proportions.html#conclusion",
+    "title": "Lecture 13: Proportions and Categorical data",
+    "section": "Conclusion",
+    "text": "Conclusion\n\nConclusion: Since the p-value is greater than 0.05, we fail to reject the null hypothesis. There is not enough evidence to conclude that survival differs between Serotype 10 and Serotype 31."
+  },
+  {
+    "objectID": "slides/lec-13-proportions.html#fishers-exact-test",
+    "href": "slides/lec-13-proportions.html#fishers-exact-test",
+    "title": "Lecture 13: Proportions and Categorical data",
+    "section": "Fisher’s exact test",
+    "text": "Fisher’s exact test\n\nThe chi-square test relies on asymptotic results (i.e. large sample size), which might not be appropriate if we have small cell counts (common rules of thumb are &gt;5 or &gt;10 observed in each cell).\nFisher’s exact test calculates an exact p-value under a specific distributional assumption.\n\n\n\n\nSerotype\nAlive\nDead\nTotal\n\n\n\n\nSerotype 10\n37\n7\n44\n\n\nSerotype 31\n24\n10\n34\n\n\nTotal\n61\n17\n78"
+  },
+  {
+    "objectID": "slides/lec-13-proportions.html#fishers-exact-test-1",
+    "href": "slides/lec-13-proportions.html#fishers-exact-test-1",
+    "title": "Lecture 13: Proportions and Categorical data",
+    "section": "Fisher’s exact test",
+    "text": "Fisher’s exact test\nFisher’s exact test relies on the hypergeometric distribution (don’t worry about this, seriously).\n\n\n\nSerotype\nAlive\nDead\nTotal\n\n\n\n\nSerotype 10\na\nc\na + c\n\n\nSerotype 31\nb\nd\nb + d\n\n\nTotal\na + b\nc + d\na + b + c + d\n\n\n\nConditionally on the margins (assumed fixed), then each of the individual cells is distributed according to the hypergeometric distribution. We can thus calculate the exact probabilities of obtaining specific tables."
+  },
+  {
+    "objectID": "slides/lec-13-proportions.html#fishers-exact-test-2",
+    "href": "slides/lec-13-proportions.html#fishers-exact-test-2",
+    "title": "Lecture 13: Proportions and Categorical data",
+    "section": "Fisher’s exact test",
+    "text": "Fisher’s exact test\nObserved data:\n\n\n\nSerotype\nAlive\nDead\nTotal\n\n\n\n\nSerotype 10\n37\n7\n44\n\n\nSerotype 31\n24\n10\n34\n\n\nTotal\n61\n17\n78\n\n\n\nWe could use the hypergeometric distribution to calculate the probability of seeing this table, assuming 61 total alive patients, 17 dead, and 44 and 34 infections of serotypes 10 and 31, respectively (lots of factorials, so you could imagine it wasn’t fun before modern computers)."
+  },
+  {
+    "objectID": "slides/lec-13-proportions.html#fishers-exact-test-3",
+    "href": "slides/lec-13-proportions.html#fishers-exact-test-3",
+    "title": "Lecture 13: Proportions and Categorical data",
+    "section": "Fisher’s exact test",
+    "text": "Fisher’s exact test\nAnother “possible” table:\n\n\n\nSerotype\nAlive\nDead\nTotal\n\n\n\n\nSerotype 10\n36\n8\n44\n\n\nSerotype 31\n25\n9\n34\n\n\nTotal\n61\n17\n78\n\n\n\n\nHere we’ve displayed another table with the same margins, but with some slightly different potential cell counts.\nAgain we could use the hypergeometric distribution to calculate the probability of observing the cell counts conditionally on fixed margins."
+  },
+  {
+    "objectID": "slides/lec-13-proportions.html#fishers-exact-test-4",
+    "href": "slides/lec-13-proportions.html#fishers-exact-test-4",
+    "title": "Lecture 13: Proportions and Categorical data",
+    "section": "Fisher’s exact test",
+    "text": "Fisher’s exact test\nFisher’s exact test relies on constructing all possible contingency tables with the same margins, and then summing up probabilities of all tables as extreme or more extreme than the observed data.\n\n\n\n\n\n\nQuestion\n\n\nWhat might “more extreme” mean in the context of contingency tables?"
+  },
+  {
+    "objectID": "slides/lec-13-proportions.html#fishers-exact-test-5",
+    "href": "slides/lec-13-proportions.html#fishers-exact-test-5",
+    "title": "Lecture 13: Proportions and Categorical data",
+    "section": "Fisher’s exact test",
+    "text": "Fisher’s exact test\n\\(H_0\\): The proportion of deaths is the same for Serotype 10 and Serotype 31 (no association between serotype and outcome).\n\\(H_A\\): The proportion of deaths differs between serotypes (there is an association)\n\ndata &lt;- matrix(c(37, 7, 24, 10), byrow = T, nrow = 2)\ndata\n\n     [,1] [,2]\n[1,]   37    7\n[2,]   24   10"
+  },
+  {
+    "objectID": "slides/lec-13-proportions.html#conducting-the-fishers-exact-test",
+    "href": "slides/lec-13-proportions.html#conducting-the-fishers-exact-test",
+    "title": "Lecture 13: Proportions and Categorical data",
+    "section": "Conducting the Fisher’s Exact test",
+    "text": "Conducting the Fisher’s Exact test\n\nfisher.test(data)\n\n\n    Fisher's Exact Test for Count Data\n\ndata:  data\np-value = 0.1758\nalternative hypothesis: true odds ratio is not equal to 1\n95 percent confidence interval:\n 0.6465347 7.7636744\nsample estimates:\nodds ratio \n  2.179552 \n\n\n\nWhat might we conclude at \\(\\alpha = 0.05\\)?"
+  },
+  {
+    "objectID": "slides/lec-13-proportions.html#conclusion-1",
+    "href": "slides/lec-13-proportions.html#conclusion-1",
+    "title": "Lecture 13: Proportions and Categorical data",
+    "section": "Conclusion",
+    "text": "Conclusion\n\nThe Fisher’s Exact Test yielded a p-value of 0.17, which is greater than the conventional significance level of 0.05. Therefore, we fail to reject the null hypothesis.\nThere is no statistically significant evidence of an association between serotype and survival status in this sample."
+  },
+  {
+    "objectID": "slides/lec-13-proportions.html#odds-ratios",
+    "href": "slides/lec-13-proportions.html#odds-ratios",
+    "title": "Lecture 13: Proportions and Categorical data",
+    "section": "Odds ratios",
+    "text": "Odds ratios\n\n\n\nSerotype\nAlive\nDead\nTotal\n\n\n\n\nSerotype 10\n37\n7\n44\n\n\nSerotype 31\n24\n10\n34\n\n\nTotal\n61\n17\n78\n\n\n\n\nOdds of death among serotype 10 patients = \\(\\frac{7/44}{37/44} = 7/37\\)\nOdds of death among serotype 31 patients = \\(\\frac{10/34}{24/34} = 10/24\\)\nOdds ratio of death comparing 31 to 10 is thus \\(\\frac{10/24}{7/37} \\approx 2.2\\)"
+  },
+  {
+    "objectID": "slides/lec-13-proportions.html#r-by-c-tables",
+    "href": "slides/lec-13-proportions.html#r-by-c-tables",
+    "title": "Lecture 13: Proportions and Categorical data",
+    "section": "r by c tables",
+    "text": "r by c tables\n\n\n\nSerotype\nAlive\nDead\nTotal\n\n\n\n\nSerotype 10\n37\n7\n44\n\n\nSerotype 15\n60\n12\n72\n\n\nSerotype 20\n97\n9\n106\n\n\nSerotype 31\n24\n10\n34\n\n\nTotal\n218\n38\n256\n\n\n\nWe can also extend the chi-square test and Fisher’s exact test to more general contingency tables (although the notion of an odds ratio no longer makes sense here)."
+  },
+  {
+    "objectID": "slides/lec-13-proportions.html#winter-olympics-training",
+    "href": "slides/lec-13-proportions.html#winter-olympics-training",
+    "title": "Lecture 13: Proportions and Categorical data",
+    "section": "Winter Olympics training",
+    "text": "Winter Olympics training\nSuppose we were interested in whether a particular training regimen was associated with “success” as measured by whether an athlete qualified for being on the US Winter Olympic Team for giant slalom."
+  },
+  {
+    "objectID": "slides/lec-13-proportions.html#winter-olympics-training-1",
+    "href": "slides/lec-13-proportions.html#winter-olympics-training-1",
+    "title": "Lecture 13: Proportions and Categorical data",
+    "section": "Winter Olympics training",
+    "text": "Winter Olympics training\n\n\n\n\nQualified\nDid Not Qualify\n\n\n\n\nNew Regimen\n129\n97\n\n\nOld Regimen\n112\n114\n\n\n\n\n\n\n    Pearson's Chi-squared test with Yates' continuity correction\n\ndata:  data\nX-squared = 2.2755, df = 1, p-value = 0.1314\n\n\n\n\n\n\n\n\nPractice\n\n\nWrite out the code to 1) construct the data matrix and 2) to conduct a chi square test in R. What might we conclude using alpha = .05?"
+  },
+  {
+    "objectID": "slides/lec-13-proportions.html#overview-1",
+    "href": "slides/lec-13-proportions.html#overview-1",
+    "title": "Lecture 13: Proportions and Categorical data",
+    "section": "Overview",
+    "text": "Overview\n\nReviewed AE 03 from last time.\nChi-square test and example\nFisher exact test and example (use if sample sizes aren’t large enough)"
+  },
+  {
+    "objectID": "slides/lec-13-proportions.html#next-class",
+    "href": "slides/lec-13-proportions.html#next-class",
+    "title": "Lecture 13: Proportions and Categorical data",
+    "section": "Next Class",
+    "text": "Next Class\n\nTuesday’s class: Non-Parametric Methods\nEnjoy Fall Break!"
+  },
+  {
     "objectID": "slides/lec-11-compare-means.html#announcements",
     "href": "slides/lec-11-compare-means.html#announcements",
     "title": "Lecture 11: Comparing Two Means",
     "section": "Announcements",
-    "text": "Announcements\n\nHW 4 due Tonight at 11:59pm.\nLab 4 due Saturday at 11:59pm.\nNo class and No lab session on Tuesday 10/6, Wellness Day! (No lab assignment next week.)\nHW 5 will be released after class. HW 5 is due next Thursday 10/8 at 11:59pm."
+    "text": "Announcements\n\nHW 4 due Tonight at 11:59pm.\nLab 5 due Saturday at 11:59pm.\nNo class and No lab session on Tuesday 10/6, Wellness Day! (No lab assignment next week.)\nHW 5 will be released after class. HW 5 is due next Thursday 10/8 at 11:59pm."
   },
   {
     "objectID": "slides/lec-11-compare-means.html#overview",
@@ -1138,7 +1341,7 @@
     "href": "slides/lec-11-compare-means.html#review-hypothesis-testing-steps",
     "title": "Lecture 11: Comparing Two Means",
     "section": "Review: Hypothesis testing steps",
-    "text": "Review: Hypothesis testing steps\n\n\n\n\n\n\nFill in the blanks\n\n\n\nState the null and alternative hypotheses. The null hypothesis states “____________________________” and the alternative challenges it.\nCollect relevant data and summarize it\nAssess how surprising it would be to see data like that if the _________________________ were really true\nDraw conclusions\n\n\n\n\n\n\n\n−+\n03:00"
+    "text": "Review: Hypothesis testing steps\n\n\n\n\n\n\nFill in the blanks\n\n\n\nState the null and alternative hypotheses. The null hypothesis states “____________________________” and the alternative challenges it.\nCollect relevant data and summarize it\nAssess how surprising it would be to see data like that if the _________________________ were really true\nDraw conclusions\n\n\n\n\n\n\n\n−+\n02:00"
   },
   {
     "objectID": "slides/lec-11-compare-means.html#independent-samples",
@@ -1222,7 +1425,7 @@
     "href": "slides/lec-11-compare-means.html#setup",
     "title": "Lecture 11: Comparing Two Means",
     "section": "Setup",
-    "text": "Setup\n\nFirst, we can load tidyverse and read in our data.\n\n\nlibrary(tidyverse)\nlicorice &lt;- read.csv(\"data/licorice.csv\")\n\nVariables of interest:\n\ntreat: Treatment given (0 = Sugar placebo; 1 = Licorice solution)\npacu30min_swallowPain: Swallow pain score 4 hours after surgery (11-point scale: 0 = No pain; 10 = worst pain)"
+    "text": "Setup\n\nFirst, we can load tidyverse and read in our data.\n\n\nlibrary(tidyverse)\nlicorice &lt;- read.csv(\"data/licorice.csv\")\n\nVariables of interest:\n\ntreat: Treatment given (0 = Sugar placebo; 1 = Licorice solution)\npacu30min_swallowPain: Swallow pain score 30 minutes after surgery (11-point scale: 0 = No pain; 10 = worst pain)"
   },
   {
     "objectID": "slides/lec-11-compare-means.html#looking-at-some-data",
@@ -1985,7 +2188,7 @@
     "href": "index.html",
     "title": "BIOS 600 Fall 2026",
     "section": "",
-    "text": "Lecture 0: Welcome to BIOS 600!\nLab 1: Introducing the Toolkit\nLecture 1: What is statistical inference?\n\n\n\nLab 2: Basic Data Visualization\nLecture 2: The nature of data\nLecture 3: Probability basics\nHW 1\n\n\n\nLab 3: Data Wrangling\nLecture 4: Conditional probability\nLecture 5: Medical diagnostics\nHW 2\n\n\n\nLecture 6: Discrete distributions\nLab 4: Practice with ggplot2 and tidyverse\nApplication Exercise 1: Binomial in a Biomedical Setting\nLecture 7: Continuous distributions\nApplication Exercise 2: Poisson in a Hospital Setting\nHW 3\nAE 1 Solution\n\n\n\nExam 01 Topics List\nExam 01 Formula Sheet\nExam 01 Practice Problems\n\n\n\nLecture 8: Central Limit Theorem\nApplication Exercise 3: Central Limit Theorem\nExam 01 Review Slides\nApplication Exercise 4: Exam 01 Review\nAE 01 Solution\nAE 02 Solution\nAE 03 Solution\n\n\n\nLecture 9: Confidence Intervals\nHW 04\n\n\n\nLecture 10: Hypothesis Testing\nLab 5: Code Style\nLecture 11: Compare Means\nHW 5"
+    "text": "Lecture 0: Welcome to BIOS 600!\nLab 1: Introducing the Toolkit\nLecture 1: What is statistical inference?\n\n\n\nLab 2: Basic Data Visualization\nLecture 2: The nature of data\nLecture 3: Probability basics\nHW 1\n\n\n\nLab 3: Data Wrangling\nLecture 4: Conditional probability\nLecture 5: Medical diagnostics\nHW 2\n\n\n\nLecture 6: Discrete distributions\nLab 4: Practice with ggplot2 and tidyverse\nApplication Exercise 1: Binomial in a Biomedical Setting\nLecture 7: Continuous distributions\nApplication Exercise 2: Poisson in a Hospital Setting\nHW 3\nAE 1 Solution\n\n\n\nExam 01 Topics List\nExam 01 Formula Sheet\nExam 01 Practice Problems\n\n\n\nLecture 8: Central Limit Theorem\nApplication Exercise 3: Central Limit Theorem\nExam 01 Review Slides\nApplication Exercise 4: Exam 01 Review\nAE 01 Solution\nAE 02 Solution\nAE 03 Solution\n\n\n\nLecture 9: Confidence Intervals\nHW 04\n\n\n\nLecture 10: Hypothesis Testing\nLab 5: Code Style\nLecture 11: Compare Means\nHW 5\n\n\n\nLecture 12: ANOVA"
   },
   {
     "objectID": "index.html#week-1",
@@ -2042,6 +2245,13 @@
     "title": "BIOS 600 Fall 2026",
     "section": "",
     "text": "Lecture 10: Hypothesis Testing\nLab 5: Code Style\nLecture 11: Compare Means\nHW 5"
+  },
+  {
+    "objectID": "index.html#week-8",
+    "href": "index.html#week-8",
+    "title": "BIOS 600 Fall 2026",
+    "section": "",
+    "text": "Lecture 12: ANOVA"
   },
   {
     "objectID": "hw/hw-04.html",
@@ -4135,6 +4345,293 @@
     "title": "Lecture 10: Hypothesis Testing",
     "section": "Next class",
     "text": "Next class\n\nComparing two means"
+  },
+  {
+    "objectID": "slides/lec-12-anova.html#announcements",
+    "href": "slides/lec-12-anova.html#announcements",
+    "title": "Lecture 12: ANOVA",
+    "section": "Announcements",
+    "text": "Announcements\n\nHW 5 due tonight at 11:59pm.\nNo new HW assigned today."
+  },
+  {
+    "objectID": "slides/lec-12-anova.html#overview",
+    "href": "slides/lec-12-anova.html#overview",
+    "title": "Lecture 12: ANOVA",
+    "section": "Overview",
+    "text": "Overview\n\nComparing more than three means\nANOVA test and how it relates to a t-test\nMultiple comparisons issue and Inflated type I error rates\nPulse example: ANOVA\nBonferroni Correction"
+  },
+  {
+    "objectID": "slides/lec-12-anova.html#optional-reading",
+    "href": "slides/lec-12-anova.html#optional-reading",
+    "title": "Lecture 12: ANOVA",
+    "section": "Optional reading",
+    "text": "Optional reading\n\nP&G: Chapter 12\nOI: 7.5"
+  },
+  {
+    "objectID": "slides/lec-12-anova.html#puppies",
+    "href": "slides/lec-12-anova.html#puppies",
+    "title": "Lecture 12: ANOVA",
+    "section": "Puppies",
+    "text": "Puppies"
+  },
+  {
+    "objectID": "slides/lec-12-anova.html#experiment-pets-and-stress-level",
+    "href": "slides/lec-12-anova.html#experiment-pets-and-stress-level",
+    "title": "Lecture 12: ANOVA",
+    "section": "Experiment: Pets and Stress Level",
+    "text": "Experiment: Pets and Stress Level\n\nFor today’s topic, we will consider an experiment where heart rates were measured (as a proxy for stress level) for a group of \\(n=90\\) students after 10 minutes of being under certain conditions.\nThe 3 Conditions/Groups: Of the 90 total students, 30 students spent time holding puppies, 30 students sat alone, and 30 students chatted with a friend.\nAfter 10 minutes, each student’s heart rate was measured."
+  },
+  {
+    "objectID": "slides/lec-12-anova.html#research-question",
+    "href": "slides/lec-12-anova.html#research-question",
+    "title": "Lecture 12: ANOVA",
+    "section": "Research Question",
+    "text": "Research Question\n\nIs there a group (puppies, friend, alone/neither) associated with lower heart rate compared to the others?\nLet’s take a look at the data on the next slide."
+  },
+  {
+    "objectID": "slides/lec-12-anova.html#distribution-of-heart-rate-data",
+    "href": "slides/lec-12-anova.html#distribution-of-heart-rate-data",
+    "title": "Lecture 12: ANOVA",
+    "section": "Distribution of heart rate data",
+    "text": "Distribution of heart rate data\n\nHow do we compare across three groups? Which groups are different?"
+  },
+  {
+    "objectID": "slides/lec-12-anova.html#example-pets-and-stress",
+    "href": "slides/lec-12-anova.html#example-pets-and-stress",
+    "title": "Lecture 12: ANOVA",
+    "section": "Example: pets and stress",
+    "text": "Example: pets and stress\nWe are interested in testing\n\\[H_0: \\mu_P = \\mu_F = \\mu_N\\]\nagainst the alternative that at least one mean is different from the others."
+  },
+  {
+    "objectID": "slides/lec-12-anova.html#a-potential-approach",
+    "href": "slides/lec-12-anova.html#a-potential-approach",
+    "title": "Lecture 12: ANOVA",
+    "section": "A potential approach",
+    "text": "A potential approach\n\nOne way to do this would be to use t-tests on all possible pairs of tests (here there are just three - how many pairs of tests would this be?). However, if we have more groups, this becomes quite complicated.\nFor example, with 10 groups we need to do \\(10\\choose {2}\\) = 45 tests!"
+  },
+  {
+    "objectID": "slides/lec-12-anova.html#review-error-rates",
+    "href": "slides/lec-12-anova.html#review-error-rates",
+    "title": "Lecture 12: ANOVA",
+    "section": "Review: Error rates",
+    "text": "Review: Error rates\n\n\n\n\n\n\nTip\n\n\nIn groups, fill in the blanks:\n\nSuppose we test the null hypothesis \\(H_0\\):\\(\\mu = \\mu_0\\). We could potentially make two types of errors:\n\n\n\n\nTruth\n\\(\\mu = \\mu_0\\)\n\\(\\mu \\neq \\mu_0\\)\n\n\n\n\nFail to reject \\(H_0\\)\ncorrect decision\n____________\n\n\nReject \\(H_0\\)\n___________\ncorrect decision\n\n\n\nHow would you explain the following in words?\n\nType I Error: ____________\n\n\nType II Error: ____________"
+  },
+  {
+    "objectID": "slides/lec-12-anova.html#multiple-comparisons",
+    "href": "slides/lec-12-anova.html#multiple-comparisons",
+    "title": "Lecture 12: ANOVA",
+    "section": "Multiple comparisons",
+    "text": "Multiple comparisons\n\nNow that we’ve reviewed Type I and Type II errors, we need to discuss multiple comparisons - an important concept in statistics.\nBack to our pet example. What if we had 10 groups?\nIn addition to being time-consuming, carrying out multiple tests can lead to inflated Type I error rates which puts into question the validity of a given study if these multiple comparisons are not accounted for."
+  },
+  {
+    "objectID": "slides/lec-12-anova.html#multiple-comparisons-in-action-overall-test",
+    "href": "slides/lec-12-anova.html#multiple-comparisons-in-action-overall-test",
+    "title": "Lecture 12: ANOVA",
+    "section": "Multiple comparisons in action: overall test",
+    "text": "Multiple comparisons in action: overall test"
+  },
+  {
+    "objectID": "slides/lec-12-anova.html#extra-testswhoa",
+    "href": "slides/lec-12-anova.html#extra-testswhoa",
+    "title": "Lecture 12: ANOVA",
+    "section": "Extra tests…whoa!",
+    "text": "Extra tests…whoa!"
+  },
+  {
+    "objectID": "slides/lec-12-anova.html#green-jelly-beans",
+    "href": "slides/lec-12-anova.html#green-jelly-beans",
+    "title": "Lecture 12: ANOVA",
+    "section": "Green jelly beans!",
+    "text": "Green jelly beans!"
+  },
+  {
+    "objectID": "slides/lec-12-anova.html#so-what-went-wrong",
+    "href": "slides/lec-12-anova.html#so-what-went-wrong",
+    "title": "Lecture 12: ANOVA",
+    "section": "So what went wrong?",
+    "text": "So what went wrong?"
+  },
+  {
+    "objectID": "slides/lec-12-anova.html#multiple-comparisons-1",
+    "href": "slides/lec-12-anova.html#multiple-comparisons-1",
+    "title": "Lecture 12: ANOVA",
+    "section": "Multiple comparisons",
+    "text": "Multiple comparisons\nConsider our pets / stress example, where we had three pairwise comparisons.\n\nSuppose all means are truly equal and we conduct all three pairwise tests\n\n\n\\(H_0\\): \\(\\mu_P = \\mu_F\\) vs. \\(H_A\\): \\(\\mu_P \\neq \\mu_F\\)\n\\(H_0\\): \\(\\mu_P = \\mu_N\\) vs. \\(H_A\\): \\(\\mu_P \\neq \\mu_N\\)\n\\(H_0\\): \\(\\mu_N = \\mu_F\\) vs. \\(H_A\\): \\(\\mu_N \\neq \\mu_F\\)"
+  },
+  {
+    "objectID": "slides/lec-12-anova.html#multiple-comparisons-2",
+    "href": "slides/lec-12-anova.html#multiple-comparisons-2",
+    "title": "Lecture 12: ANOVA",
+    "section": "Multiple comparisons",
+    "text": "Multiple comparisons\n\nSuppose also the tests are independent and done at a 0.05 significance level\nThen the probability we fail to reject all three tests if the null hypothesis were true (i.e. the correct decision), assuming the tests are independent, is:\n\n$P( | H_0 )$\n$P( | H_0 ) $\n\\(P(\\text{fail to reject Test 3} | H_0 \\text{ true})\\)"
+  },
+  {
+    "objectID": "slides/lec-12-anova.html#multiple-comparisons-continued",
+    "href": "slides/lec-12-anova.html#multiple-comparisons-continued",
+    "title": "Lecture 12: ANOVA",
+    "section": "Multiple comparisons (continued)",
+    "text": "Multiple comparisons (continued)\n\nAssuming the tests are independent, this probability is \\((1−0.05)^3=0.95^3=0.857\\) , and so the probability of rejecting at least one of the three null hypotheses, called the family-wise error rate, is \\(1−0.857=0.143&gt;0.05\\)\nIf we had 10 groups instead, we would need 45 pairwise tests. With 45 tests, the probability of rejecting at least 1 of them (incorrectly!) is over 90%!"
+  },
+  {
+    "objectID": "slides/lec-12-anova.html#intuitive-takeaway-why-multiple-comparisons-matter",
+    "href": "slides/lec-12-anova.html#intuitive-takeaway-why-multiple-comparisons-matter",
+    "title": "Lecture 12: ANOVA",
+    "section": "Intuitive Takeaway: Why Multiple Comparisons Matter",
+    "text": "Intuitive Takeaway: Why Multiple Comparisons Matter\n\nEach hypothesis test carries a small chance (e.g., 5%) of being a false positive.\n\nLike flipping a coin: occasionally, you’ll get “heads” just by chance."
+  },
+  {
+    "objectID": "slides/lec-12-anova.html#intuition-continued",
+    "href": "slides/lec-12-anova.html#intuition-continued",
+    "title": "Lecture 12: ANOVA",
+    "section": "Intuition (continued)",
+    "text": "Intuition (continued)\n\nWhen we run many tests, those small chances add up.\n\nWith only 3 tests, there’s already a 14% chance of at least one false alarm. With 45 tests, that chance exceeds 90%!\n\nIn practice: Even if nothing real is going on, we’re almost guaranteed to find something “statistically significant.” This can lead to misleading conclusions — especially in large studies testing many variables."
+  },
+  {
+    "objectID": "slides/lec-12-anova.html#takeaway",
+    "href": "slides/lec-12-anova.html#takeaway",
+    "title": "Lecture 12: ANOVA",
+    "section": "Takeaway",
+    "text": "Takeaway\n\nThe more tests we do, the more we must adjust for multiple comparisons (e.g., Bonferroni correction, FDR (false discovery) control) to avoid fooling ourselves."
+  },
+  {
+    "objectID": "slides/lec-12-anova.html#pause-and-reflect",
+    "href": "slides/lec-12-anova.html#pause-and-reflect",
+    "title": "Lecture 12: ANOVA",
+    "section": "Pause and reflect",
+    "text": "Pause and reflect\nGet in small groups. Discuss: What are “multiple comparisions” and why are they an issue?\n\n\n\n−+\n02:00"
+  },
+  {
+    "objectID": "slides/lec-12-anova.html#multiple-comparisons-3",
+    "href": "slides/lec-12-anova.html#multiple-comparisons-3",
+    "title": "Lecture 12: ANOVA",
+    "section": "Multiple comparisons",
+    "text": "Multiple comparisons\n\nANOVA extends the t-test and is one way to control the overall Type I error rate at a fixed level \\(\\alpha\\), if we only test pairwise differences when the overall ANOVA test is rejected\nANOVA stands for analysis of variance. We use ANOVA when we want to compare more than two groups."
+  },
+  {
+    "objectID": "slides/lec-12-anova.html#anova-null-hypothesis",
+    "href": "slides/lec-12-anova.html#anova-null-hypothesis",
+    "title": "Lecture 12: ANOVA",
+    "section": "ANOVA null hypothesis",
+    "text": "ANOVA null hypothesis\nIn ANOVA, we typically follow this testing procedure:\n\nFirst, we conduct an overall test of the null hypothesis that the means of all of the groups are equal.\nIf this is rejected, then we step down to see which means are different from each other. A multiple comparisons correction is sometimes used for these pairwise comparisons of means.\nIf we fail to reject the null hypothesis, then no further testing should be done."
+  },
+  {
+    "objectID": "slides/lec-12-anova.html#anova-alternative-hypothesis",
+    "href": "slides/lec-12-anova.html#anova-alternative-hypothesis",
+    "title": "Lecture 12: ANOVA",
+    "section": "ANOVA alternative hypothesis",
+    "text": "ANOVA alternative hypothesis\nFor ANOVA with three groups, our null hypothesis is \\(H_0: \\mu_P = \\mu_F = \\mu_N\\). What could happen under the alternative?\n\n\\(μ_P≠μ_F≠μ_N\\)\n\\(μ_P=μ_F\\), but \\(μ_N\\) is different\n\\(μ_P=μ_N\\), but \\(μ_F\\) is different\n\\(μ_F=μ_N\\), but \\(μ_P\\) is different\n\nThe alternative hypothesis for ANOVA is that at least one of the means is different from the others."
+  },
+  {
+    "objectID": "slides/lec-12-anova.html#assumptions-of-anova",
+    "href": "slides/lec-12-anova.html#assumptions-of-anova",
+    "title": "Lecture 12: ANOVA",
+    "section": "Assumptions of ANOVA",
+    "text": "Assumptions of ANOVA\n\nOutcomes within groups are normally distributed\nHomoscedastic variance (the within-group variance is the same for all groups)\nSamples are independent\n\nIf these assumptions are violated, then results from ANOVA may not be valid. We will discuss some alternatives later in the course."
+  },
+  {
+    "objectID": "slides/lec-12-anova.html#validity-of-anova-for-pet-data",
+    "href": "slides/lec-12-anova.html#validity-of-anova-for-pet-data",
+    "title": "Lecture 12: ANOVA",
+    "section": "Validity of ANOVA for pet data",
+    "text": "Validity of ANOVA for pet data\n\npulse_data |&gt;\n  ggplot(mapping = aes(x = pulse)) + \n  geom_histogram(bins=10) +\n  facet_wrap(~group)"
+  },
+  {
+    "objectID": "slides/lec-12-anova.html#validity-of-anova-for-pet-data-1",
+    "href": "slides/lec-12-anova.html#validity-of-anova-for-pet-data-1",
+    "title": "Lecture 12: ANOVA",
+    "section": "Validity of ANOVA for pet data",
+    "text": "Validity of ANOVA for pet data\n\nVariances appear to be similar, but normality may be slightly questionable. For now, let’s proceed despite this."
+  },
+  {
+    "objectID": "slides/lec-12-anova.html#why-analyze-variance-when-we-want-means",
+    "href": "slides/lec-12-anova.html#why-analyze-variance-when-we-want-means",
+    "title": "Lecture 12: ANOVA",
+    "section": "Why analyze variance when we want means?",
+    "text": "Why analyze variance when we want means?\n\nRemember, ANOVA stands for analysis of variance.\nWhat does variance have to do with our null hypothesis, which is about equality of means (say, \\(H_0:μ_1=μ_2=⋯=μ_K\\))?\nTo explain the variance part, we first need to introduce another part of ANOVA: ANOVA uses something called an F-test to determine if the means of three or more groups are significantly different."
+  },
+  {
+    "objectID": "slides/lec-12-anova.html#f-test",
+    "href": "slides/lec-12-anova.html#f-test",
+    "title": "Lecture 12: ANOVA",
+    "section": "F-test",
+    "text": "F-test\nF-test: If the group-specific means vary around the overall grand mean more than the individual observations vary around their group-specific sample means, then we have evidence that the corresponding population means are in fact different."
+  },
+  {
+    "objectID": "slides/lec-12-anova.html#example",
+    "href": "slides/lec-12-anova.html#example",
+    "title": "Lecture 12: ANOVA",
+    "section": "Example",
+    "text": "Example"
+  },
+  {
+    "objectID": "slides/lec-12-anova.html#example-1",
+    "href": "slides/lec-12-anova.html#example-1",
+    "title": "Lecture 12: ANOVA",
+    "section": "Example",
+    "text": "Example"
+  },
+  {
+    "objectID": "slides/lec-12-anova.html#f-test-1",
+    "href": "slides/lec-12-anova.html#f-test-1",
+    "title": "Lecture 12: ANOVA",
+    "section": "F-test",
+    "text": "F-test\nHow do we formally compare these variances? Consider the F statistic given by\n\\[F = \\frac{s^2_{between}}{s^2_{within}}\\]\nwhich if \\(H_0\\) is true, has an F distribution with K−1 numerator degrees of freedom and \\(n−K\\) denominator degrees of freedom, where K is the number of groups and \\(n\\) is the total number of observations."
+  },
+  {
+    "objectID": "slides/lec-12-anova.html#f-test-2",
+    "href": "slides/lec-12-anova.html#f-test-2",
+    "title": "Lecture 12: ANOVA",
+    "section": "F-test",
+    "text": "F-test\n\nThe F-test for ANOVA is inherently one-tailed, rejecting \\(H_0\\) only if F is considerably larger than one.\nImportantly, this does not mean we have a one-sided alternative; we just look at one tail of the F distribution to get the p-value.\nIf there are only two groups, then the F-test gives the same result as the independent-samples t-test."
+  },
+  {
+    "objectID": "slides/lec-12-anova.html#output",
+    "href": "slides/lec-12-anova.html#output",
+    "title": "Lecture 12: ANOVA",
+    "section": "Output",
+    "text": "Output\n\n# anova in R:\nsummary(aov(pulse ~ group, data = pulse_data))\n\n            Df Sum Sq Mean Sq F value   Pr(&gt;F)    \ngroup        2  877.7   438.8   15.77 1.44e-06 ***\nResiduals   87 2421.7    27.8                     \n---\nSignif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1\n\n\n\n\n\n\n\n\nWhich rows correspond to the between-group and within-group variances here, respectively?"
+  },
+  {
+    "objectID": "slides/lec-12-anova.html#f-test-for-pet-data",
+    "href": "slides/lec-12-anova.html#f-test-for-pet-data",
+    "title": "Lecture 12: ANOVA",
+    "section": "F-test for pet data",
+    "text": "F-test for pet data\n\nNote that \\(F = s^2_B / s^2_W = \\frac{(877.7/2)}{(2421.7/87)} = 15.77\\), with ndf = \\(3-1 = 2\\) and ddf \\(90-3=87\\).\nThis corresponds to a p-value &lt;.0001.\nConclusion: At \\(\\alpha = 0.05\\), we reject the null hypothesis. There is sufficient evidence that at least one of the three groups comes from a population with a different mean than the others.\nWhich groups might be different?"
+  },
+  {
+    "objectID": "slides/lec-12-anova.html#bonferroni-correction-1",
+    "href": "slides/lec-12-anova.html#bonferroni-correction-1",
+    "title": "Lecture 12: ANOVA",
+    "section": "Bonferroni correction",
+    "text": "Bonferroni correction\n\nAs we showed earlier, conducting multiple tests on a data set increases the family-wise error rate.\nOne very conservative way to ensure this is not the case is to simply divide α by the number of tests to be done and to use that as the significance level.\nThis procedure is called the Bonferroni correction."
+  },
+  {
+    "objectID": "slides/lec-12-anova.html#bonferroni-correction-2",
+    "href": "slides/lec-12-anova.html#bonferroni-correction-2",
+    "title": "Lecture 12: ANOVA",
+    "section": "Bonferroni correction",
+    "text": "Bonferroni correction\n\nFor example: for two tests, to preserve an overall 0.05 type I error rate, the Bonferroni correction would use \\(\\alpha/2=0.025\\) as the significance level for each individual test instead of 0.05.\nBonferroni is a conservative correction, making it harder to reject the null hypothesis, but it is a safe bet in controlling the Type I error rate."
+  },
+  {
+    "objectID": "slides/lec-12-anova.html#pets-and-stress-group-differences",
+    "href": "slides/lec-12-anova.html#pets-and-stress-group-differences",
+    "title": "Lecture 12: ANOVA",
+    "section": "Pets and stress: group differences",
+    "text": "Pets and stress: group differences\n\nWe can compare the groups using a Bonferroni correction (here we have three tests, so the significance level for each test is \\(\\alpha/3\\)).\nThe raw (uncorrected) p-values for the t-test comparing friend vs. pet was \\(&lt;0.0001\\); for friend vs. neither was 0.021, and for pet vs. neither was 0.009.\n\n\n\n\n\n\n\nIn your small groups: What might we conclude?\n\n\n\n\n\n\n−+\n02:00"
+  },
+  {
+    "objectID": "slides/lec-12-anova.html#recap",
+    "href": "slides/lec-12-anova.html#recap",
+    "title": "Lecture 12: ANOVA",
+    "section": "Recap",
+    "text": "Recap\n\nComparing more than three means\nANOVA test and how it relates to a t-test\nMultiple comparisons issue and Inflated type I error rates\nPulse example: ANOVA\nBonferroni Correction"
+  },
+  {
+    "objectID": "slides/lec-12-anova.html#next-up",
+    "href": "slides/lec-12-anova.html#next-up",
+    "title": "Lecture 12: ANOVA",
+    "section": "Next up",
+    "text": "Next up\n\nProportions and categorical data\nGuest lecturer: Cassi Chen, PhD student"
   },
   {
     "objectID": "slides/lec-2-nature-data.html#reading",
