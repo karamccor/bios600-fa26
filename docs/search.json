@@ -4463,7 +4463,7 @@
     "href": "slides/lec-12-anova.html#multiple-comparisons-2",
     "title": "Lecture 12: ANOVA",
     "section": "Multiple comparisons",
-    "text": "Multiple comparisons\n\nSuppose also the tests are independent and done at a 0.05 significance level\nThen the probability we fail to reject all three tests if the null hypothesis were true (i.e. the correct decision), assuming the tests are independent, is:\n\n$P( | H_0 )$\n$P( | H_0 ) $\n\\(P(\\text{fail to reject Test 3} | H_0 \\text{ true})\\)"
+    "text": "Multiple comparisons\n\nSuppose also the tests are independent and done at a 0.05 significance level\nThen the probability we fail to reject all three tests if the null hypothesis were true (i.e. the correct decision), assuming the tests are independent, is:\n\n\\(P(\\text{fail to reject Test 1} | H_0 \\text{ true})\\cdot\\)\n\\(P(\\text{fail to reject Test 2} | H_0 \\text{ true}) \\cdot\\)\n\\(P(\\text{fail to reject Test 3} | H_0 \\text{ true})\\)"
   },
   {
     "objectID": "slides/lec-12-anova.html#multiple-comparisons-continued",
