@@ -1117,28 +1117,21 @@
     "href": "slides/lec-13-proportions.html#announcements",
     "title": "Lecture 13: Proportions and Categorical data",
     "section": "Announcements",
-    "text": "Announcements\n\nLab 5 session today. Watch the video ahead of time and attend at 3:30 if you need help.\nLab 5 due Tuesday 10/21 at 11:59pm (due to fall break)\nNo HW until next week - enjoy your fall break!"
+    "text": "Announcements\n\nLab 5 due Monday 10/19 at 11:59pm (due to fall break)"
   },
   {
     "objectID": "slides/lec-13-proportions.html#overview",
     "href": "slides/lec-13-proportions.html#overview",
     "title": "Lecture 13: Proportions and Categorical data",
     "section": "Overview",
-    "text": "Overview\n\nReview AE 03 from last time.\nChi-square test and example\nFisher exact test and example"
+    "text": "Overview\n\nChi-square test and example\nFisher exact test and example"
   },
   {
-    "objectID": "slides/lec-13-proportions.html#very-optional-reading",
-    "href": "slides/lec-13-proportions.html#very-optional-reading",
+    "objectID": "slides/lec-13-proportions.html#optional-reading",
+    "href": "slides/lec-13-proportions.html#optional-reading",
     "title": "Lecture 13: Proportions and Categorical data",
-    "section": "Very optional reading",
-    "text": "Very optional reading\n\nP&G Chapters 14, 15\nOI: Sections 5.2, 5.3, 6.1, 6.2, 6.4"
-  },
-  {
-    "objectID": "slides/lec-13-proportions.html#application-exercise",
-    "href": "slides/lec-13-proportions.html#application-exercise",
-    "title": "Lecture 13: Proportions and Categorical data",
-    "section": "Application Exercise",
-    "text": "Application Exercise\n\n\n\n\n\n\nAE 03\n\n\nIn small groups, take a few minutes to review AE 03.\n\nIf you’re already done, take turns presenting the exercises to a partner (explain the code, explain how you got your conclusion.)\nIf you still need some time to work on it, take this time to do so."
+    "section": "Optional reading",
+    "text": "Optional reading\n\nP&G Chapters 14, 15\nOI: Sections 5.2, 5.3, 6.1, 6.2, 6.4"
   },
   {
     "objectID": "slides/lec-13-proportions.html#pneumococcal-disease",
@@ -1159,28 +1152,56 @@
     "href": "slides/lec-13-proportions.html#chi-square-tests",
     "title": "Lecture 13: Proportions and Categorical data",
     "section": "Chi-square tests",
-    "text": "Chi-square tests\n\\(H_0\\): There is no association between serotype and mortality\n\\(H_1\\): There is an association between serotype and mortality\nUnder \\(H_0\\), we have independence between serotype and mortality, implying that joint probabilities should be equal to products of marginal distributions:\n\n\n\nSerotype\nAlive\nDead\nTotal\n\n\n\n\nSerotype 10\n?\n?\n44\n\n\nSerotype 31\n?\n?\n34\n\n\nTotal\n61\n17\n78\n\n\n\nWhat counts might we expect under \\(H_0\\)?"
+    "text": "Chi-square tests\n\\(H_0\\): There is no association between serotype and mortality\n\\(H_1\\): There is an association between serotype and mortality"
+  },
+  {
+    "objectID": "slides/lec-13-proportions.html#chi-square-tests-1",
+    "href": "slides/lec-13-proportions.html#chi-square-tests-1",
+    "title": "Lecture 13: Proportions and Categorical data",
+    "section": "Chi-square tests",
+    "text": "Chi-square tests\nUnder \\(H_0\\), we have independence between serotype and mortality, implying that joint probabilities should be equal to products of marginal distributions:\n\n\n\nSerotype\nAlive\nDead\nTotal\n\n\n\n\nSerotype 10\n?\n?\n44\n\n\nSerotype 31\n?\n?\n34\n\n\nTotal\n61\n17\n78\n\n\n\nWhat counts might we expect under \\(H_0\\)?"
   },
   {
     "objectID": "slides/lec-13-proportions.html#intuition-joint-and-marginal-probabilities",
     "href": "slides/lec-13-proportions.html#intuition-joint-and-marginal-probabilities",
     "title": "Lecture 13: Proportions and Categorical data",
     "section": "Intuition: Joint and Marginal Probabilities",
-    "text": "Intuition: Joint and Marginal Probabilities\n\nSuppose we look at two variables: Serotype and Mortality (Alive or Dead).\nThe joint probability describes the probability of being in both categories (e.g., “Serotype 10 and Alive”).\nThe marginal probabilities describe totals across one variable:\n\nP(Serotype 10) = proportion of all patients with Serotype 10\n\nP(Alive) = proportion of all patients who survived\n\n\n\n\nMarginal totals\n\n\n\nSerotype\nTotal\n\n\n\n\n10\n44\n\n\n31\n34\n\n\nTotal\n78\n\n\n\n\nMarginal totals\n\n\n\nOutcome\nTotal\n\n\n\n\nAlive\n61\n\n\nDead\n17\n\n\nTotal\n78"
+    "text": "Intuition: Joint and Marginal Probabilities\n\nSuppose we look at two variables: Serotype and Mortality (Alive or Dead).\nThe joint probability describes the probability of being in both categories (e.g., “Serotype 10 and Alive”).\nThe marginal probabilities describe totals across one variable:\n\nP(Serotype 10) = proportion of all patients with Serotype 10\n\nP(Alive) = proportion of all patients who survived"
+  },
+  {
+    "objectID": "slides/lec-13-proportions.html#intuition-joint-and-marginal-probabilities-1",
+    "href": "slides/lec-13-proportions.html#intuition-joint-and-marginal-probabilities-1",
+    "title": "Lecture 13: Proportions and Categorical data",
+    "section": "Intuition: Joint and Marginal Probabilities",
+    "text": "Intuition: Joint and Marginal Probabilities\n\n\nMarginal totals\n\n\n\nSerotype\nTotal\n\n\n\n\n10\n44\n\n\n31\n34\n\n\nTotal\n78\n\n\n\n\nMarginal totals\n\n\n\nOutcome\nTotal\n\n\n\n\nAlive\n61\n\n\nDead\n17\n\n\nTotal\n78"
   },
   {
     "objectID": "slides/lec-13-proportions.html#what-would-happen-if-these-two-variables-were-independent",
     "href": "slides/lec-13-proportions.html#what-would-happen-if-these-two-variables-were-independent",
     "title": "Lecture 13: Proportions and Categorical data",
     "section": "What would happen if these two variables were independent?",
-    "text": "What would happen if these two variables were independent?\n\nUnder the null hypothesis of independence, the chance of being both “Serotype 10” and “Alive” should just be:\n\n\\[\nP(\\text{Serotype 10 and Alive}) = P(\\text{Serotype 10}) \\times P(\\text{Alive})\n\\]\n\nWe can multiply these probabilities by the total number of observations to find the expected counts.\n\nFor example:\n\\[\nE_{10,Alive} = P(\\text{Serotype 10}) \\times P(\\text{Alive}) \\times N\n\\]\n\nUsing our totals:\n\n\\[\nP(\\text{Serotype 10}) = \\frac{44}{78}, \\quad P(\\text{Alive}) = \\frac{61}{78}, \\quad N = 78\n\\]"
+    "text": "What would happen if these two variables were independent?\n\nUnder the null hypothesis of independence, the chance of being both “Serotype 10” and “Alive” should just be:\n\n\\[\nP(\\text{Serotype 10 and Alive}) = P(\\text{Serotype 10}) \\times P(\\text{Alive})\n\\]\n\nWe can multiply these probabilities by the total number of observations to find the expected counts."
   },
   {
-    "objectID": "slides/lec-13-proportions.html#compute-expected-count-under-independence",
-    "href": "slides/lec-13-proportions.html#compute-expected-count-under-independence",
+    "objectID": "slides/lec-13-proportions.html#expected-counts",
+    "href": "slides/lec-13-proportions.html#expected-counts",
     "title": "Lecture 13: Proportions and Categorical data",
-    "section": "Compute expected count under independence",
-    "text": "Compute expected count under independence\n\n# Compute expected count under independence\nexpected_10_alive &lt;- (44/78) * (61/78) * 78\nexpected_10_alive\n\n[1] 34.41026\n\n\n\nWe can repeat this for each cell to find what we’d expect if serotype and mortality were truly unrelated.\nThe chi-square test then measures how far our observed counts deviate from these expected counts.\n\n\\[\\chi^2 = \\sum\\frac{(O-E)^2}{E}\\]"
+    "section": "Expected counts",
+    "text": "Expected counts\nFor example:\n\\[\nE_{10,Alive} = P(\\text{Serotype 10}) \\times P(\\text{Alive}) \\times N\n\\]\n\nUsing our totals:\n\n\\[\nP(\\text{Serotype 10}) = \\frac{44}{78}, \\quad P(\\text{Alive}) = \\frac{61}{78}, \\quad N = 78\n\\] \\[\\frac{44}{78}\\cdot \\frac{61}{78} \\cdot 78 = 34.41\\]"
+  },
+  {
+    "objectID": "slides/lec-13-proportions.html#compute-expected-count-in-r",
+    "href": "slides/lec-13-proportions.html#compute-expected-count-in-r",
+    "title": "Lecture 13: Proportions and Categorical data",
+    "section": "Compute expected count in R",
+    "text": "Compute expected count in R\n\n# Compute expected count under independence\nexpected_10_alive &lt;- (44/78) * (61/78) * 78\nexpected_10_alive\n\n[1] 34.41026"
+  },
+  {
+    "objectID": "slides/lec-13-proportions.html#chi-square-test",
+    "href": "slides/lec-13-proportions.html#chi-square-test",
+    "title": "Lecture 13: Proportions and Categorical data",
+    "section": "Chi-square test",
+    "text": "Chi-square test\n\nWe can repeat this for each cell to find what we’d expect if serotype and mortality were truly unrelated.\nThe chi-square test then measures how far our observed counts deviate from these expected counts.\n\n\\[\\chi^2 = \\sum\\frac{(O-E)^2}{E}\\]"
   },
   {
     "objectID": "slides/lec-13-proportions.html#intuition",
@@ -1197,15 +1218,15 @@
     "text": "Visualizing Observed vs Expected Counts\nLet’s visualize how the observed counts compare to the expected counts under independence."
   },
   {
-    "objectID": "slides/lec-13-proportions.html#chi-square-tests-1",
-    "href": "slides/lec-13-proportions.html#chi-square-tests-1",
+    "objectID": "slides/lec-13-proportions.html#chi-square-tests-2",
+    "href": "slides/lec-13-proportions.html#chi-square-tests-2",
     "title": "Lecture 13: Proportions and Categorical data",
     "section": "Chi-square tests",
     "text": "Chi-square tests\nThe chi-square test compares the observed frequencies in each cell to the expected count under \\(H_0\\); if the total differences are large enough, we reject \\(H_0\\):\n\\[\\chi^2 = \\sum_{i=1}^{r \\times c}\\frac{(O_i - E_i)^2}{E_i}\\]\nwhich has a \\(\\chi^2_{(r - 1) \\times (c-1)}\\) distribution, under \\(H_0\\)."
   },
   {
-    "objectID": "slides/lec-13-proportions.html#chi-square-tests-2",
-    "href": "slides/lec-13-proportions.html#chi-square-tests-2",
+    "objectID": "slides/lec-13-proportions.html#chi-square-tests-3",
+    "href": "slides/lec-13-proportions.html#chi-square-tests-3",
     "title": "Lecture 13: Proportions and Categorical data",
     "section": "Chi-square tests",
     "text": "Chi-square tests\n\ndata &lt;- matrix(c(37, 7, 24, 10), \n               byrow = T, nrow = 2)\ndata\n\n     [,1] [,2]\n[1,]   37    7\n[2,]   24   10\n\nchisq.test(data)\n\n\n    Pearson's Chi-squared test with Yates' continuity correction\n\ndata:  data\nX-squared = 1.3359, df = 1, p-value = 0.2478\n\n\nWhat might we conclude at \\(\\alpha = .05\\)?"
@@ -1218,43 +1239,71 @@
     "text": "Conclusion\n\nConclusion: Since the p-value is greater than 0.05, we fail to reject the null hypothesis. There is not enough evidence to conclude that survival differs between Serotype 10 and Serotype 31."
   },
   {
-    "objectID": "slides/lec-13-proportions.html#fishers-exact-test",
-    "href": "slides/lec-13-proportions.html#fishers-exact-test",
+    "objectID": "slides/lec-13-proportions.html#winter-olympics-training",
+    "href": "slides/lec-13-proportions.html#winter-olympics-training",
     "title": "Lecture 13: Proportions and Categorical data",
-    "section": "Fisher’s exact test",
-    "text": "Fisher’s exact test\n\nThe chi-square test relies on asymptotic results (i.e. large sample size), which might not be appropriate if we have small cell counts (common rules of thumb are &gt;5 or &gt;10 observed in each cell).\nFisher’s exact test calculates an exact p-value under a specific distributional assumption.\n\n\n\n\nSerotype\nAlive\nDead\nTotal\n\n\n\n\nSerotype 10\n37\n7\n44\n\n\nSerotype 31\n24\n10\n34\n\n\nTotal\n61\n17\n78"
+    "section": "Winter Olympics training",
+    "text": "Winter Olympics training\nSuppose we were interested in whether a particular training regimen was associated with “success” as measured by whether an athlete qualified for being on the US Winter Olympic Team for giant slalom."
+  },
+  {
+    "objectID": "slides/lec-13-proportions.html#winter-olympics-training-1",
+    "href": "slides/lec-13-proportions.html#winter-olympics-training-1",
+    "title": "Lecture 13: Proportions and Categorical data",
+    "section": "Winter Olympics training",
+    "text": "Winter Olympics training\n\n\n\n\nQualified\nDid Not Qualify\n\n\n\n\nNew Regimen\n129\n97\n\n\nOld Regimen\n112\n114\n\n\n\n\n\n\n    Pearson's Chi-squared test with Yates' continuity correction\n\ndata:  data\nX-squared = 2.2755, df = 1, p-value = 0.1314"
+  },
+  {
+    "objectID": "slides/lec-13-proportions.html#participation",
+    "href": "slides/lec-13-proportions.html#participation",
+    "title": "Lecture 13: Proportions and Categorical data",
+    "section": "Participation",
+    "text": "Participation\n\n\n\n\n\n\nPractice with Chi-square tests in R\n\n\nStart a new Quarto file in R. In your file, complete the following:\n\nWrite out the code to construct the data matrix. Print the data matrix.\nUsing code, conduct a chi square test based on the data matrix.\nWrite a 1-sentence conclusion: What might we conclude using alpha = .05?\n\nRender to html and print to PDF. Turn in the PDF to today’s Canvas participation assignment.\nParticipation due tonight at 11:59pm.\n\n\n\n\n\n\n−+\n04:00"
   },
   {
     "objectID": "slides/lec-13-proportions.html#fishers-exact-test-1",
     "href": "slides/lec-13-proportions.html#fishers-exact-test-1",
     "title": "Lecture 13: Proportions and Categorical data",
     "section": "Fisher’s exact test",
-    "text": "Fisher’s exact test\nFisher’s exact test relies on the hypergeometric distribution (don’t worry about this, seriously).\n\n\n\nSerotype\nAlive\nDead\nTotal\n\n\n\n\nSerotype 10\na\nc\na + c\n\n\nSerotype 31\nb\nd\nb + d\n\n\nTotal\na + b\nc + d\na + b + c + d\n\n\n\nConditionally on the margins (assumed fixed), then each of the individual cells is distributed according to the hypergeometric distribution. We can thus calculate the exact probabilities of obtaining specific tables."
+    "text": "Fisher’s exact test\n\nThe chi-square test relies on asymptotic results (i.e. large sample size), which might not be appropriate if we have small cell counts (common rules of thumb are &gt;5 or &gt;10 observed in each cell)."
   },
   {
     "objectID": "slides/lec-13-proportions.html#fishers-exact-test-2",
     "href": "slides/lec-13-proportions.html#fishers-exact-test-2",
     "title": "Lecture 13: Proportions and Categorical data",
     "section": "Fisher’s exact test",
-    "text": "Fisher’s exact test\nObserved data:\n\n\n\nSerotype\nAlive\nDead\nTotal\n\n\n\n\nSerotype 10\n37\n7\n44\n\n\nSerotype 31\n24\n10\n34\n\n\nTotal\n61\n17\n78\n\n\n\nWe could use the hypergeometric distribution to calculate the probability of seeing this table, assuming 61 total alive patients, 17 dead, and 44 and 34 infections of serotypes 10 and 31, respectively (lots of factorials, so you could imagine it wasn’t fun before modern computers)."
+    "text": "Fisher’s exact test\n\nFisher’s exact test calculates an exact p-value under a specific distributional assumption.\n\n\n\n\nSerotype\nAlive\nDead\nTotal\n\n\n\n\nSerotype 10\n37\n7\n44\n\n\nSerotype 31\n24\n10\n34\n\n\nTotal\n61\n17\n78"
   },
   {
     "objectID": "slides/lec-13-proportions.html#fishers-exact-test-3",
     "href": "slides/lec-13-proportions.html#fishers-exact-test-3",
     "title": "Lecture 13: Proportions and Categorical data",
     "section": "Fisher’s exact test",
-    "text": "Fisher’s exact test\nAnother “possible” table:\n\n\n\nSerotype\nAlive\nDead\nTotal\n\n\n\n\nSerotype 10\n36\n8\n44\n\n\nSerotype 31\n25\n9\n34\n\n\nTotal\n61\n17\n78\n\n\n\n\nHere we’ve displayed another table with the same margins, but with some slightly different potential cell counts.\nAgain we could use the hypergeometric distribution to calculate the probability of observing the cell counts conditionally on fixed margins."
+    "text": "Fisher’s exact test\nFisher’s exact test relies on the hypergeometric distribution (don’t worry about any details regarding this distribution).\n\n\n\nSerotype\nAlive\nDead\nTotal\n\n\n\n\nSerotype 10\na\nc\na + c\n\n\nSerotype 31\nb\nd\nb + d\n\n\nTotal\na + b\nc + d\na + b + c + d\n\n\n\nConditionally on the margins (assumed fixed), then each of the individual cells is distributed according to the hypergeometric distribution. We can thus calculate the exact probabilities of obtaining specific tables."
   },
   {
     "objectID": "slides/lec-13-proportions.html#fishers-exact-test-4",
     "href": "slides/lec-13-proportions.html#fishers-exact-test-4",
     "title": "Lecture 13: Proportions and Categorical data",
     "section": "Fisher’s exact test",
-    "text": "Fisher’s exact test\nFisher’s exact test relies on constructing all possible contingency tables with the same margins, and then summing up probabilities of all tables as extreme or more extreme than the observed data.\n\n\n\n\n\n\nQuestion\n\n\nWhat might “more extreme” mean in the context of contingency tables?"
+    "text": "Fisher’s exact test\nObserved data:\n\n\n\nSerotype\nAlive\nDead\nTotal\n\n\n\n\nSerotype 10\n37\n7\n44\n\n\nSerotype 31\n24\n10\n34\n\n\nTotal\n61\n17\n78\n\n\n\nWe could use the hypergeometric distribution to calculate the probability of seeing this table, assuming 61 total alive patients, 17 dead, and 44 and 34 infections of serotypes 10 and 31, respectively (lots of factorials, so you could imagine it wasn’t fun before modern computers)."
   },
   {
     "objectID": "slides/lec-13-proportions.html#fishers-exact-test-5",
     "href": "slides/lec-13-proportions.html#fishers-exact-test-5",
+    "title": "Lecture 13: Proportions and Categorical data",
+    "section": "Fisher’s exact test",
+    "text": "Fisher’s exact test\nAnother “possible” table:\n\n\n\nSerotype\nAlive\nDead\nTotal\n\n\n\n\nSerotype 10\n36\n8\n44\n\n\nSerotype 31\n25\n9\n34\n\n\nTotal\n61\n17\n78\n\n\n\n\nHere we’ve displayed another table with the same margins, but with some slightly different potential cell counts.\nAgain we could use the hypergeometric distribution to calculate the probability of observing the cell counts conditionally on fixed margins."
+  },
+  {
+    "objectID": "slides/lec-13-proportions.html#fishers-exact-test-6",
+    "href": "slides/lec-13-proportions.html#fishers-exact-test-6",
+    "title": "Lecture 13: Proportions and Categorical data",
+    "section": "Fisher’s exact test",
+    "text": "Fisher’s exact test\nFisher’s exact test relies on constructing all possible contingency tables with the same margins, and then summing up probabilities of all tables as extreme or more extreme than the observed data."
+  },
+  {
+    "objectID": "slides/lec-13-proportions.html#fishers-exact-test-7",
+    "href": "slides/lec-13-proportions.html#fishers-exact-test-7",
     "title": "Lecture 13: Proportions and Categorical data",
     "section": "Fisher’s exact test",
     "text": "Fisher’s exact test\n\\(H_0\\): The proportion of deaths is the same for Serotype 10 and Serotype 31 (no association between serotype and outcome).\n\\(H_A\\): The proportion of deaths differs between serotypes (there is an association)\n\ndata &lt;- matrix(c(37, 7, 24, 10), byrow = T, nrow = 2)\ndata\n\n     [,1] [,2]\n[1,]   37    7\n[2,]   24   10"
@@ -1278,7 +1327,21 @@
     "href": "slides/lec-13-proportions.html#odds-ratios",
     "title": "Lecture 13: Proportions and Categorical data",
     "section": "Odds ratios",
-    "text": "Odds ratios\n\n\n\nSerotype\nAlive\nDead\nTotal\n\n\n\n\nSerotype 10\n37\n7\n44\n\n\nSerotype 31\n24\n10\n34\n\n\nTotal\n61\n17\n78\n\n\n\n\nOdds of death among serotype 10 patients = \\(\\frac{7/44}{37/44} = 7/37\\)\nOdds of death among serotype 31 patients = \\(\\frac{10/34}{24/34} = 10/24\\)\nOdds ratio of death comparing 31 to 10 is thus \\(\\frac{10/24}{7/37} \\approx 2.2\\)"
+    "text": "Odds ratios\n\n\n\nSerotype\nAlive\nDead\nTotal\n\n\n\n\nSerotype 10\n37\n7\n44\n\n\nSerotype 31\n24\n10\n34\n\n\nTotal\n61\n17\n78\n\n\n\n\nOdds of death among serotype 10 patients = \\(\\frac{7/44}{37/44} = 7/37\\)"
+  },
+  {
+    "objectID": "slides/lec-13-proportions.html#odds-ratios-1",
+    "href": "slides/lec-13-proportions.html#odds-ratios-1",
+    "title": "Lecture 13: Proportions and Categorical data",
+    "section": "Odds ratios",
+    "text": "Odds ratios\n\n\n\nSerotype\nAlive\nDead\nTotal\n\n\n\n\nSerotype 10\n37\n7\n44\n\n\nSerotype 31\n24\n10\n34\n\n\nTotal\n61\n17\n78\n\n\n\nHow would we calculate the odds of death among serotype 31 patients?"
+  },
+  {
+    "objectID": "slides/lec-13-proportions.html#odds-ratios-2",
+    "href": "slides/lec-13-proportions.html#odds-ratios-2",
+    "title": "Lecture 13: Proportions and Categorical data",
+    "section": "Odds ratios",
+    "text": "Odds ratios\n\n\n\nSerotype\nAlive\nDead\nTotal\n\n\n\n\nSerotype 10\n37\n7\n44\n\n\nSerotype 31\n24\n10\n34\n\n\nTotal\n61\n17\n78\n\n\n\n\nOdds ratio of death comparing 31 to 10 is thus \\(\\frac{10/24}{7/37} \\approx 2.2\\)"
   },
   {
     "objectID": "slides/lec-13-proportions.html#r-by-c-tables",
@@ -1288,25 +1351,11 @@
     "text": "r by c tables\n\n\n\nSerotype\nAlive\nDead\nTotal\n\n\n\n\nSerotype 10\n37\n7\n44\n\n\nSerotype 15\n60\n12\n72\n\n\nSerotype 20\n97\n9\n106\n\n\nSerotype 31\n24\n10\n34\n\n\nTotal\n218\n38\n256\n\n\n\nWe can also extend the chi-square test and Fisher’s exact test to more general contingency tables (although the notion of an odds ratio no longer makes sense here)."
   },
   {
-    "objectID": "slides/lec-13-proportions.html#winter-olympics-training",
-    "href": "slides/lec-13-proportions.html#winter-olympics-training",
-    "title": "Lecture 13: Proportions and Categorical data",
-    "section": "Winter Olympics training",
-    "text": "Winter Olympics training\nSuppose we were interested in whether a particular training regimen was associated with “success” as measured by whether an athlete qualified for being on the US Winter Olympic Team for giant slalom."
-  },
-  {
-    "objectID": "slides/lec-13-proportions.html#winter-olympics-training-1",
-    "href": "slides/lec-13-proportions.html#winter-olympics-training-1",
-    "title": "Lecture 13: Proportions and Categorical data",
-    "section": "Winter Olympics training",
-    "text": "Winter Olympics training\n\n\n\n\nQualified\nDid Not Qualify\n\n\n\n\nNew Regimen\n129\n97\n\n\nOld Regimen\n112\n114\n\n\n\n\n\n\n    Pearson's Chi-squared test with Yates' continuity correction\n\ndata:  data\nX-squared = 2.2755, df = 1, p-value = 0.1314\n\n\n\n\n\n\n\n\nPractice\n\n\nWrite out the code to 1) construct the data matrix and 2) to conduct a chi square test in R. What might we conclude using alpha = .05?"
-  },
-  {
     "objectID": "slides/lec-13-proportions.html#overview-1",
     "href": "slides/lec-13-proportions.html#overview-1",
     "title": "Lecture 13: Proportions and Categorical data",
     "section": "Overview",
-    "text": "Overview\n\nReviewed AE 03 from last time.\nChi-square test and example\nFisher exact test and example (use if sample sizes aren’t large enough)"
+    "text": "Overview\n\nChi-square test and example\nFisher exact test and example (use if sample sizes aren’t large enough)"
   },
   {
     "objectID": "slides/lec-13-proportions.html#next-class",
@@ -2188,7 +2237,7 @@
     "href": "index.html",
     "title": "BIOS 600 Fall 2026",
     "section": "",
-    "text": "Lecture 0: Welcome to BIOS 600!\nLab 1: Introducing the Toolkit\nLecture 1: What is statistical inference?\n\n\n\nLab 2: Basic Data Visualization\nLecture 2: The nature of data\nLecture 3: Probability basics\nHW 1\n\n\n\nLab 3: Data Wrangling\nLecture 4: Conditional probability\nLecture 5: Medical diagnostics\nHW 2\n\n\n\nLecture 6: Discrete distributions\nLab 4: Practice with ggplot2 and tidyverse\nApplication Exercise 1: Binomial in a Biomedical Setting\nLecture 7: Continuous distributions\nApplication Exercise 2: Poisson in a Hospital Setting\nHW 3\nAE 1 Solution\n\n\n\nExam 01 Topics List\nExam 01 Formula Sheet\nExam 01 Practice Problems\n\n\n\nLecture 8: Central Limit Theorem\nApplication Exercise 3: Central Limit Theorem\nExam 01 Review Slides\nApplication Exercise 4: Exam 01 Review\nAE 01 Solution\nAE 02 Solution\nAE 03 Solution\n\n\n\nLecture 9: Confidence Intervals\nHW 04\n\n\n\nLecture 10: Hypothesis Testing\nLab 5: Code Style\nLecture 11: Compare Means\nHW 5\n\n\n\nLecture 12: ANOVA"
+    "text": "Lecture 0: Welcome to BIOS 600!\nLab 1: Introducing the Toolkit\nLecture 1: What is statistical inference?\n\n\n\nLab 2: Basic Data Visualization\nLecture 2: The nature of data\nLecture 3: Probability basics\nHW 1\n\n\n\nLab 3: Data Wrangling\nLecture 4: Conditional probability\nLecture 5: Medical diagnostics\nHW 2\n\n\n\nLecture 6: Discrete distributions\nLab 4: Practice with ggplot2 and tidyverse\nApplication Exercise 1: Binomial in a Biomedical Setting\nLecture 7: Continuous distributions\nApplication Exercise 2: Poisson in a Hospital Setting\nHW 3\nAE 1 Solution\n\n\n\nExam 01 Topics List\nExam 01 Formula Sheet\nExam 01 Practice Problems\n\n\n\nLecture 8: Central Limit Theorem\nApplication Exercise 3: Central Limit Theorem\nExam 01 Review Slides\nApplication Exercise 4: Exam 01 Review\nAE 01 Solution\nAE 02 Solution\nAE 03 Solution\n\n\n\nLecture 9: Confidence Intervals\nHW 04\n\n\n\nLecture 10: Hypothesis Testing\nLab 5: Code Style\nLecture 11: Compare Means\nHW 5\n\n\n\nLecture 12: ANOVA\n\n\n\nLecture 13: Proportions and categorical data"
   },
   {
     "objectID": "index.html#week-1",
@@ -2252,6 +2301,13 @@
     "title": "BIOS 600 Fall 2026",
     "section": "",
     "text": "Lecture 12: ANOVA"
+  },
+  {
+    "objectID": "index.html#week-9",
+    "href": "index.html#week-9",
+    "title": "BIOS 600 Fall 2026",
+    "section": "",
+    "text": "Lecture 13: Proportions and categorical data"
   },
   {
     "objectID": "hw/hw-04.html",
@@ -2429,6 +2485,300 @@
     "text": "Suppose that in a hospital emergency department, the average number of asthma-related visits per hour is 3. Let \\(Y\\) be the number of asthma visits in one hour. Then \\(Y \\sim Poisson(\\lambda=3)\\)\n\n\nWhat is the probability that in a given hour, exactly 5 asthma patients arrive? Use the dpois function to compute your answer and provide a 1-sentence conclusion.\n\n# type code here\n\n[type response here]"
   },
   {
+    "objectID": "ae/ae-05-anova.html",
+    "href": "ae/ae-05-anova.html",
+    "title": "AE 05: ANOVA",
+    "section": "",
+    "text": "library(tidyverse)"
+  },
+  {
+    "objectID": "ae/ae-05-anova.html#anova-activity-do-holistic-remedies-lower-systolic-blood-pressure",
+    "href": "ae/ae-05-anova.html#anova-activity-do-holistic-remedies-lower-systolic-blood-pressure",
+    "title": "AE 05: ANOVA",
+    "section": "ANOVA Activity: Do holistic remedies lower systolic blood pressure?",
+    "text": "ANOVA Activity: Do holistic remedies lower systolic blood pressure?\nA researcher tests whether three different interventions produce different reductions in systolic blood pressure (mmHg) after 8 weeks:\n\nPlacebo (control tea)\n\nHerbal Tea (a marketed calming herbal blend)\n\nMindfulness (guided mindfulness practice)\n\nYou will simulate data, visualize group differences, run an ANOVA, and interpret the results."
+  },
+  {
+    "objectID": "ae/ae-05-anova.html#exercise-1-simulate-the-data",
+    "href": "ae/ae-05-anova.html#exercise-1-simulate-the-data",
+    "title": "AE 05: ANOVA",
+    "section": "Exercise 1: Simulate the data",
+    "text": "Exercise 1: Simulate the data\nWe simulate 30 participants per group. The numbers are set so the placebo group has a small mean reduction, Herbal Tea a moderate reduction, and Mindfulness a larger reduction.\nRun the following code to simulate the data.\n\nset.seed(2025)\n\nn &lt;- 30\n\nbp_data &lt;- data.frame(\n  group = rep(c(\"Placebo\", \"HerbalTea\", \"Mindfulness\"), each = n),\n  reduction = c(\n    rnorm(n, mean = 2, sd = 5),   # Placebo: mean reduction ~2 mmHg\n    rnorm(n, mean = 5, sd = 5),   # Herbal Tea: mean reduction ~5 mmHg\n    rnorm(n, mean = 7, sd = 5)    # Mindfulness: mean reduction ~7 mmHg\n  )\n)\n\nhead(bp_data)\n\n    group reduction\n1 Placebo  5.103784\n2 Placebo  2.178207\n3 Placebo  5.865772\n4 Placebo  8.362445\n5 Placebo  3.854877\n6 Placebo  1.185728"
+  },
+  {
+    "objectID": "ae/ae-05-anova.html#exercise-2-visualize-the-data",
+    "href": "ae/ae-05-anova.html#exercise-2-visualize-the-data",
+    "title": "AE 05: ANOVA",
+    "section": "Exercise 2: Visualize the data",
+    "text": "Exercise 2: Visualize the data\nUse the following code to create a boxplot of reduction by group. What pattern(s) do you notice?\n\nggplot(bp_data, \n       aes(x = group, y = reduction, fill = group)) +\n  geom_boxplot(alpha = 0.7) +\n  labs(title = \"Systolic BP Reduction by Intervention\",\n       x = \"Intervention\",\n       y = \"Reduction in systolic BP (mmHg)\") +\n  theme_minimal() +\n  theme(legend.position = \"none\")\n\n\n\n\n\n\n\n\n[type response here]"
+  },
+  {
+    "objectID": "ae/ae-05-anova.html#exercise-3-run-the-anova",
+    "href": "ae/ae-05-anova.html#exercise-3-run-the-anova",
+    "title": "AE 05: ANOVA",
+    "section": "Exercise 3: Run the ANOVA",
+    "text": "Exercise 3: Run the ANOVA\nWe test:\n\\(H_0\\): mean reduction is the same in all groups\n\\(H_A\\): at least one group is different\nAssume a significance level of \\(\\alpha = 0.05\\). Run an ANOVA using the syntax in the slides, printing out your output.\n\n# type code here"
+  },
+  {
+    "objectID": "ae/ae-05-anova.html#exercise-4-conclusion",
+    "href": "ae/ae-05-anova.html#exercise-4-conclusion",
+    "title": "AE 05: ANOVA",
+    "section": "Exercise 4: Conclusion",
+    "text": "Exercise 4: Conclusion\nBased on your ANOVA result, what is your p-value? Do we reject or fail to reject \\(H_0\\)? What is your conclusion statement?"
+  },
+  {
+    "objectID": "ae/ae-03-template.html",
+    "href": "ae/ae-03-template.html",
+    "title": "AE 03: Central Limit Theorem",
+    "section": "",
+    "text": "Imagine a new treatment for a disease. Each patient either responds (1) or does not respond (0) to the treatment. Suppose the probability of response is 0.3.\n\n\nWe want to simulate drawing samples of 30 patients at a time, record the average response rate, and repeat this process 1000 times. Then we’ll look at the histogram of these sample averages to see what shape it takes.\nThe following code simulates this situation.\n\nRun the following code.\n\n\nset.seed(123)\n\n# Parameters\np &lt;- 0.3     # probability of success\nn &lt;- 30      # 30 patients at a time\nnsim &lt;- 1000 # number of simulations\n\n# Simulate 1000 sample means\nmeans &lt;- replicate(nsim, \n                   mean(rbinom(n, size = 1, prob = p)))\n\n# Plot histogram of sample means\nhist(means, breaks = 30, \n     col = \"skyblue\", \n     main = \"Sample Means (Bernoulli, p=0.3, n=30)\",\n     xlab = \"Sample Mean\")\n\n\n\n\n\n\n\n\n\nWhat do you notice about the shape of the histogram of sample means?\n\n[type response here]"
+  },
+  {
+    "objectID": "ae/ae-03-template.html#bernoulli-distribution-treatment-response",
+    "href": "ae/ae-03-template.html#bernoulli-distribution-treatment-response",
+    "title": "AE 03: Central Limit Theorem",
+    "section": "",
+    "text": "Imagine a new treatment for a disease. Each patient either responds (1) or does not respond (0) to the treatment. Suppose the probability of response is 0.3.\n\n\nWe want to simulate drawing samples of 30 patients at a time, record the average response rate, and repeat this process 1000 times. Then we’ll look at the histogram of these sample averages to see what shape it takes.\nThe following code simulates this situation.\n\nRun the following code.\n\n\nset.seed(123)\n\n# Parameters\np &lt;- 0.3     # probability of success\nn &lt;- 30      # 30 patients at a time\nnsim &lt;- 1000 # number of simulations\n\n# Simulate 1000 sample means\nmeans &lt;- replicate(nsim, \n                   mean(rbinom(n, size = 1, prob = p)))\n\n# Plot histogram of sample means\nhist(means, breaks = 30, \n     col = \"skyblue\", \n     main = \"Sample Means (Bernoulli, p=0.3, n=30)\",\n     xlab = \"Sample Mean\")\n\n\n\n\n\n\n\n\n\nWhat do you notice about the shape of the histogram of sample means?\n\n[type response here]"
+  },
+  {
+    "objectID": "ae/ae-03-template.html#binomial-distribution-number-of-infected-patients",
+    "href": "ae/ae-03-template.html#binomial-distribution-number-of-infected-patients",
+    "title": "AE 03: Central Limit Theorem",
+    "section": "Binomial Distribution (Number of Infected Patients)",
+    "text": "Binomial Distribution (Number of Infected Patients)\nSuppose in a community, the number of patients infected in a given week follows a Binomial distribution with parameters \\(n=20\\) and \\(p=0.1\\) (i.e., 20 people at risk each week, 10% chance of infection per person).\nHere, we simulate 40 weeks of data (sample size = 40), each week producing a Binomial(20, 0.1) random number. We then calculate the average across those 40 weeks. This whole process is repeated 1000 times, and we examine the histogram of the averages.\n\nExercise 2\n\nRun the following code to produce the simulation and histogram of results.\n\n\nset.seed(123)\n\n# Parameters\nsize &lt;- 20   # 20 people at risk each week\np &lt;- 0.1     # probability of infection = 0.1\nn &lt;- 40      # simulate 40 weeks of data\nnsim &lt;- 1000 # do this simulation 1000 times\n\n# Simulate 1000 sample means\nmeans &lt;- replicate(nsim, \n                   mean(rbinom(n, size = size, prob = p)))\n\n# Plot histogram of sample means\nhist(means, breaks = 30, \n     col = \"lightgreen\", \n     main = \"Sample Means (Binomial, size=20, p=0.1, n=40)\",\n     xlab = \"Sample Mean\")\n\n\n\n\n\n\n\n\n\nWhat do you notice about the shape of the histogram of sample means?\n\n[type response here]"
+  },
+  {
+    "objectID": "ae/ae-03-template.html#poisson-distribution-er-visits",
+    "href": "ae/ae-03-template.html#poisson-distribution-er-visits",
+    "title": "AE 03: Central Limit Theorem",
+    "section": "Poisson Distribution: (ER Visits)",
+    "text": "Poisson Distribution: (ER Visits)\nSuppose the number of asthma-related ER visits per day follows a Poisson distribution with average \\(\\lambda = 2\\).\nHere, we simulate 50 days of ER visits at a time (sample size = 50), calculate the mean number of visits within those 50 days, and then repeat this 1000 times. Finally, we look at the histogram of sample means to see how it compares to a bell curve.\n\nExercise 3\n\nRun the following code to produce the simulation and histogram of results.\n\n\nset.seed(123)\n\n# Parameters\nlambda &lt;- 2  # Poisson rate\nn &lt;- 50      # sample size\nnsim &lt;- 1000 # number of simulations\n\n# Simulate 1000 sample means\nmeans &lt;- replicate(nsim, \n                   mean(rpois(n, lambda = lambda)))\n\n# Plot histogram of sample means\nhist(means, breaks = 30, \n     col = \"pink\", \n     main = \"Sample Means (Poisson, λ=2, n=50)\",\n     xlab = \"Sample Mean\")\n\n\n\n\n\n\n\n\n\nDoes the histogram resemble a bell curve?\n\n[type response here]\n\nUse the code chunk below to repeat the above simulation and produce a new histogram, making one small change: change n &lt;- 50 to n &lt;- 100. Run the code.\n\n\nHow does the histogram in part (c) compare to the one in part (b)? Why does this occur?\n\n[type response here]"
+  },
+  {
+    "objectID": "ae/ae-03-template.html#takeaway",
+    "href": "ae/ae-03-template.html#takeaway",
+    "title": "AE 03: Central Limit Theorem",
+    "section": "Takeaway",
+    "text": "Takeaway\nAcross different distributions (Bernoulli, Binomial, Poisson), when we look at the distribution of sample means for reasonably large sample sizes, the shape becomes approximately normal.\nThis is the Central Limit Theorem in action!"
+  },
+  {
+    "objectID": "ae/ae-03-clt.html",
+    "href": "ae/ae-03-clt.html",
+    "title": "AE 03: Central Limit Theorem",
+    "section": "",
+    "text": "Important\n\n\n\nThis Application Exercise is due on Wednesday, September 16 at 11:59pm. To be considered on time, the following must be done by the due date:\n\nFinal .pdf file submitted on Canvas\nWhile late work is accepted for HW and Labs, no late work is accepted for AEs."
+  },
+  {
+    "objectID": "ae/ae-03-clt.html#getting-started",
+    "href": "ae/ae-03-clt.html#getting-started",
+    "title": "AE 03: Central Limit Theorem",
+    "section": "Getting started",
+    "text": "Getting started\nDownload the template for today’s Application Exercise (AE) from Canvas. Open the file, and type your name and today’s date in the YAML. Save your file as ae-03.qmd in your project folder.\nRender your document to ensure the formatting all looks good."
+  },
+  {
+    "objectID": "ae/ae-03-clt.html#learning-goal",
+    "href": "ae/ae-03-clt.html#learning-goal",
+    "title": "AE 03: Central Limit Theorem",
+    "section": "Learning Goal",
+    "text": "Learning Goal\nToday you will explore the Central Limit Theorem (CLT):\n\nThe average of many independent samples tends to follow a normal distribution, even if the original data are not normal, as long as the sample size is large enough.\n\nYou will run short simulations from different distributions and see how the sampling distribution of the mean behaves."
+  },
+  {
+    "objectID": "ae/ae-03-clt.html#bernoulli-distribution-treatment-response",
+    "href": "ae/ae-03-clt.html#bernoulli-distribution-treatment-response",
+    "title": "AE 03: Central Limit Theorem",
+    "section": "Bernoulli Distribution (Treatment Response)",
+    "text": "Bernoulli Distribution (Treatment Response)\nImagine a new treatment for a disease. Each patient either responds (1) or does not respond (0) to the treatment. Suppose the probability of response is 0.3.\nAdd in something about simply doing rbinom and asking student to describe what is happening.\n\n\nExercise 1\nWe want to simulate drawing samples of 30 patients at a time, record the average response rate, and repeat this process 1000 times. Then we’ll look at the histogram of these sample averages to see what shape it takes.\nThe following code simulates this situation.\n\nRun the following code.\n\n\nset.seed(123)\n\n# Parameters\np &lt;- 0.3     # probability of success\nn &lt;- 30      # 30 patients at a time\nnsim &lt;- 1000 # number of simulations\n\n# Simulate 1000 sample means\nmeans &lt;- replicate(nsim, \n                   mean(rbinom(n, size = 1, prob = p)))\n\n# Plot histogram of sample means\nhist(means, breaks = 30, \n     col = \"skyblue\", \n     main = \"Sample Means (Bernoulli, p=0.3, n=30)\",\n     xlab = \"Sample Mean\")\n\n\n\n\n\n\n\n\n\nWhat do you notice about the shape of the histogram of sample means?\n\n[type response here]"
+  },
+  {
+    "objectID": "ae/ae-03-clt.html#binomial-distribution-number-of-infected-patients",
+    "href": "ae/ae-03-clt.html#binomial-distribution-number-of-infected-patients",
+    "title": "AE 03: Central Limit Theorem",
+    "section": "Binomial Distribution (Number of Infected Patients)",
+    "text": "Binomial Distribution (Number of Infected Patients)\nSuppose in a community, the number of patients infected in a given week follows a Binomial distribution with parameters \\(n=20\\) and \\(p=0.1\\) (i.e., 20 people at risk each week, 10% chance of infection per person).\nHere, we simulate 40 weeks of data (sample size = 40), each week producing a Binomial(20, 0.1) random number. We then calculate the average across those 40 weeks. This whole process is repeated 1000 times, and we examine the histogram of the averages.\n\nExercise 2\n\nRun the following code to produce the simulation and histogram of results.\n\n\nset.seed(123)\n\n# Parameters\nsize &lt;- 20   # 20 people at risk each week\np &lt;- 0.1     # probability of infection = 0.1\nn &lt;- 40      # simulate 40 weeks of data\nnsim &lt;- 1000 # do this simulation 1000 times\n\n# Simulate 1000 sample means\nmeans &lt;- replicate(nsim, \n                   mean(rbinom(n, size = size, prob = p)))\n\n# Plot histogram of sample means\nhist(means, breaks = 30, \n     col = \"lightgreen\", \n     main = \"Sample Means (Binomial, size=20, p=0.1, n=40)\",\n     xlab = \"Sample Mean\")\n\n\n\n\n\n\n\n\n\nWhat do you notice about the shape of the histogram of sample means?\n\n[type response here]"
+  },
+  {
+    "objectID": "ae/ae-03-clt.html#poisson-distribution-er-visits",
+    "href": "ae/ae-03-clt.html#poisson-distribution-er-visits",
+    "title": "AE 03: Central Limit Theorem",
+    "section": "Poisson Distribution: (ER Visits)",
+    "text": "Poisson Distribution: (ER Visits)\nSuppose the number of asthma-related ER visits per day follows a Poisson distribution with average \\(\\lambda = 2\\).\nHere, we simulate 50 days of ER visits at a time (sample size = 50), calculate the mean number of visits within those 50 days, and then repeat this 1000 times. Finally, we look at the histogram of sample means to see how it compares to a bell curve.\n\nExercise 3\n\nRun the following code to produce the simulation and histogram of results.\n\n\nset.seed(123)\n\n# Parameters\nlambda &lt;- 2  # Poisson rate\nn &lt;- 50      # sample size\nnsim &lt;- 1000 # number of simulations\n\n# Simulate 1000 sample means\nmeans &lt;- replicate(nsim, \n                   mean(rpois(n, lambda = lambda)))\n\n# Plot histogram of sample means\nhist(means, breaks = 30, \n     col = \"pink\", \n     main = \"Sample Means (Poisson, λ=2, n=50)\",\n     xlab = \"Sample Mean\")\n\n\n\n\n\n\n\n\n\nDoes the histogram resemble a bell curve?\n\n[type response here]\n\nUse the code chunk below to repeat the above simulation and produce a new histogram, making one small change: change n &lt;- 50 to n &lt;- 100. Run the code.\n\n\nHow does the histogram in part (c) compare to the one in part (b)? Why does this occur?\n\n[type response here]"
+  },
+  {
+    "objectID": "ae/ae-03-clt.html#takeaway",
+    "href": "ae/ae-03-clt.html#takeaway",
+    "title": "AE 03: Central Limit Theorem",
+    "section": "Takeaway",
+    "text": "Takeaway\nAcross different distributions (Bernoulli, Binomial, Poisson), when we look at the distribution of sample means for reasonably large sample sizes, the shape becomes approximately normal.\nThis is the Central Limit Theorem in action!"
+  },
+  {
+    "objectID": "ae/ae-03-clt.html#submission",
+    "href": "ae/ae-03-clt.html#submission",
+    "title": "AE 03: Central Limit Theorem",
+    "section": "Submission",
+    "text": "Submission\nRender to PDF and submit on Canvas &gt; Assignments."
+  },
+  {
+    "objectID": "ae/ae-02-poisson.html",
+    "href": "ae/ae-02-poisson.html",
+    "title": "Application Exercise 2: Poisson",
+    "section": "",
+    "text": "Important\n\n\n\nThis Application Exercise is due on Friday, September 11 at 11:59pm. To be considered on time, the following must be done by the due date:\n\nFinal .pdf file submitted on Canvas\nWhile late work is accepted for HW and Labs, no late work is accepted for AEs."
+  },
+  {
+    "objectID": "ae/ae-02-poisson.html#getting-started",
+    "href": "ae/ae-02-poisson.html#getting-started",
+    "title": "Application Exercise 2: Poisson",
+    "section": "Getting started",
+    "text": "Getting started\nDownload the template for today’s Application Exercise (AE) from Canvas. Open the file, and type your name and today’s date in the YAML. Save your file as ae-02.qmd in your project folder.\nRender your document to ensure the formatting all looks good."
+  },
+  {
+    "objectID": "ae/ae-02-poisson.html#hospital-visits-poisson-example",
+    "href": "ae/ae-02-poisson.html#hospital-visits-poisson-example",
+    "title": "Application Exercise 2: Poisson",
+    "section": "Hospital Visits: Poisson Example",
+    "text": "Hospital Visits: Poisson Example\nSuppose that in a hospital emergency department, the average number of asthma-related visits per hour is 3. Let \\(Y\\) be the number of asthma visits in one hour. Then \\(Y \\sim Poisson(\\lambda=3)\\)\n\nExercise 1\nWhat is the probability that in a given hour, exactly 5 asthma patients arrive? Use the dpois function to compute your answer and provide a 1-sentence conclusion.\n\n# type code here\n\n[type response here]"
+  },
+  {
+    "objectID": "ae/ae-02-poisson.html#submission",
+    "href": "ae/ae-02-poisson.html#submission",
+    "title": "Application Exercise 2: Poisson",
+    "section": "Submission",
+    "text": "Submission\nAs you’ve seen previously, we can Render the template into an .html file that can be opened by any web browser. To export it as a .pdf, open the file in your web browser and then print to or save as a .pdf document. Your TAs will show you how if you need help! (There is a way to directly knit to a .pdf file, but it’s quite a bit more involved.)\nYou will submit the PDF documents for Application Exercises directly to Canvas.\nTo submit your assignment:\n\nAccess the Application Exercise through Modules on the BIOS 600 Canvas site.\nUpload your PDF."
+  },
+  {
+    "objectID": "ae/ae-01.html",
+    "href": "ae/ae-01.html",
+    "title": "Participation: Binomial in a Biomedical Setting",
+    "section": "",
+    "text": "Important\n\n\n\nThis Application Exercise is due on Wednesday, September 9 at 11:59pm. To be considered on time, the following must be done by the due date:\n\nFinal .pdf file submitted on Canvas\nWhile late work is accepted for HW and Labs, no late work is accepted for AEs."
+  },
+  {
+    "objectID": "ae/ae-01.html#getting-started",
+    "href": "ae/ae-01.html#getting-started",
+    "title": "Participation: Binomial in a Biomedical Setting",
+    "section": "Getting started",
+    "text": "Getting started\nDownload the template for today’s Application Exercise (AE) from Canvas. Open the file, and type your name and today’s date in the YAML. Save your file as ae-01.qmd in your project folder.\nRender your document to ensure the formatting all looks good."
+  },
+  {
+    "objectID": "ae/ae-01.html#clinical-trial-example",
+    "href": "ae/ae-01.html#clinical-trial-example",
+    "title": "Participation: Binomial in a Biomedical Setting",
+    "section": "Clinical Trial Example",
+    "text": "Clinical Trial Example\nSuppose 5 people receive a new vaccine. From clinical trial data, the probability that any individual experiences a mild side effect (e.g., sore arm, mild fever) is 0.2.\nLet \\(X\\) be the number of people (out of 5) who experience a mild side effect.\nThen \\(X \\sim \\text{Binomial}(n=5, p=0.2)\\).\n\nExercise 1\nWhat is the probability that exactly 2 out of 5 people experience a mild side effect? Use the dbinom function.\n\n# type code here"
+  },
+  {
+    "objectID": "ae/ae-01.html#exercise-2",
+    "href": "ae/ae-01.html#exercise-2",
+    "title": "Participation: Binomial in a Biomedical Setting",
+    "section": "Exercise 2",
+    "text": "Exercise 2\nWhat is the probability that at least 1 out of 5 people experiences a mild side effect?\nHint: Use the complement rule: \\(P(X \\geq 1)=1−P(X=0)\\)\nUse the dbinom function to compute your answer and provide a 1-sentence conclusion.\n\n# type code here"
+  },
+  {
+    "objectID": "ae/ae-01.html#submission",
+    "href": "ae/ae-01.html#submission",
+    "title": "Participation: Binomial in a Biomedical Setting",
+    "section": "Submission",
+    "text": "Submission\nAs you’ve seen previously, we can Render the template into an .html file that can be opened by any web browser. To export it as a .pdf, open the file in your web browser and then print to or save as a .pdf document. Your TAs will show you how if you need help! (There is a way to directly knit to a .pdf file, but it’s quite a bit more involved.)\nYou will submit the PDF documents for Application Exercises directly to Canvas.\nTo submit your assignment:\n\nAccess the Application Exercise through Modules on the BIOS 600 Canvas site.\nUpload your PDF."
+  },
+  {
+    "objectID": "ae/ae-01-solution.html",
+    "href": "ae/ae-01-solution.html",
+    "title": "Application Exercise 01: Practice with Binomial",
+    "section": "",
+    "text": "Suppose 5 people receive a new vaccine. From clinical trial data, the probability that any individual experiences a mild side effect (e.g., sore arm, mild fever) is 0.2.\nLet \\(X\\) be the number of people (out of 5) who experience a mild side effect.\nThen \\(X \\sim \\text{Binomial}(n=5, p=0.2)\\).\n\n\nWhat is the probability that exactly 2 out of 5 people experience a mild side effect? Use the dbinom function to compute your answer and provide a 1-sentence conclusion.\n\ndbinom(2,size=5,prob=0.2)\n\n[1] 0.2048\n\n\nSo, there is about a 20.5% chance that exactly 2 people will have side effects."
+  },
+  {
+    "objectID": "ae/ae-01-solution.html#a-clinical-trial-binomial-example",
+    "href": "ae/ae-01-solution.html#a-clinical-trial-binomial-example",
+    "title": "Application Exercise 01: Practice with Binomial",
+    "section": "",
+    "text": "Suppose 5 people receive a new vaccine. From clinical trial data, the probability that any individual experiences a mild side effect (e.g., sore arm, mild fever) is 0.2.\nLet \\(X\\) be the number of people (out of 5) who experience a mild side effect.\nThen \\(X \\sim \\text{Binomial}(n=5, p=0.2)\\).\n\n\nWhat is the probability that exactly 2 out of 5 people experience a mild side effect? Use the dbinom function to compute your answer and provide a 1-sentence conclusion.\n\ndbinom(2,size=5,prob=0.2)\n\n[1] 0.2048\n\n\nSo, there is about a 20.5% chance that exactly 2 people will have side effects."
+  },
+  {
+    "objectID": "ae/ae-01-solution.html#exercise-2",
+    "href": "ae/ae-01-solution.html#exercise-2",
+    "title": "Application Exercise 01: Practice with Binomial",
+    "section": "Exercise 2",
+    "text": "Exercise 2\nWhat is the probability that at least 1 out of 5 people experiences a mild side effect? (Hint: Use the complement rule: \\(P(X \\geq 1)=1−P(X=0)\\)). Use the dbinom function to compute your answer and provide a 1-sentence conclusion.\n\n1-dbinom(0,size=5,prob=0.2)\n\n[1] 0.67232\n\n\nSo, there is about a 67% chance that at least 1 person will have a mild side effect."
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "About this site"
+  },
+  {
+    "objectID": "ae/ae-01-template.html",
+    "href": "ae/ae-01-template.html",
+    "title": "Application Exercise: Binomial in a Biomedical Setting",
+    "section": "",
+    "text": "Suppose 5 people receive a new vaccine. From clinical trial data, the probability that any individual experiences a mild side effect (e.g., sore arm, mild fever) is 0.2.\nLet \\(X\\) be the number of people (out of 5) who experience a mild side effect.\nThen \\(X \\sim \\text{Binomial}(n=5, p=0.2)\\).\n\n\nWhat is the probability that exactly 2 out of 5 people experience a mild side effect? Use the dbinom function to compute your answer and provide a 1-sentence conclusion.\n\n# type code here\n\n[type response here]"
+  },
+  {
+    "objectID": "ae/ae-01-template.html#a-clinical-trial-binomial-example",
+    "href": "ae/ae-01-template.html#a-clinical-trial-binomial-example",
+    "title": "Application Exercise: Binomial in a Biomedical Setting",
+    "section": "",
+    "text": "Suppose 5 people receive a new vaccine. From clinical trial data, the probability that any individual experiences a mild side effect (e.g., sore arm, mild fever) is 0.2.\nLet \\(X\\) be the number of people (out of 5) who experience a mild side effect.\nThen \\(X \\sim \\text{Binomial}(n=5, p=0.2)\\).\n\n\nWhat is the probability that exactly 2 out of 5 people experience a mild side effect? Use the dbinom function to compute your answer and provide a 1-sentence conclusion.\n\n# type code here\n\n[type response here]"
+  },
+  {
+    "objectID": "ae/ae-01-template.html#exercise-2",
+    "href": "ae/ae-01-template.html#exercise-2",
+    "title": "Application Exercise: Binomial in a Biomedical Setting",
+    "section": "Exercise 2",
+    "text": "Exercise 2\nWhat is the probability that at least 1 out of 5 people experiences a mild side effect? (Hint: Use the complement rule: \\(P(X \\geq 1)=1−P(X=0)\\)). Use the dbinom function to compute your answer and provide a 1-sentence conclusion.\n\n# type code here\n\n[type response here]"
+  },
+  {
+    "objectID": "ae/ae-01-template.html#submission",
+    "href": "ae/ae-01-template.html#submission",
+    "title": "Application Exercise: Binomial in a Biomedical Setting",
+    "section": "Submission",
+    "text": "Submission\nRender to PDF and submit on Canvas &gt; Assignments."
+  },
+  {
+    "objectID": "ae/ae-02-poisson-template.html",
+    "href": "ae/ae-02-poisson-template.html",
+    "title": "Application Exercise 2: Poisson",
+    "section": "",
+    "text": "Suppose that in a hospital emergency department, the average number of asthma-related visits per hour is 3. Let \\(Y\\) be the number of asthma visits in one hour. Then \\(Y \\sim Poisson(\\lambda=3)\\)\n\n\nWhat is the probability that in a given hour, exactly 5 asthma patients arrive? Use the dpois function to compute your answer and provide a 1-sentence conclusion.\n\n# type code here\n\n[type response here]"
+  },
+  {
+    "objectID": "ae/ae-02-poisson-template.html#hospital-visits-poisson-example",
+    "href": "ae/ae-02-poisson-template.html#hospital-visits-poisson-example",
+    "title": "Application Exercise 2: Poisson",
+    "section": "",
+    "text": "Suppose that in a hospital emergency department, the average number of asthma-related visits per hour is 3. Let \\(Y\\) be the number of asthma visits in one hour. Then \\(Y \\sim Poisson(\\lambda=3)\\)\n\n\nWhat is the probability that in a given hour, exactly 5 asthma patients arrive? Use the dpois function to compute your answer and provide a 1-sentence conclusion.\n\n# type code here\n\n[type response here]"
+  },
+  {
+    "objectID": "ae/ae-02-solution.html",
+    "href": "ae/ae-02-solution.html",
+    "title": "Application Exercise 02: Poisson",
+    "section": "",
+    "text": "What is the probability that in a given hour, exactly 5 asthma patients arrive? Use the dpois function to compute your answer and provide a 1-sentence conclusion.\n\ndpois(5, lambda = 3)\n\n[1] 0.1008188\n\n\nSo, there is about a 10% chance of exactly 5 asthma patients in one hour."
+  },
+  {
+    "objectID": "ae/ae-03-solution.html",
+    "href": "ae/ae-03-solution.html",
+    "title": "Application Exercise 03: CLT",
+    "section": "",
+    "text": "We want to simulate drawing samples of 30 patients at a time, record the average response rate, and repeat this process 1000 times. Then we’ll look at the histogram of these sample averages to see what shape it takes.\nThe following code simulates this situation.\n\nRun the following code.\n\n\nset.seed(123)\n\n# Parameters\np &lt;- 0.3     # probability of success\nn &lt;- 30      # 30 patients at a time\nnsim &lt;- 1000 # number of simulations\n\n# Simulate 1000 sample means\nmeans &lt;- replicate(nsim, \n                   mean(rbinom(n, size = 1, prob = p)))\n\n# Plot histogram of sample means\nhist(means, breaks = 30, \n     col = \"skyblue\", \n     main = \"Sample Means (Bernoulli, p=0.3, n=30)\",\n     xlab = \"Sample Mean\")\n\n\n\n\n\n\n\n\n\nWhat do you notice about the shape of the histogram of sample means?\n\nThough there are some gaps in the histogram, the shape is relatively normally distributed, with mean around 0.3. This makes sense since the original distribution is Bernoulli with \\(p=0.3\\)."
+  },
+  {
+    "objectID": "ae/ae-03-solution.html#binomial-distribution-number-of-infected-patients",
+    "href": "ae/ae-03-solution.html#binomial-distribution-number-of-infected-patients",
+    "title": "Application Exercise 03: CLT",
+    "section": "Binomial Distribution (Number of Infected Patients)",
+    "text": "Binomial Distribution (Number of Infected Patients)\nSuppose in a community, the number of patients infected in a given week follows a Binomial distribution with parameters \\(n=20\\) and \\(p=0.1\\) (i.e., 20 people at risk each week, 10% chance of infection per person).\nHere, we simulate 40 weeks of data (sample size = 40), each week producing a Binomial(20, 0.1) random number. We then calculate the average across those 40 weeks. This whole process is repeated 1000 times, and we examine the histogram of the averages.\n\nExercise 2\n\nRun the following code to produce the simulation and histogram of results.\n\n\nset.seed(123)\n\n# Parameters\nsize &lt;- 20   # 20 people at risk each week\np &lt;- 0.1     # probability of infection = 0.1\nn &lt;- 40      # simulate 40 weeks of data\nnsim &lt;- 1000 # do this simulation 1000 times\n\n# Simulate 1000 sample means\nmeans &lt;- replicate(nsim, \n                   mean(rbinom(n, size = size, prob = p)))\n\n# Plot histogram of sample means\nhist(means, breaks = 30, \n     col = \"lightgreen\", \n     main = \"Sample Means (Binomial, size=20, p=0.1, n=40)\",\n     xlab = \"Sample Mean\")\n\n\n\n\n\n\n\n\n\nWhat do you notice about the shape of the histogram of sample means?\n\nThe histogram is relatively normally distributed, with sample means centering around 2, which equals \\(np = 20 \\cdot .1\\)."
+  },
+  {
+    "objectID": "ae/ae-03-solution.html#poisson-distribution-er-visits",
+    "href": "ae/ae-03-solution.html#poisson-distribution-er-visits",
+    "title": "Application Exercise 03: CLT",
+    "section": "Poisson Distribution: (ER Visits)",
+    "text": "Poisson Distribution: (ER Visits)\nSuppose the number of asthma-related ER visits per day follows a Poisson distribution with average \\(\\lambda = 2\\).\nHere, we simulate 50 days of ER visits at a time (sample size = 50), calculate the mean number of visits within those 50 days, and then repeat this 1000 times. Finally, we look at the histogram of sample means to see how it compares to a bell curve.\n\nExercise 3\n\nRun the following code to produce the simulation and histogram of results.\n\n\nset.seed(123)\n\n# Parameters\nlambda &lt;- 2  # Poisson rate\nn &lt;- 50      # sample size\nnsim &lt;- 1000 # number of simulations\n\n# Simulate 1000 sample means\nmeans &lt;- replicate(nsim, \n                   mean(rpois(n, lambda = lambda)))\n\n# Plot histogram of sample means\nhist(means, breaks = 30, \n     col = \"pink\", \n     main = \"Sample Means (Poisson, λ=2, n=50)\",\n     xlab = \"Sample Mean\")\n\n\n\n\n\n\n\n\n\nDoes the histogram resemble a bell curve?\n\nYes! The histogram generally represents a bell curve. Some jumps in the bars but this may just be a result of the binwidth chosen in the histogram.\n\nUse the code chunk below to repeat the above simulation and produce a new histogram, making one small change: change n &lt;- 50 to n &lt;- 100. Run the code.\n\n\nset.seed(123)\n\n# Parameters\nlambda &lt;- 2  # Poisson rate\nn &lt;- 100      # sample size\nnsim &lt;- 1000 # number of simulations\n\n# Simulate 1000 sample means\nmeans &lt;- replicate(nsim, \n                   mean(rpois(n, lambda = lambda)))\n\n# Plot histogram of sample means\nhist(means, breaks = 30, \n     col = \"pink\", \n     main = \"Sample Means (Poisson, λ=2, n=50)\",\n     xlab = \"Sample Mean\")\n\n\n\n\n\n\n\n\n\nHow does the histogram in part (c) compare to the one in part (b)? Why does this occur?\n\nThe histogram here is also normally distributed, and it’s more “filled in” compared to the one in part (b). This is due to a larger sample size. As sample size gets larger and larger, the distribution of sample means will resemble a normal curve more and more, which is the conclusion of the Central Limit Theorem!"
+  },
+  {
     "objectID": "ae/ae-04-exam-01-review.html",
     "href": "ae/ae-04-exam-01-review.html",
     "title": "AE 04: Exam 01 Review",
@@ -2532,258 +2882,6 @@
     "title": "AE 04: Exam 01 Review",
     "section": "Submission",
     "text": "Submission\nRender to PDF and submit on Canvas &gt; Assignments."
-  },
-  {
-    "objectID": "ae/ae-03-solution.html",
-    "href": "ae/ae-03-solution.html",
-    "title": "Application Exercise 03: CLT",
-    "section": "",
-    "text": "We want to simulate drawing samples of 30 patients at a time, record the average response rate, and repeat this process 1000 times. Then we’ll look at the histogram of these sample averages to see what shape it takes.\nThe following code simulates this situation.\n\nRun the following code.\n\n\nset.seed(123)\n\n# Parameters\np &lt;- 0.3     # probability of success\nn &lt;- 30      # 30 patients at a time\nnsim &lt;- 1000 # number of simulations\n\n# Simulate 1000 sample means\nmeans &lt;- replicate(nsim, \n                   mean(rbinom(n, size = 1, prob = p)))\n\n# Plot histogram of sample means\nhist(means, breaks = 30, \n     col = \"skyblue\", \n     main = \"Sample Means (Bernoulli, p=0.3, n=30)\",\n     xlab = \"Sample Mean\")\n\n\n\n\n\n\n\n\n\nWhat do you notice about the shape of the histogram of sample means?\n\nThough there are some gaps in the histogram, the shape is relatively normally distributed, with mean around 0.3. This makes sense since the original distribution is Bernoulli with \\(p=0.3\\)."
-  },
-  {
-    "objectID": "ae/ae-03-solution.html#binomial-distribution-number-of-infected-patients",
-    "href": "ae/ae-03-solution.html#binomial-distribution-number-of-infected-patients",
-    "title": "Application Exercise 03: CLT",
-    "section": "Binomial Distribution (Number of Infected Patients)",
-    "text": "Binomial Distribution (Number of Infected Patients)\nSuppose in a community, the number of patients infected in a given week follows a Binomial distribution with parameters \\(n=20\\) and \\(p=0.1\\) (i.e., 20 people at risk each week, 10% chance of infection per person).\nHere, we simulate 40 weeks of data (sample size = 40), each week producing a Binomial(20, 0.1) random number. We then calculate the average across those 40 weeks. This whole process is repeated 1000 times, and we examine the histogram of the averages.\n\nExercise 2\n\nRun the following code to produce the simulation and histogram of results.\n\n\nset.seed(123)\n\n# Parameters\nsize &lt;- 20   # 20 people at risk each week\np &lt;- 0.1     # probability of infection = 0.1\nn &lt;- 40      # simulate 40 weeks of data\nnsim &lt;- 1000 # do this simulation 1000 times\n\n# Simulate 1000 sample means\nmeans &lt;- replicate(nsim, \n                   mean(rbinom(n, size = size, prob = p)))\n\n# Plot histogram of sample means\nhist(means, breaks = 30, \n     col = \"lightgreen\", \n     main = \"Sample Means (Binomial, size=20, p=0.1, n=40)\",\n     xlab = \"Sample Mean\")\n\n\n\n\n\n\n\n\n\nWhat do you notice about the shape of the histogram of sample means?\n\nThe histogram is relatively normally distributed, with sample means centering around 2, which equals \\(np = 20 \\cdot .1\\)."
-  },
-  {
-    "objectID": "ae/ae-03-solution.html#poisson-distribution-er-visits",
-    "href": "ae/ae-03-solution.html#poisson-distribution-er-visits",
-    "title": "Application Exercise 03: CLT",
-    "section": "Poisson Distribution: (ER Visits)",
-    "text": "Poisson Distribution: (ER Visits)\nSuppose the number of asthma-related ER visits per day follows a Poisson distribution with average \\(\\lambda = 2\\).\nHere, we simulate 50 days of ER visits at a time (sample size = 50), calculate the mean number of visits within those 50 days, and then repeat this 1000 times. Finally, we look at the histogram of sample means to see how it compares to a bell curve.\n\nExercise 3\n\nRun the following code to produce the simulation and histogram of results.\n\n\nset.seed(123)\n\n# Parameters\nlambda &lt;- 2  # Poisson rate\nn &lt;- 50      # sample size\nnsim &lt;- 1000 # number of simulations\n\n# Simulate 1000 sample means\nmeans &lt;- replicate(nsim, \n                   mean(rpois(n, lambda = lambda)))\n\n# Plot histogram of sample means\nhist(means, breaks = 30, \n     col = \"pink\", \n     main = \"Sample Means (Poisson, λ=2, n=50)\",\n     xlab = \"Sample Mean\")\n\n\n\n\n\n\n\n\n\nDoes the histogram resemble a bell curve?\n\nYes! The histogram generally represents a bell curve. Some jumps in the bars but this may just be a result of the binwidth chosen in the histogram.\n\nUse the code chunk below to repeat the above simulation and produce a new histogram, making one small change: change n &lt;- 50 to n &lt;- 100. Run the code.\n\n\nset.seed(123)\n\n# Parameters\nlambda &lt;- 2  # Poisson rate\nn &lt;- 100      # sample size\nnsim &lt;- 1000 # number of simulations\n\n# Simulate 1000 sample means\nmeans &lt;- replicate(nsim, \n                   mean(rpois(n, lambda = lambda)))\n\n# Plot histogram of sample means\nhist(means, breaks = 30, \n     col = \"pink\", \n     main = \"Sample Means (Poisson, λ=2, n=50)\",\n     xlab = \"Sample Mean\")\n\n\n\n\n\n\n\n\n\nHow does the histogram in part (c) compare to the one in part (b)? Why does this occur?\n\nThe histogram here is also normally distributed, and it’s more “filled in” compared to the one in part (b). This is due to a larger sample size. As sample size gets larger and larger, the distribution of sample means will resemble a normal curve more and more, which is the conclusion of the Central Limit Theorem!"
-  },
-  {
-    "objectID": "ae/ae-02-solution.html",
-    "href": "ae/ae-02-solution.html",
-    "title": "Application Exercise 02: Poisson",
-    "section": "",
-    "text": "What is the probability that in a given hour, exactly 5 asthma patients arrive? Use the dpois function to compute your answer and provide a 1-sentence conclusion.\n\ndpois(5, lambda = 3)\n\n[1] 0.1008188\n\n\nSo, there is about a 10% chance of exactly 5 asthma patients in one hour."
-  },
-  {
-    "objectID": "ae/ae-02-poisson-template.html",
-    "href": "ae/ae-02-poisson-template.html",
-    "title": "Application Exercise 2: Poisson",
-    "section": "",
-    "text": "Suppose that in a hospital emergency department, the average number of asthma-related visits per hour is 3. Let \\(Y\\) be the number of asthma visits in one hour. Then \\(Y \\sim Poisson(\\lambda=3)\\)\n\n\nWhat is the probability that in a given hour, exactly 5 asthma patients arrive? Use the dpois function to compute your answer and provide a 1-sentence conclusion.\n\n# type code here\n\n[type response here]"
-  },
-  {
-    "objectID": "ae/ae-02-poisson-template.html#hospital-visits-poisson-example",
-    "href": "ae/ae-02-poisson-template.html#hospital-visits-poisson-example",
-    "title": "Application Exercise 2: Poisson",
-    "section": "",
-    "text": "Suppose that in a hospital emergency department, the average number of asthma-related visits per hour is 3. Let \\(Y\\) be the number of asthma visits in one hour. Then \\(Y \\sim Poisson(\\lambda=3)\\)\n\n\nWhat is the probability that in a given hour, exactly 5 asthma patients arrive? Use the dpois function to compute your answer and provide a 1-sentence conclusion.\n\n# type code here\n\n[type response here]"
-  },
-  {
-    "objectID": "ae/ae-01-template.html",
-    "href": "ae/ae-01-template.html",
-    "title": "Application Exercise: Binomial in a Biomedical Setting",
-    "section": "",
-    "text": "Suppose 5 people receive a new vaccine. From clinical trial data, the probability that any individual experiences a mild side effect (e.g., sore arm, mild fever) is 0.2.\nLet \\(X\\) be the number of people (out of 5) who experience a mild side effect.\nThen \\(X \\sim \\text{Binomial}(n=5, p=0.2)\\).\n\n\nWhat is the probability that exactly 2 out of 5 people experience a mild side effect? Use the dbinom function to compute your answer and provide a 1-sentence conclusion.\n\n# type code here\n\n[type response here]"
-  },
-  {
-    "objectID": "ae/ae-01-template.html#a-clinical-trial-binomial-example",
-    "href": "ae/ae-01-template.html#a-clinical-trial-binomial-example",
-    "title": "Application Exercise: Binomial in a Biomedical Setting",
-    "section": "",
-    "text": "Suppose 5 people receive a new vaccine. From clinical trial data, the probability that any individual experiences a mild side effect (e.g., sore arm, mild fever) is 0.2.\nLet \\(X\\) be the number of people (out of 5) who experience a mild side effect.\nThen \\(X \\sim \\text{Binomial}(n=5, p=0.2)\\).\n\n\nWhat is the probability that exactly 2 out of 5 people experience a mild side effect? Use the dbinom function to compute your answer and provide a 1-sentence conclusion.\n\n# type code here\n\n[type response here]"
-  },
-  {
-    "objectID": "ae/ae-01-template.html#exercise-2",
-    "href": "ae/ae-01-template.html#exercise-2",
-    "title": "Application Exercise: Binomial in a Biomedical Setting",
-    "section": "Exercise 2",
-    "text": "Exercise 2\nWhat is the probability that at least 1 out of 5 people experiences a mild side effect? (Hint: Use the complement rule: \\(P(X \\geq 1)=1−P(X=0)\\)). Use the dbinom function to compute your answer and provide a 1-sentence conclusion.\n\n# type code here\n\n[type response here]"
-  },
-  {
-    "objectID": "ae/ae-01-template.html#submission",
-    "href": "ae/ae-01-template.html#submission",
-    "title": "Application Exercise: Binomial in a Biomedical Setting",
-    "section": "Submission",
-    "text": "Submission\nRender to PDF and submit on Canvas &gt; Assignments."
-  },
-  {
-    "objectID": "about.html",
-    "href": "about.html",
-    "title": "About",
-    "section": "",
-    "text": "About this site"
-  },
-  {
-    "objectID": "ae/ae-01-solution.html",
-    "href": "ae/ae-01-solution.html",
-    "title": "Application Exercise 01: Practice with Binomial",
-    "section": "",
-    "text": "Suppose 5 people receive a new vaccine. From clinical trial data, the probability that any individual experiences a mild side effect (e.g., sore arm, mild fever) is 0.2.\nLet \\(X\\) be the number of people (out of 5) who experience a mild side effect.\nThen \\(X \\sim \\text{Binomial}(n=5, p=0.2)\\).\n\n\nWhat is the probability that exactly 2 out of 5 people experience a mild side effect? Use the dbinom function to compute your answer and provide a 1-sentence conclusion.\n\ndbinom(2,size=5,prob=0.2)\n\n[1] 0.2048\n\n\nSo, there is about a 20.5% chance that exactly 2 people will have side effects."
-  },
-  {
-    "objectID": "ae/ae-01-solution.html#a-clinical-trial-binomial-example",
-    "href": "ae/ae-01-solution.html#a-clinical-trial-binomial-example",
-    "title": "Application Exercise 01: Practice with Binomial",
-    "section": "",
-    "text": "Suppose 5 people receive a new vaccine. From clinical trial data, the probability that any individual experiences a mild side effect (e.g., sore arm, mild fever) is 0.2.\nLet \\(X\\) be the number of people (out of 5) who experience a mild side effect.\nThen \\(X \\sim \\text{Binomial}(n=5, p=0.2)\\).\n\n\nWhat is the probability that exactly 2 out of 5 people experience a mild side effect? Use the dbinom function to compute your answer and provide a 1-sentence conclusion.\n\ndbinom(2,size=5,prob=0.2)\n\n[1] 0.2048\n\n\nSo, there is about a 20.5% chance that exactly 2 people will have side effects."
-  },
-  {
-    "objectID": "ae/ae-01-solution.html#exercise-2",
-    "href": "ae/ae-01-solution.html#exercise-2",
-    "title": "Application Exercise 01: Practice with Binomial",
-    "section": "Exercise 2",
-    "text": "Exercise 2\nWhat is the probability that at least 1 out of 5 people experiences a mild side effect? (Hint: Use the complement rule: \\(P(X \\geq 1)=1−P(X=0)\\)). Use the dbinom function to compute your answer and provide a 1-sentence conclusion.\n\n1-dbinom(0,size=5,prob=0.2)\n\n[1] 0.67232\n\n\nSo, there is about a 67% chance that at least 1 person will have a mild side effect."
-  },
-  {
-    "objectID": "ae/ae-01.html",
-    "href": "ae/ae-01.html",
-    "title": "Participation: Binomial in a Biomedical Setting",
-    "section": "",
-    "text": "Important\n\n\n\nThis Application Exercise is due on Wednesday, September 9 at 11:59pm. To be considered on time, the following must be done by the due date:\n\nFinal .pdf file submitted on Canvas\nWhile late work is accepted for HW and Labs, no late work is accepted for AEs."
-  },
-  {
-    "objectID": "ae/ae-01.html#getting-started",
-    "href": "ae/ae-01.html#getting-started",
-    "title": "Participation: Binomial in a Biomedical Setting",
-    "section": "Getting started",
-    "text": "Getting started\nDownload the template for today’s Application Exercise (AE) from Canvas. Open the file, and type your name and today’s date in the YAML. Save your file as ae-01.qmd in your project folder.\nRender your document to ensure the formatting all looks good."
-  },
-  {
-    "objectID": "ae/ae-01.html#clinical-trial-example",
-    "href": "ae/ae-01.html#clinical-trial-example",
-    "title": "Participation: Binomial in a Biomedical Setting",
-    "section": "Clinical Trial Example",
-    "text": "Clinical Trial Example\nSuppose 5 people receive a new vaccine. From clinical trial data, the probability that any individual experiences a mild side effect (e.g., sore arm, mild fever) is 0.2.\nLet \\(X\\) be the number of people (out of 5) who experience a mild side effect.\nThen \\(X \\sim \\text{Binomial}(n=5, p=0.2)\\).\n\nExercise 1\nWhat is the probability that exactly 2 out of 5 people experience a mild side effect? Use the dbinom function.\n\n# type code here"
-  },
-  {
-    "objectID": "ae/ae-01.html#exercise-2",
-    "href": "ae/ae-01.html#exercise-2",
-    "title": "Participation: Binomial in a Biomedical Setting",
-    "section": "Exercise 2",
-    "text": "Exercise 2\nWhat is the probability that at least 1 out of 5 people experiences a mild side effect?\nHint: Use the complement rule: \\(P(X \\geq 1)=1−P(X=0)\\)\nUse the dbinom function to compute your answer and provide a 1-sentence conclusion.\n\n# type code here"
-  },
-  {
-    "objectID": "ae/ae-01.html#submission",
-    "href": "ae/ae-01.html#submission",
-    "title": "Participation: Binomial in a Biomedical Setting",
-    "section": "Submission",
-    "text": "Submission\nAs you’ve seen previously, we can Render the template into an .html file that can be opened by any web browser. To export it as a .pdf, open the file in your web browser and then print to or save as a .pdf document. Your TAs will show you how if you need help! (There is a way to directly knit to a .pdf file, but it’s quite a bit more involved.)\nYou will submit the PDF documents for Application Exercises directly to Canvas.\nTo submit your assignment:\n\nAccess the Application Exercise through Modules on the BIOS 600 Canvas site.\nUpload your PDF."
-  },
-  {
-    "objectID": "ae/ae-02-poisson.html",
-    "href": "ae/ae-02-poisson.html",
-    "title": "Application Exercise 2: Poisson",
-    "section": "",
-    "text": "Important\n\n\n\nThis Application Exercise is due on Friday, September 11 at 11:59pm. To be considered on time, the following must be done by the due date:\n\nFinal .pdf file submitted on Canvas\nWhile late work is accepted for HW and Labs, no late work is accepted for AEs."
-  },
-  {
-    "objectID": "ae/ae-02-poisson.html#getting-started",
-    "href": "ae/ae-02-poisson.html#getting-started",
-    "title": "Application Exercise 2: Poisson",
-    "section": "Getting started",
-    "text": "Getting started\nDownload the template for today’s Application Exercise (AE) from Canvas. Open the file, and type your name and today’s date in the YAML. Save your file as ae-02.qmd in your project folder.\nRender your document to ensure the formatting all looks good."
-  },
-  {
-    "objectID": "ae/ae-02-poisson.html#hospital-visits-poisson-example",
-    "href": "ae/ae-02-poisson.html#hospital-visits-poisson-example",
-    "title": "Application Exercise 2: Poisson",
-    "section": "Hospital Visits: Poisson Example",
-    "text": "Hospital Visits: Poisson Example\nSuppose that in a hospital emergency department, the average number of asthma-related visits per hour is 3. Let \\(Y\\) be the number of asthma visits in one hour. Then \\(Y \\sim Poisson(\\lambda=3)\\)\n\nExercise 1\nWhat is the probability that in a given hour, exactly 5 asthma patients arrive? Use the dpois function to compute your answer and provide a 1-sentence conclusion.\n\n# type code here\n\n[type response here]"
-  },
-  {
-    "objectID": "ae/ae-02-poisson.html#submission",
-    "href": "ae/ae-02-poisson.html#submission",
-    "title": "Application Exercise 2: Poisson",
-    "section": "Submission",
-    "text": "Submission\nAs you’ve seen previously, we can Render the template into an .html file that can be opened by any web browser. To export it as a .pdf, open the file in your web browser and then print to or save as a .pdf document. Your TAs will show you how if you need help! (There is a way to directly knit to a .pdf file, but it’s quite a bit more involved.)\nYou will submit the PDF documents for Application Exercises directly to Canvas.\nTo submit your assignment:\n\nAccess the Application Exercise through Modules on the BIOS 600 Canvas site.\nUpload your PDF."
-  },
-  {
-    "objectID": "ae/ae-03-clt.html",
-    "href": "ae/ae-03-clt.html",
-    "title": "AE 03: Central Limit Theorem",
-    "section": "",
-    "text": "Important\n\n\n\nThis Application Exercise is due on Wednesday, September 16 at 11:59pm. To be considered on time, the following must be done by the due date:\n\nFinal .pdf file submitted on Canvas\nWhile late work is accepted for HW and Labs, no late work is accepted for AEs."
-  },
-  {
-    "objectID": "ae/ae-03-clt.html#getting-started",
-    "href": "ae/ae-03-clt.html#getting-started",
-    "title": "AE 03: Central Limit Theorem",
-    "section": "Getting started",
-    "text": "Getting started\nDownload the template for today’s Application Exercise (AE) from Canvas. Open the file, and type your name and today’s date in the YAML. Save your file as ae-03.qmd in your project folder.\nRender your document to ensure the formatting all looks good."
-  },
-  {
-    "objectID": "ae/ae-03-clt.html#learning-goal",
-    "href": "ae/ae-03-clt.html#learning-goal",
-    "title": "AE 03: Central Limit Theorem",
-    "section": "Learning Goal",
-    "text": "Learning Goal\nToday you will explore the Central Limit Theorem (CLT):\n\nThe average of many independent samples tends to follow a normal distribution, even if the original data are not normal, as long as the sample size is large enough.\n\nYou will run short simulations from different distributions and see how the sampling distribution of the mean behaves."
-  },
-  {
-    "objectID": "ae/ae-03-clt.html#bernoulli-distribution-treatment-response",
-    "href": "ae/ae-03-clt.html#bernoulli-distribution-treatment-response",
-    "title": "AE 03: Central Limit Theorem",
-    "section": "Bernoulli Distribution (Treatment Response)",
-    "text": "Bernoulli Distribution (Treatment Response)\nImagine a new treatment for a disease. Each patient either responds (1) or does not respond (0) to the treatment. Suppose the probability of response is 0.3.\nAdd in something about simply doing rbinom and asking student to describe what is happening.\n\n\nExercise 1\nWe want to simulate drawing samples of 30 patients at a time, record the average response rate, and repeat this process 1000 times. Then we’ll look at the histogram of these sample averages to see what shape it takes.\nThe following code simulates this situation.\n\nRun the following code.\n\n\nset.seed(123)\n\n# Parameters\np &lt;- 0.3     # probability of success\nn &lt;- 30      # 30 patients at a time\nnsim &lt;- 1000 # number of simulations\n\n# Simulate 1000 sample means\nmeans &lt;- replicate(nsim, \n                   mean(rbinom(n, size = 1, prob = p)))\n\n# Plot histogram of sample means\nhist(means, breaks = 30, \n     col = \"skyblue\", \n     main = \"Sample Means (Bernoulli, p=0.3, n=30)\",\n     xlab = \"Sample Mean\")\n\n\n\n\n\n\n\n\n\nWhat do you notice about the shape of the histogram of sample means?\n\n[type response here]"
-  },
-  {
-    "objectID": "ae/ae-03-clt.html#binomial-distribution-number-of-infected-patients",
-    "href": "ae/ae-03-clt.html#binomial-distribution-number-of-infected-patients",
-    "title": "AE 03: Central Limit Theorem",
-    "section": "Binomial Distribution (Number of Infected Patients)",
-    "text": "Binomial Distribution (Number of Infected Patients)\nSuppose in a community, the number of patients infected in a given week follows a Binomial distribution with parameters \\(n=20\\) and \\(p=0.1\\) (i.e., 20 people at risk each week, 10% chance of infection per person).\nHere, we simulate 40 weeks of data (sample size = 40), each week producing a Binomial(20, 0.1) random number. We then calculate the average across those 40 weeks. This whole process is repeated 1000 times, and we examine the histogram of the averages.\n\nExercise 2\n\nRun the following code to produce the simulation and histogram of results.\n\n\nset.seed(123)\n\n# Parameters\nsize &lt;- 20   # 20 people at risk each week\np &lt;- 0.1     # probability of infection = 0.1\nn &lt;- 40      # simulate 40 weeks of data\nnsim &lt;- 1000 # do this simulation 1000 times\n\n# Simulate 1000 sample means\nmeans &lt;- replicate(nsim, \n                   mean(rbinom(n, size = size, prob = p)))\n\n# Plot histogram of sample means\nhist(means, breaks = 30, \n     col = \"lightgreen\", \n     main = \"Sample Means (Binomial, size=20, p=0.1, n=40)\",\n     xlab = \"Sample Mean\")\n\n\n\n\n\n\n\n\n\nWhat do you notice about the shape of the histogram of sample means?\n\n[type response here]"
-  },
-  {
-    "objectID": "ae/ae-03-clt.html#poisson-distribution-er-visits",
-    "href": "ae/ae-03-clt.html#poisson-distribution-er-visits",
-    "title": "AE 03: Central Limit Theorem",
-    "section": "Poisson Distribution: (ER Visits)",
-    "text": "Poisson Distribution: (ER Visits)\nSuppose the number of asthma-related ER visits per day follows a Poisson distribution with average \\(\\lambda = 2\\).\nHere, we simulate 50 days of ER visits at a time (sample size = 50), calculate the mean number of visits within those 50 days, and then repeat this 1000 times. Finally, we look at the histogram of sample means to see how it compares to a bell curve.\n\nExercise 3\n\nRun the following code to produce the simulation and histogram of results.\n\n\nset.seed(123)\n\n# Parameters\nlambda &lt;- 2  # Poisson rate\nn &lt;- 50      # sample size\nnsim &lt;- 1000 # number of simulations\n\n# Simulate 1000 sample means\nmeans &lt;- replicate(nsim, \n                   mean(rpois(n, lambda = lambda)))\n\n# Plot histogram of sample means\nhist(means, breaks = 30, \n     col = \"pink\", \n     main = \"Sample Means (Poisson, λ=2, n=50)\",\n     xlab = \"Sample Mean\")\n\n\n\n\n\n\n\n\n\nDoes the histogram resemble a bell curve?\n\n[type response here]\n\nUse the code chunk below to repeat the above simulation and produce a new histogram, making one small change: change n &lt;- 50 to n &lt;- 100. Run the code.\n\n\nHow does the histogram in part (c) compare to the one in part (b)? Why does this occur?\n\n[type response here]"
-  },
-  {
-    "objectID": "ae/ae-03-clt.html#takeaway",
-    "href": "ae/ae-03-clt.html#takeaway",
-    "title": "AE 03: Central Limit Theorem",
-    "section": "Takeaway",
-    "text": "Takeaway\nAcross different distributions (Bernoulli, Binomial, Poisson), when we look at the distribution of sample means for reasonably large sample sizes, the shape becomes approximately normal.\nThis is the Central Limit Theorem in action!"
-  },
-  {
-    "objectID": "ae/ae-03-clt.html#submission",
-    "href": "ae/ae-03-clt.html#submission",
-    "title": "AE 03: Central Limit Theorem",
-    "section": "Submission",
-    "text": "Submission\nRender to PDF and submit on Canvas &gt; Assignments."
-  },
-  {
-    "objectID": "ae/ae-03-template.html",
-    "href": "ae/ae-03-template.html",
-    "title": "AE 03: Central Limit Theorem",
-    "section": "",
-    "text": "Imagine a new treatment for a disease. Each patient either responds (1) or does not respond (0) to the treatment. Suppose the probability of response is 0.3.\n\n\nWe want to simulate drawing samples of 30 patients at a time, record the average response rate, and repeat this process 1000 times. Then we’ll look at the histogram of these sample averages to see what shape it takes.\nThe following code simulates this situation.\n\nRun the following code.\n\n\nset.seed(123)\n\n# Parameters\np &lt;- 0.3     # probability of success\nn &lt;- 30      # 30 patients at a time\nnsim &lt;- 1000 # number of simulations\n\n# Simulate 1000 sample means\nmeans &lt;- replicate(nsim, \n                   mean(rbinom(n, size = 1, prob = p)))\n\n# Plot histogram of sample means\nhist(means, breaks = 30, \n     col = \"skyblue\", \n     main = \"Sample Means (Bernoulli, p=0.3, n=30)\",\n     xlab = \"Sample Mean\")\n\n\n\n\n\n\n\n\n\nWhat do you notice about the shape of the histogram of sample means?\n\n[type response here]"
-  },
-  {
-    "objectID": "ae/ae-03-template.html#bernoulli-distribution-treatment-response",
-    "href": "ae/ae-03-template.html#bernoulli-distribution-treatment-response",
-    "title": "AE 03: Central Limit Theorem",
-    "section": "",
-    "text": "Imagine a new treatment for a disease. Each patient either responds (1) or does not respond (0) to the treatment. Suppose the probability of response is 0.3.\n\n\nWe want to simulate drawing samples of 30 patients at a time, record the average response rate, and repeat this process 1000 times. Then we’ll look at the histogram of these sample averages to see what shape it takes.\nThe following code simulates this situation.\n\nRun the following code.\n\n\nset.seed(123)\n\n# Parameters\np &lt;- 0.3     # probability of success\nn &lt;- 30      # 30 patients at a time\nnsim &lt;- 1000 # number of simulations\n\n# Simulate 1000 sample means\nmeans &lt;- replicate(nsim, \n                   mean(rbinom(n, size = 1, prob = p)))\n\n# Plot histogram of sample means\nhist(means, breaks = 30, \n     col = \"skyblue\", \n     main = \"Sample Means (Bernoulli, p=0.3, n=30)\",\n     xlab = \"Sample Mean\")\n\n\n\n\n\n\n\n\n\nWhat do you notice about the shape of the histogram of sample means?\n\n[type response here]"
-  },
-  {
-    "objectID": "ae/ae-03-template.html#binomial-distribution-number-of-infected-patients",
-    "href": "ae/ae-03-template.html#binomial-distribution-number-of-infected-patients",
-    "title": "AE 03: Central Limit Theorem",
-    "section": "Binomial Distribution (Number of Infected Patients)",
-    "text": "Binomial Distribution (Number of Infected Patients)\nSuppose in a community, the number of patients infected in a given week follows a Binomial distribution with parameters \\(n=20\\) and \\(p=0.1\\) (i.e., 20 people at risk each week, 10% chance of infection per person).\nHere, we simulate 40 weeks of data (sample size = 40), each week producing a Binomial(20, 0.1) random number. We then calculate the average across those 40 weeks. This whole process is repeated 1000 times, and we examine the histogram of the averages.\n\nExercise 2\n\nRun the following code to produce the simulation and histogram of results.\n\n\nset.seed(123)\n\n# Parameters\nsize &lt;- 20   # 20 people at risk each week\np &lt;- 0.1     # probability of infection = 0.1\nn &lt;- 40      # simulate 40 weeks of data\nnsim &lt;- 1000 # do this simulation 1000 times\n\n# Simulate 1000 sample means\nmeans &lt;- replicate(nsim, \n                   mean(rbinom(n, size = size, prob = p)))\n\n# Plot histogram of sample means\nhist(means, breaks = 30, \n     col = \"lightgreen\", \n     main = \"Sample Means (Binomial, size=20, p=0.1, n=40)\",\n     xlab = \"Sample Mean\")\n\n\n\n\n\n\n\n\n\nWhat do you notice about the shape of the histogram of sample means?\n\n[type response here]"
-  },
-  {
-    "objectID": "ae/ae-03-template.html#poisson-distribution-er-visits",
-    "href": "ae/ae-03-template.html#poisson-distribution-er-visits",
-    "title": "AE 03: Central Limit Theorem",
-    "section": "Poisson Distribution: (ER Visits)",
-    "text": "Poisson Distribution: (ER Visits)\nSuppose the number of asthma-related ER visits per day follows a Poisson distribution with average \\(\\lambda = 2\\).\nHere, we simulate 50 days of ER visits at a time (sample size = 50), calculate the mean number of visits within those 50 days, and then repeat this 1000 times. Finally, we look at the histogram of sample means to see how it compares to a bell curve.\n\nExercise 3\n\nRun the following code to produce the simulation and histogram of results.\n\n\nset.seed(123)\n\n# Parameters\nlambda &lt;- 2  # Poisson rate\nn &lt;- 50      # sample size\nnsim &lt;- 1000 # number of simulations\n\n# Simulate 1000 sample means\nmeans &lt;- replicate(nsim, \n                   mean(rpois(n, lambda = lambda)))\n\n# Plot histogram of sample means\nhist(means, breaks = 30, \n     col = \"pink\", \n     main = \"Sample Means (Poisson, λ=2, n=50)\",\n     xlab = \"Sample Mean\")\n\n\n\n\n\n\n\n\n\nDoes the histogram resemble a bell curve?\n\n[type response here]\n\nUse the code chunk below to repeat the above simulation and produce a new histogram, making one small change: change n &lt;- 50 to n &lt;- 100. Run the code.\n\n\nHow does the histogram in part (c) compare to the one in part (b)? Why does this occur?\n\n[type response here]"
-  },
-  {
-    "objectID": "ae/ae-03-template.html#takeaway",
-    "href": "ae/ae-03-template.html#takeaway",
-    "title": "AE 03: Central Limit Theorem",
-    "section": "Takeaway",
-    "text": "Takeaway\nAcross different distributions (Bernoulli, Binomial, Poisson), when we look at the distribution of sample means for reasonably large sample sizes, the shape becomes approximately normal.\nThis is the Central Limit Theorem in action!"
   },
   {
     "objectID": "ae/exam-01-review-solution.html",

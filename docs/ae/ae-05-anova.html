@@ -6,8 +6,10 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="author" content="Your Name Here">
+<meta name="dcterms.date" content="2026-10-13">
 
-<title>BIOS 600 Fall 2026</title>
+<title>AE 05: ANOVA – BIOS 600 Fall 2026</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,27 +22,62 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<script src="site_libs/quarto-html/quarto.js" type="module"></script>
-<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="site_libs/quarto-html/axe/axe-check.js" type="module"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-ed96de9b727972fe78a7b5d16c58bf87.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-e31584831b205ffbb2d98406f31c2a5b.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-ed96de9b727972fe78a7b5d16c58bf87.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-e31584831b205ffbb2d98406f31c2a5b.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -69,8 +106,37 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
-<link rel="stylesheet" href="styles.css">
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+<link rel="stylesheet" href="../styles.css">
 </head>
 
 <body class="nav-fixed quarto-light">
@@ -80,7 +146,7 @@ ul.task-list li input[type="checkbox"] {
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="./index.html">
+    <a class="navbar-brand" href="../index.html">
     <span class="navbar-title">BIOS 600 Fall 2026</span>
     </a>
   </div>
@@ -91,11 +157,11 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link active" href="./index.html" aria-current="page"> 
+    <a class="nav-link" href="../index.html"> 
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./about.html"> 
+    <a class="nav-link" href="../about.html"> 
 <span class="menu-text">About</span></a>
   </li>  
 </ul>
@@ -114,19 +180,11 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#schedule" id="toc-schedule" class="nav-link active" data-scroll-target="#schedule">Schedule</a>
-  <ul class="collapse">
-  <li><a href="#week-1" id="toc-week-1" class="nav-link" data-scroll-target="#week-1">Week 1</a></li>
-  <li><a href="#week-2" id="toc-week-2" class="nav-link" data-scroll-target="#week-2">Week 2</a></li>
-  <li><a href="#week-3" id="toc-week-3" class="nav-link" data-scroll-target="#week-3">Week 3</a></li>
-  <li><a href="#week-4" id="toc-week-4" class="nav-link" data-scroll-target="#week-4">Week 4</a></li>
-  <li><a href="#exam-resources" id="toc-exam-resources" class="nav-link" data-scroll-target="#exam-resources">Exam Resources</a></li>
-  <li><a href="#week-5" id="toc-week-5" class="nav-link" data-scroll-target="#week-5">Week 5</a></li>
-  <li><a href="#week-6" id="toc-week-6" class="nav-link" data-scroll-target="#week-6">Week 6</a></li>
-  <li><a href="#week-7" id="toc-week-7" class="nav-link" data-scroll-target="#week-7">Week 7</a></li>
-  <li><a href="#week-8" id="toc-week-8" class="nav-link" data-scroll-target="#week-8">Week 8</a></li>
-  <li><a href="#week-9" id="toc-week-9" class="nav-link" data-scroll-target="#week-9">Week 9</a></li>
-  </ul></li>
+  <li><a href="#anova-activity-do-holistic-remedies-lower-systolic-blood-pressure" id="toc-anova-activity-do-holistic-remedies-lower-systolic-blood-pressure" class="nav-link active" data-scroll-target="#anova-activity-do-holistic-remedies-lower-systolic-blood-pressure">ANOVA Activity: Do holistic remedies lower systolic blood pressure?</a></li>
+  <li><a href="#exercise-1-simulate-the-data" id="toc-exercise-1-simulate-the-data" class="nav-link" data-scroll-target="#exercise-1-simulate-the-data">Exercise 1: Simulate the data</a></li>
+  <li><a href="#exercise-2-visualize-the-data" id="toc-exercise-2-visualize-the-data" class="nav-link" data-scroll-target="#exercise-2-visualize-the-data">Exercise 2: Visualize the data</a></li>
+  <li><a href="#exercise-3-run-the-anova" id="toc-exercise-3-run-the-anova" class="nav-link" data-scroll-target="#exercise-3-run-the-anova">Exercise 3: Run the ANOVA</a></li>
+  <li><a href="#exercise-4-conclusion" id="toc-exercise-4-conclusion" class="nav-link" data-scroll-target="#exercise-4-conclusion">Exercise 4: Conclusion</a></li>
   </ul>
 </nav>
     </div>
@@ -135,14 +193,26 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">BIOS 600 Fall 2026</h1>
+<h1 class="title">AE 05: ANOVA</h1>
 </div>
 
 
 
 <div class="quarto-title-meta">
 
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Your Name Here </p>
+          </div>
+  </div>
     
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">October 13, 2026</p>
+    </div>
+  </div>
   
     
   </div>
@@ -152,76 +222,88 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="schedule" class="level1">
-<h1>Schedule</h1>
-<section id="week-1" class="level2">
-<h2 class="anchored" data-anchor-id="week-1">Week 1</h2>
-<p><a href="slides/lec-0-welcome.html">Lecture 0: Welcome to BIOS 600!</a></p>
-<p><a href="labs/lab-1.html">Lab 1: Introducing the Toolkit</a></p>
-<p><a href="slides/lec-1-whats-stat-inf.html">Lecture 1: What is statistical inference?</a></p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<section id="anova-activity-do-holistic-remedies-lower-systolic-blood-pressure" class="level2">
+<h2 class="anchored" data-anchor-id="anova-activity-do-holistic-remedies-lower-systolic-blood-pressure">ANOVA Activity: Do holistic remedies lower systolic blood pressure?</h2>
+<p>A researcher tests whether three different interventions produce different <strong>reductions in systolic blood pressure (mmHg)</strong> after 8 weeks:</p>
+<ul>
+<li><strong>Placebo</strong> (control tea)<br>
+</li>
+<li><strong>Herbal Tea</strong> (a marketed calming herbal blend)<br>
+</li>
+<li><strong>Mindfulness</strong> (guided mindfulness practice)</li>
+</ul>
+<p>You will simulate data, visualize group differences, run an ANOVA, and interpret the results.</p>
 </section>
-<section id="week-2" class="level2">
-<h2 class="anchored" data-anchor-id="week-2">Week 2</h2>
-<p><a href="labs/lab-2-data-viz.html">Lab 2: Basic Data Visualization</a></p>
-<p><a href="slides/lec-2-nature-data.html">Lecture 2: The nature of data</a></p>
-<p><a href="slides/lec-3-prob-basics.html">Lecture 3: Probability basics</a></p>
-<p><a href="hw/hw-01.html">HW 1</a></p>
+<section id="exercise-1-simulate-the-data" class="level2">
+<h2 class="anchored" data-anchor-id="exercise-1-simulate-the-data">Exercise 1: Simulate the data</h2>
+<p>We simulate 30 participants per group. The numbers are set so the placebo group has a small mean reduction, Herbal Tea a moderate reduction, and Mindfulness a larger reduction.</p>
+<p>Run the following code to simulate the data.</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">2025</span>)</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>n <span class="ot">&lt;-</span> <span class="dv">30</span></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>bp_data <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(</span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>  <span class="at">group =</span> <span class="fu">rep</span>(<span class="fu">c</span>(<span class="st">"Placebo"</span>, <span class="st">"HerbalTea"</span>, <span class="st">"Mindfulness"</span>), <span class="at">each =</span> n),</span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>  <span class="at">reduction =</span> <span class="fu">c</span>(</span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>    <span class="fu">rnorm</span>(n, <span class="at">mean =</span> <span class="dv">2</span>, <span class="at">sd =</span> <span class="dv">5</span>),   <span class="co"># Placebo: mean reduction ~2 mmHg</span></span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>    <span class="fu">rnorm</span>(n, <span class="at">mean =</span> <span class="dv">5</span>, <span class="at">sd =</span> <span class="dv">5</span>),   <span class="co"># Herbal Tea: mean reduction ~5 mmHg</span></span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>    <span class="fu">rnorm</span>(n, <span class="at">mean =</span> <span class="dv">7</span>, <span class="at">sd =</span> <span class="dv">5</span>)    <span class="co"># Mindfulness: mean reduction ~7 mmHg</span></span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>  )</span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(bp_data)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>    group reduction
+1 Placebo  5.103784
+2 Placebo  2.178207
+3 Placebo  5.865772
+4 Placebo  8.362445
+5 Placebo  3.854877
+6 Placebo  1.185728</code></pre>
+</div>
+</div>
 </section>
-<section id="week-3" class="level2">
-<h2 class="anchored" data-anchor-id="week-3">Week 3</h2>
-<p><a href="labs/lab-03-data-wrangling.html">Lab 3: Data Wrangling</a></p>
-<p><a href="slides/lec-4-conditional-bayes.html">Lecture 4: Conditional probability</a></p>
-<p><a href="slides/lec-5-diagnostic.html">Lecture 5: Medical diagnostics</a></p>
-<p><a href="hw/hw-02.html">HW 2</a></p>
+<section id="exercise-2-visualize-the-data" class="level2">
+<h2 class="anchored" data-anchor-id="exercise-2-visualize-the-data">Exercise 2: Visualize the data</h2>
+<p>Use the following code to create a boxplot of reduction by group. What pattern(s) do you notice?</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(bp_data, </span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>       <span class="fu">aes</span>(<span class="at">x =</span> group, <span class="at">y =</span> reduction, <span class="at">fill =</span> group)) <span class="sc">+</span></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_boxplot</span>(<span class="at">alpha =</span> <span class="fl">0.7</span>) <span class="sc">+</span></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">"Systolic BP Reduction by Intervention"</span>,</span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>       <span class="at">x =</span> <span class="st">"Intervention"</span>,</span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>       <span class="at">y =</span> <span class="st">"Reduction in systolic BP (mmHg)"</span>) <span class="sc">+</span></span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_minimal</span>() <span class="sc">+</span></span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">legend.position =</span> <span class="st">"none"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="ae-05-anova_files/figure-html/unnamed-chunk-3-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>[type response here]</p>
 </section>
-<section id="week-4" class="level2">
-<h2 class="anchored" data-anchor-id="week-4">Week 4</h2>
-<p><a href="slides/lec-6-discrete.html">Lecture 6: Discrete distributions</a></p>
-<p><a href="labs/lab-04.html">Lab 4: Practice with ggplot2 and tidyverse</a></p>
-<p><a href="ae/ae-01.html">Application Exercise 1: Binomial in a Biomedical Setting</a></p>
-<p><a href="slides/lec-7-continuous.html">Lecture 7: Continuous distributions</a></p>
-<p><a href="ae/ae-02-poisson.html">Application Exercise 2: Poisson in a Hospital Setting</a></p>
-<p><a href="hw/hw-03.html">HW 3</a></p>
-<p><a href="ae/ae-01-solution.html">AE 1 Solution</a></p>
+<section id="exercise-3-run-the-anova" class="level2">
+<h2 class="anchored" data-anchor-id="exercise-3-run-the-anova">Exercise 3: Run the ANOVA</h2>
+<p>We test:</p>
+<p><span class="math inline">\(H_0\)</span>: mean reduction is the same in all groups</p>
+<p><span class="math inline">\(H_A\)</span>: at least one group is different</p>
+<p>Assume a significance level of <span class="math inline">\(\alpha = 0.05\)</span>. Run an ANOVA using the syntax in the slides, printing out your output.</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co"># type code here</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
 </section>
-<section id="exam-resources" class="level2">
-<h2 class="anchored" data-anchor-id="exam-resources">Exam Resources</h2>
-<p><a href="resources/exam-01-topics.html">Exam 01 Topics List</a></p>
-<p><a href="resources/exam-01-formulas.html">Exam 01 Formula Sheet</a></p>
-<p><a href="resources/exam-01-practice.html">Exam 01 Practice Problems</a></p>
-</section>
-<section id="week-5" class="level2">
-<h2 class="anchored" data-anchor-id="week-5">Week 5</h2>
-<p><a href="slides/lec-8-clt.html">Lecture 8: Central Limit Theorem</a></p>
-<p><a href="ae/ae-03-clt.html">Application Exercise 3: Central Limit Theorem</a></p>
-<p><a href="slides/exam-01-review-slides.html">Exam 01 Review Slides</a></p>
-<p><a href="ae/ae-04-exam-01-review.html">Application Exercise 4: Exam 01 Review</a></p>
-<p><a href="ae/ae-01-solution.html">AE 01 Solution</a></p>
-<p><a href="ae/ae-02-solution.html">AE 02 Solution</a></p>
-<p><a href="ae/ae-03-solution.html">AE 03 Solution</a></p>
-</section>
-<section id="week-6" class="level2">
-<h2 class="anchored" data-anchor-id="week-6">Week 6</h2>
-<p><a href="slides/lec-9-ci.html">Lecture 9: Confidence Intervals</a></p>
-<p><a href="hw/hw-04.html">HW 04</a></p>
-</section>
-<section id="week-7" class="level2">
-<h2 class="anchored" data-anchor-id="week-7">Week 7</h2>
-<p><a href="slides/lec-10-hypothesis.html">Lecture 10: Hypothesis Testing</a></p>
-<p><a href="labs/lab-05-code-style.html">Lab 5: Code Style</a></p>
-<p><a href="slides/lec-11-compare-means.html">Lecture 11: Compare Means</a></p>
-<p><a href="hw/hw-05.html">HW 5</a></p>
-</section>
-<section id="week-8" class="level2">
-<h2 class="anchored" data-anchor-id="week-8">Week 8</h2>
-<p><a href="slides/lec-12-anova.html">Lecture 12: ANOVA</a></p>
-</section>
-<section id="week-9" class="level2">
-<h2 class="anchored" data-anchor-id="week-9">Week 9</h2>
-<p><a href="slides/lec-13-proportions.html">Lecture 13: Proportions and categorical data</a></p>
+<section id="exercise-4-conclusion" class="level2">
+<h2 class="anchored" data-anchor-id="exercise-4-conclusion">Exercise 4: Conclusion</h2>
+<p>Based on your ANOVA result, what is your p-value? Do we reject or fail to reject <span class="math inline">\(H_0\)</span>? What is your conclusion statement?</p>
 
 
-</section>
 </section>
 
 </main> <!-- /main -->
