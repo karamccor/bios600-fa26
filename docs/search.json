@@ -1117,7 +1117,7 @@
     "href": "slides/lec-13-proportions.html#announcements",
     "title": "Lecture 13: Proportions and Categorical data",
     "section": "Announcements",
-    "text": "Announcements\n\nLab 5 due Monday 10/19 at 11:59pm (due to fall break)"
+    "text": "Announcements\n\nLab 5 due Sunday 10/18 at 11:59pm (due to fall break)"
   },
   {
     "objectID": "slides/lec-13-proportions.html#overview",
@@ -2237,7 +2237,7 @@
     "href": "index.html",
     "title": "BIOS 600 Fall 2026",
     "section": "",
-    "text": "Lecture 0: Welcome to BIOS 600!\nLab 1: Introducing the Toolkit\nLecture 1: What is statistical inference?\n\n\n\nLab 2: Basic Data Visualization\nLecture 2: The nature of data\nLecture 3: Probability basics\nHW 1\n\n\n\nLab 3: Data Wrangling\nLecture 4: Conditional probability\nLecture 5: Medical diagnostics\nHW 2\n\n\n\nLecture 6: Discrete distributions\nLab 4: Practice with ggplot2 and tidyverse\nApplication Exercise 1: Binomial in a Biomedical Setting\nLecture 7: Continuous distributions\nApplication Exercise 2: Poisson in a Hospital Setting\nHW 3\nAE 1 Solution\n\n\n\nExam 01 Topics List\nExam 01 Formula Sheet\nExam 01 Practice Problems\n\n\n\nLecture 8: Central Limit Theorem\nApplication Exercise 3: Central Limit Theorem\nExam 01 Review Slides\nApplication Exercise 4: Exam 01 Review\nAE 01 Solution\nAE 02 Solution\nAE 03 Solution\n\n\n\nLecture 9: Confidence Intervals\nHW 04\n\n\n\nLecture 10: Hypothesis Testing\nLab 5: Code Style\nLecture 11: Compare Means\nHW 5\n\n\n\nLecture 12: ANOVA\n\n\n\nLecture 13: Proportions and categorical data"
+    "text": "Lecture 0: Welcome to BIOS 600!\nLab 1: Introducing the Toolkit\nLecture 1: What is statistical inference?\n\n\n\nLab 2: Basic Data Visualization\nLecture 2: The nature of data\nLecture 3: Probability basics\nHW 1\n\n\n\nLab 3: Data Wrangling\nLecture 4: Conditional probability\nLecture 5: Medical diagnostics\nHW 2\n\n\n\nLecture 6: Discrete distributions\nLab 4: Practice with ggplot2 and tidyverse\nApplication Exercise 1: Binomial in a Biomedical Setting\nLecture 7: Continuous distributions\nApplication Exercise 2: Poisson in a Hospital Setting\nHW 3\nAE 1 Solution\n\n\n\nExam 01 Topics List\nExam 01 Formula Sheet\nExam 01 Practice Problems\n\n\n\nLecture 8: Central Limit Theorem\nApplication Exercise 3: Central Limit Theorem\nExam 01 Review Slides\nApplication Exercise 4: Exam 01 Review\nAE 01 Solution\nAE 02 Solution\nAE 03 Solution\n\n\n\nLecture 9: Confidence Intervals\nHW 04\n\n\n\nLecture 10: Hypothesis Testing\nLab 5: Code Style\nLecture 11: Compare Means\nHW 5\n\n\n\nLecture 12: ANOVA\n\n\n\nLecture 13: Proportions and categorical data\nLab 6: Visualizing Spatial Data"
   },
   {
     "objectID": "index.html#week-1",
@@ -2307,7 +2307,7 @@
     "href": "index.html#week-9",
     "title": "BIOS 600 Fall 2026",
     "section": "",
-    "text": "Lecture 13: Proportions and categorical data"
+    "text": "Lecture 13: Proportions and categorical data\nLab 6: Visualizing Spatial Data"
   },
   {
     "objectID": "hw/hw-04.html",
@@ -3602,14 +3602,14 @@
     "href": "labs/lab-06-spatial.html",
     "title": "Lab 6: Visualizing Spatial Data",
     "section": "",
-    "text": "Important\n\n\n\nThis lab is due on Saturday, October 3 at 11:59pm. To be considered on time, the following must be done by the due date:\n\nFinal .pdf file submitted on Gradescope\n\nBe sure to assign questions to pages when you turn in your assignment on Gradescope. A .5 point deduction will be made any time the question is not assigned to a page within your PDF.\n\nSelect the first page of your .PDF submission to be associated with the “Formatting” section."
+    "text": "Important\n\n\n\nThis lab is due on Sunday, October 18 at 11:59pm. To be considered on time, the following must be done by the due date:\n\nFinal .pdf file submitted on Gradescope\n\nBe sure to assign questions to pages when you turn in your assignment on Gradescope. A .5 point deduction will be made any time the question is not assigned to a page within your PDF.\n\nSelect the first page of your .PDF submission to be associated with the “Formatting” section."
   },
   {
     "objectID": "labs/lab-06-spatial.html#set-up",
     "href": "labs/lab-06-spatial.html#set-up",
     "title": "Lab 6: Visualizing Spatial Data",
     "section": "Set up",
-    "text": "Set up\n\nOpen your RStudio project by going to File &gt; Open Project. Select your BIOS 600 folder. (If you see a blue cube with your project name at the top right of your RStudio window, you’re good to go - you are already in your project folder.)\nTo begin, start a new Quarto file. Change the title to Lab 5. Keep the output as html.\n“Save As” into your class project folder with a new name: “lab-05.qmd”.\nUpdate your name and date in the YAML.\nRender your document to make sure your YAML is rendering correctly.\n\n\n\n\n\n\n\nTipTip for the Lab\n\n\n\nWrite all code and narrative in your Quarto file. Write all narrative in complete sentences. Throughout the assignment, you should periodically render your Quarto document to produce the updated html file."
+    "text": "Set up\n\nOpen your RStudio project by going to File &gt; Open Project. Select your BIOS 600 folder. (If you see a blue cube with your project name at the top right of your RStudio window, you’re good to go - you are already in your project folder.)\nTo begin, start a new Quarto file. Change the title to Lab 6. Keep the output as html.\n“Save As” into your class project folder with a new name: “lab-06.qmd”.\nUpdate your name and date in the YAML.\nRender your document to make sure your YAML is rendering correctly.\n\n\n\n\n\n\n\nTipTip for the Lab\n\n\n\nWrite all code and narrative in your Quarto file. Write all narrative in complete sentences. Throughout the assignment, you should periodically render your Quarto document to produce the updated html file."
   },
   {
     "objectID": "labs/lab-06-spatial.html#this-weeks-lab",
@@ -3708,6 +3708,13 @@
     "title": "Lab 6: Visualizing Spatial Data",
     "section": "Exercise 7",
     "text": "Exercise 7\nIf you were a biometrician (this is the term they used to use) working for the state of NC in 1980, which counties would you focus on regarding SIDS, knowing that public health funds are limited? Do the counties listed in your tables correspond to any counties that stood out in your maps? (Look it up in google maps!) Explain, using your existing graphs/tables. There is no single correct answer. (2-4 sentences here is sufficient.)"
+  },
+  {
+    "objectID": "labs/lab-06-spatial.html#ai-attestation",
+    "href": "labs/lab-06-spatial.html#ai-attestation",
+    "title": "Lab 6: Visualizing Spatial Data",
+    "section": "AI Attestation",
+    "text": "AI Attestation\nIf you used AI for this assignment, list your prompts below. Cite any other online resources you used. If you did not use AI for this assignment, you may simply state “I did not use AI for this assignment.”"
   },
   {
     "objectID": "labs/lab-06-spatial.html#submission",
