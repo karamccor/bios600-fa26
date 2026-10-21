@@ -7,9 +7,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Your Name Here">
-<meta name="dcterms.date" content="2026-10-13">
 
-<title>AE 05: ANOVA – BIOS 600 Fall 2026</title>
+<title>AE 04: Power and Sample Size Calculations – BIOS 600 Fall 2026</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -180,11 +179,10 @@ window.Quarto = {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#anova-activity-do-holistic-remedies-lower-systolic-blood-pressure" id="toc-anova-activity-do-holistic-remedies-lower-systolic-blood-pressure" class="nav-link active" data-scroll-target="#anova-activity-do-holistic-remedies-lower-systolic-blood-pressure">ANOVA Activity: Do holistic remedies lower systolic blood pressure?</a></li>
-  <li><a href="#exercise-1-simulate-the-data" id="toc-exercise-1-simulate-the-data" class="nav-link" data-scroll-target="#exercise-1-simulate-the-data">Exercise 1: Simulate the data</a></li>
-  <li><a href="#exercise-2-visualize-the-data" id="toc-exercise-2-visualize-the-data" class="nav-link" data-scroll-target="#exercise-2-visualize-the-data">Exercise 2: Visualize the data</a></li>
-  <li><a href="#exercise-3-run-the-anova" id="toc-exercise-3-run-the-anova" class="nav-link" data-scroll-target="#exercise-3-run-the-anova">Exercise 3: Run the ANOVA</a></li>
-  <li><a href="#exercise-4-conclusion" id="toc-exercise-4-conclusion" class="nav-link" data-scroll-target="#exercise-4-conclusion">Exercise 4: Conclusion</a></li>
+  <li><a href="#learning-goals" id="toc-learning-goals" class="nav-link active" data-scroll-target="#learning-goals">Learning goals</a></li>
+  <li><a href="#exercise-1-air-pollution" id="toc-exercise-1-air-pollution" class="nav-link" data-scroll-target="#exercise-1-air-pollution">Exercise 1 — Air Pollution</a></li>
+  <li><a href="#exercise-2-lowering-ldl-cholesterol" id="toc-exercise-2-lowering-ldl-cholesterol" class="nav-link" data-scroll-target="#exercise-2-lowering-ldl-cholesterol">Exercise 2: Lowering LDL Cholesterol</a></li>
+  <li><a href="#submission" id="toc-submission" class="nav-link" data-scroll-target="#submission">Submission</a></li>
   </ul>
 </nav>
     </div>
@@ -193,7 +191,7 @@ window.Quarto = {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">AE 05: ANOVA</h1>
+<h1 class="title">AE 04: Power and Sample Size Calculations</h1>
 </div>
 
 
@@ -210,7 +208,7 @@ window.Quarto = {
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">October 13, 2026</p>
+      <p class="date">Invalid Date</p>
     </div>
   </div>
   
@@ -222,86 +220,71 @@ window.Quarto = {
 </header>
 
 
-<div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
 </div>
-<section id="anova-activity-do-holistic-remedies-lower-systolic-blood-pressure" class="level2">
-<h2 class="anchored" data-anchor-id="anova-activity-do-holistic-remedies-lower-systolic-blood-pressure">ANOVA Activity: Do holistic remedies lower systolic blood pressure?</h2>
-<p>A researcher tests whether three different interventions produce different <strong>reductions in systolic blood pressure (mmHg)</strong> after 8 weeks:</p>
+<div class="callout-title-container flex-fill">
+Important
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>This Application Exercise is due on Sunday, October 25 at 11:59pm. To be considered on time, the following must be done by the due date:</p>
 <ul>
-<li><strong>Placebo</strong> (control tea)<br>
-</li>
-<li><strong>Herbal Tea</strong> (a marketed calming herbal blend)<br>
-</li>
-<li><strong>Mindfulness</strong> (guided mindfulness practice)</li>
+<li><p>Final <code>.pdf</code> file submitted on Canvas</p></li>
+<li><p>While late work is accepted for HW and Labs, no late work is accepted for AEs.</p></li>
 </ul>
-<p>You will simulate data, visualize group differences, run an ANOVA, and interpret the results.</p>
+</div>
+</div>
+<section id="learning-goals" class="level2">
+<h2 class="anchored" data-anchor-id="learning-goals">Learning goals</h2>
+<ul>
+<li><p>Use <code>power.t.test()</code> to compute <strong>power</strong> for a two-sample t-test.</p></li>
+<li><p>Use <code>power.t.test()</code> to compute <strong>required sample size</strong> per group for a desired power.</p></li>
+<li><p>Interpret the results in biomedical / environmental contexts.</p></li>
+</ul>
 </section>
-<section id="exercise-1-simulate-the-data" class="level2">
-<h2 class="anchored" data-anchor-id="exercise-1-simulate-the-data">Exercise 1: Simulate the data</h2>
-<p>We simulate 30 participants per group. The numbers are set so the placebo group has a small mean reduction, Herbal Tea a moderate reduction, and Mindfulness a larger reduction.</p>
-<p>Run the following code to simulate the data.</p>
+<section id="exercise-1-air-pollution" class="level2">
+<h2 class="anchored" data-anchor-id="exercise-1-air-pollution">Exercise 1 — Air Pollution</h2>
+<p>A city would like to implement an intervention to reduce fine particulate matter (PM<span class="math inline">\(_{2.5}\)</span>) near a busy roadway. They are currently designing their study and plan to apply for grant funding. From earlier monitoring, the standard deviation of hourly PM<span class="math inline">\(_{2.5}\)</span> (in <span class="math inline">\(\mu\)</span>g/<span class="math inline">\(m^3\)</span>) at monitoring sites is about 8 <span class="math inline">\(\mu\)</span>g/<span class="math inline">\(m^3\)</span>.<br>
+Researchers plan a study with two independent groups (intervention vs control) with 25 monitoring sites in each group. They hope to detect a mean reduction of 5 <span class="math inline">\(\mu\)</span>g/<span class="math inline">\(m^3\)</span>. .</p>
+<ol type="a">
+<li>Using a two-sided test with <span class="math inline">\(\alpha = 0.05\)</span>, compute the <em>power</em> of the study (per-group <code>n = 25</code>) to detect a 5 <span class="math inline">\(\mu\)</span>g/<span class="math inline">\(m^3\)</span> difference. Include a 1-sentence conclusion with your answer.</li>
+</ol>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">2025</span>)</span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>n <span class="ot">&lt;-</span> <span class="dv">30</span></span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>bp_data <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(</span>
-<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>  <span class="at">group =</span> <span class="fu">rep</span>(<span class="fu">c</span>(<span class="st">"Placebo"</span>, <span class="st">"HerbalTea"</span>, <span class="st">"Mindfulness"</span>), <span class="at">each =</span> n),</span>
-<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>  <span class="at">reduction =</span> <span class="fu">c</span>(</span>
-<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>    <span class="fu">rnorm</span>(n, <span class="at">mean =</span> <span class="dv">2</span>, <span class="at">sd =</span> <span class="dv">5</span>),   <span class="co"># Placebo: mean reduction ~2 mmHg</span></span>
-<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>    <span class="fu">rnorm</span>(n, <span class="at">mean =</span> <span class="dv">5</span>, <span class="at">sd =</span> <span class="dv">5</span>),   <span class="co"># Herbal Tea: mean reduction ~5 mmHg</span></span>
-<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>    <span class="fu">rnorm</span>(n, <span class="at">mean =</span> <span class="dv">7</span>, <span class="at">sd =</span> <span class="dv">5</span>)    <span class="co"># Mindfulness: mean reduction ~7 mmHg</span></span>
-<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>  )</span>
-<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a>)</span>
-<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(bp_data)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>    group reduction
-1 Placebo  5.103784
-2 Placebo  2.178207
-3 Placebo  5.865772
-4 Placebo  8.362445
-5 Placebo  3.854877
-6 Placebo  1.185728</code></pre>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Power calculation (two-sample t-test)</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="co"># [type code here]</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
-</div>
+<p>[type response here]</p>
+<ol start="2" type="a">
+<li>Do you think this grant would get funded as it currently stands? Why or why not? If not, what’s one thing the city could do to increase the power of their study?</li>
+</ol>
+<p>[type response here]</p>
 </section>
-<section id="exercise-2-visualize-the-data" class="level2">
-<h2 class="anchored" data-anchor-id="exercise-2-visualize-the-data">Exercise 2: Visualize the data</h2>
-<p>Use the following code to create a boxplot of reduction by group. What pattern(s) do you notice?</p>
+<section id="exercise-2-lowering-ldl-cholesterol" class="level2">
+<h2 class="anchored" data-anchor-id="exercise-2-lowering-ldl-cholesterol">Exercise 2: Lowering LDL Cholesterol</h2>
+<p>A clinical trial is planned to test a new lifestyle program intended to lower LDL cholesterol. Pilot data suggest the standard deviation of LDL in the target population is 12 mg/dL, and a clinically important difference is 4 mg/dL.</p>
+<p>Researchers want 90% power to detect this difference using a two-sided two-sample t-test with <span class="math inline">\(\alpha = 0.05\)</span>.</p>
+<ol type="a">
+<li>Compute the required sample size per group.</li>
+</ol>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(bp_data, </span>
-<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>       <span class="fu">aes</span>(<span class="at">x =</span> group, <span class="at">y =</span> reduction, <span class="at">fill =</span> group)) <span class="sc">+</span></span>
-<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_boxplot</span>(<span class="at">alpha =</span> <span class="fl">0.7</span>) <span class="sc">+</span></span>
-<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">"Systolic BP Reduction by Intervention"</span>,</span>
-<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>       <span class="at">x =</span> <span class="st">"Intervention"</span>,</span>
-<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>       <span class="at">y =</span> <span class="st">"Reduction in systolic BP (mmHg)"</span>) <span class="sc">+</span></span>
-<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_minimal</span>() <span class="sc">+</span></span>
-<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">legend.position =</span> <span class="st">"none"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output-display">
-<div>
-<figure class="figure">
-<p><img src="ae-05-anova_files/figure-html/unnamed-chunk-3-1.png" class="img-fluid figure-img" width="672"></p>
-</figure>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># [type code here]</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
-</div>
+<p>[type response here]</p>
+<ol start="2" type="a">
+<li>Suppose you expect 10% loss to follow up in the study. In this case, we can calculate an inflated per-group enrollment by dividing the sample size you calculated in part (a) by 1-.10 = .90. What is the inflated per-group enrollment, based on the original sample size you calculated in part (a)? (If you get a decimal, round up here as well to get your final answer.) Use R for your calculation.</li>
+</ol>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># [type code here]</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <p>[type response here]</p>
 </section>
-<section id="exercise-3-run-the-anova" class="level2">
-<h2 class="anchored" data-anchor-id="exercise-3-run-the-anova">Exercise 3: Run the ANOVA</h2>
-<p>We test:</p>
-<p><span class="math inline">\(H_0\)</span>: mean reduction is the same in all groups</p>
-<p><span class="math inline">\(H_A\)</span>: at least one group is different</p>
-<p>Assume a significance level of <span class="math inline">\(\alpha = 0.05\)</span>. Run an ANOVA using the syntax in the slides, printing out your output.</p>
-<div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co"># type code here</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</div>
-</section>
-<section id="exercise-4-conclusion" class="level2">
-<h2 class="anchored" data-anchor-id="exercise-4-conclusion">Exercise 4: Conclusion</h2>
-<p>Based on your ANOVA result, what is your p-value? Do we reject or fail to reject <span class="math inline">\(H_0\)</span>? What is your conclusion statement?</p>
+<section id="submission" class="level2">
+<h2 class="anchored" data-anchor-id="submission">Submission</h2>
+<p>Render to PDF and submit on Canvas &gt; Assignments.</p>
 
 
 </section>
