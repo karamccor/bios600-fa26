@@ -20,41 +20,6 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-/* CSS for syntax highlighting */
-html { -webkit-text-size-adjust: 100%; }
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-div.sourceCode { margin: 1em 0; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
-}
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-  }
-pre.numberSource { margin-left: 3em;  padding-left: 4px; }
-div.sourceCode
-  {   }
-@media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
-}
 </style>
 
 
@@ -154,7 +119,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#data-sources" id="toc-data-sources" class="nav-link" data-scroll-target="#data-sources">Data Sources</a>
   <ul class="collapse">
   <li><a href="#choosing-and-preparing-a-tidy-dataset" id="toc-choosing-and-preparing-a-tidy-dataset" class="nav-link" data-scroll-target="#choosing-and-preparing-a-tidy-dataset">Choosing and Preparing a Tidy Dataset</a></li>
-  <li><a href="#examples" id="toc-examples" class="nav-link" data-scroll-target="#examples">Examples</a></li>
   <li><a href="#resources-for-tidying" id="toc-resources-for-tidying" class="nav-link" data-scroll-target="#resources-for-tidying">Resources for tidying</a></li>
   </ul></li>
   <li><a href="#resources-for-finding-a-dataset" id="toc-resources-for-finding-a-dataset" class="nav-link" data-scroll-target="#resources-for-finding-a-dataset">Resources for finding a dataset</a></li>
@@ -252,158 +216,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </ul>
 <p>Why does this matter?: filter(), group_by(), summarize(), and ggplot2 all work on tidy data. For example, aes(x = visit, y = systolic_bp, color = treatment) maps columns to aesthetics, so a variable spread across column names can’t be plotted until you reshape it.</p>
 </section>
-<section id="examples" class="level3">
-<h3 class="anchored" data-anchor-id="examples">Examples</h3>
-<p><strong>Tidy:</strong> one row per patient per visit</p>
-<div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>tidy_bp <span class="ot">&lt;-</span> <span class="fu">tibble</span>(</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">patient_id =</span> <span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">3</span>),</span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">visit      =</span> <span class="fu">c</span>(<span class="st">"baseline"</span>, <span class="st">"week12"</span>, <span class="st">"baseline"</span>, <span class="st">"week12"</span>, <span class="st">"baseline"</span>, <span class="st">"week12"</span>),</span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">systolic_bp =</span> <span class="fu">c</span>(<span class="dv">142</span>, <span class="dv">128</span>, <span class="dv">150</span>, <span class="dv">135</span>, <span class="dv">138</span>, <span class="dv">130</span>)</span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>)</span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="fu">kable</span>(tidy_bp)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output-display">
-<table class="caption-top table table-sm table-striped small">
-<thead>
-<tr class="header">
-<th style="text-align: right;">patient_id</th>
-<th style="text-align: left;">visit</th>
-<th style="text-align: right;">systolic_bp</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: right;">1</td>
-<td style="text-align: left;">baseline</td>
-<td style="text-align: right;">142</td>
-</tr>
-<tr class="even">
-<td style="text-align: right;">1</td>
-<td style="text-align: left;">week12</td>
-<td style="text-align: right;">128</td>
-</tr>
-<tr class="odd">
-<td style="text-align: right;">2</td>
-<td style="text-align: left;">baseline</td>
-<td style="text-align: right;">150</td>
-</tr>
-<tr class="even">
-<td style="text-align: right;">2</td>
-<td style="text-align: left;">week12</td>
-<td style="text-align: right;">135</td>
-</tr>
-<tr class="odd">
-<td style="text-align: right;">3</td>
-<td style="text-align: left;">baseline</td>
-<td style="text-align: right;">138</td>
-</tr>
-<tr class="even">
-<td style="text-align: right;">3</td>
-<td style="text-align: left;">week12</td>
-<td style="text-align: right;">130</td>
-</tr>
-</tbody>
-</table>
-</div>
-</div>
-<p><strong>Not tidy:</strong> the variable <code>visit</code> is hidden in the column names</p>
-<div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>messy_bp <span class="ot">&lt;-</span> <span class="fu">tibble</span>(</span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">patient_id  =</span> <span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>),</span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">bp_baseline =</span> <span class="fu">c</span>(<span class="dv">142</span>, <span class="dv">150</span>, <span class="dv">138</span>),</span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">bp_week12   =</span> <span class="fu">c</span>(<span class="dv">128</span>, <span class="dv">135</span>, <span class="dv">130</span>)</span>
-<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>)</span>
-<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a><span class="fu">kable</span>(messy_bp)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output-display">
-<table class="caption-top table table-sm table-striped small">
-<thead>
-<tr class="header">
-<th style="text-align: right;">patient_id</th>
-<th style="text-align: right;">bp_baseline</th>
-<th style="text-align: right;">bp_week12</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: right;">1</td>
-<td style="text-align: right;">142</td>
-<td style="text-align: right;">128</td>
-</tr>
-<tr class="even">
-<td style="text-align: right;">2</td>
-<td style="text-align: right;">150</td>
-<td style="text-align: right;">135</td>
-</tr>
-<tr class="odd">
-<td style="text-align: right;">3</td>
-<td style="text-align: right;">138</td>
-<td style="text-align: right;">130</td>
-</tr>
-</tbody>
-</table>
-</div>
-</div>
-<p><strong>Converting messy to tidy:</strong></p>
-<div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>messy_bp <span class="sc">|&gt;</span></span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">pivot_longer</span>(</span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>    <span class="at">cols =</span> <span class="fu">starts_with</span>(<span class="st">"bp_"</span>),</span>
-<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>    <span class="at">names_to =</span> <span class="st">"visit"</span>,</span>
-<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>    <span class="at">names_prefix =</span> <span class="st">"bp_"</span>,</span>
-<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>    <span class="at">values_to =</span> <span class="st">"systolic_bp"</span></span>
-<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">|&gt;</span></span>
-<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">kable</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output-display">
-<table class="caption-top table table-sm table-striped small">
-<thead>
-<tr class="header">
-<th style="text-align: right;">patient_id</th>
-<th style="text-align: left;">visit</th>
-<th style="text-align: right;">systolic_bp</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: right;">1</td>
-<td style="text-align: left;">baseline</td>
-<td style="text-align: right;">142</td>
-</tr>
-<tr class="even">
-<td style="text-align: right;">1</td>
-<td style="text-align: left;">week12</td>
-<td style="text-align: right;">128</td>
-</tr>
-<tr class="odd">
-<td style="text-align: right;">2</td>
-<td style="text-align: left;">baseline</td>
-<td style="text-align: right;">150</td>
-</tr>
-<tr class="even">
-<td style="text-align: right;">2</td>
-<td style="text-align: left;">week12</td>
-<td style="text-align: right;">135</td>
-</tr>
-<tr class="odd">
-<td style="text-align: right;">3</td>
-<td style="text-align: left;">baseline</td>
-<td style="text-align: right;">138</td>
-</tr>
-<tr class="even">
-<td style="text-align: right;">3</td>
-<td style="text-align: left;">week12</td>
-<td style="text-align: right;">130</td>
-</tr>
-</tbody>
-</table>
-</div>
-</div>
-</section>
 <section id="resources-for-tidying" class="level3">
 <h3 class="anchored" data-anchor-id="resources-for-tidying">Resources for tidying</h3>
 <p>To convert your dataset into a tidy format, you may find the following resources useful:</p>
 <p><a href="https://tidyr.tidyverse.org/reference/pivot_wider.html">Pivot data from long to wide</a></p>
 <p><a href="https://tidyr.tidyverse.org/reference/pivot_longer.html">Pivot data from wide to long</a></p>
 <p><a href="https://dplyr.tidyverse.org/reference/mutate-joins.html">Joining datasets</a></p>
+<p>If you need any help with these R functions, reach out to one of the teaching team, attend office hours, or a tutoring session - we’re happy to help.</p>
 <p><strong>Do not reuse datasets used in examples/homework/lab from class</strong>.</p>
 </section>
 </section>
@@ -431,12 +250,18 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li><p><strong>Team Members</strong>: List the people in your group.</p></li>
 <li><p><strong>Data</strong>: Read in a possible dataset and provide a <code>glimpse()</code> of the dataset.</p></li>
 <li><p><strong>Description</strong>: Include 2-3 sentence description of the dataset.</p></li>
-<li><p><strong>Research Questions</strong>: Write 2 research questions to explore in your dataset. Clearly state which variables, along with their units, would be involved in each question.</p></li>
+<li><p><strong>Research Questions</strong>: Write 2 research questions to explore in your dataset. Clearly state which variables, along with their units, would be involved in each question. (i.e.&nbsp;you should confirm that you indeed have the variables needed to answer your research question(s).)</p></li>
 <li><p><strong>EDA</strong>: Include the following:</p></li>
 </ol>
 <ul>
 <li><p>Brief table of summary statistics for all variables mentioned in your research questions (for example, mean and standard deviation for continuous variables, or a table of counts for categorical variables).</p></li>
 <li><p>At least one visualization created with ggplot that explores the relationship between some of the variables in your research question. For example, a scatterplot for continuous X vs.&nbsp;continuous Y, a correlation plot for continous X variables and continuous Y, and/or a boxplot for categorical X and continuous Y.</p></li>
+<li><p>Include good formatting: Author(s), date, and suppress excessive output/warnings/messages.</p></li>
+</ul>
+<p><strong>Submission</strong>:</p>
+<ul>
+<li><p>Render your quarto document to html, then print to PDF</p></li>
+<li><p>Submit on Gradescope. This will be a group assignment, and you’ll have the opportunity to select your group members on Gradescope. One person per group needs to turn it in. Ensure all group members have been selected when you submit.</p></li>
 </ul>
 </section>
 <section id="slides-video" class="level2">
@@ -503,6 +328,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li><p>Slides stay within the limit of 6 content slides + 1 title slide + 1 attribution slide</p></li>
 <li><p>Visuals are readable, labeled (axes, titles, units), and easy to interpret</p></li>
 <li><p>Slides are clean and not text-heavy, with consistent formatting and no raw code or console output</p></li>
+</ul>
+<p><strong>Submission</strong>:</p>
+<ul>
+<li><p>One group member should submit slides as PDF on Gradescope. Select your team members when you submit on gradescope.</p></li>
+<li><p>Assign sections of the slides to “pages” on your pdf, just as you did for a lab/HW.</p></li>
 </ul>
 <section id="video-presentation" class="level3">
 <h3 class="anchored" data-anchor-id="video-presentation">Video Presentation</h3>
