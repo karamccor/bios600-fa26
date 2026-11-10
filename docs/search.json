@@ -1117,7 +1117,7 @@
     "href": "slides/lec-18-multiple-reg.html#announcements",
     "title": "Lecture 18: Diagnostics and Multiple Linear Regression",
     "section": "Announcements",
-    "text": "Announcements\n\nLab 7 due Saturday Nov 14, 11:59pm\nExams will be passed back on Thursday."
+    "text": "Announcements\n\nLab 8 due Saturday Nov 14, 11:59pm\nLab session today at 3:30pm in this room\nExams will be passed back on Thursday."
   },
   {
     "objectID": "slides/lec-18-multiple-reg.html#reading",
@@ -1313,7 +1313,7 @@
     "href": "slides/lec-18-multiple-reg.html#overall-test",
     "title": "Lecture 18: Diagnostics and Multiple Linear Regression",
     "section": "Overall test",
-    "text": "Overall test\n\nThe test on the previous slide is given by an F test (much like ANOVA!) with numerator df equal to the number of parameters being tested (here, the number of slopes, i.e. 3) and denominator df equal to \\(n−k\\) (number of observations minus number of estimated model parameters, including the intercept).\n\n\n\n\n\n\n\nWhat might we conclude for the overall F test for our model, assuming \\(\\alpha = 0.05\\)?"
+    "text": "Overall test\n\nThe test on the previous slide is given by an F test (much like ANOVA!) with numerator df equal to the number of parameters being tested (here, the number of slopes, i.e. 2) and denominator df equal to \\(n−k\\) (number of observations minus number of estimated model parameters, including the intercept).\n\n\n\n\n\n\n\nWhat might we conclude for the overall F test for our model, assuming \\(\\alpha = 0.05\\)?"
   },
   {
     "objectID": "slides/lec-18-multiple-reg.html#f-test",
@@ -3357,7 +3357,7 @@
     "href": "index.html",
     "title": "BIOS 600 Fall 2026",
     "section": "",
-    "text": "Lecture 0: Welcome to BIOS 600!\nLab 1: Introducing the Toolkit\nLecture 1: What is statistical inference?\n\n\n\nLab 2: Basic Data Visualization\nLecture 2: The nature of data\nLecture 3: Probability basics\nHW 1\n\n\n\nLab 3: Data Wrangling\nLecture 4: Conditional probability\nLecture 5: Medical diagnostics\nHW 2\n\n\n\nLecture 6: Discrete distributions\nLab 4: Practice with ggplot2 and tidyverse\nApplication Exercise 1: Binomial in a Biomedical Setting\nLecture 7: Continuous distributions\nApplication Exercise 2: Poisson in a Hospital Setting\nHW 3\nAE 1 Solution\n\n\n\nExam 01 Topics List\nExam 01 Formula Sheet\nExam 01 Practice Problems\n\n\n\nLecture 8: Central Limit Theorem\nApplication Exercise 3: Central Limit Theorem\nExam 01 Review Slides\nApplication Exercise 4: Exam 01 Review\nAE 01 Solution\nAE 02 Solution\nAE 03 Solution\n\n\n\nLecture 9: Confidence Intervals\nHW 04\n\n\n\nLecture 10: Hypothesis Testing\nLab 5: Code Style\nLecture 11: Compare Means\nHW 5\n\n\n\nLecture 12: ANOVA\n\n\n\nLecture 13: Proportions and categorical data\nLab 6: Visualizing Spatial Data\n\n\n\nLecture 14: Nonparametric methods\nLab 7: Correlation\nLecture 15: Power and Sample size\nAE 05: Power and Sample Size\nHW 6\n\n\n\nExam 02 Topics\nExam 02 Formulas\nProject Instructions\nLecture 16: Comparing two continuous variables\nExam 02 Review Slides\nAE 06: Exam 02 Review\n\n\n\nLecture 17: Linear Regression\nExample Data Exporting\n\n\n\nLecture 18: Multiple Regression\nLab 8: Multiple regression"
+    "text": "Lecture 0: Welcome to BIOS 600!\nLab 1: Introducing the Toolkit\nLecture 1: What is statistical inference?\n\n\n\nLab 2: Basic Data Visualization\nLecture 2: The nature of data\nLecture 3: Probability basics\nHW 1\n\n\n\nLab 3: Data Wrangling\nLecture 4: Conditional probability\nLecture 5: Medical diagnostics\nHW 2\n\n\n\nLecture 6: Discrete distributions\nLab 4: Practice with ggplot2 and tidyverse\nApplication Exercise 1: Binomial in a Biomedical Setting\nLecture 7: Continuous distributions\nApplication Exercise 2: Poisson in a Hospital Setting\nHW 3\nAE 1 Solution\n\n\n\nExam 01 Topics List\nExam 01 Formula Sheet\nExam 01 Practice Problems\n\n\n\nLecture 8: Central Limit Theorem\nApplication Exercise 3: Central Limit Theorem\nExam 01 Review Slides\nApplication Exercise 4: Exam 01 Review\nAE 01 Solution\nAE 02 Solution\nAE 03 Solution\n\n\n\nLecture 9: Confidence Intervals\nHW 04\n\n\n\nLecture 10: Hypothesis Testing\nLab 5: Code Style\nLecture 11: Compare Means\nHW 5\n\n\n\nLecture 12: ANOVA\n\n\n\nLecture 13: Proportions and categorical data\nLab 6: Visualizing Spatial Data\n\n\n\nLecture 14: Nonparametric methods\nLab 7: Correlation\nLecture 15: Power and Sample size\nAE 05: Power and Sample Size\nHW 6\n\n\n\nExam 02 Topics\nExam 02 Formulas\nProject Instructions\nLecture 16: Comparing two continuous variables\nExam 02 Review Slides\nAE 06: Exam 02 Review\n\n\n\nLecture 17: Linear Regression\nExample Data Exporting\n\n\n\nLecture 18: Multiple Regression\nLab 8: Multiple regression\nhi"
   },
   {
     "objectID": "index.html#week-1",
@@ -3455,7 +3455,7 @@
     "href": "index.html#week-13",
     "title": "BIOS 600 Fall 2026",
     "section": "",
-    "text": "Lecture 18: Multiple Regression\nLab 8: Multiple regression"
+    "text": "Lecture 18: Multiple Regression\nLab 8: Multiple regression\nhi"
   },
   {
     "objectID": "hw/hw-05.html",
