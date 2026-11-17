@@ -573,7 +573,7 @@
 </div>
 <div class="cell">
 <div class="cell-output-display">
-<div class="countdown" id="timer_5098f5f1" data-update-every="1" tabindex="0" style="right:0;bottom:0;">
+<div class="countdown" id="timer_e92eed57" data-update-every="1" tabindex="0" style="right:0;bottom:0;">
 <div class="countdown-controls"><button class="countdown-bump-down">−</button><button class="countdown-bump-up">+</button></div>
 <code class="countdown-time"><span class="countdown-digits minutes">02</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
 </div>
@@ -670,7 +670,7 @@
 <p>What is the predicted probability of dying for a patient with ascites, a bilirubin level of 3 mg/dL, and stage 3?</p>
 <div class="cell">
 <div class="cell-output-display">
-<div class="countdown" id="timer_74027dff" data-update-every="1" tabindex="0" style="right:0;bottom:0;">
+<div class="countdown" id="timer_708aa4f9" data-update-every="1" tabindex="0" style="right:0;bottom:0;">
 <div class="countdown-controls"><button class="countdown-bump-down">−</button><button class="countdown-bump-up">+</button></div>
 <code class="countdown-time"><span class="countdown-digits minutes">05</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
 </div>
@@ -711,9 +711,15 @@
 <p>Then, we compute the lower and upper limits in logit scale.</p>
 <p>Finally, we exponentiate lower and upper limits to give the CI in <strong>odds scale</strong>.</p>
 <div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a></a><span class="co"># logit scale</span></span>
+<span id="cb5-2"><a></a>lower_logit <span class="ot">&lt;-</span> est <span class="sc">-</span> z_star <span class="sc">*</span> se</span>
+<span id="cb5-3"><a></a>upper_logit <span class="ot">&lt;-</span> est <span class="sc">+</span> z_star <span class="sc">*</span> se</span>
+<span id="cb5-4"><a></a><span class="fu">c</span>(est, lower_logit, upper_logit) <span class="co"># logit scale</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 0.3148847 0.1885760 0.4411933</code></pre>
 </div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a></a><span class="co"># odds scale: exponentiate the estimate and both limits</span></span>
+<span id="cb7-2"><a></a><span class="fu">exp</span>(<span class="fu">c</span>(est, lower_logit, upper_logit))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 1.370101 1.207529 1.554561</code></pre>
 </div>
@@ -737,11 +743,11 @@
 <section id="example-cis-for-all-coefficients" class="slide level2">
 <h2>Example: CIs for all coefficients</h2>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a></a><span class="fu">tidy</span>(fit2, </span>
-<span id="cb7-2"><a></a>     <span class="at">conf.int =</span> <span class="cn">TRUE</span>, </span>
-<span id="cb7-3"><a></a>     <span class="at">conf.level =</span> <span class="fl">0.95</span>, </span>
-<span id="cb7-4"><a></a>     <span class="at">exponentiate =</span> <span class="cn">TRUE</span>) <span class="sc">|&gt;</span>  <span class="co"># odds scale</span></span>
-<span id="cb7-5"><a></a>  <span class="fu">kable</span>(<span class="at">digits =</span> <span class="dv">3</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a></a><span class="fu">tidy</span>(fit2, </span>
+<span id="cb9-2"><a></a>     <span class="at">conf.int =</span> <span class="cn">TRUE</span>, </span>
+<span id="cb9-3"><a></a>     <span class="at">conf.level =</span> <span class="fl">0.95</span>, </span>
+<span id="cb9-4"><a></a>     <span class="at">exponentiate =</span> <span class="cn">TRUE</span>) <span class="sc">|&gt;</span>  <span class="co"># odds scale</span></span>
+<span id="cb9-5"><a></a>  <span class="fu">kable</span>(<span class="at">digits =</span> <span class="dv">3</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output-display">
 <table class="caption-top">
 <colgroup>

@@ -7578,7 +7578,7 @@
     "href": "slides/lec-20-logistic.html#example-continued",
     "title": "Lecture 20: Logistic regression",
     "section": "Example (continued)",
-    "text": "Example (continued)\nThen, we compute the lower and upper limits in logit scale.\nFinally, we exponentiate lower and upper limits to give the CI in odds scale.\n\n\n[1] 0.3148847 0.1885760 0.4411933\n\n\n[1] 1.370101 1.207529 1.554561"
+    "text": "Example (continued)\nThen, we compute the lower and upper limits in logit scale.\nFinally, we exponentiate lower and upper limits to give the CI in odds scale.\n\n# logit scale\nlower_logit &lt;- est - z_star * se\nupper_logit &lt;- est + z_star * se\nc(est, lower_logit, upper_logit) # logit scale\n\n[1] 0.3148847 0.1885760 0.4411933\n\n# odds scale: exponentiate the estimate and both limits\nexp(c(est, lower_logit, upper_logit))\n\n[1] 1.370101 1.207529 1.554561"
   },
   {
     "objectID": "slides/lec-20-logistic.html#conclusion",
