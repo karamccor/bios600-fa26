@@ -7739,7 +7739,7 @@
     "href": "slides/lec-21-logistic-continued.html#interpretation",
     "title": "Lecture 20: Logistic Regression Continued",
     "section": "Interpretation",
-    "text": "Interpretation\n\\(\\hat\\beta_{\\text{bili}}\\): Each one mg/dL increase in bilirubin is associated with the odds of death being multiplied by exp(.315) = 1.37, holding ascites presence and ascites presence constant.\nAnother Equivalent Interpretation: A one mg/dL increase in bilirubin is associated with 37% higher odds of death, holding ascites presence and status constant."
+    "text": "Interpretation\n\\(\\hat\\beta_{\\text{bili}}\\): Each one mg/dL increase in bilirubin is associated with the odds of death being multiplied by exp(.315) = 1.37, holding ascites presence and disease stage constant.\nAnother Equivalent Interpretation: A one mg/dL increase in bilirubin is associated with 37% higher odds of death, holding ascites presence and status constant."
   },
   {
     "objectID": "slides/lec-21-logistic-continued.html#predicted-probabilities",
